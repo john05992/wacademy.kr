@@ -228,14 +228,14 @@
     .sec-desc     { font-size: .92rem; color: var(--muted); line-height: 1.7; }
 
     /* ── 이용후기 슬라이더 ── */
-    .review-slide-section { padding: 80px 0; background: #fafafa; }
+    .review-slide-section { padding: 80px 0; background: #fafafa; overflow: hidden; }
     .review-slide-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     .review-slide-head { text-align: center; margin-bottom: 44px; }
     .rs-badge { display: inline-block; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); border: 1.5px solid var(--orange); padding: 3px 12px; border-radius: 20px; margin-bottom: 14px; }
     .rs-title { font-size: clamp(1.45rem, 3vw, 2.1rem); font-weight: 900; color: var(--text); margin-bottom: 8px; }
     .rs-title em { font-style: normal; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .rs-sub { font-size: .9rem; color: var(--muted); }
-    .rs-swiper { padding-bottom: 44px !important; }
+    .rs-swiper { padding-bottom: 44px !important; touch-action: pan-y; }
     .rs-slide { width: 200px; }
     .rs-card { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 3px 14px rgba(0,0,0,.09); transition: transform .22s, box-shadow .22s; }
     .rs-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,.15); }
@@ -433,9 +433,9 @@
     }
 
     /* ── 캐러셀 ── */
-    .carousel-section { padding: 56px 20px; background: var(--white); }
+    .carousel-section { padding: 56px 20px; background: var(--white); overflow: hidden; }
     .carousel-header  { text-align: center; margin-bottom: 32px; }
-    .academy-swiper   { width: 100%; padding-bottom: 40px !important; }
+    .academy-swiper   { width: 100%; padding-bottom: 40px !important; touch-action: pan-y; }
     .academy-swiper .swiper-slide { width: 280px; }
     .carousel-card {
       border-radius: var(--radius);
@@ -1128,20 +1128,27 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  document.getElementById('mobileToggle').addEventListener('click', function() {
-    document.getElementById('mainNav').classList.toggle('active');
-  });
+  var _touchOpts = {
+    simulateTouch: true,
+    grabCursor: true,
+    touchRatio: 2,
+    touchAngle: 50,
+    touchStartPreventDefault: false,
+    passiveListeners: true,
+    touchMoveStopPropagation: false,
+    threshold: 5,
+  };
 
-  new Swiper('.academy-swiper', {
+  new Swiper('.academy-swiper', Object.assign({}, _touchOpts, {
     slidesPerView: 'auto',
     spaceBetween: 16,
     loop: true,
     autoplay: { delay: 3500, disableOnInteraction: false },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     pagination: { el: '.swiper-pagination', clickable: true },
-  });
+  }));
 
-  new Swiper('.rs-swiper', {
+  new Swiper('.rs-swiper', Object.assign({}, _touchOpts, {
     slidesPerView: 'auto',
     spaceBetween: 14,
     loop: true,
@@ -1152,7 +1159,7 @@
       640: { spaceBetween: 18 },
       1024: { spaceBetween: 20 },
     },
-  });
+  }));
 
   // 영상 팝업
   var overlay = document.getElementById('vidOverlay');
