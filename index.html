@@ -318,20 +318,28 @@
     @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
 
     /* ── 지역별 ── */
-    .region-section { padding: 56px 20px; background: var(--white); }
-    .region-header  { text-align: center; margin-bottom: 32px; }
-    .region-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .region-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: box-shadow .2s; }
-    .region-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.07); }
-    .region-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: 12px; }
-    .region-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .rtag { display: inline-block; padding: 5px 11px; border-radius: 50px; font-size: .8rem; transition: opacity .15s; }
-    .rtag:hover { opacity: .8; }
-    .rtag-all { font-weight: 700; }
-    .c-s  { color: #b91c1c; background: #fff1f1; } .c-s.rtag-all  { background: #b91c1c; color: #fff; }
-    .c-g  { color: #0369a1; background: #eff8ff; } .c-g.rtag-all  { background: #0369a1; color: #fff; }
-    .c-m  { color: #6d28d9; background: #f5f3ff; } .c-m.rtag-all  { background: #6d28d9; color: #fff; }
-    .c-p  { color: #047857; background: #f0fdf4; } .c-p.rtag-all  { background: #047857; color: #fff; }
+    .region-section { padding: 64px 20px; background: var(--bg); }
+    .region-header  { text-align: center; margin-bottom: 36px; }
+    .sido-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .sido-card {
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px 10px;
+      border-radius: 12px;
+      font-size: .88rem; font-weight: 700;
+      text-align: center; line-height: 1.4;
+      transition: transform .18s, box-shadow .18s;
+      text-decoration: none;
+    }
+    .sido-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+    .sido-special  { background: #fff1f1; color: #b91c1c; border: 1.5px solid #fca5a5; }
+    .sido-gyeonggi { background: #eff8ff; color: #0369a1; border: 1.5px solid #93c5fd; }
+    .sido-metro    { background: #f5f3ff; color: #6d28d9; border: 1.5px solid #c4b5fd; }
+    .sido-province { background: #f0fdf4; color: #047857; border: 1.5px solid #6ee7b7; }
+    @media (max-width: 480px) { .sido-grid { grid-template-columns: repeat(2, 1fr); } }
 
     /* ── 고객 페인포인트 ── */
     .pain-section { padding: 56px 20px; background: var(--bg); }
@@ -534,20 +542,6 @@
   <div class="container">
     <div class="header-inner">
       <div class="site-logo"><a href="/"><img src="favicon-180.png" alt="와카데미 로고" class="logo-img">와카데미</a></div>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" id="mainNav">
-        <ul>
-          <li><a href="/학원/">전국</a></li>
-          <li><a href="/초등/">초등</a></li>
-          <li><a href="/중등/">중등</a></li>
-          <li><a href="/고등/">고등</a></li>
-          <li><a href="/수학학원/">수학</a></li>
-          <li><a href="/영어학원/">영어</a></li>
-          <li><a href="/국어학원/">국어</a></li>
-        </ul>
-      </nav>
     </div>
   </div>
 </header>
@@ -802,56 +796,24 @@
       <h2 class="sec-title">우리 동네 <span>학원 정보</span>를 확인하세요</h2>
       <p class="sec-desc" style="margin-top:8px;">시·구·동 단위로 세분화된 정보를 지금 바로 확인하세요.</p>
     </div>
-    <div class="region-grid">
-
-      <div class="region-card">
-        <h3 style="color:#b91c1c;">서울특별시</h3>
-        <div class="region-tags">
-          <a href="/서울특별시/강남구/" class="rtag c-s">강남구</a>
-          <a href="/서울특별시/서초구/" class="rtag c-s">서초구</a>
-          <a href="/서울특별시/송파구/" class="rtag c-s">송파구</a>
-          <a href="/서울특별시/노원구/" class="rtag c-s">노원구</a>
-          <a href="/서울특별시/" class="rtag c-s rtag-all">서울 전체 →</a>
-        </div>
-      </div>
-
-      <div class="region-card">
-        <h3 style="color:#0369a1;">경기도</h3>
-        <div class="region-tags">
-          <a href="/경기도/수원시/" class="rtag c-g">수원시</a>
-          <a href="/경기도/성남시/" class="rtag c-g">성남시</a>
-          <a href="/경기도/고양시/" class="rtag c-g">고양시</a>
-          <a href="/경기도/용인시/" class="rtag c-g">용인시</a>
-          <a href="/경기도/" class="rtag c-g rtag-all">경기 전체 →</a>
-        </div>
-      </div>
-
-      <div class="region-card">
-        <h3 style="color:#6d28d9;">광역시</h3>
-        <div class="region-tags">
-          <a href="/부산광역시/" class="rtag c-m">부산</a>
-          <a href="/대구광역시/" class="rtag c-m">대구</a>
-          <a href="/인천광역시/" class="rtag c-m">인천</a>
-          <a href="/광주광역시/" class="rtag c-m">광주</a>
-          <a href="/대전광역시/" class="rtag c-m">대전</a>
-          <a href="/울산광역시/" class="rtag c-m">울산</a>
-          <a href="/세종시/" class="rtag c-m">세종</a>
-        </div>
-      </div>
-
-      <div class="region-card">
-        <h3 style="color:#047857;">지방</h3>
-        <div class="region-tags">
-          <a href="/강원도/" class="rtag c-p">강원</a>
-          <a href="/충청북도/" class="rtag c-p">충북</a>
-          <a href="/충청남도/" class="rtag c-p">충남</a>
-          <a href="/전북특별자치도/" class="rtag c-p">전북</a>
-          <a href="/경상북도/" class="rtag c-p">경북</a>
-          <a href="/경상남도/" class="rtag c-p">경남</a>
-          <a href="/제주도/" class="rtag c-p">제주</a>
-        </div>
-      </div>
-
+    <div class="sido-grid">
+      <a href="/아카데미/서울특별시/" class="sido-card sido-special">서울특별시</a>
+      <a href="/아카데미/경기도/" class="sido-card sido-gyeonggi">경기도</a>
+      <a href="/아카데미/부산광역시/" class="sido-card sido-metro">부산광역시</a>
+      <a href="/아카데미/대구광역시/" class="sido-card sido-metro">대구광역시</a>
+      <a href="/아카데미/인천광역시/" class="sido-card sido-metro">인천광역시</a>
+      <a href="/아카데미/광주광역시/" class="sido-card sido-metro">광주광역시</a>
+      <a href="/아카데미/대전광역시/" class="sido-card sido-metro">대전광역시</a>
+      <a href="/아카데미/울산광역시/" class="sido-card sido-metro">울산광역시</a>
+      <a href="/아카데미/세종특별자치시/" class="sido-card sido-metro">세종특별자치시</a>
+      <a href="/아카데미/강원특별자치도/" class="sido-card sido-province">강원특별자치도</a>
+      <a href="/아카데미/충청북도/" class="sido-card sido-province">충청북도</a>
+      <a href="/아카데미/충청남도/" class="sido-card sido-province">충청남도</a>
+      <a href="/아카데미/전북특별자치도/" class="sido-card sido-province">전북특별자치도</a>
+      <a href="/아카데미/전라남도/" class="sido-card sido-province">전라남도</a>
+      <a href="/아카데미/경상북도/" class="sido-card sido-province">경상북도</a>
+      <a href="/아카데미/경상남도/" class="sido-card sido-province">경상남도</a>
+      <a href="/아카데미/제주특별자치도/" class="sido-card sido-province">제주특별자치도</a>
     </div>
   </div>
 </section>
@@ -1135,10 +1097,10 @@
         <div class="footer-col">
           <h4>지역별</h4>
           <ul>
-            <li><a href="/서울특별시/">서울</a></li>
-            <li><a href="/경기도/">경기</a></li>
-            <li><a href="/부산광역시/">부산</a></li>
-            <li><a href="/대구광역시/">대구</a></li>
+            <li><a href="/아카데미/서울특별시/">서울</a></li>
+            <li><a href="/아카데미/경기도/">경기</a></li>
+            <li><a href="/아카데미/부산광역시/">부산</a></li>
+            <li><a href="/아카데미/대구광역시/">대구</a></li>
           </ul>
         </div>
         <div class="footer-col">
