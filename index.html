@@ -227,25 +227,29 @@
     .sec-title span { color: var(--orange); }
     .sec-desc     { font-size: .92rem; color: var(--muted); line-height: 1.7; }
 
-    /* ── 합격후기 ── */
-    .pass-review-section { padding: 72px 0; background: #fff; }
-    .pass-review-header { text-align: center; margin-bottom: 40px; }
-    .pass-review-header .section-label { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); background: #fff3ee; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
-    .pass-review-header .section-title { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: var(--text); }
-    .pass-review-header .section-title span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .pass-review-swiper { padding-bottom: 40px !important; }
-    .pass-review-swiper .swiper-slide { width: 260px; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.1); transition: transform .25s, box-shadow .25s; }
-    .pass-review-swiper .swiper-slide:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.16); }
-    .pass-review-link { display: block; position: relative; }
-    .pass-review-link img { width: 100%; height: 180px; object-fit: cover; display: block; }
-    .pass-review-link::after { content: '▶'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: #fff; background: rgba(0,0,0,.25); opacity: 0; transition: opacity .2s; }
-    .pass-review-link:hover::after { opacity: 1; }
-    /* 유튜브 모달 */
-    .yt-modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75); z-index: 9999; align-items: center; justify-content: center; }
-    .yt-modal-backdrop.open { display: flex; }
-    .yt-modal { position: relative; width: min(720px, 92vw); aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; }
-    .yt-modal iframe { width: 100%; height: 100%; border: none; }
-    .yt-modal-close { position: absolute; top: -36px; right: 0; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; line-height: 1; }
+    /* ── 이용후기 슬라이더 ── */
+    .review-slide-section { padding: 80px 0; background: #fafafa; }
+    .review-slide-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .review-slide-head { text-align: center; margin-bottom: 44px; }
+    .rs-badge { display: inline-block; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); border: 1.5px solid var(--orange); padding: 3px 12px; border-radius: 20px; margin-bottom: 14px; }
+    .rs-title { font-size: clamp(1.45rem, 3vw, 2.1rem); font-weight: 900; color: var(--text); margin-bottom: 8px; }
+    .rs-title em { font-style: normal; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .rs-sub { font-size: .9rem; color: var(--muted); }
+    .rs-swiper { padding-bottom: 44px !important; }
+    .rs-slide { width: 200px; }
+    .rs-card { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 3px 14px rgba(0,0,0,.09); transition: transform .22s, box-shadow .22s; }
+    .rs-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+    .rs-card img { width: 100%; height: auto; display: block; }
+    .rs-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .2s; }
+    .rs-card:hover .rs-play { opacity: 1; }
+    .rs-play svg { width: 52px; height: 52px; }
+    .rs-pagination .swiper-pagination-bullet-active { background: var(--orange); }
+    /* 영상 팝업 */
+    .vid-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.8); z-index: 9999; align-items: center; justify-content: center; }
+    .vid-overlay.on { display: flex; }
+    .vid-box { position: relative; width: min(760px, 94vw); aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; }
+    .vid-box iframe { width: 100%; height: 100%; border: 0; }
+    .vid-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; padding: 0; }
 
     /* ── 헤더 ── */
     .site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: 0 1px 8px rgba(0,0,0,.05); }
@@ -718,36 +722,37 @@
   </div>
 </section>
 
-<!-- 합격후기 -->
-<section class="pass-review-section">
-  <div class="container">
-    <div class="pass-review-header">
-      <p class="section-label">Real Reviews</p>
-      <h2 class="section-title">회원들의 <span>100% 리얼 합격후기</span></h2>
+<!-- 이용후기 슬라이더 -->
+<section class="review-slide-section">
+  <div class="review-slide-inner">
+    <div class="review-slide-head">
+      <span class="rs-badge">Real Voice</span>
+      <h2 class="rs-title">와카데미 유튜브 <em>학생후기</em></h2>
+      <p class="rs-sub">실제 수강생들이 직접 전하는 후기를 확인하세요</p>
     </div>
-    <div class="swiper pass-review-swiper">
+    <div class="swiper rs-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="#" data-youtube="GCjN8Y62tls" class="pass-review-link"><img src="images/pass-review-1.webp" alt="합격후기 1" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="34nLY3zLu5A" class="pass-review-link"><img src="images/pass-review-2.webp" alt="합격후기 2" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="2fC5LOnc7Ss" class="pass-review-link"><img src="images/pass-review-3.webp" alt="합격후기 3" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="ZzeWUEl2OHs" class="pass-review-link"><img src="images/pass-review-4.webp" alt="합격후기 4" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="pLt0AFEppQ8" class="pass-review-link"><img src="images/pass-review-5.webp" alt="합격후기 5" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="5vdAODrj7e8" class="pass-review-link"><img src="images/pass-review-6.webp" alt="합격후기 6" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="oSvSalazA9k" class="pass-review-link"><img src="images/pass-review-7.webp" alt="합격후기 7" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="4BfB0nAME7Y" class="pass-review-link"><img src="images/pass-review-8.webp" alt="합격후기 8" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="MLEJs0LCFUU" class="pass-review-link"><img src="images/pass-review-9.webp" alt="합격후기 9" loading="lazy"></a></div>
-        <div class="swiper-slide"><a href="#" data-youtube="3vzq2_NzF_s" class="pass-review-link"><img src="images/pass-review-10.webp" alt="합격후기 10" loading="lazy"></a></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="oSvSalazA9k"><img src="images/card_e.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="2fC5LOnc7Ss"><img src="images/result_b.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="MLEJs0LCFUU"><img src="images/snap_g.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="GCjN8Y62tls"><img src="images/story_a.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="3vzq2_NzF_s"><img src="images/real_j.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="ZzeWUEl2OHs"><img src="images/voice_c.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="34nLY3zLu5A"><img src="images/member_h.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="5vdAODrj7e8"><img src="images/after_d.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="pLt0AFEppQ8"><img src="images/review_f.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="4BfB0nAME7Y"><img src="images/pick_i.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
       </div>
-      <div class="swiper-pagination pass-review-pagination"></div>
+      <div class="swiper-pagination rs-pagination"></div>
     </div>
   </div>
 </section>
 
-<!-- 유튜브 모달 -->
-<div class="yt-modal-backdrop" id="ytBackdrop">
-  <div class="yt-modal">
-    <button class="yt-modal-close" id="ytClose">✕</button>
-    <iframe id="ytFrame" src="" allowfullscreen allow="autoplay"></iframe>
+<!-- 영상 팝업 -->
+<div class="vid-overlay" id="vidOverlay">
+  <div class="vid-box">
+    <button class="vid-close" id="vidClose" aria-label="닫기">✕</button>
+    <iframe id="vidFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
   </div>
 </div>
 
@@ -1174,36 +1179,33 @@
     pagination: { el: '.swiper-pagination', clickable: true },
   });
 
-  new Swiper('.pass-review-swiper', {
+  new Swiper('.rs-swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 16,
+    spaceBetween: 14,
     loop: true,
-    autoplay: { delay: 3000, disableOnInteraction: false },
-    pagination: { el: '.pass-review-pagination', clickable: true },
+    centeredSlides: false,
+    autoplay: { delay: 2800, disableOnInteraction: false },
+    pagination: { el: '.rs-pagination', clickable: true },
+    breakpoints: {
+      640: { spaceBetween: 18 },
+      1024: { spaceBetween: 20 },
+    },
   });
 
-  // 유튜브 모달
-  const backdrop = document.getElementById('ytBackdrop');
-  const ytFrame  = document.getElementById('ytFrame');
-  document.querySelectorAll('.pass-review-link').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      var vid = this.dataset.youtube;
-      if (!vid) return;
-      ytFrame.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1';
-      backdrop.classList.add('open');
+  // 영상 팝업
+  var overlay = document.getElementById('vidOverlay');
+  var frame   = document.getElementById('vidFrame');
+  function closeVid() { overlay.classList.remove('on'); frame.src = ''; }
+  document.querySelectorAll('.rs-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      var id = this.dataset.yt;
+      if (!id) return;
+      frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      overlay.classList.add('on');
     });
   });
-  document.getElementById('ytClose').addEventListener('click', function() {
-    backdrop.classList.remove('open');
-    ytFrame.src = '';
-  });
-  backdrop.addEventListener('click', function(e) {
-    if (e.target === backdrop) {
-      backdrop.classList.remove('open');
-      ytFrame.src = '';
-    }
-  });
+  document.getElementById('vidClose').addEventListener('click', closeVid);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeVid(); });
 </script>
 
 </body>
