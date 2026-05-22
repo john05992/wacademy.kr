@@ -361,7 +361,7 @@
     .feature-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255,107,53,.1); }
     .feature-icon { width: 40px; height: 40px; margin-bottom: 14px; color: var(--orange); }
     .feature-icon svg { width: 100%; height: 100%; }
-    .feature-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: 6px; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .feature-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: 6px; word-break: keep-all; }
     .feature-card p  { font-size: .83rem; color: var(--muted); line-height: 1.65; word-break: keep-all; }
 
     /* ── 학년별 ── */
@@ -488,8 +488,18 @@
 
       /* 특징 1열 */
       .feature-grid { grid-template-columns: 1fr; gap: 12px; }
-      .feature-card { padding: 22px 18px; display: flex; align-items: flex-start; gap: 14px; text-align: left; }
-      .feature-icon { flex-shrink: 0; margin-bottom: 0; }
+      .feature-card {
+        padding: 20px 18px;
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 12px;
+        row-gap: 6px;
+        align-items: center;
+      }
+      .feature-icon { grid-column: 1; grid-row: 1; width: 36px; height: 36px; margin-bottom: 0; }
+      .feature-card h3 { grid-column: 2; grid-row: 1; margin-bottom: 0; }
+      .feature-card p  { grid-column: 1 / -1; grid-row: 2; }
 
       /* 학년 1열 */
       .grade-grid { grid-template-columns: 1fr; gap: 10px; }
@@ -823,7 +833,7 @@
   <div class="container">
     <div class="feature-header">
       <p class="sec-label">와카데미 특징</p>
-      <h2 class="sec-title">믿을 수 있는 학원 정보, <span>이렇게 다릅니다</span></h2>
+      <h2 class="sec-title">믿을 수 있는 정보, <span>이렇게 달라요</span></h2>
     </div>
     <div class="feature-grid">
 
