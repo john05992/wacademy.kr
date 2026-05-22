@@ -41,7 +41,7 @@
         "inLanguage": "ko-KR",
         "datePublished": "2025-05-01",
         "dateModified": "2025-05-23",
-        "author": { "@type": "Organization", "name": "와카데미", "url": "https://wacademy.kr/" },
+        "author": { "@type": "Person", "@id": "https://wacademy.kr/#editor" },
         "publisher": {
           "@type": "EducationalOrganization",
           "name": "와카데미",
@@ -81,6 +81,47 @@
             "acceptedAnswer": { "@type": "Answer", "text": "중학교 개념을 완벽히 이해하지 못한 상태에서의 고등 선행은 역효과입니다. 중1~2 때는 내신 기초를 탄탄히 하고, 중3 2학기부터 고등 준비를 시작하는 것이 일반적으로 효과적입니다." }
           }
         ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://wacademy.kr/#editor",
+        "name": "와카데미 편집팀",
+        "url": "https://wacademy.kr/",
+        "jobTitle": "교육 콘텐츠 편집자",
+        "worksFor": { "@id": "https://wacademy.kr/#organization" },
+        "knowsAbout": ["학원 정보", "수강료 비교", "초등 학습법", "중등 학습법", "고등 학습법", "내신 관리", "수능 대비"]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://wacademy.kr/#service",
+        "name": "전국 학원 정보 검색 서비스",
+        "serviceType": "EducationalInformationService",
+        "provider": { "@id": "https://wacademy.kr/#organization" },
+        "areaServed": { "@type": "Country", "name": "South Korea" },
+        "audience": { "@type": "EducationalAudience", "educationalRole": "parent" },
+        "description": "교육부 공공데이터 기반으로 전국 학원 수강료·위치·특징을 투명하게 제공하는 무료 학원 정보 검색 서비스.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://wacademy.kr/",
+          "priceCurrency": "KRW",
+          "price": "0",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://wacademy.kr/#localbusiness",
+        "name": "와카데미",
+        "url": "https://wacademy.kr/",
+        "telephone": "010-8132-0599",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "방화대로 294 마곡더블유타워 505호",
+          "addressLocality": "강서구",
+          "addressRegion": "서울특별시",
+          "addressCountry": "KR"
+        },
+        "parentOrganization": { "@id": "https://wacademy.kr/#organization" }
       }
     ]
   }
