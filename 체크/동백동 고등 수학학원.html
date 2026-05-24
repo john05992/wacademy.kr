@@ -260,13 +260,20 @@
         .comp-item.left { font-size: .9rem; }
         .comp-item.right { font-size: 1rem; }
     }
-    .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
-    .result-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
-    .result-slide { flex: 0 0 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
+    /* 슬라이더 - PC: 3열 그리드, 모바일: 1장 캐러셀 */
+    .result-viewport { padding: 8px 24px 16px; }
+    .result-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .result-slide { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
     .result-slide img { width: 100%; height: auto; display: block; }
-    .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
-    .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
-    .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+    .result-dots { display: none; }
+    @media (max-width: 640px) {
+      .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
+      .result-track { display: flex; grid-template-columns: unset; gap: 0; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+      .result-slide { flex: 0 0 100%; }
+      .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
+      .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
+      .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+    }
 
     /* ── FEATURE5 (section2 5박스) ── */
     .feature5-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
@@ -885,42 +892,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">수업 중 대화에서 아이의 공부 방향이 결정돼요</p>
+      <p class="rv-text">선생님이 오답 노트를 어떻게 써야 하는지 알려주셨어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이 실수까지 기록해서 피드백 주는 게 인상 깊었어요</p>
+      <p class="rv-text">아이가 수업 후에 개념을 정리해서 설명해줘 놀랐어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학부모 전용 알림톡 뉴스레터가 정보 전달에 좋아요</p>
+      <p class="rv-text">학부모 알림톡으로 수시로 상황을 파악할 수 있어 좋아요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">시험 직전 스퍼트를 만들어주는 리듬이 느껴졌어요</p>
+      <p class="rv-text">학원 분위기가 차분해서 아이가 마음 놓고 공부해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">단순한 진도 체크가 아닌 성향 기반 코멘트가 있었어요</p>
+      <p class="rv-text">복습용 문제를 따로 제공해주니 반복 학습이 잘돼요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">공부에 대한 자신감을 회복하게 해준 곳이에요</p>
+      <p class="rv-text">소규모 수업이라 개개인을 잘 챙겨주셔서 든든했어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -945,6 +952,7 @@
   var track = document.getElementById('resultTrack');
   var dotsWrap = document.getElementById('resultDots');
   if (!track || !dotsWrap) return;
+  if (window.innerWidth > 640) return; // PC는 그리드로 표시, JS 불필요
 
   var total = 6;
   var cur = 0;

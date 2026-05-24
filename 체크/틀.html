@@ -260,13 +260,20 @@
         .comp-item.left { font-size: .9rem; }
         .comp-item.right { font-size: 1rem; }
     }
-    .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
-    .result-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
-    .result-slide { flex: 0 0 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
+    /* 슬라이더 - PC: 3열 그리드, 모바일: 1장 캐러셀 */
+    .result-viewport { padding: 8px 24px 16px; }
+    .result-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .result-slide { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
     .result-slide img { width: 100%; height: auto; display: block; }
-    .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
-    .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
-    .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+    .result-dots { display: none; }
+    @media (max-width: 640px) {
+      .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
+      .result-track { display: flex; grid-template-columns: unset; gap: 0; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+      .result-slide { flex: 0 0 100%; }
+      .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
+      .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
+      .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+    }
 
     /* ── FEATURE5 (section2 5박스) ── */
     .feature5-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
@@ -945,6 +952,7 @@
   var track = document.getElementById('resultTrack');
   var dotsWrap = document.getElementById('resultDots');
   if (!track || !dotsWrap) return;
+  if (window.innerWidth > 640) return; // PC는 그리드로 표시, JS 불필요
 
   var total = 6;
   var cur = 0;
