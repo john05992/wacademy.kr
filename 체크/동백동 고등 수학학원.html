@@ -177,23 +177,79 @@
     .result-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
     .result-title em { color: #FF4714; font-style: normal; }
     .result-sub { margin-top: 14px; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: #ccc; }
-    /* 비교 테이블 */
-    .comp-section { background: #fff; padding: 72px 24px 80px; }
-    .comp-inner { max-width: 520px; margin: 0 auto; }
-    .comp-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 14px; }
-    .comp-title { font-size: clamp(1.5rem, 5vw, 2.2rem); font-weight: 900; color: #111; text-align: center; letter-spacing: -.05em; margin-bottom: 36px; word-break: keep-all; }
-    .comp-card { border-radius: 20px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.10); border: 1px solid #f0f0f0; }
-    .comp-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; background: #111; padding: 18px 24px; }
-    .comp-label { font-size: .82rem; font-weight: 700; color: #aaa; letter-spacing: .06em; }
-    .comp-label.left { text-align: left; }
-    .comp-label.right { text-align: right; color: #FF4714; }
-    .comp-vs-badge { background: #FF4714; color: #fff; font-size: .75rem; font-weight: 900; padding: 4px 10px; border-radius: 20px; letter-spacing: .08em; }
-    .comp-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 16px 24px; border-bottom: 1px solid #f5f5f5; }
-    .comp-row:last-child { border-bottom: none; }
-    .comp-item { font-size: .9rem; font-weight: 600; color: #777; }
-    .comp-item.left { text-align: left; }
-    .comp-item.right { text-align: right; color: #111; font-weight: 800; }
-    .comp-category-badge { background: #f5f5f5; color: #555; font-size: .72rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; letter-spacing: .06em; white-space: nowrap; }
+    /* 비교 테이블 - perf.kr 원본 */
+    .comparison-section {
+        position: relative; width: 100%;
+        background: linear-gradient(165deg, #FF4714 0%, #ff8a5c 50%, #ffa67a 100%);
+        padding: 60px 20px 60px; min-height: 100vh;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .comparison-section::before {
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle at 80% 20%, rgba(255,255,255,.05) 0%, transparent 50%); pointer-events: none;
+    }
+    .comp-title {
+        font-size: 4rem; font-weight: 900; color: #fff; margin: 0 0 50px 0;
+        text-align: center; letter-spacing: -0.05em; text-shadow: 0 4px 20px rgba(0,0,0,.1);
+        opacity: 0; animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .comp-card {
+        background: #fff; border-radius: 40px; padding: 60px 50px;
+        max-width: 850px; width: 100%; box-shadow: 0 40px 100px rgba(0,0,0,.25);
+        position: relative; opacity: 0; animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
+    .comp-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 25px; margin-bottom: 50px; }
+    .comp-label {
+        text-align: center; font-size: 1.6rem; font-weight: 900;
+        padding: 20px 35px; border-radius: 18px; letter-spacing: -0.03em;
+        transition: transform 0.3s ease; white-space: nowrap;
+    }
+    .comp-label:hover { transform: translateY(-2px); }
+    .comp-label.left { background-color: #e8e8e8; color: #555; box-shadow: 0 4px 15px rgba(0,0,0,.08); }
+    .comp-label.right { background: linear-gradient(135deg, #FF4714 0%, #ff6a3d 100%); color: #fff; box-shadow: 0 8px 30px rgba(255,71,20,.4); }
+    .comp-vs-badge {
+        background: #111; color: #fff; font-size: 1.4rem; font-weight: 900;
+        padding: 12px 20px; border-radius: 50px; font-style: italic;
+        letter-spacing: .1em; box-shadow: 0 4px 15px rgba(0,0,0,.2);
+    }
+    .comp-table { display: flex; flex-direction: column; gap: 16px; position: relative; }
+    .comp-table::before {
+        content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px;
+        background: linear-gradient(to bottom, #ddd 0%, #111 50%, #ddd 100%);
+        transform: translateX(-50%); z-index: 0;
+    }
+    .comp-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 0; position: relative; z-index: 1; }
+    .comp-category-badge {
+        background: #111; color: #fff; text-align: center; font-size: .85rem; font-weight: 900;
+        padding: 20px 18px; text-transform: uppercase; letter-spacing: .15em;
+        min-width: 90px; display: flex; align-items: center; justify-content: center;
+        white-space: nowrap; box-shadow: 0 2px 10px rgba(0,0,0,.15);
+    }
+    .comp-item {
+        padding: 20px 25px; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em;
+        word-break: keep-all; display: flex; align-items: center; justify-content: center;
+        white-space: nowrap; background: #fafafa; transition: background .3s ease, transform .3s ease;
+    }
+    .comp-item.left { color: #777; font-weight: 400; border-radius: 16px 0 0 16px; }
+    .comp-item.right { color: #FF4714; font-weight: 900; background: #fff5f2; border-radius: 0 16px 16px 0; border: 2px solid #FF4714; border-left: none; }
+    .comp-row:hover .comp-item.left { background: #f0f0f0; }
+    .comp-row:hover .comp-item.right { background: #ffe8e0; transform: translateX(3px); }
+    @media (max-width: 768px) {
+        .comparison-section { padding: 60px 15px 70px; min-height: auto; }
+        .comp-title { font-size: 2.2rem; margin-bottom: 20px; }
+        .comp-card { padding: 30px 15px; border-radius: 25px; max-width: 100%; }
+        .comp-header { gap: 8px; margin-bottom: 30px; }
+        .comp-label { font-size: 1rem; padding: 12px 10px; white-space: normal; line-height: 1.2; }
+        .comp-vs-badge { font-size: .9rem; padding: 8px 12px; white-space: nowrap; }
+        .comp-table { gap: 12px; }
+        .comp-table::before { width: 2px; }
+        .comp-row { gap: 0; }
+        .comp-row:hover .comp-item.right { transform: translateX(2px); }
+        .comp-category-badge { font-size: .65rem; padding: 15px 8px; min-width: 60px; letter-spacing: .1em; }
+        .comp-item { padding: 15px 8px; font-size: .95rem; white-space: normal; line-height: 1.3; }
+        .comp-item.left { font-size: .9rem; }
+        .comp-item.right { font-size: 1rem; }
+    }
     .result-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; padding: 8px 24px 16px; }
     .result-track::-webkit-scrollbar { display: none; }
     .result-slide { scroll-snap-align: start; flex: 0 0 calc((100% - 80px) / 3); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); transition: transform .3s ease, box-shadow .3s ease; }
@@ -468,41 +524,51 @@
 <!-- ══════════════════════════════════════════
      비교 테이블 (고정)
 ══════════════════════════════════════════ -->
-<section class="comp-section">
-  <div class="comp-inner">
-    <p class="comp-eyebrow">COMPARISON</p>
-    <h2 class="comp-title">일반 소수정예 아냐?</h2>
-    <div class="comp-card">
-      <div class="comp-header">
-        <div class="comp-label left">소수정예</div>
-        <div class="comp-vs-badge">VS</div>
-        <div class="comp-label right">코칭학원</div>
-      </div>
-      <div>
-        <div class="comp-row">
-          <div class="comp-item left">그룹별 통일</div>
-          <div class="comp-category-badge">교재</div>
-          <div class="comp-item right">개인 맞춤</div>
+<div class="mobile-full-bleed-container">
+    <section class="comparison-section">
+
+        <h2 class="comp-title">일반 소수정예 아냐?</h2>
+
+        <div class="comp-card">
+
+            <div class="comp-header">
+                <div class="comp-label left">소수정예</div>
+                <div class="comp-vs-badge">VS</div>
+                <div class="comp-label right">코칭학원</div>
+            </div>
+
+            <div class="comp-table">
+
+                <div class="comp-row">
+                    <div class="comp-item left">그룹별 통일</div>
+                    <div class="comp-category-badge">교재</div>
+                    <div class="comp-item right">개인 맞춤</div>
+                </div>
+
+                <div class="comp-row">
+                    <div class="comp-item left">과목수업만</div>
+                    <div class="comp-category-badge">코칭</div>
+                    <div class="comp-item right">코칭+과목</div>
+                </div>
+
+                <div class="comp-row">
+                    <div class="comp-item left">다같이 진행</div>
+                    <div class="comp-category-badge">진도</div>
+                    <div class="comp-item right">개인별 속도</div>
+                </div>
+
+                <div class="comp-row">
+                    <div class="comp-item left">1:N 관리</div>
+                    <div class="comp-category-badge">관리</div>
+                    <div class="comp-item right">1:1 밀착</div>
+                </div>
+
+            </div>
+
         </div>
-        <div class="comp-row">
-          <div class="comp-item left">과목수업만</div>
-          <div class="comp-category-badge">코칭</div>
-          <div class="comp-item right">코칭+과목</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-item left">다같이 진행</div>
-          <div class="comp-category-badge">진도</div>
-          <div class="comp-item right">개인별 속도</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-item left">1:N 관리</div>
-          <div class="comp-category-badge">관리</div>
-          <div class="comp-item right">1:1 밀착</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+    </section>
+</div>
 
 <!-- ══════════════════════════════════════════
      SECTION 1 - 고르는 방법
@@ -795,42 +861,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">아이가 점점 스스로 공부 계획을 세우려고 해요</p>
+      <p class="rv-text">직원들의 밝은 인사가 첫 인상에 큰 힘이 되었어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">교실이 안정감 있게 꾸며져 있어 부담 없어요</p>
+      <p class="rv-text">교사의 차분한 설명이 어려운 개념을 쉽게 풀어줬어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">복잡한 그래프도 쉽게 설명해주셔서 이해 잘돼요</p>
+      <p class="rv-text">상담에서 학습 균형을 짚어줘서 방향이 잡혔어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">작은 성과가 쌓이며 성취의 기쁨을 느껴요</p>
+      <p class="rv-text">원장님이 놓친 부분을 짚어주셔서 큰 도움이 되었어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">성취 경험 덕분에 학습 동기가 생겼어요</p>
+      <p class="rv-text">자습실 좌석이 차분히 정리돼 집중력이 높아졌어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">합숙반 다녀온 후 자기주도성이 눈에 띄게 커졌어요</p>
+      <p class="rv-text">탐구 프로젝트 참여가 아이에게 큰 보람을 안겨줬어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
