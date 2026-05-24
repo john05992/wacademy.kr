@@ -177,6 +177,23 @@
     .result-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
     .result-title em { color: #FF4714; font-style: normal; }
     .result-sub { margin-top: 14px; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: #ccc; }
+    /* 비교 테이블 */
+    .comp-section { background: #fff; padding: 72px 24px 80px; }
+    .comp-inner { max-width: 520px; margin: 0 auto; }
+    .comp-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 14px; }
+    .comp-title { font-size: clamp(1.5rem, 5vw, 2.2rem); font-weight: 900; color: #111; text-align: center; letter-spacing: -.05em; margin-bottom: 36px; word-break: keep-all; }
+    .comp-card { border-radius: 20px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.10); border: 1px solid #f0f0f0; }
+    .comp-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; background: #111; padding: 18px 24px; }
+    .comp-label { font-size: .82rem; font-weight: 700; color: #aaa; letter-spacing: .06em; }
+    .comp-label.left { text-align: left; }
+    .comp-label.right { text-align: right; color: #FF4714; }
+    .comp-vs-badge { background: #FF4714; color: #fff; font-size: .75rem; font-weight: 900; padding: 4px 10px; border-radius: 20px; letter-spacing: .08em; }
+    .comp-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 16px 24px; border-bottom: 1px solid #f5f5f5; }
+    .comp-row:last-child { border-bottom: none; }
+    .comp-item { font-size: .9rem; font-weight: 600; color: #777; }
+    .comp-item.left { text-align: left; }
+    .comp-item.right { text-align: right; color: #111; font-weight: 800; }
+    .comp-category-badge { background: #f5f5f5; color: #555; font-size: .72rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; letter-spacing: .06em; white-space: nowrap; }
     .result-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; padding: 8px 24px 16px; }
     .result-track::-webkit-scrollbar { display: none; }
     .result-slide { scroll-snap-align: start; flex: 0 0 calc((100% - 80px) / 3); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); transition: transform .3s ease, box-shadow .3s ease; }
@@ -446,6 +463,45 @@
     <div class="result-slide"><img src="/images/성적향상/2학기올a.png" alt="2학기 올A 사례"></div>
   </div>
   <div class="result-dots" id="resultDots"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     비교 테이블 (고정)
+══════════════════════════════════════════ -->
+<section class="comp-section">
+  <div class="comp-inner">
+    <p class="comp-eyebrow">COMPARISON</p>
+    <h2 class="comp-title">일반 소수정예 아냐?</h2>
+    <div class="comp-card">
+      <div class="comp-header">
+        <div class="comp-label left">소수정예</div>
+        <div class="comp-vs-badge">VS</div>
+        <div class="comp-label right">코칭학원</div>
+      </div>
+      <div>
+        <div class="comp-row">
+          <div class="comp-item left">그룹별 통일</div>
+          <div class="comp-category-badge">교재</div>
+          <div class="comp-item right">개인 맞춤</div>
+        </div>
+        <div class="comp-row">
+          <div class="comp-item left">과목수업만</div>
+          <div class="comp-category-badge">코칭</div>
+          <div class="comp-item right">코칭+과목</div>
+        </div>
+        <div class="comp-row">
+          <div class="comp-item left">다같이 진행</div>
+          <div class="comp-category-badge">진도</div>
+          <div class="comp-item right">개인별 속도</div>
+        </div>
+        <div class="comp-row">
+          <div class="comp-item left">1:N 관리</div>
+          <div class="comp-category-badge">관리</div>
+          <div class="comp-item right">1:1 밀착</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ══════════════════════════════════════════
@@ -739,42 +795,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">개념카드로 반복 학습하니 머릿속이 정리돼요</p>
+      <p class="rv-text">아이가 점점 스스로 공부 계획을 세우려고 해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">복습 계획표를 주시고 실천 여부도 체크해줘요</p>
+      <p class="rv-text">교실이 안정감 있게 꾸며져 있어 부담 없어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">시험 전날까지 진도와 복습이 분리돼 있어서 부담이 없어요</p>
+      <p class="rv-text">복잡한 그래프도 쉽게 설명해주셔서 이해 잘돼요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학습 루틴 체크리스트 덕분에 꾸준히 할 수 있어요</p>
+      <p class="rv-text">작은 성과가 쌓이며 성취의 기쁨을 느껴요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">수업 모니터가 잘 보여서 수업 따라가기 수월했어요</p>
+      <p class="rv-text">성취 경험 덕분에 학습 동기가 생겼어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학습 시간 타이머 사용법을 알려주셔서 시간 관리가 됐어요</p>
+      <p class="rv-text">합숙반 다녀온 후 자기주도성이 눈에 띄게 커졌어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
