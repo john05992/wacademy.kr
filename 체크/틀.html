@@ -199,8 +199,9 @@
         background: radial-gradient(circle at 20% 80%, rgba(255,255,255,.07) 0%, transparent 50%);
         pointer-events: none;
     }
-    .consult-eyebrow { font-size: .72rem; font-weight: 800; color: rgba(255,255,255,.75); letter-spacing: .25em; text-transform: uppercase; margin-bottom: 20px; }
-    .consult-num { font-size: clamp(2.2rem, 8vw, 4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; text-shadow: 0 4px 20px rgba(0,0,0,.15); margin-bottom: 48px; }
+    .consult-eyebrow { display: none; }
+    .consult-label { font-size: clamp(.85rem, 2.5vw, 1rem); font-weight: 700; color: rgba(255,255,255,.8); letter-spacing: .1em; margin-bottom: 14px; }
+    .consult-num { font-size: clamp(2.8rem, 10vw, 5.5rem); font-weight: 900; color: #fff; letter-spacing: -.03em; text-shadow: 0 6px 30px rgba(0,0,0,.2); margin-bottom: 48px; line-height: 1; }
     .consult-card {
         background: #fff; border-radius: 24px; padding: 32px 28px;
         box-shadow: 0 20px 60px rgba(0,0,0,.2); max-width: 520px; width: 100%;
@@ -621,7 +622,7 @@
      상담 안내 (고정)
 ══════════════════════════════════════════ -->
 <section class="consult-section">
-  <p class="consult-eyebrow">CONTACT US</p>
+  <p class="consult-label">상담번호</p>
   <p class="consult-num">010-3952-5815</p>
   <div class="consult-card">
     <p>아래의 글은 와와학원 안내와 무관합니다</p>
