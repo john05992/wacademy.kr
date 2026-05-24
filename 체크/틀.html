@@ -177,6 +177,16 @@
     .result-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
     .result-title em { color: #FF4714; font-style: normal; }
     .result-sub { margin-top: 14px; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: #ccc; }
+    /* 플래너 섹션 */
+    .planner-section { background: #0a0a0a; padding: 88px 24px 96px; }
+    .planner-inner { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .planner-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
+    .planner-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: #fff; letter-spacing: -.06em; line-height: 1.2; text-align: center; word-break: keep-all; margin-bottom: 10px; }
+    .planner-title em { color: #FF4714; font-style: normal; }
+    .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-bottom: 40px; line-height: 1.7; word-break: keep-all; }
+    .planner-img-wrap { width: 100%; aspect-ratio: 1100 / 1300; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,.5); }
+    .planner-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     /* 비교 테이블 - perf.kr 원본 */
     .comparison-section {
         position: relative; width: 100%;
@@ -569,6 +579,20 @@
 
     </section>
 </div>
+
+<!-- ══════════════════════════════════════════
+     플래너 섹션 (고정)
+══════════════════════════════════════════ -->
+<section class="planner-section">
+  <div class="planner-inner">
+    <p class="planner-eyebrow">STUDY PLANNER</p>
+    <p class="planner-title">학교별 관리와<br><em>철저한 플래너</em> 작성</p>
+    <p class="planner-sub">아이마다 다른 학교 일정과 시험 범위,<br>1:1 맞춤 플래너로 빈틈없이 관리합니다.</p>
+    <div class="planner-img-wrap">
+      <img src="/images/플래너.png" alt="철저한 플래너 작성 관리">
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════
      SECTION 1 - 고르는 방법

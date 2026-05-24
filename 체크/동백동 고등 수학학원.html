@@ -177,6 +177,16 @@
     .result-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
     .result-title em { color: #FF4714; font-style: normal; }
     .result-sub { margin-top: 14px; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: #ccc; }
+    /* 플래너 섹션 */
+    .planner-section { background: #0a0a0a; padding: 88px 24px 96px; }
+    .planner-inner { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .planner-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
+    .planner-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: #fff; letter-spacing: -.06em; line-height: 1.2; text-align: center; word-break: keep-all; margin-bottom: 10px; }
+    .planner-title em { color: #FF4714; font-style: normal; }
+    .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-bottom: 40px; line-height: 1.7; word-break: keep-all; }
+    .planner-img-wrap { width: 100%; aspect-ratio: 1100 / 1300; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,.5); }
+    .planner-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     /* 비교 테이블 - perf.kr 원본 */
     .comparison-section {
         position: relative; width: 100%;
@@ -571,6 +581,20 @@
 </div>
 
 <!-- ══════════════════════════════════════════
+     플래너 섹션 (고정)
+══════════════════════════════════════════ -->
+<section class="planner-section">
+  <div class="planner-inner">
+    <p class="planner-eyebrow">STUDY PLANNER</p>
+    <p class="planner-title">학교별 관리와<br><em>철저한 플래너</em> 작성</p>
+    <p class="planner-sub">아이마다 다른 학교 일정과 시험 범위,<br>1:1 맞춤 플래너로 빈틈없이 관리합니다.</p>
+    <div class="planner-img-wrap">
+      <img src="/images/플래너.png" alt="철저한 플래너 작성 관리">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
      SECTION 1 - 고르는 방법
      유동: 동백동 고등 수학학원 고르는 방법, 용인시 동백동은 주거지역과 교육시설이 밀접하게 배치된 환경을 자랑한다. 학원 선택 시 강사의 전공과 지도 경험을 우선 검토하고, 커리큘럼이 국가 교육과정과 얼마나 일치하는지 확인한다. 교실 규모가 작아 개별 피드백이 가능한 곳을 선호한다. 학습 공간에 시각 자료와 문제풀이용 도구가 충분히 구비돼 있는지 살펴보면 학습 효율을 높일 수 있다. 마지막으로 주변 교통 편의성과 학원 운영 시간대가 개인 일정과 맞는지 비교한다.
 ══════════════════════════════════════════ -->
@@ -861,42 +885,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">학습 메모 방식도 지도해주셔서 도움이 됐어요</p>
+      <p class="rv-text">입학 전 불안했던 마음이 체계적인 수업 분위기로 사라졌습니다.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">시험 기간에도 차분한 분위기라 안정감이 있어요</p>
+      <p class="rv-text">집중해야 할 단원이 명확히 보여 공부가 쉬워졌어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">주간 피드백으로 아이 상태를 꾸준히 알 수 있어요</p>
+      <p class="rv-text">개인별 맞춤 지도 덕분에 아이가 공부 습관을 스스로 만들었어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학원에서 진로 상담도 도와줘서 든든해요</p>
+      <p class="rv-text">아이와 대화 속에서 수업 방향이 잡히는 게 좋았어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학원에서 제공하는 정리 자료가 체계적이에요</p>
+      <p class="rv-text">교사의 풀이 시연이 아이에게 큰 자신감을 심어 주었어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">매주 오답 퀴즈를 풀고 피드백 받는 게 효과적이에요</p>
+      <p class="rv-text">친절한 응대로 입학 초기 긴장감이 사라졌어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
