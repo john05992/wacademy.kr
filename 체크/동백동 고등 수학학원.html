@@ -260,12 +260,10 @@
         .comp-item.left { font-size: .9rem; }
         .comp-item.right { font-size: 1rem; }
     }
-    .result-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; padding: 8px 24px 16px; }
-    .result-track::-webkit-scrollbar { display: none; }
-    .result-slide { scroll-snap-align: start; flex: 0 0 calc((100% - 80px) / 3); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); transition: transform .3s ease, box-shadow .3s ease; }
-    .result-slide:hover { transform: translateY(-6px); box-shadow: 0 18px 48px rgba(0,0,0,.5); }
-    .result-slide img { width: 100%; height: auto; display: block; border-radius: 16px; }
-    @media (max-width: 640px) { .result-slide { flex: 0 0 78%; } }
+    .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
+    .result-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+    .result-slide { flex: 0 0 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
+    .result-slide img { width: 100%; height: auto; display: block; }
     .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
     .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
     .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
@@ -520,13 +518,15 @@
     <p class="result-eyebrow">GRADE COACHING CENTER</p>
     <p class="result-title">성적표 향상 인증<br><em style="color:#FF4714;font-style:normal">중하위권</em>의 답은 여기</p>
   </div>
-  <div class="result-track" id="resultTrack">
-    <div class="result-slide"><img src="/images/성적향상/수학성적상승.png" alt="수학 성적 상승 사례"></div>
-    <div class="result-slide"><img src="/images/성적향상/영어100점.png" alt="영어 100점 사례"></div>
-    <div class="result-slide"><img src="/images/성적향상/국어1등급.png" alt="국어 1등급 사례"></div>
-    <div class="result-slide"><img src="/images/성적향상/전과목%20평균%2099점.png" alt="전과목 평균 99점 사례"></div>
-    <div class="result-slide"><img src="/images/성적향상/평균20점up.png" alt="평균 20점 상승 사례"></div>
-    <div class="result-slide"><img src="/images/성적향상/2학기올a.png" alt="2학기 올A 사례"></div>
+  <div class="result-viewport">
+    <div class="result-track" id="resultTrack">
+      <div class="result-slide"><img src="/images/성적향상/성적표.png" style="object-fit:cover;object-position:0% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="성적 향상 사례 1"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png" style="object-fit:cover;object-position:20% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="성적 향상 사례 2"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png" style="object-fit:cover;object-position:40% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="성적 향상 사례 3"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png" style="object-fit:cover;object-position:60% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="성적 향상 사례 4"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png" style="object-fit:cover;object-position:80% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="성적 향상 사례 5"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png" style="object-fit:cover;object-position:100% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="성적 향상 사례 6"></div>
+    </div>
   </div>
   <div class="result-dots" id="resultDots"></div>
 </section>
@@ -885,42 +885,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">아이가 스터디 모임에서 친구들과 함께 성장하더라고요</p>
+      <p class="rv-text">수업 중 대화에서 아이의 공부 방향이 결정돼요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이가 수업 후 개념이 머릿속에 남는다고 말했어요</p>
+      <p class="rv-text">아이 실수까지 기록해서 피드백 주는 게 인상 깊었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이가 오답 노트를 정성껏 쓰고 있다고 자랑하더라고요</p>
+      <p class="rv-text">학부모 전용 알림톡 뉴스레터가 정보 전달에 좋아요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학원에서 제공하는 진단표로 계획이 명확해졌어요</p>
+      <p class="rv-text">시험 직전 스퍼트를 만들어주는 리듬이 느껴졌어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이의 작은 성취도 칭찬해주셔서 자신감이 생겼어요</p>
+      <p class="rv-text">단순한 진도 체크가 아닌 성향 기반 코멘트가 있었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">매주 피드백으로 아이의 진도가 눈에 보여 안심이에요</p>
+      <p class="rv-text">공부에 대한 자신감을 회복하게 해준 곳이에요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -946,41 +946,27 @@
   var dotsWrap = document.getElementById('resultDots');
   if (!track || !dotsWrap) return;
 
-  var slides = Array.from(track.querySelectorAll('.result-slide'));
+  var total = 6;
   var cur = 0;
 
   // 도트 생성
-  slides.forEach(function(_, i) {
-    var d = document.createElement('button');
-    d.className = 'result-dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', 'slide ' + (i+1));
-    d.addEventListener('click', function() { goTo(i); });
-    dotsWrap.appendChild(d);
-  });
+  for (var i = 0; i < total; i++) {
+    (function(idx){
+      var d = document.createElement('button');
+      d.className = 'result-dot' + (idx === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'slide ' + (idx+1));
+      d.addEventListener('click', function() { goTo(idx); });
+      dotsWrap.appendChild(d);
+    })(i);
+  }
 
   var dots = Array.from(dotsWrap.querySelectorAll('.result-dot'));
 
   function goTo(idx) {
-    cur = (idx + slides.length) % slides.length;
-    var padding = 24;
-    track.scrollTo({ left: slides[cur].offsetLeft - padding, behavior: 'smooth' });
+    cur = (idx + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
     dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
   }
-
-  // 스크롤로 현재 슬라이드 감지
-  var scrollTimer;
-  track.addEventListener('scroll', function() {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() {
-      var scrollLeft = track.scrollLeft;
-      var closest = 0;
-      slides.forEach(function(s, i) {
-        if (Math.abs(s.offsetLeft - 24 - scrollLeft) < Math.abs(slides[closest].offsetLeft - 24 - scrollLeft)) closest = i;
-      });
-      cur = closest;
-      dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
-    }, 80);
-  });
 
   // 터치 스와이프
   var touchX = 0;
