@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이매동 고등 수학학원 추천 | 수강료·커리큘럼 안내</title>
+  <meta name="description" content="이매동 고등 수학학원은 성남시 이매동 지역 고등학생들을 위한 체계적인 수학 학습 환경을 제공합니다. 개념 이해부터 문제 해결력 향상까지 목표 중심의 수업을 통해 학생 개개인의 성장을 지원합니다.">
+  <meta property="og:title" content="이매동 고등 수학학원, 지금 찾고 계시나요?">
+  <meta property="og:description" content="이매동 고등 수학학원은 성남시 이매동 지역 고등학생들을 위한 체계적인 수학 학습 환경을 제공합니다. 개념 이해부터 문제 해결력 향상까지 목표 중심의 수업을 통해 학생 개개인의 성장을 지원합니다.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    .top-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(17,17,17,.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.05); }
+    .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { font-size: 1.3rem; font-weight: 900; color: #fff; letter-spacing: -.03em; }
+    .header-logo span { color: #FF4714; }
+    .header-cta-btn { background: #FF4714; color: #fff; border: none; padding: 10px 22px; border-radius: 99px; font-size: .9rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: all .3s ease; white-space: nowrap; }
+    .header-cta-btn:hover { background: #ff6a3d; transform: translateY(-1px); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeMoveUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(.95); } to { opacity: 1; transform: scale(1); } }
+    @keyframes pcta-blink {
+      0%,100% { opacity: 1; box-shadow: 0 0 0 6px rgba(255,71,20,.15), 0 8px 32px rgba(255,71,20,.4); }
+      50% { opacity: .75; box-shadow: 0 0 0 6px rgba(255,71,20,.05), 0 8px 32px rgba(255,71,20,.1); }
+    }
+    @keyframes bounceY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+    /* ── HERO ── */
+    .hero-section { min-height: 100vh; background: #0a0a0a; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 24px 80px; position: relative; overflow: hidden; }
+    .hero-section::before { content: ''; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 640px; height: 640px; background: radial-gradient(circle, rgba(255,71,20,.09) 0%, transparent 70%); pointer-events: none; }
+    .hero-top-label { font-size: .85rem; font-weight: 700; color: #FF4714; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeInUp .6s both; }
+    .hero-section h1 { font-size: clamp(2.4rem, 8vw, 5rem); font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: -.04em; margin-bottom: 28px; word-break: keep-all; animation: fadeInUp .7s .1s both; }
+    .hero-section h1 em { color: #FF4714; font-style: normal; }
+    .hero-sub { font-size: clamp(.95rem, 2.2vw, 1.1rem); color: #666; line-height: 1.75; margin-bottom: 48px; word-break: keep-all; animation: fadeInUp .7s .2s both; max-width: 560px; }
+    .hero-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #FF4714; color: #fff; text-decoration: none; padding: 18px 42px; border-radius: 99px; font-size: 1.1rem; font-weight: 800; letter-spacing: -.01em; animation: fadeInUp .7s .3s both, pcta-blink 2s 1s ease-in-out infinite; transition: transform .3s, box-shadow .3s; white-space: nowrap; }
+    .hero-cta-btn:hover { animation: none; transform: translateY(-3px) scale(1.04); box-shadow: 0 0 0 10px rgba(255,71,20,.12), 0 14px 40px rgba(255,71,20,.55); }
+    .hero-badge-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 48px; animation: fadeInUp .7s .45s both; }
+    .hero-badge { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 99px; padding: 8px 18px; font-size: .85rem; color: #aaa; }
+    .hero-badge strong { color: #fff; }
+
+    /* ── PAIN ── */
+    .pain-section { position: relative; background: #0a0a0a; padding: 140px 30px 160px; overflow: hidden; }
+    .pain-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; height: 400px; background: radial-gradient(circle, rgba(255,71,20,.07) 0%, transparent 70%); pointer-events: none; }
+    .pain-wrapper { max-width: 500px; margin: 0 auto; position: relative; z-index: 10; display: flex; flex-direction: column; }
+    .connect-line { position: absolute; top: 40px; bottom: 200px; left: 50%; width: 1px; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.15) 20%, rgba(255,255,255,.15) 80%, rgba(255,255,255,0) 100%); transform: translateX(-50%); z-index: 0; }
+    .monologue { font-size: 1.7rem; font-weight: 400; color: #888; margin-bottom: 60px; position: relative; line-height: 1.45; letter-spacing: -.02em; opacity: 0; animation: fadeMoveUp .8s ease forwards; word-break: keep-all; }
+    .monologue:nth-child(1) { text-align: left; align-self: flex-start; animation-delay: .05s; }
+    .monologue:nth-child(2) { text-align: right; align-self: flex-end; color: #aaa; animation-delay: .2s; }
+    .monologue:nth-child(3) { text-align: center; align-self: center; color: #ccc; font-weight: 700; margin-bottom: 120px; animation-delay: .35s; }
+    .monologue::before { content: '\201C'; font-family: serif; font-size: 3rem; color: #FF4714; opacity: .5; position: absolute; top: -20px; line-height: 0; }
+    .monologue:nth-child(1)::before { left: -20px; }
+    .monologue:nth-child(2)::before { right: -20px; content: '\201D'; }
+    .monologue:nth-child(3)::before { display: none; }
+    .fact-box { text-align: center; opacity: 0; animation: scaleIn .8s cubic-bezier(.2,1,.3,1) .5s forwards; }
+    .fact-title { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900; color: #fff; line-height: 1.25; letter-spacing: -.04em; word-break: keep-all; }
+    .simple-underline { display: inline-block; position: relative; z-index: 1; }
+    .simple-underline::after { content: ''; position: absolute; bottom: 2px; left: 0; right: 0; height: 12px; background: #FF4714; z-index: -1; opacity: .85; }
+
+    /* ── PROMISE ── */
+    .promise-section { background: #111; padding: 90px 24px; text-align: center; }
+    .promise-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 52px; letter-spacing: -.03em; word-break: keep-all; }
+    .promise-title span { color: #FF4714; }
+    .promise-list { max-width: 460px; margin: 0 auto; }
+    .promise-item { display: flex; align-items: center; gap: 16px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+    .promise-item:last-child { border-bottom: none; }
+    .promise-label { font-size: 1.4rem; font-weight: 900; color: #FF4714; min-width: 110px; text-align: left; }
+    .promise-line { flex: 1; height: 1px; background: rgba(255,255,255,.12); }
+    .promise-val { font-size: 1rem; font-weight: 700; color: #bbb; min-width: 130px; text-align: right; }
+
+    /* ── SECTIONS COMMON ── */
+    .sec { padding: 90px 24px; }
+    .sec-inner { max-width: 960px; margin: 0 auto; }
+    .sec-dark { background: #111; }
+    .sec-light { background: #fdfcf8; }
+    .sec-mid { background: #f4f4f0; }
+    .sec h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 900; letter-spacing: -.03em; margin-bottom: 20px; word-break: keep-all; line-height: 1.3; }
+    .sec-dark h2 { color: #fff; }
+    .sec-light h2, .sec-mid h2 { color: #111; }
+    .sec-divider { width: 48px; height: 3px; background: #FF4714; border-radius: 2px; margin-bottom: 24px; }
+    .body-text { font-size: 1rem; line-height: 1.85; word-break: keep-all; }
+    .sec-dark .body-text { color: #888; }
+    .sec-light .body-text, .sec-mid .body-text { color: #555; }
+
+    /* ── TEXT CARD ── */
+    .text-card { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 36px 32px; margin-top: 24px; }
+    .text-card-light { background: #fff; border: 1px solid #e8e8e8; border-radius: 20px; padding: 36px 32px; margin-top: 24px; box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+
+    /* ── CHECKLIST ── */
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-top: 24px; }
+    .check-item { display: flex; align-items: flex-start; gap: 12px; font-size: .95rem; font-weight: 600; line-height: 1.55; }
+    .sec-dark .check-item { color: #bbb; }
+    .sec-light .check-item, .sec-mid .check-item { color: #444; }
+    .check-icon { flex-shrink: 0; margin-top: 2px; color: #FF4714; }
+
+    /* ── GRADE CARDS ── */
+    .grade-grid { max-width: 960px; margin: 32px auto 0; display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 640px) { .grade-grid { grid-template-columns: repeat(3,1fr); } }
+    .grade-card { position: relative; border-radius: 24px; padding: 4px; background: #fff; box-shadow: 0 8px 32px rgba(0,0,0,.07); overflow: hidden; transition: all .4s ease; opacity: 0; transform: translateY(30px); animation: fadeInUp .7s ease forwards; }
+    .grade-card:nth-child(1) { animation-delay: .1s; }
+    .grade-card:nth-child(2) { animation-delay: .25s; }
+    .grade-card:nth-child(3) { animation-delay: .4s; }
+    .grade-card::before { content: ''; position: absolute; inset: 0; border-radius: 24px; padding: 4px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+    .grade-card-1::before { background: linear-gradient(135deg,#3B82F6,#8B5CF6); }
+    .grade-card-2::before { background: linear-gradient(135deg,#FF4714,#EC4899); }
+    .grade-card-3::before { background: linear-gradient(135deg,#10B981,#06B6D4); }
+    .grade-card:hover { transform: translateY(-10px); box-shadow: 0 22px 55px rgba(0,0,0,.12); }
+    .grade-badge { position: absolute; top: -12px; right: 24px; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 900; color: #fff; z-index: 10; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+    .grade-card-1 .grade-badge { background: linear-gradient(135deg,#3B82F6,#8B5CF6); }
+    .grade-card-2 .grade-badge { background: linear-gradient(135deg,#FF4714,#EC4899); }
+    .grade-card-3 .grade-badge { background: linear-gradient(135deg,#10B981,#06B6D4); }
+    .grade-content { background: #fff; border-radius: 20px; padding: 40px 24px 32px; }
+    .grade-title { font-size: 1.6rem; font-weight: 900; color: #111; margin-bottom: 12px; letter-spacing: -.03em; }
+    .grade-divider { width: 40px; height: 3px; border-radius: 2px; margin-bottom: 16px; transition: width .3s ease; }
+    .grade-card-1 .grade-divider { background: linear-gradient(90deg,#3B82F6,#8B5CF6); }
+    .grade-card-2 .grade-divider { background: linear-gradient(90deg,#FF4714,#EC4899); }
+    .grade-card-3 .grade-divider { background: linear-gradient(90deg,#10B981,#06B6D4); }
+    .grade-card:hover .grade-divider { width: 64px; }
+    .grade-desc { font-size: .9rem; color: #555; line-height: 1.65; }
+
+    /* ── BRAND STATEMENT ── */
+    .brand-section { background: #fff; border-bottom: 1px solid #e8e8e8; }
+
+    /* 학원명 헤더 */
+    .brand-header { padding: 72px 24px 28px; text-align: center; border-bottom: 1px solid #f0f0ee; position: relative; }
+    .brand-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .68rem; font-weight: 800; color: #FF4714; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 22px; }
+    .brand-eyebrow::before, .brand-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: #FF4714; opacity: .5; }
+    .brand-name { font-size: clamp(2.2rem, 7.5vw, 5rem); font-weight: 900; color: #111; letter-spacing: -.065em; line-height: 1; word-break: keep-all; }
+    .brand-name .wawa { color: #FF4714; }
+    .brand-name-sub { margin-top: 18px; font-size: .82rem; font-weight: 500; color: #bbb; letter-spacing: .06em; }
+    .brand-name-sub b { color: #FF4714; font-weight: 700; }
+
+    /* 이미지 영역 */
+    .brand-img-wrap { width: calc(100% - 48px); max-width: 520px; margin: 28px auto 0; aspect-ratio: 1 / 1; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 72px rgba(0,0,0,.11), 0 4px 16px rgba(0,0,0,.06); background: #f0f0ee; display: block; }
+    .brand-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+    .brand-img-wrap:hover img { transform: scale(1.03); }
+
+    /* 여기는 다릅니다 */
+    .brand-statement { padding: 64px 24px 0; text-align: center; }
+    .brand-title { font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 900; color: #111; line-height: 1.1; letter-spacing: -.055em; margin-bottom: 14px; word-break: keep-all; }
+    .brand-title em { color: #FF4714; font-style: normal; position: relative; display: inline-block; }
+    .brand-title em::after { content: ''; position: absolute; bottom: 2px; left: -2px; right: -2px; height: 11px; background: #FF4714; opacity: .12; z-index: -1; border-radius: 3px; }
+    .brand-sub { font-size: 1rem; color: #aaa; font-weight: 500; letter-spacing: -.01em; }
+
+    /* 3 features 그리드 */
+    .brand-features { display: grid; grid-template-columns: 1fr; max-width: 660px; margin: 52px auto 72px; border: 1px solid #ebebeb; border-radius: 22px; overflow: hidden; }
+    @media (min-width: 600px) { .brand-features { grid-template-columns: repeat(3, 1fr); } }
+    .brand-feat { padding: 36px 28px 32px; position: relative; transition: background .2s; cursor: default; }
+    @media (min-width: 600px) {
+      .brand-feat:not(:last-child) { border-right: 1px solid #ebebeb; }
+    }
+    @media (max-width: 599px) {
+      .brand-feat:not(:last-child) { border-bottom: 1px solid #ebebeb; }
+    }
+    .brand-feat:hover { background: #fffaf8; }
+    .bf-num { font-size: 3.6rem; font-weight: 900; color: #111; letter-spacing: -.04em; line-height: 1; margin-bottom: 14px; opacity: .07; }
+    .bf-bar { width: 32px; height: 3px; background: #FF4714; border-radius: 2px; margin-bottom: 16px; }
+    .bf-text { font-size: 1.5rem; font-weight: 800; color: #111; line-height: 1.45; word-break: keep-all; }
+    .bf-text em { display: block; font-style: normal; color: #FF4714; font-size: 1.35rem; font-weight: 700; margin-top: 6px; }
+
+    /* ── RESULT SLIDER ── */
+    .result-section { background: #0a0a0a; padding: 90px 0 80px; }
+    .result-head { text-align: center; padding: 0 24px; margin-bottom: 48px; }
+    .result-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 18px; }
+    .result-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
+    .result-title em { color: #FF4714; font-style: normal; }
+    .result-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; padding: 8px 24px 16px; }
+    .result-track::-webkit-scrollbar { display: none; }
+    .result-slide { scroll-snap-align: start; flex: 0 0 calc((100% - 80px) / 3); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); transition: transform .3s ease, box-shadow .3s ease; }
+    .result-slide:hover { transform: translateY(-6px); box-shadow: 0 18px 48px rgba(0,0,0,.5); }
+    .result-slide img { width: 100%; height: auto; display: block; border-radius: 16px; }
+    @media (max-width: 640px) { .result-slide { flex: 0 0 78%; } }
+    .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
+    .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
+    .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+
+    /* ── FEATURE5 (section2 5박스) ── */
+    .feature5-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+    @media (min-width: 540px) { .feature5-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 900px) { .feature5-grid { grid-template-columns: repeat(3,1fr); } }
+    .feature5-card { background: #fff; border-radius: 14px; padding: 20px 22px; box-shadow: 0 3px 14px rgba(0,0,0,.07); display: flex; align-items: flex-start; gap: 14px; border-left: 4px solid #FF4714; transition: all .3s ease; }
+    .feature5-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+    .feature5-num { font-size: 1.3rem; font-weight: 900; color: #FF4714; min-width: 32px; line-height: 1.2; flex-shrink: 0; }
+    .feature5-text { font-size: .93rem; font-weight: 600; color: #333; line-height: 1.6; }
+
+    /* ── INFO TABLE ── */
+    .table-wrap { overflow-x: auto; margin-top: 28px; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid rgba(0,0,0,.07); }
+    .info-table tr:last-child { border-bottom: none; }
+    .td-label { background: #FF4714; color: #fff; font-size: .88rem; font-weight: 700; padding: 16px 20px; white-space: nowrap; width: 120px; vertical-align: top; }
+    .td-val { background: #fff; color: #333; font-size: .92rem; padding: 16px 20px; line-height: 1.6; }
+
+    /* ── FEATURE CARDS ── */
+    .feature-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+    @media (min-width: 600px) { .feature-grid { grid-template-columns: repeat(2,1fr); } }
+    .feature-card { background: #1a1a1a; border: 1px solid rgba(255,255,255,.07); border-radius: 16px; padding: 24px 22px; position: relative; overflow: hidden; transition: all .3s ease; }
+    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .feature-card:nth-child(1)::before { background: linear-gradient(90deg,#3B82F6,#8B5CF6); }
+    .feature-card:nth-child(2)::before { background: linear-gradient(90deg,#FF4714,#EC4899); }
+    .feature-card:nth-child(3)::before { background: linear-gradient(90deg,#10B981,#06B6D4); }
+    .feature-card:nth-child(4)::before { background: linear-gradient(90deg,#F59E0B,#EF4444); }
+    .feature-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.15); }
+    .feature-num { font-size: .75rem; font-weight: 700; color: #FF4714; letter-spacing: .1em; margin-bottom: 8px; }
+    .feature-text { font-size: .92rem; font-weight: 600; color: #ccc; line-height: 1.55; }
+    .feature-card-light { background: #fff; border: 1px solid #e5e5e5; border-radius: 16px; padding: 24px 22px; position: relative; overflow: hidden; transition: all .3s ease; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+    .feature-card-light::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .feature-card-light:nth-child(1)::before { background: linear-gradient(90deg,#3B82F6,#8B5CF6); }
+    .feature-card-light:nth-child(2)::before { background: linear-gradient(90deg,#FF4714,#EC4899); }
+    .feature-card-light:nth-child(3)::before { background: linear-gradient(90deg,#10B981,#06B6D4); }
+    .feature-card-light:nth-child(4)::before { background: linear-gradient(90deg,#F59E0B,#EF4444); }
+    .feature-card-light:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.1); }
+    .feature-card-light .feature-text { color: #374151; }
+
+    /* ── MISTAKE CARDS ── */
+    .mistake-list { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+    .mistake-card { background: #fff; border-radius: 16px; padding: 26px 26px 22px; border-left: 5px solid #FF4714; box-shadow: 0 4px 18px rgba(0,0,0,.07); }
+    .mc-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .mc-tag { font-size: .75rem; font-weight: 700; background: #FF4714; color: #fff; padding: 4px 12px; border-radius: 99px; white-space: nowrap; }
+    .mc-target { font-size: .9rem; font-weight: 700; color: #111; line-height: 1.4; }
+    .mc-desc { font-size: .88rem; color: #555; line-height: 1.7; }
+
+    /* ── BEFORE / AFTER ── */
+    .ba-wrap { max-width: 720px; margin: 0 auto; }
+    .ba-card { border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.08); }
+    .ba-card-header { padding: 16px 28px; display: flex; align-items: center; gap: 12px; }
+    .ba-badge { font-size: .78rem; font-weight: 900; padding: 4px 12px; border-radius: 99px; letter-spacing: .04em; }
+    .before-card .ba-card-header { background: #efefef; }
+    .before-card .ba-badge { background: #ddd; color: #666; }
+    .before-card .ba-card-h3 { color: #777; font-size: 1rem; font-weight: 700; }
+    .after-card .ba-card-header { background: #FF4714; }
+    .after-card .ba-badge { background: rgba(255,255,255,.25); color: #fff; }
+    .after-card .ba-card-h3 { color: #fff; font-size: 1rem; font-weight: 700; }
+    .ba-list { list-style: none; padding: 22px 28px; display: flex; flex-direction: column; gap: 14px; }
+    .before-card .ba-list { background: #fff; }
+    .after-card  .ba-list { background: #fff8f6; }
+    .ba-item { display: flex; align-items: center; gap: 12px; font-size: .95rem; font-weight: 600; }
+    .ba-icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; flex-shrink: 0; }
+    .before-icon { background: #eee; color: #999; }
+    .after-icon  { background: #FF4714; color: #fff; }
+    .before-card .ba-item { color: #aaa; }
+    .after-card  .ba-item { color: #333; }
+    .ba-divider { display: flex; justify-content: center; padding: 14px 0; }
+    .ba-vs-badge { background: #FF4714; color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 900; box-shadow: 0 4px 16px rgba(255,71,20,.4); animation: bounceY 1.5s ease-in-out infinite; }
+
+    /* ── FAQ ── */
+    .faq-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+    .faq-item { border-radius: 14px; overflow: hidden; }
+    .sec-light .faq-item, .sec-mid .faq-item { background: #fff; border: 1px solid #e5e5e5; }
+    .sec-dark .faq-item { background: #1a1a1a; border: 1px solid rgba(255,255,255,.06); }
+    .faq-q { width: 100%; background: none; border: none; padding: 20px 22px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; cursor: pointer; font-family: inherit; font-size: .95rem; font-weight: 700; text-align: left; }
+    .sec-dark .faq-q { color: #fff; }
+    .sec-light .faq-q, .sec-mid .faq-q { color: #111; }
+    .faq-arrow { font-size: 1rem; flex-shrink: 0; color: #FF4714; transition: transform .3s; margin-top: 2px; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 22px 18px; font-size: .9rem; line-height: 1.75; }
+    .sec-dark .faq-a { color: #999; }
+    .sec-light .faq-a, .sec-mid .faq-a { color: #555; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── REVIEWS ── */
+    .rv-section { background: #111; padding: 90px 24px; }
+    .rv-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; max-width: 960px; margin-left: auto; margin-right: auto; }
+    @media (min-width: 600px) { .rv-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 900px) { .rv-grid { grid-template-columns: repeat(3,1fr); } }
+    .rv-card { background: #1a1a1a; border: 1px solid rgba(255,255,255,.07); border-radius: 16px; padding: 24px 22px; display: flex; flex-direction: column; gap: 16px; transition: all .3s ease; }
+    .rv-card:hover { transform: translateY(-4px); border-color: rgba(255,71,20,.3); }
+    .rv-text { font-size: .92rem; color: #ccc; line-height: 1.7; flex: 1; }
+    .rv-star { font-size: .88rem; color: #FF4714; }
+    .rv-name { font-size: .78rem; color: #555; font-weight: 600; }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta-section { background: #0a0a0a; padding: 110px 24px 140px; text-align: center; position: relative; overflow: hidden; }
+    .bottom-cta-section::before { content: ''; position: absolute; bottom: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 480px; background: radial-gradient(circle, rgba(255,71,20,.08) 0%, transparent 70%); pointer-events: none; }
+    .bottom-cta-section h2 { font-size: clamp(1.8rem, 5vw, 3.2rem); font-weight: 900; color: #fff; margin-bottom: 16px; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
+    .bottom-cta-section h2 em { color: #FF4714; font-style: normal; }
+    .bot-sub { font-size: 1rem; color: #555; margin-bottom: 52px; line-height: 1.75; }
+    .bot-btn { display: inline-flex; align-items: center; gap: 10px; background: #FF4714; color: #fff; text-decoration: none; padding: 20px 52px; border-radius: 99px; font-size: 1.2rem; font-weight: 900; letter-spacing: -.01em; box-shadow: 0 0 0 6px rgba(255,71,20,.15), 0 8px 32px rgba(255,71,20,.5); animation: pcta-blink 1.5s ease-in-out infinite; transition: transform .3s; white-space: nowrap; }
+    .bot-btn:hover { animation: none; transform: translateY(-3px) scale(1.04); box-shadow: 0 0 0 10px rgba(255,71,20,.12), 0 16px 44px rgba(255,71,20,.6); }
+
+    @media (max-width: 480px) {
+      .monologue { font-size: 1.35rem; }
+      .fact-title { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER (고정)
+══════════════════════════════════════════ -->
+<header class="top-header">
+  <div class="header-container">
+    <div class="header-logo">와<span>카</span>데미</div>
+    <button class="header-cta-btn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+      학원 정보 보기 &rarr;
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+     유동: 이매동, 고등 수학학원
+══════════════════════════════════════════ -->
+<section class="hero-section">
+  <!-- 고정 -->
+  <p class="hero-top-label">와카데미 학원 정보 안내</p>
+
+  <!-- 유동: [지역키워드 + 메인키워드] -->
+  <h1><em>이매동 고등 수학학원,</em><br>지금 찾고 계시나요?</h1>
+
+  <!-- 고정 -->
+  <p class="hero-sub">공공데이터(NEIS) 기반 학원 정보를 안내합니다.</p>
+
+  <a href="#s1" class="hero-cta-btn">학원 정보 자세히 보기 &darr;</a>
+
+  <!-- 유동: 지역키워드 / 고정: 수강료 공개, 커리큘럼 확인 -->
+  <div class="hero-badge-row">
+    <span class="hero-badge"><strong>이매동</strong> 지역</span>
+    <span class="hero-badge"><strong>수강료</strong> 공개</span>
+    <span class="hero-badge"><strong>커리큘럼</strong> 확인</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PAIN (모노로그 고정 / fact box 유동)
+══════════════════════════════════════════ -->
+<section class="pain-section">
+  <div class="pain-wrapper">
+    <div class="connect-line"></div>
+
+    <!-- 고정 -->
+    <p class="monologue">진도가 빨라서<br>못 따라가요...</p>
+    <p class="monologue">방법을 몰라서<br>학원 가도 안늘어요...</p>
+    <p class="monologue">공부 의지가 없어서<br>걱정이에요...</p>
+
+    <!-- 유동: [지역키워드 + 메인키워드] -->
+    <div class="fact-box">
+      <p class="fact-title">
+        이매동 고등 수학학원<br>
+        <span class="simple-underline">제대로 고르는 법</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROMISE (고정)
+     H2 유동: 고등 수학학원
+══════════════════════════════════════════ -->
+<section class="promise-section">
+  <!-- 유동: 메인키워드 -->
+  <h2 class="promise-title">고등 수학학원<br><span>이 세 가지는 확인하세요</span></h2>
+
+  <!-- 고정 3항목 -->
+  <div class="promise-list">
+    <div class="promise-item">
+      <span class="promise-label">일대일 지도</span>
+      <span class="promise-line"></span>
+      <span class="promise-val">관리가 잘 되는</span>
+    </div>
+    <div class="promise-item">
+      <span class="promise-label">맞춤형 진도</span>
+      <span class="promise-line"></span>
+      <span class="promise-val">이해가 될 때까지</span>
+    </div>
+    <div class="promise-item">
+      <span class="promise-label">공부법 관리</span>
+      <span class="promise-line"></span>
+      <span class="promise-val">배움 이후 적용</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BRAND STATEMENT (고정)
+══════════════════════════════════════════ -->
+<section class="brand-section">
+
+  <!-- 학원명 헤더 -->
+  <div class="brand-header">
+    <p class="brand-eyebrow">WAWA COACHING ACADEMY</p>
+    <p class="brand-name"><span class="wawa">와와</span>학습코칭학원</p>
+    <p class="brand-name-sub">학습 코칭 전문 &middot; <b>1:1 맞춤 관리</b></p>
+  </div>
+
+  <!-- 1:1 내부 사진 -->
+  <div class="brand-img-wrap">
+    <img src="../와와 내부사진.png" alt="와와학습코칭학원 내부 사진">
+  </div>
+
+  <!-- 여기는 다릅니다 -->
+  <div class="brand-statement">
+    <p class="brand-title"><em>여기는</em> 다릅니다.</p>
+    <p class="brand-sub">관리가 다르고, 방법이 다릅니다.</p>
+  </div>
+
+  <!-- 3가지 특징 -->
+  <div class="brand-features">
+    <div class="brand-feat">
+      <p class="bf-num">01</p>
+      <div class="bf-bar"></div>
+      <p class="bf-text">모든 걸 일대일로<em>맞춥니다</em></p>
+    </div>
+    <div class="brand-feat">
+      <p class="bf-num">02</p>
+      <div class="bf-bar"></div>
+      <p class="bf-text">학교 지필부터 코칭까지<em>책임집니다</em></p>
+    </div>
+    <div class="brand-feat">
+      <p class="bf-num">03</p>
+      <div class="bf-bar"></div>
+      <p class="bf-text">공부습관까지<em>관리합니다</em></p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     RESULT SLIDER (고정)
+══════════════════════════════════════════ -->
+<section class="result-section">
+  <div class="result-head">
+    <p class="result-eyebrow">STUDENT RESULTS</p>
+    <p class="result-title">이미 많은 학생들이<br><em>성적 상승</em>을 경험했습니다</p>
+  </div>
+  <div class="result-track" id="resultTrack">
+    <div class="result-slide"><img src="../images/성적향상/수학성적상승.png" alt="수학 성적 상승 사례"></div>
+    <div class="result-slide"><img src="../images/성적향상/영어100점.png" alt="영어 100점 사례"></div>
+    <div class="result-slide"><img src="../images/성적향상/국어1등급.png" alt="국어 1등급 사례"></div>
+    <div class="result-slide"><img src="../images/성적향상/전과목%20평균%2099점.png" alt="전과목 평균 99점 사례"></div>
+    <div class="result-slide"><img src="../images/성적향상/평균20점up.png" alt="평균 20점 상승 사례"></div>
+    <div class="result-slide"><img src="../images/성적향상/2학기올a.png" alt="2학기 올A 사례"></div>
+  </div>
+  <div class="result-dots" id="resultDots"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1 - 고르는 방법
+     유동: 이매동 고등 수학학원 고르는 방법, 이매동 고등 수학학원을 선택할 때는 단순한 성적 향상보다는 학생의 사고력과 문제 해결 능력을 얼마나 계발해 주는지가 핵심입니다. 특히 고등 수학은 일차함수를 비롯한 기초 개념의 해석 능력이 중요하며, 단순 암기가 아닌 추론력을 기를 수 있는 수업 구조를 갖춘 곳이 유리합니다. 수업 외에도 학생의 진도 상황을 꾸준히 점검하고 피드백을 주는 시스템이 마련되어 있는지도 확인해야 합니다. 강사진의 전문성뿐 아니라 학생 개개인의 학습 습관과 성향을 분석해 맞춤형 피드백을 주는지 여부도 중요한 판단 기준이 됩니다. 이매동 고등 수학학원은 이러한 요소들을 종합적으로 고려해 장기적인 성장 가능성을 높이는 방향으로 운영되고 있습니다.
+══════════════════════════════════════════ -->
+<section class="sec sec-light" id="s1">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>이매동 고등 수학학원 고르는 방법</h2>
+    <div class="text-card-light">
+      <p class="body-text">이매동 고등 수학학원을 선택할 때는 단순한 성적 향상보다는 학생의 사고력과 문제 해결 능력을 얼마나 계발해 주는지가 핵심입니다. 특히 고등 수학은 일차함수를 비롯한 기초 개념의 해석 능력이 중요하며, 단순 암기가 아닌 추론력을 기를 수 있는 수업 구조를 갖춘 곳이 유리합니다. 수업 외에도 학생의 진도 상황을 꾸준히 점검하고 피드백을 주는 시스템이 마련되어 있는지도 확인해야 합니다. 강사진의 전문성뿐 아니라 학생 개개인의 학습 습관과 성향을 분석해 맞춤형 피드백을 주는지 여부도 중요한 판단 기준이 됩니다. 이매동 고등 수학학원은 이러한 요소들을 종합적으로 고려해 장기적인 성장 가능성을 높이는 방향으로 운영되고 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2 - 학년별 특징
+     유동: 성남시 이매동 학년별 특징, 성남시 이매동은 분당구 중심에 위치한 주거 밀집 지역으로, 교육에 대한 관심이 높은 가정이 많아 자녀의 학습 관리에 특히 신경을 씁니다. 고1은 과목 난이도 급상승에 적응해야 하는 시기로, 하루 공부 시작 전 오늘의 목표와 범위를 정리하는 습관이 중요합니다. 고2는 내신과 모의고사 준비가 본격화되며, 무거운 주제를 가볍게 푸는 반전형 학습법이 효과적입니다. 고3은 입시를 앞두고 심화 학습과 시간 관리 능력이 요구되며, 자기주도 학습 체계를 구축한 학생들이 유리합니다. 이매동 고등 수학학원은 각 학년별 특성에 맞춘 커리큘럼 설계로 학생들이 단계별로 탄탄한 기반을 다질 수 있도록 지원합니다.
+           {{section2_list_0~4}}
+══════════════════════════════════════════ -->
+<section class="sec sec-mid">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>성남시 이매동 학년별 특징</h2>
+    <p class="body-text">성남시 이매동은 분당구 중심에 위치한 주거 밀집 지역으로, 교육에 대한 관심이 높은 가정이 많아 자녀의 학습 관리에 특히 신경을 씁니다. 고1은 과목 난이도 급상승에 적응해야 하는 시기로, 하루 공부 시작 전 오늘의 목표와 범위를 정리하는 습관이 중요합니다. 고2는 내신과 모의고사 준비가 본격화되며, 무거운 주제를 가볍게 푸는 반전형 학습법이 효과적입니다. 고3은 입시를 앞두고 심화 학습과 시간 관리 능력이 요구되며, 자기주도 학습 체계를 구축한 학생들이 유리합니다. 이매동 고등 수학학원은 각 학년별 특성에 맞춘 커리큘럼 설계로 학생들이 단계별로 탄탄한 기반을 다질 수 있도록 지원합니다.</p>
+
+    <!-- list[0~4]: 5개 박스 -->
+    <div class="feature5-grid">
+      <div class="feature5-card"><span class="feature5-num">01</span><span class="feature5-text">고1은 기초 개념 정립이 우선</span></div>
+      <div class="feature5-card"><span class="feature5-num">02</span><span class="feature5-text">고2는 응용력 향상이 핵심</span></div>
+      <div class="feature5-card"><span class="feature5-num">03</span><span class="feature5-text">고3은 시간 관리와 전략 수립이 중요</span></div>
+      <div class="feature5-card"><span class="feature5-num">04</span><span class="feature5-text">전 학년 공통으로 자기주도 학습 습관 필요</span></div>
+      <div class="feature5-card"><span class="feature5-num">05</span><span class="feature5-text">학년별 진도에 맞는 오답 분석 루틴 필요</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3 - 학원 정보
+     유동: 배다안국어교습소, 배다안국어교습소는 고등 국어의 난이도에 부담을 느끼는 학생들을 위해 이해한 내용을 리스트화하는 방식을 수업에 적극 활용합니다. 이 방식은 복잡한 독서 지문이나 비문학 텍스트의 핵심을 빠르게 정리하는 데 효과적이며, 장기적으로 서술형 문제 해결력 향상에도 큰 도움이 됩니다. 특히, 고등국어I와 고등국어J 과정은 각각 기초부터 심화까지 체계적으로 구성되어 있어, 성적 수준에 따라 맞춤 수강이 가능합니다. 수강료는 고등국어I 기준 480,000원, 고등국어J는 490,000원이며, 학생들의 집중력을 고려해 소규모 정원제로 운영됩니다. 위치는 경기도 성남시 분당구 양현로94번길 11, 402호(이매동, 청학빌딩)로, 이매동 고등 수학학원 인근에 있어 복합 수업을 희망하는 학생들에게도 접근성이 뛰어납니다. 이곳은 단순 지식 전달을 넘어, 학생 스스로 이해력을 보완하는 루틴을 설계하고 자기주도 학습을 자연스럽게 이끌어내는 데 강점을 지닙니다.
+           {{section3_list_0~3}}
+           {{section3_table_N_항목}}, {{section3_table_N_내용}}
+══════════════════════════════════════════ -->
+<section class="sec sec-light">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>배다안국어교습소</h2>
+    <p class="body-text">배다안국어교습소는 고등 국어의 난이도에 부담을 느끼는 학생들을 위해 이해한 내용을 리스트화하는 방식을 수업에 적극 활용합니다. 이 방식은 복잡한 독서 지문이나 비문학 텍스트의 핵심을 빠르게 정리하는 데 효과적이며, 장기적으로 서술형 문제 해결력 향상에도 큰 도움이 됩니다. 특히, 고등국어I와 고등국어J 과정은 각각 기초부터 심화까지 체계적으로 구성되어 있어, 성적 수준에 따라 맞춤 수강이 가능합니다. 수강료는 고등국어I 기준 480,000원, 고등국어J는 490,000원이며, 학생들의 집중력을 고려해 소규모 정원제로 운영됩니다. 위치는 경기도 성남시 분당구 양현로94번길 11, 402호(이매동, 청학빌딩)로, 이매동 고등 수학학원 인근에 있어 복합 수업을 희망하는 학생들에게도 접근성이 뛰어납니다. 이곳은 단순 지식 전달을 넘어, 학생 스스로 이해력을 보완하는 루틴을 설계하고 자기주도 학습을 자연스럽게 이끌어내는 데 강점을 지닙니다.</p>
+
+    <!-- 피처 카드: list[0~3] -->
+    <div class="feature-grid" style="margin-top:28px">
+      <div class="feature-card-light">
+        <div class="feature-num">POINT 01</div>
+        <div class="feature-text">이해 내용을 리스트화하여 체계화</div>
+      </div>
+      <div class="feature-card-light">
+        <div class="feature-num">POINT 02</div>
+        <div class="feature-text">소규모 정원제로 집중 학습 가능</div>
+      </div>
+      <div class="feature-card-light">
+        <div class="feature-num">POINT 03</div>
+        <div class="feature-text">기초부터 심화까지 단계별 커리큘럼</div>
+      </div>
+      <div class="feature-card-light">
+        <div class="feature-num">POINT 04</div>
+        <div class="feature-text">자기주도 학습 루틴 설계 지원</div>
+      </div>
+    </div>
+
+    <!-- 학원 정보 테이블: table[0~2] -->
+    <div class="table-wrap">
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <td class="td-label">학원명</td>
+            <td class="td-val">배다안국어교습소</td>
+          </tr>
+          <tr>
+            <td class="td-label">수강료</td>
+            <td class="td-val">고등국어I 480,000원 | 고등국어J 490,000원</td>
+          </tr>
+          <tr>
+            <td class="td-label">주소</td>
+            <td class="td-val">경기도 성남시 분당구 양현로94번길 11 , 402호 (이매동, 청학빌딩)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 4 - 커리큘럼
+     유동: 해당 학원 커리큘럼, 이매동 고등 수학학원의 커리큘럼은 학교 시험일정에 맞춰 진도 압축 복습 수업을 운영해, 시험 직전까지도 체계적인 마무리 학습이 가능하도록 구성되어 있습니다. 수업 전 학생들은 오늘의 학습 범위를 정리하는 미션을 수행하며, 학습 목표를 명확히 설정합니다. 이는 단순히 진도를 나가는 것을 넘어, 학생 스스로 학습 계획을 세우는 능력을 키우는 데 기여합니다. 매주 오답 정리와 개념 점검을 병행하며, 유사 문제 재출제를 통해 개념 정착을 도모합니다. 특히 주기적인 레벨 테스트를 통해 진도 조절이 이뤄지며, 난이도 조절이 가능한 유연한 수업 운영이 특징입니다.
+           {{section4_list_0~3}}
+══════════════════════════════════════════ -->
+<section class="sec sec-dark">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>해당 학원 커리큘럼</h2>
+    <div class="text-card">
+      <p class="body-text">이매동 고등 수학학원의 커리큘럼은 학교 시험일정에 맞춰 진도 압축 복습 수업을 운영해, 시험 직전까지도 체계적인 마무리 학습이 가능하도록 구성되어 있습니다. 수업 전 학생들은 오늘의 학습 범위를 정리하는 미션을 수행하며, 학습 목표를 명확히 설정합니다. 이는 단순히 진도를 나가는 것을 넘어, 학생 스스로 학습 계획을 세우는 능력을 키우는 데 기여합니다. 매주 오답 정리와 개념 점검을 병행하며, 유사 문제 재출제를 통해 개념 정착을 도모합니다. 특히 주기적인 레벨 테스트를 통해 진도 조절이 이뤄지며, 난이도 조절이 가능한 유연한 수업 운영이 특징입니다.</p>
+    </div>
+    <ul class="check-list">
+      <li class="check-item">
+        <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>시험 일정 기반 진도 압축 복습</span>
+      </li>
+      <li class="check-item">
+        <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>매일 학습 범위 사전 정리</span>
+      </li>
+      <li class="check-item">
+        <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>주간 오답 정리 및 재출제</span>
+      </li>
+      <li class="check-item">
+        <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>레벨 테스트를 통한 진도 조절</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 5 - 실수 유형
+     유동: 성남시 이매동 인근 학생의 실수 유형, 이매동 고등 수학학원 주변 학생들은 교육 환경에 대한 기대가 높지만, 학습 방식 선택이나 관리 과정에서 실수를 반복하는 경우가 많습니다. 논제 분석 훈련을 제대로 도입하지 않으면 서술형 문제에서 첫 만점을 받기 어렵고, 성적 향상이 더딘 경우가 생깁니다. 또한, 자신이 어떤 방식으로 학습해야 효과적인지 파악하지 못한 채 무작정 많은 양을 소화하려는 경향이 있어 피로 누적이 발생합니다. 이에 따라 학습 환경을 스스로 점검하고 개선할 수 있도록 지원하는 시스템이 필수적입니다. 학원 선택 단계부터 학생의 학습 성향을 분석하고, 등록 후에는 꾸준한 피드백과 목표 점검을 통해 실수를 예방할 수 있습니다.
+           {{section5_table_N_구분}}, {{section5_table_N_대상}}, {{section5_table_N_내용}}
+══════════════════════════════════════════ -->
+<section class="sec sec-light">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>성남시 이매동 인근 학생의 실수 유형</h2>
+    <p class="body-text">이매동 고등 수학학원 주변 학생들은 교육 환경에 대한 기대가 높지만, 학습 방식 선택이나 관리 과정에서 실수를 반복하는 경우가 많습니다. 논제 분석 훈련을 제대로 도입하지 않으면 서술형 문제에서 첫 만점을 받기 어렵고, 성적 향상이 더딘 경우가 생깁니다. 또한, 자신이 어떤 방식으로 학습해야 효과적인지 파악하지 못한 채 무작정 많은 양을 소화하려는 경향이 있어 피로 누적이 발생합니다. 이에 따라 학습 환경을 스스로 점검하고 개선할 수 있도록 지원하는 시스템이 필수적입니다. 학원 선택 단계부터 학생의 학습 성향을 분석하고, 등록 후에는 꾸준한 피드백과 목표 점검을 통해 실수를 예방할 수 있습니다.</p>
+    <div class="mistake-list">
+      <div class="mistake-card">
+        <div class="mc-top">
+          <span class="mc-tag">실수 유형1 (학원 선택 단계)</span>
+          <span class="mc-target">성적만 보고 학원을 선택하는 학생</span>
+        </div>
+        <p class="mc-desc">단기 성적 상승에 집중하다 보니 장기적인 기초 다지기와 사고력 훈련이 소홀해짐. 본인의 학습 스타일과 부합하는지 분석 후 결정해야 함</p>
+      </div>
+      <div class="mistake-card">
+        <div class="mc-top">
+          <span class="mc-tag">실수 유형2 (등록 후 단계)</span>
+          <span class="mc-target">수업만 듣고 복습을 소홀히 하는 학생</span>
+        </div>
+        <p class="mc-desc">수업 참여는 충실히 하지만 복습 루틴이 부족해 개념 정착이 되지 않음. 매일 30분 복습 계획 수립이 필요함</p>
+      </div>
+      <div class="mistake-card">
+        <div class="mc-top">
+          <span class="mc-tag">실수 유형3 (학습 관리 단계)</span>
+          <span class="mc-target">자기 진도를 스스로 조절하지 못하는 학생</span>
+        </div>
+        <p class="mc-desc">주어진 진도에만 매몰되어 자신의 취약점을 보완하지 못함. 주간 진단 테스트를 기반으로 유연한 진도 조절이 필요함</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 6 - 학습 전략 (Before/After)
+     유동: 이매동 고등 수학학원 학습 전략, 학생 맞춤 교육은 고등 수학 학습에서 성장을 이끄는 핵심 요소입니다. 이매동 고등 수학학원은 개별 진도표를 기반으로 한 탄력적 운영 방식을 도입해, 각 학생의 이해 속도와 복습 필요도를 고려한 수업을 제공합니다. 성장은 단지 공부량을 늘리는 것이 아니라 방향을 잡는 순간부터 시작된다는 점을 강조하며, 주요 오답 수정 미션을 통해 반복 실수를 줄이는 데 초점을 맞춥니다. 또한 심화 개념은 선택형으로 제공돼 학생의 부담을 조절하고, 자신감 있는 학습이 가능하도록 유도합니다. 이는 단기적인 성적 향상뿐 아니라 장기적인 문제 해결 능력 향상에도 기여합니다.
+           {{section6_list_0~3}} → AFTER 항목
+     고정: BEFORE 항목 4개
+══════════════════════════════════════════ -->
+<section class="sec sec-mid">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>이매동 고등 수학학원 학습 전략</h2>
+    <p class="body-text">학생 맞춤 교육은 고등 수학 학습에서 성장을 이끄는 핵심 요소입니다. 이매동 고등 수학학원은 개별 진도표를 기반으로 한 탄력적 운영 방식을 도입해, 각 학생의 이해 속도와 복습 필요도를 고려한 수업을 제공합니다. 성장은 단지 공부량을 늘리는 것이 아니라 방향을 잡는 순간부터 시작된다는 점을 강조하며, 주요 오답 수정 미션을 통해 반복 실수를 줄이는 데 초점을 맞춥니다. 또한 심화 개념은 선택형으로 제공돼 학생의 부담을 조절하고, 자신감 있는 학습이 가능하도록 유도합니다. 이는 단기적인 성적 향상뿐 아니라 장기적인 문제 해결 능력 향상에도 기여합니다.</p>
+
+    <div class="ba-wrap" style="margin-top:32px">
+      <!-- BEFORE: 고정 -->
+      <div class="ba-card before-card">
+        <div class="ba-card-header">
+          <span class="ba-badge">BEFORE</span>
+          <h3 class="ba-card-h3">일반적인 학습 방식</h3>
+        </div>
+        <ul class="ba-list">
+          <li class="ba-item"><div class="ba-icon before-icon">&#x2715;</div><span>학습 계획 없이 주어진 진도만 따라감</span></li>
+          <li class="ba-item"><div class="ba-icon before-icon">&#x2715;</div><span>복습 없이 다음 단원으로 넘어감</span></li>
+          <li class="ba-item"><div class="ba-icon before-icon">&#x2715;</div><span>시험 직전 벼락치기로 단기 암기</span></li>
+          <li class="ba-item"><div class="ba-icon before-icon">&#x2715;</div><span>취약점을 파악하지 못한 채 반복 실수</span></li>
+        </ul>
+      </div>
+
+      <div class="ba-divider"><span class="ba-vs-badge">&#x2193;</span></div>
+
+      <!-- AFTER: 유동 list[0~3] -->
+      <div class="ba-card after-card">
+        <div class="ba-card-header">
+          <span class="ba-badge">AFTER</span>
+          <h3 class="ba-card-h3">이매동 고등 수학학원 학습 전략 적용 후</h3>
+        </div>
+        <ul class="ba-list">
+          <li class="ba-item"><div class="ba-icon after-icon">&#x2713;</div><span>개별 진도표 기반 탄력적 수업 운영</span></li>
+          <li class="ba-item"><div class="ba-icon after-icon">&#x2713;</div><span>매주 오답 미션으로 반복 실수 완전 차단</span></li>
+          <li class="ba-item"><div class="ba-icon after-icon">&#x2713;</div><span>시험 일정에 맞춘 단계별 집중 마무리</span></li>
+          <li class="ba-item"><div class="ba-icon after-icon">&#x2713;</div><span>심화 개념 선택형 제공으로 부담 없는 성장</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 7 - 추천 학생
+     유동: 추천하는 학생, 이매동 고등 수학학원은 고등학교 3학년, 특히 복습은 성실하게 하지만 응용 문제에서 답을 내지 못하는 딸과 같은 학생들에게 적합합니다. 같은 실수를 반복하며 이를 제어하지 못하는 경우, 체계적인 오답 분석과 피드백 시스템을 통해 습관을 개선할 수 있습니다. 또한 일정 수준 이상의 성적을 유지하고 있지만, 다음 단계로의 도약이 어려운 학생들에게도 유리합니다. 자기주도 학습이 아직 익숙하지 않지만, 점차 책임감 있는 학습 태도를 기르고자 하는 학생들에게도 추천됩니다. 정해진 시간 안에서 효율적인 학습을 원하는 학생이라면 이곳의 구조화된 프로그램이 큰 도움이 될 수 있습니다.
+           {{section7_list_0~3}}
+══════════════════════════════════════════ -->
+<section class="sec sec-dark">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h2>추천하는 학생</h2>
+    <p class="body-text">이매동 고등 수학학원은 고등학교 3학년, 특히 복습은 성실하게 하지만 응용 문제에서 답을 내지 못하는 딸과 같은 학생들에게 적합합니다. 같은 실수를 반복하며 이를 제어하지 못하는 경우, 체계적인 오답 분석과 피드백 시스템을 통해 습관을 개선할 수 있습니다. 또한 일정 수준 이상의 성적을 유지하고 있지만, 다음 단계로의 도약이 어려운 학생들에게도 유리합니다. 자기주도 학습이 아직 익숙하지 않지만, 점차 책임감 있는 학습 태도를 기르고자 하는 학생들에게도 추천됩니다. 정해진 시간 안에서 효율적인 학습을 원하는 학생이라면 이곳의 구조화된 프로그램이 큰 도움이 될 수 있습니다.</p>
+    <div class="feature-grid" style="margin-top:28px">
+      <div class="feature-card">
+        <div class="feature-num">추천 유형 01</div>
+        <div class="feature-text">추천 유형1 (학습 성향 기준)</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">추천 유형 02</div>
+        <div class="feature-text">추천 유형2 (성적 수준 기준)</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">추천 유형 03</div>
+        <div class="feature-text">추천 유형3 (목표 기준)</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">추천 유형 04</div>
+        <div class="feature-text">추천 유형4 (생활 패턴 기준)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 8 - FAQ
+     H2 패턴: [지역키워드 + 메인키워드] 자주 묻는 질문 (고정 패턴)
+     유동: {{section8_faq_N_q}}, {{section8_faq_N_a}}
+══════════════════════════════════════════ -->
+<section class="sec sec-light" id="cta">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <!-- 고정 패턴: 지역+메인키워드 조합 -->
+    <h2>이매동 고등 수학학원 자주 묻는 질문</h2>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>질문1 학습 마무리를 할 시간이 없음</span>
+          <span class="faq-arrow">&#x25BE;</span>
+        </button>
+        <div class="faq-a"><p>매일 학습 후 10분 동안 핵심 개념 요약과 오늘의 오답 3문항을 정리하는 루틴을 권장합니다. 짧은 시간이지만 반복 학습을 통해 장기 기억으로 전환되며, 주말 총정리 시 효과가 배가됩니다. 시간 부족은 양보다 질적인 마무리 습관으로 해결할 수 있습니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>질문2 입시 결과만이 아닌 과정 중심의 교육 철학 제시  시험 전 단원 정리, 핵심 요약, 출제 경향 분석 병행  개념 이해와 시험 대비 효과를 동시에 확보</span>
+          <span class="faq-arrow">&#x25BE;</span>
+        </button>
+        <div class="faq-a"><p>시험 전 1주일간은 단원별 핵심 요약표를 활용해 전체 흐름을 재확인하고, 최근 3개년 기출 경향을 분석해 예상 문제 유형을 중심으로 대비합니다. 이 방식은 개념 이해와 실전 적용력을 동시에 끌어올리는 데 효과적입니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>질문3 복습루틴 계획표별도운영</span>
+          <span class="faq-arrow">&#x25BE;</span>
+        </button>
+        <div class="faq-a"><p>학생별 복습 루틴은 개별 진도표와 연동되어 있으며, 약점 진단 결과를 반영해 주간 단위로 조정됩니다. 매주 월요일에 복습 계획표를 배부하고, 금요일 피드백을 통해 다음 주 계획을 수정합니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>질문4 만촌동 학원 밀집지대 중심 근처</span>
+          <span class="faq-arrow">&#x25BE;</span>
+        </button>
+        <div class="faq-a"><p>이매동은 만촌동과 인접해 있어 학원 간 접근성이 뛰어나며, 다양한 과목의 복합 수업이 가능합니다. 특히 이매동 고등 수학학원은 주요 대안 학습처로 각광받고 있으며, 통학 시간을 최소화하면서도 고품질 교육을 받을 수 있는 장점이 있습니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     REVIEWS (고정 구조 / 유동: {{rv_0~5}})
+══════════════════════════════════════════ -->
+<section class="rv-section">
+  <div class="sec-inner" style="max-width:960px;margin:0 auto">
+    <div class="sec-divider"></div>
+    <!-- 고정 -->
+    <h2 style="font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:900;color:#fff;letter-spacing:-.03em;margin-bottom:8px">수강생 학부모 후기</h2>
+    <p style="font-size:.9rem;color:#555;margin-bottom:0">이매동 고등 수학학원 실제 수강 후기입니다</p>
+  </div>
+  <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
+    <div class="rv-card">
+      <p class="rv-text">학원 광고에서 눈길을 끈 포인트가 실제 수업에서도 빛났어요</p>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rv-name">학부모 후기</span>
+      </div>
+    </div>
+    <div class="rv-card">
+      <p class="rv-text">진학 상담이 학부모에게 긍정적 신뢰를 심어 줬어요</p>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rv-name">학부모 후기</span>
+      </div>
+    </div>
+    <div class="rv-card">
+      <p class="rv-text">첫 상담에서 메모를 성실히 해 주셔서 믿음이 생겼어요</p>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rv-name">학부모 후기</span>
+      </div>
+    </div>
+    <div class="rv-card">
+      <p class="rv-text">학생 주도 학습을 이끄는 지도 방식이 효과적이에요</p>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rv-name">학부모 후기</span>
+      </div>
+    </div>
+    <div class="rv-card">
+      <p class="rv-text">꾸준한 과정이 준 긍정적인 울림이 아이에게 전해요</p>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rv-name">학부모 후기</span>
+      </div>
+    </div>
+    <div class="rv-card">
+      <p class="rv-text">대화에서 확인한 성실한 태도가 아이에게 전해졌어요</p>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rv-name">학부모 후기</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BOTTOM CTA (고정)
+══════════════════════════════════════════ -->
+<section class="bottom-cta-section">
+  <h2><em>이매동 고등 수학학원</em><br>정보가 도움이 되셨나요?</h2>
+  <p class="bot-sub">더 많은 지역 학원 정보는 와카데미에서 확인하세요.</p>
+  <a href="https://wacademy.kr" class="bot-btn" target="_blank" rel="noopener">
+    와카데미에서 더 보기 &rarr;
+  </a>
+</section>
+
+<script>
+(function(){
+  var track = document.getElementById('resultTrack');
+  var dotsWrap = document.getElementById('resultDots');
+  if (!track || !dotsWrap) return;
+
+  var slides = Array.from(track.querySelectorAll('.result-slide'));
+  var cur = 0;
+
+  // 도트 생성
+  slides.forEach(function(_, i) {
+    var d = document.createElement('button');
+    d.className = 'result-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'slide ' + (i+1));
+    d.addEventListener('click', function() { goTo(i); });
+    dotsWrap.appendChild(d);
+  });
+
+  var dots = Array.from(dotsWrap.querySelectorAll('.result-dot'));
+
+  function goTo(idx) {
+    cur = (idx + slides.length) % slides.length;
+    var padding = 24;
+    track.scrollTo({ left: slides[cur].offsetLeft - padding, behavior: 'smooth' });
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+  }
+
+  // 스크롤로 현재 슬라이드 감지
+  var scrollTimer;
+  track.addEventListener('scroll', function() {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+      var scrollLeft = track.scrollLeft;
+      var closest = 0;
+      slides.forEach(function(s, i) {
+        if (Math.abs(s.offsetLeft - 24 - scrollLeft) < Math.abs(slides[closest].offsetLeft - 24 - scrollLeft)) closest = i;
+      });
+      cur = closest;
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+    }, 80);
+  });
+
+  // 자동 슬라이드 3초
+  setInterval(function() { goTo(cur + 1); }, 3000);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+========================================
+와카데미 틀.HTML 설계 메모
+========================================
+목적: 틀.HTML + 치환값 매핑 → py 구동으로 1.9만 페이지 일괄 생성
+
+----------------------------------------
+페이지 순서 (최종)
+----------------------------------------
+1. HEADER          (고정)
+2. HERO            (유동: {{지역키워드}}, {{메인키워드}})
+3. PAIN            (유동 일부: fact box에 {{지역키워드}} {{메인키워드}})
+4. PROMISE         (유동: {{메인키워드}})
+5. SECTION 1~8     (유동: JSON result.html 전체)
+6. REVIEWS         (유동: 리뷰txt 6개)
+7. BOTTOM CTA      (고정)
+
+----------------------------------------
+고정값 (모든 페이지 동일)
+----------------------------------------
+- Header 로고: 와카데미
+- Hero top label: 와카데미 학원 정보 안내
+- Hero sub: 공공데이터(NEIS) 기반 학원 정보를 안내합니다.
+- Hero badges: {{지역키워드}} / 수강료 공개 / 커리큘럼 확인  (3개)
+- Promise 3항목:
+    일대일 지도   ──  관리가 잘 되는
+    맞춤형 진도   ──  이해가 될 때까지
+    공부법 관리   ──  배움 이후 적용
+- Pain 모노로그 3개 (고정):
+    1. 진도가 빨라서 / 못 따라가요...
+    2. 방법을 몰라서 / 학원 가도 안늘어요...
+    3. 공부 의지가 없어서 / 걱정이에요...
+- Reviews H2: 수강생 학부모 후기
+- Bottom CTA 버튼/문구 (고정)
+
+----------------------------------------
+유동값 (치환값 목록)
+----------------------------------------
+
+[키워드 - 폴더 경로에서 추출]
+{{지역키워드}}      예: 이매동
+{{메인키워드}}      예: 고등 수학학원
+
+[메타/타이틀]
+{{meta}}            result.html > meta 필드 (meta description 겸용)
+
+[Hero]
+H1: {{지역키워드}} {{메인키워드}}, \n지금 찾고 계시나요?
+Promise H2: {{메인키워드}}\n이 세 가지는 확인하세요
+Pain fact: {{지역키워드}} {{메인키워드}}\n제대로 고르는 법
+
+[Section 1 - 고르는 방법]
+{{section1_h2}}
+{{section1_p}}
+
+[Section 2 - 학년별 특징]
+{{section2_h2}}
+{{section2_p}}
+{{section2_list_0}} ~ {{section2_list_4}}  (5개)
+  → list[0~2]: 학년 카드 3개 설명 (고1/고2/고3)
+  → list[3~4]: 하단 체크리스트
+
+[Section 3 - 학원 정보]
+{{section3_h2}}
+{{section3_p}}
+{{section3_list_0}} ~ {{section3_list_3}}  (4개, feature 카드)
+{{section3_table_0_항목}} {{section3_table_0_내용}}   (학원명)
+{{section3_table_1_항목}} {{section3_table_1_내용}}   (수강료)
+{{section3_table_2_항목}} {{section3_table_2_내용}}   (주소)
+
+[Section 4 - 커리큘럼]
+{{section4_h2}}
+{{section4_p}}
+{{section4_list_0}} ~ {{section4_list_3}}  (4개, 체크리스트)
+
+[Section 5 - 실수 유형]
+{{section5_h2}}
+{{section5_p}}
+{{section5_table_0_구분}} {{section5_table_0_대상}} {{section5_table_0_내용}}
+{{section5_table_1_구분}} {{section5_table_1_대상}} {{section5_table_1_내용}}
+{{section5_table_2_구분}} {{section5_table_2_대상}} {{section5_table_2_내용}}
+
+[Section 6 - 학습 전략 Before/After]
+{{section6_h2}}
+{{section6_p}}
+{{section6_list_0}} ~ {{section6_list_3}}  (4개, AFTER 항목)
+※ BEFORE 항목 4개는 고정 (부정적 일반 패턴)
+
+[Section 7 - 추천 학생]
+{{section7_h2}}
+{{section7_p}}
+{{section7_list_0}} ~ {{section7_list_3}}  (4개, feature 카드)
+
+[Section 8 - FAQ]
+H2는 패턴 고정: {{지역키워드}} {{메인키워드}} 자주 묻는 질문
+{{section8_faq_0_q}} {{section8_faq_0_a}}
+{{section8_faq_1_q}} {{section8_faq_1_a}}
+{{section8_faq_2_q}} {{section8_faq_2_a}}
+{{section8_faq_3_q}} {{section8_faq_3_a}}
+
+[Reviews]
+{{rv_0}} ~ {{rv_5}}  (6개)
+
+----------------------------------------
+치환값 소스
+----------------------------------------
+- {{지역키워드}}: 폴더명 파싱 (예: 아카데미/경기도/성남시/이매동/고등 수학학원 → 이매동)
+- {{메인키워드}}: 폴더명 파싱 (예: 고등 수학학원)
+- {{meta}} 및 section1~8 전체: result.html (JSON)
+- {{rv_0~5}}: 리뷰 txt 파일에서 random.sample 6개
+
+----------------------------------------
+파일 경로 규칙
+----------------------------------------
+result.html: 아카데미/{시도}/{시군구}/{읍면동}/{메인키워드}/result.html
+리뷰 txt:    아카데미/리뷰/{N}/{M}.txt
+출력 html:   아카데미/{시도}/{시군구}/{읍면동}/{메인키워드}/index.html
+
+========================================
