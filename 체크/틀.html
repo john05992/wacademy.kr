@@ -181,7 +181,7 @@
     .planner-section { background: #fff; padding: 88px 24px 96px; }
     .planner-inner { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0; }
     .planner-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
-    .planner-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: #111; letter-spacing: -.06em; line-height: 1.2; text-align: center; word-break: keep-all; margin-bottom: 10px; }
+    .planner-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: #111; letter-spacing: -.06em; line-height: 1.2; text-align: center; word-break: keep-all; margin-bottom: 36px; }
     .planner-title em { color: #FF4714; font-style: normal; }
     .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-top: 32px; line-height: 1.7; word-break: keep-all; }
     .planner-img-wrap { width: 100%; aspect-ratio: 1100 / 1300; border-radius: 24px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,.12); border: 1px solid #f0f0f0; }
@@ -260,19 +260,16 @@
         .comp-item.left { font-size: .9rem; }
         .comp-item.right { font-size: 1rem; }
     }
-    /* 슬라이더 - PC: 3열 그리드, 모바일: 1장 캐러셀 */
-    .result-viewport { padding: 8px 24px 16px; }
-    .result-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .result-slide { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
-    .result-slide img { width: 100%; height: auto; display: block; }
-    .result-dots { display: none; }
+    /* 슬라이더 */
+    .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
+    .result-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+    .result-slide { flex: 0 0 calc(100% / 3); padding: 0 8px; box-sizing: border-box; }
+    .result-slide img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
+    .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
+    .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
+    .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
     @media (max-width: 640px) {
-      .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
-      .result-track { display: flex; grid-template-columns: unset; gap: 0; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
-      .result-slide { flex: 0 0 100%; }
-      .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
-      .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
-      .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+      .result-slide { flex: 0 0 50%; padding: 0 4px; }
     }
 
     /* ── FEATURE5 (section2 5박스) ── */
@@ -597,7 +594,6 @@
     <div class="planner-img-wrap">
       <img src="/images/플래너.png?{{지역키워드}}" alt="{{지역키워드}} {{메인키워드}} 학교별 관리 플래너 작성">
     </div>
-    <p class="planner-sub">아이마다 다른 학교 일정과 시험 범위,<br>1:1 맞춤 플래너로 빈틈없이 관리합니다.</p>
   </div>
 </section>
 
@@ -952,39 +948,42 @@
   var track = document.getElementById('resultTrack');
   var dotsWrap = document.getElementById('resultDots');
   if (!track || !dotsWrap) return;
-  if (window.innerWidth > 640) return; // PC는 그리드로 표시, JS 불필요
 
-  var total = 6;
+  var isMobile = window.innerWidth <= 640;
+  var step = isMobile ? 2 : 3;   // 모바일: 2장씩, PC: 3장씩
+  var pages = 6 / step;           // 모바일: 3페이지, PC: 2페이지
   var cur = 0;
 
   // 도트 생성
-  for (var i = 0; i < total; i++) {
+  for (var i = 0; i < pages; i++) {
     (function(idx){
       var d = document.createElement('button');
       d.className = 'result-dot' + (idx === 0 ? ' active' : '');
-      d.setAttribute('aria-label', 'slide ' + (idx+1));
+      d.setAttribute('aria-label', 'page ' + (idx+1));
       d.addEventListener('click', function() { goTo(idx); });
       dotsWrap.appendChild(d);
     })(i);
   }
-
   var dots = Array.from(dotsWrap.querySelectorAll('.result-dot'));
 
-  function goTo(idx) {
-    cur = (idx + total) % total;
-    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+  function goTo(pageIdx) {
+    cur = (pageIdx + pages) % pages;
+    var slideW = track.children[0].offsetWidth;
+    track.style.transform = 'translateX(' + (-cur * step * slideW) + 'px)';
     dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
   }
 
-  // 터치 스와이프
-  var touchX = 0;
-  track.addEventListener('touchstart', function(e) {
-    touchX = e.touches[0].clientX;
-  }, { passive: true });
-  track.addEventListener('touchend', function(e) {
-    var diff = touchX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
-  }, { passive: true });
+  // 터치 스와이프 (모바일)
+  if (isMobile) {
+    var touchX = 0;
+    track.addEventListener('touchstart', function(e) {
+      touchX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function(e) {
+      var diff = touchX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+  }
 
   // 자동 슬라이드 3초
   setInterval(function() { goTo(cur + 1); }, 3000);
