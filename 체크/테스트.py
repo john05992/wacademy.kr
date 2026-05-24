@@ -89,18 +89,6 @@ def load_json(path):
 def safe(val):
     return val if val else ''
 
-def calc_img_root(out_path):
-    """
-    출력 HTML 파일에서 와카데미/ 루트까지의 상대 경로 반환.
-    예) 체크/이매동.html → '../'
-        아카데미/경기도/성남시/이매동/고등 수학학원/index.html → '../../../../../'
-    """
-    out_dir = os.path.dirname(os.path.abspath(out_path))
-    wacademy_dir = os.path.abspath(WACADEMY_DIR)
-    rel = os.path.relpath(wacademy_dir, out_dir)
-    # Windows 백슬래시 → 슬래시, 끝에 / 추가
-    rel = rel.replace('\\', '/').rstrip('/') + '/'
-    return rel
 
 
 # ── 치환 ──────────────────────────────────────────────────────────────
@@ -197,9 +185,7 @@ def main():
     out_name = f'{args.지역} {args.메인}.html'
     out_path = os.path.join(os.path.abspath(args.out), out_name)
 
-    img_root = calc_img_root(out_path)
     html = build_page(template, data, reviews, args.지역, args.메인)
-    html = html.replace('{{이미지루트}}', img_root)
 
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(html)
