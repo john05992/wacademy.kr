@@ -81,6 +81,10 @@ def load_store_data():
 # ── 지도 HTML 생성 ────────────────────────────────────────────────────
 
 def build_map_html(지역, 지점명, lat, lng, addr):
+    # 1~10m 범위 랜덤 오프셋 (0.00001~0.00009도)
+    jitter = lambda: random.uniform(0.00001, 0.00009) * random.choice([-1, 1])
+    lat = round(lat + jitter(), 8)
+    lng = round(lng + jitter(), 8)
     return f'''<!-- 지도 섹션 -->
 <section class="map-section">
   <div class="map-head">
