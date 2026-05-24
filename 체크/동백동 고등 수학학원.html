@@ -186,6 +186,11 @@
     .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-top: 32px; line-height: 1.7; word-break: keep-all; }
     .planner-img-wrap { width: 100%; aspect-ratio: 1100 / 1300; border-radius: 24px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,.12); border: 1px solid #f0f0f0; }
     .planner-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .planner-contact { margin-top: 40px; text-align: center; }
+    .planner-contact-label { font-size: .75rem; font-weight: 800; color: #FF4714; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 10px; }
+    .planner-contact-num { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 900; color: #111; letter-spacing: -.04em; }
+    .planner-disclaimer { margin-top: 48px; padding: 28px 20px; background: #f5f5f5; border-radius: 16px; text-align: center; }
+    .planner-disclaimer p { font-size: clamp(1.1rem, 4vw, 1.6rem); font-weight: 900; color: #111; letter-spacing: -.03em; word-break: keep-all; line-height: 1.4; }
 
     /* 비교 테이블 - perf.kr 원본 */
     .comparison-section {
@@ -391,7 +396,7 @@
   <div class="header-container">
     <div class="header-logo">와<span>카</span>데미</div>
     <button class="header-cta-btn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
-      학원 정보 보기 &rarr;
+      상담하기 &rarr;
     </button>
   </div>
 </header>
@@ -593,6 +598,13 @@
     <p class="planner-title">학교별 관리와<br><em>철저한 플래너</em> 작성</p>
     <div class="planner-img-wrap">
       <img src="/images/플래너.png?동백동" alt="동백동 고등 수학학원 학교별 관리 플래너 작성">
+    </div>
+    <div class="planner-contact">
+      <p class="planner-contact-label">상담안내</p>
+      <p class="planner-contact-num">010-3952-5815</p>
+    </div>
+    <div class="planner-disclaimer">
+      <p>아래의 글은 와와학원 안내와 무관합니다</p>
     </div>
   </div>
 </section>
@@ -888,42 +900,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">시험 전 복습 구조가 촘촘히 잡혀 있어 안심됐어요.</p>
+      <p class="rv-text">아이의 실수를 원인별로 분석해 주는 게 인상 깊었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학생 주도 복습이 가능하도록 노트 체계가 잘 잡혔어요.</p>
+      <p class="rv-text">수업 후 개념이 머릿속에 잘 남는다고 아이가 말해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학생 의견을 존중하는 대화가 수업에 활력을 줬어요.</p>
+      <p class="rv-text">복습 클리닉 프로그램으로 부족한 부분을 보완해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">오답 노트를 점검하면서 정확한 수정 방향을 제시받았어요.</p>
+      <p class="rv-text">매일 조금씩 공부하는 습관이 정착되고 있어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학습 계획에 장기 목표와 단기 체크포인트가 명확했어요.</p>
+      <p class="rv-text">예상문제가 실제 시험과 유사해 믿음이 가요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">교사의 실수 요인 코칭이 문제 해결에 큰 도움이 되었어요.</p>
+      <p class="rv-text">아이의 공부 방법이 체계적으로 바뀌고 있어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
