@@ -14,46 +14,99 @@
     python 테스트.py --지역 동백동 --메인 고등 수학학원 --out "C:/출력폴더"
 """
 
-import os, sys, json, random, argparse
+import os, sys, json, random, argparse, re
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-BASE_DIR      = os.path.dirname(os.path.abspath(__file__))
-WACADEMY_DIR  = os.path.dirname(BASE_DIR)                          # 와카데미/
-BONMUN_DIR    = os.path.join(os.path.dirname(WACADEMY_DIR), '본문뽑기')  # 본문뽑기/
+BASE_DIR        = os.path.dirname(os.path.abspath(__file__))
+WACADEMY_DIR    = os.path.dirname(BASE_DIR)                          # 와카데미/
+BONMUN_DIR      = os.path.join(os.path.dirname(WACADEMY_DIR), '본문뽑기')  # 본문뽑기/
+DESKTOP_DIR     = os.path.dirname(WACADEMY_DIR)                      # 바탕 화면/
 
-TEMPLATE      = os.path.join(BASE_DIR, '틀.html')
-ACADEMY_LIST  = os.path.join(WACADEMY_DIR, '학원목록.txt')
-REVIEW_BASE   = os.path.join(BONMUN_DIR, '아카데미', '리뷰')
-RESULT_BASE   = os.path.join(BONMUN_DIR, '아카데미')
+TEMPLATE        = os.path.join(BASE_DIR, '틀.html')
+ACADEMY_LIST    = os.path.join(WACADEMY_DIR, '학원목록.txt')
+REVIEW_BASE     = os.path.join(BONMUN_DIR, '아카데미', '리뷰')
+RESULT_BASE     = os.path.join(BONMUN_DIR, '아카데미')
+STORE_DATA_FILE = os.path.join(DESKTOP_DIR, 'perf.kr 사이트 html 백업', '15-지도.txt')
+
+KAKAO_KEY = '848084666ed912bc3a45a96652076f23'
 
 
-# ── 학원목록.txt 파싱: 동 → (도, 시구) ───────────────────────────────
+# ── 학원목록.txt 파싱: 동 → (도, 시구, 지점명) ──────────────────────
 
 def load_dong_map():
-    """학원목록.txt → {동명: (도, 시구)}"""
+    """학원목록.txt → {동명: (도, 시구, 지점명)}"""
     dong_map = {}
-    cur_do = cur_si = ''
+    cur_do = cur_si = cur_branch = ''
     with open(ACADEMY_LIST, encoding='utf-8') as f:
         for line in f:
             parts = line.rstrip('\n').split('\t')
             if parts[0].strip():
-                cur_do = parts[0].strip()
-                cur_si = parts[1].strip() if len(parts) > 1 else ''
+                cur_do     = parts[0].strip()
+                cur_si     = parts[1].strip() if len(parts) > 1 else ''
+                cur_branch = parts[2].strip() if len(parts) > 2 else ''
             dong = parts[3].strip() if len(parts) > 3 else ''
             if dong:
-                dong_map[dong] = (cur_do, cur_si)
+                dong_map[dong] = (cur_do, cur_si, cur_branch)
     return dong_map
 
 
 def resolve_result_path(dong_map, 지역, 메인):
-    """
-    지역(동) + 메인(키워드)으로 result.html 절대경로 반환.
-    학원목록.txt에 없는 동이면 경기도/성남시 기본값.
-    """
-    do_nm, si_nm = dong_map.get(지역, ('경기도', '성남시'))
+    """지역(동) + 메인(키워드)으로 result.html 절대경로 반환."""
+    entry  = dong_map.get(지역, ('경기도', '성남시', ''))
+    do_nm, si_nm = entry[0], entry[1]
     path = os.path.join(RESULT_BASE, do_nm, si_nm, 지역, 메인, 'result.html')
     return path, do_nm, si_nm
+
+
+# ── 15-지도.txt 파싱: 지점명 → (lat, lng, addr) ──────────────────────
+
+def load_store_data():
+    """15-지도.txt allStoreData → {지점명: (lat, lng, addr)}"""
+    try:
+        with open(STORE_DATA_FILE, encoding='utf-8') as f:
+            content = f.read()
+    except FileNotFoundError:
+        return {}
+    stores = {}
+    blocks = re.findall(
+        r'name:\s*"([^"]+)".*?addr:\s*"([^"]+)".*?lat:\s*([\d.]+),?\s*\n\s*lng:\s*([\d.]+)',
+        content, re.DOTALL
+    )
+    for name, addr, lat, lng in blocks:
+        stores[name] = (float(lat), float(lng), addr)
+    return stores
+
+
+# ── 지도 HTML 생성 ────────────────────────────────────────────────────
+
+def build_map_html(지역, 지점명, lat, lng, addr):
+    return f'''<!-- 지도 섹션 -->
+<section class="map-section">
+  <div class="map-head">
+    <p class="map-eyebrow">LOCATION</p>
+    <p class="map-name">{지점명}</p>
+    <p class="map-addr">{addr}</p>
+  </div>
+  <div class="map-frame" id="wawaMapFrame">
+    <div id="wawaMap" style="width:100%;height:100%"></div>
+  </div>
+  <script>
+  (function(){{
+    var LAT={lat}, LNG={lng}, LEVEL=7;
+    function initMap(){{
+      var el=document.getElementById('wawaMap');
+      if(!el) return;
+      var map=new kakao.maps.Map(el,{{center:new kakao.maps.LatLng(LAT,LNG),level:LEVEL}});
+      new kakao.maps.Marker({{map:map,position:new kakao.maps.LatLng(LAT,LNG)}});
+    }}
+    var s=document.createElement('script');
+    s.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey={KAKAO_KEY}&autoload=false';
+    s.onload=function(){{kakao.maps.load(initMap);}};
+    document.head.appendChild(s);
+  }})();
+  </script>
+</section>'''
 
 
 # ── 리뷰 랜덤 선택 ────────────────────────────────────────────────────
@@ -93,9 +146,10 @@ def safe(val):
 
 # ── 치환 ──────────────────────────────────────────────────────────────
 
-def build_page(template, data, reviews, 지역, 메인):
+def build_page(template, data, reviews, 지역, 메인, map_html=''):
     html = template
 
+    html = html.replace('{{지도}}', map_html)
     html = html.replace('{{지역키워드}}', 지역)
     html = html.replace('{{메인키워드}}', 메인)
     html = html.replace('{{meta}}', safe(data.get('meta')))
@@ -162,9 +216,20 @@ def main():
     parser.add_argument('--out',  default=BASE_DIR, help='출력 폴더 (기본: 체크 폴더)')
     args = parser.parse_args()
 
-    # 학원목록.txt에서 도/시구 역추적 → result.html 경로 결정
-    dong_map = load_dong_map()
+    # 학원목록.txt에서 도/시구/지점명 역추적 → result.html 경로 결정
+    dong_map   = load_dong_map()
+    store_data = load_store_data()
     result_path, do_nm, si_nm = resolve_result_path(dong_map, args.지역, args.메인)
+
+    # 지점 매핑 → 지도 HTML 생성
+    branch_name = dong_map.get(args.지역, ('', '', ''))[2]
+    map_html = ''
+    if branch_name and branch_name in store_data:
+        lat, lng, addr = store_data[branch_name]
+        map_html = build_map_html(args.지역, branch_name, lat, lng, addr)
+        print(f'지점       : {branch_name} ({lat}, {lng})')
+    else:
+        print(f'지점       : 매칭 없음 ({branch_name})')
 
     print(f'지역키워드 : {args.지역}')
     print(f'메인키워드 : {args.메인}')
@@ -185,7 +250,7 @@ def main():
     out_name = f'{args.지역} {args.메인}.html'
     out_path = os.path.join(os.path.abspath(args.out), out_name)
 
-    html = build_page(template, data, reviews, args.지역, args.메인)
+    html = build_page(template, data, reviews, args.지역, args.메인, map_html)
 
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(html)
