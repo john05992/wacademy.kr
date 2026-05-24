@@ -29,7 +29,7 @@ REVIEW_BASE     = os.path.join(BONMUN_DIR, '아카데미', '리뷰')
 RESULT_BASE     = os.path.join(BONMUN_DIR, '아카데미')
 STORE_DATA_FILE = os.path.join(DESKTOP_DIR, 'perf.kr 사이트 html 백업', '15-지도.txt')
 
-KAKAO_KEY = '848084666ed912bc3a45a96652076f23'
+KAKAO_KEY = '8725ddafe3312f4d4433c2f390005b68'
 
 
 # ── 학원목록.txt 파싱: 동 → (도, 시구, 지점명) ──────────────────────
