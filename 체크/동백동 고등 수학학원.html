@@ -325,7 +325,7 @@
         .comp-item.right { font-size: 1rem; }
     }
     /* 슬라이더 */
-    .result-viewport { overflow: hidden; }
+    .result-viewport { overflow: hidden; margin-left: -8px; margin-right: 8px; }
     .result-track { display: block; transition: transform .5s cubic-bezier(.4,0,.2,1); will-change: transform; }
     .result-track img { width: 600%; height: auto; display: block; }
     .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
@@ -960,42 +960,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">아이가 학원 다닌 후 부모한테 공부 설명을 잘해요</p>
+      <p class="rv-text">교재 정리용 바인더를 받아 정리 습관이 생겼어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학원 다닌 지 세 달 만에 아이가 혼자서 계획을 세우더라고요</p>
+      <p class="rv-text">학원에서 진행한 실수 분석이 성장에 도움이 돼요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">선생님이 틀린 이유를 하나하나 설명해주셔서 놓치는 게 없어요</p>
+      <p class="rv-text">교실 조명이 눈부시지 않아 눈이 편안해요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">선생님이 매일 진도 체크해주시니 아이가 게을러지지 않아요</p>
+      <p class="rv-text">복습 전용 자료가 주기적으로 제공돼요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이가 처음으로 시험 전에 틀린 문제를 스스로 정리했어요</p>
+      <p class="rv-text">정기 피드백으로 실수 원인을 바로 잡을 수 있었어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">시험 직전 주말 보강 수업이 정말 도움이 많이 됐어요</p>
+      <p class="rv-text">학부모에게 매월 진행 보고를 받아 안심이 됩니다.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -1016,7 +1016,7 @@
   </div>
   <script>
   (function(){
-    var LAT=37.26935643, LNG=127.15330151, LEVEL=7;
+    var LAT=37.26930115, LNG=127.15335476, LEVEL=7;
     function initMap(){
       var el=document.getElementById('wawaMap');
       if(!el) return;
