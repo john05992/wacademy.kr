@@ -192,12 +192,6 @@
         padding: 80px 20px 88px;
         display: flex; align-items: center; justify-content: center;
     }
-    .consult-img-box {
-        max-width: 680px; width: 100%;
-        border-radius: 32px; overflow: hidden;
-        box-shadow: 0 24px 80px rgba(0,0,0,.1), 0 8px 32px rgba(0,0,0,.06);
-    }
-    .consult-img-box img { width: 100%; height: auto; display: block; }
     .consult-box {
         position: relative; overflow: hidden;
         max-width: 680px; width: 100%;
@@ -221,13 +215,13 @@
         pointer-events: none;
     }
     .consult-label {
-        font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 900;
-        color: #fff176; letter-spacing: -.03em;
-        margin-bottom: 20px;
-    }
-    .consult-label-line {
-        width: 100%; height: 1px; margin-bottom: 24px;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,.5) 30%, rgba(255,241,118,.6) 50%, rgba(255,255,255,.5) 70%, transparent);
+        display: inline-block;
+        font-size: .82rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
+        color: #FF4714;
+        background: rgba(255,71,20,.15);
+        border: 1px solid rgba(255,71,20,.35);
+        border-radius: 99px; padding: 6px 18px;
+        margin-bottom: 24px;
     }
     .consult-num {
         font-size: clamp(1.9rem, 6vw, 4rem); font-weight: 900;
@@ -325,12 +319,16 @@
         .comp-item.right { font-size: 1rem; }
     }
     /* 슬라이더 */
-    .result-viewport { overflow: hidden; }
-    .result-track { display: block; transition: transform .5s cubic-bezier(.4,0,.2,1); will-change: transform; }
-    .result-track img { width: 600%; height: auto; display: block; }
+    .result-viewport { overflow: hidden; padding: 8px 24px 16px; }
+    .result-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+    .result-slide { flex: 0 0 calc(100% / 3); padding: 0 8px; box-sizing: border-box; }
+    .result-slide img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
     .result-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; padding: 0 24px; }
     .result-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); border: none; cursor: pointer; transition: all .35s ease; padding: 0; }
     .result-dot.active { width: 28px; border-radius: 4px; background: #FF4714; }
+    @media (max-width: 640px) {
+      .result-slide { flex: 0 0 50%; padding: 0 4px; }
+    }
 
     /* ── FEATURE5 (section2 5박스) ── */
     .feature5-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
@@ -552,7 +550,7 @@
 
   <!-- 1:1 내부 사진 -->
   <div class="brand-img-wrap">
-    <img src="/images/와와 내부 사진.png?{{지역키워드}}{{메인키워드}}" alt="{{지역키워드}} {{메인키워드}} 내부 사진">
+    <img src="/images/와와 내부 사진.png?{{지역키워드}}" alt="{{지역키워드}} {{메인키워드}} 내부 사진">
   </div>
 
   <!-- 여기는 다릅니다 -->
@@ -590,9 +588,14 @@
     <p class="result-eyebrow">GRADE COACHING CENTER</p>
     <p class="result-title">성적표 향상 인증<br><em style="color:#FF4714;font-style:normal">중하위권</em>의 답은 여기</p>
   </div>
-  <div class="result-viewport" id="resultViewport">
+  <div class="result-viewport">
     <div class="result-track" id="resultTrack">
-      <img src="/images/성적향상/성적표.png?{{지역키워드}}{{메인키워드}}" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례">
+      <div class="result-slide"><img src="/images/성적향상/성적표.png?{{지역키워드}}" style="object-fit:cover;object-position:0% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례 1"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png?{{지역키워드}}" style="object-fit:cover;object-position:20% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례 2"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png?{{지역키워드}}" style="object-fit:cover;object-position:40% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례 3"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png?{{지역키워드}}" style="object-fit:cover;object-position:60% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례 4"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png?{{지역키워드}}" style="object-fit:cover;object-position:80% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례 5"></div>
+      <div class="result-slide"><img src="/images/성적향상/성적표.png?{{지역키워드}}" style="object-fit:cover;object-position:100% 0;aspect-ratio:850/1100;width:100%;height:auto;" alt="{{지역키워드}} {{메인키워드}} 성적 향상 사례 6"></div>
     </div>
   </div>
   <div class="result-dots" id="resultDots"></div>
@@ -655,7 +658,7 @@
     <p class="planner-eyebrow">STUDY PLANNER</p>
     <p class="planner-title">학교별 관리와<br><em>철저한 플래너</em> 작성</p>
     <div class="planner-img-wrap">
-      <img src="/images/플래너.png?{{지역키워드}}{{메인키워드}}" alt="{{지역키워드}} {{메인키워드}} 학교별 관리 플래너 작성">
+      <img src="/images/플래너.png?{{지역키워드}}" alt="{{지역키워드}} {{메인키워드}} 학교별 관리 플래너 작성">
     </div>
   </div>
 </section>
@@ -664,8 +667,12 @@
      상담 안내 (고정)
 ══════════════════════════════════════════ -->
 <section class="consult-section">
-  <div class="consult-img-box">
-    <img src="/images/방법론.png?{{지역키워드}}{{메인키워드}}방법론" alt="{{지역키워드}} {{메인키워드}} 방법론">
+  <div class="consult-box">
+    <p class="consult-label">상담번호</p>
+    <p class="consult-num">010-3952-5815</p>
+    <div class="consult-divider"></div>
+    <p class="consult-end-title">와와학원 안내는 <em>끝났습니다</em></p>
+    <p class="consult-end-sub">아래 글은 관련이 없음</p>
   </div>
 </section>
 
@@ -1019,12 +1026,13 @@
 
 <script>
 (function(){
-  var viewport = document.getElementById('resultViewport');
   var track = document.getElementById('resultTrack');
   var dotsWrap = document.getElementById('resultDots');
-  if (!track || !dotsWrap || !viewport) return;
+  if (!track || !dotsWrap) return;
 
-  var pages = 6;
+  var isMobile = window.innerWidth <= 640;
+  var step = isMobile ? 2 : 3;   // 모바일: 2장씩, PC: 3장씩
+  var pages = 6 / step;           // 모바일: 3페이지, PC: 2페이지
   var cur = 0;
 
   // 도트 생성
@@ -1041,20 +1049,22 @@
 
   function goTo(pageIdx) {
     cur = (pageIdx + pages) % pages;
-    var vw = viewport.offsetWidth;
-    track.style.transform = 'translateX(' + (-cur * vw) + 'px)';
+    var slideW = track.children[0].offsetWidth;
+    track.style.transform = 'translateX(' + (-cur * step * slideW) + 'px)';
     dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
   }
 
-  // 터치 스와이프
-  var touchX = 0;
-  viewport.addEventListener('touchstart', function(e) {
-    touchX = e.touches[0].clientX;
-  }, { passive: true });
-  viewport.addEventListener('touchend', function(e) {
-    var diff = touchX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
-  }, { passive: true });
+  // 터치 스와이프 (모바일)
+  if (isMobile) {
+    var touchX = 0;
+    track.addEventListener('touchstart', function(e) {
+      touchX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function(e) {
+      var diff = touchX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+  }
 
   // 자동 슬라이드 3초
   setInterval(function() { goTo(cur + 1); }, 3000);
