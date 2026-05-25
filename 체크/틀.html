@@ -20,6 +20,19 @@
       overflow-x: hidden;
     }
 
+    /* ── FLOATING BTN ── */
+    .float-consult-btn {
+        position: fixed; bottom: 24px; right: 20px; z-index: 9999;
+        background: #FF4714; color: #fff;
+        border-radius: 99px; padding: 15px 26px;
+        font-size: .95rem; font-weight: 800; font-family: inherit;
+        text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+        box-shadow: 0 8px 32px rgba(255,71,20,.45);
+        animation: pcta-blink 2s ease-in-out infinite;
+        white-space: nowrap;
+    }
+    .float-consult-btn:hover { animation: none; transform: translateY(-2px) scale(1.04); box-shadow: 0 12px 40px rgba(255,71,20,.6); }
+
     /* ── HEADER ── */
     .top-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(17,17,17,.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.05); }
     .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
@@ -466,9 +479,9 @@
 <header class="top-header">
   <div class="header-container">
     <div class="header-logo">와<span>카</span>데미</div>
-    <button class="header-cta-btn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+    <a class="header-cta-btn" href="https://wacademy.kr/images/방법론.png?{{지역키워드}}{{메인키워드}}방법론" target="_blank" rel="noopener">
       상담하기 &rarr;
-    </button>
+    </a>
   </div>
 </header>
 
@@ -481,12 +494,12 @@
   <p class="hero-top-label">와카데미 학원 정보 안내</p>
 
   <!-- 유동: [지역키워드 + 메인키워드] -->
-  <h1><em>{{지역키워드}} {{메인키워드}},</em><br>지금 찾고 계시나요?</h1>
+  <h1><em>{{지역키워드}} {{메인키워드}},</em><br>일대일 수업 안내</h1>
 
   <!-- 고정 -->
   <p class="hero-sub">공공데이터(NEIS) 기반 학원 정보를 안내합니다.</p>
 
-  <a href="#s1" class="hero-cta-btn">학원 정보 자세히 보기 &darr;</a>
+  <a href="#pain" class="hero-cta-btn">학원 정보 자세히 보기 &darr;</a>
 
   <!-- 유동: 지역키워드 / 고정: 수강료 공개, 커리큘럼 확인 -->
   <div class="hero-badge-row">
@@ -499,7 +512,7 @@
 <!-- ══════════════════════════════════════════
      PAIN (모노로그 고정 / fact box 유동)
 ══════════════════════════════════════════ -->
-<section class="pain-section">
+<section class="pain-section" id="pain">
   <div class="pain-wrapper">
     <div class="connect-line"></div>
 
@@ -1093,6 +1106,11 @@
   setInterval(function() { goTo(cur + 1); }, 3000);
 })();
 </script>
+
+<!-- 플로팅 상담 버튼 -->
+<a class="float-consult-btn" href="https://wacademy.kr/images/방법론.png?{{지역키워드}}{{메인키워드}}방법론" target="_blank" rel="noopener">
+  📋 상담문의
+</a>
 
 </body>
 </html>
