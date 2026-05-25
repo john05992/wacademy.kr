@@ -69,6 +69,13 @@
     .simple-underline { display: inline-block; position: relative; z-index: 1; }
     .simple-underline::after { content: ''; position: absolute; bottom: 2px; left: 0; right: 0; height: 12px; background: #FF4714; z-index: -1; opacity: .85; }
 
+    /* ── HOOK ── */
+    .hook-section { background: #0a0a0a; padding: 72px 24px 80px; text-align: center; }
+    .hook-top { font-size: .82rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 22px; }
+    .hook-heading { font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 900; line-height: 1.2; letter-spacing: -.05em; word-break: keep-all; }
+    .hook-wh { display: block; color: #fff; }
+    .hook-or { display: block; color: #FF4714; }
+
     /* ── PROMISE ── */
     .promise-section { background: #111; padding: 90px 24px; text-align: center; }
     .promise-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 52px; letter-spacing: -.03em; word-break: keep-all; }
@@ -539,6 +546,17 @@
 </section>
 
 <!-- ══════════════════════════════════════════
+     HOOK (고정)
+══════════════════════════════════════════ -->
+<section class="hook-section">
+  <p class="hook-top">잠깐!</p>
+  <h2 class="hook-heading">
+    <span class="hook-wh">내신부터 수행까지</span>
+    <span class="hook-or">과외식 + 코칭식 수업</span>
+  </h2>
+</section>
+
+<!-- ══════════════════════════════════════════
      BRAND STATEMENT (고정)
 ══════════════════════════════════════════ -->
 <section class="brand-section">
@@ -960,42 +978,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">교재 정리용 바인더를 받아 정리 습관이 생겼어요.</p>
+      <p class="rv-text">아이의 실수 유형을 차트로 알려줘서 놓친 걸 알았어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학원에서 진행한 실수 분석이 성장에 도움이 돼요.</p>
+      <p class="rv-text">학원 출결 문자가 실시간으로 와서 부모도 안심이에요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">교실 조명이 눈부시지 않아 눈이 편안해요.</p>
+      <p class="rv-text">문제풀이 태도를 관찰해 피드백을 주는 게 인상 깊었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">복습 전용 자료가 주기적으로 제공돼요.</p>
+      <p class="rv-text">학부모 알림톡으로 수업 내용을 매주 확인할 수 있어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">정기 피드백으로 실수 원인을 바로 잡을 수 있었어요.</p>
+      <p class="rv-text">복습 완료 후 점수로 확인하니 아이가 성취감을 느꼈어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학부모에게 매월 진행 보고를 받아 안심이 됩니다.</p>
+      <p class="rv-text">매 수업마다 진도 도달률을 알려줘서 목표가 명확해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -1016,7 +1034,7 @@
   </div>
   <script>
   (function(){
-    var LAT=37.26930115, LNG=127.15335476, LEVEL=7;
+    var LAT=37.26944497, LNG=127.15324886, LEVEL=7;
     function initMap(){
       var el=document.getElementById('wawaMap');
       if(!el) return;
