@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://wacademy.kr/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/privacy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/terms/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/고등/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/국어학원/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/수학학원/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/영어학원/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/중등/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wacademy.kr/초등/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>
