@@ -12,6 +12,7 @@
   <!-- dynamic subset: 실제 사용 글자만 다운로드 (비렌더블로킹) -->
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+  {{breadcrumb_jsonld}}
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -21,6 +22,13 @@
       color: #fff;
       overflow-x: hidden;
     }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb { padding: 10px 24px; background: #111; border-bottom: 1px solid rgba(255,255,255,.05); display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-top: 60px; }
+    .breadcrumb-link { font-size: .72rem; color: #555; text-decoration: none; transition: color .2s; }
+    .breadcrumb-link:hover { color: #FF4714; }
+    .breadcrumb-sep { font-size: .72rem; color: #333; }
+    .breadcrumb-current { font-size: .72rem; color: #888; }
 
     /* ── FLOATING BTN ── */
     .float-consult-btn {
@@ -498,6 +506,8 @@
   </div>
 </header>
 
+{{breadcrumb_nav}}
+
 <!-- ══════════════════════════════════════════
      HERO
      유동: {{지역키워드}}, {{메인키워드}}
@@ -545,7 +555,7 @@
 ══════════════════════════════════════════ -->
 <section class="promise-section">
   <!-- 유동: 메인키워드 -->
-  <p class="promise-title">{{메인키워드}}<br><span>이 세 가지는 확인하세요</span></p>
+  <p class="promise-title">{{지역키워드}} {{메인키워드}}<br><span>이 세 가지는 확인하세요</span></p>
 
   <!-- 고정 3항목 -->
   <div class="promise-list">

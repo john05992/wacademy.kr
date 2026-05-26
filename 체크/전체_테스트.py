@@ -72,20 +72,38 @@ def load_keywords():
         return [l.strip() for l in f if l.strip()]
 
 
-def pick_random_review(n=6):
+def review_stream():
+    """리뷰 폴더를 순서대로 열어 한 줄씩 yield"""
     if not os.path.isdir(REVIEW_BASE):
-        return ['리뷰 데이터 없음'] * n
-    folders = [d for d in os.listdir(REVIEW_BASE)
-               if os.path.isdir(os.path.join(REVIEW_BASE, d)) and d.isdigit()]
-    if not folders:
-        return ['리뷰 데이터 없음'] * n
-    folder_path = os.path.join(REVIEW_BASE, random.choice(folders))
-    files = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
-    if not files:
-        return ['리뷰 데이터 없음'] * n
-    with open(os.path.join(folder_path, random.choice(files)), encoding='utf-8') as f:
-        lines = [l.strip() for l in f if l.strip()]
-    return random.sample(lines, min(n, len(lines)))
+        return
+    folders = sorted(
+        [d for d in os.listdir(REVIEW_BASE)
+         if os.path.isdir(os.path.join(REVIEW_BASE, d)) and d.isdigit()],
+        key=int
+    )
+    for folder in folders:
+        folder_path = os.path.join(REVIEW_BASE, folder)
+        files = sorted(
+            [f for f in os.listdir(folder_path) if f.endswith('.txt')],
+            key=lambda x: int(x.replace('.txt', ''))
+        )
+        for fname in files:
+            with open(os.path.join(folder_path, fname), encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        yield line
+
+
+def next_reviews(stream, n=6):
+    """스트림에서 n개 가져옴. 부족하면 빈 문자열로 채움"""
+    result = []
+    for _ in range(n):
+        try:
+            result.append(next(stream))
+        except StopIteration:
+            result.append('')
+    return result
 
 
 def load_json(path):
@@ -97,6 +115,34 @@ def safe(val):
     return val if val else ''
 
 
+# ── 브레드크럼 빌더 ─────────────────────────────────────────────────────
+
+def build_breadcrumb(items):
+    """
+    items: [('홈', '/'), ('경기도', '/경기도/'), ('하남시', None)]
+    마지막 항목은 링크 없이 current로 표시
+    """
+    # JSON-LD
+    ld_items = []
+    for i, (name, url) in enumerate(items, 1):
+        entry = {'@type': 'ListItem', 'position': i, 'name': name}
+        if url:
+            entry['item'] = {'@type': 'Thing', '@id': f'https://wacademy.kr{url}'}
+        ld_items.append(entry)
+    jsonld = f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":{__import__("json").dumps(ld_items, ensure_ascii=False)}}}</script>'
+
+    # 시각 nav
+    parts = []
+    for i, (name, url) in enumerate(items):
+        if i < len(items) - 1:
+            parts.append(f'<a href="{url}" class="breadcrumb-link">{name}</a><span class="breadcrumb-sep">/</span>')
+        else:
+            parts.append(f'<span class="breadcrumb-current">{name}</span>')
+    nav = f'<nav class="breadcrumb" aria-label="breadcrumb">{"".join(parts)}</nav>'
+
+    return jsonld, nav
+
+
 # ── 링크 섹션 빌더 ──────────────────────────────────────────────────────
 
 def build_link_section_lv1(do_nm, si_list):
@@ -106,10 +152,10 @@ def build_link_section_lv1(do_nm, si_list):
         for si in si_list
     )
     return f'''
-<nav class="lk-section" aria-label="지역별 학원 정보">
+<nav class="lk-section" aria-label="지역별 정보">
   <div class="sec-inner">
-    <span class="lk-eyebrow">지역별 학원 정보</span>
-    <h2>{do_nm} 학원 상세정보</h2>
+    <span class="lk-eyebrow">지역별 정보</span>
+    <h2>{do_nm} 상세정보</h2>
     <div class="lk-group">
       <div class="lk-grid">{items}</div>
     </div>
@@ -124,10 +170,10 @@ def build_link_section_lv2(do_nm, si_nm, dong_list):
         for dong in dong_list
     )
     return f'''
-<nav class="lk-section" aria-label="동별 학원 정보">
+<nav class="lk-section" aria-label="동별 정보">
   <div class="sec-inner">
-    <span class="lk-eyebrow">동별 학원 정보</span>
-    <h2>{si_nm} 학원 상세정보</h2>
+    <span class="lk-eyebrow">동별 정보</span>
+    <h2>{si_nm} 상세정보</h2>
     <div class="lk-group">
       <div class="lk-grid">{items}</div>
     </div>
@@ -171,10 +217,10 @@ def build_link_section_lv3(do_nm, si_nm, dong, keywords, result_base):
         return ''
 
     return f'''
-<nav class="lk-section" aria-label="학원 유형별 정보">
+<nav class="lk-section" aria-label="유형별 정보">
   <div class="sec-inner">
-    <span class="lk-eyebrow">학원 유형별 정보</span>
-    <h2>{dong} 학원 상세정보</h2>
+    <span class="lk-eyebrow">유형별 정보</span>
+    <h2>{dong} 상세정보</h2>
     {group_blocks}
   </div>
 </nav>'''
@@ -182,9 +228,11 @@ def build_link_section_lv3(do_nm, si_nm, dong, keywords, result_base):
 
 # ── 치환 ────────────────────────────────────────────────────────────────
 
-def build_page(template, data, reviews, 지역, 메인, 위치사진='', 링크섹션='', 상위링크='/'):
+def build_page(template, data, reviews, 지역, 메인, 위치사진='', 링크섹션='', 상위링크='/', breadcrumb_jsonld='', breadcrumb_nav=''):
     html = template
 
+    html = html.replace('{{breadcrumb_jsonld}}', breadcrumb_jsonld)
+    html = html.replace('{{breadcrumb_nav}}',    breadcrumb_nav)
     html = html.replace('{{링크섹션}}',    링크섹션)
     html = html.replace('{{상위링크}}',    상위링크)
     html = html.replace('{{위치사진_enc}}', 위치사진.replace(' ', '%20'))
@@ -243,19 +291,21 @@ def build_page(template, data, reviews, 지역, 메인, 위치사진='', 링크�
     for i, rv in enumerate(reviews):
         html = html.replace(f'{{{{rv_{i}}}}}', rv)
 
+    html = html.replace('>학원명<', '>기관명<')
+
     return html
 
 
 # ── 생성 핵심 함수 ───────────────────────────────────────────────────────
 
-def generate(지역, 메인, result_path, out_dir, template, 위치사진='', 링크섹션='', 상위링크='/'):
+def generate(지역, 메인, result_path, out_dir, template, 위치사진='', 링크섹션='', 상위링크='/', reviews=None, bc_items=None):
     if not os.path.exists(result_path):
         return False
 
     os.makedirs(out_dir, exist_ok=True)
-    data    = load_json(result_path)
-    reviews = pick_random_review()
-    html    = build_page(template, data, reviews, 지역, 메인, 위치사진, 링크섹션, 상위링크)
+    data = load_json(result_path)
+    bc_jsonld, bc_nav = build_breadcrumb(bc_items or [('홈', '/')])
+    html = build_page(template, data, reviews or [], 지역, 메인, 위치사진, 링크섹션, 상위링크, bc_jsonld, bc_nav)
 
     out_path = os.path.join(out_dir, 'index.html')
     with open(out_path, 'w', encoding='utf-8') as f:
@@ -272,6 +322,8 @@ def main():
 
     with open(TEMPLATE, encoding='utf-8') as f:
         template = f.read()
+
+    rv_stream = review_stream()
 
     # 충청남도 항목만 필터
     test_entries = {
@@ -307,7 +359,8 @@ def main():
             out_dir = os.path.join(TEST_OUT)
             si_list = do_si_map.get(do_nm, [])
             lk = build_link_section_lv1(do_nm, si_list)
-            r = generate(do_nm, MAIN_FIXED, r_path, out_dir, template, '', lk, '/')
+            bc = [('홈', '/'), (do_nm, None)]
+            r = generate(do_nm, MAIN_FIXED, r_path, out_dir, template, '', lk, '/', next_reviews(rv_stream), bc)
             ok += r; skip += not r
 
         # ── 레벨2 ────────────────────────────────────────────────────────
@@ -317,7 +370,8 @@ def main():
             out_dir  = os.path.join(TEST_OUT, si_nm)
             dong_list = si_dong_map.get((do_nm, si_nm), [])
             lk = build_link_section_lv2(do_nm, si_nm, dong_list)
-            r = generate(si_nm, MAIN_FIXED, r_path, out_dir, template, '', lk, f'/{do_nm}/')
+            bc = [('홈', '/'), (do_nm, f'/{do_nm}/'), (si_nm, None)]
+            r = generate(si_nm, MAIN_FIXED, r_path, out_dir, template, '', lk, f'/{do_nm}/', next_reviews(rv_stream), bc)
             ok += r; skip += not r
 
         # ── 레벨3 ────────────────────────────────────────────────────────
@@ -326,14 +380,16 @@ def main():
             r_path  = os.path.join(RESULT_BASE, do_nm, si_nm, dong, 'result.html')
             out_dir = os.path.join(TEST_OUT, si_nm, dong)
             lk = build_link_section_lv3(do_nm, si_nm, dong, keywords, RESULT_BASE)
-            r = generate(dong, MAIN_FIXED, r_path, out_dir, template, 위치사진, lk, f'/{do_nm}/{si_nm}/')
+            bc = [('홈', '/'), (do_nm, f'/{do_nm}/'), (si_nm, f'/{do_nm}/{si_nm}/'), (dong, None)]
+            r = generate(dong, MAIN_FIXED, r_path, out_dir, template, 위치사진, lk, f'/{do_nm}/{si_nm}/', next_reviews(rv_stream), bc)
             ok += r; skip += not r
 
         # ── 레벨4 ────────────────────────────────────────────────────────
         for kw in keywords:
             r_path  = os.path.join(RESULT_BASE, do_nm, si_nm, dong, kw, 'result.html')
             out_dir = os.path.join(TEST_OUT, si_nm, dong, kw)
-            r = generate(dong, kw, r_path, out_dir, template, 위치사진, '', f'/{do_nm}/{si_nm}/{dong}/')
+            bc = [('홈', '/'), (do_nm, f'/{do_nm}/'), (si_nm, f'/{do_nm}/{si_nm}/'), (dong, None)]
+            r = generate(dong, kw, r_path, out_dir, template, 위치사진, '', f'/{do_nm}/{si_nm}/{dong}/', next_reviews(rv_stream), bc)
             ok += r; skip += not r
 
     print(f'\n완료: {ok}개 생성  /  {skip}개 스킵(result.html 없음)')
