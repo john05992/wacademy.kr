@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(python 테스트.py --지역 이매동 --메인 \"고등 수학학원\")",
-      "WebFetch(domain:wacademy.kr)",
-      "Bash(python:*)"
-    ]
-  }
-}
