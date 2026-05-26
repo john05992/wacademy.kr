@@ -37,7 +37,7 @@
         position: fixed; bottom: 24px; right: 20px; z-index: 9999;
         background: #FF4714; color: #fff;
         border-radius: 99px; padding: 15px 26px;
-        font-size: .95rem; font-weight: 800; font-family: inherit;
+        font-size: .9rem; font-weight: 900; font-family: inherit;
         text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
         box-shadow: 0 8px 32px rgba(255,71,20,.45);
         animation: pcta-blink 2s ease-in-out infinite;
@@ -70,7 +70,7 @@
     .hero-section h1 { font-size: clamp(2.4rem, 8vw, 5rem); font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: -.04em; margin-bottom: 28px; word-break: keep-all; animation: fadeInUp .7s .1s both; }
     .hero-section h1 em { font-style: normal; background: linear-gradient(90deg, #FF4714, #f5af19); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-sub { font-size: clamp(.95rem, 2.2vw, 1.1rem); color: #666; line-height: 1.75; margin-bottom: 48px; word-break: keep-all; animation: fadeInUp .7s .2s both; max-width: 560px; }
-    .hero-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #FF4714; color: #fff; text-decoration: none; padding: 18px 42px; border-radius: 99px; font-size: 1.1rem; font-weight: 800; letter-spacing: -.01em; animation: fadeInUp .7s .3s both, pcta-blink 2s 1s ease-in-out infinite; transition: transform .3s, box-shadow .3s; white-space: nowrap; }
+    .hero-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #FF4714; color: #fff; text-decoration: none; padding: 18px 42px; border-radius: 99px; font-size: 1.05rem; font-weight: 900; letter-spacing: -.01em; animation: fadeInUp .7s .3s both, pcta-blink 2s 1s ease-in-out infinite; transition: transform .3s, box-shadow .3s; white-space: nowrap; }
     .hero-cta-btn:hover { animation: none; transform: translateY(-3px) scale(1.04); box-shadow: 0 0 0 10px rgba(255,71,20,.12), 0 14px 40px rgba(255,71,20,.55); }
     .hero-badge-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 48px; animation: fadeInUp .7s .45s both; }
     .hero-badge { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 99px; padding: 8px 18px; font-size: .85rem; color: #aaa; }
@@ -81,7 +81,7 @@
     .pain-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; height: 400px; background: radial-gradient(circle, rgba(255,71,20,.07) 0%, transparent 70%); pointer-events: none; }
     .pain-wrapper { max-width: 500px; margin: 0 auto; position: relative; z-index: 10; display: flex; flex-direction: column; }
     .connect-line { position: absolute; top: 40px; bottom: 200px; left: 50%; width: 1px; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.15) 20%, rgba(255,255,255,.15) 80%, rgba(255,255,255,0) 100%); transform: translateX(-50%); z-index: 0; }
-    .monologue { font-size: 1.7rem; font-weight: 400; color: #888; margin-bottom: 60px; position: relative; line-height: 1.45; letter-spacing: -.02em; opacity: 0; animation: fadeMoveUp .8s ease forwards; word-break: keep-all; }
+    .monologue { font-size: 1.6rem; font-weight: 500; color: #888; margin-bottom: 60px; position: relative; line-height: 1.45; letter-spacing: -.02em; opacity: 0; animation: fadeMoveUp .8s ease forwards; word-break: keep-all; }
     .monologue:nth-child(1) { text-align: left; align-self: flex-start; animation-delay: .05s; }
     .monologue:nth-child(2) { text-align: right; align-self: flex-end; color: #aaa; animation-delay: .2s; }
     .monologue:nth-child(3) { text-align: center; align-self: center; color: #ccc; font-weight: 700; margin-bottom: 120px; animation-delay: .35s; }
@@ -133,7 +133,7 @@
 
     /* ── CHECKLIST ── */
     .check-list { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-top: 24px; }
-    .check-item { display: flex; align-items: flex-start; gap: 12px; font-size: .95rem; font-weight: 600; line-height: 1.55; }
+    .check-item { display: flex; align-items: flex-start; gap: 12px; font-size: .9rem; font-weight: 700; line-height: 1.55; }
     .sec-dark .check-item { color: #bbb; }
     .sec-light .check-item, .sec-mid .check-item { color: #444; }
     .check-icon { flex-shrink: 0; margin-top: 2px; color: #FF4714; }
@@ -168,7 +168,7 @@
 
     /* 학원명 헤더 */
     .brand-header { padding: 72px 24px 28px; text-align: center; border-bottom: 1px solid #f0f0ee; position: relative; }
-    .brand-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .68rem; font-weight: 800; color: #FF4714; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 22px; }
+    .brand-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .65rem; font-weight: 900; color: #FF4714; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 22px; }
     .brand-eyebrow::before, .brand-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: #FF4714; opacity: .5; }
     .brand-name { font-size: clamp(2.2rem, 7.5vw, 5rem); font-weight: 900; color: #111; letter-spacing: -.065em; line-height: 1; word-break: keep-all; }
     .brand-name .wawa { color: #FF4714; }
@@ -200,20 +200,20 @@
     .brand-feat:hover { background: #fffaf8; }
     .bf-num { font-size: 3.6rem; font-weight: 900; color: #111; letter-spacing: -.04em; line-height: 1; margin-bottom: 14px; opacity: .07; }
     .bf-bar { width: 32px; height: 3px; background: #FF4714; border-radius: 2px; margin-bottom: 16px; }
-    .bf-text { font-size: 1.5rem; font-weight: 800; color: #111; line-height: 1.45; word-break: keep-all; }
+    .bf-text { font-size: 1.4rem; font-weight: 900; color: #111; line-height: 1.45; word-break: keep-all; }
     .bf-text em { display: block; font-style: normal; color: #FF4714; font-size: 1.35rem; font-weight: 700; margin-top: 6px; }
 
     /* ── RESULT SLIDER ── */
     .result-section { background: #0a0a0a; padding: 90px 0 80px; }
     .result-head { text-align: center; padding: 0 24px; margin-bottom: 48px; }
-    .result-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 18px; }
+    .result-eyebrow { font-size: .68rem; font-weight: 900; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 18px; }
     .result-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #fff; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
     .result-title em { color: #FF4714; font-style: normal; }
     .result-sub { margin-top: 14px; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: #ccc; }
     /* 플래너 섹션 */
     .planner-section { background: #fff; padding: 88px 24px 96px; }
     .planner-inner { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0; }
-    .planner-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
+    .planner-eyebrow { font-size: .68rem; font-weight: 900; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
     .planner-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: #111; letter-spacing: -.06em; line-height: 1.2; text-align: center; word-break: keep-all; margin-bottom: 36px; }
     .planner-title em { font-style: normal; background: linear-gradient(90deg, #FF4714, #f5af19); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-top: 32px; line-height: 1.7; word-break: keep-all; }
@@ -338,7 +338,7 @@
         word-break: keep-all; display: flex; align-items: center; justify-content: center;
         white-space: nowrap; background: #fafafa; transition: background .3s ease, transform .3s ease;
     }
-    .comp-item.left { color: #777; font-weight: 400; border-radius: 16px 0 0 16px; }
+    .comp-item.left { color: #777; font-weight: 500; border-radius: 16px 0 0 16px; }
     .comp-item.right { color: #FF4714; font-weight: 900; background: #fff5f2; border-radius: 0 16px 16px 0; border: 2px solid #FF4714; border-left: none; }
     .comp-row:hover .comp-item.left { background: #f0f0f0; }
     .comp-row:hover .comp-item.right { background: #ffe8e0; transform: translateX(3px); }
@@ -373,7 +373,7 @@
     .feature5-card { background: #fff; border-radius: 14px; padding: 20px 22px; box-shadow: 0 3px 14px rgba(0,0,0,.07); display: flex; align-items: flex-start; gap: 14px; border-left: 4px solid #FF4714; transition: all .3s ease; }
     .feature5-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
     .feature5-num { font-size: 1.3rem; font-weight: 900; color: #FF4714; min-width: 32px; line-height: 1.2; flex-shrink: 0; }
-    .feature5-text { font-size: .93rem; font-weight: 600; color: #333; line-height: 1.6; }
+    .feature5-text { font-size: .88rem; font-weight: 700; color: #333; line-height: 1.6; }
 
     /* ── INFO TABLE ── */
     .table-wrap { overflow-x: auto; margin-top: 28px; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.08); }
@@ -394,7 +394,7 @@
     .feature-card:nth-child(4)::before { background: linear-gradient(90deg,#F59E0B,#EF4444); }
     .feature-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.15); }
     .feature-num { font-size: .75rem; font-weight: 700; color: #FF4714; letter-spacing: .1em; margin-bottom: 8px; }
-    .feature-text { font-size: .92rem; font-weight: 600; color: #ccc; line-height: 1.55; }
+    .feature-text { font-size: .88rem; font-weight: 700; color: #ccc; line-height: 1.55; }
     .feature-card-light { background: #fff; border: 1px solid #e5e5e5; border-radius: 16px; padding: 24px 22px; position: relative; overflow: hidden; transition: all .3s ease; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
     .feature-card-light::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
     .feature-card-light:nth-child(1)::before { background: linear-gradient(90deg,#3B82F6,#8B5CF6); }
@@ -426,7 +426,7 @@
     .ba-list { list-style: none; padding: 22px 28px; display: flex; flex-direction: column; gap: 14px; }
     .before-card .ba-list { background: #fff; }
     .after-card  .ba-list { background: #fff8f6; }
-    .ba-item { display: flex; align-items: center; gap: 12px; font-size: .95rem; font-weight: 600; }
+    .ba-item { display: flex; align-items: center; gap: 12px; font-size: .9rem; font-weight: 700; }
     .ba-icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; flex-shrink: 0; }
     .before-icon { background: #eee; color: #999; }
     .after-icon  { background: #FF4714; color: #fff; }
@@ -459,12 +459,12 @@
     .rv-card:hover { transform: translateY(-4px); border-color: rgba(255,71,20,.3); }
     .rv-text { font-size: .92rem; color: #ccc; line-height: 1.7; flex: 1; }
     .rv-star { font-size: .88rem; color: #FF4714; }
-    .rv-name { font-size: .78rem; color: #555; font-weight: 600; }
+    .rv-name { font-size: .75rem; color: #555; font-weight: 700; }
 
     /* 지도 섹션 */
     .map-section { background: #fff; padding: 72px 24px 80px; }
     .map-head { text-align: center; margin-bottom: 28px; }
-    .map-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 14px; }
+    .map-eyebrow { font-size: .68rem; font-weight: 900; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 14px; }
     .map-name { font-size: clamp(1.4rem, 4vw, 2rem); font-weight: 900; color: #111; letter-spacing: -.04em; margin-bottom: 8px; }
     .map-addr { font-size: .9rem; color: #888; font-weight: 500; line-height: 1.6; }
     .map-frame { width: 100%; height: 360px; border-radius: 20px; border: 4px solid #FF4714; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,.15); }
