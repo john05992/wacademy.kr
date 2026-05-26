@@ -357,6 +357,13 @@
     .hero-search input { flex: 1; border: none; outline: none; padding: 15px 22px; font-size: .92rem; font-family: inherit; }
     .hero-search button { background: var(--grad); color: var(--white); border: none; cursor: pointer; padding: 0 26px; font-size: .9rem; font-weight: 700; font-family: inherit; white-space: nowrap; transition: opacity .15s; }
     .hero-search button:hover { opacity: .88; }
+    /* 자동완성 드롭다운 */
+    .search-wrap { position: relative; max-width: 500px; margin: 0 auto; }
+    .search-wrap .hero-search { max-width: 100%; margin: 0; }
+    .ac-dropdown { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,.18); overflow: hidden; z-index: 999; display: none; }
+    .ac-dropdown.open { display: block; }
+    .ac-item { padding: 13px 22px; font-size: .92rem; color: #222; cursor: pointer; transition: background .15s; }
+    .ac-item:hover, .ac-item.active { background: #fff5f2; color: var(--orange); font-weight: 700; }
 
     /* ── 신뢰 지표 ── */
     .trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 20px; }
@@ -637,9 +644,12 @@
   <div class="hero-badge">전국 교육 정보 플랫폼</div>
   <h2>등록 전,<br>수강료부터 확인하세요</h2>
   <p class="hero-sub">등록하기 전까지 수강료를 알 수 없었던 답답함,<br>와카데미에서 미리 비교하고 결정하세요.</p>
-  <div class="hero-search">
-    <input type="text" placeholder="지역명을 입력하세요  (예: 상암동, 분당구)" aria-label="검색">
-    <button type="button">검색</button>
+  <div class="search-wrap">
+    <div class="hero-search">
+      <input type="text" id="regionInput" placeholder="지역명을 입력하세요  (예: 상암동, 분당구)" aria-label="검색" autocomplete="off">
+      <button type="button" id="regionBtn">검색</button>
+    </div>
+    <div class="ac-dropdown" id="acDropdown"></div>
   </div>
 </section>
 
@@ -1237,6 +1247,95 @@
   });
   document.getElementById('vidClose').addEventListener('click', closeVid);
   overlay.addEventListener('click', function(e) { if (e.target === overlay) closeVid(); });
+</script>
+
+<script>
+(function() {
+  var input    = document.getElementById('regionInput');
+  var btn      = document.getElementById('regionBtn');
+  var dropdown = document.getElementById('acDropdown');
+  var dongMap  = {};
+  var activeIdx = -1;
+
+  // dong_map.json 로드
+  fetch('/dong_map.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) { dongMap = data; });
+
+  function getMatches(q) {
+    if (!q) return [];
+    var results = [];
+    var keys = Object.keys(dongMap);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i].indexOf(q) !== -1) {
+        results.push(keys[i]);
+        if (results.length >= 8) break;
+      }
+    }
+    return results;
+  }
+
+  function renderDropdown(matches) {
+    if (!matches.length) {
+      dropdown.classList.remove('open');
+      return;
+    }
+    dropdown.innerHTML = matches.map(function(name, i) {
+      return '<div class="ac-item" data-url="' + dongMap[name] + '">' + name + '</div>';
+    }).join('');
+    dropdown.classList.add('open');
+    activeIdx = -1;
+
+    dropdown.querySelectorAll('.ac-item').forEach(function(el) {
+      el.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        location.href = el.getAttribute('data-url');
+      });
+    });
+  }
+
+  function navigate() {
+    var q = input.value.trim();
+    if (!q) return;
+    // 정확히 일치하는 게 있으면 바로 이동
+    if (dongMap[q]) { location.href = dongMap[q]; return; }
+    // 첫 번째 매치로 이동
+    var matches = getMatches(q);
+    if (matches.length) location.href = dongMap[matches[0]];
+  }
+
+  input.addEventListener('input', function() {
+    renderDropdown(getMatches(input.value.trim()));
+  });
+
+  // 키보드 방향키 + Enter
+  input.addEventListener('keydown', function(e) {
+    var items = dropdown.querySelectorAll('.ac-item');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, -1);
+    } else if (e.key === 'Enter') {
+      if (activeIdx >= 0 && items[activeIdx]) {
+        location.href = items[activeIdx].getAttribute('data-url');
+      } else {
+        navigate();
+      }
+      return;
+    }
+    items.forEach(function(el, i) { el.classList.toggle('active', i === activeIdx); });
+    if (items[activeIdx]) input.value = items[activeIdx].textContent;
+  });
+
+  btn.addEventListener('click', navigate);
+
+  // 외부 클릭 시 드롭다운 닫기
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.search-wrap')) dropdown.classList.remove('open');
+  });
+})();
 </script>
 
 </body>
