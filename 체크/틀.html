@@ -456,6 +456,8 @@
     .bottom-cta-section::before { content: ''; position: absolute; bottom: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 480px; background: radial-gradient(circle, rgba(255,71,20,.08) 0%, transparent 70%); pointer-events: none; }
     .bottom-cta-section h2 { font-size: clamp(1.8rem, 5vw, 3.2rem); font-weight: 900; color: #fff; margin-bottom: 16px; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
     .bottom-cta-section h2 em { color: #FF4714; font-style: normal; }
+    .bot-heading { font-size: clamp(1.8rem, 5vw, 3.2rem); font-weight: 900; color: #fff; margin-bottom: 16px; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
+    .bot-heading em { color: #FF4714; font-style: normal; }
     .bot-sub { font-size: 1rem; color: #555; margin-bottom: 52px; line-height: 1.75; }
     .bot-btn { display: inline-flex; align-items: center; gap: 10px; background: #FF4714; color: #fff; text-decoration: none; padding: 20px 52px; border-radius: 99px; font-size: 1.2rem; font-weight: 900; letter-spacing: -.01em; box-shadow: 0 0 0 6px rgba(255,71,20,.15), 0 8px 32px rgba(255,71,20,.5); animation: pcta-blink 1.5s ease-in-out infinite; transition: transform .3s; white-space: nowrap; }
     .bot-btn:hover { animation: none; transform: translateY(-3px) scale(1.04); box-shadow: 0 0 0 10px rgba(255,71,20,.12), 0 16px 44px rgba(255,71,20,.6); }
@@ -463,6 +465,22 @@
     @media (max-width: 480px) {
       .monologue { font-size: 1.35rem; }
       .fact-title { font-size: 1.9rem; }
+    }
+
+    /* ── LINK SECTION (레벨1~3 하위 링크) ── */
+    .lk-section { background: #f8f8f6; padding: 64px 24px 56px; border-bottom: 1px solid #ebebeb; }
+    .lk-eyebrow { display: block; font-size: .68rem; font-weight: 900; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 12px; }
+    .lk-section h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); font-weight: 900; color: #111; letter-spacing: -.04em; line-height: 1.25; margin-bottom: 36px; }
+    .lk-group { margin-bottom: 28px; }
+    .lk-group:last-child { margin-bottom: 0; }
+    .lk-h3 { display: block; font-size: .72rem; font-weight: 900; color: #FF4714; letter-spacing: .18em; text-transform: uppercase; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 2px solid #FF4714; }
+    .lk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 10px; }
+    .lk-item { display: block; height: 52px; line-height: 52px; padding: 0 16px; background: #fff; border: 1.5px solid #e8e8e8; border-radius: 12px; font-size: .84rem; font-weight: 700; color: #333; text-decoration: none; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 2px 8px rgba(0,0,0,.04); transition: all .2s ease; }
+    .lk-item:hover { background: #FF4714; color: #fff; border-color: #FF4714; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,71,20,.28); }
+    @media (max-width: 480px) {
+      .lk-section { padding: 48px 20px 44px; }
+      .lk-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .lk-item { height: 48px; line-height: 48px; font-size: .82rem; }
     }
   </style>
 </head>
@@ -748,6 +766,8 @@
     <img src="/images/방법론.webp?{{지역키워드}}{{메인키워드}}방법론" alt="{{지역키워드}} {{메인키워드}} 방법론" width="520" height="349" loading="lazy">
   </div>
 </section>
+
+{{링크섹션}}
 
 <!-- ══════════════════════════════════════════
      SECTION 1 - 고르는 방법
@@ -1088,10 +1108,10 @@
      BOTTOM CTA (고정)
 ══════════════════════════════════════════ -->
 <section class="bottom-cta-section">
-  <h2><em>{{지역키워드}} {{메인키워드}}</em><br>정보가 도움이 되셨나요?</h2>
+  <p class="bot-heading"><em>{{지역키워드}} {{메인키워드}}</em><br>정보가 도움이 되셨나요?</p>
   <p class="bot-sub">더 많은 지역 학원 정보는 와카데미에서 확인하세요.</p>
-  <a href="https://wacademy.kr" class="bot-btn" target="_blank" rel="noopener">
-    와카데미에서 더 보기 &rarr;
+  <a href="{{상위링크}}" class="bot-btn">
+    정보 더 보기 &rarr;
   </a>
 </section>
 

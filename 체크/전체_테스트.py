@@ -1,0 +1,344 @@
+# -*- coding: utf-8 -*-
+"""
+전체_테스트.py
+==============
+전체.py 기반 테스트 버전 — 충청남도만 생성, 출력 위치: 체크/충청남도/
+
+레벨1~3에 하위 링크 섹션 추가:
+  레벨1 (도)   → 시구 링크 목록
+  레벨2 (시구) → 동 링크 목록
+  레벨3 (동)   → 키워드 링크 (학원성격 / 고등학생 / 중학생 / 초등학생)
+"""
+
+import os, sys, json, random
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
+WACADEMY_DIR = os.path.dirname(BASE_DIR)
+BONMUN_DIR   = os.path.join(os.path.dirname(WACADEMY_DIR), '본문뽑기')
+
+TEMPLATE     = os.path.join(BASE_DIR, '틀.html')
+ACADEMY_LIST = os.path.join(WACADEMY_DIR, '학원목록.txt')
+KEYWORD_LIST = os.path.join(WACADEMY_DIR, '메인학원키워드.txt')
+REVIEW_BASE  = os.path.join(BONMUN_DIR, '아카데미', '리뷰')
+RESULT_BASE  = os.path.join(BONMUN_DIR, '아카데미')
+
+MAIN_FIXED   = '학원'
+TEST_DO      = '충청남도'
+TEST_OUT     = os.path.join(BASE_DIR, TEST_DO)   # 체크/충청남도/
+
+# ── 키워드 분류 ──────────────────────────────────────────────────────────
+GRADE_GROUPS = [
+    ('고등학생', ['고등']),
+    ('중학생',   ['중등', '중학생']),
+    ('초등학생', ['초등', '초등학생']),
+]
+
+def classify_keywords(keywords):
+    groups = {'학원성격': [], '고등학생': [], '중학생': [], '초등학생': []}
+    for kw in keywords:
+        matched = None
+        for group_name, words in GRADE_GROUPS:
+            if any(w in kw for w in words):
+                matched = group_name
+                break
+        groups[matched or '학원성격'].append(kw)
+    return groups
+
+
+# ── 데이터 로드 ─────────────────────────────────────────────────────────
+
+def load_dong_map():
+    dong_map = {}
+    cur_do = cur_si = cur_branch = cur_photo = ''
+    with open(ACADEMY_LIST, encoding='utf-8') as f:
+        for line in f:
+            parts = line.rstrip('\n').split('\t')
+            if parts[0].strip():
+                cur_do     = parts[0].strip()
+                cur_si     = parts[1].strip() if len(parts) > 1 else ''
+                cur_branch = parts[2].strip() if len(parts) > 2 else ''
+                cur_photo  = parts[4].strip() if len(parts) > 4 else ''
+            dong     = parts[3].strip() if len(parts) > 3 else ''
+            위치사진 = parts[4].strip() if len(parts) > 4 else cur_photo
+            if dong and cur_do and cur_si:
+                dong_map[dong] = (cur_do, cur_si, cur_branch, 위치사진)
+    return dong_map
+
+
+def load_keywords():
+    with open(KEYWORD_LIST, encoding='utf-8') as f:
+        return [l.strip() for l in f if l.strip()]
+
+
+def pick_random_review(n=6):
+    if not os.path.isdir(REVIEW_BASE):
+        return ['리뷰 데이터 없음'] * n
+    folders = [d for d in os.listdir(REVIEW_BASE)
+               if os.path.isdir(os.path.join(REVIEW_BASE, d)) and d.isdigit()]
+    if not folders:
+        return ['리뷰 데이터 없음'] * n
+    folder_path = os.path.join(REVIEW_BASE, random.choice(folders))
+    files = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
+    if not files:
+        return ['리뷰 데이터 없음'] * n
+    with open(os.path.join(folder_path, random.choice(files)), encoding='utf-8') as f:
+        lines = [l.strip() for l in f if l.strip()]
+    return random.sample(lines, min(n, len(lines)))
+
+
+def load_json(path):
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def safe(val):
+    return val if val else ''
+
+
+# ── 링크 섹션 빌더 ──────────────────────────────────────────────────────
+
+def build_link_section_lv1(do_nm, si_list):
+    """레벨1: 도 → 시구 링크"""
+    items = ''.join(
+        f'<a href="/{do_nm}/{si}/" class="lk-item">{si}</a>'
+        for si in si_list
+    )
+    return f'''
+<nav class="lk-section" aria-label="지역별 학원 정보">
+  <div class="sec-inner">
+    <span class="lk-eyebrow">지역별 학원 정보</span>
+    <h2>{do_nm} 학원 상세정보</h2>
+    <div class="lk-group">
+      <div class="lk-grid">{items}</div>
+    </div>
+  </div>
+</nav>'''
+
+
+def build_link_section_lv2(do_nm, si_nm, dong_list):
+    """레벨2: 시구 → 동 링크"""
+    items = ''.join(
+        f'<a href="/{do_nm}/{si_nm}/{dong}/" class="lk-item">{dong}</a>'
+        for dong in dong_list
+    )
+    return f'''
+<nav class="lk-section" aria-label="동별 학원 정보">
+  <div class="sec-inner">
+    <span class="lk-eyebrow">동별 학원 정보</span>
+    <h2>{si_nm} 학원 상세정보</h2>
+    <div class="lk-group">
+      <div class="lk-grid">{items}</div>
+    </div>
+  </div>
+</nav>'''
+
+
+def build_link_section_lv3(do_nm, si_nm, dong, keywords, result_base):
+    """레벨3: 동 → 키워드 그룹별 링크 (result.html 있는 것만)"""
+    groups = classify_keywords(keywords)
+    group_order = ['학원성격', '고등학생', '중학생', '초등학생']
+    group_label = {
+        '학원성격': '학원 성격',
+        '고등학생': '고등학생',
+        '중학생':   '중학생',
+        '초등학생': '초등학생',
+    }
+
+    group_blocks = ''
+    for g in group_order:
+        kws = groups.get(g, [])
+        if not kws:
+            continue
+        valid = [
+            kw for kw in kws
+            if os.path.exists(os.path.join(result_base, do_nm, si_nm, dong, kw, 'result.html'))
+        ]
+        if not valid:
+            continue
+        items = ''.join(
+            f'<a href="/{do_nm}/{si_nm}/{dong}/{kw}/" class="lk-item">{kw}</a>'
+            for kw in valid
+        )
+        group_blocks += f'''
+    <div class="lk-group">
+      <p class="lk-h3">{group_label[g]}</p>
+      <div class="lk-grid">{items}</div>
+    </div>'''
+
+    if not group_blocks:
+        return ''
+
+    return f'''
+<nav class="lk-section" aria-label="학원 유형별 정보">
+  <div class="sec-inner">
+    <span class="lk-eyebrow">학원 유형별 정보</span>
+    <h2>{dong} 학원 상세정보</h2>
+    {group_blocks}
+  </div>
+</nav>'''
+
+
+# ── 치환 ────────────────────────────────────────────────────────────────
+
+def build_page(template, data, reviews, 지역, 메인, 위치사진='', 링크섹션='', 상위링크='/'):
+    html = template
+
+    html = html.replace('{{링크섹션}}',    링크섹션)
+    html = html.replace('{{상위링크}}',    상위링크)
+    html = html.replace('{{위치사진_enc}}', 위치사진.replace(' ', '%20'))
+    html = html.replace('{{위치사진}}',     위치사진)
+    html = html.replace('{{지역키워드}}',   지역)
+    html = html.replace('{{메인키워드}}',   메인)
+    html = html.replace('{{meta}}',         safe(data.get('meta')))
+
+    s1 = data.get('section1', {})
+    html = html.replace('{{section1_h2}}', safe(s1.get('h2')))
+    html = html.replace('{{section1_p}}',  safe(s1.get('p')))
+
+    s2 = data.get('section2', {})
+    html = html.replace('{{section2_h2}}', safe(s2.get('h2')))
+    html = html.replace('{{section2_p}}',  safe(s2.get('p')))
+    for i, item in enumerate(s2.get('list', [])):
+        html = html.replace(f'{{{{section2_list_{i}}}}}', safe(item))
+
+    s3 = data.get('section3', {})
+    html = html.replace('{{section3_h2}}', safe(s3.get('h2')))
+    html = html.replace('{{section3_p}}',  safe(s3.get('p')))
+    for i, item in enumerate(s3.get('list', [])):
+        html = html.replace(f'{{{{section3_list_{i}}}}}', safe(item))
+    for i, row in enumerate(s3.get('table', [])):
+        html = html.replace(f'{{{{section3_table_{i}_항목}}}}', safe(row.get('항목')))
+        html = html.replace(f'{{{{section3_table_{i}_내용}}}}', safe(row.get('내용')))
+
+    s4 = data.get('section4', {})
+    html = html.replace('{{section4_h2}}', safe(s4.get('h2')))
+    html = html.replace('{{section4_p}}',  safe(s4.get('p')))
+    for i, item in enumerate(s4.get('list', [])):
+        html = html.replace(f'{{{{section4_list_{i}}}}}', safe(item))
+
+    s5 = data.get('section5', {})
+    html = html.replace('{{section5_h2}}', safe(s5.get('h2')))
+    html = html.replace('{{section5_p}}',  safe(s5.get('p')))
+    for i, row in enumerate(s5.get('table', [])):
+        html = html.replace(f'{{{{section5_table_{i}_구분}}}}', safe(row.get('구분')))
+        html = html.replace(f'{{{{section5_table_{i}_대상}}}}', safe(row.get('대상')))
+        html = html.replace(f'{{{{section5_table_{i}_내용}}}}', safe(row.get('내용')))
+
+    s6 = data.get('section6', {})
+    html = html.replace('{{section6_h2}}', safe(s6.get('h2')))
+    html = html.replace('{{section6_p}}',  safe(s6.get('p')))
+
+    s7 = data.get('section7', {})
+    html = html.replace('{{section7_h2}}', safe(s7.get('h2')))
+    html = html.replace('{{section7_p}}',  safe(s7.get('p')))
+    for i, item in enumerate(s7.get('list', [])):
+        html = html.replace(f'{{{{section7_list_{i}}}}}', safe(item))
+
+    for i, faq in enumerate(data.get('section8', {}).get('faq', [])):
+        html = html.replace(f'{{{{section8_faq_{i}_q}}}}', safe(faq.get('q')))
+        html = html.replace(f'{{{{section8_faq_{i}_a}}}}', safe(faq.get('a')))
+
+    for i, rv in enumerate(reviews):
+        html = html.replace(f'{{{{rv_{i}}}}}', rv)
+
+    return html
+
+
+# ── 생성 핵심 함수 ───────────────────────────────────────────────────────
+
+def generate(지역, 메인, result_path, out_dir, template, 위치사진='', 링크섹션='', 상위링크='/'):
+    if not os.path.exists(result_path):
+        return False
+
+    os.makedirs(out_dir, exist_ok=True)
+    data    = load_json(result_path)
+    reviews = pick_random_review()
+    html    = build_page(template, data, reviews, 지역, 메인, 위치사진, 링크섹션, 상위링크)
+
+    out_path = os.path.join(out_dir, 'index.html')
+    with open(out_path, 'w', encoding='utf-8') as f:
+        f.write(html)
+    print(f'[OK] {out_path}')
+    return True
+
+
+# ── 메인 ────────────────────────────────────────────────────────────────
+
+def main():
+    dong_map = load_dong_map()
+    keywords = load_keywords()
+
+    with open(TEMPLATE, encoding='utf-8') as f:
+        template = f.read()
+
+    # 충청남도 항목만 필터
+    test_entries = {
+        dong: info for dong, info in dong_map.items()
+        if info[0] == TEST_DO
+    }
+
+    # 레벨2 목록: {do_nm: [si_nm, ...]}
+    do_si_map = {}
+    # 레벨3 목록: {(do_nm, si_nm): [dong, ...]}
+    si_dong_map = {}
+
+    for dong, (do_nm, si_nm, _, _) in test_entries.items():
+        do_si_map.setdefault(do_nm, [])
+        if si_nm not in do_si_map[do_nm]:
+            do_si_map[do_nm].append(si_nm)
+        key = (do_nm, si_nm)
+        si_dong_map.setdefault(key, [])
+        if dong not in si_dong_map[key]:
+            si_dong_map[key].append(dong)
+
+    ok = skip = 0
+    done_lv1 = set()
+    done_lv2 = set()
+    done_lv3 = set()
+
+    for dong, (do_nm, si_nm, branch, 위치사진) in test_entries.items():
+
+        # ── 레벨1 ────────────────────────────────────────────────────────
+        if do_nm not in done_lv1:
+            done_lv1.add(do_nm)
+            r_path  = os.path.join(RESULT_BASE, do_nm, 'result.html')
+            out_dir = os.path.join(TEST_OUT)
+            si_list = do_si_map.get(do_nm, [])
+            lk = build_link_section_lv1(do_nm, si_list)
+            r = generate(do_nm, MAIN_FIXED, r_path, out_dir, template, '', lk, '/')
+            ok += r; skip += not r
+
+        # ── 레벨2 ────────────────────────────────────────────────────────
+        if (do_nm, si_nm) not in done_lv2:
+            done_lv2.add((do_nm, si_nm))
+            r_path   = os.path.join(RESULT_BASE, do_nm, si_nm, 'result.html')
+            out_dir  = os.path.join(TEST_OUT, si_nm)
+            dong_list = si_dong_map.get((do_nm, si_nm), [])
+            lk = build_link_section_lv2(do_nm, si_nm, dong_list)
+            r = generate(si_nm, MAIN_FIXED, r_path, out_dir, template, '', lk, f'/{do_nm}/')
+            ok += r; skip += not r
+
+        # ── 레벨3 ────────────────────────────────────────────────────────
+        if (do_nm, si_nm, dong) not in done_lv3:
+            done_lv3.add((do_nm, si_nm, dong))
+            r_path  = os.path.join(RESULT_BASE, do_nm, si_nm, dong, 'result.html')
+            out_dir = os.path.join(TEST_OUT, si_nm, dong)
+            lk = build_link_section_lv3(do_nm, si_nm, dong, keywords, RESULT_BASE)
+            r = generate(dong, MAIN_FIXED, r_path, out_dir, template, 위치사진, lk, f'/{do_nm}/{si_nm}/')
+            ok += r; skip += not r
+
+        # ── 레벨4 ────────────────────────────────────────────────────────
+        for kw in keywords:
+            r_path  = os.path.join(RESULT_BASE, do_nm, si_nm, dong, kw, 'result.html')
+            out_dir = os.path.join(TEST_OUT, si_nm, dong, kw)
+            r = generate(dong, kw, r_path, out_dir, template, 위치사진, '', f'/{do_nm}/{si_nm}/{dong}/')
+            ok += r; skip += not r
+
+    print(f'\n완료: {ok}개 생성  /  {skip}개 스킵(result.html 없음)')
+    print(f'출력 위치: {TEST_OUT}')
+
+
+if __name__ == '__main__':
+    main()
