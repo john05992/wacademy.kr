@@ -8,8 +8,20 @@
   <meta property="og:title" content="동백동 고등 수학학원, 지금 찾고 계시나요?">
   <meta property="og:description" content="동백동 고등 수학학원 선택 시 고려해야 할 핵심 포인트를 간결히 정리한 안내문">
   <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <!-- 1) variable font + swap: 텍스트 즉시 표시 (FOIT 차단) -->
+  <style>
+    @font-face {
+      font-family: 'Pretendard';
+      src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/PretendardVariable.woff2') format('woff2-variations');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <!-- 2) dynamic subset: 실제 사용 글자만 다운로드 (비렌더블로킹) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -1046,42 +1058,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">아이가 학원 수업 후 노트를 정리해서 오는 게 인상적이에요</p>
+      <p class="rv-text">밝은 조명 덕분에 장시간 공부해도 눈이 편해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">시험 전에 주는 요약본이 정말 도움이 많이 됐어요</p>
+      <p class="rv-text">상담 후 따뜻한 말 한마디가 오랫동안 기억에 남아요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">공부 계획을 함께 짜주셔서 무리 없이 따라갈 수 있어요</p>
+      <p class="rv-text">상담 때 쉬운 말로 설명해주셔서 이해가 쏙쏙 됐어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">선생님이 내 질문을 미리 예상하고 설명해주셔요</p>
+      <p class="rv-text">자습실은 조용하고 자리 배치도 집중하기 좋아요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">상담 시간에 구체적인 피드백을 주셔서 방향이 잡혔어요</p>
+      <p class="rv-text">작은 변화도 놓치지 않고 챙겨주는 운영이 좋아요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">선생님이 오답 분석을 꼼꼼히 해주셔서 실수를 줄일 수 있었어요</p>
+      <p class="rv-text">성취한 경험 하나하나가 의미 있게 여겨져요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -1102,7 +1114,7 @@
   </div>
   <script>
   (function(){
-    var LAT=37.26928467, LNG=127.15323009, LEVEL=7;
+    var LAT=37.26942094, LNG=127.15329379, LEVEL=7;
     function initMap(){
       var el=document.getElementById('wawaMap');
       if(!el) return;
