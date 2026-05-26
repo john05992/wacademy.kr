@@ -98,6 +98,7 @@ def safe(val):
 def build_page(template, data, reviews, 지역, 메인, 위치사진=''):
     html = template
 
+    html = html.replace('{{위치사진_enc}}', 위치사진.replace(' ', '%20'))
     html = html.replace('{{위치사진}}', 위치사진)
     html = html.replace('{{지역키워드}}', 지역)
     html = html.replace('{{메인키워드}}', 메인)
