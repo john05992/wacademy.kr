@@ -461,15 +461,7 @@
     .rv-star { font-size: .88rem; color: #FF4714; }
     .rv-name { font-size: .75rem; color: #555; font-weight: 700; }
 
-    /* 지도 섹션 */
-    .map-section { background: #fff; padding: 72px 24px 80px; }
-    .map-head { text-align: center; margin-bottom: 28px; }
-    .map-eyebrow { font-size: .68rem; font-weight: 900; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 14px; }
-    .map-name { font-size: clamp(1.4rem, 4vw, 2rem); font-weight: 900; color: #111; letter-spacing: -.04em; margin-bottom: 8px; }
-    .map-addr { font-size: .9rem; color: #888; font-weight: 500; line-height: 1.6; }
-    .map-frame { width: 100%; height: 360px; border-radius: 20px; border: 4px solid #FF4714; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,.15); }
-
-    /* ── BOTTOM CTA ── */
+/* ── BOTTOM CTA ── */
     .bottom-cta-section { background: #0a0a0a; padding: 110px 24px 140px; text-align: center; position: relative; overflow: hidden; }
     .bottom-cta-section::before { content: ''; position: absolute; bottom: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 480px; background: radial-gradient(circle, rgba(255,71,20,.08) 0%, transparent 70%); pointer-events: none; }
     .bottom-cta-section h2 { font-size: clamp(1.8rem, 5vw, 3.2rem); font-weight: 900; color: #fff; margin-bottom: 16px; letter-spacing: -.04em; line-height: 1.3; word-break: keep-all; }
@@ -1058,75 +1050,48 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">교내 대회 준비가 꾸준한 도전으로 이어져 자신감이 커요</p>
+      <p class="rv-text">교사의 친절한 응답이 아이에게 확신을 심어주었습니다.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">옆자리 열정적인 친구 덕분에 공부 태도가 확 바뀌었어요</p>
+      <p class="rv-text">조별 활동을 통해 협력의 가치를 몸소 느꼈어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학부모와 협력하는 관리 구조가 아이 성장에 큰 도움이 돼요</p>
+      <p class="rv-text">수업 후 아이가 개념을 정리해 말해 줍니다.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">노력 끝에 확인된 성장 덕분에 아이가 웃으며 공부해요</p>
+      <p class="rv-text">예상문제 이상의 퀄리티에 놀라움을 느꼈어요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">성장 체감하게 하는 수업 방식이 매일 기대돼요</p>
+      <p class="rv-text">교육 철학이 인내와 신뢰를 보여줘서 감동적이에요.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">수업 방식이 학습 자신감을 키워줘서 아이가 웃어요</p>
+      <p class="rv-text">친구와 문제 풀이 방식을 비교하며 새로운 깨달음을 얻었습니다.</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
   </div>
-</section>
-
-<!-- 지도 섹션 -->
-<section class="map-section">
-  <div class="map-head">
-    <p class="map-eyebrow">LOCATION</p>
-    <p class="map-name">동백점</p>
-    <p class="map-addr">경기도 용인시 기흥구 중동 동백3로11번길 3</p>
-  </div>
-  <div class="map-frame" id="wawaMapFrame">
-    <div id="wawaMap" style="width:100%;height:100%"></div>
-  </div>
-  <script>
-  (function(){
-    var LAT=37.26940657, LNG=127.15325236, LEVEL=7;
-    function initMap(){
-      var el=document.getElementById('wawaMap');
-      if(!el) return;
-      var map=new kakao.maps.Map(el,{center:new kakao.maps.LatLng(LAT,LNG),level:LEVEL});
-      new kakao.maps.Marker({map:map,position:new kakao.maps.LatLng(LAT,LNG)});
-    }
-    var s=document.createElement('script');
-    s.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey=8725ddafe3312f4d4433c2f390005b68&autoload=false';
-    s.onload=function(){kakao.maps.load(initMap);};
-    document.head.appendChild(s);
-  })();
-  </script>
 </section>
 
 <!-- ══════════════════════════════════════════

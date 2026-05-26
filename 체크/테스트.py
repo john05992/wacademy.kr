@@ -27,9 +27,6 @@ TEMPLATE        = os.path.join(BASE_DIR, '틀.html')
 ACADEMY_LIST    = os.path.join(WACADEMY_DIR, '학원목록.txt')
 REVIEW_BASE     = os.path.join(BONMUN_DIR, '아카데미', '리뷰')
 RESULT_BASE     = os.path.join(BONMUN_DIR, '아카데미')
-STORE_DATA_FILE = os.path.join(DESKTOP_DIR, 'perf.kr 사이트 html 백업', '15-지도.txt')
-
-KAKAO_KEY = '8725ddafe3312f4d4433c2f390005b68'
 
 
 # ── 학원목록.txt 파싱: 동 → (도, 시구, 지점명) ──────────────────────
@@ -59,59 +56,6 @@ def resolve_result_path(dong_map, 지역, 메인):
     path = os.path.join(RESULT_BASE, do_nm, si_nm, 지역, 메인, 'result.html')
     return path, do_nm, si_nm
 
-
-# ── 15-지도.txt 파싱: 지점명 → (lat, lng, addr) ──────────────────────
-
-def load_store_data():
-    """15-지도.txt allStoreData → {지점명: (lat, lng, addr)}"""
-    try:
-        with open(STORE_DATA_FILE, encoding='utf-8') as f:
-            content = f.read()
-    except FileNotFoundError:
-        return {}
-    stores = {}
-    blocks = re.findall(
-        r'name:\s*"([^"]+)".*?addr:\s*"([^"]+)".*?lat:\s*([\d.]+),?\s*\n\s*lng:\s*([\d.]+)',
-        content, re.DOTALL
-    )
-    for name, addr, lat, lng in blocks:
-        stores[name] = (float(lat), float(lng), addr)
-    return stores
-
-
-# ── 지도 HTML 생성 ────────────────────────────────────────────────────
-
-def build_map_html(지역, 지점명, lat, lng, addr):
-    # 1~10m 범위 랜덤 오프셋 (0.00001~0.00009도)
-    jitter = lambda: random.uniform(0.00001, 0.00009) * random.choice([-1, 1])
-    lat = round(lat + jitter(), 8)
-    lng = round(lng + jitter(), 8)
-    return f'''<!-- 지도 섹션 -->
-<section class="map-section">
-  <div class="map-head">
-    <p class="map-eyebrow">LOCATION</p>
-    <p class="map-name">{지점명}</p>
-    <p class="map-addr">{addr}</p>
-  </div>
-  <div class="map-frame" id="wawaMapFrame">
-    <div id="wawaMap" style="width:100%;height:100%"></div>
-  </div>
-  <script>
-  (function(){{
-    var LAT={lat}, LNG={lng}, LEVEL=7;
-    function initMap(){{
-      var el=document.getElementById('wawaMap');
-      if(!el) return;
-      var map=new kakao.maps.Map(el,{{center:new kakao.maps.LatLng(LAT,LNG),level:LEVEL}});
-      new kakao.maps.Marker({{map:map,position:new kakao.maps.LatLng(LAT,LNG)}});
-    }}
-    var s=document.createElement('script');
-    s.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey={KAKAO_KEY}&autoload=false';
-    s.onload=function(){{kakao.maps.load(initMap);}};
-    document.head.appendChild(s);
-  }})();
-  </script>
-</section>'''
 
 
 # ── 리뷰 랜덤 선택 ────────────────────────────────────────────────────
@@ -151,10 +95,9 @@ def safe(val):
 
 # ── 치환 ──────────────────────────────────────────────────────────────
 
-def build_page(template, data, reviews, 지역, 메인, map_html='', 위치사진=''):
+def build_page(template, data, reviews, 지역, 메인, 위치사진=''):
     html = template
 
-    html = html.replace('{{지도}}', map_html)
     html = html.replace('{{위치사진}}', 위치사진)
     html = html.replace('{{지역키워드}}', 지역)
     html = html.replace('{{메인키워드}}', 메인)
@@ -224,19 +167,11 @@ def main():
 
     # 학원목록.txt에서 도/시구/지점명 역추적 → result.html 경로 결정
     dong_map   = load_dong_map()
-    store_data = load_store_data()
     result_path, do_nm, si_nm = resolve_result_path(dong_map, args.지역, args.메인)
 
-    # 지점 매핑 → 지도 HTML 생성
     branch_name = dong_map.get(args.지역, ('', '', '', ''))[2]
     위치사진명  = dong_map.get(args.지역, ('', '', '', ''))[3]
-    map_html = ''
-    if branch_name and branch_name in store_data:
-        lat, lng, addr = store_data[branch_name]
-        map_html = build_map_html(args.지역, branch_name, lat, lng, addr)
-        print(f'지점       : {branch_name} ({lat}, {lng})')
-    else:
-        print(f'지점       : 매칭 없음 ({branch_name})')
+    print(f'지점       : {branch_name}')
 
     print(f'지역키워드 : {args.지역}')
     print(f'메인키워드 : {args.메인}')
@@ -258,7 +193,7 @@ def main():
     out_path = os.path.join(os.path.abspath(args.out), out_name)
 
     print(f'위치사진     : {위치사진명}')
-    html = build_page(template, data, reviews, args.지역, args.메인, map_html, 위치사진명)
+    html = build_page(template, data, reviews, args.지역, args.메인, 위치사진명)
 
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(html)
