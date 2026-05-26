@@ -205,11 +205,13 @@
   }
   </script>
 
-  <!-- Pretendard 폰트 -->
+  <!-- Pretendard 폰트 (비렌더블로킹) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"></noscript>
+  <!-- Swiper CSS (비렌더블로킹) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -797,16 +799,16 @@
     </div>
     <div class="swiper rs-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="oSvSalazA9k"><img src="images/card_e.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="pLt0AFEppQ8"><img src="images/result_b.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="ZzeWUEl2OHs"><img src="images/snap_g.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="MLEJs0LCFUU"><img src="images/story_a.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="3vzq2_NzF_s"><img src="images/real_j.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="GCjN8Y62tls"><img src="images/voice_c.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="4BfB0nAME7Y"><img src="images/member_h.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="2fC5LOnc7Ss"><img src="images/after_d.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="34nLY3zLu5A"><img src="images/review_f.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
-        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="5vdAODrj7e8"><img src="images/pick_i.webp" alt="수강생 후기" loading="lazy"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="oSvSalazA9k"><img src="images/card_e.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="pLt0AFEppQ8"><img src="images/result_b.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="ZzeWUEl2OHs"><img src="images/snap_g.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="MLEJs0LCFUU"><img src="images/story_a.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="3vzq2_NzF_s"><img src="images/real_j.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="GCjN8Y62tls"><img src="images/voice_c.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="4BfB0nAME7Y"><img src="images/member_h.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="2fC5LOnc7Ss"><img src="images/after_d.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="34nLY3zLu5A"><img src="images/review_f.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
+        <div class="swiper-slide rs-slide"><div class="rs-card" data-yt="5vdAODrj7e8"><img src="images/pick_i.webp" alt="수강생 후기" loading="lazy" width="200" height="200"><div class="rs-play"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="rgba(0,0,0,.45)"/><polygon points="17,13 34,22 17,31" fill="#fff"/></svg></div></div></div>
       </div>
       <div class="swiper-pagination rs-pagination"></div>
     </div>
@@ -1146,7 +1148,7 @@
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>학습정보</h4>
+          <h3>학습정보</h3>
           <ul>
             <li><a href="/초등/">초등</a></li>
             <li><a href="/중등/">중등</a></li>
@@ -1154,7 +1156,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>과목 가이드</h4>
+          <h3>과목 가이드</h3>
           <ul>
             <li><a href="/수학학원/">수학</a></li>
             <li><a href="/영어학원/">영어</a></li>
@@ -1162,7 +1164,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>지역별</h4>
+          <h3>지역별</h3>
           <ul>
             <li><a href="/아카데미/서울특별시/">서울</a></li>
             <li><a href="/아카데미/경기도/">경기</a></li>
@@ -1171,7 +1173,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>안내</h4>
+          <h3>안내</h3>
           <ul>
             <li><a href="/privacy/">개인정보처리방침</a></li>
             <li><a href="/terms/">이용약관</a></li>
