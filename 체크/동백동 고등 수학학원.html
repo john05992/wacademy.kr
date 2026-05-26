@@ -56,7 +56,7 @@
     .hero-section::before { content: ''; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 640px; height: 640px; background: radial-gradient(circle, rgba(255,71,20,.09) 0%, transparent 70%); pointer-events: none; }
     .hero-top-label { font-size: .85rem; font-weight: 700; color: #FF4714; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeInUp .6s both; }
     .hero-section h1 { font-size: clamp(2.4rem, 8vw, 5rem); font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: -.04em; margin-bottom: 28px; word-break: keep-all; animation: fadeInUp .7s .1s both; }
-    .hero-section h1 em { color: #FF4714; font-style: normal; }
+    .hero-section h1 em { font-style: normal; background: linear-gradient(90deg, #FF4714, #f5af19); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-sub { font-size: clamp(.95rem, 2.2vw, 1.1rem); color: #666; line-height: 1.75; margin-bottom: 48px; word-break: keep-all; animation: fadeInUp .7s .2s both; max-width: 560px; }
     .hero-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #FF4714; color: #fff; text-decoration: none; padding: 18px 42px; border-radius: 99px; font-size: 1.1rem; font-weight: 800; letter-spacing: -.01em; animation: fadeInUp .7s .3s both, pcta-blink 2s 1s ease-in-out infinite; transition: transform .3s, box-shadow .3s; white-space: nowrap; }
     .hero-cta-btn:hover { animation: none; transform: translateY(-3px) scale(1.04); box-shadow: 0 0 0 10px rgba(255,71,20,.12), 0 14px 40px rgba(255,71,20,.55); }
@@ -203,7 +203,7 @@
     .planner-inner { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0; }
     .planner-eyebrow { font-size: .72rem; font-weight: 800; color: #FF4714; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
     .planner-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: #111; letter-spacing: -.06em; line-height: 1.2; text-align: center; word-break: keep-all; margin-bottom: 36px; }
-    .planner-title em { color: #FF4714; font-style: normal; }
+    .planner-title em { font-style: normal; background: linear-gradient(90deg, #FF4714, #f5af19); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-top: 32px; line-height: 1.7; word-break: keep-all; }
     .planner-img-wrap { width: 100%; aspect-ratio: 1100 / 1300; border-radius: 24px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,.12); border: 1px solid #f0f0f0; }
     .planner-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -494,7 +494,7 @@
   <p class="hero-top-label">와카데미 학원 정보 안내</p>
 
   <!-- 유동: [지역키워드 + 메인키워드] -->
-  <h1><em>동백동 고등 수학학원,</em><br>일대일 수업 안내</h1>
+  <h1><em>동백동 고등 수학학원</em><br>일대일 수업 안내</h1>
 
   <a href="#pain" class="hero-cta-btn">수업 방식 자세히 보기 &darr;</a>
 
@@ -1027,42 +1027,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">아이가 질문을 두려워하지 않고 편하게 물어봐요</p>
+      <p class="rv-text">아이와 교사가 대화하며 목표를 세우는 방식이 신뢰를 줘요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이가 실수 노트를 꼼꼼히 채우며 책임감이 생겼어요</p>
+      <p class="rv-text">시험 전에 주는 예상문제가 실제 시험과 비슷해서 믿음이 갔어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학원에 다니고 나서 내신 성적이 확실히 올랐어요</p>
+      <p class="rv-text">학원 방문 전보다 아이의 공부 자세가 눈에 띄게 달라졌어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">처음엔 걱정 많았는데 상담 후 마음이 확실히 놓였어요</p>
+      <p class="rv-text">아이가 스터디 모임에 적극 참여하게 되면서 동기 부여가 생겼어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">선생님이 문제 풀이과정을 꼼꼼히 봐줘서 도움이 돼요</p>
+      <p class="rv-text">문제를 틀려도 왜 틀렸는지 원리를 설명해줘서 좌절이 줄었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">아이의 감정 상태까지 신경 써주는 게 느껴져서 고마워요</p>
+      <p class="rv-text">문제 접근 방식을 교정해주니 틀린 유형이 줄어들었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -1083,7 +1083,7 @@
   </div>
   <script>
   (function(){
-    var LAT=37.26933043, LNG=127.15324523, LEVEL=7;
+    var LAT=37.26943469, LNG=127.15330788, LEVEL=7;
     function initMap(){
       var el=document.getElementById('wawaMap');
       if(!el) return;
