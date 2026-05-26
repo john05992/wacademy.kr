@@ -206,6 +206,7 @@
     .planner-title em { font-style: normal; background: linear-gradient(90deg, #FF4714, #f5af19); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .planner-sub { font-size: clamp(.9rem, 2.5vw, 1.05rem); color: #888; font-weight: 500; text-align: center; margin-top: 32px; line-height: 1.7; word-break: keep-all; }
     .planner-img-wrap { width: 100%; aspect-ratio: 1100 / 1300; border-radius: 24px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,.12); border: 1px solid #f0f0f0; }
+    .planner-img-wrap--wide { aspect-ratio: 1531 / 1365; }
     .planner-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
     /* 상담 안내 섹션 */
     .consult-section {
@@ -708,7 +709,7 @@
   <div class="planner-inner">
     <p class="planner-eyebrow">COACHING CERTIFICATE</p>
     <p class="planner-title">일반적인 학원은<br><em>코칭 자격증</em>이 없습니다</p>
-    <div class="planner-img-wrap">
+    <div class="planner-img-wrap planner-img-wrap--wide">
       <img src="/images/코칭자격증.jpg?동백동고등 수학학원" alt="동백동 고등 수학학원 코칭 자격증">
     </div>
   </div>
@@ -1027,42 +1028,42 @@
   </div>
   <div class="rv-grid" style="max-width:960px;margin:28px auto 0">
     <div class="rv-card">
-      <p class="rv-text">질문을 자주 해도 편하게 받아주시니 아이가 부담 없이 말해요</p>
+      <p class="rv-text">실수 원인 분석이 정확해 다시는 같은 실수 못 해요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학습 리듬이 끊기지 않도록 복습 루틴을 체계적으로 잡아줘요</p>
+      <p class="rv-text">진로 상담을 통해 자기 확신이 확고해졌어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">시험 후 피드백 카드로 아이의 성장 과정을 자세히 알 수 있어요</p>
+      <p class="rv-text">입학 초반 불편함이 즐거운 학습으로 바뀌었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">복잡한 문제도 손쉽게 정리해주셔서 머릿속이 정리되는 느낌이에요</p>
+      <p class="rv-text">상담에서 작은 성취가 큰 결과를 만든다며 격려받았어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학습 동기 약화 사례를 경험하신 선생님이라 조언이 특히 와닿아요</p>
+      <p class="rv-text">등록 전 회의감이 자신감으로 바뀌었어요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
       </div>
     </div>
     <div class="rv-card">
-      <p class="rv-text">학생별 학습 태도 피드백이 구체적이어서 개선할 점이 뚜렷해요</p>
+      <p class="rv-text">수업 방식이 성장 체감을 주어 매일 공부가 즐거워요</p>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <span class="rv-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="rv-name">학부모 후기</span>
@@ -1083,7 +1084,7 @@
   </div>
   <script>
   (function(){
-    var LAT=37.26928408, LNG=127.15335077, LEVEL=7;
+    var LAT=37.26934982, LNG=127.15329277, LEVEL=7;
     function initMap(){
       var el=document.getElementById('wawaMap');
       if(!el) return;
