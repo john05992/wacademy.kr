@@ -46,14 +46,15 @@ def load_dong_map():
                 cur_si     = parts[1].strip() if len(parts) > 1 else ''
                 cur_branch = parts[2].strip() if len(parts) > 2 else ''
             dong = parts[3].strip() if len(parts) > 3 else ''
+            위치사진 = parts[4].strip() if len(parts) > 4 else ''
             if dong:
-                dong_map[dong] = (cur_do, cur_si, cur_branch)
+                dong_map[dong] = (cur_do, cur_si, cur_branch, 위치사진)
     return dong_map
 
 
 def resolve_result_path(dong_map, 지역, 메인):
     """지역(동) + 메인(키워드)으로 result.html 절대경로 반환."""
-    entry  = dong_map.get(지역, ('경기도', '성남시', ''))
+    entry  = dong_map.get(지역, ('경기도', '성남시', '', ''))
     do_nm, si_nm = entry[0], entry[1]
     path = os.path.join(RESULT_BASE, do_nm, si_nm, 지역, 메인, 'result.html')
     return path, do_nm, si_nm
@@ -150,10 +151,11 @@ def safe(val):
 
 # ── 치환 ──────────────────────────────────────────────────────────────
 
-def build_page(template, data, reviews, 지역, 메인, map_html=''):
+def build_page(template, data, reviews, 지역, 메인, map_html='', 위치사진=''):
     html = template
 
     html = html.replace('{{지도}}', map_html)
+    html = html.replace('{{위치사진}}', 위치사진)
     html = html.replace('{{지역키워드}}', 지역)
     html = html.replace('{{메인키워드}}', 메인)
     html = html.replace('{{meta}}', safe(data.get('meta')))
@@ -226,7 +228,8 @@ def main():
     result_path, do_nm, si_nm = resolve_result_path(dong_map, args.지역, args.메인)
 
     # 지점 매핑 → 지도 HTML 생성
-    branch_name = dong_map.get(args.지역, ('', '', ''))[2]
+    branch_name = dong_map.get(args.지역, ('', '', '', ''))[2]
+    위치사진명  = dong_map.get(args.지역, ('', '', '', ''))[3]
     map_html = ''
     if branch_name and branch_name in store_data:
         lat, lng, addr = store_data[branch_name]
@@ -254,7 +257,8 @@ def main():
     out_name = f'{args.지역} {args.메인}.html'
     out_path = os.path.join(os.path.abspath(args.out), out_name)
 
-    html = build_page(template, data, reviews, args.지역, args.메인, map_html)
+    print(f'위치사진     : {위치사진명}')
+    html = build_page(template, data, reviews, args.지역, args.메인, map_html, 위치사진명)
 
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(html)
