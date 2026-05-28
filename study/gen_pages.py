@@ -71,28 +71,39 @@ gif_css = """
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
       background: #fff;
-      padding: 40px 24px 36px;
+      padding: 48px 24px 52px;
       text-align: center;
     }
     .gif-bridge-inner {
-      max-width: 420px;
+      max-width: 440px;
       margin: 0 auto;
     }
     .gif-bridge-img {
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
       display: block;
       margin: 0 auto;
       border-radius: 20px;
-      box-shadow: 0 6px 28px rgba(0,0,0,0.13);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.14);
     }
     .gif-bridge-caption {
-      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-size: clamp(1.35rem, 5vw, 1.75rem);
       font-weight: 900;
       color: #111;
-      letter-spacing: -.03em;
-      margin-top: 20px;
-      line-height: 1.4;
+      letter-spacing: -.04em;
+      margin-top: 28px;
+      line-height: 1.35;
+      position: relative;
+      display: inline-block;
+    }
+    .gif-bridge-caption::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 4px;
+      background: #FF4714;
+      border-radius: 2px;
+      margin: 10px auto 0;
     }
 """
 html = html.replace('</style>', gif_css + '\n  </style>')
