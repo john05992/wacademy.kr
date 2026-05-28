@@ -46,6 +46,7 @@ for cls in title_classes:
 # ── 7. 텍스트 플레이스홀더 치환 ─────────────────────────────────────
 html = html.replace('경산사동', '{{지역명}}')
 html = html.replace('개별지도학원', '{{메인키워드}}')
+html = html.replace('WAWA COACHING ACADEMY', 'WAWA ACADEMY')
 
 # ── 8. dyn-kw 동적 교체 지점 지정 ───────────────────────────────────
 html = html.replace(
@@ -68,10 +69,13 @@ html = html.replace(
 
 # ── 9. GIF 섹션 삽입 (hook-section 이후, brand-section 이전) ────────
 gif_css = """
+    /* hook-section 하단 여백 축소 */
+    .hook-section { padding-bottom: 40px !important; }
+
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
       background: #fff;
-      padding: 48px 24px 52px;
+      padding: 0 24px 48px;
       text-align: center;
     }
     .gif-bridge-inner {
@@ -87,9 +91,12 @@ gif_css = """
       box-shadow: 0 8px 32px rgba(0,0,0,0.14);
     }
     .gif-bridge-caption {
-      font-size: clamp(1.35rem, 5vw, 1.75rem);
+      font-size: clamp(1.5rem, 5.5vw, 2rem);
       font-weight: 900;
-      color: #111;
+      background: linear-gradient(90deg, #FF4714, #f5af19);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       letter-spacing: -.04em;
       margin-top: 28px;
       line-height: 1.35;
