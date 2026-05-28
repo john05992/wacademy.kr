@@ -163,7 +163,7 @@ sr_html = """
 
       <div class="sr-card">
         <div class="sr-grade">5등급 <span class="sr-grade-arrow">→</span> 서울대 합격</div>
-        <img src="/images/성적향상1.webp" alt="성적향상 사례1" class="sr-img" loading="lazy">
+        <img src="/images/성적향상1.jpg" alt="성적향상 사례1" class="sr-img" loading="lazy">
         <div class="sr-body">
           <div>
             <span class="sr-tag">학생 후기</span>
@@ -178,7 +178,7 @@ sr_html = """
 
       <div class="sr-card">
         <div class="sr-grade">영어 6등급 <span class="sr-grade-arrow">→</span> 1등급</div>
-        <img src="/images/성적향상2.webp" alt="성적향상 사례2" class="sr-img" loading="lazy">
+        <img src="/images/성적향상2.jpg" alt="성적향상 사례2" class="sr-img" loading="lazy">
         <div class="sr-body">
           <div>
             <span class="sr-tag">학생 후기</span>
@@ -193,7 +193,7 @@ sr_html = """
 
       <div class="sr-card">
         <div class="sr-grade">수학 28점 <span class="sr-grade-arrow">→</span> 43점 <span class="sr-grade-arrow">→</span> 80점</div>
-        <img src="/images/성적향상3.webp" alt="성적향상 사례3" class="sr-img" loading="lazy">
+        <img src="/images/성적향상3.jpg" alt="성적향상 사례3" class="sr-img" loading="lazy">
         <div class="sr-body">
           <div>
             <span class="sr-tag">학생 후기</span>
