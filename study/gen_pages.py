@@ -69,10 +69,31 @@ html = html.replace(
 # ── 9. GIF 섹션 삽입 (hook-section 이후, brand-section 이전) ────────
 gif_css = """
     /* ── GIF BRIDGE ── */
-    .gif-bridge-section { background: #111; padding: 0; text-align: center; }
-    .gif-bridge-inner { max-width: 640px; margin: 0 auto; }
-    .gif-bridge-img { width: 100%; max-width: 640px; display: block; margin: 0 auto; }
-    .gif-bridge-caption { font-size: clamp(1.05rem,3vw,1.3rem); font-weight: 800; color: #fff; letter-spacing: -.02em; padding: 18px 24px 32px; }
+    .gif-bridge-section {
+      background: #fff;
+      padding: 40px 24px 36px;
+      text-align: center;
+    }
+    .gif-bridge-inner {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .gif-bridge-img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.13);
+    }
+    .gif-bridge-caption {
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 900;
+      color: #111;
+      letter-spacing: -.03em;
+      margin-top: 20px;
+      line-height: 1.4;
+    }
 """
 html = html.replace('</style>', gif_css + '\n  </style>')
 
