@@ -90,6 +90,10 @@ gif_css = """
       border-radius: 20px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.14);
     }
+    @media (min-width: 768px) {
+      .gif-bridge-inner { max-width: 660px; }
+      .gif-bridge-img { max-width: 660px; }
+    }
     .gif-bridge-caption {
       font-size: clamp(1.5rem, 5.5vw, 2rem);
       font-weight: 900;
