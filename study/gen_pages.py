@@ -70,6 +70,10 @@ html = html.replace(
     '<p class="bot-heading"><em>{{지역명}} {{메인키워드}}</em>',
     '<p class="bot-heading"><em><span class="dyn-kw">{{지역명}} {{메인키워드}}</span></em>'
 )
+html = html.replace(
+    '<h2 class="planner-title">국영수 전문지도<br><em>학생만 보는 와와학원</em></h2>',
+    '<h2 class="planner-title">학생에게 모든걸 맞춘<br><em>우리동네 와와학원</em></h2>'
+)
 
 # ── 9. GIF 섹션 삽입 (hook-section 이후, brand-section 이전) ────────
 gif_css = """
@@ -150,7 +154,27 @@ sr_css = """
     .sr-hl { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; font-weight:800; }
 """
 
-gif_css_combined = gif_css + sr_css
+rec_css = """
+    /* ── RECOMMEND ── */
+    .rec-section { background:#fff; padding:72px 20px 80px; }
+    .rec-inner { max-width:900px; margin:0 auto; }
+    .rec-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:12px; text-transform:uppercase; }
+    .rec-title { font-size:clamp(1.6rem,4vw,2.2rem); font-weight:900; color:#111; text-align:center; letter-spacing:-.04em; margin-bottom:48px; line-height:1.35; }
+    .rec-cards { display:flex; flex-direction:column; gap:16px; }
+    @media(min-width:640px){ .rec-cards{ flex-direction:row; gap:18px; } .rec-card{ flex:1; } }
+    .rec-card { border-radius:20px; padding:28px 24px 26px; background:#fafafa; border:1px solid #f0f0f0; display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden; }
+    .rec-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FF4714,#f5af19); }
+    .rec-num { font-size:2.6rem; font-weight:900; background:linear-gradient(135deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; letter-spacing:-.05em; }
+    .rec-card-title { font-size:1.08rem; font-weight:800; color:#111; line-height:1.45; letter-spacing:-.02em; }
+    .rec-card-desc { font-size:.83rem; color:#888; font-weight:400; line-height:1.75; flex:1; }
+    .rec-check { font-size:.82rem; color:#444; font-weight:600; display:flex; align-items:center; gap:7px; background:#fff5f2; border-radius:8px; padding:8px 12px; }
+    .rec-check::before { content:'✓'; color:#FF4714; font-weight:900; font-size:.9rem; flex-shrink:0; }
+    .rec-footer { margin-top:44px; text-align:center; background:linear-gradient(135deg,#fff7f4,#fffdf0); border-radius:16px; padding:28px 24px; border:1px solid #fde8df; }
+    .rec-footer-text { font-size:clamp(1rem,3vw,1.18rem); font-weight:700; color:#111; line-height:1.7; }
+    .rec-footer-hl { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:900; }
+"""
+
+gif_css_combined = gif_css + sr_css + rec_css
 html = html.replace('</style>', gif_css_combined + '\n  </style>')
 
 gif_html = """
@@ -428,10 +452,47 @@ function curSwitch(btn, id) {
 
 """
 
+rec_html = """
+<section class="rec-section">
+  <div class="rec-inner">
+    <p class="rec-eyebrow">FOR YOU</p>
+    <h2 class="rec-title">이런 학생에게<br>추천해요</h2>
+    <div class="rec-cards">
+
+      <div class="rec-card">
+        <p class="rec-num">01</p>
+        <p class="rec-card-title">진도를 못<br>따라가는 학생</p>
+        <p class="rec-card-desc">개념이 빠진 채로 진도를 나가면 결국 구멍이 쌓여 성적을 막습니다. 학생 수준에 맞게 다시 잡아드립니다.</p>
+        <p class="rec-check">수준에 맞춘 개념 재정비</p>
+      </div>
+
+      <div class="rec-card">
+        <p class="rec-num">02</p>
+        <p class="rec-card-title">질문하기<br>어려웠던 학생</p>
+        <p class="rec-card-desc">단체 수업에서는 모르는 걸 물어보기 어렵죠. 눈치 보며 넘어간 개념이 점수를 낮춥니다.</p>
+        <p class="rec-check">언제든 편하게 질문할 수 있어요</p>
+      </div>
+
+      <div class="rec-card">
+        <p class="rec-num">03</p>
+        <p class="rec-card-title">공부방법을<br>모르는 학생</p>
+        <p class="rec-card-desc">열심히 하는데 성적이 안 오른다면 방법이 잘못된 겁니다. 습관과 방법론부터 함께 바꿔드립니다.</p>
+        <p class="rec-check">공부 방법 · 습관 코칭 병행</p>
+      </div>
+
+    </div>
+    <div class="rec-footer">
+      <p class="rec-footer-text">어떤 학생이든 <span class="rec-footer-hl">하나하나 꼼꼼히</span> 알려드려요</p>
+    </div>
+  </div>
+</section>
+
+"""
+
 html = html.replace('</style>', cur_css + '\n  </style>')
 html = html.replace(
     '\n\n<section class="planner-section">\n  <div class="planner-inner">\n    <p class="planner-eyebrow">ACADEMY LOCATION</p>',
-    '\n\n' + cur_html + '<section class="planner-section">\n  <div class="planner-inner">\n    <p class="planner-eyebrow">ACADEMY LOCATION</p>'
+    '\n\n' + cur_html + rec_html + '<section class="planner-section">\n  <div class="planner-inner">\n    <p class="planner-eyebrow">ACADEMY LOCATION</p>'
 )
 
 # ── 10. 학원목록.txt 파싱 → 폴더명 리스트 ─────────────────────────
