@@ -105,19 +105,32 @@ gif_css = """
     }
     /* ── CONSULT v3 ── */
     .c3-section { background:#0a0a0a; padding:88px 24px; display:flex; align-items:center; justify-content:center; }
-    .c3-inner { text-align:center; width:100%; max-width:420px; }
-    .c3-eyebrow { font-size:.65rem; font-weight:900; color:#FF4714; letter-spacing:.22em; text-transform:uppercase; margin-bottom:32px; }
-    .c3-num {
-      display:block; font-size:clamp(2.2rem,7.5vw,3.6rem);
-      font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1;
-      text-decoration:none; white-space:nowrap;
-      margin-bottom:32px; transition:color .2s;
+    .c3-inner { text-align:center; width:100%; max-width:480px; }
+    .c3-eyebrow { font-size:.65rem; font-weight:900; color:#FF4714; letter-spacing:.22em; text-transform:uppercase; margin-bottom:20px; }
+    .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-bottom:32px; word-break:keep-all; }
+    .c3-bar { width:36px; height:2px; background:linear-gradient(90deg,#FF4714,#f5af19); margin:0 auto 40px; border-radius:2px; }
+    .c3-phone-wrap { position:relative; display:inline-block; margin-bottom:28px; }
+    @keyframes c3-ripple { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(2.2);opacity:0} }
+    .c3-ring {
+      position:absolute; inset:-12px; border-radius:99px;
+      border:2px solid #FF4714; opacity:0;
+      animation:c3-ripple 2s ease-out infinite;
     }
-    .c3-num:hover { color:#FF4714; }
-    .c3-num:active { color:#f5af19; }
-    .c3-bar { width:36px; height:2px; background:linear-gradient(90deg,#FF4714,#f5af19); margin:0 auto 24px; border-radius:2px; }
-    .c3-sub { font-size:.9rem; font-weight:700; color:rgba(255,255,255,.45); letter-spacing:.02em; margin-bottom:10px; }
-    .c3-warn { font-size:.75rem; font-weight:400; color:rgba(255,255,255,.22); }
+    .c3-ring--2 { animation-delay:.9s; }
+    .c3-num {
+      display:flex; align-items:center; gap:10px;
+      font-size:clamp(1.8rem,6vw,2.8rem);
+      font-weight:900; color:#fff; letter-spacing:-.03em; line-height:1;
+      text-decoration:none; white-space:nowrap;
+      padding:18px 32px;
+      background:linear-gradient(135deg,#1a1a1a,#222);
+      border:1px solid #2e2e2e; border-radius:99px;
+      transition:background .2s, transform .15s;
+      position:relative; z-index:1;
+    }
+    .c3-num:active { transform:scale(.96); background:#111; }
+    .c3-icon { font-size:.75em; }
+    .c3-sub { font-size:.85rem; font-weight:700; color:rgba(255,255,255,.35); letter-spacing:.02em; }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
@@ -532,10 +545,17 @@ rec_html = """
 consult_html = """<section class="c3-section" id="consult">
   <div class="c3-inner">
     <p class="c3-eyebrow">WAWA ACADEMY</p>
-    <a href="tel:01039525815" class="c3-num">010-3952-5815</a>
+    <p class="c3-warn">방문 전<br>전화 예약 부탁드립니다</p>
     <div class="c3-bar"></div>
+    <div class="c3-phone-wrap">
+      <a href="tel:01039525815" class="c3-num">
+        <span class="c3-ring"></span>
+        <span class="c3-ring c3-ring--2"></span>
+        <span class="c3-icon">📞</span>
+        010-3952-5815
+      </a>
+    </div>
     <p class="c3-sub">문자·전화 24시 연중무휴</p>
-    <p class="c3-warn">방문 전 전화 예약 부탁드립니다</p>
   </div>
 </section>"""
 
