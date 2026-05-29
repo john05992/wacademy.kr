@@ -129,7 +129,7 @@ sr_css = """
     /* ── STUDENT REVIEWS ── */
     .student-review-section { background:#fff; padding:64px 20px 80px; }
     .sr-inner { max-width:980px; margin:0 auto; }
-    .sr-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:10px; text-transform:uppercase; }
+    .sr-eyebrow { font-size:.72rem; font-weight:900; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:10px; text-transform:uppercase; }
     .sr-title { font-size:clamp(1.55rem,4vw,2.1rem); font-weight:900; color:#111; text-align:center; letter-spacing:-.04em; margin-bottom:48px; }
     .sr-cards { display:flex; flex-direction:column; gap:32px; }
     @media(min-width:768px){ .sr-cards{ flex-direction:row; align-items:flex-start; gap:22px; } .sr-card{ flex:1; } }
@@ -140,34 +140,34 @@ sr_css = """
     .sr-body { padding:22px 20px 24px; display:flex; flex-direction:column; gap:0; }
     /* 학생 후기 블록 */
     .sr-review-block { padding-bottom:18px; border-bottom:1px solid #f0f0f0; margin-bottom:18px; }
-    .sr-section-label { font-size:.78rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+    .sr-section-label { font-size:.78rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
     .sr-section-label--review { color:#888; }
     .sr-section-label--fb { color:#FF4714; }
     .sr-section-label-dot { width:6px; height:6px; border-radius:50%; display:inline-block; flex-shrink:0; }
     .sr-section-label--review .sr-section-label-dot { background:#ccc; }
     .sr-section-label--fb .sr-section-label-dot { background:#FF4714; }
-    .sr-student-name { font-size:.8rem; font-weight:600; color:#aaa; margin-bottom:10px; letter-spacing:.02em; }
-    .sr-review-text { font-size:.84rem; font-weight:300; color:#666; line-height:1.85; }
+    .sr-student-name { font-size:.8rem; font-weight:700; color:#aaa; margin-bottom:10px; letter-spacing:.02em; }
+    .sr-review-text { font-size:.84rem; font-weight:400; color:#666; line-height:1.85; }
     /* 선생님 피드백 블록 */
     .sr-feedback-block { background:#fafafa; border-radius:12px; padding:14px 16px; }
-    .sr-feedback-text { font-size:.92rem; font-weight:600; color:#222; line-height:1.75; margin-top:8px; }
-    .sr-hl { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; font-weight:800; }
+    .sr-feedback-text { font-size:.92rem; font-weight:700; color:#222; line-height:1.75; margin-top:8px; }
+    .sr-hl { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; font-weight:900; }
 """
 
 rec_css = """
     /* ── RECOMMEND ── */
     .rec-section { background:#fff; padding:72px 20px 80px; }
     .rec-inner { max-width:900px; margin:0 auto; }
-    .rec-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:12px; text-transform:uppercase; }
+    .rec-eyebrow { font-size:.72rem; font-weight:900; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:12px; text-transform:uppercase; }
     .rec-title { font-size:clamp(1.6rem,4vw,2.2rem); font-weight:900; color:#111; text-align:center; letter-spacing:-.04em; margin-bottom:48px; line-height:1.35; }
     .rec-cards { display:flex; flex-direction:column; gap:16px; }
     @media(min-width:640px){ .rec-cards{ flex-direction:row; gap:18px; } .rec-card{ flex:1; } }
     .rec-card { border-radius:20px; padding:28px 24px 26px; background:#fafafa; border:1px solid #f0f0f0; display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden; }
     .rec-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FF4714,#f5af19); }
     .rec-num { font-size:2.6rem; font-weight:900; background:linear-gradient(135deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; letter-spacing:-.05em; }
-    .rec-card-title { font-size:1.08rem; font-weight:800; color:#111; line-height:1.45; letter-spacing:-.02em; }
+    .rec-card-title { font-size:1.08rem; font-weight:900; color:#111; line-height:1.45; letter-spacing:-.02em; }
     .rec-card-desc { font-size:.83rem; color:#888; font-weight:400; line-height:1.75; flex:1; }
-    .rec-check { font-size:.82rem; color:#444; font-weight:600; display:flex; align-items:center; gap:7px; background:#fff5f2; border-radius:8px; padding:8px 12px; }
+    .rec-check { font-size:.82rem; color:#444; font-weight:700; display:flex; align-items:center; gap:7px; background:#fff5f2; border-radius:8px; padding:8px 12px; }
     .rec-check::before { content:'✓'; color:#FF4714; font-weight:900; font-size:.9rem; flex-shrink:0; }
     .rec-footer { margin-top:44px; text-align:center; background:linear-gradient(135deg,#fff7f4,#fffdf0); border-radius:16px; padding:28px 24px; border:1px solid #fde8df; }
     .rec-footer-text { font-size:clamp(1rem,3vw,1.18rem); font-weight:700; color:#111; line-height:1.7; }
@@ -261,9 +261,9 @@ cur_css = """
     /* ── CURRICULUM ── */
     .cur-section { background:#111; padding:60px 20px 72px; }
     .cur-inner { max-width:900px; margin:0 auto; }
-    .cur-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:12px; }
+    .cur-eyebrow { font-size:.72rem; font-weight:900; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:12px; }
     .cur-title { font-size:clamp(1.4rem,3.5vw,1.9rem); font-weight:900; color:#fff; text-align:center; letter-spacing:-.04em; margin-bottom:36px; line-height:1.4; }
-    .cur-title-sub { display:block; font-size:clamp(.9rem,2.5vw,1rem); font-weight:600; color:#bbb; letter-spacing:.04em; margin-bottom:8px; }
+    .cur-title-sub { display:block; font-size:clamp(.9rem,2.5vw,1rem); font-weight:700; color:#bbb; letter-spacing:.04em; margin-bottom:8px; }
     .cur-title-main { display:block; background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
     .cur-tabs-wrap { margin-bottom:28px; }
     .cur-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:4px 0; }
@@ -274,7 +274,7 @@ cur_css = """
     .cur-panel.active { display:grid; grid-template-columns:1fr; gap:14px; }
     @media(min-width:640px){ .cur-panel.active{ grid-template-columns:repeat(3,1fr); } }
     .cur-level { background:#1a1a1a; border-radius:14px; padding:18px 16px; border:1px solid #2a2a2a; }
-    .cur-level-badge { display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; }
+    .cur-level-badge { display:inline-block; font-size:.68rem; font-weight:900; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; }
     .cur-level-badge--el { background:rgba(255,71,20,.15); color:#FF7A45; }
     .cur-level-badge--mid { background:rgba(245,175,25,.15); color:#f5af19; }
     .cur-level-badge--hi { background:rgba(255,255,255,.1); color:#ddd; }
