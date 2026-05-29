@@ -47,6 +47,8 @@ for cls in title_classes:
 html = html.replace('경산사동', '{{지역명}}')
 html = html.replace('개별지도학원', '{{메인키워드}}')
 html = html.replace('WAWA COACHING ACADEMY', 'WAWA ACADEMY')
+html = html.replace('/images_m/위치사진/사동.webp', '/images_m/위치사진/{{위치이미지}}.webp')
+html = html.replace('/images/위치사진/사동.webp', '/images/위치사진/{{위치이미지}}.webp')
 
 # ── 8. dyn-kw 동적 교체 지점 지정 ───────────────────────────────────
 html = html.replace(
@@ -497,20 +499,24 @@ html = html.replace(
     '\n\n' + cur_html + rec_html + '<section class="planner-section">\n  <div class="planner-inner">\n    <p class="planner-eyebrow">ACADEMY LOCATION</p>'
 )
 
-# ── 10. 학원목록.txt 파싱 → 폴더명 리스트 ─────────────────────────
+# ── 10. 학원목록.txt 파싱 → 폴더명 리스트 + 위치이미지 매핑 ────────
 list_path = r"C:\Users\tlsdy\OneDrive\바탕 화면\와카데미\study\학원목록.txt"
 with open(list_path, 'r', encoding='utf-8') as f:
     raw = f.readlines()
 
 folders = []
+folder_img = {}   # folder → col3 이미지명
+current_img = ''
 for line in raw:
     line = line.rstrip('\n')
-    if '\t' in line:
-        col2 = line.split('\t', 1)[1].strip()
-    else:
-        col2 = ''
+    parts = line.split('\t')
+    col2 = parts[1].strip() if len(parts) > 1 else ''
+    col3 = parts[2].strip() if len(parts) > 2 else ''
+    if col3:
+        current_img = col3
     if col2:
         folders.append(col2)
+        folder_img[col2] = current_img
 
 print(f"폴더 수: {len(folders)}")
 
@@ -549,6 +555,7 @@ for folder in folders:
 
     content = html.replace('{{지역명}}', folder)
     content = content.replace('{{메인키워드}}', '개별지도학원')
+    content = content.replace('{{위치이미지}}', folder_img.get(folder, ''))
 
     index_path = os.path.join(folder_path, 'index.html')
     with open(index_path, 'w', encoding='utf-8') as f:
