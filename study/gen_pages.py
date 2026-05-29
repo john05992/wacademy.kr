@@ -228,6 +228,202 @@ html = html.replace(
     '\n\n' + sr_html + '<section class="result-section">'
 )
 
+# ── 과목별 커리큘럼 섹션 삽입 (COACHING CERTIFICATE 이후) ──────────
+cur_css = """
+    /* ── CURRICULUM ── */
+    .cur-section { background:#111; padding:60px 20px 72px; }
+    .cur-inner { max-width:900px; margin:0 auto; }
+    .cur-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:10px; }
+    .cur-title { font-size:clamp(1.4rem,3.5vw,1.9rem); font-weight:900; color:#fff; text-align:center; letter-spacing:-.04em; margin-bottom:36px; }
+    .cur-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+    .cur-tab { background:transparent; border:1px solid #333; color:#888; font-size:.88rem; font-weight:700; padding:9px 20px; border-radius:99px; cursor:pointer; font-family:inherit; transition:all .2s; white-space:nowrap; }
+    .cur-tab:hover { border-color:#555; color:#ccc; }
+    .cur-tab.active { background:linear-gradient(90deg,#FF4714,#f5af19); border-color:transparent; color:#fff; }
+    .cur-panel { display:none; }
+    .cur-panel.active { display:grid; grid-template-columns:1fr; gap:14px; }
+    @media(min-width:640px){ .cur-panel.active{ grid-template-columns:repeat(3,1fr); } }
+    .cur-level { background:#1a1a1a; border-radius:14px; padding:18px 16px; border:1px solid #2a2a2a; }
+    .cur-level-badge { display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; }
+    .cur-level-badge--el { background:rgba(255,71,20,.15); color:#FF7A45; }
+    .cur-level-badge--mid { background:rgba(245,175,25,.15); color:#f5af19; }
+    .cur-level-badge--hi { background:rgba(255,255,255,.1); color:#ddd; }
+    .cur-items { display:flex; flex-direction:column; gap:8px; }
+    .cur-item { display:flex; gap:8px; align-items:flex-start; font-size:.83rem; line-height:1.55; color:#bbb; }
+    .cur-item::before { content:'·'; color:#FF4714; font-weight:900; flex-shrink:0; margin-top:1px; }
+    .cur-item strong { color:#fff; font-weight:700; }
+"""
+
+cur_html = """
+<section class="cur-section">
+  <div class="cur-inner">
+    <p class="cur-eyebrow">CURRICULUM</p>
+    <h2 class="cur-title">과목별 커리큘럼</h2>
+    <div class="cur-tabs">
+      <button class="cur-tab active" onclick="curSwitch(this,'cur-math')">수학</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-eng')">영어</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-kor')">국어</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-soc')">사회</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-sci')">과학</button>
+    </div>
+    <div class="cur-panels">
+
+      <div class="cur-panel active" id="cur-math">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">사칙연산 기초 ~ <strong>분수·소수 완전 이해</strong></p>
+            <p class="cur-item">도형·측정 개념 정리 + <strong>문장제 풀이 훈련</strong></p>
+            <p class="cur-item">수학적 사고력을 기르는 <strong>문제 해결 습관</strong> 구축</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">방정식·부등식·함수·통계 <strong>개념 이해 중심</strong> 진도</p>
+            <p class="cur-item">기초 → 심화 단계별 설계, <strong>오답 패턴 반복 교정</strong></p>
+            <p class="cur-item">내신 <strong>서술형 답안 구성법</strong> 집중 훈련</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">수Ⅰ·Ⅱ·미적분·확통 <strong>체계적 선행 + 심화</strong></p>
+            <p class="cur-item">수능 기출 유형별 분석, <strong>고난도 풀이 전략</strong></p>
+            <p class="cur-item">시험 2주 전 <strong>학교별 기출 집중</strong> + 서술형 대비</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-eng">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">파닉스 → 기초 문법 → <strong>독해 흥미 유발</strong></p>
+            <p class="cur-item"><strong>어휘 누적 암기 루틴</strong> 구축</p>
+            <p class="cur-item">듣기·말하기 <strong>기초 감각 형성</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">시제·관계사·수동태 등 <strong>문법 체계 완전 정리</strong></p>
+            <p class="cur-item">내신 <strong>서술형·빈칸·어법</strong> 유형별 대비</p>
+            <p class="cur-item">학교별 기출 분석 + <strong>어휘 전략 설계</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">수능 독해 <strong>빈칸·순서·삽입 유형</strong> 집중 훈련</p>
+            <p class="cur-item">모의고사 기출 + <strong>오답 패턴 분석·교정</strong></p>
+            <p class="cur-item">내신·모고 <strong>선행비율 5대5</strong> 탄력 조정</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-kor">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">받아쓰기·맞춤법 + <strong>문단 구조 이해</strong></p>
+            <p class="cur-item">독서 습관 형성 + <strong>글쓰기 기초</strong> 훈련</p>
+            <p class="cur-item"><strong>어휘력 확장</strong> 루틴 구축</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">문학(시·소설·수필) <strong>감상·분석 체계화</strong></p>
+            <p class="cur-item">비문학 독해 + <strong>서술형 답안 작성법</strong></p>
+            <p class="cur-item">학교별 <strong>국어 내신 기출 패턴</strong> 분석</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">화법·작문·언어·매체 <strong>파트별 전략</strong></p>
+            <p class="cur-item">문학·독서 <strong>고빈도 개념 + 수능 기출</strong></p>
+            <p class="cur-item"><strong>서술형·논술 답안</strong> 구조화 훈련</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-soc">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">지역사회·역사 기초 <strong>이야기식 이해</strong></p>
+            <p class="cur-item">지도·지형 기초 읽기 + <strong>핵심 개념 정리</strong></p>
+            <p class="cur-item">생활 속 사회 개념 <strong>연결 훈련</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">지리·역사·일반사회 <strong>단원별 핵심 정리</strong></p>
+            <p class="cur-item">연표·개념도 활용 <strong>암기 전략</strong></p>
+            <p class="cur-item">서술형 대비 <strong>핵심 키워드 추출법</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">한국사·통합사회 <strong>체계적 개념 완성</strong></p>
+            <p class="cur-item">수능 선택과목 <strong>기출 분석 + 반복</strong></p>
+            <p class="cur-item"><strong>자료 해석 훈련</strong> + 암기 전략 설계</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-sci">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">실험·관찰 개념 <strong>이야기식 이해</strong></p>
+            <p class="cur-item">탐구 과정·관찰 기록 <strong>습관 훈련</strong></p>
+            <p class="cur-item">생활 속 과학 원리 <strong>연결 학습</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">물리·화학·생물·지구과학 <strong>단원 개념 완성</strong></p>
+            <p class="cur-item"><strong>탐구 문제·실험 설계</strong> 유형 대비</p>
+            <p class="cur-item">계산형 + 서술형 <strong>문제 유형 분리</strong> 훈련</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">선택과목 <strong>개념 + 문제풀이</strong> 체계 완성</p>
+            <p class="cur-item">수능 기출 <strong>유형 분석 + 고난도 대비</strong></p>
+            <p class="cur-item">암기 개념 vs 이해 개념 <strong>분리 학습 전략</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+function curSwitch(btn, id) {
+  var tabs = btn.closest('.cur-inner').querySelectorAll('.cur-tab');
+  var panels = btn.closest('.cur-inner').querySelectorAll('.cur-panel');
+  tabs.forEach(function(t){ t.classList.remove('active'); });
+  panels.forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+"""
+
+html = html.replace('</style>', cur_css + '\n  </style>')
+html = html.replace(
+    '\n\n<section class="planner-section">\n  <div class="planner-inner">\n    <p class="planner-eyebrow">ACADEMY LOCATION</p>',
+    '\n\n' + cur_html + '<section class="planner-section">\n  <div class="planner-inner">\n    <p class="planner-eyebrow">ACADEMY LOCATION</p>'
+)
+
 # ── 10. 학원목록.txt 파싱 → 폴더명 리스트 ─────────────────────────
 list_path = r"C:\Users\tlsdy\OneDrive\바탕 화면\와카데미\study\학원목록.txt"
 with open(list_path, 'r', encoding='utf-8') as f:

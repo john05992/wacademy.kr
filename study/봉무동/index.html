@@ -564,6 +564,29 @@
     .sr-feedback-text { font-size:.92rem; font-weight:600; color:#222; line-height:1.75; margin-top:8px; }
     .sr-hl { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; font-weight:800; }
 
+  
+    /* ── CURRICULUM ── */
+    .cur-section { background:#111; padding:60px 20px 72px; }
+    .cur-inner { max-width:900px; margin:0 auto; }
+    .cur-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:10px; }
+    .cur-title { font-size:clamp(1.4rem,3.5vw,1.9rem); font-weight:900; color:#fff; text-align:center; letter-spacing:-.04em; margin-bottom:36px; }
+    .cur-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+    .cur-tab { background:transparent; border:1px solid #333; color:#888; font-size:.88rem; font-weight:700; padding:9px 20px; border-radius:99px; cursor:pointer; font-family:inherit; transition:all .2s; white-space:nowrap; }
+    .cur-tab:hover { border-color:#555; color:#ccc; }
+    .cur-tab.active { background:linear-gradient(90deg,#FF4714,#f5af19); border-color:transparent; color:#fff; }
+    .cur-panel { display:none; }
+    .cur-panel.active { display:grid; grid-template-columns:1fr; gap:14px; }
+    @media(min-width:640px){ .cur-panel.active{ grid-template-columns:repeat(3,1fr); } }
+    .cur-level { background:#1a1a1a; border-radius:14px; padding:18px 16px; border:1px solid #2a2a2a; }
+    .cur-level-badge { display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; }
+    .cur-level-badge--el { background:rgba(255,71,20,.15); color:#FF7A45; }
+    .cur-level-badge--mid { background:rgba(245,175,25,.15); color:#f5af19; }
+    .cur-level-badge--hi { background:rgba(255,255,255,.1); color:#ddd; }
+    .cur-items { display:flex; flex-direction:column; gap:8px; }
+    .cur-item { display:flex; gap:8px; align-items:flex-start; font-size:.83rem; line-height:1.55; color:#bbb; }
+    .cur-item::before { content:'·'; color:#FF4714; font-weight:900; flex-shrink:0; margin-top:1px; }
+    .cur-item strong { color:#fff; font-weight:700; }
+
   </style>
 </head>
 <body>
@@ -857,6 +880,169 @@
   </div>
 </section>
 
+
+<section class="cur-section">
+  <div class="cur-inner">
+    <p class="cur-eyebrow">CURRICULUM</p>
+    <h2 class="cur-title">과목별 커리큘럼</h2>
+    <div class="cur-tabs">
+      <button class="cur-tab active" onclick="curSwitch(this,'cur-math')">수학</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-eng')">영어</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-kor')">국어</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-soc')">사회</button>
+      <button class="cur-tab" onclick="curSwitch(this,'cur-sci')">과학</button>
+    </div>
+    <div class="cur-panels">
+
+      <div class="cur-panel active" id="cur-math">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">사칙연산 기초 ~ <strong>분수·소수 완전 이해</strong></p>
+            <p class="cur-item">도형·측정 개념 정리 + <strong>문장제 풀이 훈련</strong></p>
+            <p class="cur-item">수학적 사고력을 기르는 <strong>문제 해결 습관</strong> 구축</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">방정식·부등식·함수·통계 <strong>개념 이해 중심</strong> 진도</p>
+            <p class="cur-item">기초 → 심화 단계별 설계, <strong>오답 패턴 반복 교정</strong></p>
+            <p class="cur-item">내신 <strong>서술형 답안 구성법</strong> 집중 훈련</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">수Ⅰ·Ⅱ·미적분·확통 <strong>체계적 선행 + 심화</strong></p>
+            <p class="cur-item">수능 기출 유형별 분석, <strong>고난도 풀이 전략</strong></p>
+            <p class="cur-item">시험 2주 전 <strong>학교별 기출 집중</strong> + 서술형 대비</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-eng">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">파닉스 → 기초 문법 → <strong>독해 흥미 유발</strong></p>
+            <p class="cur-item"><strong>어휘 누적 암기 루틴</strong> 구축</p>
+            <p class="cur-item">듣기·말하기 <strong>기초 감각 형성</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">시제·관계사·수동태 등 <strong>문법 체계 완전 정리</strong></p>
+            <p class="cur-item">내신 <strong>서술형·빈칸·어법</strong> 유형별 대비</p>
+            <p class="cur-item">학교별 기출 분석 + <strong>어휘 전략 설계</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">수능 독해 <strong>빈칸·순서·삽입 유형</strong> 집중 훈련</p>
+            <p class="cur-item">모의고사 기출 + <strong>오답 패턴 분석·교정</strong></p>
+            <p class="cur-item">내신·모고 <strong>선행비율 5대5</strong> 탄력 조정</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-kor">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">받아쓰기·맞춤법 + <strong>문단 구조 이해</strong></p>
+            <p class="cur-item">독서 습관 형성 + <strong>글쓰기 기초</strong> 훈련</p>
+            <p class="cur-item"><strong>어휘력 확장</strong> 루틴 구축</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">문학(시·소설·수필) <strong>감상·분석 체계화</strong></p>
+            <p class="cur-item">비문학 독해 + <strong>서술형 답안 작성법</strong></p>
+            <p class="cur-item">학교별 <strong>국어 내신 기출 패턴</strong> 분석</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">화법·작문·언어·매체 <strong>파트별 전략</strong></p>
+            <p class="cur-item">문학·독서 <strong>고빈도 개념 + 수능 기출</strong></p>
+            <p class="cur-item"><strong>서술형·논술 답안</strong> 구조화 훈련</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-soc">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">지역사회·역사 기초 <strong>이야기식 이해</strong></p>
+            <p class="cur-item">지도·지형 기초 읽기 + <strong>핵심 개념 정리</strong></p>
+            <p class="cur-item">생활 속 사회 개념 <strong>연결 훈련</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">지리·역사·일반사회 <strong>단원별 핵심 정리</strong></p>
+            <p class="cur-item">연표·개념도 활용 <strong>암기 전략</strong></p>
+            <p class="cur-item">서술형 대비 <strong>핵심 키워드 추출법</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">한국사·통합사회 <strong>체계적 개념 완성</strong></p>
+            <p class="cur-item">수능 선택과목 <strong>기출 분석 + 반복</strong></p>
+            <p class="cur-item"><strong>자료 해석 훈련</strong> + 암기 전략 설계</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cur-panel" id="cur-sci">
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--el">초등</span>
+          <div class="cur-items">
+            <p class="cur-item">실험·관찰 개념 <strong>이야기식 이해</strong></p>
+            <p class="cur-item">탐구 과정·관찰 기록 <strong>습관 훈련</strong></p>
+            <p class="cur-item">생활 속 과학 원리 <strong>연결 학습</strong></p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--mid">중등</span>
+          <div class="cur-items">
+            <p class="cur-item">물리·화학·생물·지구과학 <strong>단원 개념 완성</strong></p>
+            <p class="cur-item"><strong>탐구 문제·실험 설계</strong> 유형 대비</p>
+            <p class="cur-item">계산형 + 서술형 <strong>문제 유형 분리</strong> 훈련</p>
+          </div>
+        </div>
+        <div class="cur-level">
+          <span class="cur-level-badge cur-level-badge--hi">고등</span>
+          <div class="cur-items">
+            <p class="cur-item">선택과목 <strong>개념 + 문제풀이</strong> 체계 완성</p>
+            <p class="cur-item">수능 기출 <strong>유형 분석 + 고난도 대비</strong></p>
+            <p class="cur-item">암기 개념 vs 이해 개념 <strong>분리 학습 전략</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+function curSwitch(btn, id) {
+  var tabs = btn.closest('.cur-inner').querySelectorAll('.cur-tab');
+  var panels = btn.closest('.cur-inner').querySelectorAll('.cur-panel');
+  tabs.forEach(function(t){ t.classList.remove('active'); });
+  panels.forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
 <section class="planner-section">
   <div class="planner-inner">
     <p class="planner-eyebrow">ACADEMY LOCATION</p>
@@ -946,7 +1132,7 @@ if(window.wcs) {
 
 <script>
 (function(){
-  var kws = ["이시아폴리스", "용인백현마을", "인천논현동", "김포장기동", "하남풍산동", "대구죽전동", "부산온천동", "용인신봉동", "수성동2가", "인천삼산동", "대구유천동", "일산중산동", "수성만촌동", "수원금곡동", "전주장동", "수성2가", "수완지구", "대구칠곡", "일산대화", "부천중동", "경산사동", "내발산동", "울산삼산", "소사본동", "용인수지", "산내마을", "상무지구", "서대문구", "북가좌동", "다산지금", "동탄목동", "풍덕천동", "중화산동", "신도림동", "운정6동", "청주가경", "선운지구", "남가좌동", "울산달동", "호매실동", "부천상동", "오산세교", "칠곡지구", "신봉마을", "후곡마을", "내삼미동", "대구진천", "강릉교동", "도안지구", "첨단지구", "인천삼산", "진해석동", "인천논현", "천호동", "월성동", "광장동", "호매실", "사파동", "노변동", "북변동", "도남동", "옥산동", "봉방동", "발산역", "혁신동", "미아동", "칠금동", "용두동", "지족동", "수곡동", "배곧동", "고성동", "정발산", "덕풍동", "상인동", "반석동", "비산동", "삼송동", "염창동", "도안동", "옥길동", "선암동", "마두동", "영천동", "상남동", "화정동", "자은동", "상암동", "동춘동", "치평동", "수청동", "신암동", "와동동", "산본동", "철산동", "단구동", "청라동", "병영동", "구불당", "세교동", "둔산동", "망월동", "시흥동", "금곡동", "상현동", "원대동", "송천동", "신흥동", "신원동", "남외동", "새롬동", "비전동", "산척동", "장곡동", "개운동", "운양역", "일산동", "금천구", "수창동", "동대문", "산본역", "만촌동", "반송동", "송정동", "서대문", "동래구", "관평동", "미사동", "금오동", "종암동", "두호동", "주엽동", "경안동", "호평동", "무실동", "당산동", "등촌동", "용강동", "부발읍", "오산동", "대야동", "야탑동", "천천동", "병점동", "장지동", "영통동", "주엽역", "칠성동", "남가좌", "산격동", "강서동", "신방동", "서신동", "호수동", "신정동", "방화동", "관저동", "이곡동", "동백동", "수성구", "덕이동", "쌍용동", "마곡동", "반여동", "대화동", "돈암동", "위례동", "두정동", "복현동", "망포동", "구갈동", "포남동", "송도동", "정자동", "신창동", "신설동", "본리동", "구의동", "명일동", "화명동", "금촌동", "구월동", "범박동", "개신동", "동패동", "산남동", "양덕동", "사우동", "신천동", "온천동", "사직동", "하계동", "반월당", "성사동", "광진구", "풍산동", "진월동", "향남읍", "노원구", "매탄동", "기흥역", "신곡동", "달서구", "삼산동", "노형동", "감삼동", "수진동", "신중동", "초지동", "북가좌", "연수동", "영덕동", "구산동", "가경동", "반곡동", "단계동", "동천동", "교하동", "갈산동", "불당동", "이충동", "용곡동", "산곡동", "진관동", "별내동", "탄벌동", "풍덕천", "옥정동", "태평동", "옥계동", "행신동", "복대동", "수완동", "보라동", "영통구", "석사동", "원신동", "노은동", "국우동", "율하동", "탕정면", "유천동", "화봉동", "단대동", "구미동", "부평동", "인창동", "원흥동", "장기동", "야당동", "운양동", "가정동", "침산동", "효목동", "신봉동", "갈매동", "갈마동", "금암동", "봉무동", "광명동", "신불당", "역촌동", "정평동", "연신내", "탄방동", "읍내동", "호암동", "산월동", "다산동", "원내동", "장항동", "첨단동", "송촌동", "고잔동", "이매동", "후평동", "소하동", "역북동", "비하동", "목감동", "용신동", "마포구", "성북구", "은평구", "평내동", "하복대", "중산동", "공덕동", "신도림", "구로동", "퇴계원", "강동구", "반구동", "탄현동", "신수동", "신동백", "돈암", "삼송", "달동", "사동", "화정", "반송", "옥계", "남외", "주엽", "운정", "탕정", "인창", "화명", "상현", "율하", "월성", "이매", "광진", "세교", "병점", "노원", "길음", "행신", "미금", "풍동", "부발", "염창", "옥길", "동춘", "세종", "위례", "봉담", "상남", "당진", "진월", "송도", "동백", "불당", "탄벌", "영천", "공덕", "진접", "사우", "반여", "교하", "배곧", "좌동", "장기", "노은", "신방", "고잔", "마포", "평내", "법동", "두호", "석사", "단구", "마곡", "운양", "복대", "하계", "미사", "다산", "명일", "두정", "발산", "종암", "목동", "망포", "금촌", "범박", "소하", "대야", "동탄", "망월", "도안", "비산", "야당", "관저", "덕풍", "지족", "역촌", "칠곡", "송정", "태평", "성북", "옥정", "목감", "쌍용", "수지", "칠금", "보라", "구월", "원당", "둔산", "교동", "후평", "원흥", "관평", "매탄", "탄현", "노형", "청라", "삼산", "호평", "서신", "상동", "장곡", "철산", "영통", "당산", "이곡", "반석", "복산", "별내", "진천", "마두", "상암", "동래", "흥덕", "첨단", "향남", "시지", "이충", "사직", "새롬", "은평", "가정", "수완", "부평", "야탑", "단대", "수진", "비전", "후곡", "갈매", "침산", "무실", "산본", "성서", "석동", "금릉", "중동"];
+  var kws = ["이시아폴리스", "용인백현마을", "수원금곡동", "수성만촌동", "인천삼산동", "김포장기동", "부산온천동", "인천논현동", "대구죽전동", "하남풍산동", "용인신봉동", "일산중산동", "수성동2가", "대구유천동", "첨단지구", "오산세교", "호매실동", "다산지금", "서대문구", "강릉교동", "대구진천", "대구칠곡", "울산달동", "남가좌동", "도안지구", "산내마을", "신봉마을", "용인수지", "칠곡지구", "경산사동", "부천중동", "소사본동", "후곡마을", "선운지구", "진해석동", "전주장동", "청주가경", "내발산동", "인천논현", "신도림동", "운정6동", "인천삼산", "울산삼산", "내삼미동", "풍덕천동", "일산대화", "동탄목동", "중화산동", "상무지구", "북가좌동", "부천상동", "수성2가", "수완지구", "이충동", "구산동", "동패동", "장기동", "덕이동", "치평동", "첨단동", "사직동", "단계동", "만촌동", "신불당", "수진동", "신도림", "신곡동", "후평동", "고잔동", "망포동", "기흥역", "일산동", "복현동", "공덕동", "자은동", "본리동", "광명동", "철산동", "주엽역", "수성구", "연신내", "개신동", "신원동", "칠금동", "노변동", "탕정면", "율하동", "두호동", "역북동", "신암동", "장항동", "동백동", "매탄동", "산격동", "비산동", "금촌동", "동춘동", "운양동", "등촌동", "하계동", "삼송동", "용신동", "탄벌동", "북변동", "상인동", "칠성동", "범박동", "초지동", "원내동", "송정동", "천호동", "별내동", "연수동", "반여동", "영통동", "가정동", "동래구", "도남동", "원흥동", "중산동", "삼산동", "원신동", "송도동", "하복대", "사우동", "탄현동", "감삼동", "구불당", "가경동", "이곡동", "봉무동", "지족동", "동천동", "마곡동", "신동백", "호수동", "새롬동", "다산동", "송천동", "호매실", "탄방동", "진관동", "구월동", "정평동", "월성동", "단구동", "신봉동", "수완동", "미아동", "배곧동", "금곡동", "주엽동", "호평동", "경안동", "세교동", "이매동", "병점동", "원대동", "와동동", "수창동", "청라동", "개운동", "목감동", "신정동", "영통구", "신방동", "신천동", "반구동", "당산동", "상남동", "옥길동", "노형동", "반곡동", "덕풍동", "오산동", "부발읍", "동대문", "달서구", "풍덕천", "천천동", "남가좌", "방화동", "산척동", "보라동", "인창동", "양덕동", "봉방동", "마포구", "향남읍", "명일동", "망월동", "행신동", "염창동", "상현동", "역촌동", "영천동", "장지동", "노은동", "포남동", "반월당", "무실동", "산곡동", "비하동", "성북구", "운양역", "영덕동", "강서동", "송촌동", "신흥동", "갈산동", "퇴계원", "관평동", "침산동", "사파동", "미사동", "산월동", "읍내동", "선암동", "광장동", "돈암동", "수곡동", "화정동", "평내동", "국우동", "옥정동", "은평구", "도안동", "유천동", "구의동", "두정동", "진월동", "대화동", "관저동", "소하동", "용강동", "화봉동", "둔산동", "갈매동", "용곡동", "대야동", "부평동", "금오동", "마두동", "정발산", "쌍용동", "서대문", "야당동", "상암동", "단대동", "옥산동", "용두동", "호암동", "강동구", "혁신동", "석사동", "고성동", "신설동", "갈마동", "종암동", "구미동", "정자동", "옥계동", "발산역", "시흥동", "성사동", "장곡동", "태평동", "서신동", "산본동", "비전동", "구로동", "수청동", "야탑동", "교하동", "병영동", "온천동", "반석동", "금천구", "금암동", "북가좌", "반송동", "남외동", "구갈동", "화명동", "신창동", "신중동", "산남동", "복대동", "신수동", "효목동", "노원구", "산본역", "위례동", "광진구", "풍산동", "불당동", "복대", "당진", "탄현", "이충", "범박", "석사", "성서", "가정", "송정", "지족", "비산", "세교", "사직", "반여", "하계", "미금", "동춘", "법동", "삼송", "진월", "반석", "진접", "당산", "수완", "야당", "철산", "다산", "별내", "종암", "배곧", "시지", "상암", "장곡", "원당", "풍동", "상남", "병점", "성북", "운정", "길음", "광진", "덕풍", "마포", "세종", "노형", "옥계", "후평", "옥길", "관저", "향남", "중동", "발산", "노은", "미사", "상현", "돈암", "구월", "칠곡", "영통", "무실", "금촌", "진천", "도안", "태평", "금릉", "호평", "산본", "은평", "동래", "율하", "위례", "이곡", "매탄", "월성", "단구", "새롬", "마두", "화정", "부발", "둔산", "소하", "수진", "노원", "염창", "장기", "석동", "인창", "동백", "사우", "갈매", "수지", "목감", "칠금", "단대", "상동", "마곡", "평내", "침산", "운양", "사동", "명일", "삼산", "신방", "관평", "후곡", "청라", "영천", "흥덕", "망포", "이매", "봉담", "쌍용", "첨단", "야탑", "옥정", "대야", "불당", "교동", "두호", "교하", "보라", "동탄", "화명", "목동", "서신", "행신", "복산", "부평", "공덕", "원흥", "남외", "고잔", "송도", "두정", "좌동", "망월", "역촌", "탕정", "주엽", "비전", "반송", "달동", "탄벌"];
   var q = new URLSearchParams(location.search).get('n_query');
   if (!q) return;
   for (var i = 0; i < kws.length; i++) {
