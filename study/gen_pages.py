@@ -97,41 +97,27 @@ gif_css = """
     .hook-section { padding-bottom: 40px !important; }
     .hook-or { filter: drop-shadow(0 0 14px rgba(255,80,20,0.55)); }
     /* 와와/wawa 쿼리 최상단 상담카드 */
-    .consult-section--top { background:#0a0a0a !important; padding:72px 20px 80px !important; }
+    .c3-section--top { padding-top:120px !important; }
     /* result 이미지 PC 크기 제한 */
     @media(min-width:768px){
       .result-viewport { max-height:280px; }
       .result-track img { max-height:280px; width:auto; }
     }
-    /* ── CONSULT REDESIGN ── */
-    .consult-section { padding:64px 20px !important; background:#fff !important; }
-    .consult-box {
-      background:#111 !important;
-      border-radius:24px !important;
-      padding:44px 28px 40px !important;
-      box-shadow:0 20px 60px rgba(0,0,0,.15) !important;
-      max-width:460px !important;
-      width:100%; box-sizing:border-box;
+    /* ── CONSULT v3 ── */
+    .c3-section { background:#0a0a0a; padding:88px 24px; display:flex; align-items:center; justify-content:center; }
+    .c3-inner { text-align:center; width:100%; max-width:420px; }
+    .c3-eyebrow { font-size:.65rem; font-weight:900; color:#FF4714; letter-spacing:.22em; text-transform:uppercase; margin-bottom:32px; }
+    .c3-num {
+      display:block; font-size:clamp(2.2rem,7.5vw,3.6rem);
+      font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1;
+      text-decoration:none; white-space:nowrap;
+      margin-bottom:32px; transition:color .2s;
     }
-    .consult-box::before { height:3px !important; width:100% !important; top:0 !important; right:0 !important; background:linear-gradient(90deg,#FF4714,#f5af19) !important; border-radius:0 !important; }
-    .consult-box::after { display:none !important; }
-    .consult-tag { font-size:.7rem; font-weight:900; color:#FF4714; letter-spacing:.16em; text-transform:uppercase; margin-bottom:20px; }
-    a.consult-num {
-      font-size:clamp(1.9rem,6.5vw,3rem) !important;
-      display:block !important; text-decoration:none !important;
-      color:#fff !important; font-weight:900 !important;
-      letter-spacing:-.03em !important; line-height:1.1 !important;
-      white-space:nowrap !important;
-      background:none !important; border:none !important;
-      padding:0 !important; margin:0 0 4px !important;
-      animation:none !important; text-shadow:none !important;
-      transition:opacity .15s !important;
-    }
-    a.consult-num::before { content:'' !important; }
-    a.consult-num:active { opacity:.6 !important; transform:none !important; }
-    .consult-label-line { margin:22px 0 !important; background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent) !important; }
-    .consult-avail { font-size:.9rem !important; font-weight:700 !important; color:rgba(255,255,255,.65) !important; white-space:nowrap; margin-bottom:10px !important; }
-    .consult-notice { font-size:.76rem !important; font-weight:700 !important; color:rgba(255,255,255,.35) !important; line-height:1.6 !important; padding:0 !important; background:none !important; border:none !important; border-radius:0 !important; margin-top:0 !important; }
+    .c3-num:hover { color:#FF4714; }
+    .c3-num:active { color:#f5af19; }
+    .c3-bar { width:36px; height:2px; background:linear-gradient(90deg,#FF4714,#f5af19); margin:0 auto 24px; border-radius:2px; }
+    .c3-sub { font-size:.9rem; font-weight:700; color:rgba(255,255,255,.45); letter-spacing:.02em; margin-bottom:10px; }
+    .c3-warn { font-size:.75rem; font-weight:400; color:rgba(255,255,255,.22); }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
@@ -543,13 +529,13 @@ rec_html = """
 
 """
 
-consult_html = """<section class="consult-section" id="consult">
-  <div class="consult-box">
-    <p class="consult-tag">상담 연락처</p>
-    <a href="tel:01039525815" class="consult-num">010-3952-5815</a>
-    <div class="consult-label-line"></div>
-    <p class="consult-avail">문자·전화 24시 연중무휴 가능</p>
-    <p class="consult-notice">전화 없이 방문 시 상담이 어려울 수 있습니다</p>
+consult_html = """<section class="c3-section" id="consult">
+  <div class="c3-inner">
+    <p class="c3-eyebrow">WAWA ACADEMY</p>
+    <a href="tel:01039525815" class="c3-num">010-3952-5815</a>
+    <div class="c3-bar"></div>
+    <p class="c3-sub">문자·전화 24시 연중무휴</p>
+    <p class="c3-warn">방문 전 전화 예약 부탁드립니다</p>
   </div>
 </section>"""
 
@@ -613,7 +599,7 @@ dyn_script = f"""
     if (orig) {{
       var clone = orig.cloneNode(true);
       clone.removeAttribute('id');
-      clone.classList.add('consult-section--top');
+      clone.classList.add('c3-section--top');
       document.body.insertBefore(clone, document.body.firstChild);
     }}
   }}
