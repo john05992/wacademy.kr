@@ -137,6 +137,7 @@ sr_css = """
     .sr-grade { background:linear-gradient(135deg,#1a1a1a,#333); color:#fff; font-size:clamp(1.05rem,3vw,1.35rem); font-weight:900; padding:18px 20px; letter-spacing:-.02em; text-align:center; }
     .sr-grade-arrow { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:900; margin:0 5px; }
     .sr-img { width:100%; display:block; object-fit:cover; max-height:200px; }
+    @media(min-width:768px){ .sr-img { max-height:130px; } }
     .sr-body { padding:22px 20px 24px; display:flex; flex-direction:column; gap:0; }
     /* 학생 후기 블록 */
     .sr-review-block { padding-bottom:18px; border-bottom:1px solid #f0f0f0; margin-bottom:18px; }
