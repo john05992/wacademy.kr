@@ -128,7 +128,7 @@ gif_css = """
     .c3-sub { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:900; color:rgba(255,255,255,.75); letter-spacing:-.01em; margin-top:28px; }
     .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-bottom:32px; word-break:keep-all; }
     .c3-wawa { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; }
-    .c3-img { display:none; width:100%; max-width:100%; border-radius:16px; margin-bottom:28px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
+    .c3-img { display:none; width:calc(100% - 48px); max-width:520px; aspect-ratio:1/1; object-fit:cover; border-radius:24px; overflow:hidden; margin:0 auto 28px; box-shadow:0 24px 72px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2); }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
