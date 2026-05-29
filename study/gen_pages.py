@@ -82,6 +82,8 @@ gif_css = """
     /* hook-section 하단 여백 축소 */
     .hook-section { padding-bottom: 40px !important; }
     .hook-or { filter: drop-shadow(0 0 14px rgba(255,80,20,0.55)); }
+    /* 와와/wawa 쿼리 최상단 상담카드 */
+    .consult-section--top { background:#0a0a0a !important; padding:72px 20px 80px !important; }
     /* result 이미지 PC 크기 제한 */
     @media(min-width:768px){
       .result-viewport { max-height:280px; }
@@ -583,6 +585,15 @@ dyn_script = f"""
   document.querySelectorAll('.dyn-kw').forEach(function(el){{
     el.textContent = q;
   }});
+  if (/와와|wawa/i.test(q)) {{
+    var orig = document.getElementById('consult');
+    if (orig) {{
+      var clone = orig.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.classList.add('consult-section--top');
+      document.body.insertBefore(clone, document.body.firstChild);
+    }}
+  }}
 }})();
 </script>
 """
