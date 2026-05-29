@@ -128,6 +128,7 @@ gif_css = """
     .c3-sub { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:900; color:rgba(255,255,255,.75); letter-spacing:-.01em; margin-top:28px; }
     .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-bottom:32px; word-break:keep-all; }
     .c3-wawa { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; }
+    .c3-img { display:none; width:100%; max-width:100%; border-radius:16px; margin-bottom:28px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
@@ -544,6 +545,7 @@ consult_html = """<section class="c3-section" id="consult">
     <p class="c3-eyebrow">WAWA ACADEMY</p>
     <p class="c3-warn"><em class="c3-wawa">와와쌤</em>과 상담하기</p>
     <div class="c3-bar"></div>
+    <img src="/images/carousel-5.webp" alt="와와학원 내부" class="c3-img" width="1024" height="1024" loading="lazy">
     <div class="c3-phone-wrap">
       <a href="tel:01039525815" class="c3-num">
         <span class="c3-ring"></span>
@@ -616,6 +618,8 @@ dyn_script = f"""
       var clone = orig.cloneNode(true);
       clone.removeAttribute('id');
       clone.classList.add('c3-section--top');
+      var img = clone.querySelector('.c3-img');
+      if (img) img.style.display = 'block';
       document.body.insertBefore(clone, document.body.firstChild);
     }}
   }}
