@@ -235,12 +235,11 @@ cur_css = """
     .cur-inner { max-width:900px; margin:0 auto; }
     .cur-eyebrow { font-size:.72rem; font-weight:800; color:#FF4714; letter-spacing:.14em; text-align:center; margin-bottom:12px; }
     .cur-title { font-size:clamp(1.4rem,3.5vw,1.9rem); font-weight:900; color:#fff; text-align:center; letter-spacing:-.04em; margin-bottom:36px; line-height:1.4; }
-    .cur-title-sub { display:block; font-size:clamp(.85rem,2.2vw,1rem); font-weight:400; color:#888; letter-spacing:.01em; margin-bottom:6px; }
+    .cur-title-sub { display:block; font-size:clamp(.9rem,2.5vw,1rem); font-weight:600; color:#bbb; letter-spacing:.04em; margin-bottom:8px; }
     .cur-title-main { display:block; background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .cur-tabs-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; margin-bottom:28px; }
-    .cur-tabs-wrap::-webkit-scrollbar { display:none; }
-    .cur-tabs { display:flex; gap:8px; justify-content:center; min-width:max-content; padding:4px 4px; }
-    .cur-tab { background:transparent; border:1px solid #333; color:#888; font-size:.88rem; font-weight:700; padding:9px 20px; border-radius:99px; cursor:pointer; font-family:inherit; transition:all .2s; white-space:nowrap; }
+    .cur-tabs-wrap { margin-bottom:28px; }
+    .cur-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:4px 0; }
+    .cur-tab { background:transparent; border:1px solid #333; color:#888; font-size:.88rem; font-weight:700; padding:9px 28px; border-radius:99px; cursor:pointer; font-family:inherit; transition:all .2s; white-space:nowrap; }
     .cur-tab:hover { border-color:#555; color:#ccc; }
     .cur-tab.active { background:linear-gradient(90deg,#FF4714,#f5af19); border-color:transparent; color:#fff; }
     .cur-panel { display:none; }
