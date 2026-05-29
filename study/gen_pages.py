@@ -82,6 +82,11 @@ gif_css = """
     /* hook-section 하단 여백 축소 */
     .hook-section { padding-bottom: 40px !important; }
     .hook-or { filter: drop-shadow(0 0 14px rgba(255,80,20,0.55)); }
+    /* result 이미지 PC 크기 제한 */
+    @media(min-width:768px){
+      .result-viewport { max-height:280px; }
+      .result-track img { max-height:280px; width:auto; }
+    }
     /* consult phone link */
     a.consult-num { text-decoration:none; display:block; transition:opacity .2s, transform .2s; }
     a.consult-num:hover { opacity:.85; transform:scale(1.03); }
