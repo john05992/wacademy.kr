@@ -49,6 +49,8 @@ html = html.replace('개별지도학원', '{{메인키워드}}')
 html = html.replace('WAWA COACHING ACADEMY', 'WAWA ACADEMY')
 html = html.replace('/images_m/위치사진/사동.webp', '/images_m/위치사진/{{위치이미지}}.webp')
 html = html.replace('/images/위치사진/사동.webp', '/images/위치사진/{{위치이미지}}.webp')
+html = html.replace('<a class="header-cta-btn" href="#consult">', '<a class="header-cta-btn" href="tel:01039525815">')
+html = html.replace('<a class="float-consult-btn" href="#consult">', '<a class="float-consult-btn" href="tel:01039525815">')
 
 # ── 8. dyn-kw 동적 교체 지점 지정 ───────────────────────────────────
 html = html.replace(
@@ -92,19 +94,23 @@ gif_css = """
     /* consult phone link */
     @keyframes phone-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)} 50%{box-shadow:0 0 0 14px rgba(255,255,255,0)} }
     a.consult-num {
-      text-decoration:none; display:inline-block;
+      text-decoration:none; display:block;
       background:rgba(255,255,255,.15); border:2px solid rgba(255,255,255,.5);
-      border-radius:99px; padding:10px 36px; margin:4px 0;
+      border-radius:99px; padding:14px 16px; margin:4px auto;
       transition:background .2s, transform .2s;
       animation:phone-pulse 2s infinite;
+      white-space:normal !important;
+      word-break:break-all;
+      max-width:100%; box-sizing:border-box;
+      font-size:clamp(1.4rem,5vw,3.5rem) !important;
     }
     a.consult-num::before { content:'📞 '; font-size:.75em; }
     a.consult-num:hover { background:rgba(255,255,255,.25); transform:scale(1.04); }
     a.consult-num:active { transform:scale(.97); }
-    .consult-avail { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:700; color:#fff176; letter-spacing:-.01em; margin-bottom:0; }
+    .consult-avail { font-size:clamp(1rem,3.5vw,1.4rem); font-weight:700; color:#fff176; letter-spacing:-.01em; margin-bottom:0; }
     .consult-notice {
-      font-size:clamp(1rem,3vw,1.25rem); font-weight:700; color:#fff;
-      line-height:1.65; margin-top:20px; padding:16px 20px;
+      font-size:clamp(1rem,3vw,1.15rem); font-weight:700; color:#fff;
+      line-height:1.65; padding:14px 16px;
       background:rgba(0,0,0,.25); border-radius:12px;
       border-left:4px solid #fff176;
     }
@@ -521,12 +527,11 @@ rec_html = """
 
 consult_html = """<section class="consult-section" id="consult">
   <div class="consult-box">
-    <p class="consult-label">상담번호</p>
+    <p class="consult-notice">전화 없이 방문 시 상담이 어려울 수 있습니다</p>
     <div class="consult-label-line"></div>
     <a href="tel:01039525815" class="consult-num">010-3952-5815</a>
     <div class="consult-divider"></div>
     <p class="consult-avail">문자·전화 24시 연중무휴 가능</p>
-    <p class="consult-notice">전화 없이 방문하시면 상담이 어려울 수 있습니다</p>
   </div>
 </section>"""
 
