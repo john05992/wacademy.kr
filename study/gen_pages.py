@@ -49,8 +49,9 @@ html = html.replace('개별지도학원', '{{메인키워드}}')
 html = html.replace('WAWA COACHING ACADEMY', 'WAWA ACADEMY')
 html = html.replace('/images_m/위치사진/사동.webp', '/images_m/위치사진/{{위치이미지}}.webp')
 html = html.replace('/images/위치사진/사동.webp', '/images/위치사진/{{위치이미지}}.webp')
-html = html.replace('<a class="header-cta-btn" href="#consult">', '<a class="header-cta-btn" href="tel:01039525815">')
-html = html.replace('<a class="float-consult-btn" href="#consult">', '<a class="float-consult-btn" href="tel:01039525815">')
+# 버튼은 #consult 섹션으로 스크롤 (tel 아님)
+# bottom-cta-section 제거
+html = re.sub(r'<section class="bottom-cta-section">.*?</section>', '', html, flags=re.DOTALL)
 # GIF → animated WebP
 html = html.replace('/images/공부.gif', '/images/공부.webp')
 # 네이버 wcslog 렌더블로킹 제거
@@ -110,26 +111,21 @@ gif_css = """
     .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-bottom:32px; word-break:keep-all; }
     .c3-bar { width:36px; height:2px; background:linear-gradient(90deg,#FF4714,#f5af19); margin:0 auto 40px; border-radius:2px; }
     .c3-phone-wrap { position:relative; display:inline-block; margin-bottom:28px; }
-    @keyframes c3-ripple { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(2.2);opacity:0} }
-    .c3-ring {
-      position:absolute; inset:-12px; border-radius:99px;
-      border:2px solid #FF4714; opacity:0;
-      animation:c3-ripple 2s ease-out infinite;
-    }
-    .c3-ring--2 { animation-delay:.9s; }
+    @keyframes c3-glow { 0%,100%{box-shadow:0 0 0 0 rgba(255,71,20,.5)} 50%{box-shadow:0 0 0 12px rgba(255,71,20,0)} }
     .c3-num {
-      display:flex; align-items:center; gap:10px;
+      display:block;
       font-size:clamp(1.8rem,6vw,2.8rem);
       font-weight:900; color:#fff; letter-spacing:-.03em; line-height:1;
       text-decoration:none; white-space:nowrap;
-      padding:18px 32px;
-      background:linear-gradient(135deg,#1a1a1a,#222);
-      border:1px solid #2e2e2e; border-radius:99px;
-      transition:background .2s, transform .15s;
+      padding:18px 36px;
+      background:linear-gradient(135deg,#1c1c1c,#242424);
+      border:1px solid #333; border-radius:99px;
+      animation:c3-glow 2.4s ease-in-out infinite;
+      transition:transform .15s;
       position:relative; z-index:1;
     }
-    .c3-num:active { transform:scale(.96); background:#111; }
-    .c3-icon { font-size:.75em; }
+    .c3-ring { display:none; }
+    .c3-num:active { transform:scale(.96); }
     .c3-sub { font-size:.85rem; font-weight:700; color:rgba(255,255,255,.35); letter-spacing:.02em; }
 
     /* ── GIF BRIDGE ── */
