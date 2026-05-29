@@ -55,7 +55,11 @@ html = html.replace(
 )
 html = html.replace(
     '<h2 class="fact-title">{{지역명}} {{메인키워드}}</h2>',
-    '<h2 class="fact-title"><span class="dyn-kw">{{지역명}} {{메인키워드}}</span></h2>'
+    '<h2 class="fact-title">지금까지 학원</h2>'
+)
+html = html.replace(
+    '<p class="fact-title"><span class="simple-underline">제대로 고르는 법</span></p>',
+    '<p class="fact-title"><span class="simple-underline">이거 체크하셨나요?</span></p>'
 )
 html = re.sub(
     r'<h2 class="promise-title">{{지역명}} {{메인키워드}}<br><span>[^<]*</span></h2>',
