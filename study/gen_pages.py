@@ -88,10 +88,24 @@ gif_css = """
       .result-track img { max-height:280px; width:auto; }
     }
     /* consult phone link */
-    a.consult-num { text-decoration:none; display:block; transition:opacity .2s, transform .2s; }
-    a.consult-num:hover { opacity:.85; transform:scale(1.03); }
+    @keyframes phone-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)} 50%{box-shadow:0 0 0 14px rgba(255,255,255,0)} }
+    a.consult-num {
+      text-decoration:none; display:inline-block;
+      background:rgba(255,255,255,.15); border:2px solid rgba(255,255,255,.5);
+      border-radius:99px; padding:10px 36px; margin:4px 0;
+      transition:background .2s, transform .2s;
+      animation:phone-pulse 2s infinite;
+    }
+    a.consult-num::before { content:'📞 '; font-size:.75em; }
+    a.consult-num:hover { background:rgba(255,255,255,.25); transform:scale(1.04); }
+    a.consult-num:active { transform:scale(.97); }
     .consult-avail { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:700; color:#fff176; letter-spacing:-.01em; margin-bottom:0; }
-    .consult-notice { font-size:clamp(.82rem,2.2vw,.95rem); font-weight:700; color:rgba(255,255,255,.7); line-height:1.65; margin-top:16px; padding-top:20px; border-top:1px solid rgba(255,255,255,.2); }
+    .consult-notice {
+      font-size:clamp(1rem,3vw,1.25rem); font-weight:700; color:#fff;
+      line-height:1.65; margin-top:20px; padding:16px 20px;
+      background:rgba(0,0,0,.25); border-radius:12px;
+      border-left:4px solid #fff176;
+    }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
