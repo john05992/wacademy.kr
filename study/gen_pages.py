@@ -260,7 +260,7 @@ sr_html = """
           </div>
           <div class="sr-feedback-block">
             <p class="sr-section-label sr-section-label--fb"><span class="sr-section-label-dot"></span>선생님 피드백</p>
-            <p class="sr-feedback-text">어휘가 부족해 <em class="sr-hl">독해법을 집중지도</em><br>수학은 <em class="sr-hl">고등 예습 + 중등 개념</em><br>암기보단 원리를 이해</p>
+            <p class="sr-feedback-text">어휘가 부족해 <em class="sr-hl">독해법 집중지도</em><br>수학은 <em class="sr-hl">고등 예습 + 중등 개념</em><br>암기보단 원리를 이해</p>
           </div>
         </div>
       </div>
@@ -276,7 +276,7 @@ sr_html = """
           </div>
           <div class="sr-feedback-block">
             <p class="sr-section-label sr-section-label--fb"><span class="sr-section-label-dot"></span>선생님 피드백</p>
-            <p class="sr-feedback-text">문법 및 기본기 정리 후<br>내신·모고 <em class="sr-hl">선행비율을 5대5</em> 조정<br><em class="sr-hl">시험 2주전</em> 학교 기출 집중풀이</p>
+            <p class="sr-feedback-text">문법 및 기본기 정리 후<br>내신·모고 <em class="sr-hl">선행비율 5대5</em> 조정<br><em class="sr-hl">시험 2주전</em> 학교 기출 집중풀이</p>
           </div>
         </div>
       </div>
@@ -292,7 +292,7 @@ sr_html = """
           </div>
           <div class="sr-feedback-block">
             <p class="sr-section-label sr-section-label--fb"><span class="sr-section-label-dot"></span>선생님 피드백</p>
-            <p class="sr-feedback-text"><em class="sr-hl">학생 수준에</em> 맞는 진도 관리<br><em class="sr-hl">수업일지</em>로 진도 계획 수립<br>설명·과제 관리로 취약 부분 보완<br><em class="sr-hl">오답 분석 후 재평가</em> 실시</p>
+            <p class="sr-feedback-text"><em class="sr-hl">학생 수준에</em> 맞는 진도 관리<br><em class="sr-hl">수업일지</em>로 진도 계획 수립<br>설명·과제 관리로 취약점 보완<br><em class="sr-hl">오답 분석 후 재평가</em> 실시</p>
           </div>
         </div>
       </div>
