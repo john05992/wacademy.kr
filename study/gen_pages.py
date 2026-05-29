@@ -108,7 +108,6 @@ gif_css = """
     .c3-section { background:#0a0a0a; padding:88px 24px; display:flex; align-items:center; justify-content:center; }
     .c3-inner { text-align:center; width:100%; max-width:480px; }
     .c3-eyebrow { font-size:.65rem; font-weight:900; color:#FF4714; letter-spacing:.22em; text-transform:uppercase; margin-bottom:20px; }
-    .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-bottom:32px; word-break:keep-all; }
     .c3-bar { width:36px; height:2px; background:linear-gradient(90deg,#FF4714,#f5af19); margin:0 auto 40px; border-radius:2px; }
     .c3-phone-wrap { position:relative; display:inline-block; margin-bottom:28px; }
     @keyframes c3-glow { 0%,100%{box-shadow:0 0 0 0 rgba(255,71,20,.5)} 50%{box-shadow:0 0 0 12px rgba(255,71,20,0)} }
@@ -126,7 +125,9 @@ gif_css = """
     }
     .c3-ring { display:none; }
     .c3-num:active { transform:scale(.96); }
-    .c3-sub { font-size:.85rem; font-weight:700; color:rgba(255,255,255,.35); letter-spacing:.02em; }
+    .c3-sub { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:900; color:rgba(255,255,255,.75); letter-spacing:-.01em; margin-bottom:0; }
+    .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-top:28px; word-break:keep-all; }
+    .c3-wawa { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
@@ -541,7 +542,7 @@ rec_html = """
 consult_html = """<section class="c3-section" id="consult">
   <div class="c3-inner">
     <p class="c3-eyebrow">WAWA ACADEMY</p>
-    <p class="c3-warn">방문 전<br>전화 예약 부탁드립니다</p>
+    <p class="c3-sub">문자·전화 24시 연중무휴</p>
     <div class="c3-bar"></div>
     <div class="c3-phone-wrap">
       <a href="tel:01039525815" class="c3-num">
@@ -550,7 +551,7 @@ consult_html = """<section class="c3-section" id="consult">
         010-3952-5815
       </a>
     </div>
-    <p class="c3-sub">문자·전화 24시 연중무휴</p>
+    <p class="c3-warn"><em class="c3-wawa">와와쌤</em>과 상담하기</p>
   </div>
 </section>"""
 
