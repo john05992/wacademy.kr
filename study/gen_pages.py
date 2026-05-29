@@ -51,6 +51,18 @@ html = html.replace('/images_m/위치사진/사동.webp', '/images_m/위치사�
 html = html.replace('/images/위치사진/사동.webp', '/images/위치사진/{{위치이미지}}.webp')
 html = html.replace('<a class="header-cta-btn" href="#consult">', '<a class="header-cta-btn" href="tel:01039525815">')
 html = html.replace('<a class="float-consult-btn" href="#consult">', '<a class="float-consult-btn" href="tel:01039525815">')
+# GIF → animated WebP
+html = html.replace('/images/공부.gif', '/images/공부.webp')
+# 네이버 wcslog 렌더블로킹 제거
+html = html.replace(
+    '<script type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>',
+    '<script type="text/javascript" src="//wcs.pstatic.net/wcslog.js" defer></script>'
+)
+# preconnect 추가
+html = html.replace(
+    '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>',
+    '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>\n  <link rel="preconnect" href="https://nam.veta.naver.com" crossorigin>'
+)
 
 # ── 8. dyn-kw 동적 교체 지점 지정 ───────────────────────────────────
 html = html.replace(
