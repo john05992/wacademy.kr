@@ -125,8 +125,8 @@ gif_css = """
     }
     .c3-ring { display:none; }
     .c3-num:active { transform:scale(.96); }
-    .c3-sub { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:900; color:rgba(255,255,255,.75); letter-spacing:-.01em; margin-bottom:0; }
-    .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-top:28px; word-break:keep-all; }
+    .c3-sub { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:900; color:rgba(255,255,255,.75); letter-spacing:-.01em; margin-top:28px; }
+    .c3-warn { font-size:clamp(1.7rem,5.5vw,2.6rem); font-weight:900; color:#fff; letter-spacing:-.04em; line-height:1.3; margin-bottom:32px; word-break:keep-all; }
     .c3-wawa { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-style:normal; }
 
     /* ── GIF BRIDGE ── */
@@ -542,7 +542,7 @@ rec_html = """
 consult_html = """<section class="c3-section" id="consult">
   <div class="c3-inner">
     <p class="c3-eyebrow">WAWA ACADEMY</p>
-    <p class="c3-sub">문자·전화 24시 연중무휴</p>
+    <p class="c3-warn"><em class="c3-wawa">와와쌤</em>과 상담하기</p>
     <div class="c3-bar"></div>
     <div class="c3-phone-wrap">
       <a href="tel:01039525815" class="c3-num">
@@ -551,7 +551,7 @@ consult_html = """<section class="c3-section" id="consult">
         010-3952-5815
       </a>
     </div>
-    <p class="c3-warn"><em class="c3-wawa">와와쌤</em>과 상담하기</p>
+    <p class="c3-sub">문자·전화 24시 연중무휴</p>
   </div>
 </section>"""
 
