@@ -126,7 +126,7 @@ sr_css = """
     .sr-cards { display:flex; flex-direction:column; gap:32px; }
     @media(min-width:768px){ .sr-cards{ flex-direction:row; align-items:flex-start; gap:22px; } .sr-card{ flex:1; } }
     .sr-card { background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 4px 28px rgba(0,0,0,0.09); border:1px solid #f0f0f0; }
-    .sr-grade { background:linear-gradient(135deg,#1a1a1a,#333); color:#fff; font-size:clamp(.9rem,2.3vw,1.05rem); font-weight:900; padding:16px 20px; letter-spacing:-.02em; text-align:center; }
+    .sr-grade { background:linear-gradient(135deg,#1a1a1a,#333); color:#fff; font-size:clamp(1.05rem,3vw,1.35rem); font-weight:900; padding:18px 20px; letter-spacing:-.02em; text-align:center; }
     .sr-grade-arrow { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:900; margin:0 5px; }
     .sr-img { width:100%; display:block; object-fit:cover; max-height:200px; }
     .sr-body { padding:22px 20px 24px; display:flex; flex-direction:column; gap:0; }
@@ -167,7 +167,7 @@ sr_html = """
 <section class="student-review-section">
   <div class="sr-inner">
     <p class="sr-eyebrow">REAL RESULT</p>
-    <h2 class="sr-title">실제 학생 성과</h2>
+    <h2 class="sr-title">중하위권 학생의<br>성적상승 비밀은?</h2>
     <div class="sr-cards">
 
       <div class="sr-card">
@@ -177,11 +177,11 @@ sr_html = """
           <div class="sr-review-block">
             <p class="sr-section-label sr-section-label--review"><span class="sr-section-label-dot"></span>학생 후기</p>
             <p class="sr-student-name">— 김O경 학생</p>
-            <p class="sr-review-text"><em class="sr-hl">저만의 부족한 부분</em>을 정확히 짚어주시고<br>코칭해 주신 덕분에 5등급에서<br>고2 영어 내신 96~100점대로 유지했고,<br>수학도 90점을 넘기며 1등급을 여러 차례 받았습니다.<br>무엇보다 <em class="sr-hl">공부를 대하는 태도</em>가 달라졌다는 게 가장 큰 변화입니다.</p>
+            <p class="sr-review-text"><em class="sr-hl">저만의 부족한 부분</em>을 정확히 짚어주시고<br>코칭해 주신 덕분에 5등급에서<br>고2 영어 내신 96~100점대로 유지했고,<br>수학도 90점을 넘겨 1등급을 여러번 받았어요<br>무엇보다 <em class="sr-hl">공부의 태도</em>가 달라졌어요</p>
           </div>
           <div class="sr-feedback-block">
             <p class="sr-section-label sr-section-label--fb"><span class="sr-section-label-dot"></span>선생님 피드백</p>
-            <p class="sr-feedback-text">영어는 어휘 부족으로 <em class="sr-hl">독해 방법을 체계적</em>으로 지도<br>수학은 고등 예습 + 중등 개념 병행하며<br>공식 암기보단 <em class="sr-hl">원리를 이해하는 방식</em>으로 지도</p>
+            <p class="sr-feedback-text">어휘가 부족해 <em class="sr-hl">독해법을 체계적 지도</em><br>수학은 <em class="sr-hl">고등 예습 + 중등 개념</em> 병행하며<br>암기보단 원리를 이해</p>
           </div>
         </div>
       </div>
@@ -193,11 +193,11 @@ sr_html = """
           <div class="sr-review-block">
             <p class="sr-section-label sr-section-label--review"><span class="sr-section-label-dot"></span>학생 후기</p>
             <p class="sr-student-name">— 조O석 학생</p>
-            <p class="sr-review-text">이전 시험은 6등급이였으나<br>이번 시험으로 내신·모의고사 모두 자신감이 생겼습니다!<br><em class="sr-hl">저에게 맞는 부분만</em> 건들여 주셔서 좋았어요.<br>사회만 2등급이고 전 과목 1등급을 받아<br>더욱 자부심이 생긴 것 같습니다.</p>
+            <p class="sr-review-text">이전 시험은 6등급이였으나 1등급 받은<br>이번 시험으로 공부 자신감이 생겼어요!<br><em class="sr-hl">저에게 맞는 부분만</em> 건들여 주셔서 좋았어요.</p>
           </div>
           <div class="sr-feedback-block">
             <p class="sr-section-label sr-section-label--fb"><span class="sr-section-label-dot"></span>선생님 피드백</p>
-            <p class="sr-feedback-text">문법 및 기본기 정리 후<br>내신·모고 <em class="sr-hl">선행비율을 5대5</em> 조정<br><em class="sr-hl">시험 2주 전</em>부터는 학교 기출 문제 집중 풀이</p>
+            <p class="sr-feedback-text">문법 및 기본기 정리 후<br>내신·모고 <em class="sr-hl">선행비율을 5대5</em> 조정<br><em class="sr-hl">시험 2주전</em> 학교 기출 문제 집중 풀이</p>
           </div>
         </div>
       </div>
@@ -213,7 +213,7 @@ sr_html = """
           </div>
           <div class="sr-feedback-block">
             <p class="sr-section-label sr-section-label--fb"><span class="sr-section-label-dot"></span>선생님 피드백</p>
-            <p class="sr-feedback-text">꼼꼼한 관리 및 <em class="sr-hl">수준에 맞는 진도 관리</em> 병행<br>수업일지로 <em class="sr-hl">전체적인 진도 계획</em> 수립 후<br>설명·과제 관리로 취약 부분 보완<br><em class="sr-hl">오답 분석 후 재평가</em> 실시</p>
+            <p class="sr-feedback-text"><em class="sr-hl">학생 수준에 맞는 진도 관리</em> 병행<br>수업일지로 <em class="sr-hl">전체적인 진도 계획</em> 수립 후<br>설명·과제 관리로 취약 부분 보완<br><em class="sr-hl">오답 분석 후 재평가</em> 실시</p>
           </div>
         </div>
       </div>
