@@ -234,7 +234,7 @@ html = html.replace('</style>', gif_css_combined + '\n  </style>')
 gif_html = """
 <section class="gif-bridge-section">
   <div class="gif-bridge-inner">
-    <img src="/images/공부.gif" alt="공부 이미지" class="gif-bridge-img" loading="lazy">
+    <img src="/images/공부.gif" alt="공부 이미지" class="gif-bridge-img" loading="lazy" width="350" height="159">
     <p class="gif-bridge-caption">세가지를 모두 갖춘 학원</p>
   </div>
 </section>
@@ -254,7 +254,7 @@ sr_html = """
 
       <div class="sr-card">
         <div class="sr-grade">5등급 <span class="sr-grade-arrow">→</span> 서울대 합격</div>
-        <img src="/images/성적향상1.webp" alt="성적향상 사례1" class="sr-img" loading="lazy">
+        <img src="/images/성적향상1.webp" alt="성적향상 사례1" class="sr-img" loading="lazy" width="800" height="452">
         <div class="sr-body">
           <div class="sr-review-block">
             <p class="sr-section-label sr-section-label--review"><span class="sr-section-label-dot"></span>학생 후기</p>
@@ -270,7 +270,7 @@ sr_html = """
 
       <div class="sr-card">
         <div class="sr-grade">영어 6등급 <span class="sr-grade-arrow">→</span> 1등급</div>
-        <img src="/images/성적향상2.webp" alt="성적향상 사례2" class="sr-img" loading="lazy">
+        <img src="/images/성적향상2.webp" alt="성적향상 사례2" class="sr-img" loading="lazy" width="740" height="878">
         <div class="sr-body">
           <div class="sr-review-block">
             <p class="sr-section-label sr-section-label--review"><span class="sr-section-label-dot"></span>학생 후기</p>
@@ -286,7 +286,7 @@ sr_html = """
 
       <div class="sr-card">
         <div class="sr-grade">수학 28점 <span class="sr-grade-arrow">→</span> 43점 <span class="sr-grade-arrow">→</span> 80점</div>
-        <img src="/images/성적향상3.webp" alt="성적향상 사례3" class="sr-img" loading="lazy">
+        <img src="/images/성적향상3.webp" alt="성적향상 사례3" class="sr-img" loading="lazy" width="740" height="567">
         <div class="sr-body">
           <div class="sr-review-block">
             <p class="sr-section-label sr-section-label--review"><span class="sr-section-label-dot"></span>학생 후기</p>
