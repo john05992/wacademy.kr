@@ -551,7 +551,6 @@ consult_html = """<section class="c3-section" id="consult">
       <a href="tel:01039525815" class="c3-num">
         <span class="c3-ring"></span>
         <span class="c3-ring c3-ring--2"></span>
-        <span class="c3-icon">📞</span>
         010-3952-5815
       </a>
     </div>
