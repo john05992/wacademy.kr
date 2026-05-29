@@ -82,6 +82,11 @@ gif_css = """
     /* hook-section 하단 여백 축소 */
     .hook-section { padding-bottom: 40px !important; }
     .hook-or { filter: drop-shadow(0 0 14px rgba(255,80,20,0.55)); }
+    /* consult phone link */
+    a.consult-num { text-decoration:none; display:block; transition:opacity .2s, transform .2s; }
+    a.consult-num:hover { opacity:.85; transform:scale(1.03); }
+    .consult-avail { font-size:clamp(1.1rem,3.5vw,1.5rem); font-weight:700; color:#fff176; letter-spacing:-.01em; margin-bottom:0; }
+    .consult-notice { font-size:clamp(.82rem,2.2vw,.95rem); font-weight:700; color:rgba(255,255,255,.7); line-height:1.65; margin-top:16px; padding-top:20px; border-top:1px solid rgba(255,255,255,.2); }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
@@ -492,6 +497,24 @@ rec_html = """
 </section>
 
 """
+
+consult_html = """<section class="consult-section" id="consult">
+  <div class="consult-box">
+    <p class="consult-label">상담번호</p>
+    <div class="consult-label-line"></div>
+    <a href="tel:01039525815" class="consult-num">010-3952-5815</a>
+    <div class="consult-divider"></div>
+    <p class="consult-avail">문자·전화 24시 연중무휴 가능</p>
+    <p class="consult-notice">전화 없이 방문하시면 상담이 어려울 수 있습니다</p>
+  </div>
+</section>"""
+
+html = re.sub(
+    r'<section class="consult-section" id="consult">.*?</section>',
+    consult_html,
+    html,
+    flags=re.DOTALL
+)
 
 html = html.replace('</style>', cur_css + '\n  </style>')
 html = html.replace(
