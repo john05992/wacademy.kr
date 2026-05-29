@@ -91,29 +91,35 @@ gif_css = """
       .result-viewport { max-height:280px; }
       .result-track img { max-height:280px; width:auto; }
     }
-    /* consult phone link */
-    @keyframes phone-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)} 50%{box-shadow:0 0 0 14px rgba(255,255,255,0)} }
+    /* ── CONSULT REDESIGN ── */
+    .consult-section { padding:64px 20px !important; background:#fff !important; }
+    .consult-box {
+      background:#111 !important;
+      border-radius:24px !important;
+      padding:44px 28px 40px !important;
+      box-shadow:0 20px 60px rgba(0,0,0,.15) !important;
+      max-width:460px !important;
+      width:100%; box-sizing:border-box;
+    }
+    .consult-box::before { height:3px !important; width:100% !important; top:0 !important; right:0 !important; background:linear-gradient(90deg,#FF4714,#f5af19) !important; border-radius:0 !important; }
+    .consult-box::after { display:none !important; }
+    .consult-tag { font-size:.7rem; font-weight:900; color:#FF4714; letter-spacing:.16em; text-transform:uppercase; margin-bottom:20px; }
     a.consult-num {
-      text-decoration:none; display:block;
-      background:rgba(255,255,255,.15); border:2px solid rgba(255,255,255,.5);
-      border-radius:99px; padding:14px 16px; margin:4px auto;
-      transition:background .2s, transform .2s;
-      animation:phone-pulse 2s infinite;
-      white-space:normal !important;
-      word-break:break-all;
-      max-width:100%; box-sizing:border-box;
-      font-size:clamp(1.4rem,5vw,3.5rem) !important;
+      font-size:clamp(1.9rem,6.5vw,3rem) !important;
+      display:block !important; text-decoration:none !important;
+      color:#fff !important; font-weight:900 !important;
+      letter-spacing:-.03em !important; line-height:1.1 !important;
+      white-space:nowrap !important;
+      background:none !important; border:none !important;
+      padding:0 !important; margin:0 0 4px !important;
+      animation:none !important; text-shadow:none !important;
+      transition:opacity .15s !important;
     }
-    a.consult-num::before { content:'📞 '; font-size:.75em; }
-    a.consult-num:hover { background:rgba(255,255,255,.25); transform:scale(1.04); }
-    a.consult-num:active { transform:scale(.97); }
-    .consult-avail { font-size:clamp(1rem,3.5vw,1.4rem); font-weight:700; color:#fff176; letter-spacing:-.01em; margin-bottom:0; }
-    .consult-notice {
-      font-size:clamp(1rem,3vw,1.15rem); font-weight:700; color:#fff;
-      line-height:1.65; padding:14px 16px;
-      background:rgba(0,0,0,.25); border-radius:12px;
-      border-left:4px solid #fff176;
-    }
+    a.consult-num::before { content:'' !important; }
+    a.consult-num:active { opacity:.6 !important; transform:none !important; }
+    .consult-label-line { margin:22px 0 !important; background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent) !important; }
+    .consult-avail { font-size:.9rem !important; font-weight:700 !important; color:rgba(255,255,255,.65) !important; white-space:nowrap; margin-bottom:10px !important; }
+    .consult-notice { font-size:.76rem !important; font-weight:700 !important; color:rgba(255,255,255,.35) !important; line-height:1.6 !important; padding:0 !important; background:none !important; border:none !important; border-radius:0 !important; margin-top:0 !important; }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
@@ -527,11 +533,11 @@ rec_html = """
 
 consult_html = """<section class="consult-section" id="consult">
   <div class="consult-box">
-    <p class="consult-notice">전화 없이 방문 시 상담이 어려울 수 있습니다</p>
-    <div class="consult-label-line"></div>
+    <p class="consult-tag">상담 연락처</p>
     <a href="tel:01039525815" class="consult-num">010-3952-5815</a>
-    <div class="consult-divider"></div>
+    <div class="consult-label-line"></div>
     <p class="consult-avail">문자·전화 24시 연중무휴 가능</p>
+    <p class="consult-notice">전화 없이 방문 시 상담이 어려울 수 있습니다</p>
   </div>
 </section>"""
 
