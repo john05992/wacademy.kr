@@ -79,6 +79,7 @@ html = html.replace(
 gif_css = """
     /* hook-section 하단 여백 축소 */
     .hook-section { padding-bottom: 40px !important; }
+    .hook-or { filter: drop-shadow(0 0 14px rgba(255,80,20,0.55)); }
 
     /* ── GIF BRIDGE ── */
     .gif-bridge-section {
