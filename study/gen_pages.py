@@ -626,12 +626,7 @@ dyn_script = f"""
 }})();
 </script>
 """
-credit_html = """
-<footer style="padding:32px 20px 40px;text-align:center;">
-  <p style="font-size:.72rem;color:#aaa;letter-spacing:.06em;font-weight:500;margin:0;">와와학습코칭 담당자 신요한쌤</p>
-</footer>
-"""
-html = html.replace('</body>', credit_html + dyn_script + '</body>')
+html = html.replace('</body>', dyn_script + '</body>')
 
 # ── 13. 442개 폴더 + index.html 생성 ──────────────────────────────
 study_dir = r"C:\Users\tlsdy\OneDrive\바탕 화면\와카데미\study"
