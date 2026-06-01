@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -644,6 +644,13 @@
     .cur-item strong { color:#fff; font-weight:700; }
 
   </style>
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window,document,"clarity","script","x01xoz7kzk");
+</script>
 </head>
 <body>
 
@@ -1261,5 +1268,147 @@ if(window.wcs) {
   }
 })();
 </script>
+<script>
+(function(){
+  var SHEETS='https://script.google.com/macros/s/AKfycbxbiFVfO3D30US6U5fN6Gfr4w7ofbyHHHTWEGFnpMV2GxT57vx1LNn66noMeFEl8Yu9/exec';
+  var enterTime=Date.now();
+  var maxScroll=0;
+  var clickCount=0;
+  var sent=false;
+
+  window.addEventListener('scroll',function(){
+    var total=document.body.scrollHeight-window.innerHeight;
+    if(total<=0)return;
+    var d=Math.round((window.scrollY/total)*100);
+    if(d>maxScroll)maxScroll=d;
+  });
+
+  document.addEventListener('click',function(){clickCount++;});
+
+  function getCanvas(){
+    try{
+      var c=document.createElement('canvas');
+      var ctx=c.getContext('2d');
+      ctx.font='14px Arial';
+      ctx.fillText('wacademy_fp',2,15);
+      return c.toDataURL().slice(-30);
+    }catch(e){return 'err';}
+  }
+
+  function getGPU(){
+    try{
+      var gl=document.createElement('canvas').getContext('webgl');
+      if(!gl)return 'no-webgl';
+      var ext=gl.getExtension('WEBGL_debug_renderer_info');
+      if(!ext)return 'no-ext';
+      return gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)||'unknown';
+    }catch(e){return 'err';}
+  }
+
+  function getAdBlock(){
+    try{
+      var t=document.createElement('div');
+      t.className='adsbox';
+      t.style.cssText='position:absolute;left:-9999px;height:1px';
+      document.body.appendChild(t);
+      var blocked=t.offsetHeight===0;
+      document.body.removeChild(t);
+      return blocked;
+    }catch(e){return false;}
+  }
+
+  function getWebRTC(cb){
+    try{
+      var pc=new RTCPeerConnection({iceServers:[{urls:'stun:stun.l.google.com:19302'}]});
+      var ips=[];
+      var done=false;
+      function finish(){
+        if(done)return;
+        done=true;
+        pc.close();
+        cb(ips.join(','));
+      }
+      pc.createDataChannel('');
+      pc.createOffer().then(function(o){return pc.setLocalDescription(o);});
+      pc.onicecandidate=function(e){
+        if(!e.candidate){finish();return;}
+        var m=e.candidate.candidate.match(/(\d+\.\d+\.\d+\.\d+)/);
+        if(m&&ips.indexOf(m[1])===-1)ips.push(m[1]);
+      };
+      setTimeout(finish,1500);
+    }catch(e){cb('err');}
+  }
+
+  function parseUA(){
+    var ua=navigator.userAgent;
+    var browser='unknown',os='unknown';
+    if(/Chrome\//.test(ua)&&!/Edg\//.test(ua))browser='Chrome';
+    else if(/Firefox\//.test(ua))browser='Firefox';
+    else if(/Edg\//.test(ua))browser='Edge';
+    else if(/Safari\//.test(ua)&&!/Chrome/.test(ua))browser='Safari';
+    if(/Windows/.test(ua))os='Windows';
+    else if(/Mac OS/.test(ua))os='Mac';
+    else if(/Android/.test(ua))os='Android';
+    else if(/iPhone|iPad/.test(ua))os='iOS';
+    else if(/Linux/.test(ua))os='Linux';
+    return browser+' / '+os;
+  }
+
+  // IP를 페이지 로드 시점에 미리 캐싱
+  var cachedIP = {};
+  fetch('https://ipapi.co/json/')
+    .then(function(r){return r.json();})
+    .then(function(ip){cachedIP=ip;})
+    .catch(function(){});
+
+  function sendData(webrtcIP){
+    if(sent)return;
+    sent=true;
+    var now=new Date();
+    var pad=function(n){return String(n).padStart(2,'0');};
+    var data={
+      date:      now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate()),
+      time:      pad(now.getHours())+':'+pad(now.getMinutes()),
+      ip:        cachedIP.ip||'',
+      webrtcIP:  webrtcIP||'',
+      isp:       cachedIP.org||'',
+      city:      cachedIP.city||'',
+      region:    cachedIP.region||'',
+      country:   cachedIP.country_name||'',
+      canvas:    getCanvas(),
+      gpu:       getGPU(),
+      ua:        parseUA(),
+      screen:    screen.width+'x'+screen.height,
+      cores:     navigator.hardwareConcurrency||'',
+      adBlock:   getAdBlock(),
+      page:      location.pathname,
+      query:     location.search,
+      stayTime:  Math.round((Date.now()-enterTime)/1000)+'s',
+      scrollDepth:maxScroll+'%',
+      clickCount: clickCount
+    };
+    var body=JSON.stringify(data);
+    if(navigator.sendBeacon){
+      navigator.sendBeacon(SHEETS,body);
+    }else{
+      fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});
+    }
+  }
+
+  // 모집 날짜 텍스트 교체 (폰트/색상 유지)
+  var pts=document.querySelectorAll('h2.planner-title');
+  for(var i=0;i<pts.length;i++){
+    if(pts[i].textContent.indexOf('와와학원')!==-1){
+      var now2=new Date();
+      pts[i].innerHTML='일대일반 안내<br><em>'+(now2.getMonth()+1)+'/'+now2.getDate()+'까지 모집</em>';
+      break;
+    }
+  }
+
+  setTimeout(function(){getWebRTC(sendData);},2000);
+  window.addEventListener('pagehide',function(){sendData('');});
+})();
+</script>
 </body>
 </html>
+
