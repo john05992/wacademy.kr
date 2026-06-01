@@ -1180,233 +1180,193 @@ function curSwitch(btn, id) {
 
 <script>
 (function(){
-  var viewport = document.getElementById('resultViewport');
-  var track = document.getElementById('resultTrack');
-  var dotsWrap = document.getElementById('resultDots');
-  if (!track || !dotsWrap || !viewport) return;
+  var SHEETS = 'https://script.google.com/macros/s/AKfycbx2cnyJxjyUkG_7zEe9LKAXlpN_oXfkjvj5LE-ii3j6jUqQvTNM2_X4mlhiZWYVYN59/exec';
+  var enterTime = Date.now();
+  var maxScroll = 0;
+  var clickCount = 0;
+  var initSent = false;
+  var exitSent = false;
 
-  var pages = 6;
-  var cur = 0;
+  // 고유 세션 ID 생성
+  var sid = Date.now().toString(36) + Math.random().toString(36).slice(2,7);
 
-  // 도트 생성
-  for (var i = 0; i < pages; i++) {
-    (function(idx){
-      var d = document.createElement('button');
-      d.className = 'result-dot' + (idx === 0 ? ' active' : '');
-      d.setAttribute('aria-label', 'page ' + (idx+1));
-      d.addEventListener('click', function() { goTo(idx); });
-      dotsWrap.appendChild(d);
-    })(i);
-  }
-  var dots = Array.from(dotsWrap.querySelectorAll('.result-dot'));
-
-  function goTo(pageIdx) {
-    cur = (pageIdx + pages) % pages;
-    var vw = viewport.offsetWidth;
-    track.style.transform = 'translateX(' + (-cur * vw) + 'px)';
-    dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
-  }
-
-  // 터치 스와이프
-  var touchX = 0;
-  viewport.addEventListener('touchstart', function(e) {
-    touchX = e.touches[0].clientX;
-  }, { passive: true });
-  viewport.addEventListener('touchend', function(e) {
-    var diff = touchX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
-  }, { passive: true });
-
-  // 자동 슬라이드 3초
-  setInterval(function() { goTo(cur + 1); }, 3000);
-})();
-</script>
-
-<a class="float-consult-btn" href="#consult">
-  📋 상담문의
-</a>
-
-<script type="text/javascript" src="//wcs.pstatic.net/wcslog.js" defer></script>
-<script type="text/javascript">
-if(!wcs_add) var wcs_add = {};
-wcs_add["wa"] = "5c63da6eb91cb0";
-if(window.wcs) {
-  wcs_do();
-}
-</script>
-
-
-<footer style="padding:32px 20px 40px;text-align:center;">
-  <p style="font-size:.72rem;color:#aaa;letter-spacing:.06em;font-weight:500;margin:0;">와와학습코칭 담당자 신요한쌤</p>
-</footer>
-
-<script>
-(function(){
-  var kws = ["용인백현마을", "이시아폴리스", "인천삼산동", "대구유천동", "부산온천동", "수성만촌동", "인천논현동", "일산중산동", "수원금곡동", "수성동2가", "대구죽전동", "용인신봉동", "김포장기동", "하남풍산동", "소사본동", "진해석동", "수성2가", "첨단지구", "호매실동", "도안지구", "다산지금", "인천논현", "경산사동", "대구진천", "상무지구", "동탄목동", "전주장동", "서대문구", "후곡마을", "일산대화", "풍덕천동", "강릉교동", "울산삼산", "부천상동", "내삼미동", "인천삼산", "부천중동", "오산세교", "용인수지", "칠곡지구", "북가좌동", "청주가경", "중화산동", "울산달동", "수완지구", "운정6동", "대구칠곡", "선운지구", "신봉마을", "산내마을", "남가좌동", "내발산동", "신도림동", "동춘동", "명일동", "와동동", "용곡동", "둔산동", "감삼동", "가경동", "원흥동", "위례동", "반여동", "구의동", "두정동", "등촌동", "덕풍동", "미아동", "동래구", "수곡동", "성사동", "만촌동", "개운동", "갈산동", "동패동", "금촌동", "금천구", "망포동", "반송동", "매탄동", "새롬동", "반석동", "복현동", "달서구", "탄방동", "동대문", "풍덕천", "구월동", "신정동", "신방동", "광진구", "마포구", "광명동", "야당동", "운양동", "북변동", "경안동", "수청동", "두호동", "운양역", "원신동", "배곧동", "미사동", "신흥동", "목감동", "반월당", "강동구", "구갈동", "고성동", "호평동", "돈암동", "개신동", "혁신동", "비전동", "탄현동", "구산동", "장곡동", "마곡동", "호매실", "반구동", "시흥동", "탕정면", "고잔동", "상인동", "교하동", "중산동", "불당동", "구미동", "신창동", "당산동", "부평동", "기흥역", "상암동", "부발읍", "병영동", "비하동", "일산동", "산격동", "가정동", "역촌동", "사파동", "장항동", "화봉동", "산월동", "석사동", "하복대", "진월동", "야탑동", "성북구", "은평구", "소하동", "정평동", "상남동", "단대동", "원대동", "남외동", "산척동", "호수동", "용두동", "풍산동", "세교동", "효목동", "신봉동", "장지동", "칠금동", "오산동", "삼송동", "병점동", "옥산동", "포남동", "노변동", "봉방동", "산남동", "산본동", "연신내", "수성구", "자은동", "갈마동", "염창동", "사직동", "행신동", "봉무동", "정자동", "진관동", "대화동", "양덕동", "선암동", "무실동", "산곡동", "종암동", "산본역", "서신동", "수완동", "율하동", "주엽역", "이곡동", "평내동", "북가좌", "서대문", "노형동", "읍내동", "장기동", "화정동", "보라동", "옥길동", "덕이동", "송촌동", "금오동", "금곡동", "이충동", "신암동", "비산동", "옥정동", "월성동", "이매동", "유천동", "철산동", "상현동", "송천동", "관평동", "용강동", "강서동", "범박동", "천천동", "국우동", "쌍용동", "천호동", "단계동", "수창동", "사우동", "신원동", "별내동", "구불당", "관저동", "본리동", "온천동", "원내동", "신도림", "송정동", "지족동", "치평동", "역북동", "갈매동", "신불당", "신수동", "영덕동", "영통동", "망월동", "태평동", "주엽동", "노은동", "동백동", "신중동", "수진동", "신설동", "첨단동", "용신동", "발산역", "칠성동", "송도동", "초지동", "구로동", "정발산", "동천동", "탄벌동", "광장동", "인창동", "도남동", "화명동", "영통구", "노원구", "연수동", "신곡동", "후평동", "하계동", "금암동", "침산동", "단구동", "향남읍", "다산동", "대야동", "영천동", "도안동", "마두동", "방화동", "퇴계원", "복대동", "남가좌", "청라동", "신천동", "반곡동", "신동백", "삼산동", "호암동", "옥계동", "공덕동", "행신", "발산", "명일", "동춘", "인창", "교동", "옥정", "마포", "상남", "마곡", "불당", "당진", "송정", "목동", "갈매", "율하", "진월", "칠금", "공덕", "첨단", "옥계", "마두", "하계", "비산", "교하", "봉담", "주엽", "도안", "송도", "이매", "화명", "석사", "가정", "후곡", "관저", "구월", "목감", "상동", "영통", "노은", "미사", "상암", "수지", "서신", "수완", "진접", "태평", "복산", "배곧", "동래", "길음", "두정", "염창", "이충", "장기", "새롬", "풍동", "칠곡", "부발", "영천", "은평", "범박", "덕풍", "비전", "종암", "후평", "침산", "다산", "반여", "금릉", "야탑", "성서", "광진", "원흥", "탕정", "동탄", "법동", "망월", "탄현", "부평", "미금", "금촌", "성북", "청라", "돈암", "흥덕", "사우", "삼산", "야당", "위례", "관평", "남외", "향남", "둔산", "이곡", "매탄", "반송", "단구", "두호", "역촌", "평내", "사직", "단대", "지족", "병점", "고잔", "호평", "좌동", "석동", "운양", "삼송", "세교", "수진", "무실", "산본", "복대", "상현", "동백", "반석", "소하", "운정", "세종", "철산", "옥길", "화정", "중동", "쌍용", "진천", "탄벌", "노원", "대야", "사동", "망포", "달동", "시지", "당산", "보라", "신방", "장곡", "노형", "별내", "월성", "원당"];
-  var q = new URLSearchParams(location.search).get('n_query');
-  if (!q) return;
-  for (var i = 0; i < kws.length; i++) {
-    var kw = kws[i];
-    if (q.length > kw.length && q.indexOf(kw) === 0) {
-      q = kw + ' ' + q.slice(kw.length);
-      break;
-    }
-  }
-  document.querySelectorAll('.dyn-kw').forEach(function(el){
-    el.textContent = q;
-  });
-  if (/와와|wawa/i.test(q)) {
-    var orig = document.getElementById('consult');
-    if (orig) {
-      var clone = orig.cloneNode(true);
-      clone.removeAttribute('id');
-      clone.classList.add('c3-section--top');
-      var img = clone.querySelector('.c3-img');
-      if (img) img.style.display = 'block';
-      document.body.insertBefore(clone, document.body.firstChild);
-    }
-  }
-})();
-</script>
-<script>
-(function(){
-  var SHEETS='https://script.google.com/macros/s/AKfycbz5uBHY2J0b9GqmhUY3v9pFxTiPQ9W64uP_3u2EugTR9RzGzbxjYSHM8RhL3Nlc1riw/exec';
-  var enterTime=Date.now();
-  var maxScroll=0;
-  var clickCount=0;
-  var sent=false;
-
-  window.addEventListener('scroll',function(){
-    var total=document.body.scrollHeight-window.innerHeight;
-    if(total<=0)return;
-    var d=Math.round((window.scrollY/total)*100);
-    if(d>maxScroll)maxScroll=d;
+  // 스크롤 깊이
+  window.addEventListener('scroll', function(){
+    var total = document.body.scrollHeight - window.innerHeight;
+    if(total <= 0) return;
+    var d = Math.round((window.scrollY / total) * 100);
+    if(d > maxScroll) maxScroll = d;
   });
 
-  document.addEventListener('click',function(){clickCount++;});
+  // 클릭 수
+  document.addEventListener('click', function(){ clickCount++; });
 
+  // Canvas 지문
   function getCanvas(){
     try{
-      var c=document.createElement('canvas');
-      var ctx=c.getContext('2d');
-      ctx.font='14px Arial';
-      ctx.fillText('wacademy_fp',2,15);
+      var c = document.createElement('canvas');
+      var ctx = c.getContext('2d');
+      ctx.font = '14px Arial';
+      ctx.fillText('wacademy_fp', 2, 15);
       return c.toDataURL().slice(-30);
-    }catch(e){return 'err';}
+    }catch(e){ return 'err'; }
   }
 
+  // WebGL GPU
   function getGPU(){
     try{
-      var gl=document.createElement('canvas').getContext('webgl');
-      if(!gl)return 'no-webgl';
-      var ext=gl.getExtension('WEBGL_debug_renderer_info');
-      if(!ext)return 'no-ext';
-      return gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)||'unknown';
-    }catch(e){return 'err';}
+      var gl = document.createElement('canvas').getContext('webgl');
+      if(!gl) return 'no-webgl';
+      var ext = gl.getExtension('WEBGL_debug_renderer_info');
+      if(!ext) return 'no-ext';
+      return gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || 'unknown';
+    }catch(e){ return 'err'; }
   }
 
+  // 광고차단 감지
   function getAdBlock(){
     try{
-      var t=document.createElement('div');
-      t.className='adsbox';
-      t.style.cssText='position:absolute;left:-9999px;height:1px';
+      var t = document.createElement('div');
+      t.className = 'adsbox';
+      t.style.cssText = 'position:absolute;left:-9999px;height:1px';
       document.body.appendChild(t);
-      var blocked=t.offsetHeight===0;
+      var blocked = t.offsetHeight === 0;
       document.body.removeChild(t);
       return blocked;
-    }catch(e){return false;}
+    }catch(e){ return false; }
   }
 
+  // WebRTC IP
   function getWebRTC(cb){
     try{
-      var pc=new RTCPeerConnection({iceServers:[{urls:'stun:stun.l.google.com:19302'}]});
-      var ips=[];
-      var done=false;
+      var pc = new RTCPeerConnection({iceServers:[{urls:'stun:stun.l.google.com:19302'}]});
+      var ips = [];
+      var done = false;
       function finish(){
-        if(done)return;
-        done=true;
+        if(done) return;
+        done = true;
         pc.close();
         cb(ips.join(','));
       }
       pc.createDataChannel('');
-      pc.createOffer().then(function(o){return pc.setLocalDescription(o);});
-      pc.onicecandidate=function(e){
-        if(!e.candidate){finish();return;}
-        var m=e.candidate.candidate.match(/(\d+\.\d+\.\d+\.\d+)/);
-        if(m&&ips.indexOf(m[1])===-1)ips.push(m[1]);
+      pc.createOffer().then(function(o){ return pc.setLocalDescription(o); });
+      pc.onicecandidate = function(e){
+        if(!e.candidate){ finish(); return; }
+        var m = e.candidate.candidate.match(/(\d+\.\d+\.\d+\.\d+)/);
+        if(m && ips.indexOf(m[1]) === -1) ips.push(m[1]);
       };
-      setTimeout(finish,1500);
-    }catch(e){cb('err');}
+      setTimeout(finish, 1500);
+    }catch(e){ cb('err'); }
   }
 
+  // UA 파싱
   function parseUA(){
-    var ua=navigator.userAgent;
-    var browser='unknown',os='unknown';
-    if(/Chrome\//.test(ua)&&!/Edg\//.test(ua))browser='Chrome';
-    else if(/Firefox\//.test(ua))browser='Firefox';
-    else if(/Edg\//.test(ua))browser='Edge';
-    else if(/Safari\//.test(ua)&&!/Chrome/.test(ua))browser='Safari';
-    if(/Windows/.test(ua))os='Windows';
-    else if(/Mac OS/.test(ua))os='Mac';
-    else if(/Android/.test(ua))os='Android';
-    else if(/iPhone|iPad/.test(ua))os='iOS';
-    else if(/Linux/.test(ua))os='Linux';
-    return browser+' / '+os;
+    var ua = navigator.userAgent;
+    var browser = 'unknown', os = 'unknown';
+    if(/Chrome\//.test(ua) && !/Edg\//.test(ua)) browser = 'Chrome';
+    else if(/Firefox\//.test(ua)) browser = 'Firefox';
+    else if(/Edg\//.test(ua)) browser = 'Edge';
+    else if(/Safari\//.test(ua) && !/Chrome/.test(ua)) browser = 'Safari';
+    if(/Windows/.test(ua)) os = 'Windows';
+    else if(/Mac OS/.test(ua)) os = 'Mac';
+    else if(/Android/.test(ua)) os = 'Android';
+    else if(/iPhone|iPad/.test(ua)) os = 'iOS';
+    else if(/Linux/.test(ua)) os = 'Linux';
+    return browser + ' / ' + os;
   }
 
-  // IP를 페이지 로드 시점에 미리 캐싱
-  var cachedIP = {};
-  fetch('https://ipapi.co/json/')
-    .then(function(r){return r.json();})
-    .then(function(ip){cachedIP=ip;})
-    .catch(function(){});
+  // referrer에서 네이버 검색어 추출
+  function getRefQuery(){
+    try{
+      if(!document.referrer) return '';
+      var ref = new URL(document.referrer);
+      if(ref.hostname.indexOf('naver.com') === -1) return '';
+      return ref.searchParams.get('query') || '';
+    }catch(e){ return ''; }
+  }
 
-  function sendData(webrtcIP){
-    if(sent)return;
-    sent=true;
-    var now=new Date();
-    var pad=function(n){return String(n).padStart(2,'0');};
-    var data={
-      date:      now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate()),
-      time:      pad(now.getHours())+':'+pad(now.getMinutes()),
-      ip:        cachedIP.ip||'',
-      webrtcIP:  webrtcIP||'',
-      isp:       cachedIP.org||'',
-      city:      cachedIP.city||'',
-      region:    cachedIP.region||'',
-      country:   cachedIP.country_name||'',
-      canvas:    getCanvas(),
-      gpu:       getGPU(),
-      ua:        parseUA(),
-      screen:    screen.width+'x'+screen.height,
-      cores:     navigator.hardwareConcurrency||'',
-      adBlock:   getAdBlock(),
-      page:      location.pathname,
-      query:     location.search,
-      stayTime:  Math.round((Date.now()-enterTime)/1000)+'s',
-      scrollDepth:maxScroll+'%',
-      clickCount: clickCount
-    };
-    var body=JSON.stringify(data);
-    if(navigator.sendBeacon){
-      navigator.sendBeacon(SHEETS,body);
-    }else{
-      fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});
+  // IP 캐싱
+  var cachedIP = {};
+  fetch('https://ipv4.ipapi.co/json/')
+    .then(function(r){ return r.json(); })
+    .then(function(ip){ cachedIP = ip; })
+    .catch(function(){
+      fetch('https://ipapi.co/json/')
+        .then(function(r){ return r.json(); })
+        .then(function(ip){ cachedIP = ip; })
+        .catch(function(){});
+    });
+
+  // referrer로 dyn-kw 업데이트 (n_query 없을 때만)
+  if(!new URLSearchParams(location.search).get('n_query')){
+    var refQ = getRefQuery();
+    if(refQ){
+      document.querySelectorAll('.dyn-kw').forEach(function(el){
+        el.textContent = refQ;
+      });
     }
   }
 
-  // 모집 날짜 텍스트 교체 (폰트/색상 유지)
-  var pts=document.querySelectorAll('h2.planner-title');
-  for(var i=0;i<pts.length;i++){
-    if(pts[i].textContent.indexOf('와와학원')!==-1){
-      var now2=new Date();
-      pts[i].innerHTML='일대일반 안내<br><em>'+(now2.getMonth()+1)+'/'+now2.getDate()+'까지 모집</em>';
+  // 1단계: 정적 데이터 전송 (2초 후)
+  function sendInit(webrtcIP){
+    if(initSent) return;
+    initSent = true;
+    var data = {
+      type:    'init',
+      sid:     sid,
+      ip:      cachedIP.ip          || '',
+      webrtcIP:webrtcIP             || '',
+      isp:     cachedIP.org         || '',
+      city:    cachedIP.city        || '',
+      region:  cachedIP.region      || '',
+      country: cachedIP.country_name|| '',
+      canvas:  getCanvas(),
+      gpu:     getGPU(),
+      ua:      parseUA(),
+      screen:  screen.width + 'x' + screen.height,
+      cores:   navigator.hardwareConcurrency || '',
+      adBlock: getAdBlock(),
+      page:    location.pathname,
+      query:   location.search || '없음',
+      ref:     document.referrer || '없음'
+    };
+    var body = JSON.stringify(data);
+    if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
+    else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
+  }
+
+  // 2단계: 행동 데이터 전송 (pagehide)
+  function sendExit(){
+    if(exitSent) return;
+    exitSent = true;
+    var data = {
+      type:        'exit',
+      sid:         sid,
+      stayTime:    Math.round((Date.now() - enterTime) / 1000) + 's',
+      scrollDepth: maxScroll + '%',
+      clickCount:  clickCount
+    };
+    var body = JSON.stringify(data);
+    if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
+    else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
+  }
+
+  // 모집 날짜 텍스트 교체
+  var pts = document.querySelectorAll('h2.planner-title');
+  for(var i = 0; i < pts.length; i++){
+    if(pts[i].textContent.indexOf('와와학원') !== -1){
+      var now2 = new Date();
+      pts[i].innerHTML = '일대일반 안내<br><em>' + (now2.getMonth()+1) + '/' + now2.getDate() + '까지 모집</em>';
       break;
     }
   }
 
-  setTimeout(function(){getWebRTC(sendData);},2000);
-  window.addEventListener('pagehide',function(){sendData('');});
+  setTimeout(function(){ getWebRTC(sendInit); }, 2000);
+  window.addEventListener('pagehide', function(){
+    if(!initSent) sendInit('');
+    sendExit();
+  });
+
 })();
 </script>
 </body>
