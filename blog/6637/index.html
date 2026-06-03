@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>적분 계산법과 오답 복습 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="수능 직전 정적분 계산법을 완벽히 마스터하고 모의고사 오답을 집중 분석하여 점수를 올리는 비법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="적분 계산법과 오답 복습">
+  <meta property="og:description" content="수능 직전 정적분 계산법을 완벽히 마스터하고 모의고사 오답을 집중 분석하여 점수를 올리는 비법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/6637/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="적분 계산법과 오답 복습">
+  <meta name="twitter:description" content="수능 직전 정적분 계산법을 완벽히 마스터하고 모의고사 오답을 집중 분석하여 점수를 올리는 비법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/6637/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/6637/#article",
+    "headline": "적분 계산법과 오답 복습",
+    "description": "수능 직전 정적분 계산법을 완벽히 마스터하고 모의고사 오답을 집중 분석하여 점수를 올리는 비법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-03",
+    "dateModified": "2026-02-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/6637/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/6637/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "적분 계산법과 오답 복습"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"정적분 계산이 자꾸 틀려질 때 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"기본적인 치환 적분 공식을 다시 확인하고 계산 과정을 단계별로 꼼꼼히 적어보는 연습이 필요합니다."}},
+      {"@type":"Question","name":"오답 노트는 어떻게 만드는 것이 효율적인가요?","acceptedAnswer":{"@type":"Answer","text":"틀린 문제만 옮기는 것보다 왜 틀렸는지 원인을 적고 유사 문제를 옆에 추가하는 것이 좋습니다."}},
+      {"@type":"Question","name":"시험 직전 새로운 문제를 많이 풀어야 하나요?","acceptedAnswer":{"@type":"Answer","text":"새로운 문제보다는 그동안 틀렸던 문제와 기본 개념서를 중심으로 복습하는 것이 안정적인 점수 확보에 도움이 됩니다."}},
+      {"@type":"Question","name":"부분적분법에서 헷갈리는 부분을 잡는 방법은?","acceptedAnswer":{"@type":"Answer","text":"어떤 함수를 미분하고 어떤 함수를 적분할지 명확히 정하는 연습을 반복하고 정답을 대입할 때 부호를 주의 깊게 보세요."}},
+      {"@type":"Question","name":"아이가 시험 불안을 느낄 때 부모가 해줄 말은?","acceptedAnswer":{"@type":"Answer","text":"지금까지 준비해 온 과정을 믿으라고 격려해 주고 결과보다는 노력 자체를 충분히 인정해 주는 대화가 필요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>적분 계산법과 오답 복습</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">적분 계산법과 오답 복습</h1>
+      <p class="article-meta-desc">수능 직전 정적분 계산법을 완벽히 마스터하고 모의고사 오답을 집중 분석하여 점수를 올리는 비법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">정적분 계산의 기초 다지기</a></li>
+        <li><a href="#s2">부분적분법과 활용 팁</a></li>
+        <li><a href="#s3">모의고사 오답 분석의 중요성</a></li>
+        <li><a href="#s4">효율적인 오답 정리 방법</a></li>
+        <li><a href="#s5">실전 직전 마음가짐 관리</a></li>
+        <li><a href="#s6">계산 실수와 개념 오류 동시 잡기</a></li>
+        <li><a href="#s7">마지막까지 놓지 말아야 할 것</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>정적분 계산의 기초 다지기</h2>
+      <p>우리 아이들이 미적분 단원에서 가장 어려워하는 부분이 기초 계산 원리를 이해하지 못하는 점입니다.
+
+저희 집에서는 부정적분을 구하는 과정이 완벽한지 먼저 점검하는 방식을 선택했습니다.
+
+치환적분을 활용할 때 적분 구간이 바뀌는 상황을 꼭 확인하도록 지도해야 합니다.
+
+제 경험상 기본 문제를 반복해서 풀어보는 것이 실수를 줄이는 지름길이었습니다.
+
+학부모님들도 복잡한 공식보다는 개념 원리에 집중하게 도와주세요.
+
+이 과정을 거치니 아이가 수학 문제를 훨씬 편안하게 접하더군요.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>부분적분법과 활용 팁</h2>
+      <p>부분적분법은 공식을 외우더라도 실제 문제에 적용할 때 자주 실수가 발생합니다.
+
+저는 아이에게 식을 차분하게 써 내려가면서 유 함수와 비 함수를 명확히 구분하라고 조언했습니다.
+
+특히 적분 구간을 대입하여 계산하는 단계에서 사소한 부호 실수를 조심해야 합니다.
+
+제 아이는 이 부분에서 점수를 깎아먹는 경우가 많아 연습 문제를 많이 풀게 했습니다.
+
+문제 풀이 과정을 한 줄씩 빠뜨리지 않고 적는 습관이 중요합니다.
+
+이러한 방식 덕분에 아이의 계산 능력이 눈에 띄게 향상되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>모의고사 오답 분석의 중요성</h2>
+      <p>수험 생활 막바지에는 새로운 문제를 끊임없이 푸는 것보다 틀린 문제를 집중적으로 복습하는 것이 훨씬 효과적입니다.
+
+저는 지난 모의고사에서 아이가 틀렸던 문항들을 모두 모아서 분석하는 시간을 갖도록 했습니다.
+
+단순히 정답을 확인하는 것을 넘어서 왜 오답을 선택했는지 그 원인을 파악하는 과정이 필수적입니다.
+
+개념 부족인지 아니면 단순한 계산 실수였는지를 구분해 보세요.
+
+저희 아이는 오답 노트를 만들어 매일 잠들기 전에 훑어보는 습관을 들였습니다.
+
+이 방법을 통해서 같은 유형의 문제에서 다시는 틀리지 않게 되었습니다.
+
+학부모님들도 아이가 자신의 취약점을 직시하도록 도와주시길 바랍니다.
+
+이러한 과정이 실전 시험에서 변별력 있는 점수를 받는 기초가 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>효율적인 오답 정리 방법</h2>
+      <p>체계적인 오답 정리는 시간 낭비를 줄이고 학습 효율을 극대화하는 핵심 전략입니다.
+
+무작정 백지에 쓰는 것이 아니라 유형별로 분류해서 기록하는 것이 좋습니다.
+
+저희 집에서는 색깔 볼펜을 활용하여 오답의 원인을 시각적으로 구분해 보았습니다.
+
+틀린 문제와 비슷한 유형의 새로운 문제를 찾아 다시 풀어보는 것도 큰 도움이 됩니다.
+
+정기적으로 복습 주기를 가져 장기 기억으로 전환하는 노력이 필요합니다.
+
+아이가 직접 자신의 취약점을 관리하는 능력을 키우게 되었습니다.</p>
+      <ul class="blog-list">
+        <li>틀린 원인을 표시하기</li>
+        <li>유형별로 문제 분류</li>
+        <li>유사 문제 추가 풀이</li>
+        <li>주기적인 복습 날짜 설정</li>
+        <li>난이도별 색깔 구분</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>실전 직전 마음가짐 관리</h2>
+      <p>시험 직전의 학생들은 심리적으로 매우 불안정해지기 쉬우므로 부모의 세심한 배려가 필요합니다.
+
+저는 아이에게 성적 결과보다는 과정을 칭찬하며 긴장을 풀어주려고 노력했습니다.
+
+편안한 환경에서 공부할 수 있도록 조명이나 의자 같은 공간 요소도 점검해 주세요.
+
+아이가 스스로 할 수 있다는 자신감을 가질 수 있도록 격려의 말을 자주 건네야 합니다.
+
+제 경험상 부모가 여유로운 태도를 보일 때 아이도 안정감을 찾더군요.
+
+마음의 안정이 주는 긍정적 효과는 생각보다 큽니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>계산 실수와 개념 오류 동시 잡기</h2>
+      <p>정적분 계산 능력과 오답 복습 습관은 서로 유기적으로 연결되어 있습니다.
+
+단순히 계산만 빠르다고 해서 문제를 맞히는 것은 아니기 때문입니다.
+
+저는 아이가 틀린 적분 문제를 복습할 때 계산 과정을 단계별로 점검하게 했습니다.
+
+이를 통해 어느 단계에서 실수가 발생했는지 정확히 알 수 있었습니다.
+
+체계적인 관리를 통해 두 영역의 실력을 동시에 키우는 것이 중요합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>계산 실수</td><td>정적분 문제 풀이</td><td>치환 적분 후 구간 대입 확인</td></tr>
+        <tr><td>개념 오류</td><td>정적분 문제 풀이</td><td>넓이 부호 및 이동 거리 개념 재정립</td></tr>
+        <tr><td>습관 점검</td><td>오답 복습</td><td>틀린 문제 해설지를 통한 원인 분석</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>마지막까지 놓지 말아야 할 것</h2>
+      <p>시험 직전까지 꾸준히 자리를 지키는 것이 결국 가장 큰 무기가 됩니다.
+
+아무리 훌륭한 전략이라도 실행하지 않으면 소용이 없기 때문입니다.
+
+저희 아이는 매일 정해진 시간에 책상에 앉아 습관을 유지하려고 노력했습니다.
+
+작은 성취감을 쌓아가는 과정이 아이를 성장시키는 동력이 되었습니다.
+
+학부모님들도 아이의 작은 노력을 놓치지 말고 지켜봐 주시길 바랍니다.
+
+마지막 순간까지 포기하지 않는 자세가 결과를 바꿉니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>정적분 계산이 자꾸 틀려질 때 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">기본적인 치환 적분 공식을 다시 확인하고 계산 과정을 단계별로 꼼꼼히 적어보는 연습이 필요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답 노트는 어떻게 만드는 것이 효율적인가요?</summary>
+            <p class="faq-answer">틀린 문제만 옮기는 것보다 왜 틀렸는지 원인을 적고 유사 문제를 옆에 추가하는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>시험 직전 새로운 문제를 많이 풀어야 하나요?</summary>
+            <p class="faq-answer">새로운 문제보다는 그동안 틀렸던 문제와 기본 개념서를 중심으로 복습하는 것이 안정적인 점수 확보에 도움이 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부분적분법에서 헷갈리는 부분을 잡는 방법은?</summary>
+            <p class="faq-answer">어떤 함수를 미분하고 어떤 함수를 적분할지 명확히 정하는 연습을 반복하고 정답을 대입할 때 부호를 주의 깊게 보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 시험 불안을 느낄 때 부모가 해줄 말은?</summary>
+            <p class="faq-answer">지금까지 준비해 온 과정을 믿으라고 격려해 주고 결과보다는 노력 자체를 충분히 인정해 주는 대화가 필요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모의고사 재도전과 이차함수 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="모의고사 재응시 점수 차이와 이차함수 대칭 이동을 연결해 학부모가 실천할 수 있는 구체적 방법과 효과를 소개합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="모의고사 재도전과 이차함수">
+  <meta property="og:description" content="모의고사 재응시 점수 차이와 이차함수 대칭 이동을 연결해 학부모가 실천할 수 있는 구체적 방법과 효과를 소개합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3902/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="모의고사 재도전과 이차함수">
+  <meta name="twitter:description" content="모의고사 재응시 점수 차이와 이차함수 대칭 이동을 연결해 학부모가 실천할 수 있는 구체적 방법과 효과를 소개합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3902/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3902/#article",
+    "headline": "모의고사 재도전과 이차함수",
+    "description": "모의고사 재응시 점수 차이와 이차함수 대칭 이동을 연결해 학부모가 실천할 수 있는 구체적 방법과 효과를 소개합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-24",
+    "dateModified": "2026-03-24",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3902/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3902/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "모의고사 재도전과 이차함수"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"모의고사를 다른 날 다시 보면 실제 점수 향상이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"재응시를 일정 간격을 두고 하면 기억 재구성과 집중도 상승으로 점수 향상이 기대됩니다."}},
+      {"@type":"Question","name":"이차함수의 대칭 이동을 쉽게 설명하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"좌표축을 기준으로 그래프를 좌우로 이동시키는 것을 실제 물체를 옮기는 예시로 비유하면 이해가 쉽습니다."}},
+      {"@type":"Question","name":"재응시와 복습을 병행할 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"복습은 핵심 개념을 중심으로 하고, 재응시 전에는 충분한 휴식을 취해 피로를 최소화해야 합니다."}},
+      {"@type":"Question","name":"점수 차이를 분석할 때 어떤 지표가 유용한가요?","acceptedAnswer":{"@type":"Answer","text":"변동률, 평균 점수, 시간당 정답 비율 등을 함께 보면 전반적인 학습 상태를 파악할 수 있습니다."}},
+      {"@type":"Question","name":"이차함수 이동과 실전 시험 성적 사이에 연관성이 있나요?","acceptedAnswer":{"@type":"Answer","text":"함수 이동 개념을 점수 변동에 적용하면 추상적인 수학 원리를 실제 성적 개선에 활용할 수 있습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>모의고사 재도전과 이차함수</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">모의고사 재도전과 이차함수</h1>
+      <p class="article-meta-desc">모의고사 재응시 점수 차이와 이차함수 대칭 이동을 연결해 학부모가 실천할 수 있는 구체적 방법과 효과를 소개합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">점수 차이의 의미와 학습 인사이트</a></li>
+        <li><a href="#s2">재응시 일정 선택이 학습 효과에 미치는 영향</a></li>
+        <li><a href="#s3">점수 변동과 이차함수 대칭 이동의 연계 학습</a></li>
+        <li><a href="#s4">점수 비교 체크리스트</a></li>
+        <li><a href="#s5">표를 활용한 데이터 시각화</a></li>
+        <li><a href="#s6">재응시 후 피드백 전략</a></li>
+        <li><a href="#s7">미래 학습 방향과 기대 효과</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>점수 차이의 의미와 학습 인사이트</h2>
+      <p>우리 아이는 지난 주에 치른 모의고사와 오늘 재응시한 시험을 비교하면서 눈에 띄는 변화를 보였습니다.학부모인 나는 두 시험 사이의 시간 차이가 학습 전략에 어떤 영향을 주는지 궁금해졌습니다.
+
+전문가 의견에 따르면, 같은 문제를 다른 날 다시 풀면 기억의 재구성이 일어나 성적 향상이 가능하다고 합니다.교사는 학생에게 복습 계획을 제시하면서 오답 노트를 활용하도록 권장합니다.
+
+교육 연구에 따르면, 일정 간격을 두고 동일 시험을 보게 하면 집중도와 문제 해결 능력이 상승한다는 결과가 있습니다.결과적으로 우리는 점수 격차를 통해 학습 약점을 정확히 파악하고 다음 단계 목표를 설정할 수 있었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>재응시 일정 선택이 학습 효과에 미치는 영향</h2>
+      <p>우리 가족은 모의고사 재응시 일정을 주말과 평일로 나누어 실험해 보았습니다.학부모인 나는 주말에는 휴식이 충분히 확보돼 집중력이 높아질 것이라 기대했습니다.
+
+전문가 의견에 따르면, 심리적 부담이 적은 환경에서는 시험 스트레스가 감소해 정확도가 올라간다고 합니다.교사는 학생에게 시험 전 충분한 수면을 권장하며, 이를 통해 기억 고정이 강화된다고 설명합니다.
+
+교육 연구에 따르면, 평일에 시험을 보면 일상적인 학습 루틴과 연계돼 장기 기억에 도움이 된다는 자료가 있습니다.결과적으로 우리는 주말과 평일 각각의 장단점을 파악하고, 아이에게 맞는 최적의 재응시 시점을 찾을 수 있었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>점수 변동과 이차함수 대칭 이동의 연계 학습</h2>
+      <p>우리 아이는 모의고사 점수 변동을 그래프로 나타내며 이차함수의 대칭 이동 개념을 스스로 탐구했습니다.학부모인 나는 이 과정에서 수학적 사고가 실생활 데이터와 연결되는 모습을 보며 큰 감동을 받았습니다.
+
+전문가 의견에 따르면, 점수 차이를 좌표축에 매핑하면 포물선 형태의 그래프가 형성되고, 이는 이차함수의 기본 형태와 일치한다는 점을 강조합니다.교사는 좌표평면에 점수를 표시하면서 대칭축을 중심으로 이동시키는 방법을 단계별로 시연했습니다.
+
+교육 연구에 따르면, 이런 시각적 변환 활동은 추상적인 함수 개념을 구체적인 경험으로 전환시켜 이해도를 크게 향상시킨다고 보고되었습니다.결과적으로 아이는 점수 차이가 양의 방향으로 이동하면 그래프가 오른쪽으로, 음의 방향이면 왼쪽으로 이동한다는 원리를 몸으로 익혔습니다.
+
+다음 단계에서는 대칭축 자체를 이동시키는 연습을 통해 이차함수의 평행 이동을 완전하게 마스터하도록 계획했습니다.마지막으로 우리는 두 번의 시험 결과를 비교 분석하면서 함수의 변환과 실전 성적 향상이 어떻게 상호작용하는지를 체계적으로 기록했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>점수 비교 체크리스트</h2>
+      <p>우리 아이는 점수 비교를 시작하기 전에 기본적인 데이터를 정리했습니다.학부모인 나는 비교 표를 만들면서 각 과목별 원점수를 정확히 기록했습니다.
+
+전문가 의견에 따르면, 동일 문제군의 정오답 비율을 함께 분석하면 학습 효율을 높일 수 있다고 조언합니다.교사는 오답 유형을 색깔별로 구분해 시각적 인지를 돕는 방법을 제시했습니다.
+
+교육 연구에 따르면, 이렇게 체계적인 정리는 학습 동기를 지속시키는 데 큰 도움이 된다고 밝혀졌습니다.결과적으로 우리는 다음과 같은 체크리스트를 활용해 점수 차이를 체계적으로 관리하게 되었습니다.</p>
+      <ul class="blog-list">
+        <li>시험 일자와 시간 기록</li>
+        <li>과목별 원점수와 변동률 기록</li>
+        <li>오답 유형별 분류</li>
+        <li>시간당 평균 점수 계산</li>
+        <li>다음 시험 목표 설정</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>표를 활용한 데이터 시각화</h2>
+      <p>우리 아이는 표를 보면서 점수 변동과 함수 이동을 연결짓는 연습을 했습니다.학부모인 나는 표에 구분, 대상, 내용을 명확히 적어 두었습니다.
+
+전문가 의견에 따르면, 이런 구조화된 정보는 학습 효과를 극대화한다는 점을 강조합니다.교사는 표를 활용해 각 구간별 변화를 시각화하며 설명했습니다.
+
+교육 연구에 따르면, 구분별 데이터를 분석하면 학생의 강점과 약점을 정확히 파악할 수 있다고 제시합니다.결과적으로 우리는 표를 통해 이차함수의 대칭 이동과 점수 차이의 관계를 명확히 이해하게 되었습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>점수 변동</td><td>수학</td><td>오답 비율 감소와 평균 점수 상승</td></tr>
+        <tr><td>함수 이동</td><td>이차함수</td><td>좌우 대칭축 이동으로 그래프 위치 변환</td></tr>
+        <tr><td>학습 전략</td><td>전체 과목</td><td>재응시 주기와 복습 계획 연계</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>재응시 후 피드백 전략</h2>
+      <p>우리 가족은 재응시 이후 피드백 시간을 정기적으로 갖게 되었습니다.학부모인 나는 아이에게 긍정적인 격려와 구체적인 개선점을 함께 제공했습니다.
+
+전문가 의견에 따르면, 피드백을 구체적이고 즉시 제공하면 학습 전이가 빠르게 일어난다고 합니다.교사는 아이가 스스로 목표를 설정하도록 유도하며, 자기 주도 학습을 강조했습니다.
+
+교육 연구에 따르면, 자기 평가와 목표 설정이 장기 성취도에 큰 영향을 미친다고 밝혀졌습니다.결과적으로 우리는 꾸준한 피드백을 통해 아이의 학습 동기를 지속적으로 높일 수 있었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>미래 학습 방향과 기대 효과</h2>
+      <p>우리 아이는 이번 경험을 바탕으로 다음 모의고사에서도 스스로 점수 변화를 예측하려는 목표를 세웠습니다.학부모인 나는 앞으로도 데이터 기반 학습을 지속적으로 지원할 계획입니다.
+
+전문가 의견에 따르면, 지속적인 데이터 활용은 학습 효율성을 높이고 자기 효능감을 강화한다는 점을 강조합니다.교사는 학생에게 장기적인 학습 로드맵을 제시하며, 목표 달성을 위한 단계별 전략을 함께 설계했습니다.
+
+교육 연구에 따르면, 이러한 전략적 접근은 학업 성취뿐 아니라 전인적 성장에도 긍정적인 영향을 미친다고 보고됩니다.결과적으로 우리는 앞으로도 점수와 함수 개념을 연결하는 교육 방식을 꾸준히 적용해 나갈 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>모의고사를 다른 날 다시 보면 실제 점수 향상이 가능한가요?</summary>
+            <p class="faq-answer">재응시를 일정 간격을 두고 하면 기억 재구성과 집중도 상승으로 점수 향상이 기대됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이차함수의 대칭 이동을 쉽게 설명하는 방법은?</summary>
+            <p class="faq-answer">좌표축을 기준으로 그래프를 좌우로 이동시키는 것을 실제 물체를 옮기는 예시로 비유하면 이해가 쉽습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>재응시와 복습을 병행할 때 주의할 점은?</summary>
+            <p class="faq-answer">복습은 핵심 개념을 중심으로 하고, 재응시 전에는 충분한 휴식을 취해 피로를 최소화해야 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>점수 차이를 분석할 때 어떤 지표가 유용한가요?</summary>
+            <p class="faq-answer">변동률, 평균 점수, 시간당 정답 비율 등을 함께 보면 전반적인 학습 상태를 파악할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이차함수 이동과 실전 시험 성적 사이에 연관성이 있나요?</summary>
+            <p class="faq-answer">함수 이동 개념을 점수 변동에 적용하면 추상적인 수학 원리를 실제 성적 개선에 활용할 수 있습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

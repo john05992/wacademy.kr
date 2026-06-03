@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무리수 실수 학습법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="무리수와 실수 관계를 이해하고 상위 하위 개념을 분류하는 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="무리수 실수 학습법">
+  <meta property="og:description" content="무리수와 실수 관계를 이해하고 상위 하위 개념을 분류하는 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/6082/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="무리수 실수 학습법">
+  <meta name="twitter:description" content="무리수와 실수 관계를 이해하고 상위 하위 개념을 분류하는 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/6082/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/6082/#article",
+    "headline": "무리수 실수 학습법",
+    "description": "무리수와 실수 관계를 이해하고 상위 하위 개념을 분류하는 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-13",
+    "dateModified": "2026-02-13",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/6082/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/6082/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "무리수 실수 학습법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"유리수와 무리수의 가장 큰 차이는?","acceptedAnswer":{"@type":"Answer","text":"분수로 표현 가능 여부와 소수점 아래 숫자의 반복 여부입니다."}},
+      {"@type":"Question","name":"상위개념 하위개념 공부는 언제 하는 게 좋나요?","acceptedAnswer":{"@type":"Answer","text":"새로운 단원의 기본 개념 학습을 마친 직후가 가장 효과적입니다."}},
+      {"@type":"Question","name":"아이가 개념 분류가 어려워해요.","acceptedAnswer":{"@type":"Answer","text":"교과서나 참고서의 목차를 먼저 살펴보며 전체적인 흐름을 파악하게 해주세요."}},
+      {"@type":"Question","name":"무리수 계산 실수가 잦습니다.","acceptedAnswer":{"@type":"Answer","text":"근사값과 오차의 범위에 대한 이해를 돕고 문제를 많이 풀어보게 하세요."}},
+      {"@type":"Question","name":"어떤 참고서를 추천하나요?","acceptedAnswer":{"@type":"Answer","text":"개념 설명이 자세하고 도해가 많이 들어있는 교재를 선택하는 것이 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>무리수 실수 학습법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">무리수 실수 학습법</h1>
+      <p class="article-meta-desc">무리수와 실수 관계를 이해하고 상위 하위 개념을 분류하는 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">중학 수학의 난관 무리수</a></li>
+        <li><a href="#s2">실수와 무리수의 연결고리 찾기</a></li>
+        <li><a href="#s3">상위 개념과 하위 개념 정리법</a></li>
+        <li><a href="#s4">집중력 높이는 학습 도구</a></li>
+        <li><a href="#s5">이해도가 달라진 아이의 모습</a></li>
+        <li><a href="#s6">주요 수 체계 비교 정리</a></li>
+        <li><a href="#s7">꾸준한 반복이 중요합니다</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>중학 수학의 난관 무리수</h2>
+      <p>아이가 중학교에 올라가면서 처음 맞닥뜨린 벽이 바로 무리수였습니다.
+
+유리수까지는 숫자의 형태가 눈에 보여서 이해가 빨랐는데 표기가 어려워진 이후로는 영혼 없이 외우기만 하더군요.
+
+제가 옆에서 지켜보기에도 무리수와 실수의 관계가 머릿속에서 엉키는 게 느껴졌습니다.
+
+초등 수학과는 확실히 난이도가 달라져서 당황스러운 점이 많았습니다.
+
+그래서 직접 자료를 찾아보고 아이와 함께 개념을 확실히 잡는 시간을 가졌습니다.
+
+이 과정에서 얻은 노하우를 공유합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>실수와 무리수의 연결고리 찾기</h2>
+      <p>실수는 우리가 흔히 접하는 모든 수의 집합이라고 생각하면 이해가 쉽습니다.
+
+그 안에서 분수로 표현 가능한 유리수와 표현 불가능한 무리수로 나뉘는 것이죠.
+
+아이에게는 실수를 큰 바구니로 설명했습니다.
+
+그 바구니 안에 유리수라는 과일과 무리수라는 채소가 함께 담겨 있다는 비유를 들었더니 눈이 확 뜨이는 듯했습니다.
+
+이런 포함 관계를 명확히 하는 것이 첫 단계입니다.
+
+집합 기호를 사용하면 더욱 간결하게 표현할 수 있습니다.
+
+부모님도 먼저 관계를 파악하고 설명해 주시는 것이 중요합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>상위 개념과 하위 개념 정리법</h2>
+      <p>단순히 정의만 외우는 것보다는 개념 학습 후 반드시 상위개념과 하위개념을 분류하는 과정이 필요합니다.
+
+이 과정을 거치면 아이가 수학의 전체적인 지도를 그리는 효과를 얻을 수 있거든요.
+
+우리집에서는 개념 학습을 마치고 나서 마인드맵을 그리는 놀이를 했습니다.
+
+가장 큰 범주인 상위개념을 중앙에 적고 그 안에 속하는 세부적인 하위개념을 가지로 뻗어나가는 방식입니다.
+
+이렇게 시각적으로 배치하다 보니 암기해야 할 양이 줄어드는 기분이 들었는지 아이가 훨씬 편안해했습니다.
+
+분류 작업은 단순 정리가 아니라 논리적 사고력을 키워주는 훌륭한 훈련이 됩니다.
+
+처음에는 서툴러도 몇 번 반복하면 개념 사이의 연결 고리를 훌쩍 찾아냅니다.
+
+학부모님께서도 조금만 시간을 내서 아이와 함께 분류해 보시길 권해드립니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>집중력 높이는 학습 도구</h2>
+      <p>아이가 흥미를 느끼도록 도구를 활용하는 것이 매우 중요합니다.
+
+우리 집에는 책상 위에 수학 공부용 도구 상자가 마련되어 있습니다.
+
+학습 준비물을 아이가 직접 챙기면서 공부에 대한 주인의식을 갖게 하려는 의도입니다.
+
+시각적인 자극은 뇌를 활성화시키는 데 큰 도움을 줍니다.
+
+단순히 펜과 노트만으로는 지루함을 떨치기 힘들 때가 많거든요.
+
+다양한 색감과 질감을 활용하면 개념 분류 작업이 훨씬 수월해집니다.
+
+아이는 색깔별로 개념의 중요도를 구분하며 재미있어했습니다.</p>
+      <ul class="blog-list">
+        <li>다양한 색상의 형광펜 준비하기</li>
+        <li>눈에 잘 들어오는 큰 도화지 사용</li>
+        <li>스케치북이나 화이트보드 활용</li>
+        <li>스티커를 이용해 분류하기</li>
+        <li>개념 관계도를 벽에 붙여두기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>이해도가 달라진 아이의 모습</h2>
+      <p>이 방법을 적용한 지 두 달 정도 지났을 때 아이의 태도가 눈에 띄게 변했습니다.
+
+문제집을 풀 때 막히는 부분이 줄어들고 스스로 개념을 끄집어내려 노력하는 모습을 보였습니다.
+
+무리수 문제가 나와도 덜덜 떨지 않고 침착하게 풀더군요.
+
+저는 아이가 자신감을 찾아가는 과정을 보면서 참 뿌듯했습니다.
+
+학부모인 저도 수학 공부법에 대해 한층 더 눈을 뜨게 된 계기가 되었습니다.
+
+이제는 아이가 스스로 어려운 개념을 정리하는 모습을 보며 성장을 확인합니다.
+
+처음엔 힘들어도 방향만 잡으면 충분히 극복할 수 있다는 것을 깨달았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>주요 수 체계 비교 정리</h2>
+      <p>수학의 여러 가지 체계를 한눈에 비교하는 것은 이해력을 높이는 지름길입니다.
+
+특히 무리수와 실수 부분에서는 각각의 성질을 명확히 구분할 필요가 있습니다.
+
+저는 아이와 함께 표를 만들어서 주요 특징들을 적어 보았습니다.
+
+이렇게 정리된 표는 시험 기간에 요긴하게 사용되는 비장의 무기가 됩니다.
+
+서로 다른 개념을 나란히 놓고 비교하면 차이점이 확연히 드러나거든요.
+
+아이는 표를 그리면서 자연스럽게 핵심 내용을 정리할 수 있었습니다.
+
+부모님도 아이와 함께 표를 채워보는 시간을 가져보시길 추천합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>상위개념</td><td>실수</td><td>유리수와 무리수를 모두 포함하는 가장 큰 수의 집합</td></tr>
+        <tr><td>하위개념</td><td>유리수</td><td>분수 형태로 나타낼 수 있으며 유한소수나 순환소수임</td></tr>
+        <tr><td>하위개념</td><td>무리수</td><td>분수 형태로 나타낼 수 없으며 무한소수이면서 비순환소수임</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>꾸준한 반복이 중요합니다</h2>
+      <p>개념 분류는 한 번 하고 끝나는 것이 아니라 꾸준히 반복해야 합니다.
+
+새로운 단원을 배울 때마다 앞서 배운 내용과 연결해서 생각하는 습관을 들여야 하니까요.
+
+저희 아이는 주말마다 한 주에 배운 개념을 정리하는 시간을 가집니다.
+
+처음에는 귀찮아 했지만 이제는 공부의 루틴이 되어버렸습니다.
+
+다른 학부모님들도 자녀와 함께 개념 지도를 그려보시길 추천합니다.
+
+아이의 수학적 사고가 한 단계 성장하는 기회가 될 것입니다.
+
+꾸준함이 결국 실력을 만든다는 사실을 잊지 마세요.
+
+부모의 관심과 지지가 아이에게 가장 큰 동기부여가 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>유리수와 무리수의 가장 큰 차이는?</summary>
+            <p class="faq-answer">분수로 표현 가능 여부와 소수점 아래 숫자의 반복 여부입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>상위개념 하위개념 공부는 언제 하는 게 좋나요?</summary>
+            <p class="faq-answer">새로운 단원의 기본 개념 학습을 마친 직후가 가장 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 개념 분류가 어려워해요.</summary>
+            <p class="faq-answer">교과서나 참고서의 목차를 먼저 살펴보며 전체적인 흐름을 파악하게 해주세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>무리수 계산 실수가 잦습니다.</summary>
+            <p class="faq-answer">근사값과 오차의 범위에 대한 이해를 돕고 문제를 많이 풀어보게 하세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어떤 참고서를 추천하나요?</summary>
+            <p class="faq-answer">개념 설명이 자세하고 도해가 많이 들어있는 교재를 선택하는 것이 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

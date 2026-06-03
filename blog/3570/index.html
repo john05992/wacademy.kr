@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일차함수 그래프 꿀팁 정리 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="아이가 일차함수 그래프를 어려워할 때 교과서 목표에 맞춘 설명법으로 쉽게 지도하는 방법을 정리했습니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="일차함수 그래프 꿀팁 정리">
+  <meta property="og:description" content="아이가 일차함수 그래프를 어려워할 때 교과서 목표에 맞춘 설명법으로 쉽게 지도하는 방법을 정리했습니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3570/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="일차함수 그래프 꿀팁 정리">
+  <meta name="twitter:description" content="아이가 일차함수 그래프를 어려워할 때 교과서 목표에 맞춘 설명법으로 쉽게 지도하는 방법을 정리했습니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3570/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3570/#article",
+    "headline": "일차함수 그래프 꿀팁 정리",
+    "description": "아이가 일차함수 그래프를 어려워할 때 교과서 목표에 맞춘 설명법으로 쉽게 지도하는 방법을 정리했습니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-30",
+    "dateModified": "2026-03-30",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3570/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3570/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "일차함수 그래프 꿀팁 정리"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"기울기 개념을 너무 어려워하면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"계단을 오르내리는 예시를 들어서 설명해 주면 이해가 훨씬 빨라요."}},
+      {"@type":"Question","name":"그래프 그리기를 너무 지루해할 때는 어떻게 하죠?","acceptedAnswer":{"@type":"Answer","text":"친구들과의 통화 요금제 등 아이가 관심 있는 생활 속 예시와 연결해 보세요."}},
+      {"@type":"Question","name":"절편의 위치를 자꾸 헷갈려하는데 좋은 방법이 있을까요?","acceptedAnswer":{"@type":"Answer","text":"가로축을 건너는 점과 세로축을 건너는 점을 색연필로 다르게 표시하게 해보세요."}},
+      {"@type":"Question","name":"집에서 연습할 수 있는 좋은 문제집이 있을까요?","acceptedAnswer":{"@type":"Answer","text":"교과서 기본 문제를 완벽히 익힌 후 응용 문제가 많이 포함된 워크북을 추천합니다."}},
+      {"@type":"Question","name":"하루에 얼마나 공부시키는 것이 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"긴 시간보다는 매일 십 분이라도 개념을 정리하고 그래프를 그려보는 습관이 중요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>일차함수 그래프 꿀팁 정리</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">일차함수 그래프 꿀팁 정리</h1>
+      <p class="article-meta-desc">아이가 일차함수 그래프를 어려워할 때 교과서 목표에 맞춘 설명법으로 쉽게 지도하는 방법을 정리했습니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">엄마표 수학 공부법 시작</a></li>
+        <li><a href="#s2">교과서 핵심 학습 목표</a></li>
+        <li><a href="#s3">그래프 그리는 순서</a></li>
+        <li><a href="#s4">계수 변화에 따른 그래프 비교</a></li>
+        <li><a href="#s5">학부모 실전 후기</a></li>
+        <li><a href="#s6">흔히 하는 실수와 대처법</a></li>
+        <li><a href="#s7">마무리하며</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>엄마표 수학 공부법 시작</h2>
+      <p>우리 아이가 중학교 수학을 배우면서 일차함수 그래프에서 가장 큰 벽을 느꼈어요. 처음에는 단순한 점 찍기라고 생각해서 쉽게 볼 수 있었는데 막상 설명하려니 어디서부터 시작해야 할지 모르겠더라고요. 
+
+ 그래서 저는 직접 교과서를 펴놓고 학습 목표를 하나씩 따져가며 아이 눈높이에 맞는 설명 방법을 찾아보기로 결심했습니다. 이 과정에서 깨달은 점들은 아이뿐만 아니라 저에게도 큰 도움이 되었기에 다른 학부모님들께도 꼭 공유하고 싶습니다. 
+
+ 수학은 결국 개념을 얼마나 명확하게 이해하느냐가 중요하니까요. 제가 겪은 시행착오를 바탕으로 작성한 이 글이 여러분의 자녀 지도에 소중한 길잡이가 되기를 진심으로 바랍니다. 부모님의 작은 관심이 아이의 수학 실력을 키우는 밑거름이 될 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>교과서 핵심 학습 목표</h2>
+      <p>일차함수 그래프를 제대로 그리기 위해서는 교과서에 나온 핵심 학습 목표를 꼼꼼히 챙겨봐야 합니다. 우리 아이가 학교에서 배우는 내용과 집에서 공부하는 방식이 달라서 혼란이 생기지 않도록 통일성을 주는 것이 무엇보다 중요하더라고요. 
+
+ 특히 식의 변화에 따라 그래프의 모양이 어떻게 달라지는지 이해하는 과정이 필수적입니다. 기초가 탄탄하지 않으면 나중에 이차함수를 배울 때 더 큰 어려움을 겪을 수 있기 때문에 지금부터라도 제대로 잡아주어야 합니다. 
+
+ 아래에 정리한 다섯 가지 핵심 요소는 아이가 그래프를 그릴 때 반드시 체크해야 할 사항들입니다.</p>
+      <ul class="blog-list">
+        <li>절편의 위치 확인하기</li>
+        <li>기울기의 양과 음 구별하기</li>
+        <li>변역의 범위 설정하기</li>
+        <li>좌표평면 위에 점 정확히 찍기</li>
+        <li>직선을 자연스럽게 그리기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>그래프 그리는 순서</h2>
+      <p>그래프를 그리는 순서는 아이에게 논리적인 사고를 길러주는 아주 좋은 기회입니다. 먼저 일차함수 식에서 세로축 절편의 값을 확인하여 그래프가 지나는 첫 번째 점을 찍도록 지도해주세요. 이때 오른쪽으로 한 칸 이동할 때 위로 몇 칸 가는지를 기울기로 해석하면 아이가 직관적으로 이해하기 쉽습니다. 
+
+ 점 두 개가 확정되면 자를 대고 긴 직선을 그어주는 것이 끝인데, 여기서 많은 학생들이 점만 찍고 선을 긋지 않는 실수를 범하곤 합니다. 저는 아이에게 점은 그래프의 뼈대이고 선은 살이라고 비유해서 설명했더니 훨씬 잘 이해하더라고요. 이처럼 시각적인 비유는 수학 개념을 잡는 데 탁월한 효과가 있습니다. 
+
+ 마지막으로 가로축과 세로축이 만나는 점인 원점을 기준으로 그래프가 어느 사분면에 위치하는지 확인하는 과정을 거치면 완벽합니다. 이러한 단계적인 학습은 아이가 실수를 줄이고 문제 해결 능력을 키우는 데 큰 도움을 줄 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>계수 변화에 따른 그래프 비교</h2>
+      <p>일차함수 식에서 계수의 값이 변할 때 그래프가 어떻게 움직이는지 비교해보는 시간을 가져보세요. 우리 아이는 이 부분에서 특히 약해서 계수가 바뀔 때마다 도형의 위치를 헷갈려했어요. 그래서 저는 표를 만들어서 눈으로 직접 비교할 수 있게 도와주었고 효과가 아주 좋았습니다. 
+
+ 변화하는 양상을 한눈에 파악하는 것은 문제 풀이 속도를 높이는 데도 기여합니다. 아이가 스스로 표를 채워보면서 규칙을 발견하는 즐거움을 느끼도록 유도하는 것이 좋습니다. 아래 표는 학부모님이 집에서 아이와 함께 공부할 때 활용하기 좋은 예시입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기울기 계수</td><td>계수의 크기</td><td>양수면 우상향, 음수면 우하향으로 기울기가 결정됩니다</td></tr>
+        <tr><td>세로축 절편</td><td>세로축 만나는 점</td><td>세로축과 만나는 점의 위치로 직선이 위아래로 평행 이동합니다</td></tr>
+        <tr><td>변수의 범위</td><td>입력값의 영역</td><td>정의역에 따라 그래프를 그릴 실선의 범위가 달라집니다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학부모 실전 후기</h2>
+      <p>이 방법으로 공부를 시작한 후 아이의 수학 성적이 꾸준히 오르는 것을 보면서 저도 뿌듯함을 느꼈습니다. 예전에는 수학 문제집을 펴기만 해도 짜증을 내던 아이가 이제는 스스로 그래프를 그려보며 문제를 해결하려고 노력하니까요. 부모가 조금만 관심을 가지고 방향을 잡아줘도 아이들은 생각보다 빠르게 변합니다. 
+
+ 처음에는 저도 교과서 내용을 정리하는 것이 번거롭게 느껴졌지만 지금은 그 시간이 아주 훌륭한 투자였다고 생각합니다. 아이와 함께 씨름하면서 생긴 신뢰 관계는 무엇과도 바꿀 수 없는 소중한 자산이 되었습니다. 다른 학부모님들도 포기하지 마시고 아이와 함께 기초부터 차근차근 다져나가시길 응원합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>흔히 하는 실수와 대처법</h2>
+      <p>아이들이 일차함수 그래프를 그릴 때 가장 많이 하는 실수 중 하나는 좌표축의 눈금을 제대로 확인하지 않는 것입니다. 눈금이 한 칸에 일인지 오인지에 따라 점의 위치가 완전히 달라지기 때문에 처음에 축을 그릴 때부터 꼼꼼하게 봐주어야 합니다. 또한 식에서 변수에 영을 대입하여 세로축 절편을 구하는 과정을 생략하고 대충 그리는 경우도 많습니다. 
+
+ 저희 아이는 기울기를 분수로 계산할 때 분모와 분자를 반대로 적어서 그래프가 엉뚱한 방향으로 가는 경우도 있었어요. 이런 사소한 계산 실수가 모여서 수학에 대한 흥미를 떨어뜨릴 수 있다는 점을 명심해야 합니다. 문제를 풀기 전에 식을 꼼꼼히 읽고 계산 과정을 한 단계씩 검토하는 습관을 들여주세요.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>마무리하며</h2>
+      <p>결론적으로 일차함수 그래프는 단순히 점을 이어 선을 긋는 기술이 아니라 함수의 변화를 이해하는 중요한 과정입니다. 학부모님께서는 아이가 정답을 맞추는 것에만 집중하기보다는 그 과정에서 논리적으로 사고하고 있는지 지켜봐 주시는 것이 좋습니다. 교과서의 학습 목표에 맞춰 차근차근 설명해주면 아이는 어렵지 않게 개념을 받아들일 것입니다. 
+
+ 오늘 제가 공유한 내용이 여러분의 가정에서 아이와 수학 공부를 할 때 작은 도움이라도 되기를 바랍니다. 부모님의 끊임없는 관심과 지지가 아이의 학습 동기를 부여하는 가장 강력한 원동력이라는 사실을 잊지 말아 주세요. 우리 아이들의 밝은 미래를 위해 함께 지혜를 모아 나갑시다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>기울기 개념을 너무 어려워하면 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">계단을 오르내리는 예시를 들어서 설명해 주면 이해가 훨씬 빨라요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>그래프 그리기를 너무 지루해할 때는 어떻게 하죠?</summary>
+            <p class="faq-answer">친구들과의 통화 요금제 등 아이가 관심 있는 생활 속 예시와 연결해 보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>절편의 위치를 자꾸 헷갈려하는데 좋은 방법이 있을까요?</summary>
+            <p class="faq-answer">가로축을 건너는 점과 세로축을 건너는 점을 색연필로 다르게 표시하게 해보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>집에서 연습할 수 있는 좋은 문제집이 있을까요?</summary>
+            <p class="faq-answer">교과서 기본 문제를 완벽히 익힌 후 응용 문제가 많이 포함된 워크북을 추천합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>하루에 얼마나 공부시키는 것이 좋을까요?</summary>
+            <p class="faq-answer">긴 시간보다는 매일 십 분이라도 개념을 정리하고 그래프를 그려보는 습관이 중요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

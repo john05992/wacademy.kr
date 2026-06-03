@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구문 나무와 언어 구별 팁 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="교과서 어려운 문장 구문 트리와 친숙격식 말 구별 방법을 실제 경험을 바탕으로 부모가 직접 적용한 실천 가이드">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="구문 나무와 언어 구별 팁">
+  <meta property="og:description" content="교과서 어려운 문장 구문 트리와 친숙격식 말 구별 방법을 실제 경험을 바탕으로 부모가 직접 적용한 실천 가이드">
+  <meta property="og:url" content="https://wacademy.kr/blog/56/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="구문 나무와 언어 구별 팁">
+  <meta name="twitter:description" content="교과서 어려운 문장 구문 트리와 친숙격식 말 구별 방법을 실제 경험을 바탕으로 부모가 직접 적용한 실천 가이드">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/56/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/56/#article",
+    "headline": "구문 나무와 언어 구별 팁",
+    "description": "교과서 어려운 문장 구문 트리와 친숙격식 말 구별 방법을 실제 경험을 바탕으로 부모가 직접 적용한 실천 가이드",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/56/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/56/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "구문 나무와 언어 구별 팁"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"구문 트리를 처음 시작할 때 필요한 준비물은?","acceptedAnswer":{"@type":"Answer","text":"색연필, A4용지, 기본 문법 교과서와 함께 간단한 체크리스트만 있으면 충분합니다."}},
+      {"@type":"Question","name":"친숙한 말과 격식 있는 말의 차이를 어떻게 설명하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"대화 상대와 상황을 예시로 들어, 높임법과 어휘 선택 차이를 구체적으로 보여 주면 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"아이와 함께 하는 구문 트리 활동은 얼마나 자주 해야 하나요","acceptedAnswer":{"@type":"Answer","text":"주 2~3회, 10~15분 정도 꾸준히 하면 집중력과 기억력이 동시에 향상됩니다."}},
+      {"@type":"Question","name":"온라인 도구와 종이 방식 중 어느 쪽이 더 효과적인가요","acceptedAnswer":{"@type":"Answer","text":"두 방법을 병행하면 디지털 편리함과 손으로 직접 그리는 감각을 모두 활용할 수 있어 가장 효과적입니다."}},
+      {"@type":"Question","name":"어려운 복합문을 쉽게 나누는 팁이 있나요","acceptedAnswer":{"@type":"Answer","text":"먼저 주절과 종속절을 구분하고, 각 절의 핵심어를 찾은 뒤 트리 형태로 시각화하면 구조가 명확해집니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>구문 나무와 언어 구별 팁</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">구문 나무와 언어 구별 팁</h1>
+      <p class="article-meta-desc">교과서 어려운 문장 구문 트리와 친숙격식 말 구별 방법을 실제 경험을 바탕으로 부모가 직접 적용한 실천 가이드</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">구문 트리 그리기의 첫걸음</a></li>
+        <li><a href="#s2">친숙격식 말 구별 체크리스트</a></li>
+        <li><a href="#s3">시각화 학습이 주는 장기 효과</a></li>
+        <li><a href="#s4">친숙격식 말 비교표</a></li>
+        <li><a href="#s5">아이와 함께 실전 연습하기</a></li>
+        <li><a href="#s6">주요 실수와 교정 방법</a></li>
+        <li><a href="#s7">추천 학습 자료와 도구</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>구문 트리 그리기의 첫걸음</h2>
+      <p>지난 학기 우리 아이가 교과서의 복잡한 문장을 풀어보는 과제를 맡았을 때, 처음 마주한 구문 구조는 마치 얽힌 나무처럼 보였습니다. 나는 그 모습을 보며 직접 구문 트리를 그려보면 이해가 쉬워진다는 의견을 듣고, 집에서도 간단히 시도해 보기로 결심했습니다.
+
+다른 학부모는 이미 온라인 도구를 활용해 시각화했지만, 종이와 색연필만으로도 충분히 효과를 볼 수 있다는 점을 강조했습니다. 교사는 구문 분석 단계마다 핵심어와 연결어를 표시하도록 권장했으며, 그 지침을 따라가니 아이가 문장의 주어와 목적어를 정확히 구분할 수 있었습니다.
+
+전문가 조언을 참고해 트리의 뿌리부터 잎사귀까지 순차적으로 배치했더니, 복잡한 문장도 한눈에 파악되는 느낌을 받아 아이 스스로 복습할 때 큰 자신감을 얻었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>친숙격식 말 구별 체크리스트</h2>
+      <p>친숙한 말과 격식 있는 말을 구분하는 첫 번째 기준은 대화 상대의 연령과 관계이며, 이를 명확히 인식하는 것이 중요합니다. 나는 아이와 대화할 때 상황에 맞는 어휘 선택이 학습 동기에 직접적인 영향을 미친다고 느꼈습니다.
+
+다른 학부모는 평소 사용하던 표현을 기록해 두면 어느 순간 격식과 친근함을 구분하는 감각이 자연스럽게 형성된다고 말합니다. 교사는 문장 끝에 붙는 어미와 조사 형태를 체크하라고 조언했으며, 특히 높임법이 포함된 경우를 주의깊게 살펴보라고 강조했습니다.
+
+전문가 의견에 따르면, 일상 대화와 공식 발표에서 사용하는 어휘 차이를 연습하면 아이가 상황에 맞는 언어 사용 능력을 빠르게 향상시킬 수 있다고 합니다.</p>
+      <ul class="blog-list">
+        <li>대화 상대와 상황 파악</li>
+        <li>어휘와 어미 비교</li>
+        <li>높임법 사용 여부 확인</li>
+        <li>문맥에 맞는 예문 만들기</li>
+        <li>꾸준히 기록하고 피드백 받기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>시각화 학습이 주는 장기 효과</h2>
+      <p>구문 구조 나무를 직접 그리면서 아이는 문장의 논리적 흐름을 눈으로 확인하게 되고, 이는 추상적인 문법 개념을 구체적인 이미지로 전환시키는 효과를 가져옵니다. 나는 이런 시각적 학습법이 기억 지속성을 높여 주는 동시에 시험 대비에도 큰 도움이 된다고 확신합니다.
+
+다른 학부모는 아이가 복합문을 분석할 때마다 스스로 질문을 만들고 답을 찾아가는 과정을 통해 비판적 사고 능력이 강화된다고 전했습니다. 교사는 구문 트리를 활용한 수업이 언어 감각을 높이고, 독해력 향상에 직접 연결된다고 설명했으며, 실제 수업 결과를 통해 그 효과를 확인했습니다.
+
+전문가는 시각적 구조화가 뇌의 언어 처리 영역을 활성화시켜 복잡한 문장을 단순화하는 데 기여한다며, 특히 초등 고학년에서 중학생으로 넘어가는 시기에 권장한다는 입장을 밝혔습니다. 우리 가정에서는 매주 한 두 문장을 선택해 트리를 그리고, 완성된 그림을 가족 회의 시간에 공유함으로써 자연스럽게 복습과 토론을 동시에 진행하고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>친숙격식 말 비교표</h2>
+      <p>친숙한 말과 격식 있는 말의 차이를 한눈에 비교하면, 상황별 언어 선택이 얼마나 중요한지 쉽게 이해할 수 있습니다. 나는 아이에게 이 표를 보여 주며 각각의 경우에 맞는 표현을 실생활에서 적용해 보게 하는 것이 효과적이라고 생각합니다.
+
+다른 학부모는 표를 활용해 퀴즈 형식으로 학습하면 아이가 즐겁게 참여한다는 점을 강조했습니다. 교사는 표에 있는 예문을 직접 읽어 보게 함으로써 어휘 선택의 미묘한 차이를 체감하게 한다고 조언했습니다.
+
+전문가 의견에 따르면, 이런 비교표는 언어 감각을 체계적으로 정립하게 도와주어 공식적인 상황에서도 자연스럽게 격식 있는 말을 구사할 수 있게 한다고 합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>친숙한 말</td><td>친구가족</td><td>안녕, 뭐 해?</td></tr>
+        <tr><td>격식 있는 말</td><td>선생님상사</td><td>안녕하십니까, 무엇을 도와드릴까요?</td></tr>
+        <tr><td>전환 예시</td><td>일상공식</td><td>잘 지냈어  잘 지내셨습니까</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>아이와 함께 실전 연습하기</h2>
+      <p>아이에게 구문 트리를 그릴 때는 먼저 핵심어를 찾아 내는 연습을 시키는 것이 기본 단계입니다. 나는 매일 저녁 식사 시간에 짧은 문장을 하나씩 선택해 같이 분석하도록 권장하고 있습니다.
+
+다른 학부모는 색깔별 마커를 사용해 주어, 동사, 목적어를 구분하면 시각적 기억이 강화된다고 공유했습니다. 교사는 학습지에 빈 트리 양식을 제공하고, 아이가 스스로 채워 보게 하면 주도적 학습 효과가 높아진다고 말했습니다.
+
+전문가 조언을 따르면, 완성된 트리를 사진으로 촬영해 디지털 앨범에 보관하고, 복습 시에 다시 꺼내 보는 것이 지속적인 학습에 큰 도움이 된다고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>주요 실수와 교정 방법</h2>
+      <p>구문 트리를 그리면서 가장 흔히 발생하는 실수는 연결어를 놓치고 관계를 잘못 표시하는 경우입니다. 나는 처음에 아이가 부사구를 주절에 붙이는 방식에 혼란을 겪는 모습을 보았고, 이를 바로잡기 위해 단계별 체크리스트를 마련했습니다.
+
+다른 학부모는 트리를 너무 복잡하게 만들면 오히려 이해가 방해된다고 지적했으며, 핵심 요소만 강조하도록 조언했습니다. 교사는 지나친 색칠이나 장식이 핵심 구조를 흐리게 만들 수 있으니, 기본 선과 라인에 집중하라고 강조했습니다.
+
+전문가 의견에 따르면, 초기에 완성도를 높이기보다 정확한 구조 파악에 중점을 두면 장기적으로 더 깊은 문법 이해로 이어진다고 강조합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>추천 학습 자료와 도구</h2>
+      <p>구문 구조를 배우기에 좋은 교재로는 최신 교육과정에 맞춘 예시와 연습문제가 풍부한 책을 추천합니다. 나는 온라인 강의와 함께 PDF 자료를 다운로드해 아이와 함께 실습하면서 학습 효율을 높이고 있습니다.
+
+다른 학부모는 교육청에서 제공하는 무료 워크시트를 활용해 비용 부담 없이 연습할 수 있다고 알려줍니다. 교사는 학년별 난이도에 맞춘 단계별 문제집을 이용하면 점진적인 실력 향상이 가능하다고 조언했습니다.
+
+전문가가 추천하는 모바일 앱은 자동 구문 분석과 트리 시각화를 지원해, 아이가 스스로 학습할 때 큰 도움이 된다고 평가했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>구문 트리를 처음 시작할 때 필요한 준비물은?</summary>
+            <p class="faq-answer">색연필, A4용지, 기본 문법 교과서와 함께 간단한 체크리스트만 있으면 충분합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>친숙한 말과 격식 있는 말의 차이를 어떻게 설명하면 좋을까요?</summary>
+            <p class="faq-answer">대화 상대와 상황을 예시로 들어, 높임법과 어휘 선택 차이를 구체적으로 보여 주면 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이와 함께 하는 구문 트리 활동은 얼마나 자주 해야 하나요</summary>
+            <p class="faq-answer">주 2~3회, 10~15분 정도 꾸준히 하면 집중력과 기억력이 동시에 향상됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>온라인 도구와 종이 방식 중 어느 쪽이 더 효과적인가요</summary>
+            <p class="faq-answer">두 방법을 병행하면 디지털 편리함과 손으로 직접 그리는 감각을 모두 활용할 수 있어 가장 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어려운 복합문을 쉽게 나누는 팁이 있나요</summary>
+            <p class="faq-answer">먼저 주절과 종속절을 구분하고, 각 절의 핵심어를 찾은 뒤 트리 형태로 시각화하면 구조가 명확해집니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

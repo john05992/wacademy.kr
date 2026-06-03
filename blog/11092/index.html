@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복소수 연산 실수 잡기 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="복소수 사칙연산을 잘하는 법과 자주 틀리는 유형을 스스로 예측하여 대비하는 꿀팁을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="복소수 연산 실수 잡기">
+  <meta property="og:description" content="복소수 사칙연산을 잘하는 법과 자주 틀리는 유형을 스스로 예측하여 대비하는 꿀팁을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/11092/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="복소수 연산 실수 잡기">
+  <meta name="twitter:description" content="복소수 사칙연산을 잘하는 법과 자주 틀리는 유형을 스스로 예측하여 대비하는 꿀팁을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/11092/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/11092/#article",
+    "headline": "복소수 연산 실수 잡기",
+    "description": "복소수 사칙연산을 잘하는 법과 자주 틀리는 유형을 스스로 예측하여 대비하는 꿀팁을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-14",
+    "dateModified": "2025-11-14",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/11092/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/11092/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "복소수 연산 실수 잡기"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"복소수는 몇 학년 때 배우나요?","acceptedAnswer":{"@type":"Answer","text":"보통 고등학교 일 학년 수학 시간에 배우게 됩니다."}},
+      {"@type":"Question","name":"계산 실수를 줄이는 방법이 있나요?","acceptedAnswer":{"@type":"Answer","text":"풀이 과정을 최대한 자세히 적어서 놓치는 부분이 없는지 확인하세요."}},
+      {"@type":"Question","name":"부모가 수학을 못해도 도와줄 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"선생님처럼 가르치려 하지 말고 아이의 이야기를 들어주는 것이 중요합니다."}},
+      {"@type":"Question","name":"어떤 문제집을 추천하나요?","acceptedAnswer":{"@type":"Answer","text":"학교 교과서를 기본으로 하고 자신의 수준에 맞는 기출문제집을 푸는 것이 좋습니다."}},
+      {"@type":"Question","name":"허수 개념이 너무 어려워하면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"수학사나 관련 애니메이션을 함께 보며 흥미를 유발해 주는 것을 추천합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>복소수 연산 실수 잡기</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">복소수 연산 실수 잡기</h1>
+      <p class="article-meta-desc">복소수 사칙연산을 잘하는 법과 자주 틀리는 유형을 스스로 예측하여 대비하는 꿀팁을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">아이와 함께 허수의 세계로</a></li>
+        <li><a href="#s2">사칙연산 기본 원리 다지기</a></li>
+        <li><a href="#s3">실수 유형 예측과 분석</a></li>
+        <li><a href="#s4">어려운 나눗셈과 평면 도입</a></li>
+        <li><a href="#s5">문제 풀기 전 꼭 확인하기</a></li>
+        <li><a href="#s6">학부모로서 느낀 점</a></li>
+        <li><a href="#s7">꾸준한 연습이 정답이다</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>아이와 함께 허수의 세계로</h2>
+      <p>아이가 수학 시간에 처음 허수를 접하고는 정말 당황스러워하더군요. 현실 세계에서는 존재하지 않는 숫자라서 그런지 이해하는 데 시간이 꽤 걸렸습니다.
+
+ 저 또한 학창 시절 배우고 까먹었던 개념이라 다시 공부를 시작했어요. 부모님이 먼저 원리를 파악해야 아이의 혼란을 줄여줄 수 있다는 생각이 들었습니다.
+
+ 복소수의 사칙연산은 규칙만 외우면 쉽지만 그 이전의 개념이 잡혀 있어야 합니다. 그래서 우리 집은 교과서의 기본 정의부터 천천히 다시 읽어보는 시간을 가졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>사칙연산 기본 원리 다지기</h2>
+      <p>덧셈과 뺄셈은 실수부와 허수부를 각각 계산한다는 원칙만 지키면 틀리지 않습니다. 그러나 곱셈으로 넘어가면서 분배법칙을 적용할 때 아이들이 종종 실수를 하더군요.
+
+ 특히 허수 단위를 제곱하는 과정에서 마이너스 부호를 빼먹는 경우가 가장 많았습니다. 저희 아이는 이 부분을 연습 문제를 통해 반복해서 확인하도록 지도했습니다.
+
+ 계산 과정을 한눈에 볼 수 있게 풀이 과정을 길게 적어보는 것도 큰 도움이 되었습니다. 꼼꼼함이 필요한 단원이라 서둘러 풀기보다는 차근차근 접근해야 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실수 유형 예측과 분석</h2>
+      <p>아이가 스스로 틀릴 만한 문제를 미리 예측하는 훈련은 정말 효과적입니다. 저는 아이와 함께 문제집을 펴놓고 이게 함정일까라고 질문을 던지곤 했습니다.
+
+ 복소수 단원에서는 특히 분모의 유리화나 절대값 계산에서 실수가 잦습니다. 아이는 자신이 자주 범하는 오류 유형을 노트에 정리하며 약점을 파악해 나갔습니다.
+
+ 이러한 과정을 통해 시험 치르기 전에 미리 방어 태세를 갖추게 되더군요. 부모님도 옆에서 조금만 자극해 주면 아이가 스스로 문제를 분석하는 눈을 키울 수 있습니다.
+
+ 틀리는 것이 두려운 게 아니라 틀릴 것을 알고 막는 것이 중요합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>계산</td><td>곱셈</td><td>허수 단위 제곱 시 부호 실수 주의</td></tr>
+        <tr><td>개념</td><td>나눗셈</td><td>켤레 복소수를 곱해 유리화하기</td></tr>
+        <tr><td>실수</td><td>절댓값</td><td>제곱근 안의 식을 정확히 전개하기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>어려운 나눗셈과 평면 도입</h2>
+      <p>나눗셈 과정에서 분모의 실수화는 아이들에게 꽤나 까다로운 장벽이 됩니다. 허수를 포함한 분모를 없애려면 분모와 분자에 같은 켤레 복소수를 곱해야 하는데 이 절차를 잊어버리곤 하죠.
+
+ 저는 아이에게 분모를 깨끗하게 만든다는 목표를 주어 연습시켰습니다. 또한 복소평면에 그래프를 그려보면 숫자의 위치를 직관적으로 이해할 수 있습니다.
+
+ 단순히 계산만 하다 보면 지루해질 수 있어 도형적인 요소를 가미했습니다. 평면 위에 점을 찍는 활동은 아이가 흥미를 잃지 않게 유지하는 비결이었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>문제 풀기 전 꼭 확인하기</h2>
+      <p>문제를 풀기 전에 아이가 머릿속으로 훑어보는 체크리스트가 있다면 실수가 확 줄어듭니다. 습관적으로 무작정 계산에 들어가는 것보다 어떤 함정이 숨어 있는지 먼저 살피는 것이 좋습니다.
+
+ 저희 집에서는 다섯 가지 확인 사항을 외워서 사용하고 있습니다. 이 리스트를 활용한 후로는 아이의 문제집에서 쓸데없는 감점이 많이 사라졌습니다.
+
+ 꾸준한 확인만이 완벽한 점수를 만든다는 것을 부모님이 옆에서 계속 일러주세요.</p>
+      <ul class="blog-list">
+        <li>제곱할 때 부호 확인하기</li>
+        <li>실수부 허수부 분리 계산하기</li>
+        <li>분모 유리화 과정 놓치지 않기</li>
+        <li>절댓값 공식 정확히 쓰기</li>
+        <li>마지막에 역산으로 검증하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모로서 느낀 점</h2>
+      <p>이번 단원을 공부하면서 느낀 점은 아이와 부모가 함께 끈기를 가지는 것이 가장 중요하다는 사실입니다. 처음에는 복소수라는 용어 자체가 거부감을 불러일으켰지만 차근차근 나아가니 흥미로워지더군요.
+
+ 저는 아이가 틀렸을 때 화를 내지 않고 왜 틀렸는지 같이 고민하는 시간을 가졌습니다. 그러자 아이도 수학을 포기하지 않고 끝까지 해내겠다는 의지를 보였습니다.
+
+ 부모의 태도가 아이의 학습 성취도에 큰 영향을 미친다는 것을 다시금 깨닫게 되었습니다. 섣불리 결론을 내리지 말고 아이의 속도에 맞춰가세요.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>꾸준한 연습이 정답이다</h2>
+      <p>복소수의 사칙연산은 고등 수학으로 가기 위한 중요한 디딤돌입니다. 지금 조금 어렵게 느껴지더라도 이 단원을 완벽히 마스터하면 나중은 훨씬 수월해질 것입니다.
+
+ 스스로 실수를 예측하는 능력은 이 과정에서 자연스럽게 길러지는 소중한 자산입니다. 여러분의 아이도 분명히 잘해낼 수 있으니 믿고 지켜봐 주십시오.
+
+ 오늘 고생한 시간이 훗날 훌륭한 성적으로 돌아올 것이라 확신합니다. 지금 이 순간의 노력이 결코 헛되지 않다는 사실을 꼭 전해주세요.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>복소수는 몇 학년 때 배우나요?</summary>
+            <p class="faq-answer">보통 고등학교 일 학년 수학 시간에 배우게 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>계산 실수를 줄이는 방법이 있나요?</summary>
+            <p class="faq-answer">풀이 과정을 최대한 자세히 적어서 놓치는 부분이 없는지 확인하세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 수학을 못해도 도와줄 수 있나요?</summary>
+            <p class="faq-answer">선생님처럼 가르치려 하지 말고 아이의 이야기를 들어주는 것이 중요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어떤 문제집을 추천하나요?</summary>
+            <p class="faq-answer">학교 교과서를 기본으로 하고 자신의 수준에 맞는 기출문제집을 푸는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>허수 개념이 너무 어려워하면 어떻게 하나요?</summary>
+            <p class="faq-answer">수학사나 관련 애니메이션을 함께 보며 흥미를 유발해 주는 것을 추천합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

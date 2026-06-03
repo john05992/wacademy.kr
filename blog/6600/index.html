@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>합성함수 미분 원리와 연결고리 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="합성함수 미분의 어려움을 원인과 결과 도식화로 해결하는 학습법을 소개합니다. 아이가 이해하기 쉬운 방법을 찾은 학부모 후기입니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="합성함수 미분 원리와 연결고리">
+  <meta property="og:description" content="합성함수 미분의 어려움을 원인과 결과 도식화로 해결하는 학습법을 소개합니다. 아이가 이해하기 쉬운 방법을 찾은 학부모 후기입니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/6600/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="합성함수 미분 원리와 연결고리">
+  <meta name="twitter:description" content="합성함수 미분의 어려움을 원인과 결과 도식화로 해결하는 학습법을 소개합니다. 아이가 이해하기 쉬운 방법을 찾은 학부모 후기입니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/6600/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/6600/#article",
+    "headline": "합성함수 미분 원리와 연결고리",
+    "description": "합성함수 미분의 어려움을 원인과 결과 도식화로 해결하는 학습법을 소개합니다. 아이가 이해하기 쉬운 방법을 찾은 학부모 후기입니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-03",
+    "dateModified": "2026-02-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/6600/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/6600/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "합성함수 미분 원리와 연결고리"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"합성함수 미분이 가장 어려운 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"여러 단계의 계산 과정을 동시에 생각해야 하기 때문입니다."}},
+      {"@type":"Question","name":"도식화를 할 때 어떤 도구를 추천하나요?","acceptedAnswer":{"@type":"Answer","text":"색깔별 펜이나 화이트보드를 활용하면 시각적으로 이해하기 쉽습니다."}},
+      {"@type":"Question","name":"얼마나 많은 연습이 필요한가요?","acceptedAnswer":{"@type":"Answer","text":"기본 유형을 스무 개 이상 반복해서 풀어보면 감이 잡힙니다."}},
+      {"@type":"Question","name":"내적 함수와 외적 함수를 구분하는 법을 알려주세요.","acceptedAnswer":{"@type":"Answer","text":"괄호로 묶인 부분이 내부 함수이고 그것을 감싸는 형태가 외부 함수입니다."}},
+      {"@type":"Question","name":"성적 향상까지 걸리는 시간은 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"아이마다 다르지만 꾸준히 한 달 정도만 하면 효과가 나타납니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>합성함수 미분 원리와 연결고리</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">합성함수 미분 원리와 연결고리</h1>
+      <p class="article-meta-desc">합성함수 미분의 어려움을 원인과 결과 도식화로 해결하는 학습법을 소개합니다. 아이가 이해하기 쉬운 방법을 찾은 학부모 후기입니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">수학 공포증을 없앤 도식화 학습법</a></li>
+        <li><a href="#s2">합성함수 미분의 핵심 원리 이해하기</a></li>
+        <li><a href="#s3">개념별 원인과 결과를 도식화하여 연결 고리 파악</a></li>
+        <li><a href="#s4">실천 가능한 공부 단계 정리</a></li>
+        <li><a href="#s5">오답 유형별 분석과 대처법</a></li>
+        <li><a href="#s6">학습법 적용 후 눈에 띄는 변화</a></li>
+        <li><a href="#s7">학부모님들께 드리는 당부 말씀</a></li>
+        <li><a href="#s8">자주 묻는 질문과 답변</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>수학 공포증을 없앤 도식화 학습법</h2>
+      <p>우리 아이가 수학 공부를 하면서 가장 어려워했던 부분은 바로 합성함수 미분이었습니다. 복잡한 기호들이 섞여 있어 보기만 해도 머리가 아프다고 하더군요. 
+
+ 여러 참고서를 뒤져보았지만 해결책이 쉽게 보이지 않았습니다. 그래서 저는 원인과 결과를 그림으로 그려보는 방법을 제안해 보았습니다. 
+
+ 아이는 처음에는 낯설어했지만 조금씩 틀이 잡히기 시작했습니다. 이 방법을 통해 수포자였던 아이가 문제를 풀며 자신감을 되찾는 모습을 보니 저도 참 기뻤습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>합성함수 미분의 핵심 원리 이해하기</h2>
+      <p>합성함수 미분의 핵심은 연쇄 법칙을 이해하는 것입니다. 겉으로 보이는 식과 속에 숨어 있는 식을 각각 구분해서 미분해야 하기 때문입니다. 
+
+ 아이에게는 이 과정이 마치 양파 껍질을 벗기는 것과 같다고 설명해 주었습니다. 가장 바깥쪽부터 차근차근 안쪽으로 들어가며 계산하는 순서를 익히는 것이 중요합니다. 
+
+ 이때 단순히 암기하기보다는 왜 그런 순서로 풀어야 하는지 이해시키는 것이 필요합니다. 저희 집에서는 이 부분을 집중적으로 연습하여 실수를 줄였습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>개념별 원인과 결과를 도식화하여 연결 고리 파악</h2>
+      <p>개념별로 원인과 결과를 도식화하여 연결 고리를 파악하는 방법은 정말 효과적이었습니다. 아이가 문제를 틀리는 원인이 무엇인지 분석해 보니 식을 전개하는 과정에서 논리가 끊어지는 경우가 많았습니다. 
+
+ 그래서 저는 화이트보드에 수식의 입력과 출력 과정을 화살표로 그려서 보여주었습니다. 안쪽 항목의 변화가 바깥쪽 형태에 어떤 영향을 미치는지 시각적으로 확인하자 이해도가 급상승했습니다. 
+
+ 단순히 공식을 대입하는 것이 아니라 흐름을 따라가는 훈련을 한 셈입니다. 이러한 시각화 학습법은 복잡한 계산 절차를 단순화하는 데 큰 도움이 되었습니다. 
+
+ 결과적으로 자녀는 수학 문제의 구조를 파악하는 힘이 길러졌다고 자랑스럽게 말합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>실천 가능한 공부 단계 정리</h2>
+      <p>우리가 실제로 시도해 본 구체적인 학습 단계를 정리해 드립니다. 순서대로 따라 하다 보면 어렵던 수학도 조금은 쉬워질 것입니다. 
+
+ 첫째는 기본 개념을 확실히 다지는 것입니다.</p>
+      <ul class="blog-list">
+        <li>기본 도함수 공식 완벽하게 암기하기</li>
+        <li>내부 함수와 외부 함수 구별 연습</li>
+        <li>화살표를 이용해 변화 과정 그려보기</li>
+        <li>다양한 유형의 문제를 풀며 적용하기</li>
+        <li>틀린 문제는 다시 도식화하며 복습하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>오답 유형별 분석과 대처법</h2>
+      <p>학습 과정에서 자주 발생하는 오답 유형을 분석해 보았습니다. 이를 통해 아이가 어디서 헷갈려하는지 파악하고 대처할 수 있었습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>실수 유형</td><td>내부 함수 미분 누락</td><td>안쪽 함수의 미분을 곱하는 과정을 자주 잊어서 결과가 틀림</td></tr>
+        <tr><td>오답 원인</td><td>계산 순서 혼동</td><td>바깥쪽과 안쪽의 미분 순서가 바뀌어 식이 전혀 다르게 전개됨</td></tr>
+        <tr><td>해결 방안</td><td>단계별 표기하기</td><td>한 번에 계산하지 말고 단계를 나누어 꼼꼼하게 적는 습관 들이기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습법 적용 후 눈에 띄는 변화</h2>
+      <p>이 학습법을 시작한 후 아이의 변화는 정말 눈부셨습니다. 수학 시간 시험 성적이 서서히 오르기 시작했을 뿐만 아니라 문제를 대하는 태도도 달라졌습니다. 
+
+ 이전에는 문제지를 펼치자마자 포기하던 아이가 끝까지 고민해 보려는 모습을 보여주었습니다. 무엇보다 복잡한 식을 보고도 당황하지 않고 차근차근 풀어내는 모습을 보니 저도 안도가 되었습니다. 
+
+ 도식화를 통해 논리적인 사고력도 함께 길러진 것 같아 뿌듯합니다. 이 경험을 바탕으로 다른 단원도 같은 방법으로 접근해 보려고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모님들께 드리는 당부 말씀</h2>
+      <p>학부모로서 아이가 수학을 포기하지 않고 성장하는 모습을 보는 것보다 큰 기쁨은 없습니다. 합성함수 미분처럼 어려워 보이는 문제도 접근 방식만 바꾸면 충분히 정복할 수 있습니다. 
+
+ 여러분도 아이가 공부에 지쳐 있다면 원인과 결과를 그림으로 그려보는 방법을 한번 추천해 보세요. 아이의 시각에 맞춰 설명해 주는 것이 가장 확실한 해결책이 될 수 있습니다. 
+
+ 우리 아이들의 잠재력은 무궁무진하다고 믿습니다. 부모님들의 끊임없는 관심과 지지가 아이들에게는 가장 큰 힘이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문과 답변</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>합성함수 미분이 가장 어려운 이유는 무엇인가요?</summary>
+            <p class="faq-answer">여러 단계의 계산 과정을 동시에 생각해야 하기 때문입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>도식화를 할 때 어떤 도구를 추천하나요?</summary>
+            <p class="faq-answer">색깔별 펜이나 화이트보드를 활용하면 시각적으로 이해하기 쉽습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>얼마나 많은 연습이 필요한가요?</summary>
+            <p class="faq-answer">기본 유형을 스무 개 이상 반복해서 풀어보면 감이 잡힙니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>내적 함수와 외적 함수를 구분하는 법을 알려주세요.</summary>
+            <p class="faq-answer">괄호로 묶인 부분이 내부 함수이고 그것을 감싸는 형태가 외부 함수입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>성적 향상까지 걸리는 시간은 얼마나 되나요?</summary>
+            <p class="faq-answer">아이마다 다르지만 꾸준히 한 달 정도만 하면 효과가 나타납니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 대칭이동 완전 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="대칭이동 개념과 흔한 오답 원인을 부모 입장에서 실천 가능한 학습법과 팁, 리스트표로 정리해 제공합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="함수 대칭이동 완전 가이드">
+  <meta property="og:description" content="대칭이동 개념과 흔한 오답 원인을 부모 입장에서 실천 가능한 학습법과 팁, 리스트표로 정리해 제공합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/5332/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="함수 대칭이동 완전 가이드">
+  <meta name="twitter:description" content="대칭이동 개념과 흔한 오답 원인을 부모 입장에서 실천 가능한 학습법과 팁, 리스트표로 정리해 제공합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/5332/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/5332/#article",
+    "headline": "함수 대칭이동 완전 가이드",
+    "description": "대칭이동 개념과 흔한 오답 원인을 부모 입장에서 실천 가능한 학습법과 팁, 리스트표로 정리해 제공합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-26",
+    "dateModified": "2026-02-26",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/5332/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/5332/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "함수 대칭이동 완전 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"대칭이동이란 정확히 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"좌표평면에서 그래프를 일정한 방향과 거리만큼 옮기는 변환을 말하며, 형태는 그대로 유지됩니다."}},
+      {"@type":"Question","name":"왜 원점이동을 놓치면 오답이 생기나요?","acceptedAnswer":{"@type":"Answer","text":"원점이동을 고려하지 않으면 좌표값이 잘못 계산돼 그래프 위치가 어긋나기 때문입니다."}},
+      {"@type":"Question","name":"학생이 대칭축을 잘못 잡는 이유는?","acceptedAnswer":{"@type":"Answer","text":"대칭축을 명확히 정의하지 않아 기준점이 혼동되며, 시각적 자료가 부족할 때 흔히 발생합니다."}},
+      {"@type":"Question","name":"오답노트를 어떻게 활용하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"틀린 문제와 올바른 풀이를 나란히 기록해 반복 학습하면 개념 정리가 효율적입니다."}},
+      {"@type":"Question","name":"부모가 직접 지도할 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"아이의 이해 수준에 맞춰 단계적으로 설명하고, 지나친 압박보다는 재미를 강조하는 것이 중요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>함수 대칭이동 완전 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">함수 대칭이동 완전 가이드</h1>
+      <p class="article-meta-desc">대칭이동 개념과 흔한 오답 원인을 부모 입장에서 실천 가능한 학습법과 팁, 리스트표로 정리해 제공합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">함수 대칭이동이란?</a></li>
+        <li><a href="#s2">오답의 숨은 원인 파악하기</a></li>
+        <li><a href="#s3">효과적인 학습 전략</a></li>
+        <li><a href="#s4">대칭이동 학습을 돕는 5가지 팁</a></li>
+        <li><a href="#s5">오답 유형별 대응 전략</a></li>
+        <li><a href="#s6">부모가 직접 참여한 학습 후기</a></li>
+        <li><a href="#s7">학교와 학원의 연계 활용법</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>함수 대칭이동이란?</h2>
+      <p>우리 아이는 중학교 수학 시간에 대칭이동이라는 새로운 개념을 처음 접하면서 약간의 혼란을 느꼈습니다. 교사는 좌우 대칭과 위아래 이동을 동시에 보여주며 그래프가 어떻게 변하는지를 단계별로 설명했습니다. 
+
+학생들은 좌표축을 기준으로 각 점이 일정한 거리만큼 이동하는 모습을 눈으로 직접 확인하며 흥미를 가졌습니다. 학부모로서 나는 아이와 함께 종이 위에 좌표를 그려보며 손으로 움직이는 과정을 체험하게 했습니다. 
+
+이러한 실험을 통해 추상적인 수학 개념이 일상적인 움직임과 연결되어 이해가 쉬워졌다는 느낌을 받았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>오답의 숨은 원인 파악하기</h2>
+      <p>많은 학생이 대칭이동을 적용할 때 원점이동을 함께 고려하지 않아 답이 틀리는 경우가 많습니다. 시험 문제에서는 그래프 전체가 이동한 뒤에도 원래 형태를 유지한다는 조건을 놓치기 쉽습니다. 
+
+부모님은 아이가 계산 과정에서 좌표값을 부호만 바꾸는 실수를 저지른다고 생각하지만, 실제 원인은 개념 혼동에 있습니다. 전문가 의견에 따르면, 대칭축 선택 오류가 가장 흔한 실수이며, 이를 바로잡기 위해서는 명확한 기준점을 설정하는 연습이 필요합니다. 
+
+결과적으로 오답을 분석하고 이유를 구체적으로 기록하면 다음 시험에서는 같은 함정에 빠지지 않을 가능성이 크게 높아집니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>효과적인 학습 전략</h2>
+      <p>우리 가족은 방학 동안 대칭이동을 주제로 한 프로젝트를 진행하면서 아이의 수학적 사고력을 키우고자 계획을 세웠습니다. 수학 교사는 교실에서 직접 좌표평면을 크게 그린 뒤, 점 하나를 기준으로 전체 그래프를 이동시키는 시연을 보여주었습니다. 
+
+학습 앱에서는 인터랙티브한 슬라이더를 이용해 이동 거리와 방향을 자유롭게 조절하면서 즉시 결과를 확인할 수 있게 설계되었습니다. 전통 교재는 단계별 예제와 연습문제를 제공하지만, 실제 손으로 움직여 보는 활동이 부족해 이해도가 떨어질 수 있습니다. 
+
+다양한 예시를 활용해 일상 속 물체의 이동과 연결시키면 추상적인 개념이 구체화되어 기억에 오래 남게 됩니다. 마지막으로 아이가 스스로 문제를 만들고 풀이 과정을 설명하도록 격려하면, 오답 원인을 스스로 발견하는 능력이 자연스럽게 향상됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>대칭이동 학습을 돕는 5가지 팁</h2>
+      <p>첫 번째 팁은 그래프를 크게 그려 눈에 보이는 형태로 변화를 관찰하도록 하는 것입니다. 두 번째 팁은 슬라이드나 앱을 활용해 이동 거리를 직접 조절해 보는 연습을 꾸준히 시키는 것입니다. 
+
+세 번째 팁은 일상 생활에서 대칭과 이동이 나타나는 사례를 찾아 함께 이야기하는 것입니다. 네 번째 팁은 오답노트를 만들어 잘못된 부분과 올바른 풀이를 비교하도록 지도하는 것입니다. 
+
+다섯 번째 팁은 친구와 함께 문제를 교환하고 토론하면서 다양한 접근 방식을 경험하도록 격려하는 것입니다.</p>
+      <ul class="blog-list">
+        <li>그리기 연습</li>
+        <li>디지털 슬라이드 활용</li>
+        <li>실생활 사례 찾기</li>
+        <li>오답노트 작성</li>
+        <li>동료와 토론</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>오답 유형별 대응 전략</h2>
+      <p>오답 유형 A는 개념 자체를 오해해서 발생하는 경우로, 시각 자료와 구체적인 예시를 통해 기본 개념을 재정립해야 합니다. 오답 유형 B는 계산 과정에서 좌표 변환 공식을 잘못 적용해 생기는 오류이며, 반복적인 연습 문제 풀이가 효과적입니다. 
+
+오답 유형 C는 답안에 이동 방향과 거리를 명확히 표현하지 않아 평가자가 혼동하는 상황으로, 서술형 답변 연습을 강조해야 합니다. 전략 제시에서는 각 유형별 맞춤형 학습 자료와 피드백을 제공하는 것이 핵심이며, 꾸준한 점검을 통해 개선을 확인할 수 있습니다. 
+
+마무리로, 오답을 단순히 정답으로 바꾸는 것이 아니라 왜 틀렸는지를 깊이 탐구하는 과정이 장기적인 실력 향상의 밑거름이 됩니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>개념 오해</td><td>초등 고학년</td><td>대칭축을 정확히 파악하도록 시각 자료 제공</td></tr>
+        <tr><td>계산 실수</td><td>중학생</td><td>좌표 변환 공식을 반복 연습하게 함</td></tr>
+        <tr><td>표현 오류</td><td>고등학생</td><td>답안에 이동 거리와 방향을 명확히 적도록 지도</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모가 직접 참여한 학습 후기</h2>
+      <p>처음에는 대칭이동이라는 용어 자체가 낯설어서 아이와 함께 교과서를 펴 보았을 때 머뭇거림이 있었습니다. 그때 교사가 제공한 색연필과 좌표판을 활용해 직접 점을 옮겨 보니 흥미가 생겼습니다. 
+
+시간이 지나면서 매일 짧은 연습을 진행했는데, 아이가 스스로 문제를 찾아 풀어 나가는 모습을 보게 되었습니다. 아이와 함께 복습할 때는 이동 방향을 몸으로 표시해 보면서 기억을 강화했습니다. 
+
+결과적으로 아이는 시험에서 대칭이동 관련 문제를 정확히 해결했으며, 자신감도 크게 향상되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학교와 학원의 연계 활용법</h2>
+      <p>학교에서는 정규 수업 시간에 대칭이동 개념을 소개하고 기본 예제를 풀이하도록 지도합니다. 학원에서는 심화 문제와 다양한 유형을 제공해 응용 능력을 키우는 데 집중합니다. 
+
+양쪽을 연계하면 교과서 수준의 이해와 심화 연습을 동시에 진행할 수 있어 학습 효율이 높아집니다. 통합적으로 진행되는 워크숍에서는 교사와 강사가 공동으로 피드백을 제공해 오답을 바로잡는 기회가 많아집니다. 
+
+이러한 협력 덕분에 학생들은 개념을 깊이 있게 습득하고, 시험 대비 전략을 체계적으로 마련할 수 있게 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>대칭이동이란 정확히 무엇인가요?</summary>
+            <p class="faq-answer">좌표평면에서 그래프를 일정한 방향과 거리만큼 옮기는 변환을 말하며, 형태는 그대로 유지됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>왜 원점이동을 놓치면 오답이 생기나요?</summary>
+            <p class="faq-answer">원점이동을 고려하지 않으면 좌표값이 잘못 계산돼 그래프 위치가 어긋나기 때문입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학생이 대칭축을 잘못 잡는 이유는?</summary>
+            <p class="faq-answer">대칭축을 명확히 정의하지 않아 기준점이 혼동되며, 시각적 자료가 부족할 때 흔히 발생합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답노트를 어떻게 활용하면 좋을까요?</summary>
+            <p class="faq-answer">틀린 문제와 올바른 풀이를 나란히 기록해 반복 학습하면 개념 정리가 효율적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 직접 지도할 때 주의할 점은?</summary>
+            <p class="faq-answer">아이의 이해 수준에 맞춰 단계적으로 설명하고, 지나친 압박보다는 재미를 강조하는 것이 중요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

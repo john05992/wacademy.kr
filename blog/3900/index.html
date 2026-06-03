@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>재귀대명사와 대우명제 쉽게 이해 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모 눈높이로 재귀대명사와 대우명제 개념을 설명하고, 실생활 학습법과 교사 상담 팁을 제공해 아이의 수학 이해도를 높이는 방법을 소개합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="재귀대명사와 대우명제 쉽게 이해">
+  <meta property="og:description" content="학부모 눈높이로 재귀대명사와 대우명제 개념을 설명하고, 실생활 학습법과 교사 상담 팁을 제공해 아이의 수학 이해도를 높이는 방법을 소개합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3900/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="재귀대명사와 대우명제 쉽게 이해">
+  <meta name="twitter:description" content="학부모 눈높이로 재귀대명사와 대우명제 개념을 설명하고, 실생활 학습법과 교사 상담 팁을 제공해 아이의 수학 이해도를 높이는 방법을 소개합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3900/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3900/#article",
+    "headline": "재귀대명사와 대우명제 쉽게 이해",
+    "description": "학부모 눈높이로 재귀대명사와 대우명제 개념을 설명하고, 실생활 학습법과 교사 상담 팁을 제공해 아이의 수학 이해도를 높이는 방법을 소개합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-24",
+    "dateModified": "2026-03-24",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3900/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3900/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "재귀대명사와 대우명제 쉽게 이해"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"재귀대명사는 언제부터 가르쳐야 하나요?","acceptedAnswer":{"@type":"Answer","text":"초등 고학년부터 실제 예시와 함께 단계적으로 도입하는 것이 효과적입니다."}},
+      {"@type":"Question","name":"대우명제는 수학 외에 활용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"논리적 사고가 필요한 모든 분야, 예를 들어 과학 실험이나 토론에서도 유용합니다."}},
+      {"@type":"Question","name":"집에서 혼자 공부할 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"개념을 반복 확인하고, 스스로 질문을 만들어 답을 찾는 과정을 강조하세요."}},
+      {"@type":"Question","name":"교사와의 상담은 얼마나 자주 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"주 1회 정도 정기적인 피드백을 주고받으면 학습 진행 상황을 정확히 파악할 수 있습니다."}},
+      {"@type":"Question","name":"아이에게 동기 부여가 필요할 때는?","acceptedAnswer":{"@type":"Answer","text":"작은 성취를 칭찬하고, 실생활과 연결된 예시를 들어 흥미를 유발하는 것이 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>재귀대명사와 대우명제 쉽게 이해</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">재귀대명사와 대우명제 쉽게 이해</h1>
+      <p class="article-meta-desc">학부모 눈높이로 재귀대명사와 대우명제 개념을 설명하고, 실생활 학습법과 교사 상담 팁을 제공해 아이의 수학 이해도를 높이는 방법을 소개합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">재귀대명사 처음 마주하기</a></li>
+        <li><a href="#s2">실제 적용에서 흔히 겪는 어려움</a></li>
+        <li><a href="#s3">대우명제 개념을 깊이 파헤치기</a></li>
+        <li><a href="#s4">교사와의 협업으로 얻은 실전 전략</a></li>
+        <li><a href="#s5">가정에서 활용 가능한 도구와 자료</a></li>
+        <li><a href="#s6">학습 효과를 높이는 일상 습관</a></li>
+        <li><a href="#s7">미래 학습을 위한 장기적 계획</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>재귀대명사 처음 마주하기</h2>
+      <p>우리 아이가 초등학교 5학년 수학 시간에 처음 마주한 재귀대명사는 생각보다 복잡했다. 학부모 입장에서 교과서를 펴보니 정의와 예시가 한 페이지에 빽빽하게 나열돼 있었다.
+
+그때 나는 교사와 직접 상담을 시도해 핵심 개념을 짚어보려 노력했다. 특히, 대명사가 문장 안에서 스스로를 가리키는 방식을 이해하려면 구체적인 사례가 필요했다.
+
+결국, 아이와 함께 문제를 풀며 직접 체험한 뒤 비로소 개념이 눈에 들어왔다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>실제 적용에서 흔히 겪는 어려움</h2>
+      <p>다음 단계로 넘어가며 아이는 문제 상황에서 재귀대명사를 찾는 데 혼란을 겪었다. 부모로서 나는 상황을 구체화하고 단계별로 설명하려 애썼다.
+
+그 과정에서 중요한 것은 아이 스스로 질문을 만들게 하는 것이었다. 질문을 통해 스스로 답을 찾게 하면 이해도가 크게 향상된다.
+
+아래 리스트는 우리 가족이 활용한 다섯 가지 실전 팁이다.</p>
+      <ul class="blog-list">
+        <li>예시 중심 학습</li>
+        <li>문제 재구성 연습</li>
+        <li>시각적 도표 활용</li>
+        <li>교사와의 정기 피드백</li>
+        <li>일일 복습 루틴</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>대우명제 개념을 깊이 파헤치기</h2>
+      <p>대우명제는 명제의 진리값을 뒤바꾸는 논리적 도구로, 수학적 사고에 큰 영향을 미친다. 우리 아이는 처음 접했을 때 그 추상성에 겁을 먹었지만, 일상적인 예시를 통해 점차 감을 잡았다.
+
+예를 들어, 모든 정수는 짝수이거나 홀수이다라는 명제를 부정하면 어떤 정수도 짝수도 홀수도 아니다라는 형태가 된다. 이런 변환 과정을 눈으로 직접 확인하면 논리 구조가 명확해진다.
+
+우리는 매일 저녁 식사 후 짧은 퀴즈 시간을 갖고, 대우명제 형태의 질문을 던졌다. 질문마다 아이가 스스로 답을 찾아가면서 논리적 사고가 자연스럽게 강화되었다. 이러한 습관은 시험 대비뿐 아니라 일상 대화에서도 논리적 표현을 돕는다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>교사와의 협업으로 얻은 실전 전략</h2>
+      <p>학교 담당 교사는 우리 아이에게 맞춤형 학습지를 제공해 주었다. 학습지는 재귀대명사와 대우명제 각각을 별도 섹션으로 나누어 단계적으로 진행하도록 설계돼 있었다.
+
+교사는 매주 수업 후 간단한 피드백을 주며, 아이가 놓친 부분을 바로 잡아 주었다. 그 덕분에 아이는 스스로 부족함을 인지하고 보완하는 능력을 키웠다.
+
+우리 가족은 교사의 조언을 바탕으로 집에서도 동일한 흐름을 유지해 학습 효율을 극대화했다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>가정에서 활용 가능한 도구와 자료</h2>
+      <p>재귀대명사와 대우명제 학습을 돕는 다양한 자료가 존재한다. 우리는 온라인 영상, 교과서 보충 자료, 그리고 직접 만든 플래시카드를 조합해 사용했다.
+
+특히, 시각적 도표는 개념을 한눈에 파악하게 해 주어 아이가 스스로 설명할 때 큰 도움이 된다. 플래시카드에는 핵심 정의와 예시를 짧게 정리해 언제든지 꺼내볼 수 있게 했다.
+
+아래 표는 우리 가족이 가장 많이 활용한 세 가지 자료 유형을 정리한 것이다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>학생</td><td>초등 고학년</td><td>재귀대명사 활용 예시</td></tr>
+        <tr><td>교사</td><td>수학 교사</td><td>수업 설계 팁</td></tr>
+        <tr><td>부모</td><td>학부모</td><td>집에서 복습 방법</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습 효과를 높이는 일상 습관</h2>
+      <p>꾸준한 복습은 개념 정착에 핵심적인 역할을 한다. 우리는 매일 저녁 15분씩 문제를 풀고, 그날 배운 내용을 간단히 요약했다.
+
+또한, 일상 대화 속에서 재귀대명사와 대우명제 관련 표현을 자연스럽게 삽입했다. 예를 들어, 네가 직접 확인한 결과가 맞는지 다시 한 번 살펴보자와 같은 문장을 쓰며 실생활 연결고리를 만들었다.
+
+이러한 작은 습관이 쌓여 아이의 자신감과 이해도가 눈에 띄게 향상되었다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>미래 학습을 위한 장기적 계획</h2>
+      <p>중학교 진학을 앞두고 우리는 더 심화된 논리와 증명을 대비하고 있다. 재귀대명사와 대우명제는 고등 수학에서도 중요한 기반이 되므로, 조기 학습이 큰 이점을 제공한다.
+
+우리는 학원 선택 시 논리적 사고를 강조하는 프로그램을 우선 고려하고, 정기적인 모의고사로 실력을 점검한다. 또한, 부모와 아이가 함께 목표를 설정하고 진행 상황을 공유하는 시간을 갖는다.
+
+이러한 체계적인 준비가 아이에게 장기적인 학습 동기를 부여하고, 향후 다양한 과목에서의 성공을 뒷받침한다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>재귀대명사는 언제부터 가르쳐야 하나요?</summary>
+            <p class="faq-answer">초등 고학년부터 실제 예시와 함께 단계적으로 도입하는 것이 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>대우명제는 수학 외에 활용할 수 있나요?</summary>
+            <p class="faq-answer">논리적 사고가 필요한 모든 분야, 예를 들어 과학 실험이나 토론에서도 유용합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>집에서 혼자 공부할 때 주의할 점은?</summary>
+            <p class="faq-answer">개념을 반복 확인하고, 스스로 질문을 만들어 답을 찾는 과정을 강조하세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>교사와의 상담은 얼마나 자주 해야 하나요?</summary>
+            <p class="faq-answer">주 1회 정도 정기적인 피드백을 주고받으면 학습 진행 상황을 정확히 파악할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 동기 부여가 필요할 때는?</summary>
+            <p class="faq-answer">작은 성취를 칭찬하고, 실생활과 연결된 예시를 들어 흥미를 유발하는 것이 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

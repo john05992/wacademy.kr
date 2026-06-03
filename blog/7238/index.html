@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글로벌 도전과 지수함수 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="부모가 글로벌 이슈와 지수함수 그래프를 이해하고 교육에 적용하는 실질적인 방법을 제시합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="글로벌 도전과 지수함수">
+  <meta property="og:description" content="부모가 글로벌 이슈와 지수함수 그래프를 이해하고 교육에 적용하는 실질적인 방법을 제시합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/7238/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="글로벌 도전과 지수함수">
+  <meta name="twitter:description" content="부모가 글로벌 이슈와 지수함수 그래프를 이해하고 교육에 적용하는 실질적인 방법을 제시합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/7238/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/7238/#article",
+    "headline": "글로벌 도전과 지수함수",
+    "description": "부모가 글로벌 이슈와 지수함수 그래프를 이해하고 교육에 적용하는 실질적인 방법을 제시합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-23",
+    "dateModified": "2026-01-23",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/7238/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/7238/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "글로벌 도전과 지수함수"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"지수함수 그래프를 아이에게 쉽게 설명하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"일상에서 급격히 늘어나는 현상을 예시로 들어 시각화하고, 성장률과 감소율을 비교해 보여주면 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"글로벌 도전과 교육을 연결하는 구체적 활동은?","acceptedAnswer":{"@type":"Answer","text":"기후 데이터 수집, 재활용 프로젝트, 국제 협력 온라인 토론 등 실천과 학습을 동시에 할 수 있는 활동을 선택합니다."}},
+      {"@type":"Question","name":"지수함수와 복리 계산의 차이는?","acceptedAnswer":{"@type":"Answer","text":"복리는 일정 기간마다 이자를 원금에 더해 재투자하는 형태로, 기본적으로 지수함수의 원리를 적용합니다."}},
+      {"@type":"Question","name":"아이에게 글로벌 문제 의식을 심어주려면?","acceptedAnswer":{"@type":"Answer","text":"뉴스 기사와 통계 자료를 함께 검토하고, 작은 실천 활동을 통해 직접 체험하게 하면 관심과 책임감이 생깁니다."}},
+      {"@type":"Question","name":"학교와 가정이 연계해 할 수 있는 교육 프로그램은?","acceptedAnswer":{"@type":"Answer","text":"환경 과학 프로젝트, 경제 모의 투자 게임, 데이터 분석 워크숍 등 교과와 연계된 체험형 프로그램을 마련합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>글로벌 도전과 지수함수</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">글로벌 도전과 지수함수</h1>
+      <p class="article-meta-desc">부모가 글로벌 이슈와 지수함수 그래프를 이해하고 교육에 적용하는 실질적인 방법을 제시합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">글로벌 도전이란 무엇인가</a></li>
+        <li><a href="#s2">지수함수 그래프 기본 개념</a></li>
+        <li><a href="#s3">지수함수와 기후변화 연결고리</a></li>
+        <li><a href="#s4">학생에게 지수함수 가르치는 팁</a></li>
+        <li><a href="#s5">지수함수 활용 사례표</a></li>
+        <li><a href="#s6">학부모가 할 수 있는 실천 방안</a></li>
+        <li><a href="#s7">미래 교육과 글로벌 역량</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>글로벌 도전이란 무엇인가</h2>
+      <p>우리 아이가 미래 사회에서 마주할 문제들을 생각하면 가슴이 뛰곤 합니다. 전 세계가 동시에 겪는 기후 위기, 자원 고갈, 디지털 격차는 교육 현장에도 직접적인 영향을 미칩니다. 그런 상황을 눈앞에 두고 부모로서 어떤 준비를 해야 할지 고민하게 됩니다.
+
+학교 교육과정이 점점 융합형으로 변하고 있다는 소식을 들을 때마다 기대와 불안이 교차합니다. 교과서에만 의존하지 않고 실생활과 연결된 학습을 시도하는 교사들의 노력이 눈에 띕니다. 이러한 변화는 우리 아이에게 비판적 사고와 문제 해결 능력을 길러줄 기회가 됩니다.
+
+가정에서도 지속 가능한 생활 습관을 함께 실천하면 교육 효과가 배가됩니다. 지역 사회 봉사 활동에 참여하면서 아이는 직접적인 경험을 쌓게 됩니다. 그러한 경험은 교실에서 배우는 이론과 연결돼 깊은 이해를 돕습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>지수함수 그래프 기본 개념</h2>
+      <p>지수함수 그래프를 처음 마주했을 때 곡선이 급격히 상승하는 모습에 놀라움을 금치 못했습니다. 수학 교과서에서는 기본 형태만 제시하지만 실제로는 다양한 변형이 존재합니다. 특히 성장률이 1보다 클 때와 작을 때 그래프가 어떻게 달라지는지 눈으로 확인하는 것이 핵심입니다.
+
+교실 수업에서 실생활 예시를 들면 아이들의 이해도가 크게 향상됩니다. 예를 들어, 바이러스 확산이나 인구 증가를 그래프로 나타내면 추세를 직관적으로 파악할 수 있습니다. 이러한 접근법은 추상적인 수식보다 구체적인 상황을 연결시켜 학습 동기를 부여합니다.</p>
+      <ul class="blog-list">
+        <li>기하급수적 상승</li>
+        <li>완만한 감소</li>
+        <li>기준점 이동</li>
+        <li>밑값 변환</li>
+        <li>대수적 변형</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>지수함수와 기후변화 연결고리</h2>
+      <p>기후변화는 지수함수와 같은 급격한 상승을 보여주는 대표적인 사례입니다. 대기 중 온실가스 농도가 매년 일정 비율로 증가하면 온도 상승도 비선형적으로 진행됩니다. 이러한 현상을 수학적으로 모델링하면 미래 기온 예측이 가능해집니다.
+
+우리 아이가 환경 교육을 받을 때 실제 데이터와 그래프를 함께 살펴보면 추세를 구체적으로 이해하게 됩니다. 교과 과정에 통합된 프로젝트 수업에서는 온실가스 배출량을 측정하고 지수 모델을 적용해 보는 활동을 진행했습니다. 그 결과 학생들은 수학적 개념과 환경 문제 사이의 연결고리를 스스로 발견했습니다.
+
+부모 입장에서 이러한 교육을 지원하려면 집에서도 간단한 실험이나 일기 쓰기를 통해 데이터를 수집할 수 있습니다. 가정에서 전기 사용량을 기록하고 그래프로 나타내면 절감 목표를 설정하는 데 도움이 됩니다. 이처럼 일상 속 작은 실천이 지수함수의 개념을 체험하게 해 주며, 장기적인 환경 인식 형성에도 기여합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>학생에게 지수함수 가르치는 팁</h2>
+      <p>학생에게 지수함수를 가르칠 때는 먼저 성장과 감소의 개념을 직관적으로 설명합니다. 시각 자료를 활용해 급격한 변화가 어떻게 나타나는지 보여주는 것이 효과적입니다. 다음 단계에서는 실제 사례를 적용해 함수를 직접 구성해 보게 합니다.
+
+학부모와 교사는 정기적인 피드백 시간을 마련해 아이가 어려워하는 부분을 즉시 파악할 수 있습니다. 또한 온라인 툴을 이용해 그래프를 실시간으로 조작하면 흥미를 높일 수 있습니다. 마지막으로 복습을 위한 간단한 퀴즈를 제공하면 개념 정착에 도움이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>지수함수 활용 사례표</h2>
+      <p>지수함수는 다양한 분야에서 실용적으로 활용됩니다. 그 중에서도 특히 경제, 의료, 환경 분야에서 눈에 띄는 효과를 보입니다. 각 분야별 적용 사례를 살펴보면 교육적 연계가 더욱 명확해집니다.
+
+우리 아이가 이러한 사례를 직접 탐구하면 학습 동기가 크게 상승합니다. 교실 수업 외에도 가정에서 간단한 실험을 통해 개념을 강화할 수 있습니다. 다음 표는 주요 분야와 적용 대상, 핵심 내용을 정리한 것입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>경제</td><td>투자 수익</td><td>복리 계산에 지수함수 적용</td></tr>
+        <tr><td>의료</td><td>바이러스 증식</td><td>감염률 모델링에 활용</td></tr>
+        <tr><td>환경</td><td>탄소 배출</td><td>배출량 추세 예측에 사용</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모가 할 수 있는 실천 방안</h2>
+      <p>부모가 직접 참여할 수 있는 실천 방안으로는 일상 속 데이터 수집이 있습니다. 가정에서 전기 사용량을 매일 기록하면 지수적 증가 패턴을 쉽게 파악할 수 있습니다. 또한 아이와 함께 재활용 활동을 계획하면 환경 보호와 수학 학습을 동시에 이룰 수 있습니다.
+
+지역 사회 행사에 참여해 기후 행동 프로젝트에 동참하는 것도 좋은 방법입니다. 학교와 연계된 과학 캠프에 아이를 보내면 전문적인 지도 아래 실험을 경험하게 됩니다. 이러한 경험은 아이의 자기주도 학습 능력을 키우는 데 큰 도움이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>미래 교육과 글로벌 역량</h2>
+      <p>미래 교육은 글로벌 역량과 수학적 사고를 동시에 강조합니다. 지수함수와 같은 고급 개념을 조기에 접하게 되면 국제적인 경쟁력도 향상됩니다. 특히 다문화 환경에서 협업 능력을 키우는 데 큰 역할을 합니다.
+
+우리 아이가 세계적인 문제를 이해하고 해결책을 모색하는 과정에 참여하면 자부심이 생깁니다. 다양한 온라인 플랫폼을 활용해 전 세계 학생들과 공동 프로젝트를 진행하는 것이 권장됩니다. 이러한 경험은 장기적으로 글로벌 리더로 성장하는 기반이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>지수함수 그래프를 아이에게 쉽게 설명하는 방법은?</summary>
+            <p class="faq-answer">일상에서 급격히 늘어나는 현상을 예시로 들어 시각화하고, 성장률과 감소율을 비교해 보여주면 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>글로벌 도전과 교육을 연결하는 구체적 활동은?</summary>
+            <p class="faq-answer">기후 데이터 수집, 재활용 프로젝트, 국제 협력 온라인 토론 등 실천과 학습을 동시에 할 수 있는 활동을 선택합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>지수함수와 복리 계산의 차이는?</summary>
+            <p class="faq-answer">복리는 일정 기간마다 이자를 원금에 더해 재투자하는 형태로, 기본적으로 지수함수의 원리를 적용합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 글로벌 문제 의식을 심어주려면?</summary>
+            <p class="faq-answer">뉴스 기사와 통계 자료를 함께 검토하고, 작은 실천 활동을 통해 직접 체험하게 하면 관심과 책임감이 생깁니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학교와 가정이 연계해 할 수 있는 교육 프로그램은?</summary>
+            <p class="faq-answer">환경 과학 프로젝트, 경제 모의 투자 게임, 데이터 분석 워크숍 등 교과와 연계된 체험형 프로그램을 마련합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

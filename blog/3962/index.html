@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실수 원인과 평균 구하기 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="실수 이유와 대책 기록, 평균 계산법까지 학부모에게 실질적 팁을 전합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="실수 원인과 평균 구하기">
+  <meta property="og:description" content="실수 이유와 대책 기록, 평균 계산법까지 학부모에게 실질적 팁을 전합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3962/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="실수 원인과 평균 구하기">
+  <meta name="twitter:description" content="실수 이유와 대책 기록, 평균 계산법까지 학부모에게 실질적 팁을 전합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3962/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3962/#article",
+    "headline": "실수 원인과 평균 구하기",
+    "description": "실수 이유와 대책 기록, 평균 계산법까지 학부모에게 실질적 팁을 전합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-23",
+    "dateModified": "2026-03-23",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3962/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3962/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "실수 원인과 평균 구하기"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"왜 실수에 이유와 대책을 적어야 하나요?","acceptedAnswer":{"@type":"Answer","text":"이유와 대책을 기록하면 같은 실수를 반복하지 않고 구체적인 개선 방안을 실행할 수 있어 학습 효율이 높아집니다."}},
+      {"@type":"Question","name":"평균을 구할 때 가장 흔히 하는 실수는?","acceptedAnswer":{"@type":"Answer","text":"점수 합을 구한 뒤 개수를 세지 않거나, 나눗셈 순서를 헷갈려 잘못된 평균을 내는 경우가 많습니다."}},
+      {"@type":"Question","name":"오답 노트를 어떻게 활용하면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"오답을 적고 왜 틀렸는지 분석한 뒤, 동일 유형 문제를 다시 풀어보는 복습 루틴을 만들면 효과적입니다."}},
+      {"@type":"Question","name":"학부모가 직접 평균을 가르칠 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"계산 과정마다 체크포인트를 두고, 표나 그림을 활용해 단계별로 시각화하면 이해도가 높아집니다."}},
+      {"@type":"Question","name":"실수 기록을 아이에게 강요하면 부담이 되지 않을까요?","acceptedAnswer":{"@type":"Answer","text":"아이와 함께 대화를 통해 스스로 기록하도록 유도하면 부담보다 학습 동기가 상승합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>실수 원인과 평균 구하기</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">실수 원인과 평균 구하기</h1>
+      <p class="article-meta-desc">실수 이유와 대책 기록, 평균 계산법까지 학부모에게 실질적 팁을 전합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">실수 기록에 이유와 대책을 반드시 적는 법</a></li>
+        <li><a href="#s2">실수 원인 분석과 맞춤 대책</a></li>
+        <li><a href="#s3">평균 구하기 단계별 표 활용</a></li>
+        <li><a href="#s4">교사와의 협력으로 실수 방지</a></li>
+        <li><a href="#s5">학습 앱으로 실수 관리</a></li>
+        <li><a href="#s6">성장 마인드셋으로 실수 극복</a></li>
+        <li><a href="#s7">학기 말 종합 리뷰와 정리</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>실수 기록에 이유와 대책을 반드시 적는 법</h2>
+      <p>우리 아이가 수학 시험에서 오답을 남겼을 때, 저는 먼저 왜 틀렸는지 파악하려고 합니다. 그 과정에서 아이의 사고 흐름을 직접 듣는 것이 큰 도움이 됩니다.
+
+그 다음 단계는 같은 실수를 반복하지 않도록 구체적인 대책을 세우는 것입니다. 예를 들어, 문제 유형별로 복습 계획을 짜는 것이 효과적입니다.
+
+또한, 오답 노트를 활용해 틀린 이유를 기록하고 주기적으로 검토합니다. 마지막으로, 교사와의 상담을 통해 추가적인 피드백을 얻는 것이 중요합니다.
+
+이러한 순환 과정을 꾸준히 반복하면 아이의 학습 습관이 점차 개선되는 것을 눈으로 확인할 수 있습니다. 그 결과, 시험 점수가 눈에 띄게 상승하고 자신감도 함께 자라납니다.</p>
+      <ul class="blog-list">
+        <li>오답노트 작성</li>
+        <li>오답 유형 정리</li>
+        <li>교재 문제 재도전</li>
+        <li>시간 제한 연습</li>
+        <li>피드백 요청</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>실수 원인 분석과 맞춤 대책</h2>
+      <p>최근에 우리 딸이 영어 독해에서 점수를 놓친 이유를 찾기 위해 최근 시험을 함께 검토했습니다. 그 결과, 어휘 이해 부족과 시간 관리 미숙이 주요 원인으로 드러났습니다.
+
+다음으로, 비슷한 유형의 문제를 별도로 연습하면서 약점을 보완하려고 계획했습니다. 특히, 하루 30분씩 어휘 카드를 활용해 새로운 단어를 익히는 방식을 도입했습니다.
+
+또한, 모의 시험 시 타이머를 설정해 실제 시험 환경에 익숙해지는 훈련을 진행했습니다. 이러한 전략을 꾸준히 적용한 뒤, 두 달 만에 독해 점수가 평균보다 크게 상승했습니다.
+
+그 과정에서 아이는 스스로 목표를 설정하고 성취감을 느끼며 학습 동기가 강화되었습니다. 결과적으로, 실수에 대한 이유와 대책을 명확히 기록하는 습관이 전반적인 학습 효율을 높이는 핵심임을 확인했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>평균 구하기 단계별 표 활용</h2>
+      <p>수학에서 평균을 구하는 기본 원리를 아이에게 가르칠 때, 실제 데이터를 활용하면 이해도가 크게 높아집니다. 예를 들어, 지난 주에 있었던 시험 점수를 가지고 평균을 계산해 보는 것이 좋은 시작입니다.
+
+먼저, 모든 점수를 더한 뒤 점수 개수로 나누는 과정을 단계별로 설명합니다. 그 다음, 계산 과정에서 발생할 수 있는 실수를 방지하기 위해 각각의 단계에 체크포인트를 두는 것이 중요합니다.
+
+이때, 표를 활용하면 각 단계의 구분, 대상, 내용이 한눈에 들어와 아이가 흐름을 놓치지 않게 됩니다. 표에 적힌 정보를 따라가며 직접 손으로 연산해 보면, 개념이 몸에 배어 자연스럽게 적용됩니다.
+
+마지막으로, 평균값을 활용해 학습 목표를 설정하고, 목표 달성 여부를 주기적으로 점검하는 루틴을 만들면 실력이 꾸준히 향상됩니다. 이러한 반복 학습은 아이가 스스로 수학적 사고력을 키우는 데 큰 도움이 됩니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>단계1</td><td>점수 합산</td><td>모든 점수를 더한다</td></tr>
+        <tr><td>단계2</td><td>점수 개수</td><td>시험 문제 수를 센다</td></tr>
+        <tr><td>단계3</td><td>평균값</td><td>합을 개수로 나눈다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>교사와의 협력으로 실수 방지</h2>
+      <p>우리 아들이 수학 과제에서 자주 실수를 보일 때, 교사와의 소통이 가장 먼저 떠오릅니다. 교사에게 아이의 현재 학습 상황과 어려움을 상세히 전달하면, 맞춤형 지도 방안을 함께 모색할 수 있습니다.
+
+특히, 교사가 제시한 피드백을 가정에서도 구체적인 행동 계획으로 전환하는 것이 핵심입니다. 예를 들어, 매일 10분씩 오답을 복습하고, 다음 날 새로운 문제를 풀어보는 루틴을 만들었습니다.
+
+이러한 협력적 접근은 아이가 스스로 학습 책임감을 갖게 하며, 교사와의 신뢰 관계도 강화됩니다. 결과적으로, 실수에 대한 원인 분석과 대책 실행이 일관되게 이루어져 성적 향상으로 이어졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학습 앱으로 실수 관리</h2>
+      <p>디지털 시대에 맞춰 학습 앱을 활용하면 아이의 실수 기록과 분석이 손쉽게 이루어집니다. 저는 매일 숙제 후에 아이가 사용한 앱에서 오답을 자동으로 추출해 이유를 적게 하는 방식을 도입했습니다.
+
+앱은 그래프와 통계를 제공해 어떤 유형에서 자주 틀리는지 시각적으로 보여주므로, 대책 수립이 보다 명확해집니다. 또한, 푸시 알림 기능을 통해 복습 시간을 놓치지 않게 관리할 수 있습니다.
+
+이러한 기술적 지원 덕분에 아이는 스스로 학습 루틴을 유지하고, 실수에 대한 책임감을 키우게 되었습니다. 결과적으로, 평균 점수가 꾸준히 상승하고 학습에 대한 흥미도 함께 높아졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>성장 마인드셋으로 실수 극복</h2>
+      <p>실수를 두려워하지 않고 배우는 기회로 삼는 자세는 아이의 성장에 큰 영향을 줍니다. 우리 가족은 실수마다 왜와 어떻게 개선할까를 함께 고민하는 시간을 정해두었습니다.
+
+그 과정에서 아이는 자신이 부족한 부분을 정확히 인식하고, 개선 방안을 스스로 찾아내는 능력이 길러집니다. 특히, 작은 성공 경험을 축적해 자신감을 쌓는 것이 장기적인 학습 동기 유지에 필수적입니다.
+
+이러한 마인드셋은 시험 성적뿐만 아니라 일상 생활에서도 문제 해결 능력을 향상시킵니다. 따라서, 실수에 대한 이유와 대책을 기록하는 습관은 전반적인 인성 발달에도 긍정적인 영향을 미칩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학기 말 종합 리뷰와 정리</h2>
+      <p>학기 말에 전체 성적을 돌아볼 때, 실수 기록을 기반으로 한 종합 리뷰가 큰 도움이 됩니다. 우리는 지난 6개월 동안의 오답 노트를 다시 살펴보며 주요 패턴을 파악했습니다.
+
+그 결과, 특정 개념에서 지속적인 오류가 나타나는 것을 발견하고, 다음 학기에 집중 학습 계획을 세웠습니다. 또한, 아이와 함께 목표 달성 여부를 점검하고 새로운 목표를 설정하는 시간을 가졌습니다.
+
+이러한 회고 과정은 아이가 스스로 학습 과정을 관리하는 능력을 키우게 하며, 미래 학습에도 긍정적인 영향을 미칩니다. 마지막으로, 실수에 대한 체계적인 분석과 대책 실행이 학습 효율을 극대화한다는 점을 다시 한 번 확인했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>왜 실수에 이유와 대책을 적어야 하나요?</summary>
+            <p class="faq-answer">이유와 대책을 기록하면 같은 실수를 반복하지 않고 구체적인 개선 방안을 실행할 수 있어 학습 효율이 높아집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>평균을 구할 때 가장 흔히 하는 실수는?</summary>
+            <p class="faq-answer">점수 합을 구한 뒤 개수를 세지 않거나, 나눗셈 순서를 헷갈려 잘못된 평균을 내는 경우가 많습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답 노트를 어떻게 활용하면 좋나요?</summary>
+            <p class="faq-answer">오답을 적고 왜 틀렸는지 분석한 뒤, 동일 유형 문제를 다시 풀어보는 복습 루틴을 만들면 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 직접 평균을 가르칠 때 주의할 점은?</summary>
+            <p class="faq-answer">계산 과정마다 체크포인트를 두고, 표나 그림을 활용해 단계별로 시각화하면 이해도가 높아집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>실수 기록을 아이에게 강요하면 부담이 되지 않을까요?</summary>
+            <p class="faq-answer">아이와 함께 대화를 통해 스스로 기록하도록 유도하면 부담보다 학습 동기가 상승합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

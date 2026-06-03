@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학습 데이터와 정보 판별법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="아이가 인터넷 정보를 올바르게 구분하고 틀린 문제의 소요 시간과 정답률을 분석하여 학습 효율을 높이는 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="학습 데이터와 정보 판별법">
+  <meta property="og:description" content="아이가 인터넷 정보를 올바르게 구분하고 틀린 문제의 소요 시간과 정답률을 분석하여 학습 효율을 높이는 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/467/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="학습 데이터와 정보 판별법">
+  <meta name="twitter:description" content="아이가 인터넷 정보를 올바르게 구분하고 틀린 문제의 소요 시간과 정답률을 분석하여 학습 효율을 높이는 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/467/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/467/#article",
+    "headline": "학습 데이터와 정보 판별법",
+    "description": "아이가 인터넷 정보를 올바르게 구분하고 틀린 문제의 소요 시간과 정답률을 분석하여 학습 효율을 높이는 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-05-26",
+    "dateModified": "2026-05-26",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/467/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/467/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "학습 데이터와 정보 판별법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"인터넷 정보 검색을 언제부터 가르쳐야 할까요?","acceptedAnswer":{"@type":"Answer","text":"초등학교 중학년이 되면 스스로 검색을 시작하므로 그 전부터 올바른 사이트를 안내하는 것이 좋습니다."}},
+      {"@type":"Question","name":"소요 시간 측정이 아이에게 스트레스를 주지 않을까요?","acceptedAnswer":{"@type":"Answer","text":"시험을 본다는 느낌보다는 자신의 페이스를 찾는 과정이라고 설명하면 스트레스를 줄일 수 있습니다."}},
+      {"@type":"Question","name":"정답률이 너무 낮을 때는 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"수준을 낮추어 기초 문제부터 다시 시작하여 자신감을 회복시켜주는 것이 우선입니다."}},
+      {"@type":"Question","name":"오답 분석에 하루에 얼마나 시간을 투자해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"과목에 따라 다르지만 스무 분 정도 집중하여 원인을 분석하는 것만으로도 효과가 큽니다."}},
+      {"@type":"Question","name":"검색 엔진의 신뢰성을 어떻게 판단하나요?","acceptedAnswer":{"@type":"Answer","text":"공공기관이나 교육관련 기관의 도메인인지 확인하고 여러 사이트를 비교해보는 것이 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>학습 데이터와 정보 판별법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">학습 데이터와 정보 판별법</h1>
+      <p class="article-meta-desc">아이가 인터넷 정보를 올바르게 구분하고 틀린 문제의 소요 시간과 정답률을 분석하여 학습 효율을 높이는 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">인터넷 정보의 신뢰성 확인하기</a></li>
+        <li><a href="#s2">올바른 정보 검색 방법 가르치기</a></li>
+        <li><a href="#s3">틀린 문제 분석의 중요성</a></li>
+        <li><a href="#s4">소요 시간을 통한 실력 진단</a></li>
+        <li><a href="#s5">정답률 비교를 통한 약점 보완</a></li>
+        <li><a href="#s6">효과적인 오답 분석 단계</a></li>
+        <li><a href="#s7">유형별 분석 결과 요약</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>인터넷 정보의 신뢰성 확인하기</h2>
+      <p>요즘 아이들은 숙제를 할 때나 공부를 할 때 무조건 인터넷 검색부터 먼저 하는 경우가 많습니다. 우리 아이만 그런 줄 알았는데 주변을 둘러보니 비슷한 학부모님들의 고민이 참 많더라고요. 블로그나 카페에 올라온 정보를 맹신하고서는 잘못된 지식을 그대로 외우는 안타까운 상황도 자주 목격했습니다. 그래서 저는 집에서 인터넷 자료를 찾을 때 반드시 출처를 확인하는 습관을 들이기로 마음먹었습니다. 검색 결과의 상단에 나오는 정보가 항상 정답은 아니라는 점을 꼭 알려주어야 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>올바른 정보 검색 방법 가르치기</h2>
+      <p>처음에는 아이가 귀찮아하여 투정을 부렸지만 신뢰할 수 있는 사이트인지 함께 확인하는 과정을 거쳤습니다. 교육부나 공식 기관 홈페이지에서 나온 자료인지 먼저 살피고 개인의 의견이 아닌 사실인지 구별하도록 도왔습니다. 이렇게 정보를 걸러내는 훈련을 하니 아이의 비판적 사고력도 조금씩 향상되는 기분이 들었습니다. 누군가의 주장을 그대로 받아들이지 않고 근거를 찾으려 노력하는 모습이 참 보기 좋았습니다. 앞으로도 계속해서 올바른 습관을 길러줘야겠다고 생각했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>틀린 문제 분석의 중요성</h2>
+      <p>단순히 틀린 문제를 확인하고 넘어가는 것만으로는 실력 향상에 큰 도움이 되지 않는다는 것을 깨달았습니다. 과거에는 답이 틀렸다는 사실에만 집중하여 아이를 닦달했던 것 같습니다. 하지만 문제를 틀린 이유가 무엇인지 정확하게 파악하는 것이 훨씬 중요하다는 사실을 나중에 알게 되었습니다. 특히 같은 문제를 풀더라도 아이가 얼마나 오랫동안 고민했는지 소요 시간을 체크해보는 것이 좋습니다. 시간이 오래 걸렸는데도 틀렸다면 개념 자체를 완전히 이해하지 못한 경우가 많습니다. 반대로 너무 짧은 시간 안에 찍어서 틀렸다면 문제를 제대로 읽지 않았거나 집중력이 떨어져 있을 가능성이 큽니다. 정답률 데이터와 함께 시간 분석을 병행하면 아이의 취약점을 더 정교하게 찾아낼 수 있었습니다. 이러한 분석을 바탕으로 맞춤형 학습 계획을 세우니 성적이 조금씩 올라가는 기쁨을 느꼈습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>소요 시간을 통한 실력 진단</h2>
+      <p>틀린 문제 풀이에 걸린 시간을 기록해두면 아이의 학습 상태를 한눈에 파악하는 데 유용합니다. 저는 아이가 공부할 때 옆에서 스톱워치를 들고 시간을 재기보다는 푸는 과정을 지켜보았습니다. 오랫동안 고민하다가 결국 포기하거나 오답을 적는 경우에는 해당 단원의 기초가 부족하다고 판단했습니다. 기초 문제집으로 돌아가서 개념을 다시 잡아주니 이후 비슷한 유형을 맞추는 비율이 눈에 띄게 높아졌습니다. 시간 부족으로 다 풀지 못해 틀린 문제들도 별도로 관리해주는 것이 필요하다는 생각이 들었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>정답률 비교를 통한 약점 보완</h2>
+      <p>과목이나 단원별로 정답률을 비교해보면 아이가 어디에서 가장 많은 점수를 잃는지 알 수 있습니다. 우리 아이의 경우 수학 문제는 잘 맞히는데 국어 비문학 독서 파트에서 정답률이 현저히 낮았습니다. 단순히 공부를 안 해서 틀리는 게 아니라 긴 지문을 읽고 집중력을 유지하는 데 어려움이 있었던 것입니다. 그래서 매일 짧은 지문부터 시작하여 점차 긴 글을 읽는 훈련을 시켰습니다. 정답률이라는 객관적인 수치가 있으니 아이도 자신의 부족한 부분을 인정하고 노력하는 모습을 보였습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>효과적인 오답 분석 단계</h2>
+      <p>아이와 함께 오답 노트를 정리하며 시행착오를 겪었지만 몇 가지 유용한 단계를 정리했습니다. 이 과정을 통해 아이가 스스로 공부하는 습관을 기를 수 있었습니다.</p>
+      <ul class="blog-list">
+        <li>틀린 문제의 원인을 시간 부족, 개념 부재 등으로 분류하기</li>
+        <li>정답률이 낮은 단원의 기초 개념 교과서로 다시 살펴보기</li>
+        <li>소요 시간이 길었던 문제는 유사한 유형을 추가로 연습하기</li>
+        <li>일주일에 한 번 틀렸던 문제를 다시 풀어서 완벽히 숙지하기</li>
+        <li>인터넷에 나온 풀이법 여러 개를 비교하여 최선의 방법 찾기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>유형별 분석 결과 요약</h2>
+      <p>다양한 유형의 문제를 분석한 결과를 표로 정리하면 아이의 학업 성취도 관리에 큰 도움이 됩니다. 저는 이 데이터를 바탕으로 주말마다 아이에게 맞는 문제를 직접 선별해주고 있습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>시간 부족 오답</td><td>전체 과목</td><td>문제 풀이 속도를 높이기 위해 집중력 훈련과 타이머를 활용한 연습 실시</td></tr>
+        <tr><td>장시간 투자 오답</td><td>수학 과학</td><td>해당 단원의 기초 개념이 부족하므로 교과서와 기본 문제로 학습 재구성</td></tr>
+        <tr><td>실수형 오답</td><td>국어 영어</td><td>문제의 지문을 꼼꼼히 읽지 않아 발생하므로 밑줄 긋기 습관 지도</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>인터넷 정보 검색을 언제부터 가르쳐야 할까요?</summary>
+            <p class="faq-answer">초등학교 중학년이 되면 스스로 검색을 시작하므로 그 전부터 올바른 사이트를 안내하는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>소요 시간 측정이 아이에게 스트레스를 주지 않을까요?</summary>
+            <p class="faq-answer">시험을 본다는 느낌보다는 자신의 페이스를 찾는 과정이라고 설명하면 스트레스를 줄일 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>정답률이 너무 낮을 때는 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">수준을 낮추어 기초 문제부터 다시 시작하여 자신감을 회복시켜주는 것이 우선입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답 분석에 하루에 얼마나 시간을 투자해야 하나요?</summary>
+            <p class="faq-answer">과목에 따라 다르지만 스무 분 정도 집중하여 원인을 분석하는 것만으로도 효과가 큽니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>검색 엔진의 신뢰성을 어떻게 판단하나요?</summary>
+            <p class="faq-answer">공공기관이나 교육관련 기관의 도메인인지 확인하고 여러 사이트를 비교해보는 것이 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교과서와 함수로 배우는 게임 학습 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="교과서 지문 활용 문법 구슬치기와 함수 최대 최소 찾기 방법을 부모 시각에서 실천하고 후기까지 제공하는 실용 가이드">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="교과서와 함수로 배우는 게임 학습">
+  <meta property="og:description" content="교과서 지문 활용 문법 구슬치기와 함수 최대 최소 찾기 방법을 부모 시각에서 실천하고 후기까지 제공하는 실용 가이드">
+  <meta property="og:url" content="https://wacademy.kr/blog/10662/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="교과서와 함수로 배우는 게임 학습">
+  <meta name="twitter:description" content="교과서 지문 활용 문법 구슬치기와 함수 최대 최소 찾기 방법을 부모 시각에서 실천하고 후기까지 제공하는 실용 가이드">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/10662/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/10662/#article",
+    "headline": "교과서와 함수로 배우는 게임 학습",
+    "description": "교과서 지문 활용 문법 구슬치기와 함수 최대 최소 찾기 방법을 부모 시각에서 실천하고 후기까지 제공하는 실용 가이드",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-21",
+    "dateModified": "2025-11-21",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/10662/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/10662/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "교과서와 함수로 배우는 게임 학습"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"구슬치기 게임을 시작하려면 어떤 준비물이 필요하나요?","acceptedAnswer":{"@type":"Answer","text":"교과서 지문, 색깔 구슬, 작은 통, 점수 기록지만 있으면 충분합니다."}},
+      {"@type":"Question","name":"함수 최대최소 찾기 학습에 적합한 연령대는 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"초등 고학년부터 중학생까지 단계별 난이도로 적용할 수 있습니다."}},
+      {"@type":"Question","name":"게임을 진행할 때 아이가 지루해하지 않게 하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"점수와 시간 제한을 두고 적절히 보상을 추가하면 흥미를 유지할 수 있습니다."}},
+      {"@type":"Question","name":"부모가 피드백을 줄 때 주의할 점은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"비판보다는 구체적인 칭찬과 개선 방향을 제시해 아이가 스스로 성장하도록 돕습니다."}},
+      {"@type":"Question","name":"두 활동을 병행하면 학습 효과가 떨어질까 걱정됩니다.","acceptedAnswer":{"@type":"Answer","text":"적절히 시간 배분하고 목표를 명확히 하면 오히려 시너지 효과가 나타납니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>교과서와 함수로 배우는 게임 학습</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">교과서와 함수로 배우는 게임 학습</h1>
+      <p class="article-meta-desc">교과서 지문 활용 문법 구슬치기와 함수 최대 최소 찾기 방법을 부모 시각에서 실천하고 후기까지 제공하는 실용 가이드</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">문법 구슬치기 게임 개요</a></li>
+        <li><a href="#s2">실제 적용 단계와 체크리스트</a></li>
+        <li><a href="#s3">구슬치기의 학습 효과</a></li>
+        <li><a href="#s4">함수 최대최소 찾기 실전 적용</a></li>
+        <li><a href="#s5">언어와 수학 통합 학습</a></li>
+        <li><a href="#s6">부모가 직접 체험한 변화</a></li>
+        <li><a href="#s7">앞으로의 학습 로드맵</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>문법 구슬치기 게임 개요</h2>
+      <p>우리 아이는 교과서에 실린 짧은 지문을 읽고 바로 문법 구슬을 꺼내는 놀이에 눈이 반짝였습니다.
+
+다른 가정에서는 같은 활동을 통해 아이들의 어휘력이 자연스럽게 늘어나는 모습을 발견했습니다.
+
+전문가는 이런 실전형 게임이 학습동기를 높이고 장기기억을 강화한다는 연구 결과를 제시합니다.
+
+교사들은 수업 시간에 구슬치기 규칙을 적용해 학생들의 참여도를 즉각적으로 끌어올렸다고 말합니다.
+
+학부모들은 집에서도 간단히 준비할 수 있어 경제적인 교육 도구로 평가하고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>실제 적용 단계와 체크리스트</h2>
+      <p>우리 집에서는 교과서 페이지를 잘라 구슬통을 만들고 색깔별로 구슬을 배치했습니다.
+
+다음으로 아이에게 지문을 읽게 한 뒤 핵심 문법 요소를 찾아 구슬에 매칭하도록 지도했습니다.
+
+또한 점수를 매겨 경쟁을 유도하고, 틀린 부분은 즉시 피드백으로 보완했습니다.
+
+그 결과 아이는 스스로 규칙을 만들며 창의적 사고와 문제 해결 능력을 동시에 키웠습니다.
+
+마지막으로 매주 진행 상황을 기록해 부모와 교사가 함께 검토하는 루틴을 만들었습니다.</p>
+      <ul class="blog-list">
+        <li>지문 선택</li>
+        <li>구슬 만들기</li>
+        <li>규칙 설명</li>
+        <li>점수 부여</li>
+        <li>피드백 제공</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>구슬치기의 학습 효과</h2>
+      <p>첫째로 구슬치기 활동은 교과서 지문을 실제 상황에 연결시켜 독해력을 자연스럽게 높이며, 아이는 문맥 속에서 문법을 체득하게 됩니다.
+
+둘째로 게임 형식은 점수와 시간 제한을 도입해 학습에 긴장감을 부여하고, 경쟁심이 동기부여로 작용해 지속적인 연습을 가능하게 합니다.
+
+셋째로 색깔별 구슬을 활용하면 시각적 기억이 강화되어 복잡한 문법 규칙도 쉽게 떠올릴 수 있게 돕습니다.
+
+넷째로 부모가 함께 참여하면 대화가 자연스럽게 늘어나며, 가정 내 언어 환경이 풍부해져 아이의 표현력이 크게 향상됩니다.
+
+마지막으로 정기적인 피드백과 기록은 학습 진도를 명확히 파악하게 해 주어, 필요에 따라 난이도를 조절하거나 추가 학습 자료를 제공할 수 있게 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>함수 최대최소 찾기 실전 적용</h2>
+      <p>우리 아이는 수학 시간에 함수 그래프를 그리고 최고점과 최저점을 찾는 과정을 집에서 연습했습니다.
+
+그는 좌표값을 직접 계산하며 최소값과 최대값을 구하는 논리를 몸에 익혔습니다.
+
+그녀는 교과서 예제와 연계해 실제 문제에 적용해 보는 것이 이해를 돕는다고 평가했습니다.
+
+우리는 함수의 극값을 찾는 방법을 단계별로 정리한 표를 활용해 학습 효율을 높였습니다.
+
+그때부터 아이는 스스로 문제를 설정하고 풀이 과정을 기록하는 습관을 길러 성적 향상을 체감했습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>최대값 찾기</td><td>이차함수</td><td>꼭짓점 공식을 이용해 x값을 구하고 y값을 계산한다</td></tr>
+        <tr><td>최소값 찾기</td><td>절댓값 함수</td><td>구간별 정의를 확인하고 최소값을 판별한다</td></tr>
+        <tr><td>응용문제</td><td>실생활 사례</td><td>비용과 수익 그래프에서 최적점을 분석한다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>언어와 수학 통합 학습</h2>
+      <p>가정에서는 구슬치기와 함수 탐구를 동시에 진행해 두 과목의 사고력을 교차시킬 수 있었습니다.
+
+학교에서는 교과 간 연계 수업으로 문법 규칙을 함수의 조건과 연결해 설명함으로써 이해도를 높였습니다.
+
+전문가들은 언어와 수학의 공통된 논리 구조를 강조하며, 이런 통합 학습이 창의적 문제 해결에 기여한다고 말합니다.
+
+학생들은 두 영역을 오가며 새로운 관점을 발견하고, 자신감 있게 답안을 작성하는 모습을 보여줍니다.
+
+우리 모두는 이러한 경험이 장기적으로 학습 지속성을 확보하고 대학 진학 준비에도 큰 도움이 된다고 확신합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모가 직접 체험한 변화</h2>
+      <p>첫 번째로 우리 아이는 구슬치기 게임을 통해 문법 오류를 스스로 교정하는 능력이 눈에 띄게 향상되었습니다.
+
+두 번째로 함수 최대 최소 찾기 연습 후에는 수학 시험에서 계산 실수가 크게 감소했습니다.
+
+세 번째로 두 활동을 병행하면서 학습 시간 관리 능력이 자연스럽게 발달했습니다.
+
+네 번째로 부모와의 대화가 늘어나면서 아이의 학습 동기가 외부 보상보다 내적 만족으로 전환되었습니다.
+
+다섯 번째로 전체적인 성적 상승과 함께 자신감이 크게 증가해 스스로 목표를 설정하고 도전하는 모습을 보였습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>앞으로의 학습 로드맵</h2>
+      <p>앞으로도 교과서 지문을 활용한 구슬치기와 함수 탐구를 꾸준히 결합하면 학습 효과가 지속될 것입니다.
+
+다음 학기에는 난이도를 단계별로 높여 고차원 문제 해결 능력을 키우는 것이 목표입니다.
+
+장기적으로 이러한 통합 학습은 논리적 사고와 언어 표현력을 동시에 강화해 전반적인 학업 역량을 높입니다.
+
+결론적으로 부모가 직접 참여하고 피드백을 제공하는 과정이 아이의 성장에 핵심적인 역할을 합니다.
+
+마지막으로 다른 학부모님들께도 이 방법을 시도해 보시길 권하며, 서로의 경험을 공유해 더욱 풍부한 교육 환경을 만들 수 있길 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>구슬치기 게임을 시작하려면 어떤 준비물이 필요하나요?</summary>
+            <p class="faq-answer">교과서 지문, 색깔 구슬, 작은 통, 점수 기록지만 있으면 충분합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>함수 최대최소 찾기 학습에 적합한 연령대는 언제인가요?</summary>
+            <p class="faq-answer">초등 고학년부터 중학생까지 단계별 난이도로 적용할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>게임을 진행할 때 아이가 지루해하지 않게 하는 방법은?</summary>
+            <p class="faq-answer">점수와 시간 제한을 두고 적절히 보상을 추가하면 흥미를 유지할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 피드백을 줄 때 주의할 점은 무엇인가요?</summary>
+            <p class="faq-answer">비판보다는 구체적인 칭찬과 개선 방향을 제시해 아이가 스스로 성장하도록 돕습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>두 활동을 병행하면 학습 효과가 떨어질까 걱정됩니다.</summary>
+            <p class="faq-answer">적절히 시간 배분하고 목표를 명확히 하면 오히려 시너지 효과가 나타납니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

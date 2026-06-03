@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도함수 기본과 응용 학습법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="도함수 구하는 원리를 학부모가 알아보고 실생활 문제 상황을 만들어 아이와 함께 해결하는 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="도함수 기본과 응용 학습법">
+  <meta property="og:description" content="도함수 구하는 원리를 학부모가 알아보고 실생활 문제 상황을 만들어 아이와 함께 해결하는 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3351/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="도함수 기본과 응용 학습법">
+  <meta name="twitter:description" content="도함수 구하는 원리를 학부모가 알아보고 실생활 문제 상황을 만들어 아이와 함께 해결하는 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3351/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3351/#article",
+    "headline": "도함수 기본과 응용 학습법",
+    "description": "도함수 구하는 원리를 학부모가 알아보고 실생활 문제 상황을 만들어 아이와 함께 해결하는 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-04-03",
+    "dateModified": "2026-04-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3351/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3351/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "도함수 기본과 응용 학습법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"도함수가 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"함수의 그래프상에서 특정 점에서의 순간 변화율, 즉 접선의 기울기를 나타내는 함수입니다."}},
+      {"@type":"Question","name":"어려워하는 아이를 어떻게 도와주나요?","acceptedAnswer":{"@type":"Answer","text":"실생활 예시를 들어 설명하고 그래프를 함께 그려보며 시각적으로 이해를 돕는 것이 좋습니다."}},
+      {"@type":"Question","name":"어떤 문제부터 시작해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"기본적인 다항함수의 미분부터 시작하여 점차 응용 문제로 넘어가는 것이 효과적입니다."}},
+      {"@type":"Question","name":"공식을 외우는 것이 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"공식 외우기도 중요하지만 그 공식이 유도되는 원리를 이해하는 것이 더 중요합니다."}},
+      {"@type":"Question","name":"학습 시간은 얼마나 할당하나요?","acceptedAnswer":{"@type":"Answer","text":"아이의 집중도에 맞춰 하루에 이십 분에서 삼십 분 정도 꾸준히 하는 것이 가장 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>도함수 기본과 응용 학습법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">도함수 기본과 응용 학습법</h1>
+      <p class="article-meta-desc">도함수 구하는 원리를 학부모가 알아보고 실생활 문제 상황을 만들어 아이와 함께 해결하는 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">도함수의 기본 원리 알기</a></li>
+        <li><a href="#s2">미분 공식을 이용한 풀이</a></li>
+        <li><a href="#s3">실제 문제 상황 만들어보기</a></li>
+        <li><a href="#s4">문제 해결 과정과 해답</a></li>
+        <li><a href="#s5">효과적인 학습 가이드</a></li>
+        <li><a href="#s6">주의해야 할 실수 모음</a></li>
+        <li><a href="#s7">도함수 학습 후기 및 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>도함수의 기본 원리 알기</h2>
+      <p>아이가 학교에서 미분을 배운다고 하여 어떤 내용인지 직접 찾아보았습니다. 도함수는 결국 그래프의 순간적인 변화를 나타내는 기울기 개념이었군요. 
+
+ 복잡한 수식 속에 숨어 있는 이 원리를 알고 나니 아이에게 설명하기가 훨씬 수월했습니다. 저는 직접 계산 과정을 따라가며 자녀가 어려워하는 부분이 무엇인지 파악하려 노력했습니다. 
+
+ 기본 개념을 확실히 잡는 것이 무엇보다 중요하다는 것을 부모의 입장에서 절실히 느꼈습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>미분 공식을 이용한 풀이</h2>
+      <p>미분 계수를 이용하여 함수식을 변형하는 과정이 필수적입니다. 먼저 함수에 아주 작은 변화량을 더하고 원래 값과의 차이를 변화량으로 나눠줍니다. 
+
+ 그다음 변화량을 0으로 수렴시켰을 때의 극한 값을 구하면 도함수가 도출됩니다. 처음에는 식이 낯설게 느껴질 수 있으나 몇 가지 문제를 직접 풀어보면 규칙이 보입니다. 
+
+ 저는 아이와 함께 곱셈 공식을 복습하며 지수 법칙을 적용해 보는 시간을 가졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실제 문제 상황 만들어보기</h2>
+      <p>수학 공식을 단순히 외우는 것보다 실제 상황에 적용해 보는 것이 아이에게 큰 도움이 되었습니다. 우리는 자동차가 출발한 후 시간이 지남에 따라 속도가 어떻게 변하는지를 함수로 만들어 보았습니다. 
+
+ 거리 함수를 시간에 대해 미분하면 특정 순간의 속도를 구할 수 있다는 사실이 흥미로웠습니다. 아이는 자신이 만든 문제를 통해 미분이 왜 필요한지를 자연스럽게 이해할 수 있었습니다. 
+
+ 이러한 과정을 거치니 단순한 문제 풀이가 아닌 실생활과 연결된 학습이 가능해졌습니다. 도함수라는 어려운 개념도 응용 문제를 해결하며 재미를 찾는 모습이 보기 좋았습니다. 
+
+ 직접 문제를 만들고 풀어보는 활동은 수학적 사고력을 키우는 데 최고의 방법입니다. 이 경험을 통해 아이는 학습에 대한 자신감을 갖게 되었고 저는 육아의 성취감을 느꼈습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>문제 해결 과정과 해답</h2>
+      <p>우리가 설정한 문제는 공이 높이 던져진 후 시간에 따라 높이가 변하는 상황이었습니다. 이를 풀기 위해 높이 함수를 시간에 대해 미분하여 속도 함수를 먼저 만들어야 했습니다. 
+
+ 아이는 처음에는 함수 변형에 어려움을 겪었지만 차근차근 식을 전개해 나갔습니다. 완성된 속도 함수에 특정 시간을 대입하자 놀라운 듯 정답을 확인했습니다. 
+
+ 직접 만든 상황을 수학적으로 해결하니 아이의 눈빛이 달라지는 것을 볼 수 있었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>효과적인 학습 가이드</h2>
+      <p>자녀가 수학을 어려워할 때는 답만 알려주는 것보다 과정을 이해하도록 돕는 것이 중요합니다. 도함수 개념은 그래프를 그려보면 시각적으로 명확해집니다. 
+
+ 저는 아이와 함께 함수 그래프를 그리고 접선을 그어보며 기울기의 변화를 관찰했습니다. 시각 자료는 추상적인 수학을 구체적인 사고로 전환하는 데 큰 도움이 됩니다. 
+
+ 인내심을 가지고 기다려주면 아이 스스로 답을 찾아내는 즐거움을 느낄 것입니다.</p>
+      <ul class="blog-list">
+        <li>함수 그래프 그리기</li>
+        <li>접선의 기울기 확인</li>
+        <li>일상 속 변화량 찾기</li>
+        <li>함수 변형 연습</li>
+        <li>서로의 문제 풀어보기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>주의해야 할 실수 모음</h2>
+      <p>문제를 풀다 보면 아이들이 자주 범하는 오류들이 존재합니다. 이를 미리 파악하고 예방하면 학습 효율을 높일 수 있습니다. 
+
+ 특히 미분 공식을 적용할 때 지수 계산 실수가 가장 빈번하게 발생합니다. 저는 아이가 문제를 틀렸을 때 왜 틀렸는지 함께 분석해 주었습니다. 
+
+ 실수를 배움의 기회로 삼는다면 도함수 문제는 더 이상 어렵지 않습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>공식 오류</td><td>지수 법칙</td><td>거듭제곱 미분 시 지수를 그대로 사용함</td></tr>
+        <tr><td>계산 실수</td><td>괄호 처리</td><td>합의 미분 법칙 적용 시 부호를 잘못 전개함</td></tr>
+        <tr><td>개념 오해</td><td>기울기 의미</td><td>평균변화율과 순간변화율을 혼동하여 품</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>도함수 학습 후기 및 조언</h2>
+      <p>도함수를 공부하면서 아이의 사고력이 한 단계 성장하는 것을 목격했습니다. 처음에는 막막해했지만 기본 원리를 잡고 나서 문제 풀이 속도가 빨라졌습니다. 
+
+ 이 경험을 통해 저는 부모의 관심과 적절한 가이드가 얼마나 중요한지 다시금 깨달았습니다. 미분은 고등 수학의 시작인 만큼 확실하게 마스터하는 것이 좋습니다. 
+
+ 여러분도 자녀와 함께 이 흥미로운 수학의 세계로 들어가 보시길 추천합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>도함수가 무엇인가요?</summary>
+            <p class="faq-answer">함수의 그래프상에서 특정 점에서의 순간 변화율, 즉 접선의 기울기를 나타내는 함수입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어려워하는 아이를 어떻게 도와주나요?</summary>
+            <p class="faq-answer">실생활 예시를 들어 설명하고 그래프를 함께 그려보며 시각적으로 이해를 돕는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어떤 문제부터 시작해야 하나요?</summary>
+            <p class="faq-answer">기본적인 다항함수의 미분부터 시작하여 점차 응용 문제로 넘어가는 것이 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>공식을 외우는 것이 중요한가요?</summary>
+            <p class="faq-answer">공식 외우기도 중요하지만 그 공식이 유도되는 원리를 이해하는 것이 더 중요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 시간은 얼마나 할당하나요?</summary>
+            <p class="faq-answer">아이의 집중도에 맞춰 하루에 이십 분에서 삼십 분 정도 꾸준히 하는 것이 가장 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

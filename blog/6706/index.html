@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>히스토그램과 재배열 게임 학습법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="히스토그램 그리기와 교과서 문장 재배열 게임으로 초등 통계와 독해력을 잡는 실질적인 솔루션을 정리했습니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="히스토그램과 재배열 게임 학습법">
+  <meta property="og:description" content="히스토그램 그리기와 교과서 문장 재배열 게임으로 초등 통계와 독해력을 잡는 실질적인 솔루션을 정리했습니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/6706/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="히스토그램과 재배열 게임 학습법">
+  <meta name="twitter:description" content="히스토그램 그리기와 교과서 문장 재배열 게임으로 초등 통계와 독해력을 잡는 실질적인 솔루션을 정리했습니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/6706/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/6706/#article",
+    "headline": "히스토그램과 재배열 게임 학습법",
+    "description": "히스토그램 그리기와 교과서 문장 재배열 게임으로 초등 통계와 독해력을 잡는 실질적인 솔루션을 정리했습니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-01",
+    "dateModified": "2026-02-01",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/6706/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/6706/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "히스토그램과 재배열 게임 학습법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"초등 저학년도 히스토그램을 이해하나요?","acceptedAnswer":{"@type":"Answer","text":"기본적인 막대그래프 개념만 있다면 충분히 접근 가능합니다."}},
+      {"@type":"Question","name":"문장 재배열에 어떤 교과서를 쓰나요?","acceptedAnswer":{"@type":"Answer","text":"국어 읽기 교과서나 아이가 좋아하는 동화책 지문도 좋습니다."}},
+      {"@type":"Question","name":"준비물이 복잡한가요?","acceptedAnswer":{"@type":"Answer","text":"가위, 풀, 색연필 정도면 간단하게 준비할 수 있습니다."}},
+      {"@type":"Question","name":"하루에 얼마나 시간을 투자하나요?","acceptedAnswer":{"@type":"Answer","text":"스무 분 정도 짧게 집중하는 것이 효과적입니다."}},
+      {"@type":"Question","name":"틀렸을 때 어떻게 지도하나요?","acceptedAnswer":{"@type":"Answer","text":"왜 그렇게 생각했는지 물어보고 함께 순서를 다시 맞춰봅니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>히스토그램과 재배열 게임 학습법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">히스토그램과 재배열 게임 학습법</h1>
+      <p class="article-meta-desc">히스토그램 그리기와 교과서 문장 재배열 게임으로 초등 통계와 독해력을 잡는 실질적인 솔루션을 정리했습니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">히스토그램 그리기의 중요성</a></li>
+        <li><a href="#s2">히스토그램 그리기 실전 꿀팁</a></li>
+        <li><a href="#s3">문장 재배열 게임의 효과</a></li>
+        <li><a href="#s4">재배열 게임 진행 방법</a></li>
+        <li><a href="#s5">두 학습법이 주는 큰 이점</a></li>
+        <li><a href="#s6">학습 도구별 특징 비교</a></li>
+        <li><a href="#s7">학부모로서 드리는 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>히스토그램 그리기의 중요성</h2>
+      <p>우리 아이들은 학교 통계 단원을 어려워하는 경향이 큽니다. 특히 히스토그램 그리기는 막대 그래프와 헷갈려서 난항을 겪곤 하죠. 이 개념을 제대로 잡아주려면 도수분포표를 꼼꼼히 살피는 과정이 필수적입니다. 제가 아이와 공부하며 느낀 점은 시각적인 자료가 얼마나 중요한지 깨닫게 된 계기였습니다. 단순히 그림을 그리는 것이 아니라 데이터의 분포를 읽는 힘을 길러줘야 합니다. 차근차근 단계를 밟아가는 것이 정답입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>히스토그램 그리기 실전 꿀팁</h2>
+      <p>실제로 히스토그램을 그릴 때는 계급의 간격을 먼저 확인하는 것이 좋습니다. 막대 그래프와 달리 막대 사이에 간격이 없다는 점을 꼭 짚어줘야 하죠. 우리 집 꼬맹이도 처음에는 이 부분에서 자주 실수를 했습니다. 가로축과 세로축에 무엇을 적어야 할지 명확히 알려주면 훨씬 이해가 빠릅니다. 서로 다른 색깔로 칠하게 하면 흥미를 유발하기도 합니다. 반복 연습만큼 좋은 방법은 없습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>문장 재배열 게임의 효과</h2>
+      <p>국어 공부에서 문장 간의 연결 관계를 파악하는 능력은 무엇보다 중요합니다. 교과서 지문 속 문장들로 문장 재배열 게임을 진행해 보면 효과가 매우 큽니다. 아이가 직접 문장을 오리고 자신의 논리대로 다시 맞춰보는 활동은 퍼즐 맞추기처럼 재미있습니다. 제 자녀는 이 놀이를 통해 글의 흐름을 훨씬 잘 읽게 되었죠. 처음에는 순서가 엉망이었지만 점차 인과 관계를 파악하는 속도가 빨라졌습니다. 쓰기 능력 향상에도 도움이 되는 놀라운 방법입니다. 집에서 쉽게 따라 할 수 있어 부담도 없습니다. 지루한 공부가 즐거운 놀이로 변하는 순간을 목격할 수 있습니다. 논리적 사고력이 저절로 길러지는 과정이 참 인상적이었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>재배열 게임 진행 방법</h2>
+      <p>먼저 교과서에서 내용이 흥미롭고 길이가 적당한 지문을 골라보세요. 문장 단위로 잘라내어 섞은 뒤 아이에게 원래 순서대로 나열해 달라고 합니다. 단순히 순서를 맞추는 것을 넘어 왜 그렇게 배치했는지 이유를 물어보는 단계가 필요합니다. 우리 집 꼬마는 주제문을 먼저 찾고 뒷받침 문장을 배치하는 전략을 세웠습니다. 서로 다른 순서로 배치해보며 더 자연스러운 흐름을 찾는 과정도 좋습니다. 이야기를 완성하는 듯한 성취감을 느낄 수 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>두 학습법이 주는 큰 이점</h2>
+      <p>위에서 소개한 두 가지 학습법은 아이들에게 다양한 긍정적인 영향을 미칩니다. 단순히 문제를 풀이하는 과정을 넘어 스스로 생각하는 힘을 키워주기 때문입니다. 많은 학부모님들이 이 방법을 시도한 후 아이의 태도 변화에 놀라곤 합니다.</p>
+      <ul class="blog-list">
+        <li>데이터 분석 능력 향상</li>
+        <li>논리적 사고력 강화</li>
+        <li>국어 독해력 증진</li>
+        <li>학습 흥미 유발</li>
+        <li>자기주도적 학습 습관 형성</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습 도구별 특징 비교</h2>
+      <p>히스토그램 활동과 문장 재배열 놀이는 각각 다른 영역의 사고력을 요구합니다. 수리적 자료를 다루는 능력과 언어적 흐름을 파악하는 능력은 상호 보완적이죠. 아이의 성향에 맞춰 집중적으로 연습해 보는 것을 추천합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>히스토그램</td><td>수리 영역</td><td>데이터의 분포를 시각화하고 분석하는 능력을 기른다</td></tr>
+        <tr><td>재배열 게임</td><td>언어 영역</td><td>문장 간의 연결 관계를 이해하고 논리를 구성한다</td></tr>
+        <tr><td>공통 효과</td><td>통합 사고</td><td>자료를 해석하고 조직하여 새로운 결론을 도출한다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모로서 드리는 조언</h2>
+      <p>무엇보다 중요한 것은 아이가 스트레스를 받지 않고 즐겁게 참여하는 것입니다. 저는 너무 학위적이게 접근하다가 아이가 지루해하는 것을 본 적이 있습니다. 게임이나 놀이 형식으로 접근하면 훨씬 몰입도가 높아지더군요. 조금씩 꾸준히 시도하다 보면 아이의 실력이 부쩍 느는 것을 느끼실 수 있을 겁니다. 학부모님께서도 조금만 여유를 가지고 지도해 보시길 바랍니다. 아이와 함께 머리를 맞대고 문제를 해결하는 시간 자체가 소중한 추억이 됩니다. 성적보다는 사고 과정에 집중해 주세요.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>초등 저학년도 히스토그램을 이해하나요?</summary>
+            <p class="faq-answer">기본적인 막대그래프 개념만 있다면 충분히 접근 가능합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>문장 재배열에 어떤 교과서를 쓰나요?</summary>
+            <p class="faq-answer">국어 읽기 교과서나 아이가 좋아하는 동화책 지문도 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>준비물이 복잡한가요?</summary>
+            <p class="faq-answer">가위, 풀, 색연필 정도면 간단하게 준비할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>하루에 얼마나 시간을 투자하나요?</summary>
+            <p class="faq-answer">스무 분 정도 짧게 집중하는 것이 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>틀렸을 때 어떻게 지도하나요?</summary>
+            <p class="faq-answer">왜 그렇게 생각했는지 물어보고 함께 순서를 다시 맞춰봅니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

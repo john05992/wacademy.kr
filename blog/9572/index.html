@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반올림, 놓치면 큰 손해 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="반올림 개념을 학부모 시각에서 살피고, 없을 때 발생할 문제와 실생활 활용법을 구체적으로 안내한다">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="반올림, 놓치면 큰 손해">
+  <meta property="og:description" content="반올림 개념을 학부모 시각에서 살피고, 없을 때 발생할 문제와 실생활 활용법을 구체적으로 안내한다">
+  <meta property="og:url" content="https://wacademy.kr/blog/9572/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="반올림, 놓치면 큰 손해">
+  <meta name="twitter:description" content="반올림 개념을 학부모 시각에서 살피고, 없을 때 발생할 문제와 실생활 활용법을 구체적으로 안내한다">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/9572/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/9572/#article",
+    "headline": "반올림, 놓치면 큰 손해",
+    "description": "반올림 개념을 학부모 시각에서 살피고, 없을 때 발생할 문제와 실생활 활용법을 구체적으로 안내한다",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-12-12",
+    "dateModified": "2025-12-12",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/9572/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/9572/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "반올림, 놓치면 큰 손해"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"반올림을 언제부터 가르쳐야 하나요","acceptedAnswer":{"@type":"Answer","text":"초등학교 3학년 정도부터 자리값 개념과 함께 소개하면 자연스럽게 습득한다."}},
+      {"@type":"Question","name":"올림과 내림을 구분하는 쉬운 방법은?","acceptedAnswer":{"@type":"Answer","text":"올림은 숫자를 더 크게, 내림은 작게 만드는 과정이라고 기억하면 된다."}},
+      {"@type":"Question","name":"실생활 예시는 무엇이 있나요","acceptedAnswer":{"@type":"Answer","text":"가격 계산, 시간 관리, 거리 측정 등 일상 곳곳에 적용할 수 있다."}},
+      {"@type":"Question","name":"아이에게 부담 없이 가르치는 팁은?","acceptedAnswer":{"@type":"Answer","text":"게임이나 요리 등 흥미로운 활동에 연결해 즐겁게 학습한다."}},
+      {"@type":"Question","name":"반올림을 틀렸을 때 어떻게 교정하나요","acceptedAnswer":{"@type":"Answer","text":"오류 원인을 같이 찾아보고 올바른 규칙을 다시 적용해 보는 것이 효과적이다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>반올림, 놓치면 큰 손해</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">반올림, 놓치면 큰 손해</h1>
+      <p class="article-meta-desc">반올림 개념을 학부모 시각에서 살피고, 없을 때 발생할 문제와 실생활 활용법을 구체적으로 안내한다</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">반올림이란?</a></li>
+        <li><a href="#s2">개념 없으면?</a></li>
+        <li><a href="#s3">실제 생활에서의 파급 효과</a></li>
+        <li><a href="#s4">반올림 적용 사례 표</a></li>
+        <li><a href="#s5">집에서 활용할 5가지 팁</a></li>
+        <li><a href="#s6">자주 하는 실수와 교정법</a></li>
+        <li><a href="#s7">추천 학습 자료</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>반올림이란?</h2>
+      <p>우리 아이는 초등학교 4학년 수학 시간에 처음으로 소수점을 올리는 방법을 접했다. 저는 교과서를 펼쳐 보며 자리값에 따라 숫자를 조정하는 과정을 설명했다. 학부모로서 이 원리를 정확히 이해하면 실생활 계산에서 오차를 줄일 수 있다.
+
+교사는 예시로 물건 가격을 반올림해 보라고 제시했다. 수학책을 보며 아이는 1.4를 1로, 2.6을 3으로 바꾸는 연습을 했다. 그 과정에서 자리값의 의미가 자연스럽게 체득되었다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>개념 없으면?</h2>
+      <p>학부모는 종종 이 개념이 없으면 어떤 일이 벌어질까 라는 궁금증을 품는다. 저는 아이가 반올림을 놓치면 일상에서 금액을 잘못 계산하는 상황을 상상해 보았다. 그 결과 작은 물건이라도 오차가 쌓여 큰 손해로 이어질 수 있다.
+
+교과 과정에서는 이러한 오류를 방지하기 위해 단계별 훈련을 제공한다. 수학 선생님은 실전 문제를 통해 정확성을 강조한다. 따라서 개념을 놓치면 신뢰성 있는 수치 판단이 어려워진다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실제 생활에서의 파급 효과</h2>
+      <p>우리 가족은 장을 볼 때 반올림을 적용해 예산을 관리한다. 부모는 가격표를 보고 십원 단위로 올리거나 내림해 총액을 빠르게 추산한다. 아이는 이런 습관을 통해 금전 감각을 키우게 된다.
+
+우리 집에서는 전기요금 고지서를 검토할 때 소수점 이하를 무시하고 정수로 맞추어 비교한다. 이렇게 하면 전월 대비 변동을 한눈에 파악할 수 있다. 또한 은행에서 이자를 계산할 때도 반올림 원리를 적용하면 정확한 금액을 예측할 수 있다.
+
+저는 아이에게 과학 실험 비용을 산정할 때도 같은 방식을 쓰게 하며, 실제로 오차가 최소화되는 경험을 하게 한다. 결국 반올림은 단순한 수학 기술을 넘어 생활 전반에 걸친 의사결정 능력을 강화한다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>반올림 적용 사례 표</h2>
+      <p>교사는 다양한 상황을 제시해 학생이 직접 적용해 보게 한다. 학생은 표에 있는 규칙을 따라 실생활에 맞는 반올림 방법을 선택한다. 이렇게 하면 추상적인 개념이 구체적인 행동으로 연결된다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>가격</td><td>식료품</td><td>1000원 이하 금액을 100원 단위로 올림</td></tr>
+        <tr><td>시간</td><td>수업 시작</td><td>5분 이하 차이는 10분 단위로 반올림</td></tr>
+        <tr><td>거리</td><td>운전 거리</td><td>0.5km 이하를 1km 단위로 올림</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>집에서 활용할 5가지 팁</h2>
+      <p>저는 위 팁들을 실천하면서 아이와 대화를 자연스럽게 이어간다. 각각의 활동은 일상 속에서 수학적 사고를 촉진한다. 따라서 아이는 반올림을 별도의 공부가 아닌 생활 습관으로 받아들인다.</p>
+      <ul class="blog-list">
+        <li>가격표를 함께 읽으며 자리값을 짚어 본다</li>
+        <li>주말에 요리 레시피의 양을 반올림해 조절한다</li>
+        <li>게임 점수를 소수점 없이 정수로 변환한다</li>
+        <li>날씨 예보 온도를 반올림해 비교한다</li>
+        <li>가계부에 소수점 이하를 버리고 기록한다</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>자주 하는 실수와 교정법</h2>
+      <p>학부모는 반올림 기준을 혼동해 올림과 내림을 뒤바꾸는 경우가 있다. 교사는 정확한 규칙을 시각적으로 보여주며 차이를 강조한다. 아이는 직접 카드 게임을 통해 올림과 내림을 구분한다.
+
+교사는 오류가 발생했을 때 즉시 피드백을 제공한다. 부모는 아이가 스스로 수정하도록 유도한다. 이렇게 하면 반복적인 실수를 줄일 수 있다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>추천 학습 자료</h2>
+      <p>우리 아이는 온라인 동영상 강의를 통해 반올림 과정을 시각화한다. 부모는 교재에 실린 연습문제를 함께 풀며 이해도를 확인한다. 또한 수학 퍼즐 책은 재미를 더해 학습 지속성을 높인다.
+
+학원에서는 그룹 활동을 통해 서로의 답을 비교한다. 교사는 토론을 유도해 개념을 재확인한다. 결과적으로 다양한 매체를 활용하면 학습 효과가 배가된다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>반올림을 언제부터 가르쳐야 하나요</summary>
+            <p class="faq-answer">초등학교 3학년 정도부터 자리값 개념과 함께 소개하면 자연스럽게 습득한다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>올림과 내림을 구분하는 쉬운 방법은?</summary>
+            <p class="faq-answer">올림은 숫자를 더 크게, 내림은 작게 만드는 과정이라고 기억하면 된다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>실생활 예시는 무엇이 있나요</summary>
+            <p class="faq-answer">가격 계산, 시간 관리, 거리 측정 등 일상 곳곳에 적용할 수 있다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 부담 없이 가르치는 팁은?</summary>
+            <p class="faq-answer">게임이나 요리 등 흥미로운 활동에 연결해 즐겁게 학습한다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>반올림을 틀렸을 때 어떻게 교정하나요</summary>
+            <p class="faq-answer">오류 원인을 같이 찾아보고 올바른 규칙을 다시 적용해 보는 것이 효과적이다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

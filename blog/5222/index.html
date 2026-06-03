@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교과서와 로그, 학부모 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="교과서 문장 유형별 풀이 전략과 로그함수 개념을 학부모 시각에서 쉽게 설명하고 실전 활용 팁을 제공한다">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="교과서와 로그, 학부모 가이드">
+  <meta property="og:description" content="교과서 문장 유형별 풀이 전략과 로그함수 개념을 학부모 시각에서 쉽게 설명하고 실전 활용 팁을 제공한다">
+  <meta property="og:url" content="https://wacademy.kr/blog/5222/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="교과서와 로그, 학부모 가이드">
+  <meta name="twitter:description" content="교과서 문장 유형별 풀이 전략과 로그함수 개념을 학부모 시각에서 쉽게 설명하고 실전 활용 팁을 제공한다">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/5222/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/5222/#article",
+    "headline": "교과서와 로그, 학부모 가이드",
+    "description": "교과서 문장 유형별 풀이 전략과 로그함수 개념을 학부모 시각에서 쉽게 설명하고 실전 활용 팁을 제공한다",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-28",
+    "dateModified": "2026-02-28",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/5222/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/5222/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "교과서와 로그, 학부모 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"교과서 문장 유형을 어떻게 구분하나요?","acceptedAnswer":{"@type":"Answer","text":"유형은 서술형, 선택형, 단답형 등으로 나누며 각각 특징을 파악하면 효과적인 학습이 가능합니다."}},
+      {"@type":"Question","name":"로그함수를 일상에 어떻게 연결할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"소리 크기, 금리, 인구 성장 등 지수와 로그 관계가 적용되는 사례를 찾아 설명하면 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"체크리스트를 만들 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"항목을 구체적으로 적고, 매일 점검할 수 있도록 시간대를 정해 두는 것이 중요합니다."}},
+      {"@type":"Question","name":"모의고사 후 오답 분석은 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"오답 원인을 분류하고, 비슷한 문제를 추가로 풀어 보며 약점을 보완합니다."}},
+      {"@type":"Question","name":"교사와 소통할 때 효과적인 방법은?","acceptedAnswer":{"@type":"Answer","text":"사전에 질문을 정리하고, 면담 시 구체적인 목표를 제시하면 대화가 효율적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>교과서와 로그, 학부모 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">교과서와 로그, 학부모 가이드</h1>
+      <p class="article-meta-desc">교과서 문장 유형별 풀이 전략과 로그함수 개념을 학부모 시각에서 쉽게 설명하고 실전 활용 팁을 제공한다</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">문장 유형 별 기본 접근법</a></li>
+        <li><a href="#s2">서술형 문제 해결 전략</a></li>
+        <li><a href="#s3">로그함수 개념 이해하기</a></li>
+        <li><a href="#s4">문제 풀이 체크리스트</a></li>
+        <li><a href="#s5">문장 유형별 전략 요약표</a></li>
+        <li><a href="#s6">실전 모의고사 활용법</a></li>
+        <li><a href="#s7">학부모와 교사 간 소통 팁</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>문장 유형 별 기본 접근법</h2>
+      <p>우리 아이는 교과서 속 다양한 문장을 마주할 때 흥미를 잃지 않도록 설명을 곁들입니다. 다른 학부모들은 보통 유형별로 중요한 포인트를 정리해 두었다는 사실을 알게 됩니다.
+
+보통 교사는 각 텍스트의 구조를 분석하고 핵심 어휘를 강조하는 방식을 추천합니다. 최근 교육 현장에서는 문제 풀이 전략을 시각화하여 아이가 스스로 적용하도록 돕는 사례가 늘고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>서술형 문제 해결 전략</h2>
+      <p>우리 가족은 서술형 문제를 풀 때 답안을 구체적으로 구성하도록 지도합니다. 많은 부모님은 중요한 포인트를 먼저 검토하고 예시를 들어 설명하는 방법을 활용합니다.
+
+특정 교과에서는 질문 의도를 파악한 뒤 단계별로 접근하는 것이 효과적입니다. 결과적으로 아이는 논리적 흐름을 유지하면서도 창의적인 표현을 시도하게 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>로그함수 개념 이해하기</h2>
+      <p>우리 아이는 로그함수의 기본 개념을 이해하기 위해 지수와의 관계를 시각적으로 보여주는 그림을 보았습니다. 다른 학생은 처음에 밑과 진수의 의미가 헷갈릴 수 있다는 점을 지적했습니다.
+
+보통 학부모는 일상 생활에서 소리의 크기나 금리 계산처럼 그 개념이 적용되는 사례를 들어 설명하면 이해도가 높아진다고 생각합니다.
+
+최근 수학 교사는 이 함수를 단순히 공식 암기가 아니라 함수 그래프의 변화와 실제 데이터 분석에 연결시키는 수업을 진행하고 있습니다. 결과적으로 아이는 추상적인 내용을 현실과 연결 지으며 스스로 문제를 풀어 나가는 자신감을 얻습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>문제 풀이 체크리스트</h2>
+      <p>우리 가족은 매일 학습 시간을 정하고 체크리스트를 활용해 복습을 체계화합니다. 많은 부모님은 핵심 포인트를 미리 적어 두면 아이가 스스로 검토할 때 도움이 된다고 얘기합니다.
+
+특정 교과에서는 문제 유형별로 접근 순서를 미리 정해 두는 것이 효율적입니다. 결과적으로 학습 효율이 상승하고 시험 대비가 수월해집니다.</p>
+      <ul class="blog-list">
+        <li>문제 유형 파악</li>
+        <li>핵심 개념 정리</li>
+        <li>시간 관리 연습</li>
+        <li>오답 노트 활용</li>
+        <li>자기 점검 루틴</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>문장 유형별 전략 요약표</h2>
+      <p>우리 아이는 다양한 유형의 질문에 대비하기 위해 표를 활용해 전략을 정리했습니다. 다른 학부모들은 이 표가 학습 방향을 명확히 하는 데 큰 도움이 된다고 평가합니다.
+
+보통 교사는 각 유형에 맞는 핵심 포인트와 연습 문제를 제시하며 학습을 지도합니다. 최근 교육 현장에서는 이런 시각적 자료가 학생의 이해도를 높이는 데 효과적이라는 의견이 늘고 있습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>서술형</td><td>초등 고학년</td><td>핵심 아이디어를 문단으로 정리</td></tr>
+        <tr><td>선다형</td><td>중학생</td><td>선택지마다 근거를 비교</td></tr>
+        <tr><td>단답형</td><td>고등학생</td><td>정답을 간결히 서술</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>실전 모의고사 활용법</h2>
+      <p>우리 가족은 모의고사를 치른 뒤 오답을 분석하는 시간을 꼭 갖습니다. 다른 부모님은 시간 관리 연습을 위해 실제 시험과 동일한 환경을 조성한다는 점을 강조합니다.
+
+특정 교과에서는 오답 노트를 작성해 반복적인 실수를 방지합니다. 결과적으로 아이는 시험 스트레스를 감소시키고 실력을 꾸준히 향상시킵니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모와 교사 간 소통 팁</h2>
+      <p>우리 아이는 교사와의 면담을 통해 학습 목표를 명확히 설정합니다. 많은 부모님은 정기적인 연락을 통해 진행 상황을 공유하는 것이 중요하다고 생각합니다.
+
+특정 상황에서는 이메일보다 직접 대화를 선호해 오해를 줄일 수 있습니다. 최근 학교에서는 온라인 포털을 활용해 학부모와 교사가 실시간으로 정보를 교환하고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>교과서 문장 유형을 어떻게 구분하나요?</summary>
+            <p class="faq-answer">유형은 서술형, 선택형, 단답형 등으로 나누며 각각 특징을 파악하면 효과적인 학습이 가능합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>로그함수를 일상에 어떻게 연결할 수 있나요?</summary>
+            <p class="faq-answer">소리 크기, 금리, 인구 성장 등 지수와 로그 관계가 적용되는 사례를 찾아 설명하면 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>체크리스트를 만들 때 주의할 점은?</summary>
+            <p class="faq-answer">항목을 구체적으로 적고, 매일 점검할 수 있도록 시간대를 정해 두는 것이 중요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>모의고사 후 오답 분석은 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">오답 원인을 분류하고, 비슷한 문제를 추가로 풀어 보며 약점을 보완합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>교사와 소통할 때 효과적인 방법은?</summary>
+            <p class="faq-answer">사전에 질문을 정리하고, 면담 시 구체적인 목표를 제시하면 대화가 효율적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

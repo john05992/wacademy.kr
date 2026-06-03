@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>점수 그래프와 문제 유형 분류법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="모의고사 점수 변화를 그래프로 시각화하고 배운 개념을 다양한 문제 유형으로 분류하여 실력을 향상시키는 구체적인 학습법을 소개합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="점수 그래프와 문제 유형 분류법">
+  <meta property="og:description" content="모의고사 점수 변화를 그래프로 시각화하고 배운 개념을 다양한 문제 유형으로 분류하여 실력을 향상시키는 구체적인 학습법을 소개합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/9549/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="점수 그래프와 문제 유형 분류법">
+  <meta name="twitter:description" content="모의고사 점수 변화를 그래프로 시각화하고 배운 개념을 다양한 문제 유형으로 분류하여 실력을 향상시키는 구체적인 학습법을 소개합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/9549/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/9549/#article",
+    "headline": "점수 그래프와 문제 유형 분류법",
+    "description": "모의고사 점수 변화를 그래프로 시각화하고 배운 개념을 다양한 문제 유형으로 분류하여 실력을 향상시키는 구체적인 학습법을 소개합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-12-12",
+    "dateModified": "2025-12-12",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/9549/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/9549/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "점수 그래프와 문제 유형 분류법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"그래프는 얼마나 자주 그려야 하나요","acceptedAnswer":{"@type":"Answer","text":"매주 모의고사를 본 직마다 점수를 기록하여 주말에 그리는 것이 좋습니다"}},
+      {"@type":"Question","name":"어떤 도구를 사용하면 편리한가요","acceptedAnswer":{"@type":"Answer","text":"스프레드시트나 한글 프로그램을 활용하거나 손으로 직접 그려도 효과적입니다"}},
+      {"@type":"Question","name":"문제 유형 분류가 시간이 너무 오래 걸리는데요","acceptedAnswer":{"@type":"Answer","text":"초반에는 시간이 들지만 익숙해지면 눈으로 빠르게 파악이 가능합니다"}},
+      {"@type":"Question","name":"점수가 떨어졌을 때 어떻게 대하나요","acceptedAnswer":{"@type":"Answer","text":"그래프의 하락 구간을 분석하여 원인을 찾고 다음 주 목표를 세웁니다"}},
+      {"@type":"Question","name":"초등학생에게도 효과가 있나요","acceptedAnswer":{"@type":"Answer","text":"네 시각적인 자료는 초등학생도 자신의 학습 상태를 이해하는 데 도움이 됩니다"}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>점수 그래프와 문제 유형 분류법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">점수 그래프와 문제 유형 분류법</h1>
+      <p class="article-meta-desc">모의고사 점수 변화를 그래프로 시각화하고 배운 개념을 다양한 문제 유형으로 분류하여 실력을 향상시키는 구체적인 학습법을 소개합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">우리 아이 성적, 그래프로 보니 보였다</a></li>
+        <li><a href="#s2">일주일 단위로 점수 변화를 기록하는 방법</a></li>
+        <li><a href="#s3">그래프 분석을 통해 발견한 학습 패턴</a></li>
+        <li><a href="#s4">개념 학습 후 필수적인 문제 유형 분류</a></li>
+        <li><a href="#s5">효과적인 문제 유형별 분류 기준</a></li>
+        <li><a href="#s6">유형별 맞춤 학습 전략과 활용법</a></li>
+        <li><a href="#s7">학부모님께 권하는 마지막 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>우리 아이 성적, 그래프로 보니 보였다</h2>
+      <p>우리 아이 학업 결과는 마치 롤러코스터처럼 오르락내리락하여 마음을 졸이던 날이 많았어요.
+
+문제의 원인을 파악하기 힘들어 막막함을 느꼈던 적이 한두 번이 아니었죠.
+
+그래서 저는 매번 시험 결과를 빠짐없이 기록하기 시작했답니다.
+
+이 데이터를 눈으로 확인하는 순간 학습 방향성을 잡을 수 있었습니다.
+
+이 효과적인 노하우를 다른 학부모님들과도 공유하고 싶어서 글을 씁니다.
+
+정말 간단한 방법이지만 우리 자녀의 학습 태도에 큰 변화를 가져왔습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>일주일 단위로 점수 변화를 기록하는 방법</h2>
+      <p>저는 컴퓨터 프로그램을 이용해 가로축에는 날짜를 세로축에는 결과를 입력하는 표를 만들었어요.
+
+일주일 단위로 수치를 하나씩 찍어나가는 과정이 의외로 재미있는 활동이 되었답니다.
+
+시간이 지나면서 성적의 흐름이 선명하게 드러나기 시작했고요.
+
+우리 아이가 흘린 땀방울이 결실로 이어지고 있는지 즉각적으로 확인할 수 있었습니다.
+
+부모인 저도 불안감을 내려놓고 자녀를 지지할 수 있게 되었죠.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>그래프 분석을 통해 발견한 학습 패턴</h2>
+      <p>꺾은선 그래프를 면밀히 관찰하니 단순한 숫자 이상의 의미가 보이기 시작했습니다.
+
+성적이 크게 상승하기 전에 잠시 하락하거나 정체되는 구간이 반드시 존재하더라고요.
+
+이러한 패턴을 통해 자녀와 저는 실패를 두려워하지 않는 마음을 갖게 되었습니다.
+
+벼락치기 학습이 얼마나 쓸모없는 것인지도 뼈저리게 느꼈고요.
+
+꾸준한 노력이 얼마나 중요한지 깨닫는 계기가 되었습니다.
+
+서서히 우상향하는 곡선을 그릴 때마다 우리 아이의 눈빛에서 자신감이 피어오르는 것을 보았습니다.
+
+이것은 단순히 점수를 올리는 것을 넘어 올바른 습관을 만드는 여정이었죠.
+
+시각적인 피드백은 학생에게 가장 강력한 동기부여가 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>개념 학습 후 필수적인 문제 유형 분류</h2>
+      <p>교과서 개념을 달달 외는 것만으로는 실제 시험 문제를 해결하기에 역부족이라는 생각이 들었습니다.
+
+그래서 우리는 배운 내용을 바탕으로 다양한 문제 유형을 체계적으로 나누는 작업을 진행했어요.
+
+자녀가 어떤 종류의 문제에서 어려움을 겪는지 정확하게 진단할 수 있었던 것이 가장 큰 장점이었습니다.
+
+기본 원리는 알고 있지만 응용력이 부족하다면 그 부분을 집중적으로 보강할 수 있었거든요.
+
+이러한 과정을 통해 체계적인 공부가 가능해졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>효과적인 문제 유형별 분류 기준</h2>
+      <p>저희 집에서는 문제를 다섯 가지 종류로 나누어 포스트잇을 붙여가며 정리했습니다.
+
+처음에는 번거로워서 하기 싫어하는 우리 자녀를 설득하는 데 애를 먹었죠.
+
+하지만 익숙해지자 아이 스스로 유형을 판단하고 구별하는 능력이 길러졌습니다.
+
+어디서 실수가 많이 발생하는지 한눈에 파악할 수 있어 학습 효율이 비약적으로 높아졌어요.
+
+이제는 새로운 문제를 보고도 어떤 카테고리에 속하는지 금방 파악하더군요.
+
+문제 풀이가 게임처럼 재미있어졌다고 합니다.</p>
+      <ul class="blog-list">
+        <li>개념 확인 기본 문제</li>
+        <li>단원 내 직접 응용 문제</li>
+        <li>여러 단원 통합 문제</li>
+        <li>새로운 유형의 신유형 문제</li>
+        <li>고난도 심화 문제</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>유형별 맞춤 학습 전략과 활용법</h2>
+      <p>유형별로 나눈 후에는 각각의 특성에 맞는 맞춤형 학습 전략을 세워 실행했습니다.
+
+이렇게 단계별로 목표를 설정하고 문제를 풀으니 시간 낭비가 줄어들고 집중력이 향상되었습니다.
+
+막연한 풀이보다는 명확한 목표를 가지고 임하니 성취감이 훨씬 크다고 하더라고요.
+
+학생은 자신의 현재 실력에 딱 맞는 문제를 풀며 흥미를 잃지 않고 지속할 수 있었습니다.
+
+공부를 잘하는 친구들과 비교하는 대신 자신의 그래프와 분류표에 집중하게 된 것이 가장 큰 변화입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기본 유형</td><td>개념 학습자</td><td>정의와 원리를 정확히 이해하고 암기하기</td></tr>
+        <tr><td>응용 유형</td><td>기본 해결자</td><td>변형된 문제를 통해 활용 능력 키우기</td></tr>
+        <tr><td>심화 유형</td><td>고득점 목표자</td><td>시간 제한을 두고 풀이 속도 높이기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모님께 권하는 마지막 조언</h2>
+      <p>점수 변화 그래프와 문제 유형 분석법을 결합한 것이 정말 최고의 선택이었습니다.
+
+막연한 불안감에 떨던 다른 부모님들께도 이 방식을 꼭 추천하고 싶어요.
+
+불필요한 스트레스는 확 줄어들고 성적은 자연스럽게 상승곡선을 그리게 되거든요.
+
+무엇보다 자녀와 함께 데이터를 보며 대화하는 시간이 소중해졌습니다.
+
+올바른 학습 습관은 이런 작은 관찰과 기록에서 시작된다고 확신합니다.
+
+여러분도 꼭 시도해 보시길 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>그래프는 얼마나 자주 그려야 하나요</summary>
+            <p class="faq-answer">매주 모의고사를 본 직마다 점수를 기록하여 주말에 그리는 것이 좋습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어떤 도구를 사용하면 편리한가요</summary>
+            <p class="faq-answer">스프레드시트나 한글 프로그램을 활용하거나 손으로 직접 그려도 효과적입니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>문제 유형 분류가 시간이 너무 오래 걸리는데요</summary>
+            <p class="faq-answer">초반에는 시간이 들지만 익숙해지면 눈으로 빠르게 파악이 가능합니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>점수가 떨어졌을 때 어떻게 대하나요</summary>
+            <p class="faq-answer">그래프의 하락 구간을 분석하여 원인을 찾고 다음 주 목표를 세웁니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>초등학생에게도 효과가 있나요</summary>
+            <p class="faq-answer">네 시각적인 자료는 초등학생도 자신의 학습 상태를 이해하는 데 도움이 됩니다</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갈등 해결과 도수분포표 배우기 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="아이와의 갈등을 해결하는 방법과 수학 시간의 도수분포표 작성법을 직접 배우고 느낀 점을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="갈등 해결과 도수분포표 배우기">
+  <meta property="og:description" content="아이와의 갈등을 해결하는 방법과 수학 시간의 도수분포표 작성법을 직접 배우고 느낀 점을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3447/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="갈등 해결과 도수분포표 배우기">
+  <meta name="twitter:description" content="아이와의 갈등을 해결하는 방법과 수학 시간의 도수분포표 작성법을 직접 배우고 느낀 점을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3447/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3447/#article",
+    "headline": "갈등 해결과 도수분포표 배우기",
+    "description": "아이와의 갈등을 해결하는 방법과 수학 시간의 도수분포표 작성법을 직접 배우고 느낀 점을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-04-01",
+    "dateModified": "2026-04-01",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3447/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3447/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "갈등 해결과 도수분포표 배우기"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"갈등 해결에 가장 중요한 것은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"상대방의 감정을 있는 그대로 인정하고 끝까지 들어주는 경청의 자세가 가장 중요합니다"}},
+      {"@type":"Question","name":"도수분포표에서 계급이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"자료를 일정한 간격으로 나눈 각각의 구간을 의미하며 데이터를 분류하는 기준이 됩니다"}},
+      {"@type":"Question","name":"아이가 수학을 너무 싫어하는데 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"억지로 시키기보다 생활 속 예시를 들어 흥미를 유발해 주고 작은 성취감을 느끼게 해주세요"}},
+      {"@type":"Question","name":"갈등 중간에 부모가 바로 개입해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"아이들이 스스로 해결하도록 두되 상황이 악화될 때만 중재하여 조언해 주는 것이 좋습니다"}},
+      {"@type":"Question","name":"도수분포표를 실생활에서 어떻게 쓰나요?","acceptedAnswer":{"@type":"Answer","text":"가계부 지출 내역이나 반 친구들의 신장 순위 등 많은 데이터를 한눈에 보기 위해 정리할 때 유용합니다"}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>갈등 해결과 도수분포표 배우기</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">갈등 해결과 도수분포표 배우기</h1>
+      <p class="article-meta-desc">아이와의 갈등을 해결하는 방법과 수학 시간의 도수분포표 작성법을 직접 배우고 느낀 점을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">부모 교육에서 만난 두 가지 과제</a></li>
+        <li><a href="#s2">가정 내 갈등을 줄이는 대화법</a></li>
+        <li><a href="#s3">우리 집이 실천하는 갈등 해결 5단계</a></li>
+        <li><a href="#s4">수학 공포증을 없애준 도수분포표</a></li>
+        <li><a href="#s5">도수분포표 작성의 핵심 원리</a></li>
+        <li><a href="#s6">실전 활용을 위한 요약 정리</a></li>
+        <li><a href="#s7">부모와 아이가 함께 성장하는 법</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>부모 교육에서 만난 두 가지 과제</h2>
+      <p>얼마 전 아이 학교에서 부모 교육을 받으러 갔다가 평생 잊지 못할 두 가지를 배웠습니다.
+
+하나는 아이와의 갈등을 지혜롭게 푸는 방법이었고, 다른 하나는 중학 수학 시간에 등장하는 도수분포표 작성법이었습니다.
+
+처음에는 감성 교육과 이성적인 수학이 어떻게 같이 다뤄지는지 의아했는데, 막상 들어보니 아이의 성장을 돕는 두 축이었습니다.
+
+옆에 앉은 다른 학부모들도 고개를 끄덕이며 열심히 필기를 하는 모습이 저에게도 큰 동기가 되었습니다.
+
+집에 돌아와서 바로 아이에게 적용해 보았고, 그 과정에서 느꼈던 점들을 솔직하게 적어보려 합니다.
+
+막연하게 어렵게만 느껴졌던 개념들을 이렇게 쉽게 정리해 준 선생님께 진심으로 감사드립니다.
+
+이 글을 읽는 분들께도 저의 소중한 경험이 조금이나마 전달되기를 바라는 마음입니다</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>가정 내 갈등을 줄이는 대화법</h2>
+      <p>갈등 해결 수업은 단순히 싸움을 멈추는 것이 아니라 서로의 마음을 읽는 과정이라는 것을 알게 되었습니다.
+
+아이가 화를 냈을 때 무조건 야단치기보다는 왜 그런 감정이 드는지 먼저 물어봐 주어야 한다는 것을 깨달았습니다.
+
+제가 어렸을 때 부모님께 들었던 말들이 떠올라 얼굴이 화끈거리기도 했습니다.
+
+실제로 아이와 장난감을 가지고 다퉜을 때 배운 대로 한 발 물러서서 이야기를 들어주자 아이의 태도가 금방 누그러졌습니다.
+
+서로의 입장을 이해하는 시간만으로도 문제의 절반은 해결되는 것 같아 놀랐습니다.
+
+이 방법은 비단 부모 자식 관계뿐만 아니라 친구 관계에서도 매우 유용하다고 생각합니다.
+
+앞으로도 아이의 작은 표정 하나하나에 집중하여 진정한 소통을 이어가고 싶습니다</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>우리 집이 실천하는 갈등 해결 5단계</h2>
+      <p>갈등을 해결하는 구체적인 단계들을 집에서 실천해 보니 생각보다 훨씬 더 효과가 좋았습니다.
+
+우선 양쪽 모두 감정을 가라앉히는 시간을 갖는 것이 정말 중요하고, 상대방의 이야기를 끝까지 방해하지 않고 듣는 인내심이 필요합니다.
+
+저희 집에서 매일 밤 잠들기 전에 서로에게 다짐하며 지키고 있는 규칙들을 정리해 보았는데, 다른 가정에서도 참고하시면 좋을 것 같습니다.
+
+이 과정을 통해 아이는 자신의 감정을 말로 정확하게 표현하는 법을 서서히 배우고 있으며 저 또한 많이 달라진 모습을 발견했습니다.
+
+이전에는 울음으로만 표현하던 것들이 이제는 논리적인 말로 바뀌어 가는 모습을 보니 참 뿌듯하고 무척 감동적이었습니다.
+
+부모가 먼저 모범을 보일 때 아이도 자연스럽게 따라오는 것 같아 저도 더 노력하게 되었고 가정 전체의 분위기도 훨씬 평화로워졌습니다.
+
+서로를 존중하는 대화법은 단순히 싸움을 멈추는 것을 넘어 우리 삶의 전반에 걸쳐 큰 도움이 된다는 것을 뼈저리게 느꼈습니다</p>
+      <ul class="blog-list">
+        <li>상대방 이야기 끝까지 듣기</li>
+        <li>감정을 비난하지 않기</li>
+        <li>해결책을 함께 찾기</li>
+        <li>사과할 때는 진심으로</li>
+        <li>재발 방지 약속 지키기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>수학 공포증을 없애준 도수분포표</h2>
+      <p>마음의 문을 여는 수업 뒤에는 이제 머리를 써야 할 차례가 왔습니다.
+
+바로 중학 수학에서 아이들이 가장 어려워하는 도수분포표를 배우는 시간이었습니다.
+
+학창 시절 추억도 없는 개념이라 저조차 한 귀로 듣고 한 귀로 흘릴 뻔했습니다.
+
+하지만 선생님이 데이터를 정리하는 기초 통계라며 아주 쉽게 풀어서 설명해 주셨습니다.
+
+복잡한 숫자들이 왜 필요한지 그리고 어떻게 정리하면 편한지 이해하는 순간 술술 읽혔습니다.
+
+집에 와서 아이 숙제를 도와주려고 펜을 들었는데 오히려 아이가 저를 쳐다보는 눈치였습니다.
+
+엄마가 이걸 알아? 하는 표정이 역력해서 더욱 열심히 공부해서 자랑하고 싶었습니다.
+
+이제는 수학 공부도 아이와 함께 즐기는 시간이 되어가는 것 같아 기쁩니다</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>도수분포표 작성의 핵심 원리</h2>
+      <p>도수분포표는 자료를 일정한 간격으로 나누어 그 안에 들어있는 데이터의 개수를 정리한 표입니다.
+
+많은 양의 수치를 한눈에 파악할 수 있어서 시험 성적이나 신장 조사 같은 곳에서 자주 쓰입니다.
+
+처음에는 계급과 도수, 계급값 같은 용어들이 뒤섞여 머리가 아팠습니다.
+
+그래서 저는 아이와 함께 색연필을 꺼내어 각각의 구역을 색깔별로 칠하면서 공부를 시작했습니다.
+
+시각적인 자극을 주니 아이가 훨씬 더 빨리 개념을 이해하는 것을 볼 수 있었습니다.
+
+단순히 암기하는 것보다 직접 그려보고 써보는 과정이 필수적이라는 것을 몸소 체험했습니다.
+
+이렇게 하니 수학 문제집 푸는 시간이 전처럼 끔찍하지 않게 변했습니다.
+
+어려운 수학도 접근 방법만 잘하면 충분히 재미있는 과목이 될 수 있다는 확신이 들었습니다</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>실전 활용을 위한 요약 정리</h2>
+      <p>도수분포표를 작성할 때는 데이터의 범위를 잘 설정하는 것이 가장 중요합니다.
+
+계급의 간격을 너무 넓게 잡으면 세부적인 특징을 잃어버리고, 너무 좁게 잡으면 표가 길어져서 보기 힘들어집니다.
+
+저희 아이는 처음에 이 간격 설정을 자꾸 틀려서 고생했는데 몇 번 연습하더니 감을 잡았습니다.
+
+실제로 작성하는 절차와 주의할 점을 표로 만들어 벽장에 붙여두고 참고하고 있습니다.
+
+이 표 덕분에 아이가 스스로 문제를 풀 때 실수가 확실히 줄어들었습니다.
+
+학교에서 시험 볼 때도 이 요령을 잘 기억해서 틀리지 않았다고 자랑하더군요.
+
+차근차근 단계를 밟아가는 성취감을 아이가 일찍 깨달은 것 같아 감사했습니다</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>자료 정리</td><td>전체 데이터</td><td>크기순으로 나열하여 최댓값과 최솟값 파악하기</td></tr>
+        <tr><td>계급 설정</td><td>자료 범위</td><td>적절한 간격으로 계급을 나누고 경계값 정하기</td></tr>
+        <tr><td>도수 기록</td><td>각 계급</td><td>해당 계급에 속하는 자료의 개수를 세어 표시하기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>부모와 아이가 함께 성장하는 법</h2>
+      <p>이번 교육을 통해 갈등 해결과 도수분포표라는 전혀 다른 두 주제를 하나로 묶어 생각하게 되었습니다.
+
+감정적인 문제도 논리적인 분석이 필요하고, 수학적인 문제도 끈기 있는 훈련이 필요하다는 공통점이 있었습니다.
+
+학부모로서 저의 고정관념을 깨고 아이의 눈높이에서 세상을 바라보게 된 소중한 시간이었습니다.
+
+이제는 아이가 학교에서 겪는 어려움을 덜 답답해하고 같이 고민해 줄 수 있는 여유가 생겼습니다.
+
+이런 정보를 알려주신 학교와 선생님께 다시 한번 진심으로 감사드립니다.
+
+앞으로도 아이와 함께 끊임없이 배우고 성장하는 엄마가 되겠다고 다짐했습니다.
+
+다른 학부모님들께도 이 경험이 조금이나마 도움이 되기를 바라는 마음으로 글을 마무리합니다</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>갈등 해결에 가장 중요한 것은 무엇인가요?</summary>
+            <p class="faq-answer">상대방의 감정을 있는 그대로 인정하고 끝까지 들어주는 경청의 자세가 가장 중요합니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>도수분포표에서 계급이란 무엇인가요?</summary>
+            <p class="faq-answer">자료를 일정한 간격으로 나눈 각각의 구간을 의미하며 데이터를 분류하는 기준이 됩니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 수학을 너무 싫어하는데 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">억지로 시키기보다 생활 속 예시를 들어 흥미를 유발해 주고 작은 성취감을 느끼게 해주세요</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>갈등 중간에 부모가 바로 개입해야 하나요?</summary>
+            <p class="faq-answer">아이들이 스스로 해결하도록 두되 상황이 악화될 때만 중재하여 조언해 주는 것이 좋습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>도수분포표를 실생활에서 어떻게 쓰나요?</summary>
+            <p class="faq-answer">가계부 지출 내역이나 반 친구들의 신장 순위 등 많은 데이터를 한눈에 보기 위해 정리할 때 유용합니다</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

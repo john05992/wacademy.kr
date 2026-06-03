@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문체와 경우의 수 학습 비법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="문체 변용과 복합 경우의 수 문제 해결을 위한 실질적인 학습법과 후기를 정리했습니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="문체와 경우의 수 학습 비법">
+  <meta property="og:description" content="문체 변용과 복합 경우의 수 문제 해결을 위한 실질적인 학습법과 후기를 정리했습니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/8143/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="문체와 경우의 수 학습 비법">
+  <meta name="twitter:description" content="문체 변용과 복합 경우의 수 문제 해결을 위한 실질적인 학습법과 후기를 정리했습니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/8143/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/8143/#article",
+    "headline": "문체와 경우의 수 학습 비법",
+    "description": "문체 변용과 복합 경우의 수 문제 해결을 위한 실질적인 학습법과 후기를 정리했습니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-06",
+    "dateModified": "2026-01-06",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/8143/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/8143/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "문체와 경우의 수 학습 비법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"문체 변용을 쉽게 가르치는 방법은 없나요?","acceptedAnswer":{"@type":"Answer","text":"일상 대화를 활용하여 상황에 따라 말투를 바꿔보는 놀이를 해보세요."}},
+      {"@type":"Question","name":"경우의 수 문제에서 자꾸 실수가 잦습니다.","acceptedAnswer":{"@type":"Answer","text":"조건을 하나씩 체크하며 도표나 나무 그림을 그리는 연습을 하세요."}},
+      {"@type":"Question","name":"하루에 공부 시간은 얼마나 정해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"아이의 집중력을 고려하여 짧게라도 매일 꾸준히 하는 것이 중요합니다."}},
+      {"@type":"Question","name":"좋은 참고서를 추천해 주실 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"기본 개념 설명이 자세한 교과서와 응용 문제가 잘 구성된 문제집을 추천합니다."}},
+      {"@type":"Question","name":"아이가 학습에 흥미를 느끼게 하려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"아이가 좋아하는 주제나 캐릭터를 학습 소재로 활용하여 관심을 유도해보세요."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>문체와 경우의 수 학습 비법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">문체와 경우의 수 학습 비법</h1>
+      <p class="article-meta-desc">문체 변용과 복합 경우의 수 문제 해결을 위한 실질적인 학습법과 후기를 정리했습니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">문체의 특성 이해하기</a></li>
+        <li><a href="#s2">문체 변용 연습 방법</a></li>
+        <li><a href="#s3">복합 경우의 수 핵심 포인트</a></li>
+        <li><a href="#s4">경우의 수 유형별 분석</a></li>
+        <li><a href="#s5">효과적인 학습 계획 세우기</a></li>
+        <li><a href="#s6">학부모들이 자주 하는 실수</a></li>
+        <li><a href="#s7">지속 가능한 학습 습관</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>문체의 특성 이해하기</h2>
+      <p>우리 아이가 글쓰기를 할 때 가장 어려워하는 부분이 바로 문체의 특성을 이해하는 것이었어요.
+
+처음에는 격식체와 비격식체의 차이를 명확히 구별하지 못해 많은 혼란을 겪었답니다.
+
+저는 아이와 함께 친구에게 말하는 상황과 어른께 말하는 상황을 역할극으로 만들어 보았습니다.
+
+이렇게 실제 상황을 가정하니 훨씬 빠르게 개념을 잡을 수 있었고 자신감도 생겼습니다.
+
+독서를 할 때도 작가가 사용한 어조에 대해 질문을 던지며 대화를 나누는 것이 좋습니다.
+
+선행 학습보다는 일상 속에서 자연스럽게 접하는 것이 무엇보다 중요하다는 것을 깨달았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>문체 변용 연습 방법</h2>
+      <p>문체 변용 문제는 단순히 어미를 바꾸는 것을 넘어서 글의 분위기까지 바꿔야 하는 까다로운 과제입니다.
+
+아이가 지루해하지 않도록 좋아하는 만화 캐릭터의 대사를 해요체로 바꿔보게 했더니 흥미로워하더라고요.
+
+뉴스 기사를 친구들에게 전하는 말투로 고쳐 쓰는 연습도 효과적인 방법 중 하나입니다.
+
+꾸준한 노력 없이는 실력이 늘지 않기 때문에 매일 조금씩이라도 다양한 문장을 접해야 합니다.
+
+저희 집에서는 저녁 식사 후 가족끼리 그날 있었던 일을 다른 문체로 표현해보는 놀이를 합니다.
+
+이런 과정을 통해 아이가 상황에 맞는 적절한 표현을 선택하는 능력을 키우게 되어 기뻐합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>복합 경우의 수 핵심 포인트</h2>
+      <p>복합 경우의 수 문제는 아이들이 수학 공부를 하면서 가장 벽을 느끼는 영역 중 하나라고 생각합니다.
+
+여러 가지 조건이 동시에 주어지기 때문에 순서없이 나열하다가 경우를 빠뜨리는 실수가 잦거든요.
+
+제 아이는 처음에 문제만 읽고 머리로 계산하려다가 자꾸 틀려서 답답해했던 경험이 있습니다.
+
+그래서 저는 문제의 조건을 하나씩 확인하며 체계적으로 정리하는 습관을 들여주기로 마음먹었습니다.
+
+도표나 나무 그림을 그려서 눈으로 보면서 경우의 수를 하나씩 따져가는 연습을 병행했습니다.
+
+이 방법을 꾸준히 적용한 후부터는 아이도 복잡한 문제 앞에서 당황하지 않고 차근차근 풀어내기 시작했습니다.
+
+부모님들이 옆에서 지나치게 간섭하기보다는 아이가 스스로 사고의 흐름을 만들 수 있도록 도와주는 것이 중요합니다.
+
+무작정 많은 문제를 푸는 것보다는 하나를 풀더라도 완벽하게 이해하고 넘어가는 것이 실력 향상에 도움이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>경우의 수 유형별 분석</h2>
+      <p>문제 유형을 파악하는 것은 정답을 맞히는 데 있어서 매우 중요한 첫걸음입니다.
+
+아이가 어떤 유형의 문제를 자주 틀리는지 분석해보면 맞춤형 학습이 가능합니다.
+
+저희 아이는 특히 순서를 고려해야 하는 문제와 그렇지 않은 문제를 헷갈려했습니다.
+
+이를 구별하기 위해 주사위 게임이나 옷 입히기 놀이 등 현실적인 예시를 들어 설명했습니다.
+
+추상적인 개념을 구체적인 사물에 연결시키니 아이의 이해도가 훨씬 빨라졌습니다.
+
+학부모님들도 교과서 문제뿐만 아니라 생활 속 예시를 활용해 지도해보시길 추천합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기본 원리</td><td>초등 저학년</td><td>순서와 상관없이 선택하는 경우 이해하기</td></tr>
+        <tr><td>확률 계산</td><td>초등 고학년</td><td>전체 경우 중 특정 사건이 일어날 비율 구하기</td></tr>
+        <tr><td>복합 문제</td><td>중학 예비</td><td>두 가지 이상의 사건이 동시에 발생하는 경우 처리하기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>효과적인 학습 계획 세우기</h2>
+      <p>두 과목 모두 꾸준한 복습이 필수적이라는 공통점이 있어서 계획을 잘 세워야 합니다.
+
+하루에 국어와 수학을 짧게라도 번갈아 가며 공부하는 것이 뇌를 자극하는 데 유리합니다.
+
+저는 아이와 함께 주간 학습 계획표를 만들어서 달력에 붙여두고 점검합니다.
+
+목표를 달성했을 때는 작은 보상을 주어 동기를 부여하는 것도 큰 효과가 있습니다.
+
+특히 틀린 문제는 왜 틀렸는지 원인을 파악하고 다시 풀어보는 습관이 중요합니다.
+
+이러한 과정을 통해 아이가 스스로 학습을 주도해 나가는 모습을 보면 참 뿌듯합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모들이 자주 하는 실수</h2>
+      <p>아이를 가르치다 보면 무심코 저지르는 실수들이 분명히 존재합니다.
+
+저도 처음에는 조급한 마음에 아이가 이해하지 못하는데도 설명만 늘어놓을 때가 있었어요.
+
+아이의 눈높이에 맞춰주지 못하면 공부에 대한 흥미를 떨어뜨릴 수 있다는 사실을 명심해야 합니다.
+
+친구들과 비교하기보다는 어제의 아이보다 발전한 모습을 칭찬해주는 것이 우선입니다.
+
+때로는 부모가 한 발 물러서서 아이가 스스로 해결책을 찾을 때까지 기다려줘야 합니다.
+
+인내심을 가지고 지켜보는 것이 장기적으로 아이의 학습 능력을 키우는 지름길입니다.</p>
+      <ul class="blog-list">
+        <li>개념 설명 시 구체적인 예시 없이 진행하기</li>
+        <li>속도 위주의 문제 풀이에만 집중하기</li>
+        <li>친구나 형제와 무리하게 비교하기</li>
+        <li>아이의 학습 스타일을 무시한 획일적 지도</li>
+        <li>아이가 피곤할 때 억지로 공부 시키기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>지속 가능한 학습 습관</h2>
+      <p>학업 성취도는 단기간에 오르는 것이 아니라 매일매일의 쌓임에서 나옵니다.
+
+문체와 경우의 수처럼 이해가 필요한 부분은 한 번에 다 알려고 하지 않는 것이 좋습니다.
+
+아이가 힘들어할 때는 잠시 쉬어가면서 긍정적인 에너지를 충전시켜 주세요.
+
+부모님의 믿음과 지지가 아이에게는 가장 큰 힘이 되고 든든한 버팀목이 됩니다.
+
+오늘 하루 아이가 노력한 모습을 인정해주고 따뜻하게 안아주시길 바랍니다.
+
+꾸준함은 무엇이든 이길 수 있다는 확신을 가지고 아이와 함께 동행해 나갑시다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>문체 변용을 쉽게 가르치는 방법은 없나요?</summary>
+            <p class="faq-answer">일상 대화를 활용하여 상황에 따라 말투를 바꿔보는 놀이를 해보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>경우의 수 문제에서 자꾸 실수가 잦습니다.</summary>
+            <p class="faq-answer">조건을 하나씩 체크하며 도표나 나무 그림을 그리는 연습을 하세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>하루에 공부 시간은 얼마나 정해야 할까요?</summary>
+            <p class="faq-answer">아이의 집중력을 고려하여 짧게라도 매일 꾸준히 하는 것이 중요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>좋은 참고서를 추천해 주실 수 있나요?</summary>
+            <p class="faq-answer">기본 개념 설명이 자세한 교과서와 응용 문제가 잘 구성된 문제집을 추천합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 학습에 흥미를 느끼게 하려면 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">아이가 좋아하는 주제나 캐릭터를 학습 소재로 활용하여 관심을 유도해보세요.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

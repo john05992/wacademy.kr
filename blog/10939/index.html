@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연립이차방정식 완벽 정복 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="연립이차방정식 활용 문제 풀이법과 경험을 공유합니다. 자녀 학습에 도움이 되는 팁을 확인하세요.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="연립이차방정식 완벽 정복">
+  <meta property="og:description" content="연립이차방정식 활용 문제 풀이법과 경험을 공유합니다. 자녀 학습에 도움이 되는 팁을 확인하세요.">
+  <meta property="og:url" content="https://wacademy.kr/blog/10939/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="연립이차방정식 완벽 정복">
+  <meta name="twitter:description" content="연립이차방정식 활용 문제 풀이법과 경험을 공유합니다. 자녀 학습에 도움이 되는 팁을 확인하세요.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/10939/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/10939/#article",
+    "headline": "연립이차방정식 완벽 정복",
+    "description": "연립이차방정식 활용 문제 풀이법과 경험을 공유합니다. 자녀 학습에 도움이 되는 팁을 확인하세요.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-16",
+    "dateModified": "2025-11-16",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/10939/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/10939/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "연립이차방정식 완벽 정복"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"대입법과 소거법 중 무엇을 먼저 가르쳐야 하나요?","acceptedAnswer":{"@type":"Answer","text":"문제의 계수를 보고 한 번에 제거할 수 있는지 확인하고 어느 쪽이 더 간단한지 판단하게 하는 것이 좋습니다."}},
+      {"@type":"Question","name":"활용 문제에서 해가 근사값으로 나오는 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"실제 상황에서는 정수로 딱 떨어지지 않는 경우가 많으며 이때는 문제의 조건에 따라 반올림하여 표기합니다."}},
+      {"@type":"Question","name":"그래프를 그리는 것이 너무 느려서 걱정입니다.","acceptedAnswer":{"@type":"Answer","text":"처음에는 정확성을 위해 시간이 걸리지만 노출이 많아질수록 핵심적인 점만 찍어 빠르게 그리는 실력이 생깁니다."}},
+      {"@type":"Question","name":"두 해 모두 조건을 만족하지 않을 때는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"미지수에 대한 제약 조건이 있었는지 다시 한번 확인해보고 식을 세우는 과정에서 실수가 없었는지 점검해야 합니다."}},
+      {"@type":"Question","name":"연립이차방정식 학습에 추천하는 문제집은 있나요?","acceptedAnswer":{"@type":"Answer","text":"기본 문제를 충분히 푼 후에 단계별로 심화 문제가 구성된 교재를 선택하여 개념을 확실하게 다지는 것이 중요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>연립이차방정식 완벽 정복</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">연립이차방정식 완벽 정복</h1>
+      <p class="article-meta-desc">연립이차방정식 활용 문제 풀이법과 경험을 공유합니다. 자녀 학습에 도움이 되는 팁을 확인하세요.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">수학 개념과 일상 연결하기</a></li>
+        <li><a href="#s2">연립이차방정식의 어려움</a></li>
+        <li><a href="#s3">활용 문제 해결 전략</a></li>
+        <li><a href="#s4">효과적인 학습 방법</a></li>
+        <li><a href="#s5">유형별 문제 분석</a></li>
+        <li><a href="#s6">학부모로서 느낀 점</a></li>
+        <li><a href="#s7">실생활 연계 예시</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>수학 개념과 일상 연결하기</h2>
+      <p>수학 공부를 할 때 단순히 암기만 하는 것보다는 개념을 확실히 이해하는 것이 중요하다는 사실을 깨달았습니다.
+
+제가 아이와 함께 공부하면서 느낀 점은 교과서의 정의를 실생활 예시와 연결해보면 훨씬 잘 기억된다는 것입니다.
+
+특히 그래프의 개형을 언덕이나 골짜기에 비유하니 아이가 눈치채지 못하는 사이에 복잡한 공식을 쉽게 받아들이더군요.
+
+이러한 경험을 통해 부모가 먼저 흥미를 가지고 접근해야 아이들이 지루하지 않게 학습할 수 있다는 확신이 들었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>연립이차방정식의 어려움</h2>
+      <p>중학교 수학에서 연립이차방정식은 많은 학생들이 처음 접하는 큰 산과도 같습니다.
+
+단항식이나 일차식과 달리 제곱이 들어가면서 해가 두 개씩 나오는 상황에 당황하는 아이들의 모습을 여러 번 목격했습니다.
+
+저희 집에서도 대입법과 소거법 중 어느 것을 사용해야 더 빨리 풀릴지 고민하다가 시간을 다 보내는 경우가 많았습니다.
+
+이런 문제를 해결하기 위해 문제 유형을 먼저 파악하고 정답을 찾아가는 과정을 차근차근 짚어주는 연습이 반드시 필요하다고 느꼈습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>활용 문제 해결 전략</h2>
+      <p>연립이차방정식 활용 문제는 단순 계산 능력보다는 문장을 수식으로 옮기는 사고력이 가장 중요합니다.
+
+길이를 구하거나 넓이를 구하는 문제가 나올 때 그림을 그리지 않고 식만 세우려다 보니 자꾸 실수가 발생했던 것 같습니다.
+
+저는 아이에게 문제 지문에 나오는 숫자와 미지수를 서로 연결해주는 화살표를 그리도록 지도했습니다.
+
+이 과정을 거치니 두 변수 사이의 관계가 눈에 들어오고 자연스럽게 연립방정식을 세울 수 있게 되었습니다.
+
+실제로 이 방법을 적용한 후에는 복잡한 문제를 보고도 겁을 먹지 않고 차분히 풀어나가는 모습이 보기 좋았습니다.
+
+또한 틀린 문제는 꼭 다시 풀어보게 하여 자신의 취약점을 스스로 찾아낼 수 있도록 독려하고 있습니다.
+
+이러한 꾸준한 훈련만이 응용력을 기르는 지름길이라고 생각합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>효과적인 학습 방법</h2>
+      <p>활용 문제를 잘 풀기 위해서는 몇 가지 습관을 들이는 것이 매우 도움이 됩니다.
+
+저희 아이가 시행착오를 줄이기 위해 실천했던 구체적인 방법들을 정리해 보았습니다.</p>
+      <ul class="blog-list">
+        <li>문제 상황을 도형으로 그리기</li>
+        <li>미지수의 정의역 미리 확인하기</li>
+        <li>구한 해가 문제의 조건에 맞는지 검증하기</li>
+        <li>대입법과 소거 중 편한 방식 선택하기</li>
+        <li>오답 노트를 통한 취약 유형 파악하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>유형별 문제 분석</h2>
+      <p>연립이차방정식 문제는 크게 몇 가지 유형으로 나누어 접근하면 훨씬 효과적으로 대비할 수 있습니다.
+
+각 유형별로 아이가 선호하는 접근 방식이 다르기 때문에 이를 분석하여 맞춤 학습을 시도해 보았습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>그래프 교점 유형</td><td>시각적 사고력</td><td>함수 그래프를 그려 교점의 좌표를 찾는 방식</td></tr>
+        <tr><td>도형 활용 유형</td><td>논리적 사고력</td><td>넓이나 길이의 관계를 식으로 세우는 과정</td></tr>
+        <tr><td>속도 문제 유형</td><td>과정 중심 학습</td><td>시간과 거리 관계를 이용하여 연립식 구성</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모로서 느낀 점</h2>
+      <p>처음에는 아이가 수학을 포기할까 봐 걱정이 앞섰지만 조금씩 개념을 잡아가는 과정을 지켜보니 뿌듯했습니다.
+
+부모가 조급해하기보다는 아이의 페이스에 맞춰 같이 고민해주는 자세가 필요하다고 느꼈습니다.
+
+특히 연립이차방정식처럼 단계가 많은 문제는 틀리더라도 과정을 칭찬해주면 동기부여가 훨씬 잘 됩니다.
+
+이제는 아이가 스스로 어려운 문제를 해결하려고 노력하는 모습을 보며 기특함을 느낍니다.
+
+앞으로도 꾸준한 관심과 격려가 최고의 학습 지원임을 잊지 않을 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>실생활 연계 예시</h2>
+      <p>일상생활 속에서 연립이차방정식의 개념을 찾아보는 놀이를 해보는 것도 큰 도움이 됩니다.
+
+예를 들어 정원의 넓이를 구할 때 가로와 세로의 길이를 변수로 두고 식을 세워보는 식입니다.
+
+이렇게 하면 수학이 실제 삶과 동떨어진 지식이 아니라 유용한 도구라는 것을 인식하게 됩니다.
+
+슈퍼마켓에서 과일을 살 때 개수와 가격을 맞춰보는 활동도 미지수의 개념을 잡는 데 탁월합니다.
+
+아이와 함께 요리하면서 재료의 비율을 맞춰보는 것도 방정식을 이해하는 좋은 기회가 됩니다.
+
+이러한 체험이 쌓이면 교과서 문제가 훨씬 친숙하게 다가오는 효과가 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>대입법과 소거법 중 무엇을 먼저 가르쳐야 하나요?</summary>
+            <p class="faq-answer">문제의 계수를 보고 한 번에 제거할 수 있는지 확인하고 어느 쪽이 더 간단한지 판단하게 하는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>활용 문제에서 해가 근사값으로 나오는 이유는 무엇인가요?</summary>
+            <p class="faq-answer">실제 상황에서는 정수로 딱 떨어지지 않는 경우가 많으며 이때는 문제의 조건에 따라 반올림하여 표기합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>그래프를 그리는 것이 너무 느려서 걱정입니다.</summary>
+            <p class="faq-answer">처음에는 정확성을 위해 시간이 걸리지만 노출이 많아질수록 핵심적인 점만 찍어 빠르게 그리는 실력이 생깁니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>두 해 모두 조건을 만족하지 않을 때는 어떻게 하나요?</summary>
+            <p class="faq-answer">미지수에 대한 제약 조건이 있었는지 다시 한번 확인해보고 식을 세우는 과정에서 실수가 없었는지 점검해야 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>연립이차방정식 학습에 추천하는 문제집은 있나요?</summary>
+            <p class="faq-answer">기본 문제를 충분히 푼 후에 단계별로 심화 문제가 구성된 교재를 선택하여 개념을 확실하게 다지는 것이 중요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

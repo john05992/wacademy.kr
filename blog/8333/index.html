@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모의고사 데이터 활용법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모가 직접 자료를 추출하고 오답률을 분석해 학습 전략을 세우는 실전 팁">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="모의고사 데이터 활용법">
+  <meta property="og:description" content="학부모가 직접 자료를 추출하고 오답률을 분석해 학습 전략을 세우는 실전 팁">
+  <meta property="og:url" content="https://wacademy.kr/blog/8333/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="모의고사 데이터 활용법">
+  <meta name="twitter:description" content="학부모가 직접 자료를 추출하고 오답률을 분석해 학습 전략을 세우는 실전 팁">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/8333/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/8333/#article",
+    "headline": "모의고사 데이터 활용법",
+    "description": "학부모가 직접 자료를 추출하고 오답률을 분석해 학습 전략을 세우는 실전 팁",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-03",
+    "dateModified": "2026-01-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/8333/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/8333/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "모의고사 데이터 활용법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"자료에서 정보 추출은 어떻게 시작하나요?","acceptedAnswer":{"@type":"Answer","text":"먼저 파일을 열고, 필요한 열을 복사한 뒤 필터를 적용합니다."}},
+      {"@type":"Question","name":"오답률 순위는 어떤 기준으로 매기나요?","acceptedAnswer":{"@type":"Answer","text":"오답 개수를 전체 문제수로 나누어 백분율을 구하고, 높은 순서대로 정렬합니다."}},
+      {"@type":"Question","name":"엑셀 없이도 데이터 정리는 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"간단한 텍스트 편집기와 구글 스프레드시트를 활용하면 충분히 가능하다."}},
+      {"@type":"Question","name":"부모가 직접 분석할 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"데이터의 정확성을 확인하고, 중복이나 오류를 제거하는 것이 중요하다."}},
+      {"@type":"Question","name":"아이에게 분석 결과를 어떻게 전달하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"시각적인 그래프와 간단한 설명으로 전달하면 이해도가 높아진다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>모의고사 데이터 활용법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">모의고사 데이터 활용법</h1>
+      <p class="article-meta-desc">학부모가 직접 자료를 추출하고 오답률을 분석해 학습 전략을 세우는 실전 팁</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">자료에서 핵심 정보 추출하기</a></li>
+        <li><a href="#s2">과목별 오답률 순위 매기기</a></li>
+        <li><a href="#s3">추출된 데이터 활용 심화</a></li>
+        <li><a href="#s4">오답률 순위 표 만들기</a></li>
+        <li><a href="#s5">목표 설정과 피드백</a></li>
+        <li><a href="#s6">부모의 역할과 효과</a></li>
+        <li><a href="#s7">지속 가능한 학습 전략</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>자료에서 핵심 정보 추출하기</h2>
+      <p>아침에 아이가 시험 결과 파일을 보여 주었을 때, 나는 먼저 전체 데이터를 화면 캡처로 저장하고 중요한 부분을 표시했다. 그 다음에는 엑셀 프로그램을 열어 각 항목을 열 별로 복사하고, 불필요한 열을 숨겼다. 특히 시간대별 점수와 오답 유형을 분리하는 작업이 핵심이었으며, 이를 위해 필터와 정렬 기능을 활용했다.
+
+나는 직접 셀 서식을 맞추어 가독성을 높였고, 색상을 지정해 시각적으로도 구분이 쉬워졌다. 이 과정에서 데이터 정합성을 확인하기 위해 중복값을 제거하고, 오류를 교정했다. 결과적으로 중요한 학습 패턴을 빠르게 파악할 수 있었으며, 다음 단계 계획을 세우는 데 큰 도움이 되었다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>과목별 오답률 순위 매기기</h2>
+      <p>시험이 끝난 뒤, 나는 바로 채점 결과를 프린트하고, 각 과목별로 틀린 문제를 색칠한 뒤 번호를 메모했다. 각 과목별 오답 비율을 계산하기 위해 백분율 공식과 셀 참조를 활용했다. 그 후 나는 높은 순서대로 표를 만들고, 순위를 그래프로 표시했다.
+
+표를 보니 수학이 가장 높은 수치를 기록했고, 영어가 그 뒤를 이었다. 이러한 순위는 아이가 집중해야 할 부분을 명확히 알려 주었으며, 학습 계획을 재조정하게 만들었다. 결과적으로 아이는 약점 보완에 집중하면서 성적 향상을 경험했다.</p>
+      <ul class="blog-list">
+        <li>수학</li>
+        <li>과학</li>
+        <li>국어</li>
+        <li>영어</li>
+        <li>사회</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>추출된 데이터 활용 심화</h2>
+      <p>주말에 아이와 함께 모의고사 파일을 열었을 때, 화면에 보이는 숫자가 너무 많아 당황했지만 차분히 접근하기로 했다. 그때 전체 데이터를 복사해 텍스트 편집기로 옮긴 뒤, 불필요한 기호를 제거하고 정렬했다. 그 다음에는 정규표현식을 이용해 점수와 오답 번호만 추출하고, 자동으로 목록을 생성했다.
+
+아이의 강점과 약점을 한눈에 파악하려면 과목별 평균을 추가로 계산해야 했으며, 이를 위해 평균 함수를 적용했다. 직접 수식 입력을 통해 평균값을 구하고, 그래프 도구로 시각화했을 때 색상 구분이 패턴 인식을 크게 도와주었다. 이 과정에서 색상 구분을 활용하면 패턴을 더 쉽게 인식할 수 있었고, 분석 결과가 명확해졌다.
+
+결과를 바탕으로 다음 주 학습 계획을 세우니, 아이가 스스로 목표를 설정하고 실행에 옮겼다. 가족 회의에서 모두가 의견을 나눴고, 그때부터 공부 분위기가 크게 달라졌다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>오답률 순위 표 만들기</h2>
+      <p>모의고사 결과를 정리하고 나서, 나는 각 과목의 오답 비율을 비교하면서 전체 흐름을 파악했다. 그때 가장 높은 비율을 보인 과목은 수학이었고, 다음은 과학이었다. 이 정보를 토대로 우선순위 학습 리스트를 만들었으며, 표 형식으로 정리했다.
+
+표에는 구분, 대상, 내용 세 가지 열이 포함돼 있어 한눈에 이해가 쉽다. 예를 들어 구분이 '높음'이면 대상은 해당 과목, 내용은 구체적인 오답 유형이다. 이렇게 체계화하면 아이가 스스로 복습 계획을 세우는 데 큰 도움이 된다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>높음</td><td>수학</td><td>계산 오류</td></tr>
+        <tr><td>중간</td><td>과학</td><td>개념 누락</td></tr>
+        <tr><td>낮음</td><td>영어</td><td>어휘 착오</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>목표 설정과 피드백</h2>
+      <p>아이와 함께 학습 목표를 설정할 때, 구체적인 수치를 제시하면 동기부여가 되며 목표 달성이 뚜렷해진다. 나는 매주 목표 달성률을 체크하고, 작은 성공을 칭찬해 주었으며, 그때마다 기록을 남겼다. 그 결과 아이는 점차 스스로 문제를 풀어내는 습관을 길렀고, 자율 학습 능력이 향상되었다.
+
+학습 시간은 일정하게 유지하되, 휴식 시간을 충분히 배분해 집중력을 유지했다. 또한 오답 노트를 만들어 틀린 문제를 바로 복습하도록 하였고, 정답과 해설을 함께 적었다. 이러한 반복 학습은 장기 기억 형성에 큰 영향을 미치며, 시험 대비 효과를 높였다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모의 역할과 효과</h2>
+      <p>부모로서 가장 큰 보람은 아이가 스스로 성장하는 모습을 보는 것이며, 그 과정에 함께 참여하는 것이 의미 있다. 시험 전날 긴장을 풀어 주기 위해 가벼운 대화를 시도했고, 아이는 마음을 편하게 할 수 있었다. 그때 아이는 불안감이 줄어들고 집중력이 향상되었으며, 시험 중에도 차분함을 유지했다.
+
+나는 매일 저녁 10분씩 복습 시간을 확보하고, 그 시간을 함께 기록했으며, 피드백을 제공했다. 결과적으로 시험 점수가 꾸준히 상승했으며, 자신감도 크게 늘어나 학교 생활 전반에 긍정적인 영향을 주었다. 이 경험을 통해 학습 관리의 중요성을 다시 한 번 깨달았고, 앞으로도 지속적인 지원을 약속한다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>지속 가능한 학습 전략</h2>
+      <p>앞으로도 지속적인 데이터 분석을 통해 맞춤형 학습 전략을 유지할 계획이며, 정기적인 검토를 실시한다. 아이와 함께 목표를 재점검하고, 필요에 따라 전략을 수정할 것이며, 유연성을 확보한다. 이러한 과정이 반복될수록 학습 효율은 자연스럽게 높아지고, 성취감이 쌓인다.
+
+마지막으로 같은 고민을 하는 다른 학부모에게 권하고 싶은 것은 꾸준함이며, 작은 노력도 결실을 맺는다. 작은 데이터라도 꾸준히 기록하면 큰 변화를 만들 수 있으며, 이는 장기적인 성장의 밑거름이 된다. 함께 성장하는 가족이 되길 바라며, 오늘도 응원한다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>자료에서 정보 추출은 어떻게 시작하나요?</summary>
+            <p class="faq-answer">먼저 파일을 열고, 필요한 열을 복사한 뒤 필터를 적용합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답률 순위는 어떤 기준으로 매기나요?</summary>
+            <p class="faq-answer">오답 개수를 전체 문제수로 나누어 백분율을 구하고, 높은 순서대로 정렬합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>엑셀 없이도 데이터 정리는 가능한가요?</summary>
+            <p class="faq-answer">간단한 텍스트 편집기와 구글 스프레드시트를 활용하면 충분히 가능하다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 직접 분석할 때 주의할 점은?</summary>
+            <p class="faq-answer">데이터의 정확성을 확인하고, 중복이나 오류를 제거하는 것이 중요하다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 분석 결과를 어떻게 전달하면 좋을까요?</summary>
+            <p class="faq-answer">시각적인 그래프와 간단한 설명으로 전달하면 이해도가 높아진다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

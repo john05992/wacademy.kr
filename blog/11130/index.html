@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>순환소수, 이렇게 공부하자 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="우리 아이 순환소수 개념 잡기, 경험을 통한 이해법과 유리수 공부 비법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="순환소수, 이렇게 공부하자">
+  <meta property="og:description" content="우리 아이 순환소수 개념 잡기, 경험을 통한 이해법과 유리수 공부 비법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/11130/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="순환소수, 이렇게 공부하자">
+  <meta name="twitter:description" content="우리 아이 순환소수 개념 잡기, 경험을 통한 이해법과 유리수 공부 비법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/11130/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/11130/#article",
+    "headline": "순환소수, 이렇게 공부하자",
+    "description": "우리 아이 순환소수 개념 잡기, 경험을 통한 이해법과 유리수 공부 비법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-13",
+    "dateModified": "2025-11-13",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/11130/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/11130/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "순환소수, 이렇게 공부하자"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"순환소수를 유리수로 바꾸는 법은?","acceptedAnswer":{"@type":"Answer","text":"순환소수에 십이나 백 등을 곱하여 소수점을 이동시킨 뒤 식을 세워 풉니다."}},
+      {"@type":"Question","name":"순환마점은 어디에 찍나요?","acceptedAnswer":{"@type":"Answer","text":"순환하는 숫자의 처음과 끝 부분 위에 점을 찍어서 나타냅니다."}},
+      {"@type":"Question","name":"유한소수와 순환소수 차이는?","acceptedAnswer":{"@type":"Answer","text":"유한소수는 소수점 아래가 끝나지만 순환소수는 무한히 반복됩니다."}},
+      {"@type":"Question","name":"유리수의 범위는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"정수와 분수로 나타낼 수 있는 모든 수를 유리수라고 합니다."}},
+      {"@type":"Question","name":"공부 시간은 얼마나 하나요?","acceptedAnswer":{"@type":"Answer","text":"매일 삼십 분씩이라도 꾸준히 개념을 잡는 것이 가장 중요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>순환소수, 이렇게 공부하자</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">순환소수, 이렇게 공부하자</h1>
+      <p class="article-meta-desc">우리 아이 순환소수 개념 잡기, 경험을 통한 이해법과 유리수 공부 비법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">왜 수학이 갑자기 어려워졌을까</a></li>
+        <li><a href="#s2">개념과 아이의 경험 연결하기</a></li>
+        <li><a href="#s3">유리수와 순환소수의 이해</a></li>
+        <li><a href="#s4">효과적인 학습 방법 정리</a></li>
+        <li><a href="#s5">학부모 후기와 아이의 변화</a></li>
+        <li><a href="#s6">주요 비교 및 확인 사항</a></li>
+        <li><a href="#s7">맺음말 및 드리고 싶은 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>왜 수학이 갑자기 어려워졌을까</h2>
+      <p>중학교에 들어서면서 수학이 급격히 어려워진 것 같아 많이 당황스러웠습니다.
+
+특히 유리수와 순환소수 단원에서 아이가 벽을 느끼고 있다는 것을 알게 되었죠.
+
+저 또한 학창 시절 배웠던 기억이 희미해 아이에게 명쾌하게 설명해 주기가 쉽지 않았습니다.
+
+그래서 직접 교과서와 참고서를 펴들고 아이의 눈높이에 맞춘 설명법을 찾기 시작했습니다.
+
+많은 학부모님들이 저와 비슷한 고민을 하실 것이라 생각하여 저의 경험을 나누고자 합니다.
+
+이 글이 답답해하시는 부모님들께 조금이나마 실질적인 도움이 되기를 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>개념과 아이의 경험 연결하기</h2>
+      <p>유리수를 공부할 때 가장 중요한 핵심은 개념을 아이의 실생활 경험과 연결하는 것입니다.
+
+우리 가족은 주말에 피자를 나눠 먹으면서 이야기를 자연스럽게 꺼내보았습니다.
+
+피자 세 조각을 세 명이 똑같이 나누어 가질 때 각자가 얼마를 먹는지 생각해보라고 했죠.
+
+이 과정을 통해 분수와 소수의 관계를 아이가 스스로 깨닫도록 유도했습니다.
+
+아이는 자신의 경험과 수학 개념이 연결되니 훨씬 더 수월하게 이해하는 모습을 보였습니다.
+
+교과서만 보고 문제를 푸는 것보다 직접 체험하는 학습이 훨씬 효과적이라는 것을 깨달았습니다.
+
+경험을 통한 학습은 아이에게 수학이 재미있는 과목이라는 인식을 심어주었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>유리수와 순환소수의 이해</h2>
+      <p>유리수와 순환소수에 대한 명확한 이해는 고등 수학을 공부하는 데 있어 매우 중요한 기초가 됩니다.
+
+순환소수는 도대체 어떻게 생겨나는 것인지 그 원리를 알게 되면 결코 두렵지 않아요.
+
+나눗셈을 계속하다 보면 어느 순간 나머지가 반복되어 몫이 일정한 패턴으로 나타나는 것을 볼 수 있죠.
+
+이 점을 집중해서 설명해 주니 아이가 더 이상 어렵다고 느끼지 않고 집중하게 되었습니다.
+
+무한히 계속되는 소수점 아래 숫자들이 사실은 일정한 규칙을 가지고 있다는 사실이 아이에게는 신기했나 봅니다.
+
+저는 아이와 함께 직접 계산기를 두드려가며 그 패턴을 눈으로 확인해 보았습니다.
+
+시각적으로 확인하는 과정이 아이의 인지를 돕는 데 큰 도움이 되었으며 이해 속도가 빨라졌습니다.
+
+이제는 순환소수를 보아도 당황하지 않고 분수로 변환할 수 있게 되어 안심이 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>효과적인 학습 방법 정리</h2>
+      <p>아이의 개념을 확실히 잡아주기 위해 저는 몇 가지 구체적이고 실질적인 방법을 사용했습니다.
+
+단순히 암기하게 하는 것보다는 원리를 터득하고 스스로 생각하게 하는 것이 무엇보다 중요합니다.
+
+다음은 저희가 실천했으며 효과를 본 공부 방법들을 정리해 본 것입니다.
+
+이 방법들을 꾸준히 실천하니 아이의 수학 성적뿐만 아니라 태도도 긍정적으로 변했습니다.
+
+어떤 부모님이라면 쉽게 따라 할 수 있는 아주 간단하지만 강력한 팁들입니다.</p>
+      <ul class="blog-list">
+        <li>생활 속 사례 직접 찾아보기</li>
+        <li>나눗셈 원리를 그림으로 그리기</li>
+        <li>계산기로 숫자 패턴 확인하기</li>
+        <li>친구에게 개념 설명해보기</li>
+        <li>매일 짧은 시간 꾸준히 복습하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학부모 후기와 아이의 변화</h2>
+      <p>이러한 방법들을 꾸준히 적용한 후 아이의 태도가 눈에 띄게 긍정적으로 변했습니다.
+
+수학 시간이 무섭지 않다고 오히려 순환소수 문제를 푸는 것이 재미있다고 이야기하더군요.
+
+어려운 문제를 맞히고 나서는 뿌듯한 성취감을 느끼며 자신감을 얻고 있습니다.
+
+저 또한 아이와 함께 머리를 맞대고 공부하면서 수학에 대한 막연한 두려움을 없앴습니다.
+
+부모가 관심을 가지고 곁에서 함께해 주는 것만으로도 아이에게는 큰 힘이 된다는 것을 느꼈습니다.
+
+이제는 시험 문제를 보아도 당황하지 않고 차근차근 문제를 분석하여 풀어내는 모습이 참 보기 좋습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>주요 비교 및 확인 사항</h2>
+      <p>학습 과정에서 아이가 자주 혼동하는 부분들을 정리하여 명확하게 비교해 보았습니다.
+
+서로 다른 개념을 명확히 구분하는 것이 실수를 줄이고 문제 해결 능력을 키우는 길이라고 생각합니다.
+
+다음 표는 유리수와 관련하여 아이가 가장 헷갈려했던 핵심 내용들을 담고 있습니다.
+
+이 표를 보고 한눈에 이해하니 아이가 개념 정리를 훨씬 수월하게 했습니다.
+
+부모님들도 아이에게 설명할 때 이 내용을 참고하시면 큰 도움이 될 것입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>유한소수</td><td>나눗셈 결과</td><td>나누어떨어져서 소수점 아래 자릿수가 한정되는 수</td></tr>
+        <tr><td>순환소수</td><td>나눗셈 결과</td><td>나머지가 반복되어 소수점 아래 숫자가 무한히 반복되는 수</td></tr>
+        <tr><td>분수 표현</td><td>숫자 형태</td><td>두 정수의 비로 나타낼 수 있는 수를 유리수라고 부름</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>맺음말 및 드리고 싶은 조언</h2>
+      <p>수학 공부는 하루아침에 이루어지는 것이 아니라 꾸준한 과정과 인내가 필요합니다.
+
+부모님들도 너무 조급해하지 마시고 아이의 발달 속도에 맞춰 차근차근 이끌어주세요.
+
+저의 작고 소박한 경험이 여러분께도 도움이 되기를 진심으로 바랍니다.
+
+우리 아이들이 수학을 포기하지 않고 즐기면서 공부할 수 있는 날이 곧 올 것입니다.
+
+함께 걸어가는 교육의 길에 여러분도 힘내시길 저는 진심으로 응원하겠습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>순환소수를 유리수로 바꾸는 법은?</summary>
+            <p class="faq-answer">순환소수에 십이나 백 등을 곱하여 소수점을 이동시킨 뒤 식을 세워 풉니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>순환마점은 어디에 찍나요?</summary>
+            <p class="faq-answer">순환하는 숫자의 처음과 끝 부분 위에 점을 찍어서 나타냅니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>유한소수와 순환소수 차이는?</summary>
+            <p class="faq-answer">유한소수는 소수점 아래가 끝나지만 순환소수는 무한히 반복됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>유리수의 범위는 무엇인가요?</summary>
+            <p class="faq-answer">정수와 분수로 나타낼 수 있는 모든 수를 유리수라고 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>공부 시간은 얼마나 하나요?</summary>
+            <p class="faq-answer">매일 삼십 분씩이라도 꾸준히 개념을 잡는 것이 가장 중요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

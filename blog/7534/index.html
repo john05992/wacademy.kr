@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오답과 절댓값 복습법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="오답 유형별 재학습과 절댓값 부등식 풀이를 부모 시각에서 실천하고 효과를 리뷰한 실용 가이드">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="오답과 절댓값 복습법">
+  <meta property="og:description" content="오답 유형별 재학습과 절댓값 부등식 풀이를 부모 시각에서 실천하고 효과를 리뷰한 실용 가이드">
+  <meta property="og:url" content="https://wacademy.kr/blog/7534/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="오답과 절댓값 복습법">
+  <meta name="twitter:description" content="오답 유형별 재학습과 절댓값 부등식 풀이를 부모 시각에서 실천하고 효과를 리뷰한 실용 가이드">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/7534/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/7534/#article",
+    "headline": "오답과 절댓값 복습법",
+    "description": "오답 유형별 재학습과 절댓값 부등식 풀이를 부모 시각에서 실천하고 효과를 리뷰한 실용 가이드",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-17",
+    "dateModified": "2026-01-17",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/7534/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/7534/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "오답과 절댓값 복습법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"오답 노트를 어떻게 만들면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"틀린 문제와 오답 원인을 간단히 적고, 정답 풀이와 핵심 개념을 함께 기록하면 효과적입니다."}},
+      {"@type":"Question","name":"절댓값 부등식을 쉽게 가르치는 방법은?","acceptedAnswer":{"@type":"Answer","text":"거리 개념과 그래프를 활용해 양음 구간을 시각화하면 이해가 빨라집니다."}},
+      {"@type":"Question","name":"반복 학습 주기는 어떻게 잡아야 하나요?","acceptedAnswer":{"@type":"Answer","text":"틀린 문제는 1일, 3일, 7일 간격으로 재풀이하면 기억에 오래 남습니다."}},
+      {"@type":"Question","name":"부모가 직접 풀이를 도와줄 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"정답을 바로 알려주기보다 힌트를 제공해 스스로 생각하도록 유도합니다."}},
+      {"@type":"Question","name":"동기 부여를 위해 어떤 보상이 좋나요?","acceptedAnswer":{"@type":"Answer","text":"작은 스티커, 칭찬 메모, 혹은 주말에 함께 하는 활동 등이 효과적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>오답과 절댓값 복습법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">오답과 절댓값 복습법</h1>
+      <p class="article-meta-desc">오답 유형별 재학습과 절댓값 부등식 풀이를 부모 시각에서 실천하고 효과를 리뷰한 실용 가이드</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">오답 유형 파악과 재구성</a></li>
+        <li><a href="#s2">오답 유형별 재학습 전략</a></li>
+        <li><a href="#s3">절댓값 부등식 단계별 풀이</a></li>
+        <li><a href="#s4">통합 학습 관리와 체크리스트</a></li>
+        <li><a href="#s5">우리 아이의 성장 사례</a></li>
+        <li><a href="#s6">부모가 실천할 수 있는 구체적 방법</a></li>
+        <li><a href="#s7">학습 지속을 위한 동기 부여</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>오답 유형 파악과 재구성</h2>
+      <p>우리 가족은 최근 수학 시험에서 오답이 많이 나오면서 저도 큰 고민에 빠졌습니다. 학원 선생님은 잘못된 문제를 유형별로 분류하고 다시 풀게 하면 이해가 깊어지고 기억에 오래 남는다고 조언해 주셨습니다.
+
+그렇게 하면 같은 실수를 반복적으로 인식하게 되어 학습 효율이 크게 향상된다는 연구 결과도 있다고 들었습니다. 저는 집에서 매일 10분씩 틀린 문제 노트를 활용해 자녀와 함께 문제를 재구성하고 풀이 과정을 설명해 보았습니다. 결과적으로 다음 시험에서는 정확도가 크게 상승했으며 스스로 복습하는 습관도 자연스럽게 자리 잡았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>오답 유형별 재학습 전략</h2>
+      <p>최근 교과서에서 배운 개념을 다시 떠올리면 우리 자녀가 스스로 틀린 이유를 찾기 쉽습니다. 특히 개념이 적용되는 상황을 직접 만들어 보면 이해도가 크게 높아집니다.
+
+그 과정에서 그 학생은 자신의 약점을 정확히 파악하고 보완할 포인트를 명확히 인식하게 됩니다. 저는 매주 한 번씩 유형별 문제집을 골라 우리 자녀와 함께 풀면서 피드백 시간을 갖습니다.</p>
+      <ul class="blog-list">
+        <li>오답 노트 정리</li>
+        <li>유형별 문제 재시도</li>
+        <li>해설 영상 시청</li>
+        <li>교사와 토론</li>
+        <li>자기 진단 테스트</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>절댓값 부등식 단계별 풀이</h2>
+      <p>우리 가족은 수학 시간에 절댓값 부등식이 등장할 때마다 아이가 혼란스러워하는 모습을 자주 목격했습니다. 교과서에서는 절댓값을 양쪽에 분리하고 경우의 수를 고려하라고 설명하지만, 실제 문제에서는 그 과정이 복잡하게 얽혀 있어 쉽게 놓치기 쉽습니다.
+
+그때마다 저는 그 학생에게 절댓값을 거리 개념으로 비유하고, 좌표축에 그래프를 그리며 시각적으로 이해시키는 방법을 적용해 보았습니다. 특히 양수와 음수 구간을 서로 다른 색으로 채워 보여 주면 그 학생이 각각의 구간에서 부등식이 어떻게 변하는지 직관적으로 파악하게 됩니다.
+
+결과적으로 그 학생은 복잡한 절댓값 부등식도 단계별로 차근차근 풀어 나가며 자신감을 얻었고, 이후 시험에서는 높은 점수를 기록하는 성과를 나타냈습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>통합 학습 관리와 체크리스트</h2>
+      <p>최근에는 오답 유형별 재학습과 절댓값 부등식 풀이를 동시에 진행하는 통합 학습법을 시도해 보았습니다. 학원에서는 각 단계마다 목표를 명확히 설정하고, 우리 자녀가 스스로 점검할 수 있는 체크리스트를 제공한다고 합니다.
+
+그 결과 그 학생은 두 개념을 연계하여 생각하게 되면서 문제 해결 능력이 전반적으로 향상되었습니다. 저는 집에서 진행 상황을 기록하고, 필요할 때마다 그 아이에게 추가 설명을 덧붙입니다.
+
+이러한 체계적인 관리 덕분에 우리 아이는 학습 부담을 줄이고 꾸준히 목표를 달성해 나가고 있습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>1단계</td><td>오답 분석</td><td>틀린 문제를 유형별로 분류하고 핵심 개념을 재점검한다</td></tr>
+        <tr><td>2단계</td><td>절댓값 부등식</td><td>양음 구간을 나누어 그래프와 함께 단계별로 풀이한다</td></tr>
+        <tr><td>3단계</td><td>통합 복습</td><td>유형별 문제와 부등식 연습을 교차하여 반복 학습을 강화한다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>우리 아이의 성장 사례</h2>
+      <p>우리 아이는 지난 학기부터 오답 노트를 활용한 반복 학습을 시작한 뒤 눈에 띄는 변화를 보였습니다. 특히 절댓값 부등식 문제를 다룰 때 자신감이 크게 상승했으며, 스스로 답을 검증하는 습관도 생겼습니다.
+
+그 과정에서 저는 매일 짧은 피드백 시간을 마련해 그 학생이 어려운 부분을 즉시 질문하도록 독려했습니다. 결과적으로 전체 수학 성적이 평균보다 높은 점수를 유지했고, 학습에 대한 흥미도 지속적으로 높아졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모가 실천할 수 있는 구체적 방법</h2>
+      <p>부모는 자녀가 오답을 기록할 때 구체적인 오류 원인을 함께 적도록 지도하면 효과적입니다. 또한 절댓값 부등식 풀이 시 그래프용 종이를 준비하고, 색연필을 활용해 구간을 구분하도록 도와줍니다.
+
+그때마다 그 학생과 함께 풀이 과정을 설명하고, 비슷한 유형의 문제를 추가로 제공해 반복 연습을 유도합니다. 저는 주말마다 짧은 퀴즈를 만들어 그 학생이 스스로 점수를 매기게 함으로써 자기 주도 학습을 촉진합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학습 지속을 위한 동기 부여</h2>
+      <p>아이에게 작은 목표를 설정하고 달성할 때마다 칭찬과 보상을 주면 지속적인 동기 부여가 됩니다. 학원에서는 목표 달성 스티커를 제공하지만, 가정에서는 직접 만든 포인트 카드를 활용해도 좋습니다.
+
+그 결과 아이는 학습을 놀이처럼 느끼며 자연스럽게 시간을 투자하게 됩니다. 저는 매일 학습 일지를 함께 쓰며 아이의 노력을 눈에 보이게 기록하고, 주간 회고 시간을 갖습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>오답 노트를 어떻게 만들면 좋나요?</summary>
+            <p class="faq-answer">틀린 문제와 오답 원인을 간단히 적고, 정답 풀이와 핵심 개념을 함께 기록하면 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>절댓값 부등식을 쉽게 가르치는 방법은?</summary>
+            <p class="faq-answer">거리 개념과 그래프를 활용해 양음 구간을 시각화하면 이해가 빨라집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>반복 학습 주기는 어떻게 잡아야 하나요?</summary>
+            <p class="faq-answer">틀린 문제는 1일, 3일, 7일 간격으로 재풀이하면 기억에 오래 남습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 직접 풀이를 도와줄 때 주의할 점은?</summary>
+            <p class="faq-answer">정답을 바로 알려주기보다 힌트를 제공해 스스로 생각하도록 유도합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>동기 부여를 위해 어떤 보상이 좋나요?</summary>
+            <p class="faq-answer">작은 스티커, 칭찬 메모, 혹은 주말에 함께 하는 활동 등이 효과적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

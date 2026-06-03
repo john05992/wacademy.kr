@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>틀린 문제와 이항계수 활용 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="틀린 문제를 과정 재구성으로 복습하고, 이항계수 성질을 이해해 수학 학습 효율을 높이는 방법을 부모 시각에서 제시합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="틀린 문제와 이항계수 활용">
+  <meta property="og:description" content="틀린 문제를 과정 재구성으로 복습하고, 이항계수 성질을 이해해 수학 학습 효율을 높이는 방법을 부모 시각에서 제시합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3670/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="틀린 문제와 이항계수 활용">
+  <meta name="twitter:description" content="틀린 문제를 과정 재구성으로 복습하고, 이항계수 성질을 이해해 수학 학습 효율을 높이는 방법을 부모 시각에서 제시합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3670/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3670/#article",
+    "headline": "틀린 문제와 이항계수 활용",
+    "description": "틀린 문제를 과정 재구성으로 복습하고, 이항계수 성질을 이해해 수학 학습 효율을 높이는 방법을 부모 시각에서 제시합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-28",
+    "dateModified": "2026-03-28",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3670/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3670/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "틀린 문제와 이항계수 활용"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"왜 틀린 문제를 다시 풀어야 하나요?","acceptedAnswer":{"@type":"Answer","text":"오답을 재구성하면 사고 과정이 명확해져 같은 실수를 예방할 수 있습니다."}},
+      {"@type":"Question","name":"이항계수는 어디에 쓰이나요?","acceptedAnswer":{"@type":"Answer","text":"조합, 확률, 통계 등 다양한 분야에서 경우의 수를 계산할 때 핵심 도구가 됩니다."}},
+      {"@type":"Question","name":"파스칼 삼각형을 어떻게 활용하나요?","acceptedAnswer":{"@type":"Answer","text":"각 행을 직접 그리며 대칭성과 합성 법칙을 체험하면 공식 암기가 쉬워집니다."}},
+      {"@type":"Question","name":"오답 노트를 어떻게 관리하면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"날짜, 오류 유형, 정답을 함께 기록하고 주간 복습 시 확인하면 효과적입니다."}},
+      {"@type":"Question","name":"부모가 수학 공부를 도와줄 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"정답만 알려주기보다 질문을 통해 스스로 답을 찾도록 유도하는 것이 중요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>틀린 문제와 이항계수 활용</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">틀린 문제와 이항계수 활용</h1>
+      <p class="article-meta-desc">틀린 문제를 과정 재구성으로 복습하고, 이항계수 성질을 이해해 수학 학습 효율을 높이는 방법을 부모 시각에서 제시합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">틀린 문제 재구성의 필요성</a></li>
+        <li><a href="#s2">이항계수 기본 개념</a></li>
+        <li><a href="#s3">이항계수의 대칭성과 파스칼 삼각형</a></li>
+        <li><a href="#s4">틀린 문제 재구성 실천 팁</a></li>
+        <li><a href="#s5">이항계수 핵심 개념 정리</a></li>
+        <li><a href="#s6">실전 적용 사례</a></li>
+        <li><a href="#s7">부모가 할 수 있는 지원 방법</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>틀린 문제 재구성의 필요성</h2>
+      <p>저는 우리 자녀가 수학 시험에서 틀린 문제를 단순히 답만 확인하는 방식을 바꾸고 싶었습니다.
+
+우리 딸은 오답을 다시 풀면서 왜 틀렸는지 과정을 살펴보는 것이 기억에 오래 남는다고 말했습니다.
+
+많은 학부모는 정답만 알려주면 즉시 점수가 오를 것이라 생각하지만 실제 이해는 깊어지지 않습니다.
+
+교사는 문제를 다시 제시하고 풀이 단계별로 재구성하도록 유도하면 사고력 향상이 가능하다고 조언합니다.
+
+전문가들은 오류 유형을 분류하고 비슷한 상황을 만들어 연습하게 하면 재발을 방지할 수 있다고 강조합니다.
+
+다른 사람들은 이 절차를 일주일에 한 번씩 정리하도록 습관화하면 학습 효율이 눈에 띄게 상승한다는 경험을 공유했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>이항계수 기본 개념</h2>
+      <p>저는 이항계수의 정의가 조합론의 기본이라고 생각합니다.
+
+우리 아들은 nCk 를 n!/(k!(nk)!) 로 표현한다는 식을 처음 배울 때 놀라움을 표현했습니다.
+
+많은 학부모는 이 식이 복잡해 보여 포기하지만 실제 적용 사례를 보면 이해가 쉬워집니다.
+
+교사는 이항계수를 활용한 확률 문제를 제시하면서 단계별로 설명하면 학생들의 흥미가 올라간다고 말합니다.
+
+전문가들은 이 개념이 이산수학과 통계학 전반에 걸쳐 핵심 역할을 한다고 강조합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>이항계수의 대칭성과 파스칼 삼각형</h2>
+      <p>저는 이항계수의 대칭성인 nCk = nC(nk) 를 일상적인 예시와 연결하면 기억에 오래 남는다고 믿습니다.
+
+우리 딸은 사과와 바나나를 각각 선택하는 경우의 수를 생각하면서 대칭성을 몸으로 체험했습니다.
+
+많은 학부모는 대칭성을 단순히 공식으로만 외우지만 실제 물건을 나눠 보는 활동을 하면 직관이 생깁니다.
+
+교사는 파스칼 삼각형을 칠판에 그리면서 각 행이 이전 행의 합으로 구성된다는 사실을 강조합니다.
+
+전문가들은 파스칼 삼각형의 각 숫자가 바로 이항계수이며, 이를 활용하면 조합 문제를 빠르게 풀 수 있다고 조언합니다.
+
+다른 사람들은 이 삼각형을 색칠하고 패턴을 찾는 놀이를 통해 아이들이 스스로 규칙을 발견하도록 돕습니다.
+
+학생은 이러한 시각적 접근이 추상적인 수식보다 실제 상황에 적용하기 쉬워 학습 동기가 크게 상승한다는 결론을 내렸습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>틀린 문제 재구성 실천 팁</h2>
+      <p>저는 매일 저녁 30분을 투자해 오답 노트를 정리하는 습관을 들였습니다.
+
+우리 아들은 틀린 문제를 다시 풀 때 핵심 개념을 한 문장으로 요약하도록 지도받았습니다.
+
+많은 학부모는 아이가 스스로 오류 원인을 찾게 하는 질문법이 효과적이라고 말합니다.
+
+교사는 재구성 과정에서 단계별 힌트를 제공하면 학생의 자신감이 크게 향상된다고 강조합니다.</p>
+      <ul class="blog-list">
+        <li>오답 노트에 날짜와 오류 유형 기록</li>
+        <li>핵심 개념을 그림으로 변환</li>
+        <li>유사 문제 3개 추가 풀이</li>
+        <li>스스로 설명하는 녹음 활용</li>
+        <li>주간 복습 시간 확보</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>이항계수 핵심 개념 정리</h2>
+      <p>저는 파스칼 삼각형을 활용해 이항계수의 기본 구조를 시각적으로 이해하려고 노력했습니다.
+
+우리 딸은 각 행의 좌우 대칭을 관찰하면서 nCk와 nC(nk)의 동등함을 체감했습니다.
+
+많은 학부모는 이 표를 보며 조합 문제 풀이에 적용하는 방법을 쉽게 익힐 수 있다고 의견을 제시합니다.
+
+교사는 표의 각 셀에 해당하는 식을 적어 보게 하면 공식 암기가 자연스럽게 이루어진다고 전합니다.
+
+전문가들은 파스칼 삼각형이 확률과 통계에서 중요한 역할을 한다며 실생활 예시와 연결하라고 권고합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>정의</td><td>초등 고학년</td><td>nCk = n!/(k!(nk)!)</td></tr>
+        <tr><td>대칭성</td><td>중학교</td><td>nCk = nC(nk)</td></tr>
+        <tr><td>파스칼 삼각형</td><td>고등학생</td><td>각 행은 이전 행 두 수의 합</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>실전 적용 사례</h2>
+      <p>저는 아이가 실제 시험에서 이항계수 활용 문제를 풀 때 자신감이 크게 상승한 것을 목격했습니다.
+
+우리 아들은 확률 게임을 설계하면서 조합 공식이 실생활에 어떻게 쓰이는지 설명했습니다.
+
+많은 학부모는 이런 경험이 수학에 대한 흥미를 높여 장기적인 학습 동기를 부여한다고 말합니다.
+
+교사는 학생들이 팀 프로젝트로 경우의 수를 계산하도록 지도하면 협업 능력도 동시에 향상된다고 강조합니다.
+
+전문가들은 실제 데이터 분석 예시를 통해 이항계수가 데이터 과학 입문에 필수라고 주장합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>부모가 할 수 있는 지원 방법</h2>
+      <p>저는 가정에서 정기적인 복습 시간을 마련하고 학습 목표를 함께 설정했습니다.
+
+우리 딸은 스스로 목표를 기록하고 달성 여부를 체크하면서 자기 주도 학습을 실천했습니다.
+
+많은 학부모는 온라인 강의와 교재를 적절히 혼합해 학습 부담을 줄이는 전략을 사용합니다.
+
+교사는 부모와의 소통을 통해 학습 진행 상황을 공유하고 맞춤형 피드백을 제공한다고 권장합니다.
+
+전문가들은 학습 환경을 조용하고 정돈된 공간으로 유지하는 것이 집중력 향상에 크게 기여한다고 조언합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>왜 틀린 문제를 다시 풀어야 하나요?</summary>
+            <p class="faq-answer">오답을 재구성하면 사고 과정이 명확해져 같은 실수를 예방할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이항계수는 어디에 쓰이나요?</summary>
+            <p class="faq-answer">조합, 확률, 통계 등 다양한 분야에서 경우의 수를 계산할 때 핵심 도구가 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>파스칼 삼각형을 어떻게 활용하나요?</summary>
+            <p class="faq-answer">각 행을 직접 그리며 대칭성과 합성 법칙을 체험하면 공식 암기가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답 노트를 어떻게 관리하면 좋나요?</summary>
+            <p class="faq-answer">날짜, 오류 유형, 정답을 함께 기록하고 주간 복습 시 확인하면 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 수학 공부를 도와줄 때 주의할 점은?</summary>
+            <p class="faq-answer">정답만 알려주기보다 질문을 통해 스스로 답을 찾도록 유도하는 것이 중요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

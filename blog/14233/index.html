@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모의고사 복습과 이항계수 활용법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="확신 없는 문항 복습 우선순위와 이항계수 이해를 통해 학부모가 자녀 학습을 효율적으로 돕는 실전 팁을 제공합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="모의고사 복습과 이항계수 활용법">
+  <meta property="og:description" content="확신 없는 문항 복습 우선순위와 이항계수 이해를 통해 학부모가 자녀 학습을 효율적으로 돕는 실전 팁을 제공합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/14233/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="모의고사 복습과 이항계수 활용법">
+  <meta name="twitter:description" content="확신 없는 문항 복습 우선순위와 이항계수 이해를 통해 학부모가 자녀 학습을 효율적으로 돕는 실전 팁을 제공합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/14233/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/14233/#article",
+    "headline": "모의고사 복습과 이항계수 활용법",
+    "description": "확신 없는 문항 복습 우선순위와 이항계수 이해를 통해 학부모가 자녀 학습을 효율적으로 돕는 실전 팁을 제공합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-09-18",
+    "dateModified": "2025-09-18",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/14233/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/14233/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "모의고사 복습과 이항계수 활용법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"확신 없음 표시를 어떻게 해석해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"표시된 문제는 개념 이해가 부족하거나 적용 능력이 약한 영역으로 판단해 우선 복습 대상에 포함합니다."}},
+      {"@type":"Question","name":"우선순위 정하는 기준은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"오답률, 난이도, 학생 자신감 표시를 종합해 높은 점수를 받은 순으로 정합니다."}},
+      {"@type":"Question","name":"이항계수는 어떤 상황에 활용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"조합 문제, 확률 계산, 경우의 수 세는 모든 수학 문제에 적용할 수 있습니다."}},
+      {"@type":"Question","name":"복습 시간은 하루에 얼마 정도가 적당한가요?","acceptedAnswer":{"@type":"Answer","text":"학생 집중력에 따라 30~45분을 권장하고, 중간에 짧은 휴식을 넣어 효율을 높입니다."}},
+      {"@type":"Question","name":"추가 학습 자료는 어디서 구할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"공교육 교재, 온라인 강의, 문제집의 심화 섹션을 활용하면 효과적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>모의고사 복습과 이항계수 활용법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">모의고사 복습과 이항계수 활용법</h1>
+      <p class="article-meta-desc">확신 없는 문항 복습 우선순위와 이항계수 이해를 통해 학부모가 자녀 학습을 효율적으로 돕는 실전 팁을 제공합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">확신 없음 표시가 의미하는 것</a></li>
+        <li><a href="#s2">복습 우선순위 선정 기준</a></li>
+        <li><a href="#s3">실제 적용 사례와 효과</a></li>
+        <li><a href="#s4">우선순위별 복습 체크리스트</a></li>
+        <li><a href="#s5">이항계수 성질과 학습 연계</a></li>
+        <li><a href="#s6">학부모가 주의할 점</a></li>
+        <li><a href="#s7">다음 단계와 지속 관리</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>확신 없음 표시가 의미하는 것</h2>
+      <p>우리 아이는 모의고사에서 확신이 없는 문제에 별표를 그리며, 왜 틀렸는지 스스로 설명하기 어려워했습니다. 교사는 그 표시가 현재 학습 수준과 개념 이해 차이를 파악하는 중요한 지표라고 설명했습니다.
+
+전문가가 권장하는 첫 단계는 오답률이 높은 영역을 통계적으로 분석해 우선순위를 매기는 것입니다. 학부모는 그 결과를 바탕으로 일주일에 두 번씩 집중 학습 시간을 별도로 배정하기로 계획했습니다.
+
+학생은 직접 만든 체크리스트에 해당 문제를 적고, 풀 때마다 메모를 남기는 습관이 동기 부여에 도움이 된다고 말했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>복습 우선순위 선정 기준</h2>
+      <p>교과 교사는 시험 결과를 토대로 핵심 개념과 응용 문제를 구분했습니다. 학습지도자는 오답 빈도와 학생의 자신감 표시를 함께 고려해 순위를 매겼습니다.
+
+전문가가 시간 제한과 난이도 조합을 분석해 효율적인 복습 순서를 제시했습니다. 학부모는 자녀의 일상 생활과 연계된 예시를 찾아 적용하기로 했습니다.
+
+학생은 스스로 만든 우선순위표를 활용해 매일 목표를 설정했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실제 적용 사례와 효과</h2>
+      <p>우리 가족은 실제로 우선순위에 따라 복습 계획을 실행해 보았습니다. 교사는 매주 진행 상황을 점검하며 피드백을 제공했습니다.
+
+전문가가 제시한 학습 주기와 휴식 비율을 적용한 결과, 집중력이 눈에 띄게 향상되었습니다. 학부모는 자녀가 어려워하는 개념을 시각 자료와 함께 설명하면서 이해도가 크게 늘었다고 전했습니다.
+
+학생은 매일 정해진 시간에 복습을 마치고, 퀴즈 형식으로 스스로 시험을 보며 자신감을 회복했습니다. 교육관계자는 장기적으로 이러한 체계적인 복습이 성적 상승뿐 아니라 문제 해결 능력에도 긍정적인 영향을 미친다고 평가했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>우선순위별 복습 체크리스트</h2>
+      <p>우리 아이는 체크리스트를 활용해 복습 과정을 시각화했습니다. 교사는 각 항목에 대해 예상 소요 시간을 함께 제시했습니다.
+
+전문가가 권장하는 순서는 기본 정의 정리  대표 예제 풀이  오답 노트 작성  유사 문제 추가 연습  시간 제한 모의고사 형태이다. 학부모는 아이가 체크를 완료할 때마다 작은 보상을 주기로 했습니다.
+
+학생은 완료 표시를 할 때마다 성취감이 크게 상승했습니다.</p>
+      <ul class="blog-list">
+        <li>핵심 정의 정리</li>
+        <li>대표 예제 풀이</li>
+        <li>오답 노트 작성</li>
+        <li>유사 문제 추가 연습</li>
+        <li>시간 제한 모의고사</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>이항계수 성질과 학습 연계</h2>
+      <p>우리 아이는 이항계수의 기본 형태를 배우면서 조합 개념에 흥미를 가졌습니다. 교사는 파스칼 삼각형을 활용해 시각적으로 이해시키는 방식을 도입했습니다.
+
+전문가가 강조한 핵심은 계수의 대칭성과 합계 규칙을 실제 문제에 적용하는 것입니다. 학부모는 일상 생활 속 예시, 예를 들어 사과와 바나나 선택 상황을 들어 설명했습니다.
+
+학생은 이러한 연계를 통해 수학적 사고가 넓어졌다고 평가했습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>대칭성</td><td>조합 문제</td><td>nCk = nC(n-k) 활용</td></tr>
+        <tr><td>합계</td><td>전체 경우의 수</td><td>k=0^n nCk = 2^n</td></tr>
+        <tr><td>재귀</td><td>다음 단계</td><td>nCk = (n-1)C(k-1) + (n-1)Ck</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모가 주의할 점</h2>
+      <p>우리 가족은 복습 과정에서 과도한 부담을 피하기 위해 휴식 시간을 꼭 확보했습니다. 교사는 적절한 난이도 조절이 필요하다고 조언했습니다.
+
+전문가가 제시한 위험 요소는 지나친 반복과 목표 미설정이다. 학부모는 아이의 감정 변화를 관찰하며 유연하게 계획을 수정했습니다.
+
+학생은 스스로 스트레스를 관리하는 방법을 배우면서 학습 효율이 높아졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>다음 단계와 지속 관리</h2>
+      <p>우리 아이는 이번 복습을 마친 뒤 다음 학기 목표를 새롭게 설정했습니다. 교사는 장기적인 학습 로드맵을 제시하며 단계별 검증을 강조했습니다.
+
+전문가가 추천하는 지속 관리 방법은 주기적인 자기 평가와 피드백 수용이다. 학부모는 정기적인 학습 회의를 통해 진행 상황을 공유했습니다.
+
+학생은 스스로 목표 달성 여부를 기록하며 자기 주도 학습 능력이 강화되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>확신 없음 표시를 어떻게 해석해야 하나요?</summary>
+            <p class="faq-answer">표시된 문제는 개념 이해가 부족하거나 적용 능력이 약한 영역으로 판단해 우선 복습 대상에 포함합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>우선순위 정하는 기준은 무엇인가요?</summary>
+            <p class="faq-answer">오답률, 난이도, 학생 자신감 표시를 종합해 높은 점수를 받은 순으로 정합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이항계수는 어떤 상황에 활용할 수 있나요?</summary>
+            <p class="faq-answer">조합 문제, 확률 계산, 경우의 수 세는 모든 수학 문제에 적용할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>복습 시간은 하루에 얼마 정도가 적당한가요?</summary>
+            <p class="faq-answer">학생 집중력에 따라 30~45분을 권장하고, 중간에 짧은 휴식을 넣어 효율을 높입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>추가 학습 자료는 어디서 구할 수 있나요?</summary>
+            <p class="faq-answer">공교육 교재, 온라인 강의, 문제집의 심화 섹션을 활용하면 효과적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

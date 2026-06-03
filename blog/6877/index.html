@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수학 귀납법과 노트 활용 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모 눈높이에서 수학적 귀납법 증명 방법과 교과서 핵심 개념 정리 노트를 실천적으로 소개합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="수학 귀납법과 노트 활용 가이드">
+  <meta property="og:description" content="학부모 눈높이에서 수학적 귀납법 증명 방법과 교과서 핵심 개념 정리 노트를 실천적으로 소개합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/6877/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="수학 귀납법과 노트 활용 가이드">
+  <meta name="twitter:description" content="학부모 눈높이에서 수학적 귀납법 증명 방법과 교과서 핵심 개념 정리 노트를 실천적으로 소개합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/6877/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/6877/#article",
+    "headline": "수학 귀납법과 노트 활용 가이드",
+    "description": "학부모 눈높이에서 수학적 귀납법 증명 방법과 교과서 핵심 개념 정리 노트를 실천적으로 소개합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-29",
+    "dateModified": "2026-01-29",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/6877/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/6877/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "수학 귀납법과 노트 활용 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"귀납법을 처음 배우는 아이에게 어떻게 설명하면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"구체적인 사례와 그림을 활용해 단계별로 보여주면 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"노트를 정리할 때 필요한 도구는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"색연필, 포스트잇, 구분된 페이지가 효과적입니다."}},
+      {"@type":"Question","name":"학부모가 함께 할 수 있는 연습 문제는 어디서 찾나요?","acceptedAnswer":{"@type":"Answer","text":"학교 교과서 뒷부분이나 교육청 제공 자료에 많이 실려 있습니다."}},
+      {"@type":"Question","name":"아이의 동기 부여가 떨어질 때는 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"작은 성공 경험을 기록하고 칭찬해 주는 것이 도움이 됩니다."}},
+      {"@type":"Question","name":"정리 노트를 오래 보관하려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"폴더에 보관하거나 디지털 스캔본을 만들어 백업해 두세요."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>수학 귀납법과 노트 활용 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">수학 귀납법과 노트 활용 가이드</h1>
+      <p class="article-meta-desc">학부모 눈높이에서 수학적 귀납법 증명 방법과 교과서 핵심 개념 정리 노트를 실천적으로 소개합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">귀납법이란 무엇인가</a></li>
+        <li><a href="#s2">귀납법 적용 단계</a></li>
+        <li><a href="#s3">실제 문제 풀이와 증명 연습</a></li>
+        <li><a href="#s4">핵심 개념 정리 방법</a></li>
+        <li><a href="#s5">노트 작성 팁과 예시</a></li>
+        <li><a href="#s6">자녀와 함께 하는 학습 루틴</a></li>
+        <li><a href="#s7">성공 사례와 실천 조언</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>귀납법이란 무엇인가</h2>
+      <p>저는 초등학교 5학년 아들을 둔 학부모로, 최근 수학 교과서에서 처음 접한 귀납법에 대해 고민했습니다. 우리 아이는 증명 과정을 직관적으로 이해하려고 애쓰면서도 막막함을 호소했죠.
+
+많은 학부모들이 비슷한 상황을 겪으며, 올바른 접근법을 찾는 것이 중요하다는 의견을 공유합니다. 전문가들은 단계별 설명과 구체적 예시가 학습 효과를 높인다고 조언합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>귀납법 적용 단계</h2>
+      <p>우리 가족은 먼저 문제의 기본 형태를 파악하는 것을 루틴으로 삼았습니다. 아이에게 처음 단계는 n=1일 때 성립 여부를 직접 확인하도록 지도했어요.
+
+다음으로 가정 단계에서는 일반적인 n값을 가정하고 논리를 전개하도록 격려했습니다. 마지막 결론에서는 전체 범위가 만족함을 명확히 표현하게 했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실제 문제 풀이와 증명 연습</h2>
+      <p>저는 실제 시험 문제를 활용해 아이와 함께 귀납법 증명을 연습하면서, 학습 동기를 크게 끌어올릴 수 있었습니다. 우리 아이는 구체적인 수열 예시를 통해 추론 과정을 눈으로 확인하는 것이 큰 도움이 되었다고 말했어요.
+
+많은 학부모가 겪는 어려움은 추상적인 정의를 바로 적용하기 어렵다는 점인데, 우리는 그림과 표를 병행하여 시각화했습니다. 전문가들은 이러한 시각적 도구가 논리적 흐름을 잡아주는 역할을 한다고 강조합니다.
+
+아이와 함께 단계별로 검증하면서, 작은 실수 하나가 전체 증명을 무너뜨릴 수 있다는 점을 체험적으로 깨달았습니다. 이 경험을 통해 스스로 오류를 찾아 고치는 능력이 향상되었으며, 다음 학기에도 지속적으로 활용할 계획입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>핵심 개념 정리 방법</h2>
+      <p>우리 아이는 교과서 각 단원의 핵심 개념을 정리하면서, 전체 구조를 한눈에 파악하는 것이 학습 효율을 높인다고 느꼈습니다. 많은 학부모가 강조하는 포인트는 핵심 용어와 정의를 색상별로 구분하는 것이죠.
+
+전문가들은 이러한 정리 노트가 장기 기억에 도움이 된다고 조언합니다. 아이와 함께 표를 만들며, 중요한 예제와 반례를 함께 기록하는 습관을 길렀습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>정의</td><td>수열</td><td>공통된 규칙 파악</td></tr>
+        <tr><td>정리</td><td>정리</td><td>증명 단계 요약</td></tr>
+        <tr><td>예제</td><td>문제</td><td>대표 문제 풀이</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>노트 작성 팁과 예시</h2>
+      <p>저는 아이와 함께 노트를 꾸밀 때, 페이지마다 제목을 크게 적고 핵심 키워드를 강조합니다. 우리 아이는 색연필을 활용해 정의와 정리를 구분하는 것을 즐깁니다.
+
+많은 학부모가 말하듯, 짧은 요약과 그림을 곁들이면 복습 시 효율이 상승합니다. 전문가들은 꾸준한 기록이 사고력을 강화한다는 점을 강조합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>자녀와 함께 하는 학습 루틴</h2>
+      <p>우리 가족은 매주 금요일 저녁을 정해, 수학 귀납법과 핵심 개념을 복습하는 시간을 가집니다. 아이와 함께 퀴즈 형식으로 서로 질문을 주고받으며, 학습을 게임처럼 즐깁니다.
+
+많은 학부모가 일관된 스케줄이 성취감을 높인다고 보고합니다. 전문가들은 짧은 복습이 장기 기억에 효과적이라고 설명합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>성공 사례와 실천 조언</h2>
+      <p>저는 아이가 스스로 학습 목표를 설정하도록 돕는 것이 중요하다고 생각합니다. 우리 아이는 매일 작은 목표를 적고 달성했을 때 큰 만족감을 느낍니다.
+
+많은 학부모가 이런 습관이 자기주도 학습에 큰 도움이 된다고 전합니다. 전문가들은 구체적인 행동 계획이 지속적인 동기를 부여한다고 말합니다.</p>
+      <ul class="blog-list">
+        <li>시간 관리</li>
+        <li>문제 선택</li>
+        <li>오답 정리</li>
+        <li>복습 계획</li>
+        <li>성취 기록</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>귀납법을 처음 배우는 아이에게 어떻게 설명하면 좋나요?</summary>
+            <p class="faq-answer">구체적인 사례와 그림을 활용해 단계별로 보여주면 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>노트를 정리할 때 필요한 도구는 무엇인가요?</summary>
+            <p class="faq-answer">색연필, 포스트잇, 구분된 페이지가 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 함께 할 수 있는 연습 문제는 어디서 찾나요?</summary>
+            <p class="faq-answer">학교 교과서 뒷부분이나 교육청 제공 자료에 많이 실려 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이의 동기 부여가 떨어질 때는 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">작은 성공 경험을 기록하고 칭찬해 주는 것이 도움이 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>정리 노트를 오래 보관하려면 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">폴더에 보관하거나 디지털 스캔본을 만들어 백업해 두세요.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

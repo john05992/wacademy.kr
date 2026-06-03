@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빈도부사와 확률, 부모의 실전 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="항상과 확률 개념을 아이에게 쉽게 전달하는 방법과 실제 경험을 공유합니다">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="빈도부사와 확률, 부모의 실전 가이드">
+  <meta property="og:description" content="항상과 확률 개념을 아이에게 쉽게 전달하는 방법과 실제 경험을 공유합니다">
+  <meta property="og:url" content="https://wacademy.kr/blog/4069/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="빈도부사와 확률, 부모의 실전 가이드">
+  <meta name="twitter:description" content="항상과 확률 개념을 아이에게 쉽게 전달하는 방법과 실제 경험을 공유합니다">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/4069/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/4069/#article",
+    "headline": "빈도부사와 확률, 부모의 실전 가이드",
+    "description": "항상과 확률 개념을 아이에게 쉽게 전달하는 방법과 실제 경험을 공유합니다",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-21",
+    "dateModified": "2026-03-21",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/4069/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/4069/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "빈도부사와 확률, 부모의 실전 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"항상이라는 빈도부사는 언제 쓰면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"아이에게 일상에서 반복되는 행동을 강조하고 싶을 때 사용합니다."}},
+      {"@type":"Question","name":"확률을 아이에게 쉽게 설명하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"동전이나 색깔 카드를 활용해 실제로 결과를 관찰하게 하면 직관적으로 이해됩니다."}},
+      {"@type":"Question","name":"두 개념을 동시에 가르칠 때 주의점은?","acceptedAnswer":{"@type":"Answer","text":"용어 혼동을 피하려면 각각의 의미를 명확히 구분하고, 예시를 구체적으로 제시해야 합니다."}},
+      {"@type":"Question","name":"학습 효과를 높이는 피드백 방법은?","acceptedAnswer":{"@type":"Answer","text":"즉시 긍정적인 언어로 구체적인 행동을 칭찬하면 동기 부여가 강화됩니다."}},
+      {"@type":"Question","name":"가정에서 지속적으로 활용할 수 있는 활동은?","acceptedAnswer":{"@type":"Answer","text":"매일 식사 시간이나 놀이 시간에 '항상'과 확률을 적용한 짧은 대화를 나누는 것이 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>빈도부사와 확률, 부모의 실전 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">빈도부사와 확률, 부모의 실전 가이드</h1>
+      <p class="article-meta-desc">항상과 확률 개념을 아이에게 쉽게 전달하는 방법과 실제 경험을 공유합니다</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">always 를 가르치는 5가지 실전 팁</a></li>
+        <li><a href="#s2">확률 개념 이해를 돕는 단계</a></li>
+        <li><a href="#s3">항상과 확률을 동시에 활용하는 교실 활동</a></li>
+        <li><a href="#s4">실제 사례: 아이의 말하기 습관 변화</a></li>
+        <li><a href="#s5">확률 학습이 가져다 준 일상 변화</a></li>
+        <li><a href="#s6">부모가 기억해야 할 핵심 포인트</a></li>
+        <li><a href="#s7">다음 단계와 장기 목표</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>always 를 가르치는 5가지 실전 팁</h2>
+      <p>저는 아들 교육에서 항상이라는 빈도부사를 일상 대화에 자연스럽게 끼워 넣으려 노력합니다. 다음주 학습 계획을 세울 때는 예시 문장을 직접 만들어 보았습니다. 저는 매일 저녁 식사 시간에 짧게 복습해 주면서 자연스러운 반복을 강조했습니다.
+
+그 과정에서 아이는 반복적인 행동을 인지하고 스스로 적용하는 모습을 보여 주었습니다. 특히 놀이 시간에 규칙을 만들면서 언제든지 같은 행동을 선택하도록 유도했습니다.
+
+결과적으로 아이는 '항상'이라는 말의 의미를 감각적으로 체득하게 되었으며, 학습 동기도 상승했습니다.</p>
+      <ul class="blog-list">
+        <li>일관된 예문을 매일 한 번씩 말하기</li>
+        <li>시각적 카드에 always 를 써서 눈에 띄게 두기</li>
+        <li>구체적인 행동과 연결해 의미 강조하기</li>
+        <li>아이와 함께 퀴즈를 만들어 복습하기</li>
+        <li>성공 경험을 칭찬으로 강화하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>확률 개념 이해를 돕는 단계</h2>
+      <p>우리 집에서는 확률 개념을 일상 사건과 연결해 설명합니다. 처음엔 무작위라는 단어가 낯설었지만, 간단한 게임을 통해 감을 잡게 했습니다. 그때마다 동전이나 색깔 카드를 뽑아 결과를 기록하도록 했습니다.
+
+그 후에는 실제 물건을 뽑는 활동으로 1/3, 1/4 같은 수치를 직접 체험했습니다. 아이 스스로 결과를 예측하고 기록하면서 통계적 사고가 서서히 형성되었습니다.
+
+마지막으로 일주일에 한 번은 확률 이야기를 가족 회의에서 공유하며 지속적인 학습을 유지합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기본</td><td>초등 저학년</td><td>확률은 전체 중에서 일어날 가능성이라고 설명</td></tr>
+        <tr><td>시각화</td><td>초등 고학년</td><td>동전 던지기 실험으로 1/2을 직접 확인</td></tr>
+        <tr><td>응용</td><td>중학생</td><td>일상 사례를 들어 30%와 같은 수치를 해석</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>항상과 확률을 동시에 활용하는 교실 활동</h2>
+      <p>저는 두 개념을 연결해 아이들이 자연스럽게 사고의 폭을 넓히길 원합니다. 한 주에 한 번은 '항상'을 포함한 문장을 만들고, 그 빈도와 확률을 함께 계산해 보는 시간을 가집니다. 이때 학생들은 자신이 만든 문장에 대해 실제 생활에서 일어날 가능성을 추정해 보게 됩니다.
+
+그 과정에서 아이는 문장의 의미와 동시에 사건이 일어날 가능성을 수치로 표현하는 법을 익힙니다. 특히 교실 앞에 큰 차트를 놓고 전체 학생이 제시한 예시를 모아 시각화하면 흥미가 배가 됩니다.
+
+다음 단계에서는 각 예시가 실제 생활에서 얼마나 자주 일어나는지를 토론하고, 확률 값을 추정합니다. 이렇게 하면 '항상'이라는 단어가 단순히 반복을 의미하는 것이 아니라, 확률적 관점에서도 의미가 있음을 깨닫게 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>실제 사례: 아이의 말하기 습관 변화</h2>
+      <p>우리 딸은 처음에 '항상'을 남용해 의미를 흐리게 쓰곤 했습니다. 그때 저는 정확한 상황에만 사용하도록 작은 메모를 붙여 주었습니다. 또한 매일 저녁엔 그날 사용한 예시를 함께 검토하며 올바른 사용을 강조했습니다.
+
+며칠 지나자 문장을 고쳐 쓰는 빈도가 눈에 띄게 늘어났습니다. 그 결과 대화가 더욱 명확해지고, 선생님도 긍정적인 피드백을 주셨습니다.
+
+이 경험을 통해 빈도부사의 정확한 사용이 학습 효과와 자신감 향상에 큰 역할을 한다는 것을 실감했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>확률 학습이 가져다 준 일상 변화</h2>
+      <p>아들은 주말에 가족 게임을 할 때 확률을 직접 적용해 보았습니다. 그때마다 승패가 무작위가 아니라 어느 정도 예측 가능하다는 사실에 놀라워했습니다. 우리는 결과를 기록하고 다음 라운드에서 전략을 바꾸며 확률의 의미를 체험했습니다.
+
+또한 학교 숙제에서 '가능성'을 묻는 문제를 스스로 풀어내며 자신감을 얻었습니다. 결과적으로 수학 시간에 집중도가 높아지고, 전체 성적도 상승하는 효과를 보았습니다.
+
+이러한 변화는 확률 개념이 일상 속에서도 실용적이라는 인식을 심어 주었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모가 기억해야 할 핵심 포인트</h2>
+      <p>가정에서는 반복적인 연습보다 의미 있는 적용을 강조해야 합니다. 아이와 함께 예시를 만들 때는 구체적인 상황을 선택해 주세요. 예를 들어, 매일 아침 식사 준비를 할 때 '항상'이라는 단어를 사용해 보는 것이 좋습니다.
+
+학습 도구로는 카드, 동전, 작은 물건 등을 활용하면 효과적입니다. 피드백은 즉시 긍정적인 언어로 전달해 동기 부여를 유지하세요.
+
+마지막으로 꾸준히 관찰하고 조정하는 과정이 장기적인 성공을 보장합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>다음 단계와 장기 목표</h2>
+      <p>앞으로는 '항상'과 확률을 통합한 프로젝트를 진행해 볼 계획입니다. 예를 들어, 매일 기록하는 일기에서 두 개념을 동시에 평가하도록 설계합니다. 이때 아이는 스스로 목표를 설정하고 달성 여부를 수치화해 반성할 수 있게 됩니다.
+
+이 과정에서 아이는 자기 주도 학습 능력을 키우고, 추론 능력도 향상될 것입니다. 교사와 협력해 학교에서도 비슷한 활동을 확대하면 더욱 큰 효과를 기대할 수 있습니다.
+
+궁극적으로는 일상 언어와 수학적 사고가 자연스럽게 연결되는 학습 환경을 만드는 것이 목표입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>항상이라는 빈도부사는 언제 쓰면 좋을까요?</summary>
+            <p class="faq-answer">아이에게 일상에서 반복되는 행동을 강조하고 싶을 때 사용합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>확률을 아이에게 쉽게 설명하는 방법은?</summary>
+            <p class="faq-answer">동전이나 색깔 카드를 활용해 실제로 결과를 관찰하게 하면 직관적으로 이해됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>두 개념을 동시에 가르칠 때 주의점은?</summary>
+            <p class="faq-answer">용어 혼동을 피하려면 각각의 의미를 명확히 구분하고, 예시를 구체적으로 제시해야 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 효과를 높이는 피드백 방법은?</summary>
+            <p class="faq-answer">즉시 긍정적인 언어로 구체적인 행동을 칭찬하면 동기 부여가 강화됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>가정에서 지속적으로 활용할 수 있는 활동은?</summary>
+            <p class="faq-answer">매일 식사 시간이나 놀이 시간에 '항상'과 확률을 적용한 짧은 대화를 나누는 것이 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

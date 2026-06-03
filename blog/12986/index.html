@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>재난 대비와 확률분포 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="재난 대비 실천과 확률분포 교육을 통해 아이와 함께 안전 매뉴얼을 만들고 위험을 객관적으로 이해하는 방법을 소개합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="재난 대비와 확률분포">
+  <meta property="og:description" content="재난 대비 실천과 확률분포 교육을 통해 아이와 함께 안전 매뉴얼을 만들고 위험을 객관적으로 이해하는 방법을 소개합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/12986/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="재난 대비와 확률분포">
+  <meta name="twitter:description" content="재난 대비 실천과 확률분포 교육을 통해 아이와 함께 안전 매뉴얼을 만들고 위험을 객관적으로 이해하는 방법을 소개합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/12986/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/12986/#article",
+    "headline": "재난 대비와 확률분포",
+    "description": "재난 대비 실천과 확률분포 교육을 통해 아이와 함께 안전 매뉴얼을 만들고 위험을 객관적으로 이해하는 방법을 소개합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-10-10",
+    "dateModified": "2025-10-10",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/12986/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/12986/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "재난 대비와 확률분포"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"재난 대비 물품을 언제 교체해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"전문가들은 최소 1년 주기로 유통기한과 기능을 점검하라고 권합니다."}},
+      {"@type":"Question","name":"확률분포를 아이에게 쉽게 설명하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"동전 던지기나 주사위 굴리기와 같은 놀이를 활용하면 직관적으로 이해시킬 수 있습니다."}},
+      {"@type":"Question","name":"가정에서 가장 먼저 준비해야 할 비상용품은?","acceptedAnswer":{"@type":"Answer","text":"물과 비상식량, 손전등, 응급키트, 그리고 휴대용 충전기를 우선 순위에 두세요."}},
+      {"@type":"Question","name":"재난 시 대피 경로를 어떻게 정하면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"집 안의 여러 출구를 확인하고, 가장 가까운 안전 장소와 연결된 경로를 미리 표시해 두세요."}},
+      {"@type":"Question","name":"확률분포와 실제 재난 위험은 얼마나 연결돼 있나요?","acceptedAnswer":{"@type":"Answer","text":"통계적으로 나타난 발생 빈도를 확률분포로 나타내면 위험 수준을 객관적으로 파악할 수 있습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>재난 대비와 확률분포</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">재난 대비와 확률분포</h1>
+      <p class="article-meta-desc">재난 대비 실천과 확률분포 교육을 통해 아이와 함께 안전 매뉴얼을 만들고 위험을 객관적으로 이해하는 방법을 소개합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">재난 대비의 첫걸음, 가정 내 체크리스트</a></li>
+        <li><a href="#s2">재난 대비 필수 아이템 5가지</a></li>
+        <li><a href="#s3">확률분포 개념을 아이와 함께 배우기</a></li>
+        <li><a href="#s4">재난 위험과 확률분포 비교</a></li>
+        <li><a href="#s5">일상 속 재난 교육 실천법</a></li>
+        <li><a href="#s6">확률분포를 활용한 재난 시뮬레이션</a></li>
+        <li><a href="#s7">부모와 아이가 함께 만드는 안전 매뉴얼</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>재난 대비의 첫걸음, 가정 내 체크리스트</h2>
+      <p>우리 가족은 매년 초에 비상용품을 점검하고 보관 위치를 다시 확인합니다. 저는 아이들에게 물과 음식, 손전등을 포함한 기본 키트를 직접 보여주며 사용법을 설명합니다.
+
+우리 아이는 비상시 대피 경로를 지도에 표시하고 가족과 함께 연습하는 것을 즐깁니다. 부모로서 가장 중요한 역할은 위기 상황에서도 침착함을 유지하며 아이들에게 안정감을 주는 것입니다.
+
+전문가 조언에 따르면 지역 재난센터와 연계하면 신속한 정보 전달과 지원을 받을 수 있다고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>재난 대비 필수 아이템 5가지</h2>
+      <p>저는 매년 재난 대비 물품을 재정비하면서 어떤 것이 진짜 필요한지 고민합니다. 우리 가족은 휴대용 비상식량을 선택할 때 유통기한과 영양 균형을 가장 중요하게 생각합니다.
+
+부모로서 물병은 가볍고 내구성이 뛰어난 제품을 고르는 것이 실용적입니다. 전문가 조언에 따르면 다목적 라이트는 배터리 수명이 길고 밝기 조절이 가능한 것이 좋다고 합니다.
+
+교육 현장에서는 응급키트와 배터리 충전기를 함께 준비하면 갑작스러운 정전에도 대비할 수 있다고 강조합니다.</p>
+      <ul class="blog-list">
+        <li>휴대용 비상식량</li>
+        <li>휴대용 물병</li>
+        <li>다목적 라이트</li>
+        <li>휴대용 응급키트</li>
+        <li>배터리 충전기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>확률분포 개념을 아이와 함께 배우기</h2>
+      <p>학교에서는 확률분포를 설명할 때 실생활 예시를 들어 아이들의 흥미를 유도합니다. 저는 재난 위험을 가능성으로 수치화하면 아이가 위험 수준을 직관적으로 이해할 수 있다고 생각합니다.
+
+우리 아이는 동전 던지기 실험을 통해 성공과 실패의 비율을 눈으로 확인하는 것을 좋아합니다. 부모로서 통계 그래프를 그려보며 평균과 표준편차 개념을 쉽게 설명하려 노력합니다.
+
+전문가 조언에 따르면 정규분포는 많은 사건이 평균값 주변에 모여 있다는 특징을 가지고 있습니다. 교육 전문가는 데이터 샘플을 늘릴수록 분포가 더 명확해진다고 강조합니다.
+
+지역사회는 재난 발생 빈도를 기록하고 이를 위험도 차트로 시각화하면 대비 계획을 세우는 데 도움이 됩니다. 우리 가족은 매월 위험 지수를 검토하며 높은 위험 수준 구간에 대비책을 강화합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>재난 위험과 확률분포 비교</h2>
+      <p>우리 가족은 지진 재난을 고려해 가구 고정과 비상대피 계획을 세웠습니다. 저는 홍수 대비를 위해 학교와 연계한 물품 보관소를 확인합니다.
+
+부모로서 산불 위협 지역에서는 대피로와 소방 시설 위치를 미리 파악합니다. 전문가 조언에 따르면 각 재난별 발생 가능성을 확률분포로 분석하면 대비 효율이 높아진다고 합니다.
+
+교육 현장에서는 이러한 데이터를 활용해 학생들에게 위험 관리 교육을 진행합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>지진</td><td>가정</td><td>발생 가능성은 연 0.03, 피해 규모는 중대</td></tr>
+        <tr><td>홍수</td><td>학교</td><td>발생 가능성은 연 0.07, 대비 필요</td></tr>
+        <tr><td>산불</td><td>지역사회</td><td>발생 가능성은 연 0.02, 신속 대응 필요</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>일상 속 재난 교육 실천법</h2>
+      <p>학교에서는 매주 한 번씩 재난 대피 훈련을 실시하여 아이들의 기억을 강화합니다. 저는 집에서 비상시 행동을 게임 형식으로 연습시키며 즐거움을 더합니다.
+
+우리 아이는 물건을 빠르게 챙기는 연습을 통해 위기 상황에서의 신속성을 익힙니다. 부모로서 가정 내 모든 방에 비상용품 위치를 표시한 지도를 부착합니다.
+
+전문가 조언에 따르면 일상적인 반복 학습이 실제 재난 발생 시 침착하게 대처할 수 있게 한다고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>확률분포를 활용한 재난 시뮬레이션</h2>
+      <p>교육 현장에서는 확률분포 데이터를 기반으로 재난 시뮬레이션을 진행합니다. 저는 아이와 함께 가상의 지진 발생 빈도를 입력하고 결과를 그래프로 확인합니다.
+
+우리 아이는 시뮬레이션 결과가 높은 지역을 집중적으로 공부하며 대비 계획을 세웁니다. 부모로서 시뮬레이션을 통해 위험도가 높은 시나리오를 미리 검토합니다.
+
+전문가 조언에 따르면 이러한 모의 훈련은 실제 재난 시 대응 능력을 크게 향상시킨다고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>부모와 아이가 함께 만드는 안전 매뉴얼</h2>
+      <p>학교에서는 학생들이 직접 안전 매뉴얼을 작성하도록 지도합니다. 저는 가정에서 아이와 함께 각 방별 비상구와 탈출 경로를 그림으로 표시합니다.
+
+우리 아이는 매뉴얼에 적힌 체크리스트를 매달 확인하며 습관을 형성합니다. 부모로서 매뉴얼 내용이 최신인지 정기적으로 업데이트합니다.
+
+전문가 조언에 따르면 공동으로 만든 매뉴얼은 위기 상황에서 실행률을 높인다고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>재난 대비 물품을 언제 교체해야 하나요?</summary>
+            <p class="faq-answer">전문가들은 최소 1년 주기로 유통기한과 기능을 점검하라고 권합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>확률분포를 아이에게 쉽게 설명하는 방법은?</summary>
+            <p class="faq-answer">동전 던지기나 주사위 굴리기와 같은 놀이를 활용하면 직관적으로 이해시킬 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>가정에서 가장 먼저 준비해야 할 비상용품은?</summary>
+            <p class="faq-answer">물과 비상식량, 손전등, 응급키트, 그리고 휴대용 충전기를 우선 순위에 두세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>재난 시 대피 경로를 어떻게 정하면 좋나요?</summary>
+            <p class="faq-answer">집 안의 여러 출구를 확인하고, 가장 가까운 안전 장소와 연결된 경로를 미리 표시해 두세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>확률분포와 실제 재난 위험은 얼마나 연결돼 있나요?</summary>
+            <p class="faq-answer">통계적으로 나타난 발생 빈도를 확률분포로 나타내면 위험 수준을 객관적으로 파악할 수 있습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

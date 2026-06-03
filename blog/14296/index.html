@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복소수와 문법 노트, 학부모 실전 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="복소수 절댓값 이해와 교과서 단원별 문법 정리 노트 제작을 통해 아이 학습 효율을 높인 실제 후기와 실천 팁을 제공">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="복소수와 문법 노트, 학부모 실전 가이드">
+  <meta property="og:description" content="복소수 절댓값 이해와 교과서 단원별 문법 정리 노트 제작을 통해 아이 학습 효율을 높인 실제 후기와 실천 팁을 제공">
+  <meta property="og:url" content="https://wacademy.kr/blog/14296/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="복소수와 문법 노트, 학부모 실전 가이드">
+  <meta name="twitter:description" content="복소수 절댓값 이해와 교과서 단원별 문법 정리 노트 제작을 통해 아이 학습 효율을 높인 실제 후기와 실천 팁을 제공">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/14296/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/14296/#article",
+    "headline": "복소수와 문법 노트, 학부모 실전 가이드",
+    "description": "복소수 절댓값 이해와 교과서 단원별 문법 정리 노트 제작을 통해 아이 학습 효율을 높인 실제 후기와 실천 팁을 제공",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-09-17",
+    "dateModified": "2025-09-17",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/14296/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/14296/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "복소수와 문법 노트, 학부모 실전 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"복소수 절댓값을 아이에게 어떻게 설명하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"좌표평면에서 원점과 점 사이의 거리로 비유하고, 색종이와 실제 거리 측정 활동을 함께 하면 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"문법 정리 노트를 만들 때 가장 중요한 포인트는?","acceptedAnswer":{"@type":"Answer","text":"핵심 정의와 예시를 구분하고, 색을 활용해 시각적으로 구분하는 것이 효과적입니다."}},
+      {"@type":"Question","name":"노트 만들기에 얼마만큼 시간을 투자해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"주 1회, 30분 정도를 정해 꾸준히 업데이트하면 충분합니다."}},
+      {"@type":"Question","name":"아이의 학습 동기를 어떻게 유지할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"작은 성취를 칭찬하고, 함께 목표를 설정해 진행 상황을 공유하면 동기 부여가 됩니다."}},
+      {"@type":"Question","name":"교과서를 활용한 복습 방법이 궁금합니다.","acceptedAnswer":{"@type":"Answer","text":"핵심 포인트를 색으로 강조하고, 질문-답변 형식으로 스스로 테스트해 보는 것이 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>복소수와 문법 노트, 학부모 실전 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">복소수와 문법 노트, 학부모 실전 가이드</h1>
+      <p class="article-meta-desc">복소수 절댓값 이해와 교과서 단원별 문법 정리 노트 제작을 통해 아이 학습 효율을 높인 실제 후기와 실천 팁을 제공</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">복소수 절댓값, 왜 중요한가요?</a></li>
+        <li><a href="#s2">단원별 문법 정리 노트 만들기의 장점</a></li>
+        <li><a href="#s3">복소수 절댓값을 쉽게 설명하는 방법</a></li>
+        <li><a href="#s4">노트 만들기에 필요한 도구와 팁</a></li>
+        <li><a href="#s5">실제 활용 사례: 우리 아이의 성적 향상</a></li>
+        <li><a href="#s6">오류를 줄이는 체크리스트</a></li>
+        <li><a href="#s7">학부모가 알아야 할 교과서 활용법</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>복소수 절댓값, 왜 중요한가요?</h2>
+      <p>우리 아이가 중학교 수학에서 복소수 절댓값 개념을 처음 접했을 때, 이해가 어려워 눈물을 흘리던 모습을 보았습니다. 학부모 입장에서 바로 해결책을 찾기 위해 교과서를 꼼꼼히 살펴보았고, 교과서에 제시된 정의와 예시가 실제 생활과 연결되지 않아 막막함을 느꼈습니다. 다행히 온라인 교육 커뮤니티에서 같은 고민을 가진 부모님들의 조언을 얻어, 시각적인 도구와 일상적인 비유를 활용하기로 결심했습니다.
+
+그 결과 아이는 복소수의 크기를 거리 개념으로 받아들일 수 있었고, 점차 자신감을 되찾았습니다. 가정 학습 시간에 직접 만든 색칠 카드와 간단한 실험을 곁들여 설명했을 때, 아이의 눈빛이 반짝이며 이해가 깊어지는 것을 확인했습니다. 이 경험은 학부모가 수학 개념을 생활 속 예시와 연결할 때 큰 효과가 있다는 사실을 새롭게 깨닫게 해 주었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>단원별 문법 정리 노트 만들기의 장점</h2>
+      <p>교과서의 복잡한 문법 설명을 한눈에 정리하면 아이가 전체 흐름을 파악하기 쉬워집니다. 직접 손으로 적는 과정에서 중요한 포인트가 머릿속에 자연스럽게 새겨지고, 반복 학습 효과가 증대됩니다. 또한 정리 노트를 활용해 시험 전 빠르게 복습할 수 있어 시간 효율성이 크게 향상됩니다.
+
+가족이 함께 노트를 만들면 대화가 늘어나고, 아이는 스스로 질문을 만들며 사고력을 키웁니다. 제가 직접 색을 구분해가며 정리한 결과, 아이는 문법 실수가 눈에 띄게 감소했고, 교사로부터 칭찬을 받는 경우가 많아졌습니다. 이러한 긍정적인 변화를 보며, 학부모가 직접 참여하는 학습 보조의 가치를 다시 한 번 실감했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>복소수 절댓값을 쉽게 설명하는 방법</h2>
+      <p>복소수의 절댓값을 거리로 비유하면 개념이 훨씬 친숙해집니다. 평면 위의 한 점에서 원점까지의 거리를 생각하듯이 설명하면, 아이는 좌표와 거리 개념을 연결해 자연스럽게 이해합니다. 저는 집에 있는 색종이를 활용해 좌표축을 그린 뒤, 복소수의 실수부와 허수부를 색으로 표시했습니다.
+
+그 다음, 색종이 위에 작은 원을 그려 원점과 해당 점 사이의 거리를 직접 측정하게 했습니다. 아이는 손으로 직접 거리를 재는 활동을 통해 절댓값이 단순히 수식이 아니라 실제 길이와 같다는 느낌을 받았습니다. 이 과정에서 아이는 스스로 문제를 풀어보며 자신감을 얻었고, 교과서 문제에서도 비슷한 방식으로 접근하게 되었습니다. 결과적으로 복소수 절댓값에 대한 두려움이 사라지고, 수학 전반에 대한 흥미가 크게 상승했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>노트 만들기에 필요한 도구와 팁</h2>
+      <p>색펜, 포스트잇, 작은 스티커 등 시각적 요소가 풍부한 도구를 준비하면 정리 과정이 즐거워집니다. 각 단원마다 색을 정해두면, 복습 시 색만 보고도 해당 내용을 떠올릴 수 있어 기억력이 강화됩니다. 저는 한 주에 한 번씩 정리 시간을 정해, 아이와 함께 노트를 검토하고 보완하는 습관을 만들었습니다.
+
+노트를 만들 때는 핵심 정의와 예시를 별도로 구분해 적고, 어려운 부분은 질문 형태로 남겨두면 나중에 스스로 답을 찾는 데 도움이 됩니다. 또한 교과서 페이지 번호와 연관된 노트 페이지를 표시해 두면, 필요할 때 바로 찾을 수 있어 효율성이 높아집니다. 이러한 작은 습관들이 쌓여 아이의 학습 능력이 눈에 띄게 향상되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>실제 활용 사례: 우리 아이의 성적 향상</h2>
+      <p>복소수 절댓값과 문법 정리 노트를 꾸준히 활용한 뒤, 아이는 중간고사에서 수학 점수가 평균 15점 상승했습니다. 특히 복소수 파트에서 완전한 이해를 바탕으로 응용 문제까지 스스로 해결하는 모습을 보여 교사에게도 좋은 평가를 받았습니다. 문법 부분에서도 오답률이 크게 감소해, 작문 시험에서 높은 점수를 획득했습니다.
+
+아이 스스로 노트가 있으면 언제든 복습할 수 있어 안심된다는 말을 할 정도로 자신감을 얻었습니다. 저 역시 아이와 함께 학습 계획을 세우며, 목표 달성의 기쁨을 공유하는 시간이 늘어났습니다. 이러한 경험은 학부모와 자녀 모두에게 학습의 즐거움을 다시 일깨워 주었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>오류를 줄이는 체크리스트</h2>
+      <p>학습 과정에서 흔히 발생하는 실수를 사전에 방지하기 위해 체크리스트를 활용하면 큰 도움이 됩니다. 아래 항목들을 하나씩 확인하면서 노트를 보완하면, 개념 누락이나 오해를 최소화할 수 있습니다.
+
+</p>
+      <ul class="blog-list">
+        <li>핵심 정의를 한 줄로 요약</li>
+        <li>예시를 그림으로 표시</li>
+        <li>오답 노트를 별도 작성</li>
+        <li>복습 주기를 일정하게 유지</li>
+        <li>스스로 만든 퀴즈로 시험 대비</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모가 알아야 할 교과서 활용법</h2>
+      <p>교과서를 단순히 읽는 것이 아니라, 아이와 함께 질문을 만들고 답을 찾아가는 활동을 하면 이해도가 크게 높아집니다. 저는 매 페이지마다 왜 이렇게 설명했을까?라는 질문을 던지고, 아이와 함께 토론하는 방식을 적용했습니다. 이렇게 하면 아이는 능동적으로 사고하고, 교과서 내용이 머릿속에 깊이 자리 잡게 됩니다.
+
+또한 교과서의 핵심 포인트를 노트에 옮길 때는 색을 달리해 구분하고, 중요한 부분에 스티커를 붙여 시각적 강조를 합니다. 이러한 방법은 시험 전 빠른 복습과 장기 기억에 큰 도움이 됩니다. 아래 표는 제가 실제로 활용한 교과서 활용법을 정리한 것입니다.
+
+</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>핵심</td><td>학생</td><td>핵심 개념을 강조하여 기억 강화</td></tr>
+        <tr><td>예시</td><td>부모</td><td>실생활 비유로 설명하여 이해도 상승</td></tr>
+        <tr><td>복습</td><td>전체</td><td>주기적인 검토로 장기 기억 확보</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>복소수 절댓값을 아이에게 어떻게 설명하면 좋을까요?</summary>
+            <p class="faq-answer">좌표평면에서 원점과 점 사이의 거리로 비유하고, 색종이와 실제 거리 측정 활동을 함께 하면 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>문법 정리 노트를 만들 때 가장 중요한 포인트는?</summary>
+            <p class="faq-answer">핵심 정의와 예시를 구분하고, 색을 활용해 시각적으로 구분하는 것이 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>노트 만들기에 얼마만큼 시간을 투자해야 하나요?</summary>
+            <p class="faq-answer">주 1회, 30분 정도를 정해 꾸준히 업데이트하면 충분합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이의 학습 동기를 어떻게 유지할 수 있나요?</summary>
+            <p class="faq-answer">작은 성취를 칭찬하고, 함께 목표를 설정해 진행 상황을 공유하면 동기 부여가 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>교과서를 활용한 복습 방법이 궁금합니다.</summary>
+            <p class="faq-answer">핵심 포인트를 색으로 강조하고, 질문-답변 형식으로 스스로 테스트해 보는 것이 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

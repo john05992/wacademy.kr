@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수학 문학 핵심 요약 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="복소수 절댓값 계산법과 서술 시제에 따른 거리감 조절법을 학부모 시점으로 정리한 실질적인 공부 팁입니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="수학 문학 핵심 요약">
+  <meta property="og:description" content="복소수 절댓값 계산법과 서술 시제에 따른 거리감 조절법을 학부모 시점으로 정리한 실질적인 공부 팁입니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/8644/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="수학 문학 핵심 요약">
+  <meta name="twitter:description" content="복소수 절댓값 계산법과 서술 시제에 따른 거리감 조절법을 학부모 시점으로 정리한 실질적인 공부 팁입니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/8644/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/8644/#article",
+    "headline": "수학 문학 핵심 요약",
+    "description": "복소수 절댓값 계산법과 서술 시제에 따른 거리감 조절법을 학부모 시점으로 정리한 실질적인 공부 팁입니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-12-28",
+    "dateModified": "2025-12-28",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/8644/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/8644/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "수학 문학 핵심 요약"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"복소수 절댓값을 너무 어려워해요","acceptedAnswer":{"@type":"Answer","text":"평면 위에 좌표를 직접 찍어보면서 원점부터의 거리를 눈으로 확인하는 연습을 해보세요."}},
+      {"@type":"Question","name":"서술 시제가 구체적으로 뭔가요","acceptedAnswer":{"@type":"Answer","text":"이야기를 전달하는 화자의 시간적 배경을 설정하여 독자가 느끼는 현장감과 거리를 조절하는 문법 기법입니다."}},
+      {"@type":"Question","name":"수학과 국어를 동시에 공부해도 되나요","acceptedAnswer":{"@type":"Answer","text":"이과적 사고와 문과적 사고를 번갈아 가며 훈련하면 뇌의 피로도를 줄이고 전체적인 집중력을 높이는 데 효과적입니다."}},
+      {"@type":"Question","name":"내신 평가 대비 어떻게 해야 하나요","acceptedAnswer":{"@type":"Answer","text":"교과서 개념을 완벽히 이해한 후 학교 선생님이 내주신 프린트와 기출 문제 위주로 깊이 있게 공부하세요."}},
+      {"@type":"Question","name":"아이가 포기하려 할 때 어떻게 하나요","acceptedAnswer":{"@type":"Answer","text":"아주 쉬운 문제를 맞히며 작은 성취감을 느끼게 해주고 '잘하고 있다'는 구체적인 칭찬으로 자존감을 세워주세요."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>수학 문학 핵심 요약</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">수학 문학 핵심 요약</h1>
+      <p class="article-meta-desc">복소수 절댓값 계산법과 서술 시제에 따른 거리감 조절법을 학부모 시점으로 정리한 실질적인 공부 팁입니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">고등 수학 문법의 벽</a></li>
+        <li><a href="#s2">복소수 절댓값의 이해</a></li>
+        <li><a href="#s3">수학 학습 노하우 정리</a></li>
+        <li><a href="#s4">서술 시제의 활용법</a></li>
+        <li><a href="#s5">시제와 거리감의 관계</a></li>
+        <li><a href="#s6">두 과목 통합 학습법</a></li>
+        <li><a href="#s7">학부모의 역할과 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>고등 수학 문법의 벽</h2>
+      <p>아이가 고등학교에 진학하면서 가장 어려워하는 과목이 수학과 국어 문학이라고 하더군요. 특히 수학의 복소수 단원과 문학의 서사 구조는 개념 자체가 추상적이라 이해하기 쉽지 않습니다. 저 또한 학창 시절 이 부분에서 많은 애를 먹었던 기억이 나서 아이를 위해 자료를 찾아보기 시작했습니다. 부모가 먼저 핵심 원리를 이해하고 쉽게 풀어서 설명해주면 아이의 학습 효율이 훨씬 올라간다는 것을 깨달았습니다. 그래서 오늘은 제가 겪은 시행착오와 성공적인 학습 가이드를 공유하려고 합니다. 이 글이 같은 고민을 가진 학부모님들께 실질적인 도움이 되기를 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>복소수 절댓값의 이해</h2>
+      <p>복소수의 절댓값은 단순히 숫자의 크기가 아니라 평면 위의 원점으로부터 거리를 의미한다는 점을 꼭 짚어줘야 합니다. 직각삼각형의 빗변 길이를 구하는 원리와 같아 아이들이 직관적으로 이해하기 훨씬 수월합니다. 처음에는 기호가 낯설어 당황스러워하지만 그림을 그려가며 가로축과 세로축의 변화를 살피면 금방 적응하더군요. 저는 아이와 함께 실수부와 허수부를 좌표로 찍는 연습을 많이 했고 덕분에 개념이 확실히 잡혔습니다. 이처럼 시각적인 도구를 활용하면 어려운 수학 공식도 쉽게 받아들일 수 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>수학 학습 노하우 정리</h2>
+      <p>수학 문제를 풀 때 정답을 맞히는 것도 중요하지만 풀이 과정을 논리적으로 쓰는 연습이 필수적입니다. 특히 복소수 평면 문제는 그림을 정확하게 그리지 않으면 함정에 빠지기 쉬워 주의가 필요합니다. 
+
+ 아이가 실수를 줄이기 위해 저는 같은 유형의 문제를 세 번 반복해서 풀게 했고 그 결과 실수율이 크게 감소했습니다. 꾸준한 문제 풀이를 통해 감각을 익히는 것이 최고의 공부법이라는 확신이 들더군요. 
+
+ 부모님들도 조급해하지 마시고 아이의 속도에 맞춰 차근차근 지도해보시길 권합니다. 아이가 틀린 문제를 스스로 설명할 수 있을 때까지 반복하는 것이 가장 효과적입니다.</p>
+      <ul class="blog-list">
+        <li>복소수 평면 그리기 연습</li>
+        <li>절댓값 공식 암기하기</li>
+        <li>다양한 문제 유형 풀어보기</li>
+        <li>오답 노트 활용하기</li>
+        <li>친구에게 문제 설명해보기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>서술 시제의 활용법</h2>
+      <p>소설이나 수필을 읽을 때 작가가 어떤 시제를 사용하느냐에 따라 글의 분위기가 완전히 달라진다는 점을 알게 되었습니다. 과거 시제는 이미 끝난 사건을 객관적으로 서술하여 독자에게 안정감을 주는 반면 현재 시제는 사건을 지금 일어나는 듯 생생하게 전달합니다. 아이와 함께 좋아하는 소설을 펼쳐놓고 시제를 바꿔가며 읽어보는 놀이를 했는데 효과가 꽤 좋았습니다. 이러한 연습을 통해 서술자가 독자에게 느끼게 하는 거리감을 조절하는 기법을 자연스럽게 체득할 수 있었습니다. 문학을 단순히 암기 과목이 아니라 감각을 익히는 과목으로 접근해야 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>시제와 거리감의 관계</h2>
+      <p>서술의 시제는 단순한 시간의 흐름을 넘어서 독자와 이야기 세계 사이의 심리적 거리를 결정하는 중요한 장치입니다. 작가는 현재형을 사용하여 독자를 이야기 속으로 직접 끌어들이고 과거형을 사용하여 객관적인 입장에서 바라보게 만듭니다. 이 차이를 명확히 이해해야만 문학 작품의 숨은 의도를 파악할 수 있어 아이에게 꼭 강조해주었습니다. 저희 아이는 이 개념을 잡은 뒤 문학 비평 문제에서 눈에 띄게 점수가 올랐습니다. 표의 내용을 참고하면 시제에 따른 효과를 한눈에 파악하는 데 큰 도움이 될 것입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>과거 시제</td><td>독자</td><td>이미 끝난 사건을 객관적으로 전달하여 심리적 거리를 유지합니다</td></tr>
+        <tr><td>현재 시제</td><td>사건</td><td>지금 일어나는 일처럼 생생하게 묘사하여 몰입감을 높입니다</td></tr>
+        <tr><td>예측 시제</td><td>미래</td><td>불확실한 미래를 암시하며 긴장감이나 궁금증을 자아냅니다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>두 과목 통합 학습법</h2>
+      <p>수학의 복소수와 국어의 서술 기법은 겉보기에는 전혀 다른 영역처럼 보이지만 논리적 사고력을 기른다는 점에서 공통점이 있습니다. 복소수를 통해 공간적인 감각을 익히고 서술 시제를 통해 시간적인 감각을 익히는 것은 아이의 인지 발달에 큰 도움이 됩니다. 하루에 수학과 국어를 번갈아 가며 공부하게 하면 한쪽 뇌만 쓰는 피로를 줄일 수 있어 효율적입니다. 저는 아이의 학습 계획을 짤 때 이 두 과목을 연속해서 배치하여 집중력을 유지하도록 돕고 있습니다. 균형 잡힌 학습 습관이 장기적으로 성적 향상에 지름길이라는 생각이 듭니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모의 역할과 조언</h2>
+      <p>부모가 아이의 공부를 강요하기보다는 함께 어려움을 헤쳐나가는 파트너가 되었을 때 아이는 큰 성장을 보입니다. 제가 경험한 복소수와 서술 시제 지도 과정도 처음에는 막막했지만 아이와 소통하며 해결책을 찾아갔습니다. 여러분도 자녀가 학업으로 힘들어할 때 격려와 함께 구체적인 가이드를 주어주세요. 사소한 관심과 올바른 정보가 아이의 내신 성적과 자신감을 높이는 밑거름이 될 것입니다. 끝까지 포기하지 않고 지켜봐주시면 아이 분명 반응하고 변할 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>복소수 절댓값을 너무 어려워해요</summary>
+            <p class="faq-answer">평면 위에 좌표를 직접 찍어보면서 원점부터의 거리를 눈으로 확인하는 연습을 해보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>서술 시제가 구체적으로 뭔가요</summary>
+            <p class="faq-answer">이야기를 전달하는 화자의 시간적 배경을 설정하여 독자가 느끼는 현장감과 거리를 조절하는 문법 기법입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학과 국어를 동시에 공부해도 되나요</summary>
+            <p class="faq-answer">이과적 사고와 문과적 사고를 번갈아 가며 훈련하면 뇌의 피로도를 줄이고 전체적인 집중력을 높이는 데 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>내신 평가 대비 어떻게 해야 하나요</summary>
+            <p class="faq-answer">교과서 개념을 완벽히 이해한 후 학교 선생님이 내주신 프린트와 기출 문제 위주로 깊이 있게 공부하세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 포기하려 할 때 어떻게 하나요</summary>
+            <p class="faq-answer">아주 쉬운 문제를 맞히며 작은 성취감을 느끼게 해주고 '잘하고 있다'는 구체적인 칭찬으로 자존감을 세워주세요.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

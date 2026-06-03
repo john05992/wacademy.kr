@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그함수 그래프 이해하기 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모가 직접 경험한 로그함수 그래프 학습법과 개념 비교표, 실전 팁을 제공해 아이의 수학 자신감을 높입니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="로그함수 그래프 이해하기">
+  <meta property="og:description" content="학부모가 직접 경험한 로그함수 그래프 학습법과 개념 비교표, 실전 팁을 제공해 아이의 수학 자신감을 높입니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/7903/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="로그함수 그래프 이해하기">
+  <meta name="twitter:description" content="학부모가 직접 경험한 로그함수 그래프 학습법과 개념 비교표, 실전 팁을 제공해 아이의 수학 자신감을 높입니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/7903/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/7903/#article",
+    "headline": "로그함수 그래프 이해하기",
+    "description": "학부모가 직접 경험한 로그함수 그래프 학습법과 개념 비교표, 실전 팁을 제공해 아이의 수학 자신감을 높입니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-11",
+    "dateModified": "2026-01-11",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/7903/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/7903/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "로그함수 그래프 이해하기"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"로그함수 그래프를 손으로 그릴 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"좌표축을 크게 그리고 눈금을 정확히 표시하며 점근선을 점선으로 표시하면 실수가 줄어듭니다."}},
+      {"@type":"Question","name":"로그함수와 지수함수의 차이는 어떻게 설명하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"두 함수가 서로 역함수라는 점을 강조하고, 그래프가 서로 대칭임을 시각적으로 보여주면 이해가 쉽습니다."}},
+      {"@type":"Question","name":"아이에게 로그함수를 가르칠 때 효과적인 예시는?","acceptedAnswer":{"@type":"Answer","text":"일상에서 소리 크기나 지진 규모처럼 로그 스케일이 쓰이는 사례를 들어 설명하면 흥미를 끌 수 있습니다."}},
+      {"@type":"Question","name":"학습 자료는 어디서 구하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"공교육 교과서와 함께 무료 온라인 강의, 문제집을 활용하고, 부모와 함께 복습 노트를 만드는 것이 좋습니다."}},
+      {"@type":"Question","name":"시험 대비는 어떻게 하면 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"핵심 개념을 표로 정리하고, 직접 그래프를 그려 보며 변곡점과 점근선을 확인하는 연습을 꾸준히 하면 효과적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>로그함수 그래프 이해하기</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">로그함수 그래프 이해하기</h1>
+      <p class="article-meta-desc">학부모가 직접 경험한 로그함수 그래프 학습법과 개념 비교표, 실전 팁을 제공해 아이의 수학 자신감을 높입니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">로그함수 그래프가 처음이라면</a></li>
+        <li><a href="#s2">로그함수 기본 개념 정리</a></li>
+        <li><a href="#s3">그래프 특징과 실생활 적용</a></li>
+        <li><a href="#s4">실전 학습 팁 리스트</a></li>
+        <li><a href="#s5">개념 비교표</a></li>
+        <li><a href="#s6">오해를 피하는 학습법</a></li>
+        <li><a href="#s7">추천 학습 자료와 계획</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>로그함수 그래프가 처음이라면</h2>
+      <p>우리 아이가 중학교에서 처음 마주한 로그함수는 익숙하지 않은 개념이라 고민이 많았습니다.
+
+최근에 학원에서 진행한 수업을 들으며 그래프의 형태가 어떻게 변하는지 눈으로 확인하게 되었죠.
+
+교과서에 실린 예시를 함께 살펴보니 좌표축 위에 나타나는 곡선이 생각보다 직관적이라는 느낌을 받았습니다.
+
+학원 선생님은 변곡점과 정의역을 강조하면서 실생활 적용 사례를 들어 설명해 주셨습니다.
+
+부모로서 나는 아이가 직접 그래프를 그려보는 과정을 지켜보며 자신감이 붙는 모습을 보았습니다.
+
+다음 주에 진행될 심화 수업을 앞두고 우리 가족은 복습 자료를 미리 준비하기로 약속했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>로그함수 기본 개념 정리</h2>
+      <p>학생은 로그함수의 정의를 밑을 몇 번 곱해야 주어진 수가 되는가라는 식으로 이해합니다.
+
+교사는 이때 밑이 10인 상용로그와 e인 자연로그를 구분하여 설명합니다.
+
+우리 집에서는 손으로 직접 종이에 밑값을 적어가며 연산 과정을 따라가 보았습니다.
+
+부모는 아이에게 그래프가 좌측에서 오른쪽으로 갈수록 완만해지는 모습을 보여주며 직관을 돕습니다.
+
+친척 중 수학을 전공한 형은 로그함수와 지수함수의 대칭 관계를 강조했습니다.
+
+이러한 설명을 들은 뒤 아이는 그래프의 대칭성을 스스로 발견하게 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>그래프 특징과 실생활 적용</h2>
+      <p>우리 아이는 로그함수의 그래프가 y축에 점근선을 가지는 점이 가장 신기하다고 말했습니다.
+
+최근에 본 온라인 강의에서는 점근선을 색으로 강조해 시각적 이해를 돕고 있었습니다.
+
+교과서에서는 이 점근선을 y=0이라고 명시하며 좌측으로 무한히 내려가지만 절대 닿지 않는다고 설명합니다.
+
+학원 선생님은 그래프를 그릴 때 좌표축을 확대해 보며 작은 변화가 큰 차이를 만들 수 있음을 보여줍니다.
+
+부모는 아이에게 로그함수의 증가율이 지수함수와는 반대로 감소한다는 사실을 일상 예시와 연결해 설명합니다.
+
+친구의 형은 실제 데이터에서 로그 스케일을 적용하면 큰 값 차이를 압축해 한눈에 파악할 수 있다고 조언했습니다.
+
+우리 가족은 주말마다 손으로 그래프를 그리며 각 점을 체크하고, 변곡점이 존재하지 않음을 확인했습니다.
+
+다음 달에 진행될 수학 경시대회 준비를 위해 로그함수의 특성을 정리한 노트를 만들기로 했습니다.
+
+아이의 눈빛이 빛나는 걸 보니 복잡한 개념도 차근차근 접근하면 충분히 이해할 수 있다는 확신이 생겼습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>실전 학습 팁 리스트</h2>
+      <p>우리 아이가 로그함수 그래프를 직접 그릴 때 도움이 된 팁을 정리해 보았습니다.
+
+최근에 학원에서 배운 단계별 접근법을 집에서도 적용했어요.
+
+교과서에 있는 예시를 그대로 따라가며 좌표를 정확히 잡는 것이 중요했습니다.
+
+부모는 아이에게 색연필을 활용해 점근선과 곡선을 구분하도록 격려했습니다.
+
+친구가 추천한 온라인 툴을 사용하면 실시간으로 그래프 형태를 확인할 수 있었습니다.
+
+다음 주에 있을 시험을 대비해 복습 퀴즈를 만들기로 계획했습니다.</p>
+      <ul class="blog-list">
+        <li>좌표축을 크게 그리고 눈금을 정확히 표시한다</li>
+        <li>점근선을 점선으로 표시해 시각적 구분을 만든다</li>
+        <li>밑값에 따라 그래프가 어떻게 변하는지 실험한다</li>
+        <li>색깔별로 함수와 그래프를 구분한다</li>
+        <li>복습 노트에 주요 특징을 정리한다</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>개념 비교표</h2>
+      <p>로그함수와 비슷해 보이는 다른 개념들을 비교하면 차이를 명확히 알 수 있습니다.
+
+최근에 수학 동아리에서 진행한 발표에서는 지수함수와 로그함수의 관계를 강조했습니다.
+
+교과서에서는 두 함수가 서로 역함수라는 점을 간단히 설명하지만, 실제 그래프에서는 차이가 뚜렷합니다.
+
+부모는 아이에게 각각의 특성을 표로 정리해 보여주면 이해가 쉬워진다고 생각했습니다.
+
+친척 중 수학 교수는 정의역과 값의 차이를 구체적인 예시로 설명해 주었습니다.
+
+다음에 아이와 함께 표를 직접 작성해 보며 개념을 복습할 예정입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>정의</td><td>로그함수</td><td>밑을 몇 번 곱해야 주어진 수가 되는가</td></tr>
+        <tr><td>그래프</td><td>지수함수</td><td>밑이 양수인 경우 급격히 상승</td></tr>
+        <tr><td>역함수 관계</td><td>양쪽 함수</td><td>한쪽 그래프를 뒤집으면 다른 쪽이 된다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>오해를 피하는 학습법</h2>
+      <p>아이에게 로그함수의 개념을 잘못 전달하면 오히려 수학에 대한 흥미가 떨어질 수 있습니다.
+
+최근에 들은 이야기 중에 잘못된 예시를 사용하면 혼란을 야기한다는 의견이 있었습니다.
+
+교과서에서는 정의만 강조하고 실제 그래프를 보여주지 않아 이해가 부족해지는 경우가 있습니다.
+
+부모는 아이가 스스로 질문을 할 수 있도록 열린 대화를 시도했습니다.
+
+친구의 형은 개념을 시각화할 때 구체적인 사례를 들어 설명하면 기억에 오래 남는다고 조언했습니다.
+
+다음에 우리는 오답노트를 만들어 흔히 저지르는 실수를 정리하려고 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>추천 학습 자료와 계획</h2>
+      <p>우리 가족은 로그함수 공부에 도움이 되는 온라인 강의를 찾아보았습니다.
+
+최근에 발견한 무료 강의는 친절한 설명과 풍부한 예시가 인상적이었습니다.
+
+교과서에 실린 연습문제와 함께 추가 문제집을 활용하면 실력이 크게 향상됩니다.
+
+부모는 아이에게 학습 계획표를 같이 작성해 목표를 명확히 했습니다.
+
+친척 중 대학생은 추천 도서를 소개해 주며 핵심 개념을 정리한 노트를 제공했습니다.
+
+다음 학기에는 로그함수와 연관된 응용 문제를 풀어 보는 시간을 가질 예정입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>로그함수 그래프를 손으로 그릴 때 주의할 점은?</summary>
+            <p class="faq-answer">좌표축을 크게 그리고 눈금을 정확히 표시하며 점근선을 점선으로 표시하면 실수가 줄어듭니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>로그함수와 지수함수의 차이는 어떻게 설명하면 좋을까요?</summary>
+            <p class="faq-answer">두 함수가 서로 역함수라는 점을 강조하고, 그래프가 서로 대칭임을 시각적으로 보여주면 이해가 쉽습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 로그함수를 가르칠 때 효과적인 예시는?</summary>
+            <p class="faq-answer">일상에서 소리 크기나 지진 규모처럼 로그 스케일이 쓰이는 사례를 들어 설명하면 흥미를 끌 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 자료는 어디서 구하면 좋을까요?</summary>
+            <p class="faq-answer">공교육 교과서와 함께 무료 온라인 강의, 문제집을 활용하고, 부모와 함께 복습 노트를 만드는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>시험 대비는 어떻게 하면 좋을까요?</summary>
+            <p class="faq-answer">핵심 개념을 표로 정리하고, 직접 그래프를 그려 보며 변곡점과 점근선을 확인하는 연습을 꾸준히 하면 효과적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

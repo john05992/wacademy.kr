@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정중한 요청과 이차함수 활용 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모가 직접 체험한 정중한 요청 표현과 이차함수 최대최소값 이해 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="정중한 요청과 이차함수 활용">
+  <meta property="og:description" content="학부모가 직접 체험한 정중한 요청 표현과 이차함수 최대최소값 이해 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/375/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="정중한 요청과 이차함수 활용">
+  <meta name="twitter:description" content="학부모가 직접 체험한 정중한 요청 표현과 이차함수 최대최소값 이해 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/375/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/375/#article",
+    "headline": "정중한 요청과 이차함수 활용",
+    "description": "학부모가 직접 체험한 정중한 요청 표현과 이차함수 최대최소값 이해 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/375/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/375/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "정중한 요청과 이차함수 활용"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"정중한 요청을 처음 쓸 때 어떤 표현부터 시작하면 좋을까요","acceptedAnswer":{"@type":"Answer","text":"죄송합니다만이나 바쁘시겠지만 같은 서두를 사용하면 상대방에게 예의를 표시하면서도 목적을 전달할 수 있습니다"}},
+      {"@type":"Question","name":"이차함수의 최대값과 최소값을 구하는 가장 쉬운 방법은?","acceptedAnswer":{"@type":"Answer","text":"꼭짓점 공식 x = -b/(2a)를 이용해 x값을 구하고, 그 값을 식에 대입하면 최대최소값을 바로 찾을 수 있습니다"}},
+      {"@type":"Question","name":"전화로 학교에 협조를 요청할 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"상대방의 시간을 배려하고, 요청 이유와 기대 효과를 간결하게 설명한 뒤 감사를 잊지 않는 것이 중요합니다"}},
+      {"@type":"Question","name":"학생이 직접 정중한 표현을 연습하도록 돕는 방법은?","acceptedAnswer":{"@type":"Answer","text":"가정에서 역할극을 통해 다양한 상황을 재현하고, 올바른 표현을 칭찬해 주면 자연스럽게 습관이 형성됩니다"}},
+      {"@type":"Question","name":"이차함수 그래프를 그릴 때 실수를 줄이는 팁은?","acceptedAnswer":{"@type":"Answer","text":"표를 활용해 a, b, c 값을 정리하고, 꼭짓점 좌표를 먼저 계산한 뒤 그려 보면 오류를 최소화할 수 있습니다"}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>정중한 요청과 이차함수 활용</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">정중한 요청과 이차함수 활용</h1>
+      <p class="article-meta-desc">학부모가 직접 체험한 정중한 요청 표현과 이차함수 최대최소값 이해 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">정중한 요청이 학교 생활에 미치는 영향</a></li>
+        <li><a href="#s2">전화로 정중하게 협조 요청하기</a></li>
+        <li><a href="#s3">이차함수 최대최소값 직접 구해보기</a></li>
+        <li><a href="#s4">실전 정중 요청 표현 5가지</a></li>
+        <li><a href="#s5">표로 보는 이차함수 최대최소값 정리</a></li>
+        <li><a href="#s6">수학 발표에 정중한 질문 삽입하기</a></li>
+        <li><a href="#s7">정중함과 수학 사고력의 시너지</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>정중한 요청이 학교 생활에 미치는 영향</h2>
+      <p>우리 아이는 학급 회의에서 의견을 제시할 때 언제나 예의를 갖추고 싶어합니다. 학부모로서 저는 아이에게 정중한 요청이 어떻게 받아들여지는지 직접 관찰했습니다.
+
+교사님께서는 학생의 말투가 부드러우면 과제 제출이 원활해진다고 조언하셨습니다. 최근에 우리 가족은 학교 행사 준비를 도와달라는 메시지를 보낼 때 구체적인 이유와 감사를 포함했습니다.
+
+그 결과 담당 선생님은 즉시 협조 의사를 밝혀 주셨고 아이는 자신감을 얻었습니다. 학생 스스로도 정중한 표현이 관계를 개선한다는 사실을 깨달아 스스로 연습하고 있습니다.
+
+부모님들께도 같은 방식으로 대화를 시도하면 가정 내에서도 소통이 부드러워진다고 전하고 싶습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>전화로 정중하게 협조 요청하기</h2>
+      <p>학부모 입장에서 전화로 학교에 협조를 구할 때는 먼저 인사를 건네는 것이 기본이라고 생각합니다. 부모님들은 상대방의 시간을 배려하며 간결하게 목적을 밝히는 것이 좋다고 말씀하셨습니다.
+
+교감 선생님께서는 요청 앞에 죄송합니다만이라는 표현을 넣으면 반응이 부드러워진다고 조언하셨습니다. 최근에 저희는 급식 메뉴 변경을 문의할 때 구체적인 날짜와 이유를 함께 전달했습니다.
+
+그 결과 담당 직원은 즉시 자료를 찾아 주었고 우리 아이는 만족스러운 답변을 받았습니다. 학생들 또한 이런 방식을 배우면 친구 사이에서도 갈등을 최소화할 수 있다고 믿습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>이차함수 최대최소값 직접 구해보기</h2>
+      <p>우리 아이는 수학 시간에 이차함수의 그래프를 그리고 최대최소값을 찾는 과제에 도전했습니다. 학부모로서 저는 아이가 직접 좌표축을 그리면서 개념을 체득하도록 격려했습니다.
+
+교사님은 꼭짓점 공식이 최고점과 최저점을 쉽게 구할 수 있는 핵심이라고 강조하셨습니다. 최근에 우리는 인터넷 강의를 참고해 a, b, c 값에 따라 그래프가 어떻게 변하는지 실험했습니다.
+
+그 결과 아이는 y = -2x^2 + 4x + 1 같은 식에서 최대값이 3이라는 사실을 스스로 도출했습니다. 학생 스스로는 이때 x값이 1이라는 점을 찾아내고, 이를 통해 문제 풀이 속도가 크게 향상되었습니다.
+
+부모님들께서는 일상 생활에서도 이차함수의 개념을 활용해 예산 관리나 시간표 최적화를 시도해 보라고 권하고 싶습니다. 가정에서 작은 실험을 꾸준히 하면 수학적 사고력이 자연스럽게 강화된다는 느낌을 저도 받았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>실전 정중 요청 표현 5가지</h2>
+      <p>우리 가족은 매일 학교에 공지사항을 요청할 때 정중함을 유지하려 노력합니다. 학부모 입장에서 가장 효과적인 표현은 상대방을 존중하는 어휘를 사용하는 것입니다.
+
+교사님께서는 구체적인 상황을 설명하고 감사를 전하면 협조가 쉬워진다고 알려 주셨습니다. 최근에 우리는 행사 지원을 부탁할 때 바쁘시겠지만이라는 서두를 넣어 보았습니다.
+
+그 결과 담당 선생님은 기꺼이 도와주겠다고 답변해 주셨고, 아이는 그 과정을 통해 사회성을 배웠습니다. 학생들은 이러한 대화 방식을 연습하면서 자신감과 표현력이 동시에 성장한다는 점을 체감했습니다.</p>
+      <ul class="blog-list">
+        <li>바쁘시겠지만 도와주실 수 있을까요</li>
+        <li>시간이 허락하신다면 검토 부탁드립니다</li>
+        <li>가능하시다면 의견을 공유해 주세요</li>
+        <li>귀한 시간을 내어 주셔서 감사합니다</li>
+        <li>조심스럽게 여쭤보고 싶습니다</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>표로 보는 이차함수 최대최소값 정리</h2>
+      <p>우리 아이는 이차함수의 최대최소값을 구할 때 표를 만들며 체계적으로 접근했습니다. 학부모로서 저는 아이에게 구분, 대상, 내용을 정리하는 표를 직접 그려 보라고 권했습니다.
+
+교사님은 표를 활용하면 공식 적용이 명확해지고 실수가 줄어든다고 강조하셨습니다. 최근에 우리는 다양한 형태의 이차함수를 표에 정리해 보는 활동을 진행했습니다.
+
+그 결과 아이는 최대값과 최소값을 한눈에 파악하고, 시험에서도 빠르게 풀이할 수 있었습니다. 학생들은 표를 통해 개념을 시각화함으로써 장기 기억에 도움이 된다고 느꼈습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>최대값</td><td>위로 열린 이차함수</td><td>꼭짓점이 최고점에 위치</td></tr>
+        <tr><td>최소값</td><td>아래로 열린 이차함수</td><td>꼭짓점이 최저점에 위치</td></tr>
+        <tr><td>꼭짓점</td><td>모든 이차함수</td><td>x = -b/(2a) 로 계산</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>수학 발표에 정중한 질문 삽입하기</h2>
+      <p>우리 아이는 수학 발표에서 정중한 요청을 활용해 질문을 유도했습니다. 학부모 입장에서 발표 전 연습을 함께 하면서 어휘 선택을 조정했습니다.
+
+교사님은 청중에게 질문할 때 잠시 시간을 내주실 수 있나요라고 말하면 반응이 좋다고 알려 주셨습니다. 최근에 우리는 발표 자료에 이차함수 그래프를 삽입하고, 질문 부분에 정중한 표현을 넣어 보았습니다.
+
+그 결과 청중은 차분히 답변했고, 아이는 자신감 있게 발표를 마무리할 수 있었습니다. 학생들은 수학적 내용과 커뮤니케이션 스킬을 동시에 연습하면 전반적인 학습 효과가 높아진다고 평가했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>정중함과 수학 사고력의 시너지</h2>
+      <p>우리 가족은 정중한 요청과 수학 개념을 연결해 일상 속 교육을 풍부하게 만들고 있습니다. 학부모로서 꾸준히 실천하면 아이의 사회성뿐 아니라 사고력도 함께 성장한다는 확신을 얻었습니다.
+
+교사님은 이런 통합 접근이 장기적으로 학습 동기와 성취도를 높인다고 강조하셨습니다. 최근에 우리는 매주 한 번씩 가정에서 작은 프로젝트를 진행하며 정중함과 수학을 결합하고 있습니다.
+
+그 결과 아이는 스스로 목표를 설정하고, 과정에서 정중한 표현을 자연스럽게 사용하게 되었습니다. 학생들은 앞으로도 이러한 습관을 유지하며 다양한 분야에서 응용해 나가길 기대합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>정중한 요청을 처음 쓸 때 어떤 표현부터 시작하면 좋을까요</summary>
+            <p class="faq-answer">죄송합니다만이나 바쁘시겠지만 같은 서두를 사용하면 상대방에게 예의를 표시하면서도 목적을 전달할 수 있습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이차함수의 최대값과 최소값을 구하는 가장 쉬운 방법은?</summary>
+            <p class="faq-answer">꼭짓점 공식 x = -b/(2a)를 이용해 x값을 구하고, 그 값을 식에 대입하면 최대최소값을 바로 찾을 수 있습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>전화로 학교에 협조를 요청할 때 주의할 점은?</summary>
+            <p class="faq-answer">상대방의 시간을 배려하고, 요청 이유와 기대 효과를 간결하게 설명한 뒤 감사를 잊지 않는 것이 중요합니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학생이 직접 정중한 표현을 연습하도록 돕는 방법은?</summary>
+            <p class="faq-answer">가정에서 역할극을 통해 다양한 상황을 재현하고, 올바른 표현을 칭찬해 주면 자연스럽게 습관이 형성됩니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이차함수 그래프를 그릴 때 실수를 줄이는 팁은?</summary>
+            <p class="faq-answer">표를 활용해 a, b, c 값을 정리하고, 꼭짓점 좌표를 먼저 계산한 뒤 그려 보면 오류를 최소화할 수 있습니다</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

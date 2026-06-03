@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>귀납법 공부와 효율성 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="수학적 귀납법을 아이가 효과적으로 공부한 방법과 부모 입장에서 느낀 점을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="귀납법 공부와 효율성">
+  <meta property="og:description" content="수학적 귀납법을 아이가 효과적으로 공부한 방법과 부모 입장에서 느낀 점을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3603/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="귀납법 공부와 효율성">
+  <meta name="twitter:description" content="수학적 귀납법을 아이가 효과적으로 공부한 방법과 부모 입장에서 느낀 점을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3603/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3603/#article",
+    "headline": "귀납법 공부와 효율성",
+    "description": "수학적 귀납법을 아이가 효과적으로 공부한 방법과 부모 입장에서 느낀 점을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-29",
+    "dateModified": "2026-03-29",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3603/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3603/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "귀납법 공부와 효율성"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"귀납법은 언제 배우나요","acceptedAnswer":{"@type":"Answer","text":"보통 고등학교 수학 상수 단원에서 처음 배우게 됩니다."}},
+      {"@type":"Question","name":"기초가 없으면 어렵나요","acceptedAnswer":{"@type":"Answer","text":"네, 다항식의 연산과 등식의 성질을 알아야 수월하게 이해할 수 있습니다."}},
+      {"@type":"Question","name":"문제집 추천해 주세요","acceptedAnswer":{"@type":"Answer","text":"학교 수준에 맞는 기본서부터 시작하여 응용 문제가 많이 실린 책으로 넘어가는 것이 좋습니다."}},
+      {"@type":"Question","name":"증명 과정이 자꾸 틀리는데요","acceptedAnswer":{"@type":"Answer","text":"가정 부분에서 대입하는 과정을 집중적으로 연습해 보시는 것을 추천합니다."}},
+      {"@type":"Question","name":"공부 시간은 얼마나 하나요","acceptedAnswer":{"@type":"Answer","text":"하루에 삼십 분이라도 매일 꾸준히 푸는 것이 주말에 몰아서 하는 것보다 효과적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>귀납법 공부와 효율성</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">귀납법 공부와 효율성</h1>
+      <p class="article-meta-desc">수학적 귀납법을 아이가 효과적으로 공부한 방법과 부모 입장에서 느낀 점을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">아이의 수학적 귀납법 고민</a></li>
+        <li><a href="#s2">귀납법의 원리 이해하기</a></li>
+        <li><a href="#s3">효과적인 예제 학습 전략</a></li>
+        <li><a href="#s4">증명 과정 핵심 단계</a></li>
+        <li><a href="#s5">학습 도구별 효과 분석</a></li>
+        <li><a href="#s6">부모의 역할과 격려</a></li>
+        <li><a href="#s7">눈에 띄는 성장 변화</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>아이의 수학적 귀납법 고민</h2>
+      <p>우리 아이가 고등학교에 올라가면서 가장 어려워했던 단원은 역시 수학적 귀납법이었습니다. 도미노처럼 쓰러진다는 개념 자체는 이해가 가는데 막상 증명 문제를 풀려니 답답해하더군요. 저 역시 학창 시절 추론 과정이 복잡해지면 금방 포기했던 기억이 떠올라 어떻게 도와줘야 할지 막막했습니다. 
+
+ 많은 부모님들이 수학을 어떻게 지도해야 할지 고민하시는데 저 또한 예외는 아니었습니다. 아이와 함께 머리를 맞대고 고민하다 보니 생각보다 빨리 해결책을 찾을 수 있었습니다. 그래서 여러 학습법을 찾아보고 적용해 본 결과 아이가 조금씩 자신감을 찾는 모습을 보게 되었습니다. 
+
+ 이 글을 통해 비슷한 고민을 하는 학부모님들께 실질적인 도움을 드리고자 제 경험을 공유합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>귀납법의 원리 이해하기</h2>
+      <p>이 논리의 핵심은 첫 번째 단계가 참이고 다음 단계로 넘어가는 규칙이 성립한다면 모든 경우에 참이라는 것입니다. 아이에게는 어려운 기호보다는 계단을 밟고 올라가는 비유를 들어 설명해 주니 눈이 더 밝아지는 듯했습니다. 무엇보다 아이가 흥미를 잃지 않도록 다양한 예시를 들어가며 설명하는 것이 중요했습니다. 
+
+ 교과서의 정의만 암기해서는 문제 해결력이 늘지 않는다는 것을 깨닫고 개념 학습에 더 많은 시간을 할애했습니다. 이 방법을 사용하니 아이가 훨씬 더 집중해서 공부에 임하는 것을 볼 수 있었습니다. 이 과정을 통해 단순한 암기가 아닌 흐름을 파악하는 것이 중요하다는 점을 다시금 확인했습니다. 
+
+ 처음에는 지루해할 수 있지만 기초를 튼튼히 하는 것이 필수적입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>효과적인 예제 학습 전략</h2>
+      <p>아이가 성적을 올리기 위해 시도한 가장 효과적인 방법은 기본 유형을 반복해서 푸는 것이었습니다. 처음에는 단순히 답을 맞추는 것에 급급했지만 풀이 과정을 한 줄 한 줄 소리 내어 읽으면서 논리의 흐름을 익히도록 지도했습니다. 특히 가정 단계에서 어떤 식을 대입해야 하는지를 꼼꼼하게 체크하는 습관을 들이니 실수가 현저히 줄어들었습니다. 
+
+ 부모로서 답답한 마음에 대신 설명해 주고 싶었지만 참고 아이가 스스로 사고할 수 있도록 질문을 던지는 방식으로 유도했습니다. 이러한 꾸준한 훈련 덕분에 아이는 복잡한 부등식 증명 문제도 두려워하지 않고 도전하는 태도를 갖게 되었습니다. 결과적으로 억지로 공부를 시키는 것보다 올바른 학습 습관을 잡아주는 것이 훨씬 큰 효과가 있다는 확신이 들었습니다. 
+
+ 이제는 스스로 계획을 세워 공부하는 모습이 정말 든든합니다. 시행착오도 있었지만 끈질기게 노력한 보람이 큽니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>증명 과정 핵심 단계</h2>
+      <p>문제를 해결할 때 꼭 거쳐야 할 절차들을 정리해 보았습니다. 아이가 이 순서대로 연습을 하니 훨씬 체계적으로 문제에 접근하는 것을 볼 수 있었습니다. 단순히 암기하는 것보다는 왜 이 단계가 필요한지 이해하는 것이 중요합니다. 
+
+ 아이가 처음에는 무작정 외우려고 했지만 절차를 하나씩 따라가니 자연스럽게 논리가 머릿속에 들어오더군요. 각 단계의 의미를 되묻는 과정을 거치니 학습 효과가 배가되었습니다. 이 리스트를 프린트해서 책상 앞에 붙여두고 참고하도록 했습니다.</p>
+      <ul class="blog-list">
+        <li>명제가 참인지 확인하기</li>
+        <li>가정 설정하여 식 세우기</li>
+        <li>귀납적 가정 활용하기</li>
+        <li>결론 도출하여 마무리</li>
+        <li>오답 노트로 정리하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학습 도구별 효과 분석</h2>
+      <p>여러 자료를 활용해 본 후 느낀 점을 비교해 보았습니다. 학생의 현재 수준과 학습 스타일에 맞춰서 적절한 도구를 선택하는 것이 무엇보다 중요하다는 것을 깨달았습니다. 어떤 자료가 좋은지 고민하시는 부모님들께 참고가 될 수 있을 것입니다. 
+
+ 우리 아이의 경우에는 문제집 위주의 접근보다 영상 강의를 본 후 문제를 푸는 방식이 훨씬 효과적이었습니다. 시행착오를 줄이기 위해 먼저 샘플 강의를 들어보고 결정하는 것을 추천합니다. 아이의 눈높이에 맞는 자료를 찾는 것이 성적 향상의 지름길이라고 생각합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>교과서</td><td>기초 다지기</td><td>기본 원리와 공식을 명확히 이해하는 데 가장 적합함</td></tr>
+        <tr><td>문제집</td><td>유형 연습</td><td>다양한 응용 문제를 접하여 응용력을 기르는 데 도움이 됨</td></tr>
+        <tr><td>온라인 강의</td><td>심화 학습</td><td>모르는 부분을 반복 시청하여 구멍을 메우는 데 유용함</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모의 역할과 격려</h2>
+      <p>자녀가 어려움을 겪을 때 부모가 해줄 수 있는 최선의 지원은 끊임없는 응원과 기다림이라고 생각합니다. 아이가 시험에서 떨어졌을 때 결과만 탓하기보다 과정을 칭찬해 주니 다시 공부책을 펼치더군요. 우리 집 거실은 책상 옆에 작은 칠판을 두어 아이가 증명 과정을 서서 설명하도록 만든 공간입니다. 
+
+ 이렇게 가르치는 입장이 되어보니 모르는 부분이 명확히 보이고 학습 효율이 높아지는 경험을 했습니다. 아이가 선생님이 되어 설명하는 것을 무척 좋아하더군요. 부모가 조금만 관심을 가지고 환경을 바꿔주면 아이의 태도는 확연히 달라질 수 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>눈에 띄는 성장 변화</h2>
+      <p>지난 몇 달간 고생한 덕분에 아이는 이제 수학적 귀납법 문제를 자신 있게 해결하는 모습을 보여줍니다. 단순히 점수가 오른 것을 넘어 어려운 문제에 맞서는 끈기가 생긴 것이 가장 큰 수확입니다. 저 또한 아이와 함께 공부하면서 잊고 지냈던 학습의 즐거움을 다시금 찾은 기분입니다. 
+
+ 앞으로도 이러한 효과적인 방법을 다른 단원에도 적용해 보면서 아이의 학습 여정을 든든하게 응원할 계획입니다. 아이의 변화된 태도를 보니 노력이 헛되지 않았다는 생각이 듭니다. 수학뿐만 아니라 다른 과목에서도 이러한 자기 주도 학습법이 큰 도움이 될 것으로 기대합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>귀납법은 언제 배우나요</summary>
+            <p class="faq-answer">보통 고등학교 수학 상수 단원에서 처음 배우게 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>기초가 없으면 어렵나요</summary>
+            <p class="faq-answer">네, 다항식의 연산과 등식의 성질을 알아야 수월하게 이해할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>문제집 추천해 주세요</summary>
+            <p class="faq-answer">학교 수준에 맞는 기본서부터 시작하여 응용 문제가 많이 실린 책으로 넘어가는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>증명 과정이 자꾸 틀리는데요</summary>
+            <p class="faq-answer">가정 부분에서 대입하는 과정을 집중적으로 연습해 보시는 것을 추천합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>공부 시간은 얼마나 하나요</summary>
+            <p class="faq-answer">하루에 삼십 분이라도 매일 꾸준히 푸는 것이 주말에 몰아서 하는 것보다 효과적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수학 넓이 문제와 컨디션 관리 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="곡선 아래 넓이 해결법과 시험 당일 컨디션 기록지 활용법을 통해 아이의 성적을 관리하는 꿀팁을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="수학 넓이 문제와 컨디션 관리">
+  <meta property="og:description" content="곡선 아래 넓이 해결법과 시험 당일 컨디션 기록지 활용법을 통해 아이의 성적을 관리하는 꿀팁을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/10551/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="수학 넓이 문제와 컨디션 관리">
+  <meta name="twitter:description" content="곡선 아래 넓이 해결법과 시험 당일 컨디션 기록지 활용법을 통해 아이의 성적을 관리하는 꿀팁을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/10551/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/10551/#article",
+    "headline": "수학 넓이 문제와 컨디션 관리",
+    "description": "곡선 아래 넓이 해결법과 시험 당일 컨디션 기록지 활용법을 통해 아이의 성적을 관리하는 꿀팁을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-23",
+    "dateModified": "2025-11-23",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/10551/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/10551/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "수학 넓이 문제와 컨디션 관리"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"곡선 아래 넓이 문제를 처음 가르칠 때 어떤 참고서가 좋은가요?","acceptedAnswer":{"@type":"Answer","text":"개념 설명이 자세하고 그래프가 많이 그려져 있는 기본서를 선택하여 눈으로 확인하는 훈련을 먼저 하는 것이 좋습니다."}},
+      {"@type":"Question","name":"시험 당일 컨디션 기록지는 언제부터 작성을 시작해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"모의고사나 학교 시험을 볼 때마다 꾸준히 작성하여 평소 패턴을 파악한 뒤 중요한 시험 전에 전략을 짜는 것이 효과적입니다."}},
+      {"@type":"Question","name":"아이가 기록지 작성을 귀찮아할 때 어떻게 하죠?","acceptedAnswer":{"@type":"Answer","text":"체크 박스나 간단한 점수 형식으로 만들어 부담을 줄여주고 작성 완료 시 작은 보상을 주는 것도 방법입니다."}},
+      {"@type":"Question","name":"적분을 이용해 넓이를 구할 때 절대값 기호를 언제 써야 하나요?","acceptedAnswer":{"@type":"Answer","text":"그래프가 축 아래에 위치하여 구간에서 함수 값이 음수가 나올 때 넓이는 양수여야 하므로 절대값을 취해야 합니다."}},
+      {"@type":"Question","name":"시험 당일 아침 식사로 어떤 음식이 가장 좋은가요?","acceptedAnswer":{"@type":"Answer","text":"소화가 잘 되고 혈당을 천천히 올려주는 잡곡밥이나 채소 위주의 식사가 좋으며 너무 배부르지 않게 먹는 것이 중요합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>수학 넓이 문제와 컨디션 관리</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">수학 넓이 문제와 컨디션 관리</h1>
+      <p class="article-meta-desc">곡선 아래 넓이 해결법과 시험 당일 컨디션 기록지 활용법을 통해 아이의 성적을 관리하는 꿀팁을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">곡선 아래 넓이 문제의 어려움</a></li>
+        <li><a href="#s2">효과적인 문제 해결 방법</a></li>
+        <li><a href="#s3">학부모가 체감한 변화</a></li>
+        <li><a href="#s4">시험 당일 컨디션의 중요성</a></li>
+        <li><a href="#s5">컨디션 기록지 활용법</a></li>
+        <li><a href="#s6">지속적인 관리의 필요성</a></li>
+        <li><a href="#s7">학습과 건강의 균형</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>곡선 아래 넓이 문제의 어려움</h2>
+      <p>고등학교 수학에 들어서면 미적분 단원에서 곡선 아래 넓이를 구하는 문제를 만나게 됩니다. 처음 이 개념을 접할 때는 그래프와 적분 사이의 관계를 이해하기가 쉽지 않아 많은 학생들이 당황합니다.
+
+저희 아이도 교과서의 정의만으로는 왜 적분값이 넓이가 되는지 명확히 알지 못했습니다. 부모로서 이 부분을 어떻게 도와줄까 고민하다가 직접 그림을 그려가며 설명해 주기로 결심했습니다.
+
+눈으로 확인하고 손으로 그려보는 과정이 없으면 수학적 공식은 단순한 암기에 그치기 쉽습니다. 그래서 저는 아이와 함께 칸이 그려진 모눈종이를 준비하여 도형의 면적을 세어보는 놀이부터 시작했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>효과적인 문제 해결 방법</h2>
+      <p>넓이를 구하는 문제에서 가장 실수가 잦은 부분은 바로 그래프의 개형을 정확히 그리지 못하는 점입니다. 함수의 이동이나 대칭을 잘못 파악하면 구간 설정 자체가 틀려져서 계산이 아무리 정확해도 오답이 나옵니다.
+
+따라서 문제를 풀기 전에 반드시 연필을 들고 좌표평면 위에 꼴짓기를 꼼꼼히 그려보는 습관을 들여야 합니다. 저희 집에서는 이 과정을 생략하지 않도록 점검표를 만들어 사용하고 있습니다.
+
+적분 식을 세울 때는 함수의 위치 관계를 확인하여 위쪽 함수에서 아래쪽 함수를 빼야 한다는 점도 강조했습니다. 이러한 기초적인 과정이 확실해야 나중에 응용 문제도 자신 있게 풀어낼 수 있습니다.</p>
+      <ul class="blog-list">
+        <li>정확한 좌표평면에 함수 그래프 그리기</li>
+        <li>두 곡선의 교점을 구하고 x축 구간 설정하기</li>
+        <li>구간별로 위쪽에 위치한 함수 식 확인하기</li>
+        <li>부호를 고려하여 적분 식을 세우고 계산하기</li>
+        <li>최종 결과값이 넓이로서 타당한지 검토하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>학부모가 체감한 변화</h2>
+      <p>이렇게 단계별로 문제를 접근하기 시작한 후 아이의 수학 점수가 조금씩 올라가는 것을 보니 정말 기뻤습니다. 이전까지만 해도 복잡한 적분 기호만 보아도 질려했던 아이가 이제는 스스로 그래프를 분석하려 노력합니다.
+
+단순히 문제의 답을 맞히는 것을 넘어서 왜 그런 공식이 필요한지 이해하게 된 것이 가장 큰 성과라고 생각합니다. 모의고사 시험지를 들고 왔을 때 넓이 관련 문제를 완벽하게 맞춰 자랑하는 모습을 보니 지난날의 고생이 보상받는 기분이었습니다.
+
+부모가 조금만 인내심을 가지고 곁에서 지켜주면 아이들은 생각보다 빠르게 성장한다는 사실을 다시금 깨달았습니다. 수학은 논리적인 사고력이 필요한 과목이기에 기초를 탄탄하게 다져주는 것이 무엇보다 중요하다는 교훈을 얻었습니다.
+
+앞으로도 정답보다는 풀이 과정에 집중하여 아이가 스스로 생각하는 힘을 기를 수 있도록 도울 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>시험 당일 컨디션의 중요성</h2>
+      <p>아무리 수학 공부를 열심히 했더라도 시험 당일 몸 상태가 좋지 않으면 실력을 발휘하기 어렵습니다. 저희 아이도 중간고사 당시 배탈이 나서 시험장에서 긴장을 제대로 못 했던 적이 있었습니다.
+
+평소에는 잘 맞던 음식도 예민한 날에는 소화가 되지 않아 집중력에 큰 영향을 줍니다. 그래서 저는 시험 날짜가 다가오면 아이의 식단과 수면 패턴을 철저하게 관리해야 한다는 점을 절실히 느꼈습니다.
+
+단순히 공부량만 늘리는 것보다 신체 리듬을 시험 시간표에 맞추는 것이 더 중요하다는 것을 알게 된 계기가 되었습니다. 이러한 경험을 바탕으로 저는 시험 당일 아이의 상태를 꼼꼼히 기록하는 양식을 만들어 보았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>컨디션 기록지 활용법</h2>
+      <p>기록지를 작성하는 목적은 아이가 가장 좋은 컨디션으로 시험을 치르는 패턴을 찾기 위함입니다. 아침에 일어난 시간부터 식사 내용 그리고 화장실 사용 여부까지 세세하게 적어봅니다.
+
+지난 몇 차례의 시험 기록을 분석해 보니 특정 음식을 먹었을 때 졸음이 쏟아지는 현상이 발생했습니다. 이러한 데이터를 바탕으로 다음 시험에서는 메뉴를 변경하여 훨씬 맑은 정신으로 문제를 풀 수 있었습니다.
+
+기록지는 부모와 아이가 함께 작성하며 대화하는 시간이기도 합니다. 아이가 자신의 컨디션을 객관적으로 파악하게 도와주어 막연한 긴장감을 낮추는 데에도 큰 효과가 있습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기상 및 수면</td><td>수험생</td><td>기상 시간과 전날 밤 수면의 질을 점수로 기록</td></tr>
+        <tr><td>식사 관리</td><td>아침 식사</td><td>메뉴 구성과 배부름 정도 그리고 소화 상태 확인</td></tr>
+        <tr><td>신체 리듬</td><td>배변 활동</td><td>시험 시작 전 화장실 다녀온 여부와 편안함 체크</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>지속적인 관리의 필요성</h2>
+      <p>한 번 만든 기록지는 매번 시험마다 수정하고 보완하여 더욱 정교한 관리 도구로 발전시켜 나가야 합니다. 계절이 바뀌거나 시험 시간대가 달라지면 최적의 컨디션 조건도 변하기 때문입니다.
+
+저희 아이는 여름 시험기간에는 에어컨 온도 때문에 너무 춥거나 졸려서 고생을 한 적이 있습니다. 이를 반영하여 긴팔 옷을 챙기거나 실내 온도에 대비하는 항목을 리스트에 추가했습니다.
+
+이러한 사소한 준비가 아이에게는 큰 안정감을 줍니다. 시험장에 들어서는 순간부터 준비가 되어 있다는 자신감은 문제를 풀 때 엄청난 힘이 됩니다.
+
+부모가 세심하게 챙겨주는 이러한 노력들이 아이의 성적 향상으로 이어지는 것을 보면 참 보람찹니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학습과 건강의 균형</h2>
+      <p>결국 좋은 성적을 위해서는 암기 위주의 학습보다 체력적인 뒷받침이 필수적입니다. 곡선 아래 넓이를 구하는 고난이도 문제를 풀기 위해서는 뇌가 맑고 집중력이 유지되어야 하기 때문입니다.
+
+공부만 강요하기보다는 아이의 컨디션을 먼저 챙겨주는 것이 역설적으로 더 효율적인 학습 결과를 가져옵니다. 저희 아이도 생활 관리가 잘 되니까 수학 문제 풀이 속도가 빨라졌고 실수도 줄어들었습니다.
+
+다른 학부모님들께도 이러한 방법을 꼭 추천하고 싶습니다. 아이의 건강과 학습을 동시에 잡는 가장 현명한 방법이 바로 컨디션 기록지 활용이라고 생각합니다.
+
+오늘 소개한 팁들을 참고하셔서 아이가 시험 스트레스 없이 자기 실력을 마음껏 발휘할 수 있기를 응원합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>곡선 아래 넓이 문제를 처음 가르칠 때 어떤 참고서가 좋은가요?</summary>
+            <p class="faq-answer">개념 설명이 자세하고 그래프가 많이 그려져 있는 기본서를 선택하여 눈으로 확인하는 훈련을 먼저 하는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>시험 당일 컨디션 기록지는 언제부터 작성을 시작해야 하나요?</summary>
+            <p class="faq-answer">모의고사나 학교 시험을 볼 때마다 꾸준히 작성하여 평소 패턴을 파악한 뒤 중요한 시험 전에 전략을 짜는 것이 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 기록지 작성을 귀찮아할 때 어떻게 하죠?</summary>
+            <p class="faq-answer">체크 박스나 간단한 점수 형식으로 만들어 부담을 줄여주고 작성 완료 시 작은 보상을 주는 것도 방법입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>적분을 이용해 넓이를 구할 때 절대값 기호를 언제 써야 하나요?</summary>
+            <p class="faq-answer">그래프가 축 아래에 위치하여 구간에서 함수 값이 음수가 나올 때 넓이는 양수여야 하므로 절대값을 취해야 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>시험 당일 아침 식사로 어떤 음식이 가장 좋은가요?</summary>
+            <p class="faq-answer">소화가 잘 되고 혈당을 천천히 올려주는 잡곡밥이나 채소 위주의 식사가 좋으며 너무 배부르지 않게 먹는 것이 중요합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

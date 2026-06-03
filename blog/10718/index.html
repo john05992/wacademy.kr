@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>확률의 기초와 다양한 표현 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="확률 정의와 성질을 학부모 시점에서 정리했습니다. 다양한 표현 방식을 이해하면 아이의 수학 학습에 큰 도움이 됩니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="확률의 기초와 다양한 표현">
+  <meta property="og:description" content="확률 정의와 성질을 학부모 시점에서 정리했습니다. 다양한 표현 방식을 이해하면 아이의 수학 학습에 큰 도움이 됩니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/10718/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="확률의 기초와 다양한 표현">
+  <meta name="twitter:description" content="확률 정의와 성질을 학부모 시점에서 정리했습니다. 다양한 표현 방식을 이해하면 아이의 수학 학습에 큰 도움이 됩니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/10718/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/10718/#article",
+    "headline": "확률의 기초와 다양한 표현",
+    "description": "확률 정의와 성질을 학부모 시점에서 정리했습니다. 다양한 표현 방식을 이해하면 아이의 수학 학습에 큰 도움이 됩니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-20",
+    "dateModified": "2025-11-20",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/10718/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/10718/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "확률의 기초와 다양한 표현"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"확률과 통계의 차이는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"확률은 미래의 가능성을 수치로 예측하는 것이고 통계는 과거의 데이터를 분리하는 것입니다."}},
+      {"@type":"Question","name":"사건이 서로 독립적이라는 뜻이죠?","acceptedAnswer":{"@type":"Answer","text":"네, 어떤 사건이 일어나는 것이 다른 사건의 발생에 영향을 주지 않는 것을 의미합니다."}},
+      {"@type":"Question","name":"확률이 0인 사건은 절대 일어나지 않나요?","acceptedAnswer":{"@type":"Answer","text":"기하학적 확률 등에서는 0이라도 가능성이 존재하는 경우도 있지만 초중등 수학에서는 불가능한 사건으로 봅니다."}},
+      {"@type":"Question","name":"백분율과 소수 변환이 헷갈립니다.","acceptedAnswer":{"@type":"Answer","text":"십분율은 소수점 한 자리, 백분율은 소수점 두 자리로 옮겨서 계산하면 쉽게 이해할 수 있습니다."}},
+      {"@type":"Question","name":"어떤 참고서가 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"기본 개념 설명이 자세하고 실생활 예제가 많이 수록된 교재를 선택하는 것이 좋습니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>확률의 기초와 다양한 표현</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">확률의 기초와 다양한 표현</h1>
+      <p class="article-meta-desc">확률 정의와 성질을 학부모 시점에서 정리했습니다. 다양한 표현 방식을 이해하면 아이의 수학 학습에 큰 도움이 됩니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">확률의 기본 개념 이해하기</a></li>
+        <li><a href="#s2">확률의 성질과 합 법칙</a></li>
+        <li><a href="#s3">확률을 표현하는 다양한 방식</a></li>
+        <li><a href="#s4">교과서별 표현 방식 차이</a></li>
+        <li><a href="#s5">아이와 함께 공부한 후기</a></li>
+        <li><a href="#s6">학습 시 유용한 팁</a></li>
+        <li><a href="#s7">꾸준한 학습의 중요성</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>확률의 기본 개념 이해하기</h2>
+      <p>아이가 수학 시간에 확률을 배운다고 해서 저도 같이 공부를 시작했어요. 처음에는 사건의 일어날 가능성을 수로 나타내는 것이 엉뚱하게 느껴졌지만 곧 익숙해졌습니다. 
+
+ 기본적인 정의는 모든 경우의 수 중에서 우리가 원하는 사건의 수를 비율로 계산하는 것이더군요. 이 과정에서 사건들이 서로 배반되는지 확인하는 것이 성질을 파악하는 데 중요하다는 것을 알게 되었습니다. 
+
+ 우리 아이는 주사위나 동전 던지기 같은 구체적인 도구를 이용할 때 훨씬 더 집중하는 모습을 보였습니다. 이렇게 직접 체험해 보는 것이 확률의 정의를 명확하게 잡아주는 열쇠인 것 같습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>확률의 성질과 합 법칙</h2>
+      <p>교과서를 보니 확률의 값은 항상 0보다 크거나 같고 1보다 작거나 같다는 성질이 가장 먼저 나오네요. 확실한 사건은 1, 불가능한 사건은 0이라는 점은 아이에게 설명하기에도 아주 좋은 개념이었습니다. 
+
+ 서로 여사건인 경우 두 확률의 합이 1이 된다는 점도 흥미로웠습니다. 아이와 함께 주사위 게임을 하며 이 법칙을 직접 확인해 보니 수학이 훨씬 쉽게 다가오는 경험이었습니다. 
+
+ 이러한 기본 성질을 완벽하게 이해하지 못하면 뒤에 나오는 복잡한 확률 계산을 따라가기가 어렵습니다. 그래서 저는 아이가 이 부분을 완벽히 숙지할 때까지 문제집을 여러 권 풀어보게 했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>확률을 표현하는 다양한 방식</h2>
+      <p>같은 확률이라도 상황에 따라 다르게 표현될 수 있다는 점이 놀라웠습니다. 보통 우리는 분수나 백분율로 생각하는데 뉴스에서는 보통 소수나 비율로 말하곤 하니까요. 
+
+ 아이가 문제를 풀 때도 제시된 형태에 맞춰 답을 구하는 연습이 필요하다는 걸 느꼈습니다. 예를 들어 주사위의 눈이 나올 확률을 육분의 일이라고도 하고 대략 십육 퍼센트 정도로도 말할 수 있겠죠. 
+
+ 이처럼 다양한 표현 방식을 익히면 실생활의 통계 자료를 읽는 데에도 훨씬 수월해질 것 같습니다. 우리 집 아이는 이 부분을 헷갈려해서 몇 번을 반복했는데 지금은 완벽하게 이해했습니다.</p>
+      <ul class="blog-list">
+        <li>비율로 표현하기</li>
+        <li>분수 형태로 나타내기</li>
+        <li>소수로 변환하기</li>
+        <li>백분율로 이해하기</li>
+        <li>경기의 승률처럼 표현하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>교과서별 표현 방식 차이</h2>
+      <p>학년이 올라갈수록 확률의 표현이 조금씩 깊어지는 것을 볼 수 있었습니다. 초등학교 때는 단순히 경우의 수를 세어서 비율을 구했는데 중학교부터는 개념이 더 확장되더군요. 
+
+ 특히 수학적 확률과 통계적 확률을 나누어서 설명하는 부분은 저도 다시금 짚고 넘어가야 할 부분이었습니다. 이 차이를 명확히 알아야 나중에 더 어려운 문제를 풀 때도 혼동이 없을 것입니다. 
+
+ 교과서마다 용어를 설명하는 방식에 미세한 차이가 있어서 여러 출판사의 참고서를 비교해 보는 것도 추천합니다. 우리 아이는 이 비교 과정을 통해 개념의 핵심을 더 잘 파악하게 되었습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기본 개념</td><td>초등 수학</td><td>경우의 수를 전체로 나눈 비율</td></tr>
+        <tr><td>심화 개념</td><td>중등 수학</td><td>통계적 확률과 수학적 확률의 구분</td></tr>
+        <tr><td>응용 표현</td><td>고등 수학</td><td>조건부 확률을 포함한 복잡한 사건</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>아이와 함께 공부한 후기</h2>
+      <p>저는 아이가 확률 단원을 어려워할까 봐 걱정했는데 생각보다 흥미로워했습니다. 일상생활에서 볼 수 있는 로또 확률이나 날씨 예보를 예로 들어주니 훨씬 잘 이해하더라고요. 
+
+ 부모가 조금만 관심을 가지고 실제 사례를 들어주면 아이들의 수학 공부는 훨씬 즐거워지는 것 같습니다. 우리 집에서는 이번 주말에 가위바위보 확률을 가지고 치열한 내기를 하면서 배운 내용을 복습할 계획입니다. 
+
+ 아이가 학교에서 돌아와서 확률 게임이 가장 재미있었다며 눈을 반짝이는 모습을 보니 참 뿌듯했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습 시 유용한 팁</h2>
+      <p>확률 문제를 풀 때는 전체의 경우를 놓치지 않고 꼼꼼히 세어보는 습관이 가장 중요합니다. 아이들은 익숙한 경우만 세고 간과하는 경우가 많으니 도표를 그려가며 가르치세요. 
+
+ 또한 정답이 나왔다고 해서 그냥 넘어가지 말고 왜 그런 확률이 나왔는지 입으로 설명하게 해보세요. 말로 풀어내는 과정을 통해 개념이 머릿속에 더 단단하게 남게 됩니다. 
+
+ 저는 아이가 문제를 틀렸을 때 답만 알려주는 대신 스스로 오류를 찾을 수 있도록 질문을 던져주는 방식을 씁니다. 이 방법이 아이의 자기 주도적인 학습 능력을 키우는 데 큰 도움이 되고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>꾸준한 학습의 중요성</h2>
+      <p>확률은 단순히 시험을 위한 과목이 아니라 삶을 살아가는 데 필요한 지혜를 담고 있습니다. 불확실한 미래를 판단하는 데 도움을 주는 논리적 사고력이 길러지기 때문입니다. 
+
+ 부모님들도 아이와 함께 문제를 풀어보며 다양한 표현 방식을 즐겨 보시길 추천합니다. 작은 성취감이 쌓이면 아이들은 수학을 더 좋아하게 될 것이라 확신합니다. 
+
+ 이번 기회에 아이와 함께 확률의 세계를 탐험해 보시면 생각보다 유익하고 즐거운 시간이 될 거예요. 여러분의 자녀가 수학을 정복하는 날을 응원합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>확률과 통계의 차이는 무엇인가요?</summary>
+            <p class="faq-answer">확률은 미래의 가능성을 수치로 예측하는 것이고 통계는 과거의 데이터를 분리하는 것입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>사건이 서로 독립적이라는 뜻이죠?</summary>
+            <p class="faq-answer">네, 어떤 사건이 일어나는 것이 다른 사건의 발생에 영향을 주지 않는 것을 의미합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>확률이 0인 사건은 절대 일어나지 않나요?</summary>
+            <p class="faq-answer">기하학적 확률 등에서는 0이라도 가능성이 존재하는 경우도 있지만 초중등 수학에서는 불가능한 사건으로 봅니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>백분율과 소수 변환이 헷갈립니다.</summary>
+            <p class="faq-answer">십분율은 소수점 한 자리, 백분율은 소수점 두 자리로 옮겨서 계산하면 쉽게 이해할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어떤 참고서가 좋을까요?</summary>
+            <p class="faq-answer">기본 개념 설명이 자세하고 실생활 예제가 많이 수록된 교재를 선택하는 것이 좋습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

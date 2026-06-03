@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>틀린 문제 분석으로 성적 올리기 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="틀린 문제 시간과 정답률을 비교하고 오답노트를 통해 효율적으로 공부하는 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="틀린 문제 분석으로 성적 올리기">
+  <meta property="og:description" content="틀린 문제 시간과 정답률을 비교하고 오답노트를 통해 효율적으로 공부하는 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/12490/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="틀린 문제 분석으로 성적 올리기">
+  <meta name="twitter:description" content="틀린 문제 시간과 정답률을 비교하고 오답노트를 통해 효율적으로 공부하는 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/12490/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/12490/#article",
+    "headline": "틀린 문제 분석으로 성적 올리기",
+    "description": "틀린 문제 시간과 정답률을 비교하고 오답노트를 통해 효율적으로 공부하는 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-10-19",
+    "dateModified": "2025-10-19",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/12490/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/12490/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "틀린 문제 분석으로 성적 올리기"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"오답노트는 언제 만드는 것이 좋나요","acceptedAnswer":{"@type":"Answer","text":"문제를 풀고 나서 바로 채점하고 그때그때 만드는 것이 가장 효과적입니다"}},
+      {"@type":"Question","name":"소요 시간 측정은 어떻게 하나요","acceptedAnswer":{"@type":"Answer","text":"스톱워치를 사용하거나 문제 풀이 시작과 끝 시간을 기록하여 계산합니다"}},
+      {"@type":"Question","name":"오답노트를 얼마나 자주 봐야 하나요","acceptedAnswer":{"@type":"Answer","text":"주말이나 시험 전에 틀린 문제 위주로 다시 한번 훑어보는 것이 좋습니다"}},
+      {"@type":"Question","name":"초등학생도 이 방법을 적용할 수 있나요","acceptedAnswer":{"@type":"Answer","text":"네 초등 저학년부터 부모님과 함께 간단히 시작하면 습관 들기에 좋습니다"}},
+      {"@type":"Question","name":"효과가 나타나기까지 얼마나 걸리나요","acceptedAnswer":{"@type":"Answer","text":"보통 한 학기 정도 꾸준히 하면 실수가 줄고 성적이 상승하는 경향이 있습니다"}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>틀린 문제 분석으로 성적 올리기</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">틀린 문제 분석으로 성적 올리기</h1>
+      <p class="article-meta-desc">틀린 문제 시간과 정답률을 비교하고 오답노트를 통해 효율적으로 공부하는 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">시간과 정답률로 보는 실력</a></li>
+        <li><a href="#s2">소요 시간 분석의 중요성</a></li>
+        <li><a href="#s3">오답노트 작성의 효과</a></li>
+        <li><a href="#s4">체계적인 기록 방법</a></li>
+        <li><a href="#s5">꾸준한 관리의 효과</a></li>
+        <li><a href="#s6">부모님의 역할과 조언</a></li>
+        <li><a href="#s7">꾸준함이 만드는 기적</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>시간과 정답률로 보는 실력</h2>
+      <p>아이가 시험을 볼 때 단순히 점수만 보고 실망하곤 했습니다. 그러나 맞춘 지문과 오답의 소요 시간을 비교해보니 놀라운 사실을 발견했어요. 짧게 풀고 틀린 항목보다 오래 걸려 맞힌 것이 더 위험하다는 것을 알게 되었습니다. 우리 아이는 개념은 알지만 문제 적용 능력이 부족했던 거죠. 이를 통해 단순 암기 위주 공부에서 벗어나야 한다는 깨달음을 얻었습니다. 부모님께서도 자녀의 시험지를 펼칠 때는 채점 표기만 확인하지 마세요. 각 번호 옆에 걸린 시간을 적어두고 분석해보는 것을 추천해 드립니다. 그러면 아이의 진짜 약점이 어디인지 명확하게 보입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>소요 시간 분석의 중요성</h2>
+      <p>과제를 해결할 때 걸리는 시간은 그만큼의 당황스러움과 고민을 의미합니다. 빠르게 풀고 틀렸다면 대충 읽고 찍었을 가능성이 높아서 더 큰 문제입니다. 반대로 오래 생각하다 맞췄다면 우연히 맞힌 경우에 해당되므로 틀린 것과 같이 봐야 합니다. 저는 이 방식을 적용한 후 아이의 헛수고를 줄여줄 수 있었습니다. 정답률이 낮은 유형을 파악하는 것도 중요하지만 시간 대비 효율을 따져보세요. 공부 시간을 늘리기보다 집중도를 높이는 훈련이 되기 때문입니다. 이러한 데이터를 바탕으로 맞춤형 학습 계획을 세우면 성적 향상에 큰 도움이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>오답노트 작성의 효과</h2>
+      <p>단순히 오답을 다시 풀어보는 것만으로는 실력이 늘지 않는다는 것을 몸소 체험했습니다. 오답노트는 왜 틀렸는지 그 원인을 파악하는 과정이 필수적이라고 생각합니다. 저희 집에서는 정답과 오답을 비교하고 관련 개념까지 적는 방식을 사용합니다. 처음에는 아이가 귀찮아해서 많이 힘들었지만 이제는 스스로 찾아서 적더라고요. 기계적인 풀이보다는 개념을 확실히 잡는 기초 공사가 되는 셈입니다. 부모님이 옆에서 지켜봐 주면 자녀는 더 성실하게 기록하려고 노력합니다. 이 기록장은 시험 기간에 최고의 요약 참고서가 되어줍니다. 무엇보다 반복되는 실수를 막아주어 자신감을 심어주는 역할을 톡톡히 합니다. 이렇게 쌓인 데이터는 나중에 상급 학교 진학 후에도 큰 자산이 될 것이라 확신합니다. 꾸준함이 답이라는 사실을 아이와 함께 배워가는 기분이 듭니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>분석</td><td>소요 시간</td><td>문제 풀이에 걸린 시간을 측정하여 집중도를 확인</td></tr>
+        <tr><td>기록</td><td>오답노트</td><td>틀린 이유와 정답 그리고 연관 개념을 상세히 작성</td></tr>
+        <tr><td>관리</td><td>학습 계획</td><td>분석한 데이터를 바탕으로 취약 부분을 보완하는 계획 수립</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>체계적인 기록 방법</h2>
+      <p>오답노트를 작성할 때는 단순히 정답만 적어서는 안 된다고 봅니다. 왜 틀렸는지 그 이유를 적는 것이 가장 중요한 핵심 과정입니다. 예를 들어 계산 실수였는지 개념 오해였는지 구분해야 합니다. 저희 아이는 처음에 이유를 잘 적지 못했지만 지금은 꼼꼼해졌습니다. 또한 관련된 개념을 옆에 적어두면 복습할 때 아주 유용합니다. 이렇게 정리하면 한 권의 책이 끝날 때쯤 완벽한 나만의 참고서가 완성됩니다. 틀린 문제는 다시 보지 않으면 계속해서 실수하게 되어 있습니다. 그러니 꾸준히 적어두는 습관을 들이는 것이 좋습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>꾸준한 관리의 효과</h2>
+      <p>이러한 학습법을 실시한 후 아이의 학습 태도가 눈에 띄게 달라졌습니다. 시험 성적도 올랐지만 무엇보다 스스로 공부하는 법을 깨달은 게 큽니다. 막연히 문제집을 풀기보다는 자신의 취약점을 공략하게 되었거든요. 저는 아이가 이렇게 변하는 모습을 보며 참 기특하다는 생각이 들었습니다. 이 방법은 시간이 조금 걸리지만 그만큼 효과가 확실한 방식입니다. 여러분도 자녀와 함께 이 방법을 시도해 보시길 진심으로 권해드립니다.</p>
+      <ul class="blog-list">
+        <li>시간 관리 능력이 크게 향상됩니다</li>
+        <li>반복되는 실수를 확실하게 줄여줍니다</li>
+        <li>암기 위주 공부에서 개념 이해로 변화합니다</li>
+        <li>시험 직전 효율적인 요약 복습이 가능합니다</li>
+        <li>자신의 학습 패턴을 객관적으로 파악할 수 있습니다</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모님의 역할과 조언</h2>
+      <p>부모님은 자녀가 이러한 노트를 작성할 때 강요하기보다는 격려해 주는 것이 좋습니다. 아이가 스스로 하려는 의지를 꺾지 않는 것이 가장 중요하다고 생각합니다. 저도 처음에는 잔소리를 많이 했는데 아이가 싫어하는 것을 보고 태도를 바꿨습니다. 학생이 잘하고 있을 때는 칭찬을 아끼지 마세요. 그러면 아이는 더 즐겁게 공부에 참여하게 됩니다. 때로는 아이의 기록장을 같이 보며 대화를 나누는 것도 큰 도움이 됩니다. 학습은 혼자 하는 고독한 싸움이 아니라 가족이 함께 하는 과정이기 때문입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>꾸준함이 만드는 기적</h2>
+      <p>하루아침에 성적이 오르는 것은 없지만 올바른 습관은 결국 좋은 결과를 가져옵니다. 틀린 문항을 소중한 자산으로 만드는 과정이 바로 공부의 본질입니다. 저희 아이는 이제 시험을 두려워하지 않고 지문을 분석하게 되었습니다. 여러분의 자녀도 이 방법을 통해 자신감 있는 모습을 보여주길 바랍니다. 틀리는 것은 부끄러운 게 아니라 배우는 기회라는 사실을 잊지 마세요. 오늘부터 바로 시작해 보면 생각보다 큰 변화를 느낄 수 있을 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>오답노트는 언제 만드는 것이 좋나요</summary>
+            <p class="faq-answer">문제를 풀고 나서 바로 채점하고 그때그때 만드는 것이 가장 효과적입니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>소요 시간 측정은 어떻게 하나요</summary>
+            <p class="faq-answer">스톱워치를 사용하거나 문제 풀이 시작과 끝 시간을 기록하여 계산합니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답노트를 얼마나 자주 봐야 하나요</summary>
+            <p class="faq-answer">주말이나 시험 전에 틀린 문제 위주로 다시 한번 훑어보는 것이 좋습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>초등학생도 이 방법을 적용할 수 있나요</summary>
+            <p class="faq-answer">네 초등 저학년부터 부모님과 함께 간단히 시작하면 습관 들기에 좋습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>효과가 나타나기까지 얼마나 걸리나요</summary>
+            <p class="faq-answer">보통 한 학기 정도 꾸준히 하면 실수가 줄고 성적이 상승하는 경향이 있습니다</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

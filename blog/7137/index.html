@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 그래프와 요약 만들기 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모가 함수 그래프를 직접 이해하고 핵심 요약 문장을 스스로 만드는 과정을 공유합니다. 실전 경험과 활용 팁을 제공합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="함수 그래프와 요약 만들기">
+  <meta property="og:description" content="학부모가 함수 그래프를 직접 이해하고 핵심 요약 문장을 스스로 만드는 과정을 공유합니다. 실전 경험과 활용 팁을 제공합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/7137/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="함수 그래프와 요약 만들기">
+  <meta name="twitter:description" content="학부모가 함수 그래프를 직접 이해하고 핵심 요약 문장을 스스로 만드는 과정을 공유합니다. 실전 경험과 활용 팁을 제공합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/7137/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/7137/#article",
+    "headline": "함수 그래프와 요약 만들기",
+    "description": "학부모가 함수 그래프를 직접 이해하고 핵심 요약 문장을 스스로 만드는 과정을 공유합니다. 실전 경험과 활용 팁을 제공합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-01-24",
+    "dateModified": "2026-01-24",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/7137/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/7137/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "함수 그래프와 요약 만들기"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"함수 그래프를 처음 보는 아이에게 어떻게 설명하면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"시각적인 그림과 일상 예시를 함께 제시하고, 좌표축의 의미를 간단히 설명해 주세요."}},
+      {"@type":"Question","name":"핵심 요약 문장을 만들 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"주제와 결과를 한 문장에 담고, 불필요한 설명은 배제하며 간결하게 표현합니다."}},
+      {"@type":"Question","name":"표를 활용한 학습은 어떤 장점이 있나요?","acceptedAnswer":{"@type":"Answer","text":"구분대상내용을 명확히 정리해 기억을 돕고, 비교와 분석을 쉽게 할 수 있습니다."}},
+      {"@type":"Question","name":"아이의 학습 동기를 유지하려면?","acceptedAnswer":{"@type":"Answer","text":"작은 성공을 칭찬하고, 목표 달성 후 보상을 제공해 지속적인 흥미를 유발합니다."}},
+      {"@type":"Question","name":"다음에 배울 수 있는 그래프 유형은?","acceptedAnswer":{"@type":"Answer","text":"다변량 그래프, 통계 히스토그램, 파이 차트 등 다양한 시각화 도구를 차례로 소개합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>함수 그래프와 요약 만들기</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">함수 그래프와 요약 만들기</h1>
+      <p class="article-meta-desc">학부모가 함수 그래프를 직접 이해하고 핵심 요약 문장을 스스로 만드는 과정을 공유합니다. 실전 경험과 활용 팁을 제공합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">함수 그래프 첫인상</a></li>
+        <li><a href="#s2">핵심 요약 문장 만들기 연습</a></li>
+        <li><a href="#s3">실생활에 적용하는 그래프 학습</a></li>
+        <li><a href="#s4">핵심 요약 작성 팁</a></li>
+        <li><a href="#s5">표를 활용한 학습 정리</a></li>
+        <li><a href="#s6">학부모의 관찰 포인트</a></li>
+        <li><a href="#s7">다음 단계와 확장 학습</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>함수 그래프 첫인상</h2>
+      <p>우리 아이는 교실에서 처음으로 함수 그래프를 마주했습니다. 
+
+제가 손으로 그린 곡선을 가리키며 설명을 시작했습니다. 
+
+다른 학부모는 비슷한 상황을 겪으며 공감의 말을 건넸습니다. 
+
+선생님은 좌표축의 의미를 차근히 알려 주셨습니다. 
+
+학생은 점을 따라 움직이는 모습을 눈으로 확인했습니다. 
+
+부모님은 자녀의 반응을 살피며 격려의 말을 전했습니다. 
+
+교재는 색깔별로 구분된 선을 사용해 이해를 돕습니다. 
+
+전체 과정이 끝난 뒤 아이는 스스로 작은 그림을 그려 보았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>핵심 요약 문장 만들기 연습</h2>
+      <p>저는 아이에게 핵심을 한 문장으로 압축하는 연습을 시켰습니다. 
+
+다른 부모는 비슷한 방법으로 아이의 이해도를 높였습니다. 
+
+전문가들은 핵심 요약이 기억에 오래 남는다고 강조합니다. 
+
+학생은 먼저 그래프의 주요 특징을 말해 보았습니다. 
+
+교사는 요약 문장을 검토하며 피드백을 제공했습니다. 
+
+부모님은 아이가 스스로 문장을 만들 때 감탄했습니다. 
+
+교재는 요약 예시를 여러 개 제시해 도움이 됩니다. 
+
+전체 과정을 마친 뒤 그 학생은 자신감 있게 세 문장을 완성했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실생활에 적용하는 그래프 학습</h2>
+      <p>우리 가족은 주말마다 함수 곡선을 활용한 실생활 문제를 풀었습니다. 
+
+제가 직접 만든 도표를 보여 주며 구체적인 사례를 제시했습니다. 
+
+다른 학부모는 그 자녀와 함께 시장 가격 변동을 곡선으로 나타냈습니다. 
+
+전문가 인터뷰를 통해 추세선의 의미를 깊이 이해했습니다. 
+
+그 학생은 색연필을 이용해 상승과 하강을 색으로 구분했습니다. 
+
+교사는 각 구간마다 질문을 던져 사고를 촉진했습니다. 
+
+부모님은 그 학생이 스스로 패턴을 찾아낼 때 큰 기쁨을 느꼈습니다. 
+
+교재는 단계별 연습문제로 반복 학습을 지원했습니다. 
+
+전체 과정이 끝난 뒤 그 아이는 그 도형을 일상 속에서 발견했습니다. 
+
+그 결과 학습 동기가 상승하고 수학에 대한 자신감이 크게 향상되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>핵심 요약 작성 팁</h2>
+      <p>저는 핵심을 뽑는 연습을 단계별로 나누었습니다. 
+
+다른 부모는 키워드 카드를 활용해 아이와 함께 정리했습니다. 
+
+전문가 조언에 따르면 핵심 문장은 주제와 결과를 담아야 합니다. 
+
+학생은 먼저 그래프의 변곡점을 말하고 뒤에 의미를 덧붙였습니다. 
+
+교사는 피드백을 줄 때 구체적인 예시를 들어 설명했습니다. 
+
+보호자는 그 학생이 스스로 문장을 완성하면 칭찬을 아끼지 않았습니다. 
+
+교재는 요약 연습용 템플릿을 제공해 활용도를 높입니다. 
+
+전체 과정을 마친 뒤 아이는 자신감 있게 세 문장을 완성했습니다.</p>
+      <ul class="blog-list">
+        <li>시작점 찾기</li>
+        <li>증가 구간 파악</li>
+        <li>극값 확인</li>
+        <li>대칭성 탐색</li>
+        <li>실생활 적용</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>표를 활용한 학습 정리</h2>
+      <p>우리 아이는 도표를 보며 구분별 특징을 이해했습니다. 
+
+제가 행마다 내용이 달라 집중력을 유지하도록 도왔습니다. 
+
+다른 학부모는 해당 자료를 활용해 학습 계획을 세웠습니다. 
+
+전문가 의견에 따르면 구분대상내용이 명확하면 기억이 오래갑니다. 
+
+그 학생은 각 행을 읽고 직접 예시를 만들어 보았습니다. 
+
+교사는 그 자료를 활용한 퀴즈를 내어 복습을 강화했습니다. 
+
+보호자는 도표를 보며 아이와 대화를 이어갔습니다. 
+
+교재는 표 형식의 정리를 여러 장 제공해 활용도를 높입니다. 
+
+전체 과정이 끝난 뒤 그 학생은 스스로 도표를 만들 수 있게 되었습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>시작점</td><td>초등 고학년</td><td>좌표 원점에서 함수가 어떻게 시작하는지 설명</td></tr>
+        <tr><td>증가</td><td>중학생</td><td>함수값이 커지는 구간을 시각적으로 확인</td></tr>
+        <tr><td>극값</td><td>고등학생</td><td>최대최소점을 찾는 방법을 단계별로 제시</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모의 관찰 포인트</h2>
+      <p>저는 아이가 그래프를 볼 때 눈빛을 주의했습니다. 
+
+다른 보호자는 손동작을 통해 이해도를 파악했습니다. 
+
+전문가들은 질문 반응을 중요한 지표로 제시합니다. 
+
+학생은 스스로 설명하려 할 때 자신감이 상승합니다. 
+
+교사는 긍정적 피드백으로 동기를 유지시킵니다. 
+
+부모님은 작은 성공을 칭찬하여 지속성을 높였습니다. 
+
+교재는 단계별 체크포인트를 제공해 진행 상황을 확인합니다. 
+
+전체 과정이 끝난 뒤 아이는 스스로 학습 계획을 세우는 능력이 향상되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>다음 단계와 확장 학습</h2>
+      <p>우리 가족은 이번 경험을 바탕으로 새로운 주제를 탐색했습니다. 
+
+제가 다음 주에 다변량 그래프를 소개할 계획입니다. 
+
+다른 학부모는 아이와 함께 통계 자료를 시각화하려 합니다. 
+
+전문가들은 실제 데이터 활용이 학습 효과를 높인다고 말합니다. 
+
+학생은 새로운 그래프 유형에 도전하면서 문제 해결 능력이 강화됩니다. 
+
+교사는 차시마다 목표를 명확히 설정해 수업을 진행합니다. 
+
+부모님은 꾸준한 피드백으로 아이의 성장 과정을 기록합니다. 
+
+교재는 확장 학습을 위한 추가 예제를 제공해 선택의 폭을 넓힙니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>함수 그래프를 처음 보는 아이에게 어떻게 설명하면 좋나요?</summary>
+            <p class="faq-answer">시각적인 그림과 일상 예시를 함께 제시하고, 좌표축의 의미를 간단히 설명해 주세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>핵심 요약 문장을 만들 때 주의할 점은?</summary>
+            <p class="faq-answer">주제와 결과를 한 문장에 담고, 불필요한 설명은 배제하며 간결하게 표현합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>표를 활용한 학습은 어떤 장점이 있나요?</summary>
+            <p class="faq-answer">구분대상내용을 명확히 정리해 기억을 돕고, 비교와 분석을 쉽게 할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이의 학습 동기를 유지하려면?</summary>
+            <p class="faq-answer">작은 성공을 칭찬하고, 목표 달성 후 보상을 제공해 지속적인 흥미를 유발합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>다음에 배울 수 있는 그래프 유형은?</summary>
+            <p class="faq-answer">다변량 그래프, 통계 히스토그램, 파이 차트 등 다양한 시각화 도구를 차례로 소개합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

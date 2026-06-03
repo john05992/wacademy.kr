@@ -5,7 +5,487 @@
     <link>https://wacademy.kr/</link>
     <description>전국 수강료·위치·특징을 투명하게 공개하는 교육 정보 플랫폼</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 27 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 06:29:08 -0000</lastBuildDate>
+
+    <item>
+      <title>개인정체성과 시험 대비 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/1/</link>
+      <description>개인 정체성 학습과 교과서 출제 포인트를 한눈에 정리하고, 실천 가능한 학부모 팁을 제공합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/1/</guid>
+    </item>
+
+    <item>
+      <title>현재완료와 시제문제 만들기 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/2/</link>
+      <description>현재완료 경험을 바탕으로 교과서 지문 시제별 문제 묶음 제작 방법과 실전 활용 팁을 학부모 눈높이로 전달합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/2/</guid>
+    </item>
+
+    <item>
+      <title>틀린문제와 문법암기 실전 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/3/</link>
+      <description>틀린 문제 반복 풀기와 교과서 예문 100문장 암기로 학습 효율을 높인 학부모 경험과 실천 방법을 상세히 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/3/</guid>
+    </item>
+
+    <item>
+      <title>현대시와 개념학습 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/4/</link>
+      <description>학부모가 현대시 형식과 개념 우선순위 학습을 실생활에 적용하는 구체적 방법과 후기 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/4/</guid>
+    </item>
+
+    <item>
+      <title>교과서 분석과 시간 관리 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/5/</link>
+      <description>교과서 지문 유형 분류와 파트별 시간 안배 시뮬레이션을 통해 학부모가 직접 활용할 수 있는 실전 전략을 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/5/</guid>
+    </item>
+
+    <item>
+      <title>이차함수와 수식어구 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/6/</link>
+      <description>학부모가 직접 체험한 이차함수 그래프 해석과 교과서 수식어구 분석 활동의 실전 팁</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/6/</guid>
+    </item>
+
+    <item>
+      <title>이항계수와 시험 피로 관리 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/7/</link>
+      <description>학부모가 이항계수 이해와 시험 중 손목눈 피로를 체크하고 관리하는 실전 팁을 공유합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/7/</guid>
+    </item>
+
+    <item>
+      <title>인칭대명사와 문제해결 읽기 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/8/</link>
+      <description>학부모 시각에서 인칭대명사 격 변화와 문제 해결 읽기 학습법을 실천 후기와 함께 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/8/</guid>
+    </item>
+
+    <item>
+      <title>before와 문제 정리법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/9/</link>
+      <description>접속사 before 사용법과 문제 풀이 전 요구사항을 문장으로 정리하는 방법을 학부모 경험을 통해 상세히 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/9/</guid>
+    </item>
+
+    <item>
+      <title>토론과 인수정리 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/10/</link>
+      <description>학부모 입장에서 토론 절차와 인수정리 문제 해결을 연결해 실생활에 적용하는 방법을 리뷰합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/10/</guid>
+    </item>
+
+    <item>
+      <title>핵심 개념 연결과 설득 전략 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/11/</link>
+      <description>학부모가 핵심 교육 개념을 시각화하고 설득 방법을 배우는 실전 가이드</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/11/</guid>
+    </item>
+
+    <item>
+      <title>학습 정리와 문법 워크숍 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/12/</link>
+      <description>헷갈리는 부분을 노트에 모아 재정리하고 교과서 전체로 문법 포인트를 찾아내는 실전 방법을 학부모 경험과 함께 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/12/</guid>
+    </item>
+
+    <item>
+      <title>자신감과 곱셈, 두 마리 토끼 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/13/</link>
+      <description>자녀의 말하기 자신감을 키우면서 두 자리 수 곱셈을 효과적으로 가르치는 방법을 학부모 입장에서 상세히 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/13/</guid>
+    </item>
+
+    <item>
+      <title>접속사와 약수 학습 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/14/</link>
+      <description>학부모가 교과서 접속사와 약수배수 활용법을 비교실천하는 실질적인 후기와 팁을 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/14/</guid>
+    </item>
+
+    <item>
+      <title>몇 개와 구의 성질 활용 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/15/</link>
+      <description>학부모가 아이에게 How many 표현과 구의 성질을 가르치는 실전 팁과 경험을 공유합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/15/</guid>
+    </item>
+
+    <item>
+      <title>이론문제와 서술어 학습법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/16/</link>
+      <description>이론문제 풀이와 서술어 유형 분류를 학부모 시각으로 체험하고, 실전 적용 팁과 FAQ까지 제공하는 실용 가이드</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/16/</guid>
+    </item>
+
+    <item>
+      <title>문제풀이와 원각 복습법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/17/</link>
+      <description>학부모가 직접 경험한 문제 풀이 복기와 원중심각 학습법을 실천적으로 안내하는 실전 팁</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/17/</guid>
+    </item>
+
+    <item>
+      <title>자기소개서과거형 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/18/</link>
+      <description>학부모가 직접 체험한 자기소개서 연습과 과거형 동사 활용 방법을 상세히 안내합니다</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/18/</guid>
+    </item>
+
+    <item>
+      <title>시험 복기와 노트 정리 비법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/19/</link>
+      <description>시험 중 찍은 문제를 별표로 표시하고, 개념을 한 페이지 노트에 정리하는 방법을 학부모의 실제 경험과 함께 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/19/</guid>
+    </item>
+
+    <item>
+      <title>모의고사 속도 변화와 and 활용 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/20/</link>
+      <description>접속사 and와 모의고사 풀이 속도 변화를 분석해 실질적인 학부모 도움을 제공하는 후기 중심 콘텐츠</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/20/</guid>
+    </item>
+
+    <item>
+      <title>청자 반응과 표현 길이 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/21/</link>
+      <description>학부모가 아이의 반응을 분석하고 얼마나 오래 표현을 효과적으로 가르치는 실전 팁을 제공합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/21/</guid>
+    </item>
+
+    <item>
+      <title>교과서 문법절댓값 부등식 실전 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/22/</link>
+      <description>교과서 문법 포인트와 절댓값 부등식 풀이를 학부모 시각에서 실질적 방법과 후기 중심으로 정리한 가이드</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/22/</guid>
+    </item>
+
+    <item>
+      <title>교사와 개념 훈련 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/23/</link>
+      <description>교사의 역할과 개념 인과관계 훈련을 통해 학부모가 실천할 수 있는 구체적 방법과 교사부모 협력 모델을 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/23/</guid>
+    </item>
+
+    <item>
+      <title>개념 정리와 양 표현 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/24/</link>
+      <description>학부모 시점에서 개념 학습 후 정리 방법과 많음다수 활용법을 실생활 예시와 표, 리스트로 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/24/</guid>
+    </item>
+
+    <item>
+      <title>기사문의 특성과 콜로케이션 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/25/</link>
+      <description>학부모 시각에서 기사문의 구조와 교과서 단어 콜로케이션을 정리해 실생활 학습에 적용하는 방법을 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/25/</guid>
+    </item>
+
+    <item>
+      <title>모의고사 루틴과 노트 만들기 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/26/</link>
+      <description>학부모가 직접 체험한 모의고사 전 심호흡시작 멘트와 교과서 기반 스몰 토픽 노트 활용법을 실전 팁으로 전합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/26/</guid>
+    </item>
+
+    <item>
+      <title>영작과 인수분해 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/27/</link>
+      <description>교과서 단어와 인수분해 공식으로 영작과 수학을 동시에 향상시키는 학부모 실전 후기</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/27/</guid>
+    </item>
+
+    <item>
+      <title>사건 분석과 맞춤 오답노트 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/28/</link>
+      <description>사건 전개를 단계별로 파악하고 교과서 근거로 오답노트를 체계화하는 방법을 부모 입장에서 실천 사례와 함께 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/28/</guid>
+    </item>
+
+    <item>
+      <title>논리와 표현 분석 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/29/</link>
+      <description>부모가 교과서 지문의 논리 전개와 부정가정법 표현을 실전 활용법과 함께 이해하도록 돕는 실용 가이드</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/29/</guid>
+    </item>
+
+    <item>
+      <title>색과 약수로 배우는 수학 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/30/</link>
+      <description>학습 중 색상 표시와 최대공약수최소공배수 활용법을 부모 시각에서 실질적 팁으로 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/30/</guid>
+    </item>
+
+    <item>
+      <title>시제와 연결 학습 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/31/</link>
+      <description>교과서 지문으로 시제 연습하고 개념 연결 포인트 정리하는 실전 팁과 후기</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/31/</guid>
+    </item>
+
+    <item>
+      <title>부사와 모의고사 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/32/</link>
+      <description>부사의 정도와 모의고사 오답률 순위 매기기를 통해 학부모가 실천할 수 있는 구체적 방법과 경험을 공유합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/32/</guid>
+    </item>
+
+    <item>
+      <title>교과서 영작과 친절 교육 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/33/</link>
+      <description>교과서 문장 패턴을 활용한 한글영작 훈련과 친절 주제 영작을 통해 아이의 영어 실력과 인성 함양을 돕는 실질적인 학부모 후기</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/33/</guid>
+    </item>
+
+    <item>
+      <title>난이도와 주제 선택 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/34/</link>
+      <description>체감 난이도 점수와 주제소재 구별법을 실제 사례와 후기 중심으로 알려드립니다</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/34/</guid>
+    </item>
+
+    <item>
+      <title>과거시제 이야기와 문제 풀이 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/35/</link>
+      <description>아이와 함께 과거시제 이야기를 즐기며 다양한 유형 문제를 풀고, 효과적인 학습 팁과 평가 방법을 부모 입장에서 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/35/</guid>
+    </item>
+
+    <item>
+      <title>오답예문 활용 학습법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/36/</link>
+      <description>오답 체크와 교과서 예문을 활용해 반복 실수를 줄이고 문법 문제를 효과적으로 만드는 방법을 공유합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/36/</guid>
+    </item>
+
+    <item>
+      <title>벡터와 모의고사 진도법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/37/</link>
+      <description>좌표평면 벡터 시각화와 5회 모의고사 결과를 활용한 맞춤 학습 계획을 학부모 시각에서 설명합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/37/</guid>
+    </item>
+
+    <item>
+      <title>정적분 활용과 문장 바꾸기 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/38/</link>
+      <description>정적분을 일상에 적용하고 교과서 핵심 문장을 동의어로 바꾸는 실전 팁을 학부모 경험 중심으로 전합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/38/</guid>
+    </item>
+
+    <item>
+      <title>모의고사 오차와 비유 해석 실전 활용 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/39/</link>
+      <description>모의고사 점수 차이를 기록하고 비유상징 해석을 연계해 학습 효율을 높인 학부모 실전 후기</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/39/</guid>
+    </item>
+
+    <item>
+      <title>필요조건과 시험당황 해소 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/40/</link>
+      <description>필요조건충분조건 개념과 시험 직후 당황 순간을 부모 입장에서 분석하고 실천적 대처법을 제시합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/40/</guid>
+    </item>
+
+    <item>
+      <title>일차함수와 하루 정리법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/41/</link>
+      <description>일차함수 이해와 매일 학습 내용 요약을 통해 자녀의 수학 자신감을 높이는 방법을 부모 입장에서 공유합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/41/</guid>
+    </item>
+
+    <item>
+      <title>대체 에너지와 교육 연결법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/42/</link>
+      <description>대체 에너지 개념과 비슷한 개념의 차이를 설명하고, 아이에게 직접 묻게 하는 학부모의 실전 후기와 활용 팁을 전합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/42/</guid>
+    </item>
+
+    <item>
+      <title>실생활 방정식과 직독직해 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/43/</link>
+      <description>방정식 활용과 교과서 직독직해를 통해 학부모가 직접 경험한 효과와 팁을 전합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/43/</guid>
+    </item>
+
+    <item>
+      <title>한자와 시험심리 루틴 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/44/</link>
+      <description>한자어 의미 구성과 시험 전 심리 루틴을 실천하는 학부모 후기와 구체적 팁을 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/44/</guid>
+    </item>
+
+    <item>
+      <title>교과서 어법시험 검토 비법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/45/</link>
+      <description>교과서 어법 정리와 시험 보기 표시 습관을 통해 성적 향상과 학습 효율을 높인 실제 학부모 경험을 공유합니다</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/45/</guid>
+    </item>
+
+    <item>
+      <title>동음이의어와 자연수 학습 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/46/</link>
+      <description>학부모 시각에서 동음이의어 의미 파악과 자연수 성질 학습을 도와줄 실전 팁과 체험담을 전합니다</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/46/</guid>
+    </item>
+
+    <item>
+      <title>시험 후 오답노트 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/47/</link>
+      <description>시험 종료 후 난이도별 성취도 비교와 오답노트 작성법을 실제 학부모 경험을 통해 상세히 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/47/</guid>
+    </item>
+
+    <item>
+      <title>관계부사와 담화 비판 분석 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/48/</link>
+      <description>학부모가 직접 체험한 관계부사 생략과 담화 비판적 분석 활용법을 실천 사례와 함께 소개합니다</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/48/</guid>
+    </item>
+
+    <item>
+      <title>실수와 시간 관리 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/49/</link>
+      <description>수직선으로 실수를 시각화하고, 모의고사에서 어려운 문제에 소요된 시간을 분석해 학습 효율을 높이는 방법을 학부모 경험을 중심으로 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/49/</guid>
+    </item>
+
+    <item>
+      <title>문장 변환과 복습 전략 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/50/</link>
+      <description>교과서 문장 패턴 변환 훈련과 모의고사 확신 없음 표시 문항 복습 우선순위에 대한 실질적 부모 경험과 구체적 방법을 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/50/</guid>
+    </item>
+
+    <item>
+      <title>개인정체성과 시험 대비 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/1/</link>
+      <description>개인 정체성 학습과 교과서 출제 포인트를 한눈에 정리하고, 실천 가능한 학부모 팁을 제공합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/1/</guid>
+    </item>
+
+    <item>
+      <title>현재완료와 시제문제 만들기 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/2/</link>
+      <description>현재완료 경험을 바탕으로 교과서 지문 시제별 문제 묶음 제작 방법과 실전 활용 팁을 학부모 눈높이로 전달합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/2/</guid>
+    </item>
+
+    <item>
+      <title>틀린문제와 문법암기 실전 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/3/</link>
+      <description>틀린 문제 반복 풀기와 교과서 예문 100문장 암기로 학습 효율을 높인 학부모 경험과 실천 방법을 상세히 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/3/</guid>
+    </item>
+
+    <item>
+      <title>현대시와 개념학습 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/4/</link>
+      <description>학부모가 현대시 형식과 개념 우선순위 학습을 실생활에 적용하는 구체적 방법과 후기 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/4/</guid>
+    </item>
+
+    <item>
+      <title>교과서 분석과 시간 관리 팁 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/5/</link>
+      <description>교과서 지문 유형 분류와 파트별 시간 안배 시뮬레이션을 통해 학부모가 직접 활용할 수 있는 실전 전략을 소개합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/5/</guid>
+    </item>
+
+    <item>
+      <title>이차함수와 수식어구 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/6/</link>
+      <description>학부모가 직접 체험한 이차함수 그래프 해석과 교과서 수식어구 분석 활동의 실전 팁</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/6/</guid>
+    </item>
+
+    <item>
+      <title>이항계수와 시험 피로 관리 가이드 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/7/</link>
+      <description>학부모가 이항계수 이해와 시험 중 손목눈 피로를 체크하고 관리하는 실전 팁을 공유합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/7/</guid>
+    </item>
+
+    <item>
+      <title>인칭대명사와 문제해결 읽기 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/8/</link>
+      <description>학부모 시각에서 인칭대명사 격 변화와 문제 해결 읽기 학습법을 실천 후기와 함께 제공</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/8/</guid>
+    </item>
+
+    <item>
+      <title>before와 문제 정리법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/9/</link>
+      <description>접속사 before 사용법과 문제 풀이 전 요구사항을 문장으로 정리하는 방법을 학부모 경험을 통해 상세히 안내합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/9/</guid>
+    </item>
+
+    <item>
+      <title>토론과 인수정리 활용법 | 와카데미 블로그</title>
+      <link>https://wacademy.kr/blog/10/</link>
+      <description>학부모 입장에서 토론 절차와 인수정리 문제 해결을 연결해 실생활에 적용하는 방법을 리뷰합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 15:00:00 -0000</pubDate>
+      <guid>https://wacademy.kr/blog/10/</guid>
+    </item>
 
     <item>
       <title>와카데미 - 전국 학원 정보 | 수강료·위치·특징 한눈에</title>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 정의역치역 완전 정복 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모가 직접 체험하고 정리한 함수 정의역치역 이해와 개념 비교, 실전 팁을 한눈에">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="함수 정의역치역 완전 정복">
+  <meta property="og:description" content="학부모가 직접 체험하고 정리한 함수 정의역치역 이해와 개념 비교, 실전 팁을 한눈에">
+  <meta property="og:url" content="https://wacademy.kr/blog/3307/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="함수 정의역치역 완전 정복">
+  <meta name="twitter:description" content="학부모가 직접 체험하고 정리한 함수 정의역치역 이해와 개념 비교, 실전 팁을 한눈에">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3307/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3307/#article",
+    "headline": "함수 정의역치역 완전 정복",
+    "description": "학부모가 직접 체험하고 정리한 함수 정의역치역 이해와 개념 비교, 실전 팁을 한눈에",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-04-04",
+    "dateModified": "2026-04-04",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3307/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3307/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "함수 정의역치역 완전 정복"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"함수의 정의역은 어떻게 찾나요?","acceptedAnswer":{"@type":"Answer","text":"입력값이 허용되는 모든 경우를 분석하고, 식에서 제한되는 부분을 찾아내면 정의역을 구할 수 있습니다."}},
+      {"@type":"Question","name":"치역과 범위는 같은 의미인가요?","acceptedAnswer":{"@type":"Answer","text":"치역은 함수가 실제로 만들 수 있는 출력값 전체를 의미하며, 범위는 경우에 따라 유사하게 사용됩니다."}},
+      {"@type":"Question","name":"정의역이 무한대일 때는 어떻게 표시하나요?","acceptedAnswer":{"@type":"Answer","text":"무한대 기호()와 함께 구간 표기법을 사용해 표현합니다."}},
+      {"@type":"Question","name":"정의역과 치역을 실생활에 적용하는 예는?","acceptedAnswer":{"@type":"Answer","text":"온도, 시간, 금액 등 변화를 수치로 나타낼 때 정의역과 치역을 설정하면 예측이 쉬워집니다."}},
+      {"@type":"Question","name":"학생이 정의역치역을 헷갈릴 때 어떻게 도와주나요?","acceptedAnswer":{"@type":"Answer","text":"구체적인 예시와 시각화 도구를 활용해 각각의 의미와 차이를 명확히 설명합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>함수 정의역치역 완전 정복</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">함수 정의역치역 완전 정복</h1>
+      <p class="article-meta-desc">학부모가 직접 체험하고 정리한 함수 정의역치역 이해와 개념 비교, 실전 팁을 한눈에</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">함수란 무엇인가</a></li>
+        <li><a href="#s2">정의역과 치역을 쉽게 잡는 다섯 가지 방법</a></li>
+        <li><a href="#s3">개념 간 유사점과 차이점 정리</a></li>
+        <li><a href="#s4">함수 정의역의 의미와 찾는 방법</a></li>
+        <li><a href="#s5">정의역과 치역 비교 표</a></li>
+        <li><a href="#s6">실생활에서 정의역치역 적용하기</a></li>
+        <li><a href="#s7">학부모가 놓치기 쉬운 포인트</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>함수란 무엇인가</h2>
+      <p>저는 아이와 함께 수학 교재를 펴고 함수라는 단어를 처음 마주했습니다. 우리 아이는 그래프 그림을 보며 입력값과 출력값의 관계를 궁금해했습니다. 다른 학부모는 이미 인터넷 강의를 통해 기본 개념을 익혔다고 이야기했습니다.
+
+전문가들은 함수가 입력값의 집합에서 출력값의 집합으로 규칙적으로 매핑된 관계라고 정의합니다. 교사는 이를 실생활 예시와 연결해 설명하면 이해도가 크게 높아진다고 강조합니다. 학원에서는 단계별 문제 풀이를 통해 개념을 체계화하도록 돕습니다.
+
+학생은 직접 함수표를 만들어 보면서 입력과 출력의 일치를 확인했습니다. 부모는 아이가 스스로 답을 찾는 과정을 지켜보며 만족감을 느꼈습니다. 교육자는 이러한 경험이 장기 기억에 도움이 된다고 평가했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>정의역과 치역을 쉽게 잡는 다섯 가지 방법</h2>
+      <p>저는 정의역을 구할 때 입력값의 가능한 범위를 먼저 확인합니다. 우리 아이는 실제 문제에서 제한 조건을 찾아내는 연습을 즐깁니다. 다른 부모는 범위가 무한일 경우 적절한 기호를 사용하는 것이 중요하다고 조언합니다.
+
+전문가들은 치역을 정리할 때 출력값이 실현 가능한지를 검증합니다. 교사는 그래프를 그려 놓고 눈으로 확인하는 방법을 권장합니다. 학원에서는 연습문제를 통해 정의역치역을 빠르게 파악하는 훈련을 진행합니다.</p>
+      <ul class="blog-list">
+        <li>입력값 범위 파악</li>
+        <li>제한 조건 메모</li>
+        <li>기호 사용법 익히기</li>
+        <li>그래프 시각화</li>
+        <li>연습문제 반복</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>개념 간 유사점과 차이점 정리</h2>
+      <p>저는 함수와 관계를 비교하면서 비슷한 점과 다른 점을 정리했습니다. 우리 아이는 두 개념이 모두 입력과 출력 사이의 연결을 다룬다는 점을 발견했습니다. 다른 학부모는 정의역과 치역이 각각 함수와 관계 모두에서 핵심 요소라는 사실을 강조했습니다.
+
+전문가들은 유사점으로 두 개념 모두 일대다 대응을 기반으로 한다고 설명합니다. 교사는 차이점으로 함수는 명확한 규칙성을 요구하지만 관계는 보다 넓은 형태를 허용한다고 구분합니다. 학원에서는 이러한 차이를 실제 문제에 적용해 보는 활동을 진행합니다.
+
+부모는 함수가 수식으로 표현되는 경우가 많아 계산이 용이한 반면, 관계는 그래프나 언어로도 나타날 수 있다는 점을 이해했습니다. 교육자는 함수와 관계를 동시에 학습하면 추상적 사고와 구체적 적용 능력이 동시에 강화된다고 평가합니다. 학생은 두 개념을 구분하면서도 연결 고리를 찾아내는 과정에서 논리적 사고가 크게 성장했다고 말합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>함수 정의역의 의미와 찾는 방법</h2>
+      <p>저는 정의역을 함수가 받아들일 수 있는 모든 입력값의 집합으로 정의합니다. 우리 아이는 실제 숫자를 대입해 보며 가능한 범위를 눈으로 확인합니다. 다른 학부모는 복잡한 식에서는 괄호와 분모를 기준으로 제한을 설정합니다.
+
+전문가들은 정의역을 구할 때 연속성 여부와 실수정수 구분을 강조합니다. 교사는 단계별 표를 만들어 학생이 체계적으로 정리하도록 돕습니다. 학원에서는 모의고사 문제를 활용해 정의역을 빠르게 파악하는 훈련을 진행합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>정의역과 치역 비교 표</h2>
+      <p>저는 표를 통해 정의역과 치역의 차이를 한눈에 파악했습니다. 우리 아이는 구체적인 예시를 보며 두 개념이 어떻게 다르게 적용되는지 이해했습니다. 다른 학부모는 표의 내용이 시험 대비에 큰 도움이 되었다고 말했습니다.
+
+전문가들은 정의역은 입력값의 제한, 치역은 출력값의 한계라고 정리합니다. 교사는 이 표를 수업 자료로 활용해 학생들의 개념 정리를 돕습니다. 학원에서는 표를 활용한 퀴즈를 진행해 기억을 강화합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>정의역</td><td>함수</td><td>입력값이 허용되는 모든 수</td></tr>
+        <tr><td>치역</td><td>함수</td><td>출력값이 실제로 나올 수 있는 수</td></tr>
+        <tr><td>관계</td><td>전반적</td><td>입력과 출력 사이의 모든 가능한 쌍</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>실생활에서 정의역치역 적용하기</h2>
+      <p>저는 일상 생활에서 온도 변화를 함수로 표현하며 정의역을 설정해 보았습니다. 우리 아이는 스마트폰 배터리 용량을 입력값으로 삼아 사용 시간을 예측했습니다. 다른 학부모는 요리 레시피에서 재료 양을 조절해 치역을 확인하는 방법을 공유했습니다.
+
+전문가들은 이런 실제 사례가 추상적 개념을 구체화하는 데 효과적이라고 강조합니다. 교사는 학생들에게 주변 현상을 함수로 모델링하도록 지도합니다. 학원에서는 프로젝트 기반 학습으로 정의역치역을 직접 적용해 보는 시간을 제공합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모가 놓치기 쉬운 포인트</h2>
+      <p>저는 정의역을 구할 때 숨은 조건을 간과하기 쉬운 점을 깨달았습니다. 우리 아이는 문제에서 보이는 숫자만 고려하면 안 된다는 교훈을 얻었습니다. 다른 학부모는 치역을 확인할 때 실제 출력값이 가능한지 검증하는 과정을 놓쳤다고 얘기했습니다.
+
+전문가들은 이러한 실수를 예방하려면 단계별 체크리스트를 활용하라고 권합니다. 교사는 학생들에게 정의역치역을 검증하는 질문을 스스로 하게 지도합니다. 학원에서는 복습 시간에 체크리스트를 다시 점검하며 완전성을 확보합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>함수의 정의역은 어떻게 찾나요?</summary>
+            <p class="faq-answer">입력값이 허용되는 모든 경우를 분석하고, 식에서 제한되는 부분을 찾아내면 정의역을 구할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>치역과 범위는 같은 의미인가요?</summary>
+            <p class="faq-answer">치역은 함수가 실제로 만들 수 있는 출력값 전체를 의미하며, 범위는 경우에 따라 유사하게 사용됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>정의역이 무한대일 때는 어떻게 표시하나요?</summary>
+            <p class="faq-answer">무한대 기호()와 함께 구간 표기법을 사용해 표현합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>정의역과 치역을 실생활에 적용하는 예는?</summary>
+            <p class="faq-answer">온도, 시간, 금액 등 변화를 수치로 나타낼 때 정의역과 치역을 설정하면 예측이 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학생이 정의역치역을 헷갈릴 때 어떻게 도와주나요?</summary>
+            <p class="faq-answer">구체적인 예시와 시각화 도구를 활용해 각각의 의미와 차이를 명확히 설명합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

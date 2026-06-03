@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>등비수열과 패러디 비교 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모 눈높이에서 등비수열 이해와 패러디패스틱 차이를 실생활 예시와 표로 쉽게 설명합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="등비수열과 패러디 비교 가이드">
+  <meta property="og:description" content="학부모 눈높이에서 등비수열 이해와 패러디패스틱 차이를 실생활 예시와 표로 쉽게 설명합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/12737/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="등비수열과 패러디 비교 가이드">
+  <meta name="twitter:description" content="학부모 눈높이에서 등비수열 이해와 패러디패스틱 차이를 실생활 예시와 표로 쉽게 설명합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/12737/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/12737/#article",
+    "headline": "등비수열과 패러디 비교 가이드",
+    "description": "학부모 눈높이에서 등비수열 이해와 패러디패스틱 차이를 실생활 예시와 표로 쉽게 설명합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-10-14",
+    "dateModified": "2025-10-14",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/12737/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/12737/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "등비수열과 패러디 비교 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"등비수열은 언제부터 가르치나요?","acceptedAnswer":{"@type":"Answer","text":"초등 고학년에서 기본 개념을 소개하고 중학교에서 심화합니다."}},
+      {"@type":"Question","name":"패러디와 패스틱을 구분하는 기준은?","acceptedAnswer":{"@type":"Answer","text":"패러디는 풍자비판, 패스틱은 원작 존중재현이 핵심입니다."}},
+      {"@type":"Question","name":"집에서 등비수열 연습 방법은?","acceptedAnswer":{"@type":"Answer","text":"용돈 관리나 물 주기 등 일상 비율을 활용해 직접 계산해 보세요."}},
+      {"@type":"Question","name":"아이에게 적합한 교재는?","acceptedAnswer":{"@type":"Answer","text":"예시가 풍부하고 단계별 문제 풀이가 포함된 책을 선택합니다."}},
+      {"@type":"Question","name":"학부모가 피드백을 줄 때 주의점은?","acceptedAnswer":{"@type":"Answer","text":"긍정적인 격려와 구체적인 개선점을 함께 제시합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>등비수열과 패러디 비교 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">등비수열과 패러디 비교 가이드</h1>
+      <p class="article-meta-desc">학부모 눈높이에서 등비수열 이해와 패러디패스틱 차이를 실생활 예시와 표로 쉽게 설명합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">등비수열, 기초부터 살펴보기</a></li>
+        <li><a href="#s2">우리 아이 등비수열 학습 후기</a></li>
+        <li><a href="#s3">패러디와 패스틱 표현 차이</a></li>
+        <li><a href="#s4">실생활에서 등비수열 활용 팁</a></li>
+        <li><a href="#s5">패러디와 패스틱 비교 표</a></li>
+        <li><a href="#s6">교재 선택 시 고려할 점</a></li>
+        <li><a href="#s7">다음 단계 학습 전략</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>등비수열, 기초부터 살펴보기</h2>
+      <p>저는 아이가 수학 시간에 등비수열이라는 말을 처음 들었을 때 놀라웠습니다. 우리 아이는 매번 같은 비율로 늘어나는 숫자를 눈앞에 떠올리며 흥미를 보였습니다.
+
+그때 저는 인터넷에서 간단한 예시를 찾아보며 기본 개념을 정리했습니다. 최근에 교재를 활용해 첫 항과 공비를 정하고 전체 항을 구하는 연습을 했습니다.
+
+전문가가 설명한 대로 등비수열은 첫 값에 일정한 배수를 곱해 만드는 규칙이라 이해했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>우리 아이 등비수열 학습 후기</h2>
+      <p>우리 아이는 집에서 문제를 풀 때마다 자신감이 붙었습니다. 그때 교사님이 실생활 예시를 들어 설명해 주셨습니다.
+
+그 이후로는 저희가 쇼핑 영수증을 보며 비율을 찾아보는 놀이를 했습니다. 최근에 방과후 수학클럽에서 등비수열 퀴즈를 풀며 경쟁심을 키웠습니다.
+
+전문가 조언대로 복습 노트를 꾸준히 쓰니 기억이 오래 남았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>패러디와 패스틱 표현 차이</h2>
+      <p>저는 패러디와 패스틱 표현의 차이를 이해하려고 두 개념을 비교했습니다. 우리 아이는 영화 속 장면을 흉내 내는 패러디와 원작을 변형한 패스틱을 구분하기 어려워했어요.
+
+그때 선생님은 패러디는 풍자와 비판을 담고, 패스틱은 원작을 존중하면서 스타일을 재현한다는 점을 강조했습니다. 최근에 우리 가족은 유명 광고를 패러디해 웃음 소재로 삼았고, 동시에 클래식 음악을 패스틱 형태로 연주해 보았습니다.
+
+전문가는 두 표현이 문화적 맥락과 의도에 따라 다르게 받아들여진다고 설명했습니다. 그 결과 아이는 상황에 맞는 표현을 선택해 창의적 글쓰기 과제에 적용할 수 있게 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>실생활에서 등비수열 활용 팁</h2>
+      <p>저는 일상 속에서 등비수열을 찾아보는 습관을 들였습니다. 우리 아이는 저축 목표를 설정할 때 비율을 적용해 보았습니다.
+
+그때 우리는 물병을 채우는 양을 일정하게 늘리는 게임을 만들었습니다. 최근에 요리 레시피를 배수로 조절하면서 자연스럽게 연습했습니다.
+
+전문가가 권장한 방법을 따라 꾸준히 적용하면 수학 감각이 향상됩니다.</p>
+      <ul class="blog-list">
+        <li>용돈 관리</li>
+        <li>식물 물주기</li>
+        <li>책 페이지 읽기</li>
+        <li>운동 횟수 늘리기</li>
+        <li>시간표 구성</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>패러디와 패스틱 비교 표</h2>
+      <p>저는 두 표현을 시각적으로 정리하고 싶었습니다. 우리 아이는 표를 보며 차이를 한눈에 파악했습니다.
+
+그때 우리는 각각의 목적과 특징을 행으로 나누어 정리했습니다. 최근에 교실에서 발표할 때도 유용하게 활용되었습니다.
+
+전문가 조언에 따라 표를 보완하면 이해도가 높아집니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>목적</td><td>패러디</td><td>풍자와 비판</td></tr>
+        <tr><td>목적</td><td>패스틱</td><td>존중과 재현</td></tr>
+        <tr><td>사용처</td><td>두 표현</td><td>문화예술</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>교재 선택 시 고려할 점</h2>
+      <p>저는 교재를 고를 때 내용 깊이를 먼저 살폈습니다. 우리 아이는 예시가 풍부한 책을 더 좋아했습니다.
+
+그때 학원 강사는 단계별 연습 문제가 중요하다고 강조했습니다. 최근에 온라인 리뷰를 참고해 실사용자를 비교했습니다.
+
+전문가 의견을 종합하면 적절한 난이도와 흥미 요소가 조화된 교재가 최선입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>다음 단계 학습 전략</h2>
+      <p>저는 아이와 함께 목표를 설정하고 계획을 세웠습니다. 우리 아이는 스스로 문제를 만들며 응용력을 키웠습니다.
+
+그때 우리는 매주 복습 시간을 정해 놓았습니다. 최근에 다른 학부모와 스터디 모임을 만들어 정보 교류를 했습니다.
+
+전문가가 제안한 피드백 방식으로 지속적인 성장과 동기 부여를 유지했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>등비수열은 언제부터 가르치나요?</summary>
+            <p class="faq-answer">초등 고학년에서 기본 개념을 소개하고 중학교에서 심화합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>패러디와 패스틱을 구분하는 기준은?</summary>
+            <p class="faq-answer">패러디는 풍자비판, 패스틱은 원작 존중재현이 핵심입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>집에서 등비수열 연습 방법은?</summary>
+            <p class="faq-answer">용돈 관리나 물 주기 등 일상 비율을 활용해 직접 계산해 보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 적합한 교재는?</summary>
+            <p class="faq-answer">예시가 풍부하고 단계별 문제 풀이가 포함된 책을 선택합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 피드백을 줄 때 주의점은?</summary>
+            <p class="faq-answer">긍정적인 격려와 구체적인 개선점을 함께 제시합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

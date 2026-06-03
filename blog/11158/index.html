@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 학습 실전 가이드 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모가 직접 체험한 함수 최대최소 문제 풀이와 모르는 부분 우선 학습법을 실천적 조언으로 전합니다">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="함수 학습 실전 가이드">
+  <meta property="og:description" content="학부모가 직접 체험한 함수 최대최소 문제 풀이와 모르는 부분 우선 학습법을 실천적 조언으로 전합니다">
+  <meta property="og:url" content="https://wacademy.kr/blog/11158/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="함수 학습 실전 가이드">
+  <meta name="twitter:description" content="학부모가 직접 체험한 함수 최대최소 문제 풀이와 모르는 부분 우선 학습법을 실천적 조언으로 전합니다">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/11158/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/11158/#article",
+    "headline": "함수 학습 실전 가이드",
+    "description": "학부모가 직접 체험한 함수 최대최소 문제 풀이와 모르는 부분 우선 학습법을 실천적 조언으로 전합니다",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-11-13",
+    "dateModified": "2025-11-13",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/11158/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/11158/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "함수 학습 실전 가이드"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"함수 최대최소 문제를 처음 접하면 어떻게 접근해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"먼저 정의역과 공역을 확인하고, 그래프 형태를 파악한 뒤 미분을 이용해 극값 후보를 찾는 순서가 효과적입니다."}},
+      {"@type":"Question","name":"모르는 부분을 정확히 파악하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"학습 전 체크리스트를 만들어 알고 있는 내용과 모르는 내용을 구분하고, 우선순위를 매겨 집중 학습하면 효율적입니다."}},
+      {"@type":"Question","name":"오답 노트를 작성할 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"틀린 이유와 정답 과정을 함께 기록하고, 같은 유형 문제를 다시 풀어 확인하는 것이 중요합니다."}},
+      {"@type":"Question","name":"함수 학습에 적합한 보조 자료는?","acceptedAnswer":{"@type":"Answer","text":"시각적 그래프와 단계별 해설이 포함된 참고서를 활용하면 개념 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"학부모가 직접 도와줄 수 있는 가장 좋은 방법은?","acceptedAnswer":{"@type":"Answer","text":"아이와 함께 문제를 토론하고, 스스로 답을 찾도록 유도하며 피드백을 제공하는 것이 가장 효과적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>함수 학습 실전 가이드</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">함수 학습 실전 가이드</h1>
+      <p class="article-meta-desc">학부모가 직접 체험한 함수 최대최소 문제 풀이와 모르는 부분 우선 학습법을 실천적 조언으로 전합니다</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">함수 최대최소 문제의 실전 접근법</a></li>
+        <li><a href="#s2">학습 전 알고 있는 것과 모르는 것 구분하기</a></li>
+        <li><a href="#s3">실제 문제 풀이와 피드백 활용 방법</a></li>
+        <li><a href="#s4">함수 학습 체크리스트</a></li>
+        <li><a href="#s5">학습 단계별 구분표</a></li>
+        <li><a href="#s6">부모가 직접 해볼 수 있는 학습 팁</a></li>
+        <li><a href="#s7">장기적인 학습 전략</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>함수 최대최소 문제의 실전 접근법</h2>
+      <p>우리 아이는 최근 함수의 최대값과 최소값을 구하는 문제를 만나며 혼란스러움을 토로했습니다. 교과서 예제만으로는 실제 시험 유형을 파악하기 어려워 추가 자료를 찾아보게 되었습니다. 다양한 그래프와 표를 활용해 함수의 변곡점을 시각적으로 확인하는 방법을 적용해 보았습니다.
+
+ 저는 문제를 풀 때 먼저 정의역과 공역을 명확히 설정하고, 조건을 하나씩 검증하는 습관을 들였습니다. 다음 단계에서는 미분을 이용해 극값 후보를 찾고, 실제 값과 비교해 정답을 확정했습니다. 마지막으로 해설을 스스로 요약하며 개념을 재정립하는 과정을 통해 장기 기억을 강화했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>학습 전 알고 있는 것과 모르는 것 구분하기</h2>
+      <p>저희 가정에서는 학습 계획을 세우기 전 아이가 이미 이해하고 있는 개념을 리스트업했습니다. 최근에는 시험 범위 내에 포함된 함수 유형을 검토하며, 익숙한 부분과 새로운 부분을 명확히 구분했습니다. 교사와의 상담을 통해 놓친 핵심 개념을 찾아내고, 우선 순위를 매겨 학습 시간을 배분했습니다.
+
+ 저는 매일 짧은 퀴즈를 활용해 아이가 스스로 모르는 부분을 인식하도록 독려했습니다. 다음 단계에서는 모르는 개념을 집중적으로 설명하고, 실전 문제에 적용해 보는 연습을 진행했습니다. 마지막으로 학습 결과를 기록해 두어 진척도를 시각적으로 확인하고 동기부여를 강화했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>실제 문제 풀이와 피드백 활용 방법</h2>
+      <p>우리 아이는 최근 모의고사에서 함수 최대최소 문제를 풀면서 실수율이 높아 고민했습니다. 교사는 문제를 풀이한 뒤 오류 지점을 함께 짚어보며 원인을 분석하도록 지도했습니다. 저는 아이가 스스로 답안을 다시 검토하도록 독려하고, 틀린 이유를 구체적으로 적게 했습니다.
+
+ 다음에는 비슷한 유형의 추가 문제를 제공해 반복 학습을 설계했습니다. 최근에는 실생활 예시를 들어 함수의 변화를 설명함으로써 개념 이해를 돕았습니다. 저는 정답과 오답을 비교 분석하며 핵심 포인트를 요약하도록 도와주었습니다.
+
+ 마지막으로 아이가 스스로 만든 요약 노트를 검토하고, 교사의 피드백을 반영해 수정하도록 했습니다. 이렇게 체계적인 피드백 과정을 거치면 아이는 점차 자신감을 회복하고, 실제 시험에서도 안정적인 성적을 기대할 수 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>함수 학습 체크리스트</h2>
+      <p>우리 아이는 매일 학습 시작 전에 목표를 명확히 설정하는 습관을 들였습니다. 최근에는 교과서 예제와 추가 문제를 구분해 단계별로 풀어보는 연습을 했습니다. 저는 아이가 푼 문제를 스스로 채점하고, 오답 노트를 작성하도록 지도했습니다.
+
+ 다음으로는 핵심 개념을 카드 형태로 정리해 반복 학습을 용이하게 했습니다. 마지막으로 학습 시간과 성취도를 기록해 주간 리뷰를 진행했습니다.</p>
+      <ul class="blog-list">
+        <li>목표 설정</li>
+        <li>문제 구분</li>
+        <li>오답 정리</li>
+        <li>핵심 카드</li>
+        <li>주간 리뷰</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학습 단계별 구분표</h2>
+      <p>우리 아이는 학습 전 알고 있는 것과 모르는 것 목록을 작성해 전반적인 상황을 파악했습니다. 최근에는 이 목록을 기반으로 우선순위를 매겨 집중 학습 계획을 수립했습니다. 저는 매주 진행 상황을 체크하며 필요한 부분을 보완하도록 돕고 있습니다.
+
+ 다음 단계에서는 실제 문제를 적용해 이해도를 검증하고, 피드백을 반영했습니다. 마지막으로 학습 결과를 시각화해 향후 목표 설정에 활용했습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>알고 있는 것</td><td>함수 정의와 기본 그래프</td><td>기본 개념을 이미 숙지함</td></tr>
+        <tr><td>모르는 것</td><td>극값 찾기 방법</td><td>미분을 이용한 극값 탐색 필요</td></tr>
+        <tr><td>우선 학습</td><td>극값 문제 풀이</td><td>핵심 공식을 중심으로 연습</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모가 직접 해볼 수 있는 학습 팁</h2>
+      <p>저희는 아이와 함께 함수 그래프를 손으로 그리며 변곡점을 직접 찾는 활동을 했습니다. 최근에는 스마트폰 앱을 활용해 실시간 피드백을 받으며 연습 문제를 풀었습니다. 저는 아이가 스스로 질문을 만들고, 답을 찾아보는 습관을 길러주었습니다.
+
+ 다음으로는 학습 시간에 짧은 휴식을 삽입해 집중력을 유지하도록 했습니다. 마지막으로 성취감을 높이기 위해 작은 목표 달성 시 칭찬과 보상을 제공했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>장기적인 학습 전략</h2>
+      <p>우리 가정은 함수 학습을 연중 지속적인 과정으로 계획했습니다. 최근에는 방학 기간을 활용해 심화 문제와 실전 모의고사를 병행했습니다. 저는 학습 결과를 연표로 정리해 성장 과정을 눈으로 확인했습니다.
+
+ 다음 단계에서는 새로운 단원으로 확장해 학습 범위를 넓히고 있습니다. 마지막으로 아이가 스스로 학습 목표를 설정하도록 독립성을 키우고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>함수 최대최소 문제를 처음 접하면 어떻게 접근해야 하나요?</summary>
+            <p class="faq-answer">먼저 정의역과 공역을 확인하고, 그래프 형태를 파악한 뒤 미분을 이용해 극값 후보를 찾는 순서가 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>모르는 부분을 정확히 파악하는 방법은?</summary>
+            <p class="faq-answer">학습 전 체크리스트를 만들어 알고 있는 내용과 모르는 내용을 구분하고, 우선순위를 매겨 집중 학습하면 효율적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>오답 노트를 작성할 때 주의할 점은?</summary>
+            <p class="faq-answer">틀린 이유와 정답 과정을 함께 기록하고, 같은 유형 문제를 다시 풀어 확인하는 것이 중요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>함수 학습에 적합한 보조 자료는?</summary>
+            <p class="faq-answer">시각적 그래프와 단계별 해설이 포함된 참고서를 활용하면 개념 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 직접 도와줄 수 있는 가장 좋은 방법은?</summary>
+            <p class="faq-answer">아이와 함께 문제를 토론하고, 스스로 답을 찾도록 유도하며 피드백을 제공하는 것이 가장 효과적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

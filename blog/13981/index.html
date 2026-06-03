@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일차함수 기울기 활용 팁 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모 시각에서 일차함수 변화율과 기울기를 이해하고 다양한 문제에 적용하는 방법을 실전 후기와 함께 안내합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="일차함수 기울기 활용 팁">
+  <meta property="og:description" content="학부모 시각에서 일차함수 변화율과 기울기를 이해하고 다양한 문제에 적용하는 방법을 실전 후기와 함께 안내합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/13981/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="일차함수 기울기 활용 팁">
+  <meta name="twitter:description" content="학부모 시각에서 일차함수 변화율과 기울기를 이해하고 다양한 문제에 적용하는 방법을 실전 후기와 함께 안내합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/13981/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/13981/#article",
+    "headline": "일차함수 기울기 활용 팁",
+    "description": "학부모 시각에서 일차함수 변화율과 기울기를 이해하고 다양한 문제에 적용하는 방법을 실전 후기와 함께 안내합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-09-22",
+    "dateModified": "2025-09-22",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/13981/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/13981/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "일차함수 기울기 활용 팁"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"일차함수 기울기가 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"기울기는 그래프에서 한 점에서 다른 점으로 이동할 때의 상승하강 비율을 나타내는 수치이며, 변화율을 수학적으로 표현한 것입니다."}},
+      {"@type":"Question","name":"기울기를 실제 생활에 어떻게 적용하나요?","acceptedAnswer":{"@type":"Answer","text":"용돈 증가, 이동 거리, 시간표 등 비례 관계가 있는 상황에서 변화량을 비교해 기울기를 구하면 실생활 의사결정에 활용할 수 있습니다."}},
+      {"@type":"Question","name":"부정적인 기울기는 왜 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"음수 기울기는 감소 추세를 의미하며, 비용 절감이나 시간 단축 등 다양한 상황에서 중요한 판단 근거가 됩니다."}},
+      {"@type":"Question","name":"문제 유형별 공부 방법은?","acceptedAnswer":{"@type":"Answer","text":"그래프 해석은 좌표 파악, 방정식은 계수 변환, 실생활은 비례 관계 찾기로 구분해 단계별 연습하면 효과적입니다."}},
+      {"@type":"Question","name":"학부모가 제공할 수 있는 피드백은?","acceptedAnswer":{"@type":"Answer","text":"긍정적 칭찬 후 구체적 수정 포인트를 제시하고, 실전 예시와 함께 재도전 기회를 주면 학습 동기가 높아집니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>일차함수 기울기 활용 팁</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">일차함수 기울기 활용 팁</h1>
+      <p class="article-meta-desc">학부모 시각에서 일차함수 변화율과 기울기를 이해하고 다양한 문제에 적용하는 방법을 실전 후기와 함께 안내합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">변화율과 기울기의 기본 개념</a></li>
+        <li><a href="#s2">실생활에서 기울기 찾기 다섯 가지 사례</a></li>
+        <li><a href="#s3">다양한 유형 문제에 적용하는 방법</a></li>
+        <li><a href="#s4">문제 유형별 핵심 포인트 정리</a></li>
+        <li><a href="#s5">부모가 도울 수 있는 학습 팁</a></li>
+        <li><a href="#s6">자주 발생하는 오해와 해결책</a></li>
+        <li><a href="#s7">학습 효과를 높이는 피드백 방법</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>변화율과 기울기의 기본 개념</h2>
+      <p>우리 아이는 일차함수의 변화율 개념을 처음 접했을 때 눈이 휘둥그레졌습니다. 저는 교재에 실린 그래프와 실제 생활 예시를 함께 보여 주며 이해를 돕기 위해 손으로 직접 기울기를 계산해 보았습니다. 학교 선생님은 이런 체험이 개념 정착에 큰 도움이 된다고 강조했으며, 우리 가정에서도 꾸준히 연습을 이어가기로 약속했습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>실생활에서 기울기 찾기 다섯 가지 사례</h2>
+      <p>우리 가족은 용돈 사용 패턴을 그래프로 그려 보며 매달 증가율을 직접 측정했습니다. 저는 아침 등교 시간을 시간표에 표시하고, 출발 전후의 이동 거리 차이를 계산해 보았습니다. 다른 학부모들은 식사량 변화를 기록하여 영양 관리에 기울기 개념을 적용하는 경우가 많다고 전해 주었습니다.
+
+</p>
+      <ul class="blog-list">
+        <li>용돈 관리</li>
+        <li>시간표 활용</li>
+        <li>수학 숙제</li>
+        <li>식사량 기록</li>
+        <li>운동 거리 측정</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>다양한 유형 문제에 적용하는 방법</h2>
+      <p>우리 아이는 다양한 형태의 문제를 풀면서 일차함수의 기본 원리를 여러 상황에 적용하는 연습을 했고, 그 과정에서 그래프와 방정식 사이의 연결 고리를 스스로 찾아냈습니다. 저는 문제 유형을 크게 세 그룹으로 나누어 각각의 특성을 정리하고, 실제 시험에서 흔히 등장하는 응용 문제를 단계별 힌트와 함께 제공함으로써 자신감을 심어 주었습니다. 학교에서는 교과 외 활동으로 실험 데이터를 수집하고, 이를 기반으로 기울기를 계산해 보는 프로젝트를 진행했으며, 이러한 경험이 추상적 개념을 구체적으로 체감하게 만들었다는 피드백을 받았습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>문제 유형별 핵심 포인트 정리</h2>
+      <p>우리 아이는 그래프 해석 문제에서 좌표 변화량을 빠르게 파악하는 능력이 향상되었습니다. 저는 방정식 변형 문제를 다룰 때 변수 이동과 상수 조정의 순서를 명확히 설명해 주었습니다. 학교에서는 실제 상황 제시 문제를 통해 기울기의 의미를 현실과 연결시키는 연습을 강조했습니다.
+
+</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>그래프</td><td>시각적</td><td>좌표 변화량으로 기울기 파악</td></tr>
+        <tr><td>방정식</td><td>대수적</td><td>계수 변환을 통해 기울기 도출</td></tr>
+        <tr><td>실생활</td><td>응용</td><td>비례 관계로 기울기 해석</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>부모가 도울 수 있는 학습 팁</h2>
+      <p>우리 가족은 매일 10분씩 짧은 시간에 개념 복습을 진행하고, 그때마다 작은 퀴즈를 내어 흥미를 유지합니다. 저는 아이가 스스로 문제를 만들게 하여 설명하는 과정을 통해 이해도를 스스로 점검하도록 유도합니다. 다른 학부모들은 스마트폰 앱을 활용해 즉각적인 피드백을 제공받는 것이 효과적이라고 전해 주었습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>자주 발생하는 오해와 해결책</h2>
+      <p>우리 아이는 기울기가 항상 양수라고 착각해 부정적인 상황을 놓치는 경우가 있었습니다. 저는 음수 기울기의 의미를 내려가는 그래프와 실생활 예시로 설명해 주었고, 이를 통해 개념이 확장됨을 깨달았습니다. 학교에서는 오답 노트를 활용해 반복 오류를 시각화하고, 정정 과정을 함께 진행하는 방법을 권장했습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학습 효과를 높이는 피드백 방법</h2>
+      <p>우리 아이는 과제 제출 후 교사의 상세 코멘트를 읽고, 수정 포인트를 바로 적용해 점수가 상승했습니다. 저는 긍정적인 부분을 먼저 강조하고, 개선이 필요한 부분을 구체적인 예시와 함께 제시해 동기 부여를 강화했습니다. 다른 학부모들은 동료 학습 그룹을 만들어 서로의 풀이를 검토하고, 다양한 관점을 공유하는 것이 큰 도움이 된다고 말했습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>일차함수 기울기가 무엇인가요?</summary>
+            <p class="faq-answer">기울기는 그래프에서 한 점에서 다른 점으로 이동할 때의 상승하강 비율을 나타내는 수치이며, 변화율을 수학적으로 표현한 것입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>기울기를 실제 생활에 어떻게 적용하나요?</summary>
+            <p class="faq-answer">용돈 증가, 이동 거리, 시간표 등 비례 관계가 있는 상황에서 변화량을 비교해 기울기를 구하면 실생활 의사결정에 활용할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부정적인 기울기는 왜 중요한가요?</summary>
+            <p class="faq-answer">음수 기울기는 감소 추세를 의미하며, 비용 절감이나 시간 단축 등 다양한 상황에서 중요한 판단 근거가 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>문제 유형별 공부 방법은?</summary>
+            <p class="faq-answer">그래프 해석은 좌표 파악, 방정식은 계수 변환, 실생활은 비례 관계 찾기로 구분해 단계별 연습하면 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 제공할 수 있는 피드백은?</summary>
+            <p class="faq-answer">긍정적 칭찬 후 구체적 수정 포인트를 제시하고, 실전 예시와 함께 재도전 기회를 주면 학습 동기가 높아집니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

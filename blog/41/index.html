@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일차함수와 하루 정리법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="일차함수 이해와 매일 학습 내용 요약을 통해 자녀의 수학 자신감을 높이는 방법을 부모 입장에서 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="일차함수와 하루 정리법">
+  <meta property="og:description" content="일차함수 이해와 매일 학습 내용 요약을 통해 자녀의 수학 자신감을 높이는 방법을 부모 입장에서 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/41/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="일차함수와 하루 정리법">
+  <meta name="twitter:description" content="일차함수 이해와 매일 학습 내용 요약을 통해 자녀의 수학 자신감을 높이는 방법을 부모 입장에서 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/41/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/41/#article",
+    "headline": "일차함수와 하루 정리법",
+    "description": "일차함수 이해와 매일 학습 내용 요약을 통해 자녀의 수학 자신감을 높이는 방법을 부모 입장에서 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/41/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/41/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "일차함수와 하루 정리법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"일차함수를 아이에게 어떻게 쉽게 설명할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"일상의 거리와 시간 관계를 그림으로 보여주고, y=mx+b 형태를 간단히 소개하면 이해가 쉬워집니다."}},
+      {"@type":"Question","name":"하루 요약을 어디에 적는 것이 좋나요?","acceptedAnswer":{"@type":"Answer","text":"노트나 스마트폰 메모 앱에 날짜와 함께 핵심 문장을 적으면 복습 시 편리합니다."}},
+      {"@type":"Question","name":"학습 동기를 유지하려면 어떤 보상이 효과적인가요?","acceptedAnswer":{"@type":"Answer","text":"작은 스티커나 주말에 함께 하는 활동을 보상으로 제시하면 지속적인 동기 부여가 됩니다."}},
+      {"@type":"Question","name":"선형 그래프를 직접 그려보는 방법은?","acceptedAnswer":{"@type":"Answer","text":"좌표축에 점 두 개를 찍고 직선을 연결하면 기울기와 절편을 눈으로 확인할 수 있습니다."}},
+      {"@type":"Question","name":"부모가 체크리스트를 만들 때 주의할 점은?","acceptedAnswer":{"@type":"Answer","text":"항목을 너무 많이 넣지 말고 핵심 개념 3~5개로 제한해 아이가 집중하도록 합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>일차함수와 하루 정리법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">일차함수와 하루 정리법</h1>
+      <p class="article-meta-desc">일차함수 이해와 매일 학습 내용 요약을 통해 자녀의 수학 자신감을 높이는 방법을 부모 입장에서 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">일차함수의 필요성</a></li>
+        <li><a href="#s2">효과적인 학습 전략 다섯 가지</a></li>
+        <li><a href="#s3">일차함수 핵심 개념 깊이 파악</a></li>
+        <li><a href="#s4">하루 학습 요약법</a></li>
+        <li><a href="#s5">정리된 내용 활용 체크리스트</a></li>
+        <li><a href="#s6">부모가 알아두면 좋은 학습 팁</a></li>
+        <li><a href="#s7">학습 후 피드백과 동기 부여</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>일차함수의 필요성</h2>
+      <p>우리 아이는 오늘 수학 시간에 새로운 개념을 만나며 눈빛이 반짝였다. 교과서는 직선 그래프가 어떻게 기울기와 절편을 나타내는지 설명하고 있었다.
+
+ 수리 교사는 실제 생활에서 거리와 시간 관계를 예시로 들어 이해를 돕는다. 나는 그 학생이 문제를 풀 때마다 작은 성공을 기록하도록 격려한다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>효과적인 학습 전략 다섯 가지</h2>
+      <p>우리 가족은 매주 토요일마다 짧은 시간 동안 개념을 복습한다. 교실 밖에서는 시장 가격표를 보며 기울기를 직접 측정해 보는 활동을 진행한다.
+
+ 수리 교사는 그래프를 손으로 그려보게 하면서 좌표축의 의미를 강조한다. 나는 아이에게 매일 한 줄 요약을 기록하도록 지도해 학습을 체계화한다.</p>
+      <ul class="blog-list">
+        <li>교과서 예제 활용</li>
+        <li>실생활 가격표 적용</li>
+        <li>직접 그래프 그리기</li>
+        <li>방정식 변형 연습</li>
+        <li>요약 노트 작성</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>일차함수 핵심 개념 깊이 파악</h2>
+      <p>우리 아이는 일차함수의 기본 형태를 알게 되면 추상적인 수식이 눈앞에 그림처럼 펼쳐진다. 교과서는 y등호mx플러스b라는 구조를 보여주며 각 요소가 어떤 의미를 갖는지 차근차근 설명한다.
+
+ 수리 교사는 기울기가 양수일 때 그래프가 오른쪽으로 상승하고, 음수일 때는 하강한다는 직관을 실험 도구로 보여준다. 다른 학부모는 아이가 직접 점 두 개를 선택해 기울기를 계산하도록 지도하면 이해도가 크게 높아진다고 전한다.
+
+ 나는 매일 학습 후 핵심 개념을 색깔별로 구분해 노트에 정리하고, 다음 날 복습할 때 눈에 띄는 색을 먼저 살핀다. 그 학생은 이렇게 시각적 정리를 통해 방정식 변형과 그래프 해석을 동시에 연습하며 자신감을 얻는다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>하루 학습 요약법</h2>
+      <p>우리 가족은 저녁 식사 후 10분을 할애해 오늘 배운 핵심을 말하게 한다. 교실에서는 선생님이 강조한 포인트를 메모지에 적어두었지만, 집에서는 아이가 직접 말해보는 것이 효과적이다.
+
+ 수리 교사는 질문 형태로 정리하도록 권장하며, 답을 스스로 찾게 하면 기억이 오래 남는다. 나는 그때 적힌 메모를 사진으로 저장해 언제든지 꺼내볼 수 있게 한다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>정리된 내용 활용 체크리스트</h2>
+      <p>우리 아이는 표에 있는 항목을 하나씩 확인하며 학습 흐름을 점검한다. 교과서는 각 항목에 해당하는 예시와 핵심 설명을 제공한다.
+
+ 수리 교사는 체크리스트를 활용해 다음 수업 목표를 미리 제시한다. 나는 매주 체크리스트를 업데이트하면서 아이의 진행 상황을 기록한다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>핵심</td><td>정의</td><td>y=mx+b 형태</td></tr>
+        <tr><td>특징</td><td>기울기</td><td>직선의 상승하강 정도</td></tr>
+        <tr><td>활용</td><td>실생활</td><td>거리시간 관계 모델링</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>부모가 알아두면 좋은 학습 팁</h2>
+      <p>우리 집은 아이가 스스로 질문하도록 유도해 문제 해결 능력을 키운다. 교과서는 질문지를 제공하지만, 우리는 그 질문을 변형해 일상과 연결한다.
+
+ 수리 교사는 학생에게 개념을 설명할 때 비유를 사용하라고 조언한다. 나는 그 비유를 함께 찾아보며 아이와 대화를 즐긴다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학습 후 피드백과 동기 부여</h2>
+      <p>우리 아이는 매일 학습을 마친 뒤 스스로 평가를 작성한다. 교실에서는 교사가 즉각적인 피드백을 제공하지만, 집에서는 칭찬과 함께 개선점을 제시한다.
+
+ 수리 교사는 목표 달성 여부를 시각적으로 표시해 동기 부여를 돕는다. 나는 아이가 작은 성공을 기록할 때마다 특별한 보상을 준비한다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>일차함수를 아이에게 어떻게 쉽게 설명할 수 있나요?</summary>
+            <p class="faq-answer">일상의 거리와 시간 관계를 그림으로 보여주고, y=mx+b 형태를 간단히 소개하면 이해가 쉬워집니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>하루 요약을 어디에 적는 것이 좋나요?</summary>
+            <p class="faq-answer">노트나 스마트폰 메모 앱에 날짜와 함께 핵심 문장을 적으면 복습 시 편리합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 동기를 유지하려면 어떤 보상이 효과적인가요?</summary>
+            <p class="faq-answer">작은 스티커나 주말에 함께 하는 활동을 보상으로 제시하면 지속적인 동기 부여가 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>선형 그래프를 직접 그려보는 방법은?</summary>
+            <p class="faq-answer">좌표축에 점 두 개를 찍고 직선을 연결하면 기울기와 절편을 눈으로 확인할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 체크리스트를 만들 때 주의할 점은?</summary>
+            <p class="faq-answer">항목을 너무 많이 넣지 말고 핵심 개념 3~5개로 제한해 아이가 집중하도록 합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글쓴이 관점과 벡터 내적 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모 시각에서 글쓴이 의도와 벡터 내적 개념을 실생활에 적용하는 방법을 경험담과 팁으로 전합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="글쓴이 관점과 벡터 내적">
+  <meta property="og:description" content="학부모 시각에서 글쓴이 의도와 벡터 내적 개념을 실생활에 적용하는 방법을 경험담과 팁으로 전합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/5943/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="글쓴이 관점과 벡터 내적">
+  <meta name="twitter:description" content="학부모 시각에서 글쓴이 의도와 벡터 내적 개념을 실생활에 적용하는 방법을 경험담과 팁으로 전합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/5943/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/5943/#article",
+    "headline": "글쓴이 관점과 벡터 내적",
+    "description": "학부모 시각에서 글쓴이 의도와 벡터 내적 개념을 실생활에 적용하는 방법을 경험담과 팁으로 전합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-15",
+    "dateModified": "2026-02-15",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/5943/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/5943/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "글쓴이 관점과 벡터 내적"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"벡터 내적은 어디에 쓰이나요?","acceptedAnswer":{"@type":"Answer","text":"두 물리량의 방향과 크기를 동시에 고려해 힘과 일 같은 실제 현상을 계산할 때 활용됩니다."}},
+      {"@type":"Question","name":"글쓴이 의도를 파악하려면 어떤 점을 주의해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"키워드 선택, 강조된 문장, 전체 흐름을 종합해 숨은 목적을 유추하는 것이 중요합니다."}},
+      {"@type":"Question","name":"점곱을 쉽게 설명하는 방법은?","acceptedAnswer":{"@type":"Answer","text":"두 벡터를 손에 들고 서로 끌어당기는 힘으로 비유하면 직관적으로 이해할 수 있습니다."}},
+      {"@type":"Question","name":"학부모가 수학 교육에 참여하는 효과는?","acceptedAnswer":{"@type":"Answer","text":"가정에서의 지속적인 관심과 피드백이 학생의 자신감과 성취도를 크게 높입니다."}},
+      {"@type":"Question","name":"실생활 예시를 찾는 팁은?","acceptedAnswer":{"@type":"Answer","text":"일상에서 힘, 거리, 에너지와 같은 물리량을 관찰하고 이를 수학적 식으로 표현해 보세요."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>글쓴이 관점과 벡터 내적</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">글쓴이 관점과 벡터 내적</h1>
+      <p class="article-meta-desc">학부모 시각에서 글쓴이 의도와 벡터 내적 개념을 실생활에 적용하는 방법을 경험담과 팁으로 전합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">글쓴이의 관점을 파악하는 첫걸음</a></li>
+        <li><a href="#s2">벡터 내적 개념을 이해하는 실전 팁</a></li>
+        <li><a href="#s3">내적을 활용한 학습 전략</a></li>
+        <li><a href="#s4">글쓴이 관점 파악 구체적 방법</a></li>
+        <li><a href="#s5">벡터 내적을 실생활에 적용하기</a></li>
+        <li><a href="#s6">교육 콘텐츠 제작에 글쓴이 시각 활용</a></li>
+        <li><a href="#s7">점곱 가르치는 실전 팁</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>글쓴이의 관점을 파악하는 첫걸음</h2>
+      <p>우리 가정에서는 최신 수학 교재를 직접 시험해 보면서 느낀 점을 상세히 적어 보았습니다. 보호자는 선택 과정에서 발생한 여러 고민과 그에 대한 창의적인 해결책을 스스로 기록했습니다.
+
+가족은 함께 복잡한 문제를 풀어보며 학습 분위기가 급격히 변화한 모습을 면밀히 관찰했습니다. 부모님은 아이의 집중력이 눈에 띄게 향상된 순간을 정확히 포착해 구체적인 설명을 덧붙였습니다.
+
+다른 학부모에게 실질적인 조언을 전달하고자 이번 경험을 진심을 담아 공유합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>벡터 내적 개념을 이해하는 실전 팁</h2>
+      <p>우리 아이는 중학교에서 처음으로 벡터 개념을 배우면서 어려움을 겪었습니다. 보호자는 교과서 설명만으로는 충분하지 않다고 판단해 추가 자료를 찾아보았습니다.
+
+가족은 실생활 예시를 활용해 두 물리량 사이의 관계를 쉽게 설명하려 노력했습니다. 부모님은 내적이 두 방향의 곱과 각도에 따라 값이 변한다는 점을 시각화해 보여주었습니다.
+
+다른 학부모에게는 이러한 접근법이 아이의 이해도를 크게 높였다는 사실을 전하고 싶습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>개념</td><td>내적 정의</td><td>두 벡터의 곱과 각도</td></tr>
+        <tr><td>예시</td><td>실생활</td><td>힘과 이동 거리</td></tr>
+        <tr><td>학습 팁</td><td>학생</td><td>시각화 그림 활용</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>내적을 활용한 학습 전략</h2>
+      <p>우리 가정에서는 점곱 개념을 실제 문제에 적용해 보는 연습을 꾸준히 진행했으며, 특히 일상적인 상황을 예시로 삼아 아이가 직관적으로 이해하도록 노력했습니다.
+
+보호자는 매일 짧은 시간이라도 관련 퀴즈를 만들고 아이와 함께 풀이 과정을 검토했으며, 이때마다 새로운 유형을 추가해 학습 동기를 유지하려는 의도도 담겼습니다.
+
+가족은 방 안에 큰 도표를 그려 두 벡터 곱의 방향과 크기를 눈에 띄게 표시했으며, 도표에는 색상 구분과 화살표 길이 조절을 통해 시각적 차이를 명확히 드러냈습니다.
+
+부모님은 색깔 별로 구분된 그래프를 이용해 곱셈 결과가 양수, 영, 음수일 때 의미를 설명했으며, 그 과정에서 물리적 예시를 곁들여 추상적인 수치를 실체와 연결시켰습니다.
+
+학생은 이러한 시각적 자료를 보며 추상적인 수식을 구체적인 상황과 연결짓는 능력이 향상되었으며, 특히 복합적인 문제에서도 자신감 있게 접근할 수 있게 된 점이 크게 느껴졌습니다.
+
+다른 학부모는 이 방법을 도입한 뒤 아이의 시험 점수가 눈에 띄게 상승했다고 전했으며, 그 결과 학교 내에서도 긍정적인 평가를 받아 교육 현장에서 활용 가능성을 검토하고 있습니다.
+
+전체적으로 스칼라 곱 연산을 실생활과 연결하는 학습 전략은 이해도를 높이고 장기 기억에도 도움이 된다는 결론에 도달했으며, 앞으로도 이러한 접근을 지속하면 수학에 대한 흥미와 성취감이 동시에 증대될 것으로 기대됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>글쓴이 관점 파악 구체적 방법</h2>
+      <p>우리 가정에서는 글쓴이의 의도를 정확히 이해하기 위해 여러 단계의 질문을 설정했습니다. 보호자는 텍스트의 구조와 강조된 표현을 분석해 핵심 메시지를 도출했습니다.
+
+가족은 저자와 독자의 관점을 비교해 차이점을 시각화하는 작업을 진행했습니다. 부모님은 실제 사례를 통해 추론한 의미가 실제 상황에 어떻게 적용되는지 검증했습니다.
+
+다른 학부모는 이러한 과정을 반복하면 글의 숨은 의도를 파악하는 능력이 크게 향상된다고 증언했습니다.</p>
+      <ul class="blog-list">
+        <li>핵심 키워드 추출</li>
+        <li>문단 별 요약 작성</li>
+        <li>저자 배경 조사</li>
+        <li>독자 기대 파악</li>
+        <li>비교 분석 활용</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>벡터 내적을 실생활에 적용하기</h2>
+      <p>우리 아이는 일상에서 힘과 거리의 관계를 이해하기 위해 점곱 개념을 적용해 보았습니다. 보호자는 물체를 미는 방향과 이동 거리를 그래프로 나타내며 두 값의 곱이 작업 효율을 나타낸다고 설명했습니다.
+
+가족은 자전거 타기와 같은 활동에서 페달 회전과 전진 속도의 곱이 에너지 소비를 예측하는 데 쓰인다는 사실을 발견했습니다. 부모님은 운동 경기에서 선수의 힘과 움직임 방향이 결합된 결과가 경기 결과에 직접적인 영향을 미친다는 점을 강조했습니다.
+
+다른 학부모는 이러한 실생활 적용이 아이의 수학적 사고를 구체적인 경험과 연결시켜 학습 흥미를 크게 높인다고 전했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>교육 콘텐츠 제작에 글쓴이 시각 활용</h2>
+      <p>우리 팀은 글쓴이의 시각을 반영한 교육 영상을 제작하기 위해 사전 인터뷰를 진행했습니다. 보호자는 인터뷰에서 강조된 핵심 포인트를 스크립트에 녹여내어 전달력을 강화했습니다.
+
+가족은 촬영 현장에서 저자의 감정을 시각적 요소와 음악으로 표현해 감동을 더했습니다. 부모님은 최종 편집 단계에서 강조된 메시지가 목표 청중에게 명확히 전달되는지 꼼꼼히 검토했습니다.
+
+다른 교육자들은 이러한 과정을 통해 콘텐츠의 신뢰성과 효과가 크게 상승했다고 평가했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>점곱 가르치는 실전 팁</h2>
+      <p>우리 학교에서는 점곱을 처음 접하는 학생들을 위해 단계별 지도안을 마련했습니다. 보호자는 교재에 삽입된 간단한 그림을 활용해 개념을 시각적으로 설명했습니다.
+
+가족은 실험 도구를 이용해 두 물리량을 직접 측정하고 결과를 기록함으로써 학습 효과를 높였습니다. 부모님은 퀴즈 형식의 복습을 주기적으로 실시해 기억을 강화하고 오답을 바로 잡았습니다.
+
+다른 교사들은 이러한 방법이 학생들의 참여도를 끌어올리고 시험 성적 향상으로 이어진다고 말했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>벡터 내적은 어디에 쓰이나요?</summary>
+            <p class="faq-answer">두 물리량의 방향과 크기를 동시에 고려해 힘과 일 같은 실제 현상을 계산할 때 활용됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>글쓴이 의도를 파악하려면 어떤 점을 주의해야 하나요?</summary>
+            <p class="faq-answer">키워드 선택, 강조된 문장, 전체 흐름을 종합해 숨은 목적을 유추하는 것이 중요합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>점곱을 쉽게 설명하는 방법은?</summary>
+            <p class="faq-answer">두 벡터를 손에 들고 서로 끌어당기는 힘으로 비유하면 직관적으로 이해할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 수학 교육에 참여하는 효과는?</summary>
+            <p class="faq-answer">가정에서의 지속적인 관심과 피드백이 학생의 자신감과 성취도를 크게 높입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>실생활 예시를 찾는 팁은?</summary>
+            <p class="faq-answer">일상에서 힘, 거리, 에너지와 같은 물리량을 관찰하고 이를 수학적 식으로 표현해 보세요.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

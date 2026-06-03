@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>순열과 문장 분석 활용법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="학부모 시점에서 순열 공식과 주어서술어 찾기를 일상과 학습에 적용한 실제 경험과 전문가 조언을 제공하는 가이드">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="순열과 문장 분석 활용법">
+  <meta property="og:description" content="학부모 시점에서 순열 공식과 주어서술어 찾기를 일상과 학습에 적용한 실제 경험과 전문가 조언을 제공하는 가이드">
+  <meta property="og:url" content="https://wacademy.kr/blog/398/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="순열과 문장 분석 활용법">
+  <meta name="twitter:description" content="학부모 시점에서 순열 공식과 주어서술어 찾기를 일상과 학습에 적용한 실제 경험과 전문가 조언을 제공하는 가이드">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/398/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/398/#article",
+    "headline": "순열과 문장 분석 활용법",
+    "description": "학부모 시점에서 순열 공식과 주어서술어 찾기를 일상과 학습에 적용한 실제 경험과 전문가 조언을 제공하는 가이드",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/398/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/398/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "순열과 문장 분석 활용법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"순열 공식은 언제 활용하면 좋나요","acceptedAnswer":{"@type":"Answer","text":"경우의 수를 직접 체험하고 싶을 때 일상 상황에 적용하면 효과적입니다"}},
+      {"@type":"Question","name":"주어와 서술어를 쉽게 구분하는 방법은","acceptedAnswer":{"@type":"Answer","text":"주어는 동작의 주체, 서술어는 동작 자체를 나타낸다는 기본 개념을 기억하면 됩니다"}},
+      {"@type":"Question","name":"두 주제를 동시에 가르칠 때 주의점은","acceptedAnswer":{"@type":"Answer","text":"학생이 혼란하지 않도록 각각의 목표와 예시를 명확히 구분해 주세요"}},
+      {"@type":"Question","name":"부모가 할 수 있는 홈워크는","acceptedAnswer":{"@type":"Answer","text":"가정에서 간단한 순열 게임과 문장 만들기 활동을 함께 해 보세요"}},
+      {"@type":"Question","name":"전문가의 조언을 더 듣고 싶어요","acceptedAnswer":{"@type":"Answer","text":"지역 교육 센터에서 열리는 워크숍이나 온라인 강의를 활용하면 도움이 됩니다"}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>순열과 문장 분석 활용법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">순열과 문장 분석 활용법</h1>
+      <p class="article-meta-desc">학부모 시점에서 순열 공식과 주어서술어 찾기를 일상과 학습에 적용한 실제 경험과 전문가 조언을 제공하는 가이드</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">순열 공식, 실생활 적용 사례</a></li>
+        <li><a href="#s2">주어와 서술어 구분 연습 방법</a></li>
+        <li><a href="#s3">통합 적용으로 보는 학습 효과</a></li>
+        <li><a href="#s4">적용 과정에서 마주한 어려움</a></li>
+        <li><a href="#s5">실천을 돕는 다섯 가지 팁</a></li>
+        <li><a href="#s6">결과 정리와 선택 가이드</a></li>
+        <li><a href="#s7">돌아보며 얻은 교훈</a></li>
+        <li><a href="#s8">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>순열 공식, 실생활 적용 사례</h2>
+      <p>저는 최근 수학 교과서에서 순열 공식을 처음 접했습니다. 우리 아이는 중학교 입시 준비를 위해 문제 풀이를 시작했어요.
+
+많은 학부모가 이 수식을 일상에 연결하기 어려워한다고 얘기합니다. 전문가 의견을 참고해 음식 재배치와 좌석 배치 등으로 변형해 보았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>주어와 서술어 구분 연습 방법</h2>
+      <p>제가 자녀와 함께 문장 구조를 공부하면서 주어와 서술어를 구분했습니다. 우리 아이는 교과서 예문을 읽으며 핵심 요소를 찾는 연습을 했어요.
+
+다른 학부모는 이 과정을 통해 독해력이 크게 향상된다고 전합니다. 전문 교사는 명확한 구분법을 제시해 학습 효율을 높여 주었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>통합 적용으로 보는 학습 효과</h2>
+      <p>저는 순열 공식 적용과 문장 성분 분석을 동시에 진행하면서 교육 효과를 체감했습니다. 우리 아이는 순서가 중요한 상황과 문장 안의 역할을 구분하며 사고의 폭을 넓혔습니다.
+
+많은 학부모는 두 영역을 연결하면 논리적 사고와 언어 능력이 동시에 성장한다는 점을 강조합니다. 전문가 조언에 따라 문제를 실제 생활 예시와 텍스트 분석에 적용해 보니 이해도가 눈에 띄게 상승했습니다. 교사는 이러한 통합 수업이 학습 동기를 강화하고 장기 기억을 도와준다고 설명합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>적용 과정에서 마주한 어려움</h2>
+      <p>제가 처음 순열 문제를 실생활에 적용하려 할 때 어려움을 겪었습니다. 우리 아이는 복잡한 경우의 수를 계산하는 과정에서 지루함을 느꼈어요.
+
+다른 학부모는 서술어 찾기가 초기에 막히는 경우가 많다고 알려줍니다. 전문가가 제시한 단계별 체크리스트를 활용하면 문제 해결이 한결 수월해집니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>실천을 돕는 다섯 가지 팁</h2>
+      <p>저는 일상 속에서 순열과 문장 분석을 연계하는 방법을 찾고자 노력했습니다. 우리 아이는 다양한 활동을 통해 두 개념을 동시에 적용해 보았습니다.
+
+많은 학부모가 이런 접근을 실천하면 학습 흥미가 크게 상승한다는 경험을 공유합니다. 전문가가 제안한 구체적인 실행 방안을 아래 리스트에 정리했습니다.</p>
+      <ul class="blog-list">
+        <li>가정에서 순열 활용</li>
+        <li>교재 예제 활용</li>
+        <li>온라인 퀴즈 활용</li>
+        <li>문장 구조 게임</li>
+        <li>피드백 기록</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>결과 정리와 선택 가이드</h2>
+      <p>제가 제안한 방법을 실제 수업에 적용해 본 결과를 정리해 보았습니다. 우리 아이는 각각의 상황에서 어떤 전략이 효과적인지 직접 체험했습니다.
+
+다른 학부모는 결과를 비교해 보니 특정 구분이 학습 성과에 큰 영향을 미친다고 말합니다. 전문가 의견을 반영해 표 형식으로 정리했으며, 이를 통해 선택이 용이해졌습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>순열 적용</td><td>가정</td><td>음식 배치와 옷 정리로 경우의 수 체험</td></tr>
+        <tr><td>주어서술어</td><td>교실</td><td>문장 퍼즐 게임으로 구분 연습</td></tr>
+        <tr><td>통합 평가</td><td>학생</td><td>실전 문제로 이해도 점검</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>돌아보며 얻은 교훈</h2>
+      <p>저는 전체 과정을 되돌아보며 얻은 교훈을 정리했습니다. 우리 아이는 스스로 학습 목표를 설정하고 꾸준히 실천했어요.
+
+다른 학부모는 이런 경험이 장기적인 학업 성공에 기여한다고 평가합니다. 전문가도 지속적인 피드백과 조정이 중요하다고 강조했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>순열 공식은 언제 활용하면 좋나요</summary>
+            <p class="faq-answer">경우의 수를 직접 체험하고 싶을 때 일상 상황에 적용하면 효과적입니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>주어와 서술어를 쉽게 구분하는 방법은</summary>
+            <p class="faq-answer">주어는 동작의 주체, 서술어는 동작 자체를 나타낸다는 기본 개념을 기억하면 됩니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>두 주제를 동시에 가르칠 때 주의점은</summary>
+            <p class="faq-answer">학생이 혼란하지 않도록 각각의 목표와 예시를 명확히 구분해 주세요</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부모가 할 수 있는 홈워크는</summary>
+            <p class="faq-answer">가정에서 간단한 순열 게임과 문장 만들기 활동을 함께 해 보세요</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>전문가의 조언을 더 듣고 싶어요</summary>
+            <p class="faq-answer">지역 교육 센터에서 열리는 워크숍이나 온라인 강의를 활용하면 도움이 됩니다</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

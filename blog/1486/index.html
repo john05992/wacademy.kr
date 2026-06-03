@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회의록과 평행사변형 공부법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="회의록 작성 요령과 평행사변형 넓이 구하는 원리를 아이와 함께 공부하며 얻은 실질적인 꿀팁을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="회의록과 평행사변형 공부법">
+  <meta property="og:description" content="회의록 작성 요령과 평행사변형 넓이 구하는 원리를 아이와 함께 공부하며 얻은 실질적인 꿀팁을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/1486/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="회의록과 평행사변형 공부법">
+  <meta name="twitter:description" content="회의록 작성 요령과 평행사변형 넓이 구하는 원리를 아이와 함께 공부하며 얻은 실질적인 꿀팁을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/1486/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/1486/#article",
+    "headline": "회의록과 평행사변형 공부법",
+    "description": "회의록 작성 요령과 평행사변형 넓이 구하는 원리를 아이와 함께 공부하며 얻은 실질적인 꿀팁을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-05-07",
+    "dateModified": "2026-05-07",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/1486/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/1486/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "회의록과 평행사변형 공부법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"회의록을 빨리 쓰는 방법은 없나요?","acceptedAnswer":{"@type":"Answer","text":"녹음을 활용하거나 핵심 키워드를 메모한 뒤 정리하는 것이 좋습니다."}},
+      {"@type":"Question","name":"높이가 그려져 있지 않을 때는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"밑변과 수직이 되도록 직접 보조선을 그려서 길이를 재면 됩니다."}},
+      {"@type":"Question","name":"회의록에 꼭 들어가는 내용은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"일시, 장소, 참석자, 안건, 토의 내용, 결론 순으로 작성하면 됩니다."}},
+      {"@type":"Question","name":"평행사변형과 직사각형의 넓이가 같은가요?","acceptedAnswer":{"@type":"Answer","text":"밑변과 높이가 같다면 넓이는 서로 같습니다."}},
+      {"@type":"Question","name":"수학 공식을 잘 외우지 못하는 아이는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"원리를 이해할 수 있는 직관적인 자료나 활동을 함께 해보는 것이 효과적입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>회의록과 평행사변형 공부법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">회의록과 평행사변형 공부법</h1>
+      <p class="article-meta-desc">회의록 작성 요령과 평행사변형 넓이 구하는 원리를 아이와 함께 공부하며 얻은 실질적인 꿀팁을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">회의록 작성의 어려움</a></li>
+        <li><a href="#s2">회의록 작성 핵심 요소</a></li>
+        <li><a href="#s3">회의록 작성 후기와 효과</a></li>
+        <li><a href="#s4">평행사변형 공부의 시작</a></li>
+        <li><a href="#s5">넓이 공식 이해하기</a></li>
+        <li><a href="#s6">수학 학습 효과</a></li>
+        <li><a href="#s7">부모의 역할과 지원</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>회의록 작성의 어려움</h2>
+      <p>우리 아이가 학교에서 동아리 활동을 하다가 회의록 작성 과제가 나와서 당황했던 기억이 납니다. 처음에는 무슨 말부터 적어야 할지 몰라서 울상이었어요. 엄마인 저도 막상 알려주려니 어떤 순서로 내용을 구성해야 효과적인지 감이 잡히지 않더라고요. 
+
+ 그래서 인터넷을 뒤져가면서 정말 알기 쉽고 실질적인 방법들을 찾아보기 시작했습니다. 단순히 대화 내용을 적는 것만으로는 부족하다는 걸 깨닫고 구조적인 틀을 잡는 것이 중요하다는 사실을 알게 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>회의록 작성 핵심 요소</h2>
+      <p>먼저 회의 문서에 꼭 들어가야 할 필수 항목들을 차근차근 정리해 보았습니다. 자녀가 이해하기 쉽도록 점검 목록 형태로 만들어주니 훨씬 수월하게 접근하더군요. 빠진 내용 없이 기록하기 위해서는 사전에 준비 단계가 필수적입니다. 이 리스트를 활용하면 누구나 깔끔한 회의록을 완성할 수 있습니다.</p>
+      <ul class="blog-list">
+        <li>회의 날짜와 장소 기록</li>
+        <li>참석자 및 불참자 명단</li>
+        <li>토의 안건 및 순서</li>
+        <li>주요 의견과 결론</li>
+        <li>추후 계획 및 분담</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>회의록 작성 후기와 효과</h2>
+      <p>이 방법대로 연습해 보니 아이가 회의 문서를 작성하는 것이 훨씬 수월해졌습니다. 처음에는 서툴렀지만 두세 번 반복하니까 논리적인 흐름을 파악하는 게 눈에 띄게 좋아졌어요. 선생님께서도 내용이 체계적이라고 칭찬해 주셔서 뿌듯했습니다. 
+
+ 회의 기록을 남기는 과정이 단순히 글을 적는 행위가 아니라 경청하는 능력을 기르는 데도 큰 도움이 된다는 것을 깨달았습니다. 자녀는 회의 내용을 놓치지 않으려 집중하게 되었고 핵심을 캐치하는 힘도 생겼습니다. 
+
+ 저 또한 아이와 함께하면서 학부모로서 문서 작성의 기초를 다시 잡는 유익한 시간이었습니다. 앞으로 학교 생활이나 사회생활에도 큰 도움이 될 것이라 확신합니다. 이런 경험을 통해 자녀의 자존감도 올라가는 것 같아 더욱 기뻤습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>평행사변형 공부의 시작</h2>
+      <p>회의록 과제를 마무리하고 이번에는 수학 시간에 배우는 평행사변형 넓이 구하기에 도전했습니다. 아이는 삼각형 넓이는 비교적 잘 아는데 평행사변형은 왜 밑변과 높이를 곱하는지 이해를 못 하더라고요. 옆으로 기울어진 모양 때문에 밑변의 길이를 헷갈려 하는 것이 문제였습니다. 
+
+ 교과서에 나온 그림만으로는 개념을 잡기가 어려워 직접 종이를 오려서 보여주는 방식을 택했습니다. 눈으로 확인하고 손으로 만지면서 공부하니까 훨씬 더 빨리 원리를 이해했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>넓이 공식 이해하기</h2>
+      <p>평행사변형을 잘라서 옮겨 보면 직사각형이 된다는 것을 보여주는 것이 핵심입니다. 이 과정을 통해 밑변과 높이의 의미를 명확히 알 수 있었습니다. 처음에는 기울어진 변이 헷갈려서 밑변을 잘못 잡곤 했는데 직접 가위로 오려 붙여보니 확실해지더군요. 
+
+ 아이가 왜 넓이 공식이 밑변 곱하기 높이인지 직관적으로 이해하게 된 순간이었습니다. 단순히 암기하게 하지 않고 원리를 깨닫게 해주는 것이 부모의 역할이라고 생각했습니다. 이제는 문제를 보면 자연스럽게 보조선을 그으며 높이를 찾아냅니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>기본 원리</td><td>평행사변형</td><td>자르고 붙여서 직사각형 만들기</td></tr>
+        <tr><td>핵심 요소</td><td>변의 길이</td><td>밑변과 수직인 높이 찾기</td></tr>
+        <tr><td>계산 방식</td><td>넓이 공식</td><td>가로와 세로의 곱으로 이해하기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>수학 학습 효과</h2>
+      <p>이렇게 직접 조작해 보는 활동을 하고 나니 아이가 공식을 외우는 것이 아니라 이해하게 되었습니다. 이전에는 문제를 풀 때마다 헷갈려 했는데 이제는 자신 있게 정답을 말합니다. 평행사변형의 높이를 찾을 때도 빗금을 그어서 수직선을 그으면 된다고 알려주었더니 아주 잘 적용하더군요. 
+
+ 공간 감각도 발달하고 무엇보다 수학에 대한 흥미가 올라간 것이 가장 큰 성과입니다. 단순 암기 위주의 공부에서 벗어나 원리를 이해하는 습관이 들어서 다행입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>부모의 역할과 지원</h2>
+      <p>이번 경험을 통해 아이의 공부를 돕는 것은 정답을 알려주는 것이 아니라 방법을 제시하는 것이라는 생각이 들었습니다. 회의 문서 작성이든 수학이든 자녀가 스스로 고민하고 해결책을 찾을 수 있도록 옆에서 지지해 주는 것이 중요합니다. 때로는 부모도 함께 공부하며 성장해야 한다는 점을 깨닫게 되었습니다. 
+
+ 아이와 함께 머리 맞대고 문제를 풀어나가는 과정이 쉽지만은 않았지만 보람찼습니다. 앞으로도 학교 과제나 학습에 어려움이 생길 때마다 이런 방식으로 도와줄 생각입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>회의록을 빨리 쓰는 방법은 없나요?</summary>
+            <p class="faq-answer">녹음을 활용하거나 핵심 키워드를 메모한 뒤 정리하는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>높이가 그려져 있지 않을 때는 어떻게 하나요?</summary>
+            <p class="faq-answer">밑변과 수직이 되도록 직접 보조선을 그려서 길이를 재면 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>회의록에 꼭 들어가는 내용은 무엇인가요?</summary>
+            <p class="faq-answer">일시, 장소, 참석자, 안건, 토의 내용, 결론 순으로 작성하면 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>평행사변형과 직사각형의 넓이가 같은가요?</summary>
+            <p class="faq-answer">밑변과 높이가 같다면 넓이는 서로 같습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학 공식을 잘 외우지 못하는 아이는 어떻게 하나요?</summary>
+            <p class="faq-answer">원리를 이해할 수 있는 직관적인 자료나 활동을 함께 해보는 것이 효과적입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규분포 심화 개념 완벽 정리 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="복잡한 정규분포 심화 개념을 표로 비교하여 학부모와 아이가 쉽게 이해하고 정리할 수 있는 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="정규분포 심화 개념 완벽 정리">
+  <meta property="og:description" content="복잡한 정규분포 심화 개념을 표로 비교하여 학부모와 아이가 쉽게 이해하고 정리할 수 있는 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/4631/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="정규분포 심화 개념 완벽 정리">
+  <meta name="twitter:description" content="복잡한 정규분포 심화 개념을 표로 비교하여 학부모와 아이가 쉽게 이해하고 정리할 수 있는 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/4631/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/4631/#article",
+    "headline": "정규분포 심화 개념 완벽 정리",
+    "description": "복잡한 정규분포 심화 개념을 표로 비교하여 학부모와 아이가 쉽게 이해하고 정리할 수 있는 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-11",
+    "dateModified": "2026-03-11",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/4631/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/4631/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "정규분포 심화 개념 완벽 정리"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"정규분포 그래프가 대칭이 아니라면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"데이터가 특정 방향으로 치우친 경우에는 다른 분포를 고려해야 하지만 기본 개념을 먼저 이해하는 것이 중요합니다"}},
+      {"@type":"Question","name":"표준편차를 쉽게 계산하는 방법이 있나요?","acceptedAnswer":{"@type":"Answer","text":"공식을 외우는 것보다 평균과의 거리를 구하는 과정을 여러 번 반복 연습하는 것이 가장 빠릅니다"}},
+      {"@type":"Question","name":"이 단원은 수능이나 내신에서 비중이 높나요?","acceptedAnswer":{"@type":"Answer","text":"확률과 통계는 상위권 학생들을 구분하는 중요한 단위이므로 꼼꼼하게 공부해야 합니다"}},
+      {"@type":"Question","name":"추천할 만한 참고서가 있나요?","acceptedAnswer":{"@type":"Answer","text":"기본 문제가 많이 수록된 교과서 익힘책부터 시작하여 심화 문제집으로 단계를 올리는 것이 좋습니다"}},
+      {"@type":"Question","name":"아이가 개념을 이해하지 못할 때는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"억지로 설명하기보다는 관련된 영상 자료를 함께 보거나 실생활 예시를 더 들어보는 것이 좋습니다"}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>정규분포 심화 개념 완벽 정리</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">정규분포 심화 개념 완벽 정리</h1>
+      <p class="article-meta-desc">복잡한 정규분포 심화 개념을 표로 비교하여 학부모와 아이가 쉽게 이해하고 정리할 수 있는 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">아이와 함께 공부하며 겪은 어려움</a></li>
+        <li><a href="#s2">정규분포의 심화 개념 이해하기</a></li>
+        <li><a href="#s3">표로 비교하는 분포의 특성</a></li>
+        <li><a href="#s4">실생활 속 예시 찾아보기</a></li>
+        <li><a href="#s5">학부모가 도와줄 수 있는 방법</a></li>
+        <li><a href="#s6">심화 학습을 위한 다섯 가지 팁</a></li>
+        <li><a href="#s7">효과적인 비교 학습 후기</a></li>
+        <li><a href="#s8">자주 묻는 질문 모음</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>아이와 함께 공부하며 겪은 어려움</h2>
+      <p>아이가 중학교에 올라가면서 확률과 통계 단원을 맡닥뜨리고 무척 당황스러워했습니다.
+
+특히 그래프를 그리고 해석하는 부분에서 눈물을 흘리는 모습을 보니 마음이 참 아팠습니다.
+
+저 또한 학창 시절 수학을 깊게 공부하지 않아 어떻게 도와줘야 할지 막막했지요.
+
+인터넷 검색을 통해 자료를 찾아보지만 너무 학술적인 용어들만 나와서 우리 아이 수준에는 맞지 않았습니다.
+
+그래서 어렵고 복잡한 내용을 시각적으로 한눈에 들어오게 정리하는 방법을 고민하게 되었습니다.
+
+직접 표를 만들어 비교해 보니 아이가 훨씬 쉽게 이해하는 모습이었습니다.
+
+다른 학부모님들도 저와 같은 시행착오를 겪지 않으셨으면 하는 마음에 제 경험을 공유합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>정규분포의 심화 개념 이해하기</h2>
+      <p>정규분포는 자연계에서 일어나는 많은 현상들을 설명하는 아주 중요한 개념입니다.
+
+종 모양의 그래프를 그리며 중앙부분에 데이터가 가장 많이 몰려있는 특징을 가집니다.
+
+평균을 중심으로 좌우가 대칭을 이루기 때문에 예측이 가능하다는 장점이 있지요.
+
+우리 아이는 이 대칭 구조를 이해하는 것부터 시작했습니다.
+
+데이터가 흩어져 있는 정도를 나타내는 표준편차의 개념도 함께 잡아주어야 합니다.
+
+산이 뾰족할수록 데이터가 평균 근처에 모여 있다는 뜻이 됩니다.
+
+반대로 산이 완만하면 데이터가 넓게 퍼져 있다고 볼 수 있습니다.
+
+이러한 기본 원리를 알고 나면 심화 문제도 조금은 수월하게 접근이 가능합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>표로 비교하는 분포의 특성</h2>
+      <p>단순히 암기하기보다는 서로 다른 분포의 형태를 표로 나란히 놓고 비교해 보는 학습법이 효과적입니다.
+
+아이와 함께 메모지에 각각의 특징을 적어가며 확인하는 과정이 큰 도움이 되었습니다.
+
+눈으로 비교하며 공부하니 금방 차이점을 파악하더군요.
+
+특히 수식이 복잡하게 얽혀 있는 부분을 도표화하면 이해 속도가 월등히 빨라집니다.
+
+부모님도 아이와 함께 표를 채워보면 자녀의 학습 진도를 명확히 알 수 있습니다.
+
+이 방법은 단순한 시각적 효과를 넘어 논리적인 사고력을 길러주는 장점이 있습니다.
+
+처음에는 표를 만드느라 시간이 걸리지만 나중에는 복습할 때 엄청난 효율을 보여줍니다.
+
+우리 아이는 이 표 하나만 보고도 시험 문제의 핵심을 빠르게 찾아냈습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>중심 위치</td><td>표준정규분포</td><td>항상 좌표평면의 원점에 위치하며 대칭축이 세로축입니다</td></tr>
+        <tr><td>중심 위치</td><td>일반정규분포</td><td>평균의 크기에 따라 좌우로 이동하며 산 모양이 달라집니다</td></tr>
+        <tr><td>데이터 해석</td><td>두 분포</td><td>전체 데이터에서 특정 값이 차지하는 비중을 확률로 나타냅니다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>실생활 속 예시 찾아보기</h2>
+      <p>교과서 속 이론만으로는 이 개념이 왜 중요한지 잘 와닿지 않을 수 있습니다.
+
+우리 가족은 키나 성적과 같은 실생활 데이터를 예로 들어보았습니다.
+
+친구들의 키를 조사해 보면 대부분은 평균에 가깝고 매우 크거나 작은 친구는 적다는 사실을 확인했습니다.
+
+이처럼 실제 데이터를 통해 학습하니 아이가 흥미를 느끼기 시작했습니다.
+
+시험 점수 분포도 이와 유사한 형태를 띠는 경우가 많습니다.
+
+선생님께서 말씀하시는 상위 몇 퍼센트라는 말의 의미도 이해하게 되었지요.
+
+이론과 현실을 연결하는 과정이 수학 공부에 지루함을 없애주었습니다.
+
+아이는 자신이 속한 위치를 그래프 위에서 찾으며 재미있어했습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학부모가 도와줄 수 있는 방법</h2>
+      <p>부모가 해줄 수 있는 가장 큰 도움은 정확한 그래프를 그려주는 것입니다.
+
+처음에는 눈금 하나하나를 맞추는 과정이 지루할 수 있습니다.
+
+하지만 직접 그리면서 꼭짓점의 좌표를 읽는 연습은 필수적입니다.
+
+색연필을 활용하여 면적을 칠하는 방법도 추천하고 싶습니다.
+
+특정 범위에 들어가는 확률을 색깔로 구분하면 직관적으로 이해가 됩니다.
+
+아이는 퀴즈 형식으로 문제를 내어주면 좋아했습니다.
+
+엄마가 문제를 내고 아이가 그래프를 그려 정답을 맞히는 게임 형식이었습니다.
+
+이런 방식은 지루한 공부를 즐거운 놀이로 바꾸어 주었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>심화 학습을 위한 다섯 가지 팁</h2>
+      <p>심화 문제를 해결하기 위해서는 무엇보다 기본기를 탄탄하게 다져야 합니다.
+
+제 경험상 다음과 같은 다섯 가지 방법을 꾸준히 실천하면 실력이 눈에 띄게 향상됩니다.
+
+아이와 함께 체크리스트를 만들어서 하나씩 지워나가는 방법을 추천합니다.
+
+매일 조금씩이라도 꾸준히 노력하는 것이 무엇보다 중요하다는 것을 명심하세요.
+
+준비 과정이 조금은 번거롭게 느껴질 수도 있지만 결과적으로는 공부 시간을 크게 절약할 수 있습니다.
+
+아이가 스스로 공부 계획을 세우고 실행하는 습관을 기르는 데에도 큰 도움이 됩니다.
+
+이 과정을 통해 부모님과 자녀가 신뢰 관계를 쌓을 수 있어 일석이조의 효과가 있습니다.</p>
+      <ul class="blog-list">
+        <li>매일 직접 손으로 그래프 그리기</li>
+        <li>용어를 국어 사전처럼 정리하기</li>
+        <li>비슷한 유형의 문제 세트 풀어보기</li>
+        <li>틀린 문제는 왜 틀렸는지 설명하기</li>
+        <li>가족에게 문제를 내주며 뽐내기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>효과적인 비교 학습 후기</h2>
+      <p>표를 활용한 비교 학습은 정말 강력한 도구였습니다.
+
+아까워했던 시간들이 절대 아깝지 않았다는 생각이 듭니다.
+
+서로 다른 개념을 한눈에 비교할 수 있어 혼동을 줄여주었기 때문입니다.
+
+이전에는 문제를 풀 때마다 개념이 헷갈려 책을 뒤적였습니다.
+
+이제는 표에 적힌 핵심 내용만 떠올려도 문제 풀이의 실마리가 잡힙니다.
+
+학교 시험에서도 통계 영역 점수가 크게 올랐습니다.
+
+무엇보다 아이가 수학에 자신감을 갖게 된 것이 가장 큰 성과입니다.
+
+복잡한 수식보다 깔끔한 정리가 더 효과적일 때가 있다는 것을 깨달았습니다.
+
+추천 드리는 방법이니 한번 시도해 보시길 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문 모음</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>정규분포 그래프가 대칭이 아니라면 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">데이터가 특정 방향으로 치우친 경우에는 다른 분포를 고려해야 하지만 기본 개념을 먼저 이해하는 것이 중요합니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>표준편차를 쉽게 계산하는 방법이 있나요?</summary>
+            <p class="faq-answer">공식을 외우는 것보다 평균과의 거리를 구하는 과정을 여러 번 반복 연습하는 것이 가장 빠릅니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>이 단원은 수능이나 내신에서 비중이 높나요?</summary>
+            <p class="faq-answer">확률과 통계는 상위권 학생들을 구분하는 중요한 단위이므로 꼼꼼하게 공부해야 합니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>추천할 만한 참고서가 있나요?</summary>
+            <p class="faq-answer">기본 문제가 많이 수록된 교과서 익힘책부터 시작하여 심화 문제집으로 단계를 올리는 것이 좋습니다</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 개념을 이해하지 못할 때는 어떻게 하나요?</summary>
+            <p class="faq-answer">억지로 설명하기보다는 관련된 영상 자료를 함께 보거나 실생활 예시를 더 들어보는 것이 좋습니다</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

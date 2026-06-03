@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>평균과 제안 표현 학습법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="초등 수학 평균 구하기와 영어 제안 표현 섀를 아이에게 쉽게 가르치는 노하우와 실전 후기를 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="평균과 제안 표현 학습법">
+  <meta property="og:description" content="초등 수학 평균 구하기와 영어 제안 표현 섀를 아이에게 쉽게 가르치는 노하우와 실전 후기를 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/98/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="평균과 제안 표현 학습법">
+  <meta name="twitter:description" content="초등 수학 평균 구하기와 영어 제안 표현 섀를 아이에게 쉽게 가르치는 노하우와 실전 후기를 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/98/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/98/#article",
+    "headline": "평균과 제안 표현 학습법",
+    "description": "초등 수학 평균 구하기와 영어 제안 표현 섀를 아이에게 쉽게 가르치는 노하우와 실전 후기를 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-06-02",
+    "dateModified": "2026-06-02",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/98/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/98/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "평균과 제안 표현 학습법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"평균 계산이 너무 어려워해요.","acceptedAnswer":{"@type":"Answer","text":"구체적인 사물을 이용해 나누기 과정을 눈으로 보여주세요."}},
+      {"@type":"Question","name":"영어 제안 표현을 자꾸 잊어버려요.","acceptedAnswer":{"@type":"Answer","text":"생활 속에서 자주 사용하여 습관을 들이는 것이 좋습니다."}},
+      {"@type":"Question","name":"공부 시간을 정하기 힘듭니다.","acceptedAnswer":{"@type":"Answer","text":"짧게라도 매일 정해진 시간에 하는 것이 효과적입니다."}},
+      {"@type":"Question","name":"아이가 흥미를 느끼지 못합니다.","acceptedAnswer":{"@type":"Answer","text":"아이가 좋아하는 주제나 놀이를 학습과 접목해 보세요."}},
+      {"@type":"Question","name":"문제집을 어떻게 선택해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"기초 개념을 충실히 설명하는 교재를 추천합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>평균과 제안 표현 학습법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">평균과 제안 표현 학습법</h1>
+      <p class="article-meta-desc">초등 수학 평균 구하기와 영어 제안 표현 섀를 아이에게 쉽게 가르치는 노하우와 실전 후기를 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">초등 학습의 기초 잡기</a></li>
+        <li><a href="#s2">수학 평균 개념 잡기</a></li>
+        <li><a href="#s3">평균 활용 실전 연습</a></li>
+        <li><a href="#s4">영어 제안 표현 익히기</a></li>
+        <li><a href="#s5">일상 속 영어 말하기</a></li>
+        <li><a href="#s6">학습 효과와 변화</a></li>
+        <li><a href="#s7">맺음말 및 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>초등 학습의 기초 잡기</h2>
+      <p>초등학생 자녀를 둔 부모라면 누구나 학습 지도에 고민이 많습니다. 저 또한 아이가 학교에서 배우는 수학과 영어를 어떻게 도와줄지 밤새 고민하곤 했어요. 특히 평균 구하기와 제안 표현은 아이가 헷갈려하는 부분이었죠. 이 글을 통해 제가 겪었던 시행착오와 아이에게 효과적이었던 구체적인 방법을 공유하고자 합니다.
+
+여러분의 육아 생활에 조금이나마 도움이 되길 바라는 마음으로 솔직한 후기를 적어보려 합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>수학 평균 개념 잡기</h2>
+      <p>수학 시간에 배우는 평균은 단순 계산을 넘어 개념을 이해하는 것이 중요합니다. 아이가 숫자만 나열하면 지루해할 수 있기 때문에 생활 속 예시를 활용하는 것이 좋습니다. 저는 아이가 좋아하는 과자를 이용해 친구들에게 똑같이 나눠주는 상황을 만들어 주었어요. 그러자 아이가 흥미를 느끼며 자연스럽게 문제 해결에 집중하는 모습을 보였습니다. 이 과정을 통해 아이는 평균이 왜 필요한지 스스로 깨닫게 되었습니다.</p>
+      <ul class="blog-list">
+        <li>재미있는 사례 찾기</li>
+        <li>전체 합계 더하기</li>
+        <li>나눌 대상 세기</li>
+        <li>나눗셈으로 계산하기</li>
+        <li>정답 검토하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>평균 활용 실전 연습</h2>
+      <p>평균의 개념을 확실히 잡은 후에는 실제 문제 풀이를 통해 응용력을 키워주어야 합니다. 처음에는 단순한 숫자 나열로 시작하여 점차 복잡한 자료로 확장하는 것이 효과적입니다. 아이와 함께 일주일간 공부한 시간을 기록하여 주간 평균 학습 시간을 구해보는 활동을 해보았습니다. 이렇게 자신의 데이터를 직접 다루니 아이가 훨씬 더 적극적으로 참여하는 것을 볼 수 있었어요. 단순히 암기하는 것이 아니라 원리를 터득하니 다른 유형의 문제가 나와도 당황하지 않더군요.
+
+앞서 언급한 활동 외에도 가족 구성원의 나이 평균을 구해보거나 계절별 평균 온도를 조사하는 방법도 좋습니다. 다양한 데이터를 접하면서 아이는 통계적 사고방식을 기를 수 있게 됩니다. 이러한 기초 힘은 추후 심화 학습을 할 때 견고한 밑거름이 되어줄 것입니다. 무엇보다 아이가 스스로 생각하고 답을 찾아내도록 기다려주는 태도가 필요합니다. 답답해도 먼저 알려주기보다는 힌트를 주어 스스로 해결의 기쁨을 느끼게 해주세요.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>영어 제안 표현 익히기</h2>
+      <p>영어 회화에서 상대방의 의견을 묻거나 무언가를 제안할 때는 특정 표현을 자주 사용합니다. 우리말의 하자나 할까에 해당하는 이 표현은 아이들이 말하기 수업에서 많이 접합니다. 교과서에 나오는 대화문을 통해 상황별로 어떻게 사용되는지 확인하는 과정이 필요합니다. 저는 아이와 함께 인형을 가지고 역할극을 하며 연습해 보았습니다. 반복적인 연습을 통해 아이가 입에 붙게 만드는 것이 최우선이라고 생각합니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>친한 친구</td><td>또래</td><td>같이 놀자고 제안하기</td></tr>
+        <tr><td>선생님</td><td>어른</td><td>정중하게 부탁하기</td></tr>
+        <tr><td>가족</td><td>형제자매</td><td>무엇을 할지 물어보기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>일상 속 영어 말하기</h2>
+      <p>제안 표현은 뉘앙스에 따라 여러 가지로 변형할 수 있어 다양한 예문을 접하는 것이 좋습니다. 단순한 암기보다는 상황에 맞춰 자연스럽게 말할 수 있도록 유도해야 합니다. 아이가 저녁에 무엇을 먹을지 고민할 때 영어로 물어보게 했더니 재미있어하며 따라 하더군요. 생활 속에서 자주 사용하다 보니 긴장하지 않고 유창하게 말하게 되었습니다. 학부모님들도 식사 시간이나 목욕 시간을 활용해 가볍게 대화해 보시길 추천합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습 효과와 변화</h2>
+      <p>두 가지 주제를 꾸준히 공부한 후 아이의 학습 태도가 눈에 띄게 긍정적으로 변했습니다. 수학 문제를 해결할 때 포기하지 않고 끝까지 노력하는 모습이 인상 깊었어요. 영어 시간에는 선생님의 질문에 자신 있게 손을 들고 대화에 참여한다고 들었습니다. 처음에는 엄마와 함께 공부하는 것이 부담스러워했던 아이가 이제는 스스로 공부 계획을 세울 정도로 성장했습니다. 이러한 변화를 보니 저 또한 큰 보람을 느끼며 힘이 됩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>맺음말 및 조언</h2>
+      <p>아이의 학습을 돕는 일은 단기간의 성과보다는 꾸준함이 가장 중요한 것 같습니다. 평균 구하기와 제안 표현처럼 기초적인 내용을 확실히 다져놓으면 고학년이 되어서도 큰 도움이 됩니다. 부모님들은 조급해하기보다는 아이의 속도에 맞춰 차근차근 지도해 주시길 바랍니다. 제 경험이 여러분의 자녀 교육에 작은 등대가 되기를 진심으로 바랍니다. 우리 아이들이 학교생활을 즐겁게 하루하루 성장하길 응원하겠습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>평균 계산이 너무 어려워해요.</summary>
+            <p class="faq-answer">구체적인 사물을 이용해 나누기 과정을 눈으로 보여주세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>영어 제안 표현을 자꾸 잊어버려요.</summary>
+            <p class="faq-answer">생활 속에서 자주 사용하여 습관을 들이는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>공부 시간을 정하기 힘듭니다.</summary>
+            <p class="faq-answer">짧게라도 매일 정해진 시간에 하는 것이 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 흥미를 느끼지 못합니다.</summary>
+            <p class="faq-answer">아이가 좋아하는 주제나 놀이를 학습과 접목해 보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>문제집을 어떻게 선택해야 할까요?</summary>
+            <p class="faq-answer">기초 개념을 충실히 설명하는 교재를 추천합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

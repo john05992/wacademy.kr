@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>음수양수 곱셈과 순서 재배열 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="음수양수 곱셈 이해와 교과서 순서 섞기 후 재배열 훈련을 부모 입장에서 실천하고 후기까지 제공">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="음수양수 곱셈과 순서 재배열">
+  <meta property="og:description" content="음수양수 곱셈 이해와 교과서 순서 섞기 후 재배열 훈련을 부모 입장에서 실천하고 후기까지 제공">
+  <meta property="og:url" content="https://wacademy.kr/blog/2283/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="음수양수 곱셈과 순서 재배열">
+  <meta name="twitter:description" content="음수양수 곱셈 이해와 교과서 순서 섞기 후 재배열 훈련을 부모 입장에서 실천하고 후기까지 제공">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/2283/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/2283/#article",
+    "headline": "음수양수 곱셈과 순서 재배열",
+    "description": "음수양수 곱셈 이해와 교과서 순서 섞기 후 재배열 훈련을 부모 입장에서 실천하고 후기까지 제공",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/2283/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/2283/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "음수양수 곱셈과 순서 재배열"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"음수와 양수 곱셈을 아이에게 어떻게 설명하면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"부호를 색으로 구분하고 실제 물건을 이용해 시각적으로 보여주면 이해가 쉽습니다."}},
+      {"@type":"Question","name":"교과서 순서를 섞었을 때 아이가 혼란스러워합니다. 어떻게 도와줄 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"색표와 스티커를 활용해 단계별 힌트를 제공하면 스스로 순서를 찾는 능력이 향상됩니다."}},
+      {"@type":"Question","name":"재배열 훈련을 매일 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"일주일에 2~3회, 짧은 시간으로 진행하면 집중도가 유지됩니다."}},
+      {"@type":"Question","name":"부정확한 부호 계산을 바로잡는 방법은?","acceptedAnswer":{"@type":"Answer","text":"오답 노트를 만들어 틀린 문제를 반복 학습하면 부호 개념이 강화됩니다."}},
+      {"@type":"Question","name":"학습 체크리스트를 어떻게 만들면 좋나요?","acceptedAnswer":{"@type":"Answer","text":"복습, 재배열, 피드백 세 항목을 기준으로 일일 기록표를 작성하면 체계적인 관리가 가능합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>음수양수 곱셈과 순서 재배열</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">음수양수 곱셈과 순서 재배열</h1>
+      <p class="article-meta-desc">음수양수 곱셈 이해와 교과서 순서 섞기 후 재배열 훈련을 부모 입장에서 실천하고 후기까지 제공</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">음수와 양수 곱셈 기본 개념</a></li>
+        <li><a href="#s2">부정확한 부호 혼동 방지 팁</a></li>
+        <li><a href="#s3">섞인 교과서 본문 재배열 훈련 효과</a></li>
+        <li><a href="#s4">재배열 훈련 구체적 단계</a></li>
+        <li><a href="#s5">부모가 직접 체험한 변화</a></li>
+        <li><a href="#s6">학습 관리 체크리스트</a></li>
+        <li><a href="#s7">다음 학습으로 확장하기</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>음수와 양수 곱셈 기본 개념</h2>
+      <p>우리 아이는 처음 음수와 양수의 곱셈을 접했을 때 눈이 휘둥그레졌어요. 저는 교과서 예시를 함께 읽으며 부호가 결과에 미치는 영향을 차근차근 설명했습니다.
+
+학부모 입장에서 직접 만든 색칠 카드를 활용해 부호별 곱셈 결과를 시각적으로 보여주었습니다. 교실에서 선생님이 제시한 실생활 사례를 적용하면 개념이 일상과 연결돼 이해가 쉬워졌습니다.
+
+아이의 스스로 풀이를 확인하며 작은 성공을 경험하게 하는 과정이 큰 동기부여가 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>부정확한 부호 혼동 방지 팁</h2>
+      <p>우리 가족은 매일 저녁 10분씩 부호 곱셈 연습 시간을 정했습니다. 부모는 아이가 실수할 때마다 즉시 피드백을 제공하며 올바른 절차를 강조했습니다.
+
+학부모는 매주 새로운 문제 카드를 만들어 변형된 상황에 적용해 보았습니다. 교실에서 본 활동을 집에서도 재현하면 학습 연속성이 높아집니다.
+
+아이의 자신감이 점차 상승하면서 전체 수학 성취도가 눈에 띄게 향상되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>섞인 교과서 본문 재배열 훈련 효과</h2>
+      <p>우리 아이는 교과서 본문을 무작위로 섞은 뒤 재배열하는 활동에 처음 참여했을 때 당황스러워했습니다. 부모는 처음 단계에서 전체 페이지를 색깔별로 구분해 놓고 큰 그림을 제시했습니다.
+
+학부모는 아이가 스스로 순서를 찾는 과정에서 논리적 사고가 활성화되는 것을 눈으로 확인했습니다. 교실에서 시행된 동일 활동과 비교해 보면 집에서의 재배열 훈련이 집중력과 기억력을 크게 강화한다는 점이 드러났습니다.
+
+아이의 설명 능력이 향상되면서 다른 과목에서도 구조화된 사고를 적용하려는 시도가 늘어났습니다. 부모 입장에서 보면 이러한 훈련이 장기적으로 학습 습관을 형성하고 시험 대비 전략에도 긍정적인 영향을 미칩니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>재배열 훈련 구체적 단계</h2>
+      <p>우리 아이는 재배열 훈련을 시작하기 전에 전체 흐름을 미리 살펴보는 것이 중요하다고 느꼈습니다. 부모는 페이지를 번호표 대신 색표로 바꿔 시각적 단서를 제공했습니다.
+
+학부모는 아이가 올바른 순서를 찾아갈 때마다 작은 스티커를 붙여 동기부여를 강화했습니다. 교실에서 배운 전략을 집에서도 적용하면 혼란을 최소화하고 효율적인 정리가 가능했습니다.
+
+아이의 만족스러운 완성 느낌이 다음 학습에도 지속적인 참여를 이끌어냈습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>부모가 직접 체험한 변화</h2>
+      <p>우리 가족은 이 프로그램을 직접 체험한 뒤 눈에 띄는 변화를 기록했습니다. 부모는 아이가 스스로 문제를 재배열하면서 자신감이 크게 상승한 것을 확인했습니다.
+
+학부모는 일상 대화에서도 논리적 순서를 강조하게 되었으며, 이는 가정 분위기에 긍정적인 영향을 주었습니다.
+
+아이의 집중력이 향상되면서 다른 과목에서도 학습 효율이 눈에 띄게 개선되었습니다.</p>
+      <ul class="blog-list">
+        <li>부정확한 부호 교정</li>
+        <li>시각적 카드 활용</li>
+        <li>색깔 구분법</li>
+        <li>스티커 보상</li>
+        <li>일일 10분 복습</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습 관리 체크리스트</h2>
+      <p>우리 아이의 학습 진행 상황을 체계적으로 관리하기 위해 체크리스트를 만들었습니다. 부모는 매일 복습 여부와 이해도를 기록하며 진척도를 시각화했습니다.
+
+학부모는 어려운 부분은 추가 설명을 제공하고, 성공적인 부분은 칭찬으로 강화했습니다. 교실에서 배운 전략을 가정에서도 일관되게 적용하면 학습 격차가 줄어듭니다.
+
+아이의 자기주도 학습 태도가 점점 확고해지면서 전반적인 성적 향상이 나타났습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>복습</td><td>음수양수 곱셈</td><td>매일 5문제 풀이</td></tr>
+        <tr><td>재배열</td><td>교과서 본문</td><td>색표 사용해 순서 찾기</td></tr>
+        <tr><td>피드백</td><td>학습 전체</td><td>주간 회고와 보상</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>다음 학습으로 확장하기</h2>
+      <p>우리 아이는 현재 단계에서 얻은 자신감을 바탕으로 새로운 수학 영역에 도전하고 있습니다. 부모는 다음 단계로 확장 학습지를 선택해 심화 문제를 제공했습니다.
+
+학부모는 아이가 스스로 목표를 설정하도록 격려하며 독립적인 학습 습관을 촉진했습니다. 교실에서 배운 원리를 일상 생활에 적용하면 실생활 문제 해결 능력이 크게 향상됩니다.
+
+아이의 지속적인 성장 모습을 보며 부모 역시 교육 방법을 지속적으로 개선하고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>음수와 양수 곱셈을 아이에게 어떻게 설명하면 좋나요?</summary>
+            <p class="faq-answer">부호를 색으로 구분하고 실제 물건을 이용해 시각적으로 보여주면 이해가 쉽습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>교과서 순서를 섞었을 때 아이가 혼란스러워합니다. 어떻게 도와줄 수 있나요?</summary>
+            <p class="faq-answer">색표와 스티커를 활용해 단계별 힌트를 제공하면 스스로 순서를 찾는 능력이 향상됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>재배열 훈련을 매일 해야 하나요?</summary>
+            <p class="faq-answer">일주일에 2~3회, 짧은 시간으로 진행하면 집중도가 유지됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>부정확한 부호 계산을 바로잡는 방법은?</summary>
+            <p class="faq-answer">오답 노트를 만들어 틀린 문제를 반복 학습하면 부호 개념이 강화됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 체크리스트를 어떻게 만들면 좋나요?</summary>
+            <p class="faq-answer">복습, 재배열, 피드백 세 항목을 기준으로 일일 기록표를 작성하면 체계적인 관리가 가능합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

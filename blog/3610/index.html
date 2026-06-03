@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비문학 구조와 합성함수 완전 정복 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="비문학 독해력과 수학 합성함수 계산법을 아이와 함께 공부하며 알게 된 효율적인 학습법과 꿀팁을 정리했습니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="비문학 구조와 합성함수 완전 정복">
+  <meta property="og:description" content="비문학 독해력과 수학 합성함수 계산법을 아이와 함께 공부하며 알게 된 효율적인 학습법과 꿀팁을 정리했습니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/3610/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="비문학 구조와 합성함수 완전 정복">
+  <meta name="twitter:description" content="비문학 독해력과 수학 합성함수 계산법을 아이와 함께 공부하며 알게 된 효율적인 학습법과 꿀팁을 정리했습니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/3610/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/3610/#article",
+    "headline": "비문학 구조와 합성함수 완전 정복",
+    "description": "비문학 독해력과 수학 합성함수 계산법을 아이와 함께 공부하며 알게 된 효율적인 학습법과 꿀팁을 정리했습니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-03-29",
+    "dateModified": "2026-03-29",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/3610/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/3610/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "비문학 구조와 합성함수 완전 정복"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"비문학 독해력을 늘리려면 얼마나 걸려요?","acceptedAnswer":{"@type":"Answer","text":"최소 석 달 이상 꾸준히 매일 지문을 두세 개씩 분석해야 합니다."}},
+      {"@type":"Question","name":"합성함수 계산이 자꾸 틀리는 이유가 뭔가요?","acceptedAnswer":{"@type":"Answer","text":"음수 부호 처리나 괄호 치환 과정에서 실수를 많이 하니 단계를 하나하나 적어보세요."}},
+      {"@type":"Question","name":"수학을 싫어하는 아이에게 어떻게 접근해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"현실 생활과 연결된 예시를 들어주거나 흥미로운 학습 도구를 활용해 거부감을 낮춰주세요."}},
+      {"@type":"Question","name":"국어와 수학을 같이 공부하는 게 효과가 있나요?","acceptedAnswer":{"@type":"Answer","text":"논리적 사고력을 기른다는 공통점이 있어 서로 연계하여 학습하면 시너지 효과가 큽니다."}},
+      {"@type":"Question","name":"학부모가 아이 공부를 볼 때 가장 중요한 태도는?","acceptedAnswer":{"@type":"Answer","text":"결과물만 재촉하기보다는 과정을 지지해주고 아이가 스스로 생각할 시간을 충분히 주는 것입니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>비문학 구조와 합성함수 완전 정복</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">비문학 구조와 합성함수 완전 정복</h1>
+      <p class="article-meta-desc">비문학 독해력과 수학 합성함수 계산법을 아이와 함께 공부하며 알게 된 효율적인 학습법과 꿀팁을 정리했습니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">아이 학습 지도하며 겪은 어려움</a></li>
+        <li><a href="#s2">비문학 지문 구조 잡는 법</a></li>
+        <li><a href="#s3">합성함수 계산 공략법</a></li>
+        <li><a href="#s4">두 과목 연계 학습법</a></li>
+        <li><a href="#s5">학부모 체크리스트 비교</a></li>
+        <li><a href="#s6">학습 스트레스 줄이는 법</a></li>
+        <li><a href="#s7">꾸준한 동행이 정답입니다</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>아이 학습 지도하며 겪은 어려움</h2>
+      <p>초등학생부터 고등학생까지 키워보며 느낀 건데, 국어 비문학과 수학의 함수 단원만큼 학부모가 울고 싶게 만드는 영역도 드물더군요.
+
+특히 중고등 과정에서 급격히 어려워지는 정보글의 구조를 파악하는 능력은 단순히 글을 많이 읽는다고 해결되지 않더라고요.
+
+저희 아이가 수행평가 기간에 맞닥뜨린 합성함수 계산 문제를 보고 얼음 땡을 하던 모습은 아직도 잊혀지지 않습니다.
+
+그래서 오늘은 제가 헤매며 찾아낸 두 영역의 핵심 학습 포인트를 여러분께 공유해보려 합니다.
+
+막연한 걱정만 하실 엄마 아빠들께 조금이라도 도움이 되길 바라는 마음으로 꼼꼼하게 적어보았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>비문학 지문 구조 잡는 법</h2>
+      <p>국어 시험을 망치는 주범은 대개 긴 글을 읽고 집중력을 잃는 것에서 비롯된다고 생각합니다.
+
+저도 아이와 함께 백지 지도를 그리듯 각 문단의 핵심 주제를 한 문장으로 정리해 보는 연습을 시켰거든요.
+
+이 방법을 처음 시도했을 때는 아이가 너무 귀찮아했지만, 몇 번 반복하더니 글의 흐름을 훨씬 빨리 파악하게 되었습니다.
+
+단순히 암기하는 공부가 아니라 글쓴이가 왜 이런 순서로 정보를 배치했는지 궁리해보는 과정이 필수적입니다.
+
+지문의 제목이나 소제목을 먼저 훑어보고 예상하며 읽는 습관만 들여도 점수가 꽤 쑥 오르더라고요.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>합성함수 계산 공략법</h2>
+      <p>수학 시간에 나오는 합성함수는 아이들에게 괴물처럼 느껴질 때가 많습니다.
+
+저희 집에서는 이 개념을 자판기에 비유해서 설명해주었는데 효과가 아주 좋았습니다.
+
+첫 번째 기계에 동전을 넣으면 음료수가 나오고, 그 음료수를 다시 두 번째 기계에 넣어서 다른 결과물을 얻는 과정이라고 이해시켰거든요.
+
+함수의 치환 과정을 단계별로 표로 그려가며 풀면 실수도 확실히 줄어듭니다.
+
+복잡한 괄호 안의 식을 하나의 문자로 치환하는 연습을 충분히 해야 합니다.
+
+이 과정을 생략하고 한 번에 계산하려다 보니 자꾸 숫자를 잘못 대입하는 오류가 발생하더라고요.
+
+차근차근 단계를 밟아가는 인내심만 길러줘도 수학 문제 해결력은 눈에 띄게 향상됩니다.
+
+저희 아이는 이 방법 덕분에 함수 단원에서 자신감을 되찾았습니다.</p>
+      <ul class="blog-list">
+        <li>함수의 정의역과 치역을 먼저 확실히 설정하기</li>
+        <li>안쪽 괄호부터 차근차계산하는 순서 지키기</li>
+        <li>복잡한 식은 간단한 문자로 바꾸어 치환 연습하기</li>
+        <li>계산 과정을 줄로 나누어 눈으로 확인하기</li>
+        <li>문제를 풀고 나서 거꾸로 대입하여 검증하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>두 과목 연계 학습법</h2>
+      <p>사실 국어와 수학은 전혀 별개의 과목이 아닙니다.
+
+수학 문제를 풀 때도 지문의 구조를 파악하는 독해력이 중요한 역할을 하거든요.
+
+특히 합성함수 문제의 서술형 답안을 작성할 때는 논리적인 글쓰기 능력이 필수적입니다.
+
+저는 아이에게 수학 문제를 그냥 식만 세우지 말고 말로 설명해보라고 자주 요청합니다.
+
+그러다 보면 두 과목 사이의 생각의 틀이 어떻게 연결되는지 자연스럽게 깨닫게 되더라고요.
+
+통합적인 사고력을 기르는 데 큰 도움이 되는 방법입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학부모 체크리스트 비교</h2>
+      <p>아이의 학습 수준을 점검할 때 저는 주로 아래와 같은 기준을 활용합니다.
+
+단순히 점수가 올랐다 내렸다를 걱정하기보다는 과정을 어떻게 거치는지 보는 것이 중요합니다.
+
+각 단계별로 아이가 겪는 어려움을 조금 더 구체적으로 파악하고 싶으신 분들은 참고해보세요.
+
+꼼꼼한 체크가 아이의 실력을 키우는 지름길입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>초기 단계</td><td>기본 개념</td><td>용어와 정확한 원리를 이해하고 있는지 확인합니다</td></tr>
+        <tr><td>중기 단계</td><td>문제 풀이</td><td>유형별 풀이 전략을 세우고 실수를 줄이는지 봅니다</td></tr>
+        <tr><td>후기 단계</td><td>심화 응용</td><td>새로운 형태의 문제에도 스스로 대처할 수 있는지 점검합니다</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학습 스트레스 줄이는 법</h2>
+      <p>공부를 시키다 보면 참아야 할 순간이 정말 많이 찾아옵니다.
+
+저도 아이가 비문학 지문을 읽다가 하품을 할 때면 화가 머리끝까지 치솟았는데, 억지로 잠재우지는 않았습니다.
+
+잠시 환기하고 다시 돌아오게 하는 것이 훨씬 효율적이라는 것을 뼈저리게 느꼈습니다.
+
+억지로 앉혀놓는 공부는 머리에 들어오지도 않을뿐더러 아이에게 공부에 대한 거부감만 심어줍니다.
+
+엄마가 여유를 가질 때 아이도 편안하게 집중할 수 있는 환경이 만들어지더라고요.
+
+마음 먹은 만큼 결과가 바로 나타나지 않아도 꾸준함이 결국엔 기적을 만듭니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>꾸준한 동행이 정답입니다</h2>
+      <p>비문학 구조 분석과 합성함수 계산은 요령으로 뚫고 지나갈 수 없는 산과 같습니다.
+
+하루아침에 실력이 늘지 않아도 너무 조급해하지 마시고 아이의 속도에 맞춰 함께 걸어가세요.
+
+저도 매일이 전쟁 같았지만 아이와 작은 성취를 나눌 때는 보람을 느꼈습니다.
+
+여러분도 힘내서 멋진 결과 만드시길 진심으로 응원하겠습니다.
+
+오늘 공부하신 내용이 가정에서 실천되어 좋은 변화로 이어지기를 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>비문학 독해력을 늘리려면 얼마나 걸려요?</summary>
+            <p class="faq-answer">최소 석 달 이상 꾸준히 매일 지문을 두세 개씩 분석해야 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>합성함수 계산이 자꾸 틀리는 이유가 뭔가요?</summary>
+            <p class="faq-answer">음수 부호 처리나 괄호 치환 과정에서 실수를 많이 하니 단계를 하나하나 적어보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학을 싫어하는 아이에게 어떻게 접근해야 할까요?</summary>
+            <p class="faq-answer">현실 생활과 연결된 예시를 들어주거나 흥미로운 학습 도구를 활용해 거부감을 낮춰주세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>국어와 수학을 같이 공부하는 게 효과가 있나요?</summary>
+            <p class="faq-answer">논리적 사고력을 기른다는 공통점이 있어 서로 연계하여 학습하면 시너지 효과가 큽니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학부모가 아이 공부를 볼 때 가장 중요한 태도는?</summary>
+            <p class="faq-answer">결과물만 재촉하기보다는 과정을 지지해주고 아이가 스스로 생각할 시간을 충분히 주는 것입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

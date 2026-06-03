@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통사적 기능 분석, 부모 체험 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="통사적 기능 분석을 가정에서 적용한 실제 경험과 개념 부재 시 발생하는 문제를 부모 시각에서 상세히 설명하고, 실천 팁과 FAQ를 제공한다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="통사적 기능 분석, 부모 체험">
+  <meta property="og:description" content="통사적 기능 분석을 가정에서 적용한 실제 경험과 개념 부재 시 발생하는 문제를 부모 시각에서 상세히 설명하고, 실천 팁과 FAQ를 제공한다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/5742/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="통사적 기능 분석, 부모 체험">
+  <meta name="twitter:description" content="통사적 기능 분석을 가정에서 적용한 실제 경험과 개념 부재 시 발생하는 문제를 부모 시각에서 상세히 설명하고, 실천 팁과 FAQ를 제공한다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/5742/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/5742/#article",
+    "headline": "통사적 기능 분석, 부모 체험",
+    "description": "통사적 기능 분석을 가정에서 적용한 실제 경험과 개념 부재 시 발생하는 문제를 부모 시각에서 상세히 설명하고, 실천 팁과 FAQ를 제공한다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-19",
+    "dateModified": "2026-02-19",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/5742/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/5742/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "통사적 기능 분석, 부모 체험"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"통사적 기능 분석은 어디서 배우나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 초중등 국어 교과서와 학원에서 다루며, 온라인 강의도 활용할 수 있습니다."}},
+      {"@type":"Question","name":"아이에게 적용할 때 필요한 준비물은?","acceptedAnswer":{"@type":"Answer","text":"기능별 카드, 간단한 문장 예시, 필기 도구만 있으면 충분합니다."}},
+      {"@type":"Question","name":"학습 시간이 얼마나 필요합니까?","acceptedAnswer":{"@type":"Answer","text":"하루 10~15분 정도 꾸준히 진행하면 효과를 볼 수 있습니다."}},
+      {"@type":"Question","name":"효과가 나타나지 않을 경우 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"교사와 상의해 난이도를 조절하고, 시각 자료를 추가해 보세요."}},
+      {"@type":"Question","name":"다른 과목에도 적용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"영어 문법이나 과학 서술형에서도 기능 분석을 활용하면 이해도가 높아집니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>통사적 기능 분석, 부모 체험</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">통사적 기능 분석, 부모 체험</h1>
+      <p class="article-meta-desc">통사적 기능 분석을 가정에서 적용한 실제 경험과 개념 부재 시 발생하는 문제를 부모 시각에서 상세히 설명하고, 실천 팁과 FAQ를 제공한다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">통사적 기능 분석이 뭐죠</a></li>
+        <li><a href="#s2">실제 적용 후 변화</a></li>
+        <li><a href="#s3">개념 없으면 일어나는 일</a></li>
+        <li><a href="#s4">부모가 직접 해볼 수 있는 팁</a></li>
+        <li><a href="#s5">학교와 연계하기</a></li>
+        <li><a href="#s6">도전과제와 해결책</a></li>
+        <li><a href="#s7">장기적인 효과</a></li>
+        <li><a href="#s8">FAQ 관련</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>통사적 기능 분석이 뭐죠</h2>
+      <p>저는 최근 학교에서 처음 알게 된 통사적 기능 분석을 통해 아이의 언어 구조를 새롭게 탐구하고 싶었습니다. 우리 아들은 평소 문장 구성에서 주어와 목적어 사이의 관계를 헷갈려 했지만, 교사의 안내에 따라 기능별 표를 활용하면서 스스로 점검하게 되었습니다. 그때부터 매일 저녁 식사 시간에 간단한 구문 놀이를 도입해 보니, 자녀는 자연스럽게 문법적 관계를 인식하고 표현력이 눈에 띄게 향상되었습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>실제 적용 후 변화</h2>
+      <p>저는 통사적 기능 분석을 가정 학습에 적용한 이후, 아이의 언어 사용에 눈에 띄는 변화를 관찰했습니다. 우리 딸은 새로운 규칙을 배우면서 스스로 문장을 재구성하고, 어휘 선택에서도 정확도가 높아졌습니다. 그 결과, 학교 숙제 제출 시 오류가 크게 감소했고, 교사와의 대화에서도 자신감이 크게 향상되었습니다.
+
+</p>
+      <ul class="blog-list">
+        <li>문법 오류 감소</li>
+        <li>어휘 선택 정확도 향상</li>
+        <li>표현 다양성 확대</li>
+        <li>학습 동기 강화</li>
+        <li>자기 점검 습관 형성</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>개념 없으면 일어나는 일</h2>
+      <p>저는 아이에게 통사적 기능을 가르치기 전, 해당 개념이 없을 경우 어떤 어려움이 생길지 스스로 질문해 보았습니다. 우리 아들은 그 질문에 대해 생각하면서, 문법적 관계를 인식하지 못하면 문장을 이해하거나 전달하는 과정에서 큰 혼란을 겪을 수 있다는 답을 제시했습니다. 그 답을 바탕으로 실제 사례를 찾아보니, 개념이 결여된 상태에서는 독해 능력이 저하되고, 글쓰기에서 논리적 흐름을 유지하기 어려워지는 것이 명확히 드러났습니다.
+
+그때부터 우리는 매일 짧은 텍스트를 분석하며, 각 요소가 어떤 역할을 하는지 구체적으로 토론하는 시간을 마련했습니다. 결과적으로 아이는 복잡한 문장을 다룰 때에도 핵심 구조를 빠르게 파악하고, 자신의 의견을 논리적으로 전개하는 능력이 눈에 띄게 개선되었습니다.
+
+</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>오류 유형</td><td>문법</td><td>주어와 목적어 혼동</td></tr>
+        <tr><td>학습 영향</td><td>독해</td><td>핵심 의미 파악 어려움</td></tr>
+        <tr><td>표현 결과</td><td>글쓰기</td><td>논리 전개 부족</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>부모가 직접 해볼 수 있는 팁</h2>
+      <p>저는 먼저 아이와 함께 일상 대화를 기록하고, 각 문장의 주어와 목적어를 함께 찾아보는 연습을 시작했습니다. 우리 가족은 주말마다 짧은 이야기를 만들면서, 기능별 카드를 사용해 역할을 표시하는 놀이를 즐깁니다. 그 과정에서 아이는 스스로 문장의 구조를 인식하고, 새로운 표현을 시도하는 즐거움을 느낍니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>학교와 연계하기</h2>
+      <p>저는 교사와 협력하여 통사적 기능 분석 수업을 보강하는 방안을 논의했습니다. 우리 아이는 교실에서 배운 내용을 집에서도 복습하면서, 학습 효과가 지속되는 것을 경험했습니다. 그 결과, 시험 성적이 상승하고, 친구들과의 토론에서도 주도적으로 의견을 제시할 수 있게 되었습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>도전과제와 해결책</h2>
+      <p>저는 초기에는 아이가 새로운 용어에 익숙하지 않아 혼란스러워하는 모습을 보았습니다. 우리 딸은 어려운 개념을 시각 자료와 연결해 이해하려 노력했지만, 가끔은 포기하는 듯 보였습니다. 그때마다 저는 격려와 함께 짧은 퀴즈를 통해 복습을 유도하고, 작은 성취감을 제공했습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>장기적인 효과</h2>
+      <p>저는 꾸준히 통사적 기능 분석을 적용한 결과, 아이의 언어 능력이 전반적으로 향상되었다는 사실을 확인했습니다. 우리 아들은 고등학교 진학 후에도 복잡한 논술 과제에서 명확한 구조를 잡는 데 자신감을 보이며, 학업 스트레스를 감소시켰습니다. 그 경험을 통해 우리는 언어 교육이 단순히 암기가 아니라 사고력과 표현력을 동시에 키우는 중요한 도구임을 깨달았습니다.
+
+</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>FAQ 관련</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>통사적 기능 분석은 어디서 배우나요?</summary>
+            <p class="faq-answer">대부분 초중등 국어 교과서와 학원에서 다루며, 온라인 강의도 활용할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이에게 적용할 때 필요한 준비물은?</summary>
+            <p class="faq-answer">기능별 카드, 간단한 문장 예시, 필기 도구만 있으면 충분합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 시간이 얼마나 필요합니까?</summary>
+            <p class="faq-answer">하루 10~15분 정도 꾸준히 진행하면 효과를 볼 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>효과가 나타나지 않을 경우 어떻게 해야 하나요?</summary>
+            <p class="faq-answer">교사와 상의해 난이도를 조절하고, 시각 자료를 추가해 보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>다른 과목에도 적용할 수 있나요?</summary>
+            <p class="faq-answer">영어 문법이나 과학 서술형에서도 기능 분석을 활용하면 이해도가 높아집니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

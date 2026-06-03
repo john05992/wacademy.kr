@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국어 문법 카드와 수학 극한 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="국어 교과서 지문을 문법별로 나누어 암기 카드를 만들고 수학의 좌우 극한을 시각화하여 학습 효과를 높이는 방법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="국어 문법 카드와 수학 극한">
+  <meta property="og:description" content="국어 교과서 지문을 문법별로 나누어 암기 카드를 만들고 수학의 좌우 극한을 시각화하여 학습 효과를 높이는 방법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/8514/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="국어 문법 카드와 수학 극한">
+  <meta name="twitter:description" content="국어 교과서 지문을 문법별로 나누어 암기 카드를 만들고 수학의 좌우 극한을 시각화하여 학습 효과를 높이는 방법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/8514/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/8514/#article",
+    "headline": "국어 문법 카드와 수학 극한",
+    "description": "국어 교과서 지문을 문법별로 나누어 암기 카드를 만들고 수학의 좌우 극한을 시각화하여 학습 효과를 높이는 방법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-12-31",
+    "dateModified": "2025-12-31",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/8514/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/8514/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "국어 문법 카드와 수학 극한"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"카드 만드는 데 시간이 오래 걸리나요?","acceptedAnswer":{"@type":"Answer","text":"주말을 활용해 이틀 정도 투자하면 기본 세트를 완성할 수 있어요."}},
+      {"@type":"Question","name":"수학을 싫어하는 아이에게도 효과가 있나요?","acceptedAnswer":{"@type":"Answer","text":"그림 그리기 놀이처럼 접근하면 거부감 없이 재미있게 시작할 수 있습니다."}},
+      {"@type":"Question","name":"몇 학년부터 이 방법을 써야 하나요?","acceptedAnswer":{"@type":"Answer","text":"중학교 고학년부터 본격적인 함수와 문법을 배울 때 가장 좋습니다."}},
+      {"@type":"Question","name":"자료는 어디에 보관하는 게 좋나요?","acceptedAnswer":{"@type":"Answer","text":"눈에 잘 띄는 벽면에 게시하거나 투명 파일에 모아두세요."}},
+      {"@type":"Question","name":"효과를 보려면 얼마나 걸리나요?","acceptedAnswer":{"@type":"Answer","text":"한 달 정도 꾸준히 하면 학습 태도와 성적 모두 변화가 생깁니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>국어 문법 카드와 수학 극한</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">국어 문법 카드와 수학 극한</h1>
+      <p class="article-meta-desc">국어 교과서 지문을 문법별로 나누어 암기 카드를 만들고 수학의 좌우 극한을 시각화하여 학습 효과를 높이는 방법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">교과서 문법 암기 카드 만들기</a></li>
+        <li><a href="#s2">지문 분류로 보는 문법의 맥</a></li>
+        <li><a href="#s3">좌극한과 우극한의 개념 잡기</a></li>
+        <li><a href="#s4">그래프 그리며 익히기</a></li>
+        <li><a href="#s5">통합 학습 효과 느끼기</a></li>
+        <li><a href="#s6">학부모를 위한 조언</a></li>
+        <li><a href="#s7">지속적인 반복의 중요성</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>교과서 문법 암기 카드 만들기</h2>
+      <p>우리 아이가 국어 문법을 정말 힘들어했어요. 단순히 개념만 외우니까 지문에 적용을 못 하는 거죠. 
+
+그래서 전 교과서 지문을 문법별로 오려서 암기 카드를 만들기 시작했답니다. 처음에는 엄마인 저도 너무 귀찮았지만 자녀가 직접 예문을 보면서 이해하더라고요. 
+
+이 방법은 정말 강력해요. 조각 뒷면에 해당 문법 요소를 적어두니까 반복 학습도 훨씬 수월해졌습니다. 
+
+이제 시험 문제를 보면 우리 꼬맹이가 이거 카드에 있었잖아라고 하더군요.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>지문 분류로 보는 문법의 맥</h2>
+      <p>저는 줄글로 된 지문을 주어와 서술어, 수식 언어 등으로 나누어 분류했습니다. 실제 교과서에 나오는 친숙한 문장들이라 거부감이 덜한 것 같아요. 
+
+아이와 함께 조각을 뒤집어가며 맞추는 놀이를 하다 보니 공부가 고역이 아니었습니다. 단순 암기가 아니라 맥락을 파악하는 훈련이 되니까 독해력도 동시에 올라가는 기분이에요. 
+
+다른 학부모님들께도 이 방법을 자주 추천하고 있는데, 해보시면 다들 만족하십니다. 엄마의 손길이 담긴 자료라 자녀가 더 애착을 가지는지도 모르겠네요.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>좌극한과 우극한의 개념 잡기</h2>
+      <p>국어에 이어 수학의 좌극한과 우극한 개념도 우리 자녀가 헷갈려했습니다. 부호가 붙는 순간부터 어지러워하는 표정이 역력했죠. 
+
+그래서 저는 함수 그래프를 직접 그려가며 좌측에서 다가가는 모습과 우측에서 다가오는 모습을 손가락으로 움직여 보여주었어요. 
+
+왼손은 좌극한, 오른손은 우극한이라고 이름을 붙이니까 훨씬 직관적으로 이해하더라고요. 교과서의 정의보다는 엄마의 행동으로 보여주는 게 훨씬 효과적이었습니다. 
+
+이 과정을 거치고 나서 학생은 극한 기호를 보면 두 손을 자연스럽게 움직이며 확인합니다. 추상적인 수학 개념을 시각화하고 몸으로 익히는 것이 중요하다는 걸 깨달았어요. 
+
+이제 극한값이 다른 경우를 보여주면 우리 꼬마가 함수가 연속이 아니라고 정확히 맞춥니다. 엄마인 저도 수학 공부를 다시 하는 기분이라 즐겁습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>그래프 그리며 익히기</h2>
+      <p>그래프를 그리는 연습은 극한 학습에서 필수적입니다. 저는 학생과 함께 모눈종이에 여러 가지 함수를 그리면서 좌우 수렴 여부를 확인해 보았어요. 
+
+특히 점근선이 있는 경우 곡선이 선에 다가가지만 닿지 않는 모습을 보여주니까 개념이 확실해졌습니다. 문제집만 푸는 것보다 직접 그려보는 시간이 훨씬 더 도움이 되더라고요. 
+
+자녀가 그리는 도형을 보면 어디가 약한지 한눈에 알 수 있어서 지도하기도 좋았습니다. 이 방법 덕분에 수학에 대한 막연한 두려움을 많이 없앴습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>좌극한</td><td>왼쪽 방향</td><td>변수가 작아질 때의 값</td></tr>
+        <tr><td>우극한</td><td>오른쪽 방향</td><td>변수가 커질 때의 값</td></tr>
+        <tr><td>극한 존재</td><td>좌우 극한</td><td>두 값이 같아야 함</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>통합 학습 효과 느끼기</h2>
+      <p>국어 문법 카드와 수학 그래프 학습을 병행하면서 자녀의 사고력이 정돈되는 것을 느꼈습니다. 정보를 분류하고 시각화하는 과정은 모든 과목에 통하는 원칙이더라고요. 
+
+혼자서 공부할 때도 핵심 키워드를 뽑아 정리하는 습관이 생겼습니다. 저는 그 모습을 보며 참 똑똑해졌다는 생각에 든든함을 느낍니다. 
+
+학부모로서 자녀에게 방향을 잡아주는 것이 얼마나 중요한지 다시금 깨닫게 됩니다. 이제 우리 꼬마는 스스로 학습 계획을 세우고 조각을 활용해 복습을 하곤 하니 참 기특하죠.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>학부모를 위한 조언</h2>
+      <p>자료를 직접 만드는 것은 시간이 오래 걸리지만 자녀에게는 큰 힘이 됩니다. 부모님이 조금만 힘을 내서 시작해 보시길 정말 추천해요. 
+
+저도 처음에는 엄두가 안 났지만 지금은 이 루틴이 우리 생활의 일부가 되었습니다. 학생이 작은 성취감을 느낄 때마다 칭찬해 주는 것도 잊지 마세요. 
+
+그 칭찬 한마디가 아이를 공부의 왕으로 만드는 비결이니까요. 이 글을 읽는 학부모님들도 오늘부터 작은 조각 한 장이라도 만들어 보시면 어떨까요. 
+
+분명 좋은 결과가 있을 거라고 확신합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>지속적인 반복의 중요성</h2>
+      <p>제가 겪은 바로는 이 모든 과정에서 가장 중요한 것은 꾸준한 반복입니다. 아무리 좋은 자료도 방치되면 소용이 없으니까요. 
+
+우리 집에서는 매일 저녁 식사 후에 십 분 정도를 이 조각과 도면을 보는 시간으로 할애합니다. 짧은 시간이라도 매일 보니까 머릿속에 쏙쏙 들어온다고 우리 꼬마가 좋아합니다. 
+
+이처럼 학습 습관을 들이는 데에는 부모의 끈기가 필수적입니다. 조금씩이라도 나아가고 있다는 사실에 의미를 두며 지내고 있습니다.</p>
+      <ul class="blog-list">
+        <li>매일 저녁 십 분씩 복습하기</li>
+        <li>카드 순서를 섞어 놀이처럼 하기</li>
+        <li>함께 그래프를 그려보기</li>
+        <li>엄마에게 설명하는 시간 갖기</li>
+        <li>작은 성취에 칭찬 아낌없이 하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>카드 만드는 데 시간이 오래 걸리나요?</summary>
+            <p class="faq-answer">주말을 활용해 이틀 정도 투자하면 기본 세트를 완성할 수 있어요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학을 싫어하는 아이에게도 효과가 있나요?</summary>
+            <p class="faq-answer">그림 그리기 놀이처럼 접근하면 거부감 없이 재미있게 시작할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>몇 학년부터 이 방법을 써야 하나요?</summary>
+            <p class="faq-answer">중학교 고학년부터 본격적인 함수와 문법을 배울 때 가장 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>자료는 어디에 보관하는 게 좋나요?</summary>
+            <p class="faq-answer">눈에 잘 띄는 벽면에 게시하거나 투명 파일에 모아두세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>효과를 보려면 얼마나 걸리나요?</summary>
+            <p class="faq-answer">한 달 정도 꾸준히 하면 학습 태도와 성적 모두 변화가 생깁니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통계 가설 검정과 세 줄 요약법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="아이와 함께 통계 가설 검정을 공부하며 찾은 효과적인 학습법인 세 줄 요약법을 소개합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="통계 가설 검정과 세 줄 요약법">
+  <meta property="og:description" content="아이와 함께 통계 가설 검정을 공부하며 찾은 효과적인 학습법인 세 줄 요약법을 소개합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/6630/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="통계 가설 검정과 세 줄 요약법">
+  <meta name="twitter:description" content="아이와 함께 통계 가설 검정을 공부하며 찾은 효과적인 학습법인 세 줄 요약법을 소개합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/6630/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/6630/#article",
+    "headline": "통계 가설 검정과 세 줄 요약법",
+    "description": "아이와 함께 통계 가설 검정을 공부하며 찾은 효과적인 학습법인 세 줄 요약법을 소개합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2026-02-03",
+    "dateModified": "2026-02-03",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/6630/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/6630/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "통계 가설 검정과 세 줄 요약법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"초등학생도 세 줄 요약법을 배울 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 어려운 수식은 빼고 그래프 읽기 등 쉬운 개념부터 시작하면 충분히 가능합니다."}},
+      {"@type":"Question","name":"세 줄 요약법에 정해진 시간이 있나요?","acceptedAnswer":{"@type":"Answer","text":"개념 학습 직후 오래 기억에 남도록 바로 작성하는 것이 가장 효과적입니다."}},
+      {"@type":"Question","name":"아이가 글 쓰는 것을 싫어하면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"말로 먼저 설명하게 하고 녹음하거나 그림으로 그리게 해도 요약의 효과가 있습니다."}},
+      {"@type":"Question","name":"수학을 못해도 통계는 잘할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"통계는 논리적 사고가 중요하므로 계산 능력보다는 이해력이 좋으면 잘할 수 있습니다."}},
+      {"@type":"Question","name":"추천하는 참고서가 있나요?","acceptedAnswer":{"@type":"Answer","text":"기본 교과서를 중심으로 하고 이해가 안 될 때는 만화 통계 책을 함께 보는 것을 추천합니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>통계 가설 검정과 세 줄 요약법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">통계 가설 검정과 세 줄 요약법</h1>
+      <p class="article-meta-desc">아이와 함께 통계 가설 검정을 공부하며 찾은 효과적인 학습법인 세 줄 요약법을 소개합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">통계 공부의 어려움과 시작</a></li>
+        <li><a href="#s2">통계적 가설 검정의 기초 이해하기</a></li>
+        <li><a href="#s3">개념 암기의 한계와 답답함</a></li>
+        <li><a href="#s4">효과적인 세 줄 요약법 활용</a></li>
+        <li><a href="#s5">주요 개념을 정리한 세 줄 요약표</a></li>
+        <li><a href="#s6">통계 공부에 집중하는 꿀팁</a></li>
+        <li><a href="#s7">학부모에게 드리는 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>통계 공부의 어려움과 시작</h2>
+      <p>아이가 고등학교에 올라가면서 통계 과목을 만났을 때 저도 함께 당황했던 기억이 납니다. 복잡한 기호와 낯선 용어들이 산더미처럼 쌓여 있어서 어디서부터 손을 대야 할지 몰랐거든요.
+
+그래서 저는 교과서보다는 쉬운 해설서를 찾아보면서 아이의 눈높이에 맞춰 공부를 시작해 보기로 결심했습니다. 사실 수학적 계산보다는 개념적인 이해가 훨씬 중요하다는 것을 깨닫는 데는 꽤 오랜 시간이 걸렸습니다.
+
+이 과정에서 우리가 찾아낸 나만의 학습 비법이 바로 세 줄 요약법이었습니다. 처음에는 단순해 보였지만 막상 적용해 보니 아이가 통계의 흐름을 파악하는 데 큰 도움이 되었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>통계적 가설 검정의 기초 이해하기</h2>
+      <p>통계적 가설 검정은 처음 접하면 무척 난해하게 느껴질 수밖에 없는 주제입니다. 귀무 가설과 대립 가설이라는 용어 자체가 생소해서 아이는 이 두 가지를 구분하는 것조차 힘들어하더군요.
+
+저는 법정에서의 재판 과정을 예로 들어서 설명해 주었습니다. 누구나 무죄 추정의 원칙 아래 시작하지만 증거가 나오면 유죄를 판단받는 것처럼 통계에서도 같은 논리가 적용된다는 식이었습니다.
+
+이 비유를 듣고 나서야 아이는 아하 순간을 경험했습니다. 데이터를 통해 주장을 검증하는 과정 자체가 하나의 논리적 사고 훈련이라는 점을 깨달았습니다.
+
+이제는 단순한 수식이 아니라 왜 이런 검정을 하는지 그 이유를 먼저 찾으려고 노력합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>개념 암기의 한계와 답답함</h2>
+      <p>아이가 처음 통계를 공부할 때 가장 큰 문제는 암기 위주의 학습 습관이었습니다. 모든 공식과 정의를 달달 외우려고만 했지 실제 상황에서 어떻게 적용해야 하는지는 전혀 고민하지 않았던 것이죠.
+
+문제의 지문이 조금만 바뀌어도 당황해서 풀지 못하는 모습을 보며 안타까움이 이만저만이 아니었습니다. 그래서 저는 아이에게 백지상태에서 정의를 쓰라고 하기보다는 자신의 언어로 풀어서 설명해 보라고 요구했습니다.
+
+단순히 답을 맞히는 것보다 과정을 이해하는 것이 훨씬 더 중요하다는 사실을 일깨워 주고 싶었기 때문입니다. 이 방식은 아이의 수동적인 태도를 바꾸는 데 결정적인 역할을 했습니다.
+
+스스로 생각하고 정리하는 힘을 길러주었기에 나중에는 심화 문제도 두려워하지 않게 되었습니다. 덕분에 학원 강의를 듣는 것보다 혼자 공부하는 시간이 훨씬 더 효율적이라는 피드백을 들을 수 있었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>효과적인 세 줄 요약법 활용</h2>
+      <p>우리가 정착한 세 줄 요약법은 생각보다 훨씬 간단하고 강력한 도구입니다. 첫 번째 줄에는 배운 핵심 개념이 무엇인지 한 문장으로 적습니다.
+
+두 번째 줄에는 그 개념이 왜 필요하며 어떤 문제를 해결하는지 적습니다. 마지막 세 번째 줄에는 실생활이나 다른 문제에 어떻게 응용할 수 있을지 적는 방식입니다.
+
+아이는 이렇게 세 줄을 적는 과정에서 자연스럽게 머릿속을 정리하게 됩니다. 긴 설명을 다 외울 필요 없이 딱 세 줄만 기억하면 시험장에서도 당황하지 않고 풀 수 있다고 하더군요.
+
+저는 아이가 쓴 요약 내용을 보면서 부족한 부분을 질문해 주는 식으로 피드백을 줍니다. 서로 대화하면서 공부하는 즐거움을 느꼈기에 지루할 틈 없이 학습을 이어갈 수 있었습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>주요 개념을 정리한 세 줄 요약표</h2>
+      <p>가설 검정의 핵심 내용을 세 줄 요약법으로 정리한 표를 만들어 보았습니다. 이 표는 아이가 시험 직전에 보는 최종 요약 노트 역할을 톡톡히 해냈습니다.
+
+한눈에 보기 힘든 내용을 체계적으로 정리하니 효율성이 확실히 달라졌습니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>귀무 가설</td><td>기존의 주장</td><td>처음부터 참으로 간주하여 검정의 출발점이 되는 가설 설정</td></tr>
+        <tr><td>대립 가설</td><td>새로운 주장</td><td>귀무 가설이 거짓이라면 대안으로 참이 될 가설 정립</td></tr>
+        <tr><td>유의 수준</td><td>오류 허용 범위</td><td>우연한 확률로 귀무 가설을 기각할 최대 허용 확률 결정</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>통계 공부에 집중하는 꿀팁</h2>
+      <p>통계학은 이론만으로는 부족하고 실제 데이터를 다뤄보는 경험이 필수적입니다. 아이가 흥미를 잃지 않고 꾸준히 공부할 수 있도록 저는 몇 가지 규칙을 정했습니다.
+
+이 원칙들이 우리 모녀 또는 부자가 함께 공부하는 데 큰 도움이 되었습니다.</p>
+      <ul class="blog-list">
+        <li>매일 공부한 내용을 친구에게 설명하듯 말로 해보기</li>
+        <li>실제 뉴스 기사에서 통계 수치 찾아보며 흥미 유발하기</li>
+        <li>어려운 문제는 만화나 그림으로 그려서 상상력 키우기</li>
+        <li>틀린 문제는 단순히 정답만 확인하지 말고 왜 틀렸는지 분석하기</li>
+        <li>주말에는 한 주간 배운 내용을 마인드맵으로 복습하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>학부모에게 드리는 조언</h2>
+      <p>학부모로서 아이의 공부를 도울 때는 조급한 마음을 버리는 것이 가장 중요합니다. 통계라는 과목은 한 번에 이해하기 어려운 난이도가 있는 과목이니까요.
+
+제가 겪은 시행착오를 토대로 말씀드리면 강요하기보다는 아이가 스스로 생각할 수 있는 환경을 만들어 주어야 합니다. 세 줄 요약법은 그런 환경을 만드는 데 아주 좋은 도구가 되었습니다.
+
+짧은 시간이라도 꾸준히 개념을 정리하다 보면 아이는 자신감을 갖게 되고 성적도 자연스럽게 따라오게 됩니다. 여러분도 아이와 함께 통계라는 거대한 파도를 즐겁게 타보시길 진심으로 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>초등학생도 세 줄 요약법을 배울 수 있나요?</summary>
+            <p class="faq-answer">네, 어려운 수식은 빼고 그래프 읽기 등 쉬운 개념부터 시작하면 충분히 가능합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>세 줄 요약법에 정해진 시간이 있나요?</summary>
+            <p class="faq-answer">개념 학습 직후 오래 기억에 남도록 바로 작성하는 것이 가장 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 글 쓰는 것을 싫어하면 어떻게 하나요?</summary>
+            <p class="faq-answer">말로 먼저 설명하게 하고 녹음하거나 그림으로 그리게 해도 요약의 효과가 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학을 못해도 통계는 잘할 수 있나요?</summary>
+            <p class="faq-answer">통계는 논리적 사고가 중요하므로 계산 능력보다는 이해력이 좋으면 잘할 수 있습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>추천하는 참고서가 있나요?</summary>
+            <p class="faq-answer">기본 교과서를 중심으로 하고 이해가 안 될 때는 만화 통계 책을 함께 보는 것을 추천합니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

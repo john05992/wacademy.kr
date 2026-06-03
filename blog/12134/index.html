@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오답 노트와 확률 공부 비법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="아이 성적을 올린 오답 근거 찾기와 독립 종속사건 이해법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="오답 노트와 확률 공부 비법">
+  <meta property="og:description" content="아이 성적을 올린 오답 근거 찾기와 독립 종속사건 이해법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/12134/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="오답 노트와 확률 공부 비법">
+  <meta name="twitter:description" content="아이 성적을 올린 오답 근거 찾기와 독립 종속사건 이해법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/12134/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/12134/#article",
+    "headline": "오답 노트와 확률 공부 비법",
+    "description": "아이 성적을 올린 오답 근거 찾기와 독립 종속사건 이해법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-10-26",
+    "dateModified": "2025-10-26",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/12134/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/12134/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "오답 노트와 확률 공부 비법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"오답 근거 찾기 훈련은 언제부터 하나요?","acceptedAnswer":{"@type":"Answer","text":"초등 고학년부터 본격적으로 시작하면 효과적입니다."}},
+      {"@type":"Question","name":"시간이 너무 오래 걸리지 않나요?","acceptedAnswer":{"@type":"Answer","text":"처음엔 힘들지만 익숙해지면 분석 시간이 줄어듭니다."}},
+      {"@type":"Question","name":"독립사건과 종속사건 구별법이 떠오르지 않아요.","acceptedAnswer":{"@type":"Answer","text":"앞의 결과가 뒤에 영향을 주는지 생각해 보세요."}},
+      {"@type":"Question","name":"수학 외 과목도 이 방법을 써요?","acceptedAnswer":{"@type":"Answer","text":"국어와 과학 탐구 영역에서도 매우 유용합니다."}},
+      {"@type":"Question","name":"아이가 거부할 때는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"엄마와 함께 캐릭터 놀이하듯 편하게 접근해 보세요."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>오답 노트와 확률 공부 비법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">오답 노트와 확률 공부 비법</h1>
+      <p class="article-meta-desc">아이 성적을 올린 오답 근거 찾기와 독립 종속사건 이해법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">시험 후 아이의 표정이 밝아질 때</a></li>
+        <li><a href="#s2">오답의 근거를 꼼꼼히 찾는 방법</a></li>
+        <li><a href="#s3">근거 찾기 훈련의 놀라운 효과</a></li>
+        <li><a href="#s4">헷갈리는 독립사건과 종속사건</a></li>
+        <li><a href="#s5">생활 속 예시로 확률 잡기</a></li>
+        <li><a href="#s6">꾸준함이 만들어낸 변화</a></li>
+        <li><a href="#s7">다른 학부모님들께 드리는 조언</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>시험 후 아이의 표정이 밝아질 때</h2>
+      <p>학부모로서 시험 성적표를 받아볼 때마다 마음이 쓰이기 마련입니다.
+
+아이가 공부를 했는데도 결과가 기대치에 미치지 못하면 더욱 답답하죠.
+
+저희 집에서도 지난 모의고사 결과를 보고 많은 고민을 했답니다.
+
+단순히 정답과 오답만 확인하는 것으로는 부족하다는 생각이 들었습니다.
+
+그래서 문제 풀이의 근본적인 원인을 파악하는 방법을 찾게 되었습니다.
+
+이 방법을 적용하고 나서 아이의 학습 태도가 달라지는 것을 보았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>오답의 근거를 꼼꼼히 찾는 방법</h2>
+      <p>모의고사 문제집을 펴놓고 정답만 체크하는 것은 반쪽짜리 공부입니다.
+
+왜 틀렸는지 정확한 이유를 알아야 다음번에 같은 실수를 안 합니다.
+
+저희 아이는 단순히 실수라고 넘기는 경우가 많았는데 이를 고쳤죠.
+
+문제 지문에서 핵심이 되는 근거 문장을 직접 찾도록 지도했습니다.
+
+이 과정을 통해 아이가 스스로 모르는 부분을 명확히 알게 되었습니다.</p>
+      <ul class="blog-list">
+        <li>지문에서 핵심어 밑줄 긋기</li>
+        <li>선택지의 차이점 비교하기</li>
+        <li>오답이 왜 틀렸는지 적기</li>
+        <li>개념서에서 관련 내용 찾기</li>
+        <li>비슷한 유형의 문제 더 풀어보기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>근거 찾기 훈련의 놀라운 효과</h2>
+      <p>처음에는 아이가 귀찮아하면서도 성실하게 따라 해 주었습니다.
+
+자신의 틀린 이유를 논리적으로 설명하지 못하면 점수는 오르지 않으니까요.
+
+모의고사 중 오답 근거 문장 찾기 훈련을 시작한 후 집중력이 높아졌습니다.
+
+문제를 대충 읽고 끼워 맞추던 습관이 사라지고 꼼꼼해졌어요.
+
+이러한 분석적인 사고는 수학 문제를 푸는 데에도 큰 도움이 됩니다.
+
+특히 확률 단원에서 상황을 정확히 파악하는 데 필수적이더군요.
+
+단순히 공식에 대입해서 답을 구하는 것이 아니라 문맥을 읽어야 하니까요.
+
+아이가 텍스트를 꼼꼼히 읽는 힘이 길러진 것이 가장 큰 수확입니다.
+
+실제로 이전에는 지문을 읽고 문제의 의도를 파악하지 못했어요.
+
+지금은 문제에 숨겨진 함정을 찾아내는 능력이 상당히 좋아졌습니다.
+
+덕분에 학교 시험뿐만 아니라 학원 테스트에서도 성적이 향상되었습니다.
+
+이 훈련은 시간이 조금 걸리지만 그 효과는 확실하게 나타납니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>헷갈리는 독립사건과 종속사건</h2>
+      <p>확률 단원을 공부할 때 독립사건과 종속사건 개념이 참 어렵습니다.
+
+아이가 두 사건의 차이를 이해하지 못해 계산을 자주 틀렸습니다.
+
+저도 학창 시절 배운 기억이 흐릿해서 다시 공부를 시작했어요.
+
+차이점을 명확히 정리해주니 아이가 훨씬 쉽게 이해하더라고요.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>독립사건</td><td>동전 던지기</td><td>앞의 결과가 뒤의 결과에 영향을 주지 않음</td></tr>
+        <tr><td>종속사건</td><td>공 꺼내기</td><td>앞에서 꺼낸 결과가 뒤의 확률에 변화를 줌</td></tr>
+        <tr><td>핵심 차이</td><td>사건 영향력</td><td>두 사건이 서로에게 영향을 미치는지 확인 필요</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>생활 속 예시로 확률 잡기</h2>
+      <p>교과서에 나오는 정의만 외우는 것보다 생활 속 예시가 훨씬 낫습니다.
+
+아이와 함께 주사위 게임을 하며 독립사건을 체험해 보았습니다.
+
+당첨 번호 추첨이나 복권 같은 것을 예로 들어 설명해 주었죠.
+
+종속사건은 과자 봉지에 들어있는 카드 모으기로 비유했습니다.
+
+이미 모은 카드에 따라서 다음에 나올 확률이 달라지니까요.
+
+이렇게 예시를 들어주니 아이가 재미있어하면서 개념을 잡았습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>꾸준함이 만들어낸 변화</h2>
+      <p>이러한 공부법을 꾸준히 실천한 후 최근 학교 시험 결과가 나왔습니다.
+
+수학 점수가 눈에 띄게 상승하여 아이가 스스로 자신감을 얻었습니다.
+
+저 또한 아이를 가르치는 방식에 대해 새로운 깨달음을 얻었답니다.
+
+단순 암기보다는 왜 그런지 이해하는 과정이 진짜 실력이더군요.
+
+앞으로도 오답 분석과 개념 이해를 병행해 공부를 지도할 생각입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>다른 학부모님들께 드리는 조언</h2>
+      <p>우리 아이들이 공부를 싫어하는 이유는 모르기 때문이라고 생각합니다.
+
+조금만 더 관심을 가지고 근본적인 원인을 짚어주세요.
+
+오답 근거를 찾고 확률 개념을 잡는 것은 누구나 시도할 수 있습니다.
+
+오늘부터 아이의 시험지를 함께 펴보고 대화를 시작해 보세요.
+
+여러분의 작은 관심이 아이의 성장을 돕는 큰 밑거름이 될 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>오답 근거 찾기 훈련은 언제부터 하나요?</summary>
+            <p class="faq-answer">초등 고학년부터 본격적으로 시작하면 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>시간이 너무 오래 걸리지 않나요?</summary>
+            <p class="faq-answer">처음엔 힘들지만 익숙해지면 분석 시간이 줄어듭니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>독립사건과 종속사건 구별법이 떠오르지 않아요.</summary>
+            <p class="faq-answer">앞의 결과가 뒤에 영향을 주는지 생각해 보세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학 외 과목도 이 방법을 써요?</summary>
+            <p class="faq-answer">국어와 과학 탐구 영역에서도 매우 유용합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 거부할 때는 어떻게 하나요?</summary>
+            <p class="faq-answer">엄마와 함께 캐릭터 놀이하듯 편하게 접근해 보세요.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

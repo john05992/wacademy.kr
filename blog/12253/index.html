@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국어 어법과 함수의 활용 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="교과서 본문을 활용한 어법 오류 수정 연습법과 일차함수 응용 문제 해결 비법을 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="국어 어법과 함수의 활용">
+  <meta property="og:description" content="교과서 본문을 활용한 어법 오류 수정 연습법과 일차함수 응용 문제 해결 비법을 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/12253/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="국어 어법과 함수의 활용">
+  <meta name="twitter:description" content="교과서 본문을 활용한 어법 오류 수정 연습법과 일차함수 응용 문제 해결 비법을 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/12253/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/12253/#article",
+    "headline": "국어 어법과 함수의 활용",
+    "description": "교과서 본문을 활용한 어법 오류 수정 연습법과 일차함수 응용 문제 해결 비법을 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-10-24",
+    "dateModified": "2025-10-24",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/12253/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/12253/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "국어 어법과 함수의 활용"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"하루에 얼마나 많은 시간을 투자해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"처음에는 서른 분 정도로 시작하여 아이가 적응하면 시간을 조절해 주시는 것이 좋습니다."}},
+      {"@type":"Question","name":"초등학생에게도 이 방법이 적용 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 하지만 문제의 난이도를 아이의 눈높이에 맞춰서 조금 낮춰서 진행해야 합니다."}},
+      {"@type":"Question","name":"수학을 잘 못하는 부모도 도와줄 수 있을까요?","acceptedAnswer":{"@type":"Answer","text":"정답을 가르쳐주는 것보다 함께 고민해 주는 태도가 중요하며 채점은 정답지를 활용하세요."}},
+      {"@type":"Question","name":"어법 오류 수정 문제를 만드는 기준이 있나요?","acceptedAnswer":{"@type":"Answer","text":"교과서의 핵심 문법 사항을 중심으로 의도적으로 실수하기 쉬운 부분을 변형하면 됩니다."}},
+      {"@type":"Question","name":"효과가 보이기까지 얼마나 걸리나요?","acceptedAnswer":{"@type":"Answer","text":"보통 한 달 정도 꾸준히 실천하면 아이의 문제 풀이 속도와 정확도에 변화가 생깁니다."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>국어 어법과 함수의 활용</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">국어 어법과 함수의 활용</h1>
+      <p class="article-meta-desc">교과서 본문을 활용한 어법 오류 수정 연습법과 일차함수 응용 문제 해결 비법을 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">중학 공부법의 변화</a></li>
+        <li><a href="#s2">교과서로 어법 잡기</a></li>
+        <li><a href="#s3">어법 학습의 구체적 효과</a></li>
+        <li><a href="#s4">함수 문제의 어려움</a></li>
+        <li><a href="#s5">함수 문제 해결 단계</a></li>
+        <li><a href="#s6">유형별 문제 분석</a></li>
+        <li><a href="#s7">공부법 적용 후기</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>중학 공부법의 변화</h2>
+      <p>아이가 중학교에 올라가면서 국어와 수학 문제 유형이 꽤나 까다로워졌습니다. 단순 암기가 아니라 문맥을 파악해야 하는 국어와 실생활 연결이 필요한 수학 때문에 고민이 이만저만이 아닙니다. 
+
+ 저희 집에서 시도해 본 두 가지 공부법이 다른 학부모님들께도 큰 도움이 될 것 같아 솔직한 후기를 남깁니다. 처음에는 아이가 어떻게 접근해야 할지 몰라 당황했지만 지금은 꽤 흥미를 느끼고 있어 다행입니다. 
+
+ 이 방법들은 교과서를 기본으로 하기 때문에 별도의 참고서 없이도 충분히 진행할 수 있는 장점이 있습니다. 막연한 불안감을 가지고 계신 부모님들이라면 저의 경험을 참고하여 아이와 함께 시도해 보시길 바랍니다. 
+
+ 분명히 학습 효과가 눈에 띄게 달라지는 것을 느끼실 수 있을 겁니다.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>교과서로 어법 잡기</h2>
+      <p>국어 시간에 배운 교과서 지문을 활용해 어법 오류 수정 문제를 직접 만들어 보았습니다. 무조건적인 암기보다는 왜 틀렸는지 스스로 찾아내는 과정이 훨씬 더 중요하다는 생각이 들었습니다. 아이는 익숙한 본문을 변형하면서 문장 구조를 훨씬 더 꼼꼼하게 살피게 되는 변화가 생겼습니다. 
+
+ 잘 쓴 글을 고의로 틀리게 만드는 활동은 문법적 지식을 확실히 잡아주는 아주 훌륭한 훈련이라는 것을 깨달았습니다. 처음에는 엉뚱한 문장을 지어내기도 했지만 점차 핵심적인 부분을 건드리게 되더군요. 
+
+ 이러한 방식은 단순히 문제를 푸는 것을 넘어서 글쓰기 능력까지 향상시켜 주는 효과가 있었습니다. 아이가 직접 출제자가 되어보는 경험은 학습에 대한 흥미를 유발하는 데 제법 탁월한 것 같습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>어법 학습의 구체적 효과</h2>
+      <p>교과서 속 아름다운 문장들을 분해하고 재조립하다 보니 문법 요소가 눈에 들어오기 시작했습니다. 주어와 서술어 호응이나 시제 사용 같은 기본적인 원칙들이 저절로 머리에 남는다는 점이 놀라웠습니다. 아이는 자신이 만든 오류를 친구들에게 내보이며 퀴즈를 내주는 재미를 느끼기도 했습니다. 
+
+ 이 활동을 통해 막연하게만 느껴지던 국어 문법 영역이 아주 구체적인 디딤돌이 되어주었습니다. 학원이나 문제집에 의존하지 않고도 스스로 학습력을 키울 수 있다는 확신이 들었던 계기이기도 합니다. 
+
+ 물론 시간이 조금 걸리는 편이지만 아이가 스스로 생각하고 고민하는 시간을 가져준다는 점에서 꼭 추천하고 싶습니다. 이 과정을 거치고 나서 실제 모의고사에서 어법 문제를 거의 틀리지 않더라는 반가운 소식을 들을 수 있었습니다. 
+
+ 부모로서 참 든든한 공부법이라는 생각이 듭니다.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>함수 문제의 어려움</h2>
+      <p>수학에서 일차함수의 활용 문제는 아이들에게 상당히 높은 진입장벽으로 다가옵니다. 그래프를 그리고 해석하는 것까진 괜찮은데 실생활 상황을 식으로 옮기는 과정에서 많이 헷갈려 하더군요. 저희 아이는 특히 최대값이나 최소값을 구하는 문제에서 정의역 설정을 자주 놓치곤 했습니다. 
+
+ 문제의 지문이 길어지면 집중력을 잃어서 핵심 조건을 파악하지 못하는 경우도 많았습니다. 그래서 저는 아이와 함께 문제 속 상황을 그림이나 표로 정리하는 연습을 우선적으로 진행했습니다. 
+
+ 복잡한 식보다는 문맥을 이해하는 힘을 길러주는 것이 급선무라고 판단했기 때문입니다. 상황을 시각화하고 나니 함수 관계를 파악하는 속도가 눈에 띄게 빨라졌습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>함수 문제 해결 단계</h2>
+      <p>일차함수 문제를 해결할 때 저희가 실천했던 몇 가지 단계들을 정리해 보았습니다. 아이가 가장 어려워하는 부분은 방정식을 세우는 과정이었기 때문에 이를 체계화하는 데 집중했습니다. 단순히 답을 맞히는 것보다 풀이의 흐름을 익히는 것이 무엇보다 중요하다는 생각이 들었습니다. 
+
+ 이 순서를 따르니 아이가 복잡한 문제 앞에서 당황하는 일이 현저히 줄어들었습니다. 차근차근 단계를 밟아나가는 습관이 들으니 실수도 많이 잡을 수 있었습니다. 부모님들도 아이와 함께 이 리스트를 활용해 연습해 보시길 추천합니다.</p>
+      <ul class="blog-list">
+        <li>문제에서 주어진 변수와 상수를 명확히 구분하기</li>
+        <li>상황에 맞는 함수 식을 세우고 그래프 그리기</li>
+        <li>정의역인 값의 범위를 꼼꼼하게 확인하기</li>
+        <li>구한 값이 실제 상황에서 의미하는 바 검토하기</li>
+        <li>오답이 나왔을 경우 계산 과정 단계별 점검하기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>유형별 문제 분석</h2>
+      <p>다양한 유형의 문제를 접해보는 것이 실력 향상에 큰 도움이 된다는 것을 알게 되었습니다. 특히 일차함수 단원에서는 그래프의 해석 능력이 점수를 좌우하는 핵심이라고 할 수 있습니다. 교과서에 나오는 기본 예제만으로는 응용력을 키우는 데 부족함이 많다는 생각이 들었습니다. 
+
+ 그래서 저는 아이의 수준에 맞는 유형별 문제를 분류하여 제공해 주는 방식을 취했습니다. 각기 다른 상황에서 함수가 어떻게 쓰이는지 비교해 보면 이해도가 훨씬 빠르게 올라갑니다. 아래 표는 저희가 활용했던 문제 유형 분석의 예시입니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>정비례 관계</td><td>기본 문제</td><td>값의 변화에 따라 다른 값이 일정한 비율로 증감하는 상황 해석</td></tr>
+        <tr><td>일차함수 그래프</td><td>중급 문제</td><td>기울기와 절편을 이용하여 실제 데이터의 증감 추세 예측하기</td></tr>
+        <tr><td>최대 최소 문제</td><td>심화 문제</td><td>주어진 범위 내에서 함수 값이 가장 크거나 작은 경우 찾아내기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>공부법 적용 후기</h2>
+      <p>국어 어법 훈련과 수학 함수 활용 학습을 병행한 결과 아이의 자신감이 크게 올라갔습니다. 두 과목 모두 단순히 공식을 외우는 것이 아니라 원리를 이해하는 과정이 중요하다는 것을 다시금 확인했습니다. 처음에는 저 또한 이 방법들이 과연 효과가 있을지 의구심이 들었지만 지금은 아주 만족하고 있습니다. 
+
+ 학부모님들도 조금만 시간을 내어 아이와 함께 교과서를 분석해 보시길 권해드립니다. 정답을 맞히는 것보다 과정을 이해하는 아이로 성장하는 것이 훨씬 더 가치 있는 일입니다. 
+
+ 꾸준한 연습만이 정복의 열쇠라는 사실을 잊지 말고 묵묵히해 주시길 바랍니다. 아이의 작은 성장을 발견하는 순간이 분명히 찾아올 것입니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>하루에 얼마나 많은 시간을 투자해야 하나요?</summary>
+            <p class="faq-answer">처음에는 서른 분 정도로 시작하여 아이가 적응하면 시간을 조절해 주시는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>초등학생에게도 이 방법이 적용 가능한가요?</summary>
+            <p class="faq-answer">네, 하지만 문제의 난이도를 아이의 눈높이에 맞춰서 조금 낮춰서 진행해야 합니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>수학을 잘 못하는 부모도 도와줄 수 있을까요?</summary>
+            <p class="faq-answer">정답을 가르쳐주는 것보다 함께 고민해 주는 태도가 중요하며 채점은 정답지를 활용하세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>어법 오류 수정 문제를 만드는 기준이 있나요?</summary>
+            <p class="faq-answer">교과서의 핵심 문법 사항을 중심으로 의도적으로 실수하기 쉬운 부분을 변형하면 됩니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>효과가 보이기까지 얼마나 걸리나요?</summary>
+            <p class="faq-answer">보통 한 달 정도 꾸준히 실천하면 아이의 문제 풀이 속도와 정확도에 변화가 생깁니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

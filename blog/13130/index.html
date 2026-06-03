@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글쓰기 인용과 확률 학습법 | 와카데미 블로그</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="아이와 함께 인용문 넣는 법과 확률 문제를 쉽게 푸는 방법을 공부하며 얻은 노하우를 공유합니다.">
+  <meta name="naver-site-verification" content="9647e71792374da835d98101e078d382dcb93306" />
+
+  <!-- OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="글쓰기 인용과 확률 학습법">
+  <meta property="og:description" content="아이와 함께 인용문 넣는 법과 확률 문제를 쉽게 푸는 방법을 공부하며 얻은 노하우를 공유합니다.">
+  <meta property="og:url" content="https://wacademy.kr/blog/13130/">
+  <meta property="og:site_name" content="와카데미 블로그">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="글쓰기 인용과 확률 학습법">
+  <meta name="twitter:description" content="아이와 함께 인용문 넣는 법과 확률 문제를 쉽게 푸는 방법을 공부하며 얻은 노하우를 공유합니다.">
+  <meta name="twitter:image" content="https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp">
+
+  <link rel="canonical" href="https://wacademy.kr/blog/13130/">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://wacademy.kr/blog/13130/#article",
+    "headline": "글쓰기 인용과 확률 학습법",
+    "description": "아이와 함께 인용문 넣는 법과 확률 문제를 쉽게 푸는 방법을 공부하며 얻은 노하우를 공유합니다.",
+    "image": "https://pub-e19055c2d658486f8fb61a311b37ad94.r2.dev/1773419520_86c9361c.webp",
+    "datePublished": "2025-10-07",
+    "dateModified": "2025-10-07",
+    "inLanguage": "ko-KR",
+    "url": "https://wacademy.kr/blog/13130/",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wacademy.kr/#editorial",
+      "name": "와카데미 편집팀",
+      "url": "https://wacademy.kr/"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wacademy.kr/favicon-180.webp",
+        "width": 180,
+        "height": 180
+      }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://wacademy.kr/blog/#blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://wacademy.kr/blog/13130/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": {"@type": "Thing", "@id": "https://wacademy.kr/"}},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": {"@type": "Thing", "@id": "https://wacademy.kr/blog/"}},
+      {"@type": "ListItem", "position": 3, "name": "글쓰기 인용과 확률 학습법"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://wacademy.kr/#organization",
+    "name": "와카데미",
+    "url": "https://wacademy.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wacademy.kr/favicon-180.webp",
+      "width": 180,
+      "height": 180
+    },
+    "sameAs": [
+      "https://blog.naver.com/sumi3642"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person (편집자) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://wacademy.kr/#editor",
+    "name": "와카데미 편집팀",
+    "url": "https://wacademy.kr/",
+    "jobTitle": "교육 콘텐츠 편집자",
+    "knowsAbout": [
+      "학습코칭", "내신 관리", "수학 학원", "영어 학원", "국어 학원",
+      "초등 교육", "중등 교육", "고등 교육", "개별지도", "공부법"
+    ],
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "@id": "https://wacademy.kr/#organization",
+      "name": "와카데미",
+      "url": "https://wacademy.kr/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type":"Question","name":"인용문을 가르쳐 줄 때 좋은 자료가 있나요","acceptedAnswer":{"@type":"Answer","text":"아이가 좋아하는 동화책이나 신문 기사를 활용하면 효과적입니다."}},
+      {"@type":"Question","name":"확률 문제를 너무 어려워해요 어떻게 해야 하나요","acceptedAnswer":{"@type":"Answer","text":"주사위나 동전 같은 구체적인 사물을 이용해 눈으로 보여주세요."}},
+      {"@type":"Question","name":"학습 시간은 얼마나 잡아야 하나요","acceptedAnswer":{"@type":"Answer","text":"하루에 이십 분 정도 집중해서 하는 것보다 자주 하는 게 좋습니다."}},
+      {"@type":"Question","name":"아이가 실수를 많이 하는데 혼내야 하나요","acceptedAnswer":{"@type":"Answer","text":"혼내기보다는 왜 틀렸는지 함께 찾아보는 것이 좋습니다."}},
+      {"@type":"Question","name":"효과가 바로 나타나지 않아요","acceptedAnswer":{"@type":"Answer","text":"습관을 들이는 데 시간이 걸리니 꾸준히 지켜봐 주세요."}}]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF4714;
+      --gold:   #f5af19;
+      --text:   #1a1a1a;
+      --muted:  #666;
+      --border: #ebebeb;
+      --bg:     #fafafa;
+    }
+
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .site-nav a {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--orange); }
+
+    /* ── 본문 컨테이너 ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── 브레드크럼 ── */
+    .breadcrumb {
+      font-size: .76rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── 아티클 헤더 ── */
+    .article-header { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: #fff5f2;
+      border: 1px solid #ffddd3;
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-meta-desc {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      padding: 16px 20px;
+      background: var(--bg);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* ── 목차 ── */
+    .toc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 44px;
+    }
+    .toc-title {
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-list li { counter-increment: toc-item; }
+    .toc-list a {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc-list a::before {
+      content: counter(toc-item, decimal-leading-zero);
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--orange);
+      opacity: .7;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--orange); }
+    .toc-list { counter-reset: toc-item; }
+
+    /* ── 섹션 공통 ── */
+    .blog-section {
+      margin-bottom: 52px;
+    }
+    .blog-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      word-break: keep-all;
+    }
+    .blog-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .blog-section p {
+      font-size: .97rem;
+      color: #333;
+      line-height: 1.9;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    /* ── 리스트 ── */
+    .blog-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+    .blog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: #222;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      line-height: 1.5;
+    }
+    .blog-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── 테이블 ── */
+    .blog-table-wrap {
+      margin-top: 20px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+    .blog-table thead {
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+    .blog-table thead th {
+      padding: 13px 16px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-align: left;
+      font-size: .8rem;
+    }
+    .blog-table tbody tr:nth-child(odd)  { background: #fff; }
+    .blog-table tbody tr:nth-child(even) { background: var(--bg); }
+    .blog-table tbody tr:last-child td { border-bottom: none; }
+    .blog-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog-table td:first-child {
+      font-weight: 700;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 52px; }
+    .faq-section h2 {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .faq-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      border-radius: 2px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item details[open] {
+      border-color: var(--orange);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .faq-item summary::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 18px 18px 56px;
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+
+    /* ── 푸터 ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .toc { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">와카데미 블로그</a>
+      <nav class="site-nav">
+        <a href="/blog/">글 목록</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="article-wrap">
+
+    <!-- 브레드크럼 -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">블로그</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>글쓰기 인용과 확률 학습법</span>
+    </nav>
+
+    <!-- 아티클 헤더 -->
+    <header class="article-header">
+      <span class="article-tag">WAWA BLOG</span>
+      <h1 class="article-title">글쓰기 인용과 확률 학습법</h1>
+      <p class="article-meta-desc">아이와 함께 인용문 넣는 법과 확률 문제를 쉽게 푸는 방법을 공부하며 얻은 노하우를 공유합니다.</p>
+    </header>
+
+    <!-- 목차 -->
+    <nav class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list">
+        <li><a href="#s1">아이 학습 지도의 어려움</a></li>
+        <li><a href="#s2">보고서에 인용문 넣기</a></li>
+        <li><a href="#s3">인용의 기초 규칙 잡기</a></li>
+        <li><a href="#s4">효과적인 인용 연습법</a></li>
+        <li><a href="#s5">확률 문제 접근 방법</a></li>
+        <li><a href="#s6">확률 유형별 학습 포인트</a></li>
+        <li><a href="#s7">꾸준한 학습의 중요성</a></li>
+        <li><a href="#s8">자주 묻는 질문</a></li>
+      </ol>
+    </nav>
+
+    <!-- 섹션 1 -->
+    <section class="blog-section" id="s1">
+      <h2>아이 학습 지도의 어려움</h2>
+      <p>매일 아이 공부 봐주다 보면 참 힘이 듭니다. 특히 글쓰기랑 수학은 기초가 중요하다는 걸 새삼 느껴요. 자녀가 보고서를 쓸 때 남의 말을 그대로 쓰는걸 보고 걱정이 많았죠. 확률 문제도 주사위 던지는 걸 너무 복잡하게 생각하더라고요. 
+
+ 그래서 저부터 공부를 시작했습니다. 인용문 넣는 법이랑 간단한 확률 문제 풀이법을 익혔어요. 그걸 아이에게 알려주니까 눈이 돌아가더라고요. 이제는 차근차근 따라오고 있어요. 다른 분들도 이런 고민 하실 것 같아서 정보 공유해요.</p>
+      
+    </section>
+
+    <!-- 섹션 2 -->
+    <section class="blog-section" id="s2">
+      <h2>보고서에 인용문 넣기</h2>
+      <p>글을 쓸 때 타인의 말을 빌려오는 것은 설득력을 높여줍니다. 우리 아이는 처음에 그냥 베끼기만 하더군요. 그래서 출처를 밝히는 법부터 차근차근 알려주었습니다. 
+
+ 좋아하는 동화책 내용을 가지고 연습을 시작했습니다. 큰따옴표와 작은따옴표의 차이를 설명해주니 이해가 빨랐습니다. 이제는 자신의 글에 적절한 말을 잘 녹여내고 있습니다.</p>
+      
+    </section>
+
+    <!-- 섹션 3 -->
+    <section class="blog-section" id="s3">
+      <h2>인용의 기초 규칙 잡기</h2>
+      <p>짧은 문장은 줄표를 사용하고 긴 문장은 문단을 나누어 쓰는 것이 원칙입니다. 처음에는 복잡해 보이지만 예문을 보여주면 쉽게 적응합니다. 저희 집에서는 신문 기사를 오려다 붙이며 연습했습니다. 
+
+ 마침표와 쉼표가 인용 부호 뒤에 오는지 앞에 오는지 확인하는 과정도 중요합니다. 아이가 규칙을 틀릴 때마다 즉시 고쳐주었습니다. 반복 학습 덕분에 실수가 현저히 줄어들었습니다. 이제 아이는 교과서 내용을 요약하며 인용을 멋지게 활용합니다. 
+
+ 스스로 노력한 결과물을 보며 뿌듯해하는 모습이 참 보기 좋습니다. 부모가 조금만 신경 쓰면 자녀의 작문 실력은 확실히 향상됩니다. 특히 논리적인 글을 쓰는 데 큰 도움이 된다고 합니다. 저희 아이는 국어 시험 성적도 올라갔어요.</p>
+      
+    </section>
+
+    <!-- 섹션 4 -->
+    <section class="blog-section" id="s4">
+      <h2>효과적인 인용 연습법</h2>
+      <p>독서를 할 때 인상 깊은 문장을 밑줄 쳐보는 활동을 추천합니다. 그 문장이 왜 마음에 드는지 이야기를 나누면 좋습니다. 그리고 나서 그대로 옮겨 적으며 출처를 적어보세요. 
+
+ 이 과정은 비판적 사고를 길러주는 데도 탁월합니다. 아이가 글의 주제에 맞는 적절한 근거를 찾게 됩니다. 저희 아이는 이제 블로그나 책을 보며 필요한 정보를 습득합니다.</p>
+      
+    </section>
+
+    <!-- 섹션 5 -->
+    <section class="blog-section" id="s5">
+      <h2>확률 문제 접근 방법</h2>
+      <p>확률은 추상적인 개념이라 아이들이 어려워할 수 있습니다. 생활 속 사례를 들어주면 이해가 빠릅니다. 주사위나 카드 놀이를 활용해 보세요. 저는 아이가 문제를 풀 때 다음 단계를 밟도록 지도합니다. 
+
+ 이렇게 단계를 나누니 아이가 두려워하지 않고 문제에 도전합니다.</p>
+      <ul class="blog-list">
+        <li>문제에서 구하고자 하는 것 찾기</li>
+        <li>전체 경우의 수를 모두 나열하기</li>
+        <li>원하는 사건의 수를 세어보기</li>
+        <li>분수로 식을 세워 계산하기</li>
+        <li>최종 답이 말이 되는지 다시 읽어보기</li>
+      </ul>
+    </section>
+
+    <!-- 섹션 6 -->
+    <section class="blog-section" id="s6">
+      <h2>확률 유형별 학습 포인트</h2>
+      <p>문제의 유형에 따라 접근 방식이 달라져야 합니다. 단순한 사건과 복합 사건을 구분하는 것이 중요합니다. 도표를 그리면 눈에 확 들어옵니다. 저희는 각기 다른 도구를 활용한 학습표를 만들었습니다. 
+
+ 이를 통해 아이는 상황에 맞는 공식을 찾을 수 있게 되었습니다. 수학 공부가 게임처럼 재미있어졌습니다. 부모님도 함께 참여하면 효과가 더 큽니다.</p>
+      <div class="blog-table-wrap">
+        <table class="blog-table">
+          <thead><tr><th>구분</th><th>대상</th><th>내용</th></tr></thead>
+          <tbody>
+        <tr><td>주사위 놀이</td><td>저학년 자녀</td><td>눈의 수를 세며 전체 경우 파악</td></tr>
+        <tr><td>동전 던지기</td><td>중학년 자녀</td><td>앞뒷면 확률을 구하며 기초 다지기</td></tr>
+        <tr><td>로또 번호</td><td>고학년 자녀</td><td>낮은 확률을 이해하고 통계적 사고 배우기</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 7 -->
+    <section class="blog-section" id="s7">
+      <h2>꾸준한 학습의 중요성</h2>
+      <p>글쓰기와 수학은 하루아침에 실력이 늘지 않습니다. 조급해하지 말고 아이의 속도에 맞춰가세요. 작은 진전도 칭찬해 주는 것이 중요합니다. 저희 아이는 이제 학습 숙제를 스스로 해냅니다. 
+
+ 올바른 습관이 들어서 기쁜 마음입니다. 부모의 관심은 자녀에게 가장 큰 동기부여가 됩니다. 오늘부터 아이와 함께 책상에 앉아보시길 바랍니다.</p>
+      
+    </section>
+
+    <!-- 섹션 8 - FAQ -->
+    <section class="faq-section" id="s8">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+                <div class="faq-item">
+          <details>
+            <summary>인용문을 가르쳐 줄 때 좋은 자료가 있나요</summary>
+            <p class="faq-answer">아이가 좋아하는 동화책이나 신문 기사를 활용하면 효과적입니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>확률 문제를 너무 어려워해요 어떻게 해야 하나요</summary>
+            <p class="faq-answer">주사위나 동전 같은 구체적인 사물을 이용해 눈으로 보여주세요.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>학습 시간은 얼마나 잡아야 하나요</summary>
+            <p class="faq-answer">하루에 이십 분 정도 집중해서 하는 것보다 자주 하는 게 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>아이가 실수를 많이 하는데 혼내야 하나요</summary>
+            <p class="faq-answer">혼내기보다는 왜 틀렸는지 함께 찾아보는 것이 좋습니다.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>효과가 바로 나타나지 않아요</summary>
+            <p class="faq-answer">습관을 들이는 데 시간이 걸리니 꾸준히 지켜봐 주세요.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>&copy; 2025 WAWA ACADEMY. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
