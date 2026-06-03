@@ -1289,15 +1289,30 @@ function curSwitch(btn, id) {
   var cachedIP = {};
   var ipResolved = false;
   function onIPReady(){ ipResolved = true; if(initSent) sendUpdateIP(); }
-  fetch('https://ipv4.ipapi.co/json/')
-    .then(function(r){ return r.json(); })
-    .then(function(ip){ cachedIP = ip; onIPReady(); })
-    .catch(function(){
-      fetch('https://ipapi.co/json/')
-        .then(function(r){ return r.json(); })
-        .then(function(ip){ cachedIP = ip; onIPReady(); })
-        .catch(function(){});
-    });
+  function _tryIP(apis){
+    if(!apis.length) return;
+    fetch(apis[0])
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(!d.ip && !d.query) throw new Error('no ip');
+        cachedIP = {
+          ip:           d.ip   || d.query || '',
+          org:          d.org  || d.isp   || '',
+          city:         d.city || '',
+          region:       d.region || d.regionName || '',
+          country_name: d.country_name || d.country || ''
+        };
+        onIPReady();
+      })
+      .catch(function(){ _tryIP(apis.slice(1)); });
+  }
+  _tryIP([
+    'https://ipv4.ipapi.co/json/',
+    'https://ipapi.co/json/',
+    'https://ip-api.com/json/?fields=query,org,city,region,country',
+    'https://ipinfo.io/json',
+    'https://api.ipify.org?format=json'
+  ]);
 
   // referrer로 dyn-kw 업데이트 (n_query 없을 때만)
   if(!new URLSearchParams(location.search).get('n_query')){
