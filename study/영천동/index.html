@@ -1287,31 +1287,33 @@ function curSwitch(btn, id) {
 
   // IP 캐싱
   var cachedIP = {};
-  var ipResolved = false;
-  function onIPReady(){ ipResolved = true; if(initSent) sendUpdateIP(); }
-  function _tryIP(apis){
-    if(!apis.length) return;
-    fetch(apis[0])
-      .then(function(r){ return r.json(); })
-      .then(function(d){
-        if(!d.ip && !d.query) throw new Error('no ip');
-        cachedIP = {
-          ip:           d.ip   || d.query || '',
-          org:          d.org  || d.isp   || '',
-          city:         d.city || '',
-          region:       d.region || d.regionName || '',
-          country_name: d.country_name || d.country || ''
-        };
-        onIPReady();
-      })
-      .catch(function(){ _tryIP(apis.slice(1)); });
-  }
-  _tryIP([
-    'https://ipv4.ipapi.co/json/',
-    'https://ipapi.co/json/',
-    'https://ip-api.com/json/?fields=query,org,city,region,country',
-    'https://ipinfo.io/json',
-    'https://api.ipify.org?format=json'
+  var _ipPromise = Promise.race([
+    new Promise(function(resolveIP){
+      function _tryIP(apis){
+        if(!apis.length){ resolveIP({}); return; }
+        fetch(apis[0])
+          .then(function(r){ return r.json(); })
+          .then(function(d){
+            if(!d.ip && !d.query) throw new Error('no ip');
+            resolveIP({
+              ip:           d.ip   || d.query || '',
+              org:          d.org  || d.isp   || '',
+              city:         d.city || '',
+              region:       d.region || d.regionName || '',
+              country_name: d.country_name || d.country || ''
+            });
+          })
+          .catch(function(){ _tryIP(apis.slice(1)); });
+      }
+      _tryIP([
+        'https://ipv4.ipapi.co/json/',
+        'https://ipapi.co/json/',
+        'https://ip-api.com/json/?fields=query,org,city,region,country',
+        'https://ipinfo.io/json',
+        'https://api.ipify.org?format=json'
+      ]);
+    }),
+    new Promise(function(resolve){ setTimeout(function(){ resolve({}); }, 15000); })
   ]);
 
   // referrer로 dyn-kw 업데이트 (n_query 없을 때만)
@@ -1350,22 +1352,6 @@ function curSwitch(btn, id) {
     var body = JSON.stringify(data);
     if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
     else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
-    if(ipResolved) sendUpdateIP();
-  }
-
-  function sendUpdateIP(){
-    var data = {
-      type:    'update_ip',
-      sid:     sid,
-      ip:      cachedIP.ip          || '',
-      isp:     cachedIP.org         || '',
-      city:    cachedIP.city        || '',
-      region:  cachedIP.region      || '',
-      country: cachedIP.country_name|| ''
-    };
-    var body = JSON.stringify(data);
-    if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
-    else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
   }
 
   // 2단계: 행동 데이터 전송 (pagehide)
@@ -1394,10 +1380,19 @@ function curSwitch(btn, id) {
     }
   }
 
-  getWebRTC(function(webrtcIP){ sendInit(webrtcIP); });
+  Promise.all([
+    new Promise(function(resolve){ getWebRTC(resolve); }),
+    _ipPromise
+  ]).then(function(res){
+    cachedIP = res[1];
+    sendInit(res[0]);
+  });
   window.addEventListener('pagehide', function(){
     if(!initSent) sendInit('');
     sendExit();
+  });
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'hidden') sendExit();
   });
 
 })();
