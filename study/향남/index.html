@@ -1287,13 +1287,15 @@ function curSwitch(btn, id) {
 
   // IP 캐싱
   var cachedIP = {};
+  var ipResolved = false;
+  function onIPReady(){ ipResolved = true; if(initSent) sendUpdateIP(); }
   fetch('https://ipv4.ipapi.co/json/')
     .then(function(r){ return r.json(); })
-    .then(function(ip){ cachedIP = ip; })
+    .then(function(ip){ cachedIP = ip; onIPReady(); })
     .catch(function(){
       fetch('https://ipapi.co/json/')
         .then(function(r){ return r.json(); })
-        .then(function(ip){ cachedIP = ip; })
+        .then(function(ip){ cachedIP = ip; onIPReady(); })
         .catch(function(){});
     });
 
@@ -1333,6 +1335,22 @@ function curSwitch(btn, id) {
     var body = JSON.stringify(data);
     if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
     else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
+    if(ipResolved) sendUpdateIP();
+  }
+
+  function sendUpdateIP(){
+    var data = {
+      type:    'update_ip',
+      sid:     sid,
+      ip:      cachedIP.ip          || '',
+      isp:     cachedIP.org         || '',
+      city:    cachedIP.city        || '',
+      region:  cachedIP.region      || '',
+      country: cachedIP.country_name|| ''
+    };
+    var body = JSON.stringify(data);
+    if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
+    else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
   }
 
   // 2단계: 행동 데이터 전송 (pagehide)
@@ -1361,7 +1379,7 @@ function curSwitch(btn, id) {
     }
   }
 
-  setTimeout(function(){ getWebRTC(sendInit); }, 2000);
+  getWebRTC(function(webrtcIP){ sendInit(webrtcIP); });
   window.addEventListener('pagehide', function(){
     if(!initSent) sendInit('');
     sendExit();
