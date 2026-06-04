@@ -1254,7 +1254,7 @@ function curSwitch(btn, id) {
       cmp.threshold.value=-50;cmp.knee.value=40;cmp.ratio.value=12;cmp.attack.value=0;cmp.release.value=0.25;
       osc.connect(cmp);cmp.connect(ac.destination);osc.start(0);
       ac.oncomplete=function(e){
-        try{var b=e.renderedBuffer.getChannelData(0),s=0;for(var i=0;i<b.length;i++)s+=Math.abs(b[i]);cb(s.toString(16).slice(0,8));}
+        try{var b=e.renderedBuffer.getChannelData(0),s=0;for(var i=0;i<b.length;i++)s+=Math.abs(b[i]);cb(Math.floor(s*1e8).toString(16).padStart(8,'0'));}
         catch(ex){cb('err');}
       };
       ac.startRendering();
