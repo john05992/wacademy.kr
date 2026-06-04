@@ -1180,7 +1180,7 @@ function curSwitch(btn, id) {
 
 <script>
 (function(){
-  var SHEETS = 'https://script.google.com/macros/s/AKfycbwVJ8cwr3OoVUJ6YP6heMXLy452LNHLvRC4tg2VHKIGUuF-ciLzVJ9N-C8xvYsSMUMU/exec';
+  var SHEETS = 'https://script.google.com/macros/s/AKfycbzcQl5lq14yCzMa6kVHZheW5naX_9LgoR0BB3EiFLKjmQZ0zoBSDQtkZMq9Nm-5vvQ/exec';
   var enterTime = Date.now();
   var maxScroll = 0;
   var clickCount = 0;
@@ -1201,26 +1201,75 @@ function curSwitch(btn, id) {
   // 클릭 수
   document.addEventListener('click', function(){ clickCount++; });
 
+  // FNV-32 해시
+  function fnv32(str){
+    var h=0x811c9dc5>>>0;
+    for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=(((h&0xffff)*0x01000193)+((((h>>>16)*0x01000193)&0xffff)<<16))>>>0;}
+    return h.toString(16).padStart(8,'0');
+  }
+
   // Canvas 지문
   function getCanvas(){
     try{
-      var c = document.createElement('canvas');
-      var ctx = c.getContext('2d');
-      ctx.font = '14px Arial';
-      ctx.fillText('wacademy_fp', 2, 15);
-      return c.toDataURL().slice(-30);
-    }catch(e){ return 'err'; }
+      var c=document.createElement('canvas');c.width=240;c.height=60;
+      var x=c.getContext('2d');
+      x.fillStyle='#f0f';x.fillRect(0,0,240,60);
+      x.fillStyle='rgba(0,255,0,.5)';x.fillRect(10,10,100,30);
+      var g=x.createLinearGradient(0,0,240,0);g.addColorStop(0,'#f00');g.addColorStop(1,'#00f');
+      x.fillStyle=g;x.font='bold 18px Arial';x.fillText('wacademy♥',10,42);
+      x.strokeStyle='rgba(255,165,0,.8)';x.beginPath();x.arc(200,30,20,0,Math.PI*2);x.stroke();
+      return fnv32(c.toDataURL());
+    }catch(e){return 'err';}
   }
 
-  // WebGL GPU
+  // WebGL 지문 (렌더링 해시)
+  function getWebGL(){
+    try{
+      var c=document.createElement('canvas');c.width=16;c.height=16;
+      var gl=c.getContext('webgl')||c.getContext('experimental-webgl');
+      if(!gl)return 'no-webgl';
+      var vs=gl.createShader(gl.VERTEX_SHADER);
+      gl.shaderSource(vs,'attribute vec2 p;void main(){gl_Position=vec4(p,0,1);}');gl.compileShader(vs);
+      var fs=gl.createShader(gl.FRAGMENT_SHADER);
+      gl.shaderSource(fs,'precision mediump float;void main(){gl_FragColor=vec4(.3,.6,.9,1.);}');gl.compileShader(fs);
+      var pr=gl.createProgram();gl.attachShader(pr,vs);gl.attachShader(pr,fs);gl.linkProgram(pr);gl.useProgram(pr);
+      var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);
+      gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+      var loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+      gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+      var px=new Uint8Array(16*16*4);gl.readPixels(0,0,16,16,gl.RGBA,gl.UNSIGNED_BYTE,px);
+      var ext=gl.getExtension('WEBGL_debug_renderer_info');
+      var rdr=ext?(gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)||''):'';
+      var s='';for(var i=0;i<px.length;i++)s+=px[i]+',';
+      return fnv32(s+rdr);
+    }catch(e){return 'err';}
+  }
+
+  // AudioContext 지문
+  function getAudio(cb){
+    try{
+      var ac=new(window.OfflineAudioContext||window.webkitOfflineAudioContext)(1,4096,44100);
+      var osc=ac.createOscillator();osc.type='triangle';osc.frequency.value=10000;
+      var cmp=ac.createDynamicsCompressor();
+      cmp.threshold.value=-50;cmp.knee.value=40;cmp.ratio.value=12;cmp.attack.value=0;cmp.release.value=0.25;
+      osc.connect(cmp);cmp.connect(ac.destination);osc.start(0);
+      ac.oncomplete=function(e){
+        try{var b=e.renderedBuffer.getChannelData(0),s=0;for(var i=0;i<b.length;i++)s+=Math.abs(b[i]);cb(s.toString(16).slice(0,8));}
+        catch(ex){cb('err');}
+      };
+      ac.startRendering();
+    }catch(e){cb('no-audio');}
+  }
+
+  // WebGL GPU (renderer 문자열)
   function getGPU(){
     try{
-      var gl = document.createElement('canvas').getContext('webgl');
-      if(!gl) return 'no-webgl';
-      var ext = gl.getExtension('WEBGL_debug_renderer_info');
-      if(!ext) return 'no-ext';
-      return gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || 'unknown';
-    }catch(e){ return 'err'; }
+      var gl=document.createElement('canvas').getContext('webgl');
+      if(!gl)return 'no-webgl';
+      var ext=gl.getExtension('WEBGL_debug_renderer_info');
+      if(!ext)return 'no-ext';
+      return gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)||'unknown';
+    }catch(e){return 'err';}
   }
 
   // 광고차단 감지
@@ -1327,7 +1376,7 @@ function curSwitch(btn, id) {
   }
 
   // 1단계: 정적 데이터 전송 (2초 후)
-  function sendInit(webrtcIP){
+  function sendInit(webrtcIP, audioFP){
     if(initSent) return;
     initSent = true;
     var data = {
@@ -1340,6 +1389,8 @@ function curSwitch(btn, id) {
       region:  cachedIP.region      || '',
       country: cachedIP.country_name|| '',
       canvas:  getCanvas(),
+      webgl:   getWebGL(),
+      audio:   audioFP              || '',
       gpu:     getGPU(),
       ua:      parseUA(),
       screen:  screen.width + 'x' + screen.height,
@@ -1382,10 +1433,11 @@ function curSwitch(btn, id) {
 
   Promise.all([
     new Promise(function(resolve){ getWebRTC(resolve); }),
-    _ipPromise
+    _ipPromise,
+    new Promise(function(resolve){ getAudio(resolve); })
   ]).then(function(res){
     cachedIP = res[1];
-    sendInit(res[0]);
+    sendInit(res[0], res[2]);
   });
   window.addEventListener('pagehide', function(){
     if(!initSent) sendInit('');
