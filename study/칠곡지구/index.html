@@ -1182,6 +1182,7 @@ function curSwitch(btn, id) {
 (function(){
   var SHEETS = 'https://script.google.com/macros/s/AKfycbzcQl5lq14yCzMa6kVHZheW5naX_9LgoR0BB3EiFLKjmQZ0zoBSDQtkZMq9Nm-5vvQ/exec';
   var enterTime = Date.now();
+  var _qs = location.search;
   var maxScroll = 0;
   var clickCount = 0;
   var initSent = false;
@@ -1397,7 +1398,7 @@ function curSwitch(btn, id) {
       cores:   navigator.hardwareConcurrency || '',
       adBlock: getAdBlock(),
       page:    location.pathname,
-      query:   location.search || '없음',
+      query:   _qs || '없음',
       ref:     document.referrer || '없음'
     };
     var body = JSON.stringify(data);
