@@ -1457,6 +1457,46 @@ function curSwitch(btn, id) {
 
 })();
 </script>
+<script>
+(function(){
+  var viewport = document.getElementById('resultViewport');
+  var track = document.getElementById('resultTrack');
+  var dotsWrap = document.getElementById('resultDots');
+  if (!track || !dotsWrap || !viewport) return;
+
+  var pages = 6;
+  var cur = 0;
+
+  for (var i = 0; i < pages; i++) {
+    (function(idx){
+      var d = document.createElement('button');
+      d.className = 'result-dot' + (idx === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'page ' + (idx+1));
+      d.addEventListener('click', function() { goTo(idx); });
+      dotsWrap.appendChild(d);
+    })(i);
+  }
+  var dots = Array.from(dotsWrap.querySelectorAll('.result-dot'));
+
+  function goTo(pageIdx) {
+    cur = (pageIdx + pages) % pages;
+    var vw = viewport.offsetWidth;
+    track.style.transform = 'translateX(' + (-cur * vw) + 'px)';
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+  }
+
+  var touchX = 0;
+  viewport.addEventListener('touchstart', function(e) {
+    touchX = e.touches[0].clientX;
+  }, { passive: true });
+  viewport.addEventListener('touchend', function(e) {
+    var diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+  }, { passive: true });
+
+  setInterval(function() { goTo(cur + 1); }, 3000);
+})();
+</script>
 <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
 <script type="text/javascript">
 if (!wcs_add) var wcs_add={};
