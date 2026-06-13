@@ -1,0 +1,12 @@
+name = "wacademy-guard"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+[[kv_namespaces]]
+binding = "GUARD_KV"
+id     = "684d8a18834d4c1d81c1ecfd8aca00fe"
+
+# Worker를 연결할 도메인 라우트
+[[routes]]
+pattern = "wacademy.kr/*"
+zone_name = "wacademy.kr"
