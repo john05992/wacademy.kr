@@ -19,7 +19,7 @@
     .then(function(r){return r.text();})
     .then(function(html){
       var loc='장기동';var photo='대구 달서구 장기동';var m1='['+'\uC9C0\uC5ED\uD0A4\uC6CC\uB4DC'+']';var m2='['+'\uC704\uCE58\uC0AC\uC9C4\uBA85'+']';html=html.split(m1).join(loc).split(m2).join(photo);
-      if(/와와/.test(kw)){var cm=html.match(/<section[^>]*id="consult"[^>]*>[\s\S]*?<\/section>/);if(cm){var ch='<div id="wawa-hero"><style>#wawa-hero{padding:100px 20px 56px;text-align:center}#wawa-hero .c3-section{background:transparent!important;padding:0}#wawa-hero .c3-img{display:none}#wawa-hero .c3-num{color:#fff!important}#wawa-ttl{font-size:26px;font-weight:800;color:#fff;margin:0 0 20px;line-height:1.4}</style><p id="wawa-ttl">'+loc+' 와와학원</p>'+cm[0]+'</div>';html=html.replace(/<body[^>]*>/,function(m){return m+ch;});}}
+      if(/와와/.test(kw)){var cm=html.match(/<section[^>]*id="consult"[^>]*>[\s\S]*?<\/section>/);if(cm){var ch='<div id="wawa-hero"><style>#wawa-hero{padding:100px 20px 56px;text-align:center}#wawa-hero .c3-section{background:transparent!important;padding:0}#wawa-hero .c3-img{display:none}#wawa-hero .c3-warn{color:#111!important}#wawa-hero .c3-num{background:linear-gradient(90deg,#FF4714,#f5af19)!important;color:#fff!important}#wawa-ttl{font-size:26px;font-weight:800;color:#fff;margin:0 0 20px;line-height:1.4}</style><p id="wawa-ttl">'+loc+' 와와학원</p>'+cm[0]+'</div>';html=html.replace(/<body[^>]*>/,function(m){return m+ch;});}}
       document.open();document.write(html);document.close();
     })
     .catch(function(){if(s)s.remove();});
