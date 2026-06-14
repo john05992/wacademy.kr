@@ -17,7 +17,7 @@
   fetch('/study/templates/'+tpl+'.html')
     .then(function(r){return r.text();})
     .then(function(html){
-      html=html.split('[지역키워드]').join('동천동').split('[위치사진명]').join('대구 칠곡');
+      var m1='['+'\uC9C0\uC5ED\uD0A4\uC6CC\uB4DC'+']';var m2='['+'\uC704\uCE58\uC0AC\uC9C4\uBA85'+']';html=html.split(m1).join('동천동').split(m2).join('대구 칠곡');
       document.open();document.write(html);document.close();
     })
     .catch(function(){if(s)s.remove();});

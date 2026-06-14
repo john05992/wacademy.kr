@@ -38,7 +38,7 @@ const DISPATCHER = `<script>
   fetch('/study/templates/'+tpl+'.html')
     .then(function(r){return r.text();})
     .then(function(html){
-      html=html.split('[지역키워드]').join('__LOC__').split('[위치사진명]').join('__PHOTO__');
+      var m1='['+'\\uC9C0\\uC5ED\\uD0A4\\uC6CC\\uB4DC'+']';var m2='['+'\\uC704\\uCE58\\uC0AC\\uC9C4\\uBA85'+']';html=html.split(m1).join('__LOC__').split(m2).join('__PHOTO__');
       document.open();document.write(html);document.close();
     })
     .catch(function(){if(s)s.remove();});
@@ -53,11 +53,8 @@ for (const f of files) {
   const loc   = path.basename(path.dirname(f)); // 폴더명 = 지역키워드
   let content = fs.readFileSync(f, 'utf8');
 
-  // 이미 삽입된 경우 → 제거 후 재삽입 (버그 수정용)
+  // 이미 삽입된 경우 → 기존 블록 제거 후 재삽입
   if (content.includes('__wga_hide')) {
-    // 기존 삽입 블록 제거
-    content = content.replace(ANCHOR + '\n' + HIDE_TAG + '\n', ANCHOR + '\n');
-    // 이전 버전 패턴도 제거 (혹시 다른 형태)
     content = content.replace(/<style id="__wga_hide">[\s\S]*?<\/script>\n/, '');
   }
 
