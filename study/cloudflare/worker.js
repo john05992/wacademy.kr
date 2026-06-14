@@ -25,17 +25,7 @@ var TRACKING_JS = `(function(){
   var cachedIP={};
   var _ipPromise=Promise.race([new Promise(function(resolveIP){function _tryIP(apis){if(!apis.length){resolveIP({});return;}fetch(apis[0]).then(function(r){return r.json();}).then(function(d){if(!d.ip&&!d.query)throw new Error('no ip');resolveIP({ip:d.ip||d.query||'',org:d.org||d.isp||'',city:d.city||'',region:d.region||d.regionName||'',country_name:d.country_name||d.country||''});}).catch(function(){_tryIP(apis.slice(1));});}_tryIP(['https://ipv4.ipapi.co/json/','https://ipapi.co/json/','https://ip-api.com/json/?fields=query,org,city,region,country','https://ipinfo.io/json','https://api.ipify.org?format=json']);}),new Promise(function(resolve){setTimeout(function(){resolve({});},15000);})]);
   if(!new URLSearchParams(location.search).get('n_query')){var refQ=getRefQuery();if(refQ){document.querySelectorAll('.dyn-kw').forEach(function(el){el.textContent=refQ;});}}
-  function showBlock(n,ip){
-  var el=document.getElementById('__wga_block');
-  if(el)return;
-  var d=document.createElement('div');
-  d.id='__wga_block';
-  d.style.cssText='position:fixed;inset:0;z-index:2147483647;overflow:auto;background:#fff';
-  var h='<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}.__wga{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:40px 20px;background:#fff}.__wga_c{max-width:520px;width:100%;border:1px solid #e0e0e0;border-top:4px solid #e53935;border-radius:12px;padding:40px 32px;background:#fff}.__wga_badge{display:inline-block;background:#e53935;color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:99px;margin-bottom:24px}.__wga h1{font-size:22px;font-weight:800;color:#111;line-height:1.5;margin-bottom:16px;word-break:keep-all}.__wga_sub{font-size:14px;color:#555;line-height:1.8;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #eee;word-break:keep-all}.__wga_sub strong{color:#e53935;font-weight:700}.__wga_box{background:#fafafa;border:1px solid #e0e0e0;border-left:3px solid #e53935;border-radius:6px;padding:18px 20px;font-size:13px;line-height:1.9;color:#444;word-break:keep-all}.__wga_box b{color:#111}.__wga_ft{margin-top:24px;font-size:11px;color:#bbb;text-align:center}</style><div class="__wga"><div class="__wga_c"><span class="__wga_badge">ACCESS BLOCKED</span><h1>비정상적인 중복 접속이<br>감지되어 차단되었습니다</h1><p class="__wga_sub">현재까지 <strong>'+n+'회</strong>의 중복 접속이 기록되었습니다.<br>접속 IP 및 환경 정보가 자동으로 수집·보존되었습니다.</p><div class="__wga_box"><b>※ 법적 고지</b><br>부정클릭 및 반복 접속 행위는 <b>정보통신망법</b> 및 <b>형법상 업무방해죄</b>에 해당할 수 있으며, 현재 관련 건에 대해 <b>경찰 수사가 진행 중</b>입니다.<br><br>추가 접속 시 수집된 모든 자료(접속 로그, 위치 정보 등)를 수사기관에 제출하며, <b>민·형사상 책임</b>을 질 수 있음을 알립니다.</div><p class="__wga_ft">본 페이지는 자동으로 생성된 보안 안내문입니다.</p></div></div>';
-  d.innerHTML=h;
-  document.body.appendChild(d);
-}
-function sendInit(webrtcIP,audioFP){if(initSent)return;initSent=true;var cv=getCanvas();var data={type:'init',sid:sid,ip:cachedIP.ip||'',webrtcIP:webrtcIP||'',isp:cachedIP.org||'',city:cachedIP.city||'',region:cachedIP.region||'',country:cachedIP.country_name||'',canvas:cv,webgl:getWebGL(),audio:audioFP||'',gpu:getGPU(),ua:parseUA(),screen:screen.width+'x'+screen.height,cores:navigator.hardwareConcurrency||'',adBlock:getAdBlock(),page:location.pathname,query:_qs||'\uC5C6\uC74C',ref:document.referrer||'\uC5C6\uC74C'};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}fetch('/_fp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({c:cv})}).then(function(r){return r.json();}).then(function(d){if(d.blocked)showBlock(d.count,cachedIP.ip||'');}).catch(function(){});}
+  function sendInit(webrtcIP,audioFP){if(initSent)return;initSent=true;var cv=getCanvas();var data={type:'init',sid:sid,ip:cachedIP.ip||'',webrtcIP:webrtcIP||'',isp:cachedIP.org||'',city:cachedIP.city||'',region:cachedIP.region||'',country:cachedIP.country_name||'',canvas:cv,webgl:getWebGL(),audio:audioFP||'',gpu:getGPU(),ua:parseUA(),screen:screen.width+'x'+screen.height,cores:navigator.hardwareConcurrency||'',adBlock:getAdBlock(),page:location.pathname,query:_qs||'\uC5C6\uC74C',ref:document.referrer||'\uC5C6\uC74C'};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}navigator.sendBeacon('/_fp',JSON.stringify({c:cv}));}
   function sendExit(){if(exitSent)return;exitSent=true;var data={type:'exit',sid:sid,stayTime:Math.round((Date.now()-enterTime)/1000)+'s',scrollDepth:maxScroll+'%',clickCount:clickCount};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}}
   var pts=document.querySelectorAll('h2.planner-title');for(var i=0;i<pts.length;i++){if(pts[i].textContent.indexOf('\uC640\uC640\uD559\uC6D0')!==-1){var now2=new Date();pts[i].innerHTML='\uC77C\uB300\uC77C\uBC18 \uC548\uB0B4<br><em>'+(now2.getMonth()+1)+'/'+now2.getDate()+'\uAE4C\uC9C0 \uBAA8\uC9D1</em>';break;}}
   Promise.all([new Promise(function(resolve){getWebRTC(resolve);}),_ipPromise,new Promise(function(resolve){getAudio(resolve);})]).then(function(res){cachedIP=res[1];sendInit(res[0],res[2]);});
@@ -65,6 +55,10 @@ var worker_default = {
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: corsHeaders() });
     }
+    const fetchDest = request.headers.get("Sec-Fetch-Dest") || "";
+    if (fetchDest === "empty") {
+      return fetch(request);
+    }
     const BYPASS_KEY = "john0599";
     const cookie = parseCookie(request.headers.get("Cookie") || "");
     if (url.searchParams.get("pw") === BYPASS_KEY || cookie["_adm"] === BYPASS_KEY) {
@@ -74,18 +68,28 @@ var worker_default = {
       newRes.headers.append("Set-Cookie", `_adm=${BYPASS_KEY}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`);
       return newRes;
     }
-
+    const ipCount = await incrementCount(env, "ip:" + ip);
+    if (ipCount >= BLOCK_AT) return blockPage(ipCount);
+    const fpKey = cookie["_s"];
+    if (fpKey) {
+      const fpCount = await getCount(env, "fp:" + fpKey);
+      if (fpCount >= BLOCK_AT) return blockPage(fpCount);
+    }
     const originRes = await fetch(request);
     const contentType = originRes.headers.get("Content-Type") || "";
     if (contentType.includes("text/html")) {
+      const makeHeaders = (base) => {
+        const h = new Headers(base);
+        h.set("Cache-Control", "no-store, no-cache, must-revalidate");
+        h.set("Pragma", "no-cache");
+        return h;
+      };
+      if (url.searchParams.get("n_query")) {
+        return new Response(originRes.body, { status: originRes.status, headers: makeHeaders(originRes.headers) });
+      }
       return new HTMLRewriter().on("body", new ScriptInjector()).transform(new Response(originRes.body, {
         status: originRes.status,
-        headers: (() => {
-          const h = new Headers(originRes.headers);
-          h.set("Cache-Control", "no-store, no-cache, must-revalidate");
-          h.set("Pragma", "no-cache");
-          return h;
-        })()
+        headers: makeHeaders(originRes.headers)
       }));
     }
     return originRes;
@@ -106,14 +110,14 @@ async function handleFP(request, env, ip) {
   try {
     const data = await request.json();
     const fp = data.c || "";
-    if (!fp) return new Response(JSON.stringify({blocked:false,count:0}), {status:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"}});
-    const fpCount = await incrementCount(env, "fp:" + fp);
-    const ipCount = await incrementCount(env, "ip:" + ip);
-    const count = Math.max(fpCount, ipCount);
-    const blocked = count >= BLOCK_AT;
-    return new Response(JSON.stringify({blocked, count}), {status:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"}});
+    if (!fp) return new Response(JSON.stringify({count:0}), { status: 200, headers: { ...corsHeaders(), "Content-Type": "application/json" } });
+    const count = await incrementCount(env, "fp:" + fp);
+    const h = new Headers(corsHeaders());
+    h.set("Content-Type", "application/json");
+    h.append("Set-Cookie", `_s=${fp}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`);
+    return new Response(JSON.stringify({count}), { status: 200, headers: h });
   } catch (e) {
-    return new Response(JSON.stringify({blocked:false,count:0}), {status:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"}});
+    return new Response("ok", { status: 200, headers: corsHeaders() });
   }
 }
 __name(handleFP, "handleFP");

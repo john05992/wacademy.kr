@@ -27,17 +27,7 @@ var TRACKING_JS = `(function(){
   var cachedIP={};
   var _ipPromise=Promise.race([new Promise(function(resolveIP){function _tryIP(apis){if(!apis.length){resolveIP({});return;}fetch(apis[0]).then(function(r){return r.json();}).then(function(d){if(!d.ip&&!d.query)throw new Error('no ip');resolveIP({ip:d.ip||d.query||'',org:d.org||d.isp||'',city:d.city||'',region:d.region||d.regionName||'',country_name:d.country_name||d.country||''});}).catch(function(){_tryIP(apis.slice(1));});}_tryIP(['https://ipv4.ipapi.co/json/','https://ipapi.co/json/','https://ip-api.com/json/?fields=query,org,city,region,country','https://ipinfo.io/json','https://api.ipify.org?format=json']);}),new Promise(function(resolve){setTimeout(function(){resolve({});},15000);})]);
   if(!new URLSearchParams(location.search).get('n_query')){var refQ=getRefQuery();if(refQ){document.querySelectorAll('.dyn-kw').forEach(function(el){el.textContent=refQ;});}}
-  function showBlock(n,ip){
-  var el=document.getElementById('__wga_block');
-  if(el)return;
-  var d=document.createElement('div');
-  d.id='__wga_block';
-  d.style.cssText='position:fixed;inset:0;z-index:2147483647;overflow:auto;background:#fff';
-  var h='<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}.__wga{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:40px 20px;background:#fff}.__wga_c{max-width:520px;width:100%;border:1px solid #e0e0e0;border-top:4px solid #e53935;border-radius:12px;padding:40px 32px;background:#fff}.__wga_badge{display:inline-block;background:#e53935;color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:99px;margin-bottom:24px}.__wga h1{font-size:22px;font-weight:800;color:#111;line-height:1.5;margin-bottom:16px;word-break:keep-all}.__wga_sub{font-size:14px;color:#555;line-height:1.8;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #eee;word-break:keep-all}.__wga_sub strong{color:#e53935;font-weight:700}.__wga_box{background:#fafafa;border:1px solid #e0e0e0;border-left:3px solid #e53935;border-radius:6px;padding:18px 20px;font-size:13px;line-height:1.9;color:#444;word-break:keep-all}.__wga_box b{color:#111}.__wga_ft{margin-top:24px;font-size:11px;color:#bbb;text-align:center}</style><div class="__wga"><div class="__wga_c"><span class="__wga_badge">ACCESS BLOCKED</span><h1>\uBE44\uC815\uC0C1\uC801\uC778 \uC911\uBCF5 \uC811\uC18D\uC774<br>\uAC10\uC9C0\uB418\uC5B4 \uCC28\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4</h1><p class="__wga_sub">\uD604\uC7AC\uAE4C\uC9C0 <strong>'+n+'\uD68C</strong>\uC758 \uC911\uBCF5 \uC811\uC18D\uC774 \uAE30\uB85D\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uC811\uC18D IP \uBC0F \uD658\uACBD \uC815\uBCF4\uAC00 \uC790\uB3D9\uC73C\uB85C \uC218\uC9D1\xB7\uBCF4\uC874\uB418\uC5C8\uC2B5\uB2C8\uB2E4.</p><div class="__wga_box"><b>\u203B \uBC95\uC801 \uACE0\uC9C0</b><br>\uBD80\uC815\uD074\uB9AD \uBC0F \uBC18\uBCF5 \uC811\uC18D \uD589\uC704\uB294 <b>\uC815\uBCF4\uD1B5\uC2E0\uB9DD\uBC95</b> \uBC0F <b>\uD615\uBC95\uC0C1 \uC5C5\uBB34\uBC29\uD574\uC8C4</b>\uC5D0 \uD574\uB2F9\uD560 \uC218 \uC788\uC73C\uBA70, \uD604\uC7AC \uAD00\uB828 \uAC74\uC5D0 \uB300\uD574 <b>\uACBD\uCC30 \uC218\uC0AC\uAC00 \uC9C4\uD589 \uC911</b>\uC785\uB2C8\uB2E4.<br><br>\uCD94\uAC00 \uC811\uC18D \uC2DC \uC218\uC9D1\uB41C \uBAA8\uB4E0 \uC790\uB8CC(\uC811\uC18D \uB85C\uADF8, \uC704\uCE58 \uC815\uBCF4 \uB4F1)\uB97C \uC218\uC0AC\uAE30\uAD00\uC5D0 \uC81C\uCD9C\uD558\uBA70, <b>\uBBFC\xB7\uD615\uC0AC\uC0C1 \uCC45\uC784</b>\uC744 \uC9C8 \uC218 \uC788\uC74C\uC744 \uC54C\uB9BD\uB2C8\uB2E4.</div><p class="__wga_ft">\uBCF8 \uD398\uC774\uC9C0\uB294 \uC790\uB3D9\uC73C\uB85C \uC0DD\uC131\uB41C \uBCF4\uC548 \uC548\uB0B4\uBB38\uC785\uB2C8\uB2E4.</p></div></div>';
-  d.innerHTML=h;
-  document.body.appendChild(d);
-}
-function sendInit(webrtcIP,audioFP){if(initSent)return;initSent=true;var cv=getCanvas();var data={type:'init',sid:sid,ip:cachedIP.ip||'',webrtcIP:webrtcIP||'',isp:cachedIP.org||'',city:cachedIP.city||'',region:cachedIP.region||'',country:cachedIP.country_name||'',canvas:cv,webgl:getWebGL(),audio:audioFP||'',gpu:getGPU(),ua:parseUA(),screen:screen.width+'x'+screen.height,cores:navigator.hardwareConcurrency||'',adBlock:getAdBlock(),page:location.pathname,query:_qs||'\uC5C6\uC74C',ref:document.referrer||'\uC5C6\uC74C'};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}fetch('/_fp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({c:cv})}).then(function(r){return r.json();}).then(function(d){if(d.blocked)showBlock(d.count,cachedIP.ip||'');}).catch(function(){});}
+  function sendInit(webrtcIP,audioFP){if(initSent)return;initSent=true;var cv=getCanvas();var data={type:'init',sid:sid,ip:cachedIP.ip||'',webrtcIP:webrtcIP||'',isp:cachedIP.org||'',city:cachedIP.city||'',region:cachedIP.region||'',country:cachedIP.country_name||'',canvas:cv,webgl:getWebGL(),audio:audioFP||'',gpu:getGPU(),ua:parseUA(),screen:screen.width+'x'+screen.height,cores:navigator.hardwareConcurrency||'',adBlock:getAdBlock(),page:location.pathname,query:_qs||'\uC5C6\uC74C',ref:document.referrer||'\uC5C6\uC74C'};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}navigator.sendBeacon('/_fp',JSON.stringify({c:cv}));}
   function sendExit(){if(exitSent)return;exitSent=true;var data={type:'exit',sid:sid,stayTime:Math.round((Date.now()-enterTime)/1000)+'s',scrollDepth:maxScroll+'%',clickCount:clickCount};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}}
   var pts=document.querySelectorAll('h2.planner-title');for(var i=0;i<pts.length;i++){if(pts[i].textContent.indexOf('\uC640\uC640\uD559\uC6D0')!==-1){var now2=new Date();pts[i].innerHTML='\uC77C\uB300\uC77C\uBC18 \uC548\uB0B4<br><em>'+(now2.getMonth()+1)+'/'+now2.getDate()+'\uAE4C\uC9C0 \uBAA8\uC9D1</em>';break;}}
   Promise.all([new Promise(function(resolve){getWebRTC(resolve);}),_ipPromise,new Promise(function(resolve){getAudio(resolve);})]).then(function(res){cachedIP=res[1];sendInit(res[0],res[2]);});
@@ -67,6 +57,10 @@ var worker_default = {
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: corsHeaders() });
     }
+    const fetchDest = request.headers.get("Sec-Fetch-Dest") || "";
+    if (fetchDest === "empty") {
+      return fetch(request);
+    }
     const BYPASS_KEY = "john0599";
     const cookie = parseCookie(request.headers.get("Cookie") || "");
     if (url.searchParams.get("pw") === BYPASS_KEY || cookie["_adm"] === BYPASS_KEY) {
@@ -76,17 +70,28 @@ var worker_default = {
       newRes.headers.append("Set-Cookie", `_adm=${BYPASS_KEY}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`);
       return newRes;
     }
+    const ipCount = await incrementCount(env, "ip:" + ip);
+    if (ipCount >= BLOCK_AT) return blockPage(ipCount);
+    const fpKey = cookie["_s"];
+    if (fpKey) {
+      const fpCount = await getCount(env, "fp:" + fpKey);
+      if (fpCount >= BLOCK_AT) return blockPage(fpCount);
+    }
     const originRes = await fetch(request);
     const contentType = originRes.headers.get("Content-Type") || "";
     if (contentType.includes("text/html")) {
+      const makeHeaders = /* @__PURE__ */ __name((base) => {
+        const h = new Headers(base);
+        h.set("Cache-Control", "no-store, no-cache, must-revalidate");
+        h.set("Pragma", "no-cache");
+        return h;
+      }, "makeHeaders");
+      if (url.searchParams.get("n_query")) {
+        return new Response(originRes.body, { status: originRes.status, headers: makeHeaders(originRes.headers) });
+      }
       return new HTMLRewriter().on("body", new ScriptInjector()).transform(new Response(originRes.body, {
         status: originRes.status,
-        headers: (() => {
-          const h = new Headers(originRes.headers);
-          h.set("Cache-Control", "no-store, no-cache, must-revalidate");
-          h.set("Pragma", "no-cache");
-          return h;
-        })()
+        headers: makeHeaders(originRes.headers)
       }));
     }
     return originRes;
@@ -110,14 +115,14 @@ async function handleFP(request, env, ip) {
   try {
     const data = await request.json();
     const fp = data.c || "";
-    if (!fp) return new Response(JSON.stringify({ blocked: false, count: 0 }), { status: 200, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } });
-    const fpCount = await incrementCount(env, "fp:" + fp);
-    const ipCount = await incrementCount(env, "ip:" + ip);
-    const count = Math.max(fpCount, ipCount);
-    const blocked = count >= BLOCK_AT;
-    return new Response(JSON.stringify({ blocked, count }), { status: 200, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } });
+    if (!fp) return new Response(JSON.stringify({ count: 0 }), { status: 200, headers: { ...corsHeaders(), "Content-Type": "application/json" } });
+    const count = await incrementCount(env, "fp:" + fp);
+    const h = new Headers(corsHeaders());
+    h.set("Content-Type", "application/json");
+    h.append("Set-Cookie", `_s=${fp}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`);
+    return new Response(JSON.stringify({ count }), { status: 200, headers: h });
   } catch (e) {
-    return new Response(JSON.stringify({ blocked: false, count: 0 }), { status: 200, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } });
+    return new Response("ok", { status: 200, headers: corsHeaders() });
   }
 }
 __name(handleFP, "handleFP");

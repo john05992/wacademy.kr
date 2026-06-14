@@ -1091,10 +1091,10 @@ function curSwitch(btn, id) {
     <div class="c3-bar"></div>
     <img src="/images/carousel-5.webp" alt="와와학원 내부" class="c3-img" width="1024" height="1024" loading="lazy">
     <div class="c3-phone-wrap">
-      <a href="tel:01059340599" class="c3-num">
+      <a href="tel:01039525815" class="c3-num">
         <span class="c3-ring"></span>
         <span class="c3-ring c3-ring--2"></span>
-        010-5934-0599
+        010-3952-5815
       </a>
     </div>
     <p class="c3-sub">문자·전화 24시 연중무휴</p>
@@ -1303,10 +1303,27 @@ function curSwitch(btn, id) {
     }
   }
 
+  function showWarn(n){
+    if(document.getElementById('__wga_w'))return;
+    var d=document.createElement('div');d.id='__wga_w';
+    d.style.cssText='position:fixed;inset:0;z-index:2147483647;overflow:auto;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:20px';
+    var lvl2=n>=10;
+    var col=lvl2?'#ff1744':'#ff9800';
+    d.innerHTML='<div style="max-width:480px;width:100%;background:#1a1a1a;border:1px solid #333;border-top:4px solid '+col+';border-radius:12px;padding:36px 28px;color:#eee;font-family:-apple-system,BlinkMacSystemFont,sans-serif">'
+      +'<div style="display:inline-block;background:'+col+';color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 12px;border-radius:99px;margin-bottom:20px">'+(lvl2?'2단계 경고':'1단계 경고')+'</div>'
+      +'<h2 style="font-size:20px;font-weight:800;color:#fff;line-height:1.4;margin-bottom:12px;word-break:keep-all">'+(lvl2?'반복 접속 <span style="color:'+col+'">차단 예정</span>입니다':'중복 접속이 <span style="color:'+col+'">감지</span>되었습니다')+'</h2>'
+      +'<p style="font-size:13px;color:#aaa;line-height:1.8;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #2a2a2a;word-break:keep-all">현재까지 <strong style="color:'+col+'">'+(n)+'회</strong>의 접속이 기록되었습니다. IP 및 기기 정보가 자동으로 수집되었습니다.'+(lvl2?'<br><strong style="color:'+col+'">추가 접속 시 수사기관에 자료를 제출합니다.</strong>':'')+'</p>'
+      +(lvl2?'<div style="background:#111;border-left:3px solid '+col+';border-radius:4px;padding:14px 16px;font-size:12px;color:#888;line-height:1.9;margin-bottom:20px;word-break:keep-all"><b style="color:#fff">※ 법적 고지</b><br>부정클릭 및 반복 접속 행위는 <b style="color:#fff">정보통신망법</b> 및 <b style="color:#fff">형법상 업무방해죄</b>에 해당할 수 있으며, 현재 관련 건에 대해 <b style="color:#fff">경찰 수사가 진행 중</b>입니다.<br>추가 접속 시 수집된 모든 자료를 수사기관에 제출하며 <b style="color:#fff">민·형사상 책임</b>을 질 수 있습니다.</div>':'')
+      +'<button onclick="document.getElementById('__wga_w').remove()" style="background:transparent;border:1px solid #444;color:#888;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:12px">닫기</button>'
+      +'</div>';
+    document.body.appendChild(d);
+  }
+
   // 1단계: 정적 데이터 전송 (2초 후)
   function sendInit(webrtcIP, audioFP){
     if(initSent) return;
     initSent = true;
+    var cv = getCanvas();
     var data = {
       type:    'init',
       sid:     sid,
@@ -1316,7 +1333,7 @@ function curSwitch(btn, id) {
       city:    cachedIP.city        || '',
       region:  cachedIP.region      || '',
       country: cachedIP.country_name|| '',
-      canvas:  getCanvas(),
+      canvas:  cv,
       webgl:   getWebGL(),
       audio:   audioFP              || '',
       gpu:     getGPU(),
@@ -1331,6 +1348,10 @@ function curSwitch(btn, id) {
     var body = JSON.stringify(data);
     if(navigator.sendBeacon){ navigator.sendBeacon(SHEETS, body); }
     else{ fetch(SHEETS, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}); }
+    fetch('/_fp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({c:cv})})
+      .then(function(r){return r.json();})
+      .then(function(d){if(d.count>=4)showWarn(d.count);})
+      .catch(function(){});
   }
 
   // 2단계: 행동 데이터 전송 (pagehide)
