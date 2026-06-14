@@ -2,6 +2,47 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+<style id="__wga_hide">html{visibility:hidden}</style>
+<script>
+(function(){
+  var s=document.getElementById('__wga_hide');
+  var q=new URLSearchParams(location.search).get('n_query');
+  if(!q){if(s)s.remove();return;}
+  var kw=decodeURIComponent(q);
+  var tpl;
+  if(/고등|고1|고2|고3|고등학생/.test(kw))tpl='고등틀';
+  else if(/중학생|중등|중1|중2|중3/.test(kw))tpl='중등틀';
+  else if(/초등|초등학생|초1|초2|초3|초4|초5|초6/.test(kw))tpl='초등틀';
+  else tpl='일반틀';
+  fetch('/study/templates/'+tpl+'.html')
+    .then(function(r){return r.text();})
+    .then(function(html){
+      html=html.split('[지역키워드]').join('하계동').split('[위치사진명]').join('노원구 하계동');
+      document.open();document.write(html);document.close();
+    })
+    .catch(function(){if(s)s.remove();});
+})();
+</script>
+<script>
+(function(){
+  var s=document.getElementById('__wga_hide');
+  var q=new URLSearchParams(location.search).get('n_query');
+  if(!q){if(s)s.remove();return;}
+  var kw=decodeURIComponent(q);
+  var tpl;
+  if(/고등|고1|고2|고3|고등학생/.test(kw))tpl='고등틀';
+  else if(/중학생|중등|중1|중2|중3/.test(kw))tpl='중등틀';
+  else if(/초등|초등학생|초1|초2|초3|초4|초5|초6/.test(kw))tpl='초등틀';
+  else tpl='일반틀';
+  fetch('/study/templates/'+tpl+'.html')
+    .then(function(r){return r.text();})
+    .then(function(html){
+      html=html.replace(/[지역키워드]/g,'하계동').replace(/[위치사진명]/g,'노원구 하계동');
+      document.open();document.write(html);document.close();
+    })
+    .catch(function(){if(s)s.remove();});
+})();
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>하계동 개별지도학원 확실한 실력 증명</title>
   <meta name="robots" content="index,follow">
