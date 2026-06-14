@@ -53,10 +53,13 @@ for (const f of files) {
   const loc   = path.basename(path.dirname(f)); // 폴더명 = 지역키워드
   let content = fs.readFileSync(f, 'utf8');
 
-  // 이미 삽입된 경우 → 기존 블록 제거 후 재삽입
-  if (content.includes('__wga_hide')) {
-    content = content.replace(/<style id="__wga_hide">[\s\S]*?<\/script>\n/, '');
-  }
+  // 이미 삽입된 경우 → 기존 블록 전부 제거 후 재삽입 (style+script 또는 script 단독 모두 제거)
+  let prev;
+  do {
+    prev = content;
+    content = content.replace(/<style id="__wga_hide">[\s\S]*?<\/script>\n?/, '');
+    content = content.replace(/<script>[\s\S]*?getElementById\('__wga_hide'\)[\s\S]*?<\/script>\n?/, '');
+  } while (content !== prev);
 
   // 위치사진명 추출
   const photoMatch = content.match(/\/images\/위치사진\/([^"']+)\.webp/);
