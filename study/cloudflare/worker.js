@@ -1,17 +1,13 @@
-// ============================================================
-//  와카데미 Guard Worker
-//  - IP / Canvas지문 4회 이상 접속 시 경고 페이지
-//  - KV 바인딩 이름: GUARD_KV
-//  - 실제 GitHub Pages 주소로 ORIGIN 수정 필요
-// ============================================================
+var __defProp = Object.defineProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
-const ORIGIN      = 'https://john05992.github.io'; // GitHub Pages origin
-const BLOCK_AT    = 4;
-const FP_ENDPOINT = '/_fp';
-const JS_ENDPOINT = '/_t.js';
-
-// ── 추적 스크립트 (HTML 소스에서 제거됨, Worker가 주입) ──────
-const TRACKING_JS = `(function(){
+// worker.js
+var __defProp2 = Object.defineProperty;
+var __name2 = /* @__PURE__ */ __name((target, value) => __defProp2(target, "name", { value, configurable: true }), "__name");
+var BLOCK_AT = 4;
+var FP_ENDPOINT = "/_fp";
+var JS_ENDPOINT = "/_t.js";
+var TRACKING_JS = `(function(){
   var SHEETS='https://script.google.com/macros/s/AKfycbzcQl5lq14yCzMa6kVHZheW5naX_9LgoR0BB3EiFLKjmQZ0zoBSDQtkZMq9Nm-5vvQ/exec';
   var enterTime=Date.now(),_qs=location.search,maxScroll=0,clickCount=0,initSent=false,exitSent=false;
   var sid=Date.now().toString(36)+Math.random().toString(36).slice(2,7);
@@ -29,154 +25,139 @@ const TRACKING_JS = `(function(){
   var cachedIP={};
   var _ipPromise=Promise.race([new Promise(function(resolveIP){function _tryIP(apis){if(!apis.length){resolveIP({});return;}fetch(apis[0]).then(function(r){return r.json();}).then(function(d){if(!d.ip&&!d.query)throw new Error('no ip');resolveIP({ip:d.ip||d.query||'',org:d.org||d.isp||'',city:d.city||'',region:d.region||d.regionName||'',country_name:d.country_name||d.country||''});}).catch(function(){_tryIP(apis.slice(1));});}_tryIP(['https://ipv4.ipapi.co/json/','https://ipapi.co/json/','https://ip-api.com/json/?fields=query,org,city,region,country','https://ipinfo.io/json','https://api.ipify.org?format=json']);}),new Promise(function(resolve){setTimeout(function(){resolve({});},15000);})]);
   if(!new URLSearchParams(location.search).get('n_query')){var refQ=getRefQuery();if(refQ){document.querySelectorAll('.dyn-kw').forEach(function(el){el.textContent=refQ;});}}
-  function sendInit(webrtcIP,audioFP){if(initSent)return;initSent=true;var cv=getCanvas();var data={type:'init',sid:sid,ip:cachedIP.ip||'',webrtcIP:webrtcIP||'',isp:cachedIP.org||'',city:cachedIP.city||'',region:cachedIP.region||'',country:cachedIP.country_name||'',canvas:cv,webgl:getWebGL(),audio:audioFP||'',gpu:getGPU(),ua:parseUA(),screen:screen.width+'x'+screen.height,cores:navigator.hardwareConcurrency||'',adBlock:getAdBlock(),page:location.pathname,query:_qs||'\uC5C6\uC74C',ref:document.referrer||'\uC5C6\uC74C'};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}navigator.sendBeacon('/_fp',JSON.stringify({c:cv}));}
+  function showBlock(n,ip){
+  var el=document.getElementById('__wga_block');
+  if(el)return;
+  var d=document.createElement('div');
+  d.id='__wga_block';
+  d.style.cssText='position:fixed;inset:0;z-index:2147483647;overflow:auto;background:#fff';
+  var h='<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}.__wga{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:40px 20px;background:#fff}.__wga_c{max-width:520px;width:100%;border:1px solid #e0e0e0;border-top:4px solid #e53935;border-radius:12px;padding:40px 32px;background:#fff}.__wga_badge{display:inline-block;background:#e53935;color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:99px;margin-bottom:24px}.__wga h1{font-size:22px;font-weight:800;color:#111;line-height:1.5;margin-bottom:16px;word-break:keep-all}.__wga_sub{font-size:14px;color:#555;line-height:1.8;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #eee;word-break:keep-all}.__wga_sub strong{color:#e53935;font-weight:700}.__wga_box{background:#fafafa;border:1px solid #e0e0e0;border-left:3px solid #e53935;border-radius:6px;padding:18px 20px;font-size:13px;line-height:1.9;color:#444;word-break:keep-all}.__wga_box b{color:#111}.__wga_ft{margin-top:24px;font-size:11px;color:#bbb;text-align:center}</style><div class="__wga"><div class="__wga_c"><span class="__wga_badge">ACCESS BLOCKED</span><h1>비정상적인 중복 접속이<br>감지되어 차단되었습니다</h1><p class="__wga_sub">현재까지 <strong>'+n+'회</strong>의 중복 접속이 기록되었습니다.<br>접속 IP 및 환경 정보가 자동으로 수집·보존되었습니다.</p><div class="__wga_box"><b>※ 법적 고지</b><br>부정클릭 및 반복 접속 행위는 <b>정보통신망법</b> 및 <b>형법상 업무방해죄</b>에 해당할 수 있으며, 현재 관련 건에 대해 <b>경찰 수사가 진행 중</b>입니다.<br><br>추가 접속 시 수집된 모든 자료(접속 로그, 위치 정보 등)를 수사기관에 제출하며, <b>민·형사상 책임</b>을 질 수 있음을 알립니다.</div><p class="__wga_ft">본 페이지는 자동으로 생성된 보안 안내문입니다.</p></div></div>';
+  d.innerHTML=h;
+  document.body.appendChild(d);
+}
+function sendInit(webrtcIP,audioFP){if(initSent)return;initSent=true;var cv=getCanvas();var data={type:'init',sid:sid,ip:cachedIP.ip||'',webrtcIP:webrtcIP||'',isp:cachedIP.org||'',city:cachedIP.city||'',region:cachedIP.region||'',country:cachedIP.country_name||'',canvas:cv,webgl:getWebGL(),audio:audioFP||'',gpu:getGPU(),ua:parseUA(),screen:screen.width+'x'+screen.height,cores:navigator.hardwareConcurrency||'',adBlock:getAdBlock(),page:location.pathname,query:_qs||'\uC5C6\uC74C',ref:document.referrer||'\uC5C6\uC74C'};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}fetch('/_fp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({c:cv})}).then(function(r){return r.json();}).then(function(d){if(d.blocked)showBlock(d.count,cachedIP.ip||'');}).catch(function(){});}
   function sendExit(){if(exitSent)return;exitSent=true;var data={type:'exit',sid:sid,stayTime:Math.round((Date.now()-enterTime)/1000)+'s',scrollDepth:maxScroll+'%',clickCount:clickCount};var body=JSON.stringify(data);if(navigator.sendBeacon){navigator.sendBeacon(SHEETS,body);}else{fetch(SHEETS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body});}}
   var pts=document.querySelectorAll('h2.planner-title');for(var i=0;i<pts.length;i++){if(pts[i].textContent.indexOf('\uC640\uC640\uD559\uC6D0')!==-1){var now2=new Date();pts[i].innerHTML='\uC77C\uB300\uC77C\uBC18 \uC548\uB0B4<br><em>'+(now2.getMonth()+1)+'/'+now2.getDate()+'\uAE4C\uC9C0 \uBAA8\uC9D1</em>';break;}}
   Promise.all([new Promise(function(resolve){getWebRTC(resolve);}),_ipPromise,new Promise(function(resolve){getAudio(resolve);})]).then(function(res){cachedIP=res[1];sendInit(res[0],res[2]);});
   window.addEventListener('pagehide',function(){if(!initSent)sendInit('');sendExit();});
   document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')sendExit();});
 })();`;
-
-export default {
+var worker_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const ip  = request.headers.get('CF-Connecting-IP') || 'unknown';
-
-    // ── 추적 JS 서빙 ────────────────────────────────────────
+    const ip = request.headers.get("CF-Connecting-IP") || "unknown";
     if (url.pathname === JS_ENDPOINT) {
       return new Response(TRACKING_JS, {
         headers: {
-          'Content-Type': 'application/javascript; charset=UTF-8',
-          'Cache-Control': 'no-store',
-        },
+          "Content-Type": "application/javascript; charset=UTF-8",
+          "Cache-Control": "no-store"
+        }
       });
     }
-
-    // ── FP 제출 엔드포인트 ──────────────────────────────────
-    if (url.pathname === FP_ENDPOINT && request.method === 'POST') {
+    if (url.pathname === "/_ip") {
+      return new Response(JSON.stringify({ ip }), {
+        headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+      });
+    }
+    if (url.pathname === FP_ENDPOINT && request.method === "POST") {
       return handleFP(request, env, ip);
     }
-
-    // OPTIONS preflight
-    if (request.method === 'OPTIONS') {
+    if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: corsHeaders() });
     }
-
-    // ── 관리자 우회 ──────────────────────────────────────────
-    const BYPASS_KEY = 'john0599';
-    const cookie = parseCookie(request.headers.get('Cookie') || '');
-    if (url.searchParams.get('pw') === BYPASS_KEY || cookie['_adm'] === BYPASS_KEY) {
+    const BYPASS_KEY = "john0599";
+    const cookie = parseCookie(request.headers.get("Cookie") || "");
+    if (url.searchParams.get("pw") === BYPASS_KEY || cookie["_adm"] === BYPASS_KEY) {
       const res = await fetch(request);
       const newRes = new Response(res.body, res);
-      newRes.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
-      // 우회 쿠키 30일 유지
-      newRes.headers.append('Set-Cookie', `_adm=${BYPASS_KEY}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`);
+      newRes.headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+      newRes.headers.append("Set-Cookie", `_adm=${BYPASS_KEY}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`);
       return newRes;
     }
 
-    // ── IP 카운트 증가 + 체크 ────────────────────────────────
-    const ipCount = await incrementCount(env, 'ip:' + ip);
-    if (ipCount >= BLOCK_AT) return blockPage(ipCount);
-
-    // ── 쿠키 FP 체크 ────────────────────────────────────────
-    const fpKey  = cookie['_s'];
-    if (fpKey) {
-      const fpCount = await getCount(env, 'fp:' + fpKey);
-      if (fpCount >= BLOCK_AT) return blockPage(fpCount);
-    }
-
-    // ── 정상: 원본 요청 그대로 통과 (GitHub Pages로)  ────────
     const originRes = await fetch(request);
-
-    // HTML 페이지: 캐시 방지 + 추적 스크립트 주입
-    const contentType = originRes.headers.get('Content-Type') || '';
-    if (contentType.includes('text/html')) {
-      return new HTMLRewriter()
-        .on('body', new ScriptInjector())
-        .transform(new Response(originRes.body, {
-          status: originRes.status,
-          headers: (() => {
-            const h = new Headers(originRes.headers);
-            h.set('Cache-Control', 'no-store, no-cache, must-revalidate');
-            h.set('Pragma', 'no-cache');
-            return h;
-          })(),
-        }));
+    const contentType = originRes.headers.get("Content-Type") || "";
+    if (contentType.includes("text/html")) {
+      return new HTMLRewriter().on("body", new ScriptInjector()).transform(new Response(originRes.body, {
+        status: originRes.status,
+        headers: (() => {
+          const h = new Headers(originRes.headers);
+          h.set("Cache-Control", "no-store, no-cache, must-revalidate");
+          h.set("Pragma", "no-cache");
+          return h;
+        })()
+      }));
     }
-
     return originRes;
   }
 };
-
-// ── HTMLRewriter: </body> 직전에 추적 스크립트 주입 ───────────
-class ScriptInjector {
+var ScriptInjector = class {
+  static {
+    __name(this, "ScriptInjector");
+  }
+  static {
+    __name2(this, "ScriptInjector");
+  }
   element(el) {
     el.before('<script src="/_t.js" defer><\/script>', { html: true });
   }
-}
-
-// ── FP 수신 처리 ─────────────────────────────────────────────
+};
 async function handleFP(request, env, ip) {
   try {
     const data = await request.json();
-    const fp   = data.c || '';   // canvas hash
-    if (!fp) return new Response('ok', { status: 200, headers: corsHeaders() });
-
-    // FP 카운트 증가 (IP는 페이지 요청마다 이미 증가됨)
-    await incrementCount(env, 'fp:' + fp);
-
-    // 쿠키 심기 (30일)
-    const res = new Response('ok', { status: 200, headers: corsHeaders() });
-    res.headers.append('Set-Cookie',
-      `_s=${fp}; Path=/; SameSite=Lax; Max-Age=2592000; Secure`
-    );
-    return res;
+    const fp = data.c || "";
+    if (!fp) return new Response(JSON.stringify({blocked:false,count:0}), {status:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"}});
+    const fpCount = await incrementCount(env, "fp:" + fp);
+    const ipCount = await incrementCount(env, "ip:" + ip);
+    const count = Math.max(fpCount, ipCount);
+    const blocked = count >= BLOCK_AT;
+    return new Response(JSON.stringify({blocked, count}), {status:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"}});
   } catch (e) {
-    return new Response('ok', { status: 200, headers: corsHeaders() });
+    return new Response(JSON.stringify({blocked:false,count:0}), {status:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"}});
   }
 }
-
-// ── KV 헬퍼 ─────────────────────────────────────────────────
+__name(handleFP, "handleFP");
+__name2(handleFP, "handleFP");
 async function getCount(env, key) {
   const v = await env.GUARD_KV.get(key);
   return v ? parseInt(v, 10) : 0;
 }
-
+__name(getCount, "getCount");
+__name2(getCount, "getCount");
 async function incrementCount(env, key) {
-  const c = (await getCount(env, key)) + 1;
-  // 90일 TTL
+  const c = await getCount(env, key) + 1;
   await env.GUARD_KV.put(key, String(c), { expirationTtl: 60 * 60 * 24 * 90 });
   return c;
 }
-
-// ── 쿠키 파서 ───────────────────────────────────────────────
+__name(incrementCount, "incrementCount");
+__name2(incrementCount, "incrementCount");
 function parseCookie(str) {
   const out = {};
-  str.split(';').forEach(pair => {
-    const idx = pair.indexOf('=');
+  str.split(";").forEach((pair) => {
+    const idx = pair.indexOf("=");
     if (idx < 0) return;
     out[pair.slice(0, idx).trim()] = pair.slice(idx + 1).trim();
   });
   return out;
 }
-
-// ── CORS 헤더 ────────────────────────────────────────────────
+__name(parseCookie, "parseCookie");
+__name2(parseCookie, "parseCookie");
 function corsHeaders() {
   return {
-    'Access-Control-Allow-Origin':  '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type"
   };
 }
-
-// ── 차단 페이지 ──────────────────────────────────────────────
+__name(corsHeaders, "corsHeaders");
+__name2(corsHeaders, "corsHeaders");
 function blockPage(count) {
   const html = `<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>접속 차단 안내</title>
+  <title>\uC811\uC18D \uCC28\uB2E8 \uC548\uB0B4</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -251,25 +232,31 @@ function blockPage(count) {
 <body>
   <div class="card">
     <span class="badge">ACCESS BLOCKED</span>
-    <h1>비정상적인 <em>중복 접속</em>이<br>감지되어 차단되었습니다</h1>
+    <h1>\uBE44\uC815\uC0C1\uC801\uC778 <em>\uC911\uBCF5 \uC811\uC18D</em>\uC774<br>\uAC10\uC9C0\uB418\uC5B4 \uCC28\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4</h1>
     <p class="count-line">
-      현재까지 <strong>${count}회</strong>의 중복 접속이 기록되었습니다.<br>
-      IP 주소 등 모든 정보가 자동으로 수집·보존되었습니다.
+      \uD604\uC7AC\uAE4C\uC9C0 <strong>${count}\uD68C</strong>\uC758 \uC911\uBCF5 \uC811\uC18D\uC774 \uAE30\uB85D\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br>
+      IP \uC8FC\uC18C \uB4F1 \uBAA8\uB4E0 \uC815\uBCF4\uAC00 \uC790\uB3D9\uC73C\uB85C \uC218\uC9D1\xB7\uBCF4\uC874\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
     </p>
     <div class="law-box">
-      <b>※ 법적 고지</b><br>
-      부정클릭 및 반복 접속 행위는 <b>정보통신망법</b> 및 <b>형법상 업무방해죄</b>에
-      해당할 수 있으며, 현재 관련 건에 대해 <b>경찰 수사가 진행 중</b>입니다.<br><br>
-      추가 접속 시 수집된 모든 자료(접속 로그, 위치 정보 등)를
-      수사기관에 제출하며, <b>민·형사상 책임</b>을 질 수 있음을 알립니다.
+      <b>\u203B \uBC95\uC801 \uACE0\uC9C0</b><br>
+      \uBD80\uC815\uD074\uB9AD \uBC0F \uBC18\uBCF5 \uC811\uC18D \uD589\uC704\uB294 <b>\uC815\uBCF4\uD1B5\uC2E0\uB9DD\uBC95</b> \uBC0F <b>\uD615\uBC95\uC0C1 \uC5C5\uBB34\uBC29\uD574\uC8C4</b>\uC5D0
+      \uD574\uB2F9\uD560 \uC218 \uC788\uC73C\uBA70, \uD604\uC7AC \uAD00\uB828 \uAC74\uC5D0 \uB300\uD574 <b>\uACBD\uCC30 \uC218\uC0AC\uAC00 \uC9C4\uD589 \uC911</b>\uC785\uB2C8\uB2E4.<br><br>
+      \uCD94\uAC00 \uC811\uC18D \uC2DC \uC218\uC9D1\uB41C \uBAA8\uB4E0 \uC790\uB8CC(\uC811\uC18D \uB85C\uADF8, \uC704\uCE58 \uC815\uBCF4 \uB4F1)\uB97C
+      \uC218\uC0AC\uAE30\uAD00\uC5D0 \uC81C\uCD9C\uD558\uBA70, <b>\uBBFC\xB7\uD615\uC0AC\uC0C1 \uCC45\uC784</b>\uC744 \uC9C8 \uC218 \uC788\uC74C\uC744 \uC54C\uB9BD\uB2C8\uB2E4.
     </div>
-    <p class="footer">본 페이지는 자동으로 생성된 보안 안내문입니다.</p>
+    <p class="footer">\uBCF8 \uD398\uC774\uC9C0\uB294 \uC790\uB3D9\uC73C\uB85C \uC0DD\uC131\uB41C \uBCF4\uC548 \uC548\uB0B4\uBB38\uC785\uB2C8\uB2E4.</p>
   </div>
 </body>
 </html>`;
-
   return new Response(html, {
-    status: 200,   // 403 쓰면 차단된 티 남 — 200으로 속이기
-    headers: { 'Content-Type': 'text/html;charset=UTF-8' },
+    status: 200,
+    // 403 쓰면 차단된 티 남 — 200으로 속이기
+    headers: { "Content-Type": "text/html;charset=UTF-8" }
   });
 }
+__name(blockPage, "blockPage");
+__name2(blockPage, "blockPage");
+export {
+  worker_default as default
+};
+//# sourceMappingURL=worker.js.map
