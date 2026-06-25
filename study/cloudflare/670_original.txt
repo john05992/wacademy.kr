@@ -1,0 +1,39 @@
+{
+  "result": {
+    "id": "670df6cc-af93-4e98-b71d-1fb63cccaa9f",
+    "number": 4,
+    "metadata": {
+      "created_on": "2026-06-14T00:07:23.961117Z",
+      "source": "wrangler",
+      "author_id": "352ceb511fa9662a23b25ba1e672e17c",
+      "author_email": "aagta1111@gmail.com",
+      "has_preview": true
+    },
+    "annotations": {
+      "workers/triggered_by": "version_upload"
+    },
+    "resources": {
+      "script": {
+        "etag": "12e0524a6126065474e95f07fc943a367be1fad9bcd90ec76387c22d01c29a0f",
+        "handlers": [
+          "fetch"
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "script_runtime": {
+        "compatibility_date": "2024-11-01",
+        "usage_model": "standard"
+      },
+      "bindings": [
+        {
+          "name": "GUARD_KV",
+          "namespace_id": "684d8a18834d4c1d81c1ecfd8aca00fe",
+          "type": "kv_namespace"
+        }
+      ]
+    }
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
+}
